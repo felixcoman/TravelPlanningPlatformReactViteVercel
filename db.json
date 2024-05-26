@@ -1,0 +1,89 @@
+{
+  "romania": [
+    {
+      "name": "Brasov",
+      "region": "Transilvania",
+      "photo": "https://img.freepik.com/free-photo/aerial-drone-view-council-square-brasov-romania_1268-20593.jpg?t=st=1716714491~exp=1716718091~hmac=33ea4c5124a5e8d380fe37fca7e687a6a89704974b4048c377be2161978c4caa&w=1060",
+      "description": "Brașov is a charming city located in central Romania, nestled in the Carpathian Mountains. Known for its medieval architecture and rich history, Brașov is a major cultural and economic hub in the region. The city's centerpiece is the Black Church, a Gothic-style monument dating back to the 14th century. Brașov's old town is lined with colorful baroque buildings, narrow cobblestone streets, and vibrant squares such as Piața Sfatului. The nearby Tampa Mountain offers panoramic views and hiking opportunities, while the fortified walls and towers, like the White Tower and Black Tower, reflect the city's historical significance as a fortress town. Brașov is also a gateway to the famous Bran Castle, often associated with the Dracula legend. The city's mix of historical charm, natural beauty, and modern amenities make it a popular destination for tourists.",
+      "category": ["aerliber", "citybreak", "relaxare"],
+      "id": 0
+    },
+    {
+      "name": "Mamaia",
+      "region": "Dobrogea",
+      "photo": "https://unsplash.com/photos/a-large-group-of-people-at-a-beach-thAtOx4W6WU",
+      "description": "Mamaia is a popular seaside resort located on the coast of the Black Sea in Romania. Situated in the northeastern part of Constanța, it is renowned for its long, sandy beaches and vibrant nightlife, making it a top destination for tourists, especially during the summer months. The resort features numerous luxury hotels, beach clubs, and recreational facilities, including water parks and various water sports. Mamaia is also known for its scenic promenade and a gondola that offers panoramic views of the sea and the surrounding area. The resort's lively atmosphere, modern amenities, and natural beauty make it a favorite spot for both relaxation and entertainment.",
+      "category": ["plaja", "relaxare"],
+      "id": 1
+    },
+    {
+      "name": "Cluj-Napoca",
+      "region": "Transilvania",
+      "photo": "https://img.freepik.com/free-photo/aerial-drone-view-saint-michael-church-cluj-romania_1268-20559.jpg?t=st=1716715828~exp=1716719428~hmac=375ac07b58b592ca2c4c44d87871ee653a444ab8844f90b268f2fd0a6b01577d&w=1380",
+      "description": "As the unofficial capital of Transylvania, Cluj-Napoca is a vibrant university city with a rich history and lively arts scene. Highlights include the Gothic-style St. Michael's Church, the picturesque Central Park, and the National Museum of Transylvanian History. Cluj is known for its youthful energy, thanks to its large student population, and hosts numerous cultural festivals.",
+      "category": ["aerliber", "citybreak", "relaxare"],
+      "id": 2
+    },
+    {
+      "name": "Sighisoara",
+      "region": "Transilvania",
+      "photo": "https://img.freepik.com/free-photo/aerial-drone-view-historic-centre-sighisoara-romania-old-buildings-holy-trinity-church_1268-19367.jpg?t=st=1716716105~exp=1716719705~hmac=6c6a7877e2d0b8dffebec9767bae6f83c61633947c5aabf616c272fba81b83ee&w=1380",
+      "description": "One of the best-preserved medieval towns in Europe, Sighisoara is a UNESCO World Heritage site. The city's charming old town features colorful buildings, narrow streets, and the iconic Clock Tower. Sighisoara is also famous as the birthplace of Vlad the Impaler, the historical figure who inspired the Dracula legend. Its medieval festival and historical ambiance attract many tourists.",
+      "category": ["aerliber", "citybreak", "relaxare"],
+      "id": 3
+    },
+    {
+      "name": "Sibiu",
+      "region": "Transilvania",
+      "photo": "https://img.freepik.com/free-photo/aerial-drone-view-historic-centre-sibiu-evening-romania_1268-20828.jpg?t=st=1716716228~exp=1716719828~hmac=5182022db7ccec4e61b673186d78227323570e9293c8e5dcf4ccf0a419e0d631&w=1380",
+      "description": "Known for its well-preserved medieval architecture, Sibiu was designated a European Capital of Culture in 2007. The city features beautiful squares such as the Grand Square (Piața Mare) and the Small Square (Piața Mică), as well as the iconic Council Tower and the Brukenthal National Museum. Sibiu's charming ambiance and cultural significance draw many visitors.",
+      "category": ["aerliber", "citybreak", "relaxare"],
+      "id": 4
+    },
+    {
+      "name": "Bucharest",
+      "region": "Muntenia",
+      "photo": "https://img.freepik.com/free-photo/aerial-drone-view-bucharest-romania-city-downtown-with-palace-parliament_1268-23448.jpg?t=st=1716716563~exp=1716720163~hmac=0b11949910fa572495e163c5aef7a395f5621e2900ec6523d4b412b0c79310f7&w=1380",
+      "description": "The capital and largest city of Romania, Bucharest is known for its wide boulevards, historic architecture, and vibrant cultural scene. Key attractions include the massive Palace of the Parliament, the historic Old Town (Lipscani), and numerous museums and parks. The city combines a mix of traditional Romanian charm with modern urban energy.",
+      "category": ["aerliber", "citybreak", "relaxare"],
+      "id": 5
+    }
+  ],
+  "destinations": [
+    {
+      "name": "Catherine's Gate (Poarta Ecaterinei)",
+      "city": "Brasov",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Poarta_Ecaterinei_Brasov.jpg/647px-Poarta_Ecaterinei_Brasov.jpg?20160522170145",
+      "description": "Catherine's Gate is the only original city gate that has survived from medieval times. Built in 1559, it features a unique design with a fairy-tale look, including four small corner turrets symbolizing the city’s right to capital punishment. The gate is a beautiful piece of Brașov's history and a must-see for visitors.",
+      "popularity": 4,
+      "id": 0
+    },
+    {
+      "name": "Black Church (Biserica Neagră)",
+      "city": "Brasov",
+      "photo": "https://images.unsplash.com/photo-1629582826428-078d3bdbf5cf?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "The Black Church is a Gothic-style cathedral and one of the most iconic landmarks in Brașov. It is known for its impressive architecture, stunning interior, and a large collection of Anatolian carpets. The church's name comes from the darkened walls caused by a fire in the 17th century.",
+      "popularity": 5,
+      "id": 1
+    },
+    {
+      "name": "Council Square (Piața Sfatului)",
+      "city": "Brasov",
+      "photo": "https://images.unsplash.com/photo-1662553423182-7ab65b441fa0?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "This picturesque square is the heart of Brașov's old town. Surrounded by colorful baroque buildings, it features the historic Council House (Casa Sfatului) and is a vibrant hub for cafes, shops, and events. It's a perfect place for a leisurely stroll and soaking in the local atmosphere.",
+      "popularity": 5,
+      "id": 2
+    },
+    {
+      "name": "Mount Tampa",
+      "city": "Brasov",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Poarta_Ecaterinei_Brasov.jpg/647px-Poarta_Ecaterinei_Brasov.jpg?20160522170145",
+      "description": "Offering stunning panoramic views of Brașov and the surrounding area, Mount Tampa is accessible via hiking trails or a cable car. At the summit, visitors can enjoy the scenic overlook and spot the Hollywood-style `Brașov` sign. It’s a great spot for nature lovers and photographers.",
+      "popularity": 4.5,
+      "id": 3
+    }
+  ],
+  "italy": [],
+  "france": [],
+  "spain": []
+}
