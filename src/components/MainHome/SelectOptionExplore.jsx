@@ -1,55 +1,42 @@
 import useFetchData from "../../hooks/useFetchData";
 import { HomeBtn, Option, Select, SelectContainer } from "./MainHome.style";
 import { Button } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useState } from "react";
 
 function SelectOptionExplore() {
-  // let path = "romania";
-  //let { path } = useParams();
-  //const { data, error, loading } = useFetchData("/" + path);
+  const [selectedCountry, setSelectedCountry] = useState("");
+  const [clicked, setClicked] = useState(false);
 
-  function handleSubmit(e) {
-    // Prevent the browser from reloading the page
+  const url = selectedCountry
+    ? `http://localhost:3001/${selectedCountry}`
+    : null;
+
+  const { data, error, loading } = useFetchData(url, clicked, setClicked);
+  // const { data, error, loading } = useFetchData(url);
+
+  const handleDropdownChange = (e) => {
+    setSelectedCountry(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    // Read the form data
-    const form = e.target;
-    console.log("form", form);
-    const formData = new FormData(form);
-    console.log("formData", formData);
-    console.log("formData.entries()", formData.entries());
-
-    // You can work with it as a plain object.
-    const formJson = Object.fromEntries(formData.entries());
-    console.log("formJson", formJson); // (!) This doesn't include multiple select values
-    console.log("formJson.country", formJson.country);
-    // Or you can get an array of name-value pairs.
-    console.log("[...formData.entries()]", [...formData.entries()]);
-
-    //fetch data from the server
-    fetch(`http://localhost:3001/${formJson.country}`)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("the data from the server", data);
-      });
-  }
+    setClicked(true);
+  };
 
   return (
     <>
-      {/* <Button
-        variant="danger"
-        onClick={() => {
-          path = "romania";
-          console.log("path", path);
-          console.log("data from fetch", data);
-        }}
-      >
-        Press for Romania
-      </Button> */}
       <SelectContainer loc="SelectContainer">
-        <form method="post" onSubmit={handleSubmit}>
+        <form onSubmit={(e) => handleSubmit(e)}>
           <label>
-            Pick a country:
-            <Select loc="Select" name="country">
+            Select Country:
+            <Select
+              value={selectedCountry}
+              onChange={handleDropdownChange}
+              loc="Select"
+            >
+              <Option loc="Option" value="">
+                --Pick a country--
+              </Option>
               <Option loc="Option" value="italy">
                 Italy
               </Option>
@@ -79,9 +66,9 @@ function SelectOptionExplore() {
         </label> */}
       </SelectContainer>
       {/* <HomeBtn loc="HomeBtn">Let's Begin To Travel!</HomeBtn> */}
-      {/*{loading && <div>Loading...</div>}
-      {error && <div>{error} Error on getting data, Server is down :( </div>}
-      {data && console.log(data)}*/}
+      {loading && <div>Loading...</div>}
+      {error && <div>Error: {error.message}</div>}
+      {data && console.log(data)}
     </>
   );
 }

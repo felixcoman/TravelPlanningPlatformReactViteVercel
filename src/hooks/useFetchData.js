@@ -1,30 +1,36 @@
 import { useState, useEffect } from "react";
 
-const API_URL = "http://localhost:3001";
-
-const useFetchData = (path = "") => {
+const useFetchData = (url, clicked, setClicked) => {
+  // const useFetchData = (url) => {
   const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    // if (!url) return;
+    if (!url || !clicked) return;
+    setClicked(false);
+    setError(false);
+
     const fetchData = async () => {
+      setLoading(true);
       try {
-        const response = await fetch(API_URL + path);
+        const response = await fetch(url);
         if (!response.ok) {
           throw new Error("Network response was not ok!");
         }
-        const newData = await response.json();
-        setData(newData);
-        setLoading(false);
+        const data = await response.json();
+        setData(data);
       } catch (error) {
-        setError("Error 808!");
+        setError(error);
+      } finally {
         setLoading(false);
       }
     };
     fetchData();
-  }, [path]);
-  return { data, loading, error };
+    // }, [url]);
+  }, [url, clicked]);
+  return { data, error, loading };
 };
 
 export default useFetchData;
