@@ -9,9 +9,9 @@ export const MainContainer = styled.div`
   gap: 1px;
   margin: 10px auto;
 
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 768px) {
     grid-gap: 1px;
-    height: 100px;
+    height: auto;
   }
 `;
 
@@ -23,18 +23,26 @@ export const MainHomeGalleryItem = styled.img`
   &:hover {
     transform: scale(1.05);
   }
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 768px) {
     width: 70px;
   }
 `;
 
 export const OptionContainer = styled.div`
+  display: flex;
   margin: 30px auto;
-  /* position: relative; */
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
 `;
 
 export const ButtonsContainer = styled.div`
   display: flex;
+  height: 90%;
 `;
 
 export const Buttons = styled.button`
@@ -56,24 +64,24 @@ export const Buttons = styled.button`
     color: ${WHITE_NEUTRAL};
     border: solid 2px white;
   }
-  @media screen and (max-width: 820px) {
-    margin-top: 20px;
+  @media screen and (max-width: 768px) {
+    margin: 20px 10px;
     width: 70%;
-    height: 25px;
+    height: auto;
   }
 `;
 
 export const SelectContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 100%;
   /* position: absolute; */
   border-radius: 8px;
-  margin: 30px auto;
+  margin: 15px 30px auto;
 `;
 export const Select = styled.select`
-  width: 40%;
+  width: auto;
   height: 35px;
   border-radius: 8px;
   margin: 0 10px;
@@ -93,7 +101,7 @@ export const HomeBtn = styled.button`
   font-weight: 700;
   font-size: 20px;
   color: ${ORANGE};
-  margin: 100px auto;
+  margin: 200px 15px auto;
   cursor: pointer;
   border-radius: 5px;
   &:hover {
@@ -101,9 +109,19 @@ export const HomeBtn = styled.button`
     color: ${WHITE_NEUTRAL};
     border: solid 2px white;
   }
-  @media screen and (max-width: 820px) {
-    margin-top: 20px;
+  @media screen and (max-width: 768px) {
     width: 70%;
-    height: 25px;
   }
+`;
+
+export const FormBody = styled.form`
+  display: flex;
+  flex-direction: column;
+`;
+export const LabelHead = styled.label`
+  color: ${WHITE_NEUTRAL};
+  font-weight: 700;
+  font-size: 20px;
+  height: auto;
+  margin: 10px 0 10px 0;
 `;

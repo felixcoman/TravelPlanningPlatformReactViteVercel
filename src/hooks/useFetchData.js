@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 
 const useFetchData = (url, clicked, setClicked) => {
-  // const useFetchData = (url) => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // if (!url) return;
     if (!url || !clicked) return;
+
     setClicked(false);
     setError(false);
+    setData(null);
 
     const fetchData = async () => {
       setLoading(true);
@@ -28,9 +28,8 @@ const useFetchData = (url, clicked, setClicked) => {
       }
     };
     fetchData();
-    // }, [url]);
   }, [url, clicked]);
-  return { data, error, loading };
+  return { data, error, loading, clicked, setData };
 };
 
 export default useFetchData;

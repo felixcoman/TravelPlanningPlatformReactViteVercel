@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
+import Explore from "./components/Explore/Explore";
 
 function App() {
   return (
@@ -14,10 +15,8 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/home" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
-        <Route path="/my-travel" element={<div>travel</div>}></Route>
+        <Route path="/explore/:country/:id" element={<Explore />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/home/:path" element={<div>SUCCES!</div>}></Route>
-        <Route path="/test" element={<div>SUCCES!</div>}></Route>
       </Routes>
       <Footer />
     </>
