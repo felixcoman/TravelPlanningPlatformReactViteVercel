@@ -1,5 +1,9 @@
+import { useParams } from "react-router-dom";
+
 const Explore = () => {
-  return <div></div>;
+  const params = useParams();
+  console.log("params", params);
+  return <div>COMMING SOON</div>;
 };
 
 export default Explore;
