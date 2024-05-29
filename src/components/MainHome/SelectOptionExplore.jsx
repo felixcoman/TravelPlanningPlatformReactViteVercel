@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import useFetchData from "../../hooks/useFetchData";
 import {
   FormBody,
@@ -14,7 +14,7 @@ function SelectOptionExplore() {
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
   const [clicked, setClicked] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const url =
     selectedCountry && selectedCity
@@ -43,7 +43,8 @@ function SelectOptionExplore() {
     console.log("in submit");
     e.preventDefault();
     setClicked(true);
-    navigate(`/explore/${selectedCountry}${selectedCity}`);
+    //Alta modalitate de redirect daca nu merge cu to={`/explore/${selectedCountry}${selectedCity}`} ca si atribut in HomeBtn (buton tb sa fie de tip styled(Link))
+    // navigate(`/explore/${selectedCountry}${selectedCity}`);
   };
 
   return (
@@ -106,7 +107,12 @@ function SelectOptionExplore() {
               </Option>
             </Select>
           </LabelHead>
-          <HomeBtn loc="HomeBtn" type="submit" data={data}>
+          <HomeBtn
+            loc="HomeBtn"
+            type="submit"
+            data={data}
+            to={`/explore/${selectedCountry}${selectedCity}`}
+          >
             Let's Begin To Travel!
           </HomeBtn>
         </FormBody>

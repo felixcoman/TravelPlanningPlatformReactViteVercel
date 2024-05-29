@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { DARK_BLUE, ORANGE, WHITE_NEUTRAL } from "../../constants/Colors";
 
@@ -95,15 +96,19 @@ export const Option = styled.option`
   font-size: 20px;
 `;
 
-export const HomeBtn = styled.button`
+export const HomeBtn = styled(Link)`
   width: 65%;
   height: 40px;
   font-weight: 700;
   font-size: 20px;
+  background: ${WHITE_NEUTRAL};
   color: ${ORANGE};
   margin: 200px 15px auto;
   cursor: pointer;
   border-radius: 5px;
+  align-content: center;
+  text-decoration: none;
+  border: 1px solid ${ORANGE};
   &:hover {
     background: ${DARK_BLUE};
     color: ${WHITE_NEUTRAL};
