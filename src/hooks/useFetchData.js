@@ -1,13 +1,21 @@
 import { useState, useEffect } from "react";
 
 const useFetchData = (url, clicked, setClicked) => {
+  console.log("url ", url);
+  console.log("clicked ", clicked);
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    if (!url || !clicked) return;
+  console.log("sunt in hook 8");
 
+  useEffect(() => {
+    console.log("sunt in hook 11");
+    if (!url || !clicked) {
+      console.log("No url or not clicked");
+      return;
+    }
+    console.log("sunt in hook 15");
     setClicked(false);
     setError(false);
     setData(null);

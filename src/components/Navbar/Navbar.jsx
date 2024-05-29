@@ -12,7 +12,7 @@ import { List, X } from "react-bootstrap-icons";
 export const routes = [
   { title: "Home", href: "home" },
   { title: "About", href: "about" },
-  { title: "MyTravel", href: "my-travel" },
+  { title: "MyIntinerary", href: "intinerary" },
   { title: "Contact", href: "contact" },
 ];
 
