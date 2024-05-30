@@ -9,6 +9,7 @@ import {
   Select,
   SelectContainer,
 } from "./MainHome.style";
+import GetOptionCities from "./GetOptionCities";
 
 function SelectOptionExplore() {
   const [selectedCountry, setSelectedCountry] = useState("");
@@ -16,10 +17,13 @@ function SelectOptionExplore() {
   const [clicked, setClicked] = useState(false);
   // const navigate = useNavigate();
 
-  const url =
-    selectedCountry && selectedCity
-      ? `http://localhost:3001/${selectedCountry}/${selectedCity}`
-      : null;
+  let url = null;
+
+  if (selectedCountry && selectedCity) {
+    url = `http://localhost:3001/${selectedCountry}?city=${selectedCity}`;
+  } else if (selectedCountry) {
+    url = `http://localhost:3001/${selectedCountry}`;
+  } else null;
 
   const { data, error, loading, setData } = useFetchData(
     url,
@@ -31,12 +35,12 @@ function SelectOptionExplore() {
     setSelectedCountry(e.target.value);
     console.log("selectedCountry", e.target.value);
     setData(null);
+    setClicked(true);
   };
 
   const handleDropdownChangeCity = (e) => {
     setSelectedCity(e.target.value);
-    console.log("selectedCity", "/" + e.target.value);
-    setData(null);
+    console.log("selectedCity", e.target.value);
   };
 
   const handleSubmit = (e) => {
@@ -87,24 +91,14 @@ function SelectOptionExplore() {
               <Option loc="Option" value="">
                 --Pick a city--
               </Option>
-              <Option loc="Option" value="0">
-                Brasov
-              </Option>
-              <Option loc="Option" value="1">
-                Mamaia
-              </Option>
-              <Option loc="Option" value="2">
-                Cluj-Napoca
-              </Option>
-              <Option loc="Option" value="3">
-                Sighisoara
-              </Option>
-              <Option loc="Option" value="4">
-                Sibiu
-              </Option>
-              <Option loc="Option" value="5">
-                Bucharest
-              </Option>
+              {data &&
+                data.map((item, index) => {
+                  return (
+                    item.city && (
+                      <GetOptionCities key={index} value={item.city} />
+                    )
+                  );
+                })}
             </Select>
           </LabelHead>
           <HomeBtn

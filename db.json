@@ -1,52 +1,406 @@
 {
-  "romania": [
+  "users": [
     {
-      "name": "Brasov",
-      "region": "Transilvania",
-      "photo": "https://img.freepik.com/free-photo/aerial-drone-view-council-square-brasov-romania_1268-20593.jpg?t=st=1716714491~exp=1716718091~hmac=33ea4c5124a5e8d380fe37fca7e687a6a89704974b4048c377be2161978c4caa&w=1060",
-      "description": "Brașov is a charming city located in central Romania, nestled in the Carpathian Mountains. Known for its medieval architecture and rich history, Brașov is a major cultural and economic hub in the region. The city's centerpiece is the Black Church, a Gothic-style monument dating back to the 14th century. Brașov's old town is lined with colorful baroque buildings, narrow cobblestone streets, and vibrant squares such as Piața Sfatului. The nearby Tampa Mountain offers panoramic views and hiking opportunities, while the fortified walls and towers, like the White Tower and Black Tower, reflect the city's historical significance as a fortress town. Brașov is also a gateway to the famous Bran Castle, often associated with the Dracula legend. The city's mix of historical charm, natural beauty, and modern amenities make it a popular destination for tourists.",
-      "category": ["aerliber", "citybreak", "relaxare"],
+      "Name": "",
+      "SurName": "",
+      "Mobile": "",
+      "Email": "",
+      "Textarea": "",
       "id": 0
+    }
+  ],
+
+  "italy": [
+    {
+      "id": 1,
+      "name": "Italy",
+      "description": "",
+      "image": ""
     },
     {
-      "name": "Mamaia",
-      "region": "Dobrogea",
-      "photo": "https://unsplash.com/photos/a-large-group-of-people-at-a-beach-thAtOx4W6WU",
-      "description": "Mamaia is a popular seaside resort located on the coast of the Black Sea in Romania. Situated in the northeastern part of Constanța, it is renowned for its long, sandy beaches and vibrant nightlife, making it a top destination for tourists, especially during the summer months. The resort features numerous luxury hotels, beach clubs, and recreational facilities, including water parks and various water sports. Mamaia is also known for its scenic promenade and a gondola that offers panoramic views of the sea and the surrounding area. The resort's lively atmosphere, modern amenities, and natural beauty make it a favorite spot for both relaxation and entertainment.",
-      "category": ["plaja", "relaxare"],
-      "id": 1
-    },
-    {
-      "name": "Cluj-Napoca",
-      "region": "Transilvania",
-      "photo": "https://img.freepik.com/free-photo/aerial-drone-view-saint-michael-church-cluj-romania_1268-20559.jpg?t=st=1716715828~exp=1716719428~hmac=375ac07b58b592ca2c4c44d87871ee653a444ab8844f90b268f2fd0a6b01577d&w=1380",
-      "description": "As the unofficial capital of Transylvania, Cluj-Napoca is a vibrant university city with a rich history and lively arts scene. Highlights include the Gothic-style St. Michael's Church, the picturesque Central Park, and the National Museum of Transylvanian History. Cluj is known for its youthful energy, thanks to its large student population, and hosts numerous cultural festivals.",
-      "category": ["aerliber", "citybreak", "relaxare"],
+      "city": "Rome",
+      "country": "Italy",
+      "image": "",
+      "description": "",
+      "category": "",
       "id": 2
     },
     {
-      "name": "Sighisoara",
-      "region": "Transilvania",
-      "photo": "https://img.freepik.com/free-photo/aerial-drone-view-historic-centre-sighisoara-romania-old-buildings-holy-trinity-church_1268-19367.jpg?t=st=1716716105~exp=1716719705~hmac=6c6a7877e2d0b8dffebec9767bae6f83c61633947c5aabf616c272fba81b83ee&w=1380",
-      "description": "One of the best-preserved medieval towns in Europe, Sighisoara is a UNESCO World Heritage site. The city's charming old town features colorful buildings, narrow streets, and the iconic Clock Tower. Sighisoara is also famous as the birthplace of Vlad the Impaler, the historical figure who inspired the Dracula legend. Its medieval festival and historical ambiance attract many tourists.",
-      "category": ["aerliber", "citybreak", "relaxare"],
+      "city": "Florence",
+      "country": "Italy",
+      "image": "",
+      "description": "",
+      "category": "",
       "id": 3
     },
     {
-      "name": "Sibiu",
-      "region": "Transilvania",
-      "photo": "https://img.freepik.com/free-photo/aerial-drone-view-historic-centre-sibiu-evening-romania_1268-20828.jpg?t=st=1716716228~exp=1716719828~hmac=5182022db7ccec4e61b673186d78227323570e9293c8e5dcf4ccf0a419e0d631&w=1380",
-      "description": "Known for its well-preserved medieval architecture, Sibiu was designated a European Capital of Culture in 2007. The city features beautiful squares such as the Grand Square (Piața Mare) and the Small Square (Piața Mică), as well as the iconic Council Tower and the Brukenthal National Museum. Sibiu's charming ambiance and cultural significance draw many visitors.",
+      "city": "Venice",
+      "country": "Italy",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 4
+    }
+  ],
+  "france": [
+    {
+      "id": 2,
+      "name": "France",
+      "description": "",
+      "image": ""
+    },
+    {
+      "city": "Paris",
+      "country": "France",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 3
+    },
+    {
+      "city": "Nisa",
+      "country": "France",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 4
+    },
+    {
+      "city": "Strassbourg",
+      "country": "France",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 5
+    }
+  ],
+  "romania": [
+    {
+      "id": 3,
+      "name": "Romania",
+      "description": "",
+      "image": ""
+    },
+    {
+      "city": "Sighisoara",
+      "region": "Transylvania",
+      "country": "Romania",
+      "image": "https://img.freepik.com/free-photo/aerial-drone-view-historic-centre-sighisoara-romania-old-buildings-holy-trinity-church_1268-19367.jpg?t=st=1716716105~exp=1716719705~hmac=6c6a7877e2d0b8dffebec9767bae6f83c61633947c5aabf616c272fba81b83ee&w=1380",
+      "description": "One of the best-preserved medieval towns in Europe, Sighisoara is a UNESCO World Heritage site. The city's charming old town features colorful buildings, narrow streets, and the iconic Clock Tower. Sighisoara is also famous as the birthplace of Vlad the Impaler, the historical figure who inspired the Dracula legend. Its medieval festival and historical ambiance attract many tourists.",
       "category": ["aerliber", "citybreak", "relaxare"],
       "id": 4
     },
     {
-      "name": "Bucharest",
+      "city": "Constanta",
+      "region": "Dobrogea",
+      "country": "Romania",
+      "image": "",
+      "description": "",
+      "category": ["plaja", "relaxare", "citybreak"],
+      "id": 5
+    },
+    {
+      "city": "Cluj-Napoca",
+      "region": "Transylvania",
+      "country": "Romania",
+      "image": "https://img.freepik.com/free-photo/aerial-drone-view-saint-michael-church-cluj-romania_1268-20559.jpg?t=st=1716715828~exp=1716719428~hmac=375ac07b58b592ca2c4c44d87871ee653a444ab8844f90b268f2fd0a6b01577d&w=1380",
+      "description": "As the unofficial capital of Transylvania, Cluj-Napoca is a vibrant university city with a rich history and lively arts scene. Highlights include the Gothic-style St. Michael's Church, the picturesque Central Park, and the National Museum of Transylvanian History. Cluj is known for its youthful energy, thanks to its large student population, and hosts numerous cultural festivals.",
+      "category": ["aerliber", "citybreak", "relaxare"],
+      "id": 6
+    },
+    {
+      "city": "Brasov",
+      "region": "Transylvania",
+      "country": "Romania",
+      "image": "https://img.freepik.com/free-photo/aerial-drone-view-council-square-brasov-romania_1268-20593.jpg?t=st=1716714491~exp=1716718091~hmac=33ea4c5124a5e8d380fe37fca7e687a6a89704974b4048c377be2161978c4caa&w=1060",
+      "description": "Brașov is a charming city located in central Romania, nestled in the Carpathian Mountains. Known for its medieval architecture and rich history, Brașov is a major cultural and economic hub in the region. The city's centerpiece is the Black Church, a Gothic-style monument dating back to the 14th century. Brașov's old town is lined with colorful baroque buildings, narrow cobblestone streets, and vibrant squares such as Piața Sfatului. The nearby Tampa Mountain offers panoramic views and hiking opportunities, while the fortified walls and towers, like the White Tower and Black Tower, reflect the city's historical significance as a fortress town. Brașov is also a gateway to the famous Bran Castle, often associated with the Dracula legend. The city's mix of historical charm, natural beauty, and modern amenities make it a popular destination for tourists.",
+      "category": ["aerliber", "citybreak", "relaxare"],
+      "id": 7
+    },
+    {
+      "city": "Mamaia",
+      "region": "Dobrogea",
+      "country": "Romania",
+      "image": "https://unsplash.com/photos/a-large-group-of-people-at-a-beach-thAtOx4W6WU",
+      "description": "Mamaia is a popular seaside resort located on the coast of the Black Sea in Romania. Situated in the northeastern part of Constanța, it is renowned for its long, sandy beaches and vibrant nightlife, making it a top destination for tourists, especially during the summer months. The resort features numerous luxury hotels, beach clubs, and recreational facilities, including water parks and various water sports. Mamaia is also known for its scenic promenade and a gondola that offers panoramic views of the sea and the surrounding area. The resort's lively atmosphere, modern amenities, and natural beauty make it a favorite spot for both relaxation and entertainment.",
+      "category": ["plaja", "relaxare"],
+      "id": 8
+    },
+    {
+      "city": "Sibiu",
+      "region": "Transilvania",
+      "country": "Romania",
+      "image": "https://img.freepik.com/free-photo/aerial-drone-view-historic-centre-sibiu-evening-romania_1268-20828.jpg?t=st=1716716228~exp=1716719828~hmac=5182022db7ccec4e61b673186d78227323570e9293c8e5dcf4ccf0a419e0d631&w=1380",
+      "description": "Known for its well-preserved medieval architecture, Sibiu was designated a European Capital of Culture in 2007. The city features beautiful squares such as the Grand Square (Piața Mare) and the Small Square (Piața Mică), as well as the iconic Council Tower and the Brukenthal National Museum. Sibiu's charming ambiance and cultural significance draw many visitors.",
+      "category": ["aerliber", "citybreak", "relaxare"],
+      "id": 9
+    },
+    {
+      "city": "Bucharest",
       "region": "Muntenia",
-      "photo": "https://img.freepik.com/free-photo/aerial-drone-view-bucharest-romania-city-downtown-with-palace-parliament_1268-23448.jpg?t=st=1716716563~exp=1716720163~hmac=0b11949910fa572495e163c5aef7a395f5621e2900ec6523d4b412b0c79310f7&w=1380",
+      "country": "Romania",
+      "image": "https://img.freepik.com/free-photo/aerial-drone-view-bucharest-romania-city-downtown-with-palace-parliament_1268-23448.jpg?t=st=1716716563~exp=1716720163~hmac=0b11949910fa572495e163c5aef7a395f5621e2900ec6523d4b412b0c79310f7&w=1380",
       "description": "The capital and largest city of Romania, Bucharest is known for its wide boulevards, historic architecture, and vibrant cultural scene. Key attractions include the massive Palace of the Parliament, the historic Old Town (Lipscani), and numerous museums and parks. The city combines a mix of traditional Romanian charm with modern urban energy.",
       "category": ["aerliber", "citybreak", "relaxare"],
+      "id": 10
+    }
+  ],
+  "spain": [
+    {
+      "id": 4,
+      "name": "Spain",
+      "description": "",
+      "image": ""
+    },
+    {
+      "city": "Barcelona",
+      "country": "Spain",
+      "image": "",
+      "description": "",
+      "category": "",
       "id": 5
+    },
+    {
+      "city": "Sevilla",
+      "country": "Spain",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 6
+    },
+    {
+      "city": "Valencia",
+      "country": "Italy",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 7
+    }
+  ],
+  "cities": [
+    {
+      "city": "Rome",
+      "country": "Italy",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 1
+    },
+    {
+      "city": "Florence",
+      "country": "Italy",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 2
+    },
+    {
+      "city": "Venice",
+      "country": "Italy",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 3
+    },
+    {
+      "city": "Paris",
+      "country": "France",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 4
+    },
+    {
+      "city": "Nisa",
+      "country": "France",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 5
+    },
+    {
+      "city": "Strassbourg",
+      "country": "France",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 6
+    },
+    {
+      "city": "Sighisoara",
+      "region": "Transylvania",
+      "country": "Romania",
+      "image": "https://img.freepik.com/free-photo/aerial-drone-view-historic-centre-sighisoara-romania-old-buildings-holy-trinity-church_1268-19367.jpg?t=st=1716716105~exp=1716719705~hmac=6c6a7877e2d0b8dffebec9767bae6f83c61633947c5aabf616c272fba81b83ee&w=1380",
+      "description": "One of the best-preserved medieval towns in Europe, Sighisoara is a UNESCO World Heritage site. The city's charming old town features colorful buildings, narrow streets, and the iconic Clock Tower. Sighisoara is also famous as the birthplace of Vlad the Impaler, the historical figure who inspired the Dracula legend. Its medieval festival and historical ambiance attract many tourists.",
+      "category": ["aerliber", "citybreak", "relaxare"],
+      "id": 7
+    },
+    {
+      "city": "Constanta",
+      "region": "Dobrogea",
+      "country": "Romania",
+      "image": "",
+      "description": "",
+      "category": ["plaja", "relaxare", "citybreak"],
+      "id": 8
+    },
+    {
+      "city": "Cluj-Napoca",
+      "region": "Transylvania",
+      "country": "Romania",
+      "image": "https://img.freepik.com/free-photo/aerial-drone-view-saint-michael-church-cluj-romania_1268-20559.jpg?t=st=1716715828~exp=1716719428~hmac=375ac07b58b592ca2c4c44d87871ee653a444ab8844f90b268f2fd0a6b01577d&w=1380",
+      "description": "As the unofficial capital of Transylvania, Cluj-Napoca is a vibrant university city with a rich history and lively arts scene. Highlights include the Gothic-style St. Michael's Church, the picturesque Central Park, and the National Museum of Transylvanian History. Cluj is known for its youthful energy, thanks to its large student population, and hosts numerous cultural festivals.",
+      "category": ["aerliber", "citybreak", "relaxare"],
+      "id": 9
+    },
+    {
+      "city": "Brasov",
+      "region": "Transylvania",
+      "country": "Romania",
+      "image": "https://img.freepik.com/free-photo/aerial-drone-view-council-square-brasov-romania_1268-20593.jpg?t=st=1716714491~exp=1716718091~hmac=33ea4c5124a5e8d380fe37fca7e687a6a89704974b4048c377be2161978c4caa&w=1060",
+      "description": "Brașov is a charming city located in central Romania, nestled in the Carpathian Mountains. Known for its medieval architecture and rich history, Brașov is a major cultural and economic hub in the region. The city's centerpiece is the Black Church, a Gothic-style monument dating back to the 14th century. Brașov's old town is lined with colorful baroque buildings, narrow cobblestone streets, and vibrant squares such as Piața Sfatului. The nearby Tampa Mountain offers panoramic views and hiking opportunities, while the fortified walls and towers, like the White Tower and Black Tower, reflect the city's historical significance as a fortress town. Brașov is also a gateway to the famous Bran Castle, often associated with the Dracula legend. The city's mix of historical charm, natural beauty, and modern amenities make it a popular destination for tourists.",
+      "category": ["aerliber", "citybreak", "relaxare"],
+      "id": 10
+    },
+    {
+      "city": "Mamaia",
+      "region": "Dobrogea",
+      "country": "Romania",
+      "image": "https://unsplash.com/photos/a-large-group-of-people-at-a-beach-thAtOx4W6WU",
+      "description": "Mamaia is a popular seaside resort located on the coast of the Black Sea in Romania. Situated in the northeastern part of Constanța, it is renowned for its long, sandy beaches and vibrant nightlife, making it a top destination for tourists, especially during the summer months. The resort features numerous luxury hotels, beach clubs, and recreational facilities, including water parks and various water sports. Mamaia is also known for its scenic promenade and a gondola that offers panoramic views of the sea and the surrounding area. The resort's lively atmosphere, modern amenities, and natural beauty make it a favorite spot for both relaxation and entertainment.",
+      "category": ["plaja", "relaxare"],
+      "id": 11
+    },
+    {
+      "city": "Sibiu",
+      "region": "Transilvania",
+      "country": "Romania",
+      "image": "https://img.freepik.com/free-photo/aerial-drone-view-historic-centre-sibiu-evening-romania_1268-20828.jpg?t=st=1716716228~exp=1716719828~hmac=5182022db7ccec4e61b673186d78227323570e9293c8e5dcf4ccf0a419e0d631&w=1380",
+      "description": "Known for its well-preserved medieval architecture, Sibiu was designated a European Capital of Culture in 2007. The city features beautiful squares such as the Grand Square (Piața Mare) and the Small Square (Piața Mică), as well as the iconic Council Tower and the Brukenthal National Museum. Sibiu's charming ambiance and cultural significance draw many visitors.",
+      "category": ["aerliber", "citybreak", "relaxare"],
+      "id": 12
+    },
+    {
+      "city": "Bucharest",
+      "region": "Muntenia",
+      "country": "Romania",
+      "image": "https://img.freepik.com/free-photo/aerial-drone-view-bucharest-romania-city-downtown-with-palace-parliament_1268-23448.jpg?t=st=1716716563~exp=1716720163~hmac=0b11949910fa572495e163c5aef7a395f5621e2900ec6523d4b412b0c79310f7&w=1380",
+      "description": "The capital and largest city of Romania, Bucharest is known for its wide boulevards, historic architecture, and vibrant cultural scene. Key attractions include the massive Palace of the Parliament, the historic Old Town (Lipscani), and numerous museums and parks. The city combines a mix of traditional Romanian charm with modern urban energy.",
+      "category": ["aerliber", "citybreak", "relaxare"],
+      "id": 13
+    },
+    {
+      "city": "Barcelona",
+      "country": "Spain",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 14
+    },
+    {
+      "city": "Sevilla",
+      "country": "Spain",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 15
+    },
+    {
+      "city": "Valencia",
+      "country": "Italy",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 16
+    }
+  ],
+
+  "regions": [
+    {
+      "region": "Toscana",
+      "country": "Italy",
+      "image": "",
+      "description": "",
+      "id": 1
+    },
+    {
+      "region": "Puglia",
+      "country": "Italy",
+      "image": "",
+      "description": "",
+      "id": 2
+    },
+    {
+      "region": "Lombardia",
+      "country": "Italy",
+      "image": "",
+      "description": "",
+      "id": 3
+    },
+    {
+      "region": "Provence",
+      "country": "France",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 4
+    },
+    {
+      "region": "Loir Valley",
+      "country": "France",
+      "image": "",
+      "description": "",
+      "id": 5
+    },
+    {
+      "region": "Normandy",
+      "country": "France",
+      "image": "",
+      "description": "",
+      "id": 6
+    },
+    {
+      "region": "Transylvania",
+      "country": "Romania",
+      "image": "",
+      "description": "",
+      "id": 7
+    },
+    {
+      "region": "Danube Delta",
+      "country": "Romania",
+      "image": "",
+      "description": "",
+      "id": 8
+    },
+    {
+      "region": "Bucovina",
+      "country": "",
+      "image": "",
+      "description": "",
+      "id": 9
+    },
+    {
+      "region": "Andalusia",
+      "country": "Spain",
+      "image": "",
+      "description": "",
+      "id": 10
+    },
+    {
+      "region": "Basque Country",
+      "country": "Spain",
+      "image": "",
+      "description": "",
+      "id": 11
+    },
+    {
+      "region": "Balearic Islands",
+      "country": "Italy",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 12
     }
   ],
   "destinations": [
@@ -82,8 +436,5 @@
       "popularity": 4.5,
       "id": 3
     }
-  ],
-  "italy": [],
-  "france": [],
-  "spain": []
+  ]
 }

@@ -15,17 +15,18 @@ import {
 } from "./Explore.style";
 
 const Explore = () => {
-  const { country, id } = useParams();
-  const [clicked, setClicked] = useState(true);
-  console.log("params", country, id);
+  const { country, city } = useParams();
 
-  const url = country && id ? `http://localhost:3001/${country}/${id}` : null;
+  const [clicked, setClicked] = useState(true);
+
+  const url =
+    country && city ? `http://localhost:3001/${country}?city=${city}` : null;
 
   const { data, error, loading } = useFetchData(url, clicked, setClicked);
 
-  console.log("data", "error", "loading", data, error, loading);
+  const compactData = data ? data[0] : null;
 
-  console.log("tip de date data", typeof data);
+  console.log("compactData", compactData);
 
   return (
     <>
@@ -36,9 +37,11 @@ const Explore = () => {
         {data && (
           <div>
             <CountrySubtitle>Country: {country}</CountrySubtitle>
-            <Subtitle>Region: {data.region}</Subtitle>
-            <Subtitle>City: {data.name}</Subtitle>
-            <CityDescription>Description: {data.description}</CityDescription>
+            <Subtitle>Region: {compactData.region}</Subtitle>
+            <Subtitle>City: {city}</Subtitle>
+            <CityDescription>
+              Description: {compactData.description}
+            </CityDescription>
           </div>
         )}
       </SectionCityData>
@@ -62,7 +65,7 @@ const Explore = () => {
       )}
       <SectionCityButtons>
         <ButtonCity to={`/intinerary`}>
-          Save {data && data.name} to my intinerary!
+          Save {city} to my intinerary!
         </ButtonCity>
         <ButtonCity>I want to book accommodation!</ButtonCity>
       </SectionCityButtons>
