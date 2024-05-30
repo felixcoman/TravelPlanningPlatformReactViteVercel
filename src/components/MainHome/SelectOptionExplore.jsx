@@ -18,7 +18,7 @@ function SelectOptionExplore() {
 
   const url =
     selectedCountry && selectedCity
-      ? `http://localhost:3001/${selectedCountry}${selectedCity}`
+      ? `http://localhost:3001/${selectedCountry}/${selectedCity}`
       : null;
 
   const { data, error, loading, setData } = useFetchData(
@@ -34,7 +34,7 @@ function SelectOptionExplore() {
   };
 
   const handleDropdownChangeCity = (e) => {
-    setSelectedCity("/" + e.target.value);
+    setSelectedCity(e.target.value);
     console.log("selectedCity", "/" + e.target.value);
     setData(null);
   };
@@ -111,7 +111,7 @@ function SelectOptionExplore() {
             loc="HomeBtn"
             type="submit"
             data={data}
-            to={`/explore/${selectedCountry}${selectedCity}`}
+            to={`/explore/${selectedCountry}/${selectedCity}`}
           >
             Let's Begin To Travel!
           </HomeBtn>
