@@ -1,17 +1,21 @@
 import { useState } from "react";
-import { Card } from "react-bootstrap";
+
 import { useParams } from "react-router-dom";
 import useFetchData from "../../hooks/useFetchData";
+import DestinationCard from "../DestinationCard/DestinationCard";
 import {
   ButtonCity,
-  ButtonLandmark,
   CityDescription,
+  ContainerDescriptionBottom,
+  ContainerDescriptionTop,
+  ContainerTop,
+  CountrySubtitle,
+  ImageCity,
+  SectionCityButtons,
+  SectionCityData,
   Subtitle,
   Title,
-  CountrySubtitle,
-  SectionCityData,
   SectionLandmarkData,
-  SectionCityButtons,
 } from "./Explore.style";
 
 const Explore = () => {
@@ -19,55 +23,71 @@ const Explore = () => {
 
   const [clicked, setClicked] = useState(true);
 
-  const url =
+  const urlCity =
     country && city ? `http://localhost:3001/${country}?city=${city}` : null;
 
-  const { data, error, loading } = useFetchData(url, clicked, setClicked);
+  const {
+    data: dataCity,
+    error: errorCity,
+    loading: loadingCity,
+  } = useFetchData(urlCity, clicked, setClicked);
 
-  const compactData = data ? data[0] : null;
+  const urlDestination =
+    country && city ? `http://localhost:3001/destinations?city=${city}` : null;
 
-  console.log("compactData", compactData);
+  const {
+    data: dataDestination,
+    error: errorDestination,
+    loading: loadingDestionation,
+  } = useFetchData(urlDestination, clicked, setClicked);
+
+  const compactDataCity = dataCity ? dataCity[0] : null;
+
+  console.log("compactDataCity", compactDataCity);
 
   return (
     <>
-      <SectionCityData>
-        <Title>Feel free to explore our offers regarding your selection:</Title>
-        {loading && <div>Loading...</div>}
-        {error && <div>Error: {error.message}</div>}
-        {data && (
-          <div>
-            <CountrySubtitle>Country: {country}</CountrySubtitle>
-            <Subtitle>Region: {compactData.region}</Subtitle>
-            <Subtitle>City: {city}</Subtitle>
-            <CityDescription>
-              Description: {compactData.description}
-            </CityDescription>
-          </div>
+      <SectionCityData loc="SectionCityData">
+        <Title loc="Title">
+          Feel free to explore our offers regarding your selection:
+        </Title>
+        {loadingCity && <div>Loading...</div>}
+        {errorCity && <div>Error: {errorCity.message}</div>}
+        {dataCity && (
+          <>
+            <ContainerTop loc="ContainerTop">
+              <ImageCity loc="ImageCity" src={compactDataCity.image} />
+              <ContainerDescriptionTop loc="ContainerDescriptionTop">
+                <CountrySubtitle loc="CountrySubtitle">
+                  Country: {country}
+                </CountrySubtitle>
+                <Subtitle loc="Subtitle">
+                  Region: {compactDataCity.region}
+                </Subtitle>
+                <Subtitle loc="Subtitle">City: {city}</Subtitle>
+              </ContainerDescriptionTop>
+            </ContainerTop>
+            <ContainerDescriptionBottom loc="ContainerDescriptionBottom">
+              <CityDescription loc="CityDescription">
+                Description: {compactDataCity.description}
+              </CityDescription>
+            </ContainerDescriptionBottom>
+          </>
         )}
       </SectionCityData>
-      {data && (
-        <SectionLandmarkData>
-          <Card style={{ width: "18rem" }}>
-            <Card.Img
-              variant="top"
-              src="holder.js/100px180"
-              alt="Image of landmark"
-            />
-            <Card.Body>
-              <Card.Title>Landmark Title</Card.Title>
-              <Card.Text>Description of landmark</Card.Text>
-              <ButtonLandmark to={`/intinerary`}>
-                Save landmark to my intinerary!
-              </ButtonLandmark>
-            </Card.Body>
-          </Card>
-        </SectionLandmarkData>
-      )}
-      <SectionCityButtons>
-        <ButtonCity to={`/intinerary`}>
+      <SectionLandmarkData loc="SectionLandmarkData">
+        {loadingDestionation && <div>Loading...</div>}
+        {errorDestination && <div>Error: {errorCity.message}</div>}
+        {dataDestination &&
+          dataDestination?.map((destination, index) => (
+            <DestinationCard key={index} {...destination} />
+          ))}
+      </SectionLandmarkData>
+      <SectionCityButtons loc="SectionCityButtons">
+        <ButtonCity loc="ButtonCity" to={`/intinerary`}>
           Save {city} to my intinerary!
         </ButtonCity>
-        <ButtonCity>I want to book accommodation!</ButtonCity>
+        <ButtonCity loc="ButtonCity">I want to book accommodation!</ButtonCity>
       </SectionCityButtons>
     </>
   );
