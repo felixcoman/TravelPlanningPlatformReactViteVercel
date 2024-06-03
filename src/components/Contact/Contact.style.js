@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { DARK_BLUE, ORANGE, WHITE_NEUTRAL } from "../../constants/Colors";
+import { TEXT_SIZE_BIG } from "../../constants/Dimensions";
 
 export const ContactContainer = styled.div`
   display: flex;
- 
+
   margin: 30px 0;
   padding: 64px;
   height: 100%;
@@ -12,17 +13,16 @@ export const ContactContainer = styled.div`
   flex-direction: column;
 `;
 
-
 export const ContactText = styled.h4`
   color: ${WHITE_NEUTRAL};
 `;
 
 export const ContactLabel = styled.p`
-  font-size: large;
+  font-size: ${TEXT_SIZE_BIG};
   width: 50%;
-  margin: 12px auto ;
+  margin: 12px auto;
   color: ${WHITE_NEUTRAL};
-  text-align:left;
+  text-align: left;
 `;
 export const ContactInput = styled.input`
   width: 50%;

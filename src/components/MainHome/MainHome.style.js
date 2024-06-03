@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { DARK_BLUE, ORANGE, WHITE_NEUTRAL } from "../../constants/Colors";
+import { TEXT_SIZE_MEDIUM } from "../../constants/Dimensions";
 
 export const MainContainer = styled.div`
   display: grid;
@@ -50,7 +51,7 @@ export const Buttons = styled.button`
   width: 200px;
   height: 70px;
   font-weight: 700;
-  font-size: 20px;
+  font-size: ${TEXT_SIZE_MEDIUM};
   color: ${DARK_BLUE};
   margin: 0 10px;
   cursor: pointer;
@@ -88,19 +89,19 @@ export const Select = styled.select`
   margin: 0 10px;
   text-align: center;
   font-weight: 700;
-  font-size: 20px;
+  font-size: ${TEXT_SIZE_MEDIUM};
 `;
 
 export const Option = styled.option`
   font-weight: 700;
-  font-size: 20px;
+  font-size: ${TEXT_SIZE_MEDIUM};
 `;
 
 export const HomeBtn = styled(Link)`
   width: 65%;
   height: 40px;
   font-weight: 700;
-  font-size: 20px;
+  font-size: ${TEXT_SIZE_MEDIUM};
   background: ${WHITE_NEUTRAL};
   color: ${ORANGE};
   margin: 200px 15px auto;
@@ -126,7 +127,7 @@ export const FormBody = styled.form`
 export const LabelHead = styled.label`
   color: ${WHITE_NEUTRAL};
   font-weight: 700;
-  font-size: 20px;
+  font-size: ${TEXT_SIZE_MEDIUM};
   height: auto;
   margin: 10px 0 10px 0;
 `;
