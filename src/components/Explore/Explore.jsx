@@ -62,7 +62,7 @@ const Explore = () => {
                   Country: {country}
                 </CountrySubtitle>
                 <Subtitle loc="Subtitle">
-                  Region: {compactDataCity.region}
+                  Region: {compactDataCity.reg}
                 </Subtitle>
                 <Subtitle loc="Subtitle">City: {city}</Subtitle>
               </ContainerDescriptionTop>

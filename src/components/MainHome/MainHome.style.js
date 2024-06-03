@@ -104,12 +104,13 @@ export const HomeBtn = styled(Link)`
   font-size: ${TEXT_SIZE_MEDIUM};
   background: ${WHITE_NEUTRAL};
   color: ${ORANGE};
-  margin: 200px 15px auto;
+  margin: 15px auto;
   cursor: pointer;
   border-radius: 5px;
   align-content: center;
   text-decoration: none;
   border: 1px solid ${ORANGE};
+
   &:hover {
     background: ${DARK_BLUE};
     color: ${WHITE_NEUTRAL};
