@@ -14,64 +14,347 @@
     {
       "id": 1,
       "name": "Italy",
-      "description": "",
-      "image": ""
+      "description": "Italy is a boot-shaped peninsula that juts out of southern Europe into the Adriatic Sea, Tyrrhenian Sea, Mediterranean Sea, and other waters. Its location has played an important role in its history. The sea surrounds Italy, and mountains crisscross the interior, dividing it into regions.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyUfx-_2yXZ4pEzCIlQDe8KelUVj4YsUY1gg&s"
     },
     {
       "city": "Rome",
       "country": "Italy",
-      "image": "",
-      "description": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNehd2qBgSE2QT5e9gGWEdgALG4HXfuaL1xw&s",
+      "description": "Rome is often referred to as the City of Seven Hills due to its geographic location, and also as the Eternal City. Rome is generally considered to be the cradle of Western civilization and Western Christian culture, and the centre of the Catholic Church.",
       "category": "",
+      "period": {
+        "3days": {
+          "day1": "",
+          "day2": "",
+          "day3": ""
+        },
+        "5days": {
+          "day1": "",
+          "day2": "",
+          "day3": "",
+          "day4": "",
+          "day5": ""
+        },
+        "7days": {
+          "day1": "",
+          "day2": "",
+          "day3": "",
+          "day4": "",
+          "day5": "",
+          "day6": "",
+          "day7": ""
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "acomodation1": "",
+          "acomodation2": "",
+          "acomodation3": ""
+        },
+        "mediumBuget": {
+          "acomodation1": "",
+          "acomodation2": "",
+          "acomodation3": ""
+        },
+        "highBuget": {
+          "acomodation1": "",
+          "acomodation2": "",
+          "acomodation3": ""
+        }
+      },
       "id": 2
     },
     {
       "city": "Florence",
       "country": "Italy",
-      "image": "",
-      "description": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOVCFLKUzlXpEtCR_Vx9cFPz8HZsWWsZb-ew&s",
+      "description": "Located in the central part of Italy, Florence is the capital of Tuscany Region, it has approximately 380,000 inhabitants – and up to one million in the metropolitan area- for 102 kmq. The Arno River runs through the city and a series of bridges connects its two banks including the famous Ponte Vecchio.",
       "category": "",
+      "period": {
+        "3days": {
+          "day1": "",
+          "day2": "",
+          "day3": ""
+        },
+        "5days": {
+          "day1": "",
+          "day2": "",
+          "day3": "",
+          "day4": "",
+          "day5": ""
+        },
+        "7days": {
+          "day1": "",
+          "day2": "",
+          "day3": "",
+          "day4": "",
+          "day5": "",
+          "day6": "",
+          "day7": ""
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "acomodation1": "",
+          "acomodation2": "",
+          "acomodation3": ""
+        },
+        "mediumBuget": {
+          "acomodation1": "",
+          "acomodation2": "",
+          "acomodation3": ""
+        },
+        "highBuget": {
+          "acomodation1": "",
+          "acomodation2": "",
+          "acomodation3": ""
+        }
+      },
       "id": 3
     },
     {
       "city": "Venice",
       "country": "Italy",
-      "image": "",
-      "description": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmbesDVL1vnuX2-kDLSFu7Tn8wq47cZC6j5g&s",
+      "description": "Venice is a city in northeastern Italy and the capital of the Veneto region. It is sited on a group of 117 small islands that are separated by canals and linked by bridges. These are located in the marshy Venetian Lagoon which stretches along the shoreline, between the mouths of the Po and the Piave Rivers.",
       "category": "",
+      "period": {
+        "3days": {
+          "day1": "",
+          "day2": "",
+          "day3": ""
+        },
+        "5days": {
+          "day1": "",
+          "day2": "",
+          "day3": "",
+          "day4": "",
+          "day5": ""
+        },
+        "7days": {
+          "day1": "",
+          "day2": "",
+          "day3": "",
+          "day4": "",
+          "day5": "",
+          "day6": "",
+          "day7": ""
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "acomodation1": "",
+          "acomodation2": "",
+          "acomodation3": ""
+        },
+        "mediumBuget": {
+          "acomodation1": "",
+          "acomodation2": "",
+          "acomodation3": ""
+        },
+        "highBuget": {
+          "acomodation1": "",
+          "acomodation2": "",
+          "acomodation3": ""
+        }
+      },
       "id": 4
+    },
+    {
+      "region": "Toscana",
+      "country": "Italy",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpCTeNcNDF9YV2SZAEFfQr67yNoEbjaf7NWQ&s",
+      "description": "Tuscany (Italian: Toscana) is a region in the center of Italy. It has an area of 22,990 km² and a population of about 3.6 million people (in 2004). The capital is Florence. Tuscany is known for its landscapes and its artistic legacy.",
+      "period": {
+        "3days": {
+          "day1": "",
+          "day2": "",
+          "day3": ""
+        },
+        "5days": {
+          "day1": "",
+          "day2": "",
+          "day3": "",
+          "day4": "",
+          "day5": ""
+        },
+        "7days": {
+          "day1": "",
+          "day2": "",
+          "day3": "",
+          "day4": "",
+          "day5": "",
+          "day6": "",
+          "day7": ""
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "acomodation1": "",
+          "acomodation2": "",
+          "acomodation3": ""
+        },
+        "mediumBuget": {
+          "acomodation1": "",
+          "acomodation2": "",
+          "acomodation3": ""
+        },
+        "highBuget": {
+          "acomodation1": "",
+          "acomodation2": "",
+          "acomodation3": ""
+        }
+      },
+      "id": 5
+    },
+    {
+      "region": "Puglia",
+      "country": "Italy",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv7dvJuYWrD9N3ePi0CIRrOE1pzDA4X01w6A&s",
+      "description": "Apulia , also known by its Italian name Puglia , is a region of Italy, located in the southern peninsular section of the country, bordering the Adriatic Sea to the east, the Strait of Otranto and Ionian Sea to the southeast and the Gulf of Taranto to the south.",
+      "period": {
+        "3days": {
+          "day1": "",
+          "day2": "",
+          "day3": ""
+        },
+        "5days": {
+          "day1": "",
+          "day2": "",
+          "day3": "",
+          "day4": "",
+          "day5": ""
+        },
+        "7days": {
+          "day1": "",
+          "day2": "",
+          "day3": "",
+          "day4": "",
+          "day5": "",
+          "day6": "",
+          "day7": ""
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "acomodation1": "",
+          "acomodation2": "",
+          "acomodation3": ""
+        },
+        "mediumBuget": {
+          "acomodation1": "",
+          "acomodation2": "",
+          "acomodation3": ""
+        },
+        "highBuget": {
+          "acomodation1": "",
+          "acomodation2": "",
+          "acomodation3": ""
+        }
+      },
+      "id": 6
+    },
+    {
+      "region": "Lombardy",
+      "country": "Italy",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Tov7aQ_NohLLZo0BQuJiegJ1p_JNY_PHVw&s",
+      "description": "Lombardy is a region in the north of Italy known for its industry and finance, of course, but also for its art and extraordinary landscapes, starting with the picturesque lakes and its mountains, Valcamonica and Valtellina in primis.",
+      "period": {
+        "3days": {
+          "day1": "",
+          "day2": "",
+          "day3": ""
+        },
+        "5days": {
+          "day1": "",
+          "day2": "",
+          "day3": "",
+          "day4": "",
+          "day5": ""
+        },
+        "7days": {
+          "day1": "",
+          "day2": "",
+          "day3": "",
+          "day4": "",
+          "day5": "",
+          "day6": "",
+          "day7": ""
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "acomodation1": "",
+          "acomodation2": "",
+          "acomodation3": ""
+        },
+        "mediumBuget": {
+          "acomodation1": "",
+          "acomodation2": "",
+          "acomodation3": ""
+        },
+        "highBuget": {
+          "acomodation1": "",
+          "acomodation2": "",
+          "acomodation3": ""
+        }
+      },
+      "id": 7
     }
   ],
-  "france": [
+  "France": [
     {
-      "id": 2,
+      "id": 1,
       "name": "France",
-      "description": "",
-      "image": ""
+      "description": "France is one of the oldest nations on Earth and the most ethnically diverse country in Europe. These deep and broad influences have made France a world leader throughout history in nearly all aspects of culture, including cuisine, wine-making, politics, philosophy, music, art, film, fashion, literature, and sports.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIKMHNkV4YKsg609cxv2A5kO2CKOA5bIgq9g&s"
     },
     {
       "city": "Paris",
       "country": "France",
-      "image": "",
-      "description": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD_KAzXa9xFq7UjSoxk8DVwEZuHSdLF1rGGA&s",
+      "description": "Paris is the capital and most populous city of France. Situated on the Seine River, in the north of the country, it is in the centre of the Île-de-France region, also known as the région parisienne, Paris Region.",
+      "category": "",
+      "id": 2
+    },
+    {
+      "city": "Nice",
+      "country": "France",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDGrMYJtjU6XsS1cAYy3Fzwf2HYwgPRDgWbg&s",
+      "description": "Nice is a major commercial and administrative centre in the east of the Provence–Alpes–Côte d'Azur region, its influence extending well beyond the boundary of the Alpes-Maritimes département. Numerous small and medium-sized factories are located at Nice, particularly in the Var Plain to the west.",
       "category": "",
       "id": 3
     },
     {
-      "city": "Nisa",
+      "city": "Strassburg",
       "country": "France",
-      "image": "",
-      "description": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwhLmyb7TIkXPzxDGpYPPioMP1aKOkIkkYJg&s",
+      "description": "Frontier towns are often cross-cultural capitals. Strasbourg is the embodiment of that role, stirring France and Germany into an appealing brew, even despite the increased complexity of hosting important international institutions like the Council of Europe and European Parliament. Somehow, they only add to the charm of Strasbourg’s historical center – “Little France,” now a UNESCO World Heritage Site – packed with narrow alleyways, canals and half-timbered houses with street-level winstubs (local taverns), all lorded over by an ornate Gothic masterpiece of a cathedral.",
       "category": "",
       "id": 4
     },
     {
-      "city": "Strassbourg",
+      "region": "Provence",
       "country": "France",
-      "image": "",
-      "description": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3we08VKxXTXBZZ_osk2y_7nkWI11jYskAuQ&s",
+      "description": "Provence  is a geographical region and historical province of southeastern France, which extends from the left bank of the lower Rhône to the west to the Italian border to the east; it is bordered by the Mediterranean Sea to the south.",
       "category": "",
       "id": 5
+    },
+    {
+      "region": "Loir Valley",
+      "country": "France",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnXvnmk4k59H1-DpvvqTx2LOBonMzlaiPg1A&s",
+      "description": "The Loire Valley has been called the Garden of France and is studded with over a thousand châteaux, each with distinct architectural embellishments covering a wide range of variations, from the early medieval to the late Renaissance periods.",
+      "id": 6
+    },
+    {
+      "region": "Normandy",
+      "country": "France",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaXlC_NJ_V0fuQ4WloLIQr92cZkT3sX6x90w&s",
+      "description": "Normandy, historic and cultural region of northern France encompassing the départements of Manche, Calvados, Orne, Eure, and Seine-Maritime and coextensive with the former province of Normandy. It was recreated as an administrative entity in 2016 with the union of the régions of Basse-Normandie and Haute-Normandie.",
+      "id": 7
     }
   ],
   "romania": [
@@ -83,7 +366,7 @@
     },
     {
       "city": "Sighisoara",
-      "region": "Transylvania",
+      "reg": "Transylvania",
       "country": "Romania",
       "image": "https://img.freepik.com/free-photo/aerial-drone-view-historic-centre-sighisoara-romania-old-buildings-holy-trinity-church_1268-19367.jpg?t=st=1716716105~exp=1716719705~hmac=6c6a7877e2d0b8dffebec9767bae6f83c61633947c5aabf616c272fba81b83ee&w=1380",
       "description": "One of the best-preserved medieval towns in Europe, Sighisoara is a UNESCO World Heritage site. The city's charming old town features colorful buildings, narrow streets, and the iconic Clock Tower. Sighisoara is also famous as the birthplace of Vlad the Impaler, the historical figure who inspired the Dracula legend. Its medieval festival and historical ambiance attract many tourists.",
@@ -92,7 +375,7 @@
     },
     {
       "city": "Constanta",
-      "region": "Dobrogea",
+      "reg": "Dobrogea",
       "country": "Romania",
       "image": "",
       "description": "",
@@ -101,7 +384,7 @@
     },
     {
       "city": "Cluj-Napoca",
-      "region": "Transylvania",
+      "reg": "Transylvania",
       "country": "Romania",
       "image": "https://img.freepik.com/free-photo/aerial-drone-view-saint-michael-church-cluj-romania_1268-20559.jpg?t=st=1716715828~exp=1716719428~hmac=375ac07b58b592ca2c4c44d87871ee653a444ab8844f90b268f2fd0a6b01577d&w=1380",
       "description": "As the unofficial capital of Transylvania, Cluj-Napoca is a vibrant university city with a rich history and lively arts scene. Highlights include the Gothic-style St. Michael's Church, the picturesque Central Park, and the National Museum of Transylvanian History. Cluj is known for its youthful energy, thanks to its large student population, and hosts numerous cultural festivals.",
@@ -110,7 +393,7 @@
     },
     {
       "city": "Brasov",
-      "region": "Transylvania",
+      "reg": "Transylvania",
       "country": "Romania",
       "image": "https://img.freepik.com/free-photo/aerial-drone-view-council-square-brasov-romania_1268-20593.jpg?t=st=1716714491~exp=1716718091~hmac=33ea4c5124a5e8d380fe37fca7e687a6a89704974b4048c377be2161978c4caa&w=1060",
       "description": "Brașov is a charming city located in central Romania, nestled in the Carpathian Mountains. Known for its medieval architecture and rich history, Brașov is a major cultural and economic hub in the region. The city's centerpiece is the Black Church, a Gothic-style monument dating back to the 14th century. Brașov's old town is lined with colorful baroque buildings, narrow cobblestone streets, and vibrant squares such as Piața Sfatului. The nearby Tampa Mountain offers panoramic views and hiking opportunities, while the fortified walls and towers, like the White Tower and Black Tower, reflect the city's historical significance as a fortress town. Brașov is also a gateway to the famous Bran Castle, often associated with the Dracula legend. The city's mix of historical charm, natural beauty, and modern amenities make it a popular destination for tourists.",
@@ -119,7 +402,7 @@
     },
     {
       "city": "Mamaia",
-      "region": "Dobrogea",
+      "reg": "Dobrogea",
       "country": "Romania",
       "image": "https://unsplash.com/photos/a-large-group-of-people-at-a-beach-thAtOx4W6WU",
       "description": "Mamaia is a popular seaside resort located on the coast of the Black Sea in Romania. Situated in the northeastern part of Constanța, it is renowned for its long, sandy beaches and vibrant nightlife, making it a top destination for tourists, especially during the summer months. The resort features numerous luxury hotels, beach clubs, and recreational facilities, including water parks and various water sports. Mamaia is also known for its scenic promenade and a gondola that offers panoramic views of the sea and the surrounding area. The resort's lively atmosphere, modern amenities, and natural beauty make it a favorite spot for both relaxation and entertainment.",
@@ -128,7 +411,7 @@
     },
     {
       "city": "Sibiu",
-      "region": "Transilvania",
+      "reg": "Transilvania",
       "country": "Romania",
       "image": "https://img.freepik.com/free-photo/aerial-drone-view-historic-centre-sibiu-evening-romania_1268-20828.jpg?t=st=1716716228~exp=1716719828~hmac=5182022db7ccec4e61b673186d78227323570e9293c8e5dcf4ccf0a419e0d631&w=1380",
       "description": "Known for its well-preserved medieval architecture, Sibiu was designated a European Capital of Culture in 2007. The city features beautiful squares such as the Grand Square (Piața Mare) and the Small Square (Piața Mică), as well as the iconic Council Tower and the Brukenthal National Museum. Sibiu's charming ambiance and cultural significance draw many visitors.",
@@ -137,7 +420,7 @@
     },
     {
       "city": "Bucharest",
-      "region": "Muntenia",
+      "reg": "Muntenia",
       "country": "Romania",
       "image": "https://img.freepik.com/free-photo/aerial-drone-view-bucharest-romania-city-downtown-with-palace-parliament_1268-23448.jpg?t=st=1716716563~exp=1716720163~hmac=0b11949910fa572495e163c5aef7a395f5621e2900ec6523d4b412b0c79310f7&w=1380",
       "description": "The capital and largest city of Romania, Bucharest is known for its wide boulevards, historic architecture, and vibrant cultural scene. Key attractions include the massive Palace of the Parliament, the historic Old Town (Lipscani), and numerous museums and parks. The city combines a mix of traditional Romanian charm with modern urban energy.",
@@ -145,262 +428,57 @@
       "id": 10
     }
   ],
-  "spain": [
+  "Spain": [
     {
-      "id": 4,
+      "id": 1,
       "name": "Spain",
-      "description": "",
-      "image": ""
+      "description": "Spain is a storied country of stone castles, snowcapped mountains, vast monuments, and sophisticated cities, all of which have made it a favoured travel destination. The country is geographically and culturally diverse. Its heartland is the Meseta, a broad central plateau half a mile above sea level.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb_XVoq9d4Ff2787M_2ZO9ewIurE89w1hOMw&s"
     },
     {
       "city": "Barcelona",
       "country": "Spain",
-      "image": "",
-      "description": "",
-      "category": "",
-      "id": 5
-    },
-    {
-      "city": "Sevilla",
-      "country": "Spain",
-      "image": "",
-      "description": "",
-      "category": "",
-      "id": 6
-    },
-    {
-      "city": "Valencia",
-      "country": "Italy",
-      "image": "",
-      "description": "",
-      "category": "",
-      "id": 7
-    }
-  ],
-  "cities": [
-    {
-      "city": "Rome",
-      "country": "Italy",
-      "image": "",
-      "description": "",
-      "category": "",
-      "id": 1
-    },
-    {
-      "city": "Florence",
-      "country": "Italy",
-      "image": "",
-      "description": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiRBfHspE27YCVXRvWj_-4ZRyPvzxQtkYHYQ&s",
+      "description": "Overlooking the Mediterranean Sea, and famous for Gaudí and other Art Nouveau architecture, Barcelona is one of Europe's trendiest cities. It's a hub of new trends in the world of culture, fashion and cuisine. It combines the creativity of its artists and designers with respect and care for local traditions.",
       "category": "",
       "id": 2
     },
     {
-      "city": "Venice",
-      "country": "Italy",
-      "image": "",
-      "description": "",
-      "category": "",
-      "id": 3
-    },
-    {
-      "city": "Paris",
-      "country": "France",
-      "image": "",
-      "description": "",
-      "category": "",
-      "id": 4
-    },
-    {
-      "city": "Nisa",
-      "country": "France",
-      "image": "",
-      "description": "",
-      "category": "",
-      "id": 5
-    },
-    {
-      "city": "Strassbourg",
-      "country": "France",
-      "image": "",
-      "description": "",
-      "category": "",
-      "id": 6
-    },
-    {
-      "city": "Sighisoara",
-      "region": "Transylvania",
-      "country": "Romania",
-      "image": "https://img.freepik.com/free-photo/aerial-drone-view-historic-centre-sighisoara-romania-old-buildings-holy-trinity-church_1268-19367.jpg?t=st=1716716105~exp=1716719705~hmac=6c6a7877e2d0b8dffebec9767bae6f83c61633947c5aabf616c272fba81b83ee&w=1380",
-      "description": "One of the best-preserved medieval towns in Europe, Sighisoara is a UNESCO World Heritage site. The city's charming old town features colorful buildings, narrow streets, and the iconic Clock Tower. Sighisoara is also famous as the birthplace of Vlad the Impaler, the historical figure who inspired the Dracula legend. Its medieval festival and historical ambiance attract many tourists.",
-      "category": ["aerliber", "citybreak", "relaxare"],
-      "id": 7
-    },
-    {
-      "city": "Constanta",
-      "region": "Dobrogea",
-      "country": "Romania",
-      "image": "",
-      "description": "",
-      "category": ["plaja", "relaxare", "citybreak"],
-      "id": 8
-    },
-    {
-      "city": "Cluj-Napoca",
-      "region": "Transylvania",
-      "country": "Romania",
-      "image": "https://img.freepik.com/free-photo/aerial-drone-view-saint-michael-church-cluj-romania_1268-20559.jpg?t=st=1716715828~exp=1716719428~hmac=375ac07b58b592ca2c4c44d87871ee653a444ab8844f90b268f2fd0a6b01577d&w=1380",
-      "description": "As the unofficial capital of Transylvania, Cluj-Napoca is a vibrant university city with a rich history and lively arts scene. Highlights include the Gothic-style St. Michael's Church, the picturesque Central Park, and the National Museum of Transylvanian History. Cluj is known for its youthful energy, thanks to its large student population, and hosts numerous cultural festivals.",
-      "category": ["aerliber", "citybreak", "relaxare"],
-      "id": 9
-    },
-    {
-      "city": "Brasov",
-      "region": "Transylvania",
-      "country": "Romania",
-      "image": "https://img.freepik.com/free-photo/aerial-drone-view-council-square-brasov-romania_1268-20593.jpg?t=st=1716714491~exp=1716718091~hmac=33ea4c5124a5e8d380fe37fca7e687a6a89704974b4048c377be2161978c4caa&w=1060",
-      "description": "Brașov is a charming city located in central Romania, nestled in the Carpathian Mountains. Known for its medieval architecture and rich history, Brașov is a major cultural and economic hub in the region. The city's centerpiece is the Black Church, a Gothic-style monument dating back to the 14th century. Brașov's old town is lined with colorful baroque buildings, narrow cobblestone streets, and vibrant squares such as Piața Sfatului. The nearby Tampa Mountain offers panoramic views and hiking opportunities, while the fortified walls and towers, like the White Tower and Black Tower, reflect the city's historical significance as a fortress town. Brașov is also a gateway to the famous Bran Castle, often associated with the Dracula legend. The city's mix of historical charm, natural beauty, and modern amenities make it a popular destination for tourists.",
-      "category": ["aerliber", "citybreak", "relaxare"],
-      "id": 10
-    },
-    {
-      "city": "Mamaia",
-      "region": "Dobrogea",
-      "country": "Romania",
-      "image": "https://unsplash.com/photos/a-large-group-of-people-at-a-beach-thAtOx4W6WU",
-      "description": "Mamaia is a popular seaside resort located on the coast of the Black Sea in Romania. Situated in the northeastern part of Constanța, it is renowned for its long, sandy beaches and vibrant nightlife, making it a top destination for tourists, especially during the summer months. The resort features numerous luxury hotels, beach clubs, and recreational facilities, including water parks and various water sports. Mamaia is also known for its scenic promenade and a gondola that offers panoramic views of the sea and the surrounding area. The resort's lively atmosphere, modern amenities, and natural beauty make it a favorite spot for both relaxation and entertainment.",
-      "category": ["plaja", "relaxare"],
-      "id": 11
-    },
-    {
-      "city": "Sibiu",
-      "region": "Transilvania",
-      "country": "Romania",
-      "image": "https://img.freepik.com/free-photo/aerial-drone-view-historic-centre-sibiu-evening-romania_1268-20828.jpg?t=st=1716716228~exp=1716719828~hmac=5182022db7ccec4e61b673186d78227323570e9293c8e5dcf4ccf0a419e0d631&w=1380",
-      "description": "Known for its well-preserved medieval architecture, Sibiu was designated a European Capital of Culture in 2007. The city features beautiful squares such as the Grand Square (Piața Mare) and the Small Square (Piața Mică), as well as the iconic Council Tower and the Brukenthal National Museum. Sibiu's charming ambiance and cultural significance draw many visitors.",
-      "category": ["aerliber", "citybreak", "relaxare"],
-      "id": 12
-    },
-    {
-      "city": "Bucharest",
-      "region": "Muntenia",
-      "country": "Romania",
-      "image": "https://img.freepik.com/free-photo/aerial-drone-view-bucharest-romania-city-downtown-with-palace-parliament_1268-23448.jpg?t=st=1716716563~exp=1716720163~hmac=0b11949910fa572495e163c5aef7a395f5621e2900ec6523d4b412b0c79310f7&w=1380",
-      "description": "The capital and largest city of Romania, Bucharest is known for its wide boulevards, historic architecture, and vibrant cultural scene. Key attractions include the massive Palace of the Parliament, the historic Old Town (Lipscani), and numerous museums and parks. The city combines a mix of traditional Romanian charm with modern urban energy.",
-      "category": ["aerliber", "citybreak", "relaxare"],
-      "id": 13
-    },
-    {
-      "city": "Barcelona",
-      "country": "Spain",
-      "image": "",
-      "description": "",
-      "category": "",
-      "id": 14
-    },
-    {
       "city": "Sevilla",
       "country": "Spain",
-      "image": "",
-      "description": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR10RV3xa9ign2AGNhMGgUZ2Hpwkemza2-Qxg&s",
+      "description": "Seville is the capital of Andalusia, the Autonomous Community with the largest population in Spain, the fourth most populous city in the country, and one of the most important capitals of southern Europe. In the past, Seville was the most important city in the world.",
       "category": "",
-      "id": 15
+      "id": 3
     },
     {
       "city": "Valencia",
       "country": "Italy",
-      "image": "",
-      "description": "",
-      "category": "",
-      "id": 16
-    }
-  ],
-
-  "regions": [
-    {
-      "region": "Toscana",
-      "country": "Italy",
-      "image": "",
-      "description": "",
-      "id": 1
-    },
-    {
-      "region": "Puglia",
-      "country": "Italy",
-      "image": "",
-      "description": "",
-      "id": 2
-    },
-    {
-      "region": "Lombardia",
-      "country": "Italy",
-      "image": "",
-      "description": "",
-      "id": 3
-    },
-    {
-      "region": "Provence",
-      "country": "France",
-      "image": "",
-      "description": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSO3XzVYzVKqdIbT9k1VgQWThW9QaNuIirzQ&s",
+      "description": "Valencia is Spain's third largest city and it offers tourism for all tastes. The city brings together historic and modern culture. In the old town (El Carmen) you will find a gothic cathedral, a modernist food market and a Rococo palace all in easy walking distance of each other.",
       "category": "",
       "id": 4
-    },
-    {
-      "region": "Loir Valley",
-      "country": "France",
-      "image": "",
-      "description": "",
-      "id": 5
-    },
-    {
-      "region": "Normandy",
-      "country": "France",
-      "image": "",
-      "description": "",
-      "id": 6
-    },
-    {
-      "region": "Transylvania",
-      "country": "Romania",
-      "image": "",
-      "description": "",
-      "id": 7
-    },
-    {
-      "region": "Danube Delta",
-      "country": "Romania",
-      "image": "",
-      "description": "",
-      "id": 8
-    },
-    {
-      "region": "Bucovina",
-      "country": "",
-      "image": "",
-      "description": "",
-      "id": 9
     },
     {
       "region": "Andalusia",
       "country": "Spain",
-      "image": "",
-      "description": "",
-      "id": 10
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzFE7wXeoh_LnPqCDZUiswUfVtf-a9kU54yA&s",
+      "description": "Andalusia (Spanish: Andalucía) is the first in population among the 17 Autonomous communities in Spain and the second in area. The territory is divided into eight provinces: Almería, Cádiz, Córdoba, Granada, Huelva, Jaén, Málaga and Seville. Its capital is the city of Seville (Spanish: Sevilla).",
+      "id": 5
     },
     {
       "region": "Basque Country",
       "country": "Spain",
-      "image": "",
-      "description": "",
-      "id": 11
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7GkQGnRlGQLndYEs69f7wY_JiO8DJbRWmNg&s",
+      "description": "The Basque Country (Basque: Euskal Herria; Spanish: País Vasco; French: Pays basque) is the name given to the home of the Basque people. The Basque Country is located in the western Pyrenees, straddling the border between France and Spain on the coast of the Bay of Biscay.",
+      "id": 6
     },
     {
       "region": "Balearic Islands",
-      "country": "Italy",
-      "image": "",
-      "description": "",
-      "category": "",
-      "id": 12
+      "country": "Spain",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwrmuhmwk_NySKTnzqfzzNtEjUoAxG-F8wjw&s",
+      "description": "Balearic Islands, archipelago in the western Mediterranean Sea and a comunidad autónoma (autonomous community) of Spain coextensive with the Spanish provincia (province) of the same name. The archipelago lies 50 to 190 miles (80 to 300 km) east of the Spanish mainland. There are two groups of islands.",
+      "id": 7
     }
   ],
   "destinations": [
@@ -431,7 +509,7 @@
     {
       "name": "Mount Tampa",
       "city": "Brasov",
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Poarta_Ecaterinei_Brasov.jpg/647px-Poarta_Ecaterinei_Brasov.jpg?20160522170145",
+      "photo": "https://images.unsplash.com/photo-1558253347-fb1128610003?q=80&w=3634&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "description": "Offering stunning panoramic views of Brașov and the surrounding area, Mount Tampa is accessible via hiking trails or a cable car. At the summit, visitors can enjoy the scenic overlook and spot the Hollywood-style `Brașov` sign. It’s a great spot for nature lovers and photographers.",
       "popularity": 4.5,
       "id": 3
