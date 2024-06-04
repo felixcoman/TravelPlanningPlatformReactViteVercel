@@ -8,6 +8,8 @@ import {
   Option,
   Select,
   SelectContainer,
+  Loading,
+  Error,
 } from "./MainHome.style";
 import GetOptionCities from "./GetOptionCities";
 
@@ -79,8 +81,6 @@ function SelectOptionExplore() {
               </Option>
             </Select>
           </LabelHead>
-          {/* </FormBody>
-        <FormBody loc="FormBody" onSubmit={(e) => handleSubmitCity(e)}> */}
           <LabelHead loc="LabelHead">
             Select city:
             <Select
@@ -113,8 +113,15 @@ function SelectOptionExplore() {
           )}
         </FormBody>
       </SelectContainer>
-      {loading && <div>Loading...</div>}
-      {error && <div>Error: {error.message}</div>}
+      {loading && (
+        <Loading loc="Loading">Loading... Waiting for landing...</Loading>
+      )}
+      {error && (
+        <Error loc="Error">
+          Error: {error.message} Our team is called from the coffe break and
+          will take care of the problem!
+        </Error>
+      )}
       {data && console.log(data)}
     </>
   );

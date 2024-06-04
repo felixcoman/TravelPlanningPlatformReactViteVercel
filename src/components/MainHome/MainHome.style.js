@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { DARK_BLUE, ORANGE, WHITE_NEUTRAL } from "../../constants/Colors";
+import {
+  DARK_BLUE,
+  ORANGE,
+  RED,
+  WHITE_NEUTRAL,
+  YELLOW,
+} from "../../constants/Colors";
 import { TEXT_SIZE_MEDIUM } from "../../constants/Dimensions";
 
 export const MainContainer = styled.div`
@@ -131,4 +137,14 @@ export const LabelHead = styled.label`
   font-size: ${TEXT_SIZE_MEDIUM};
   height: auto;
   margin: 10px 0 10px 0;
+`;
+
+export const Loading = styled.div`
+  color: ${YELLOW};
+  align-self: center;
+`;
+
+export const Error = styled.div`
+  color: ${RED};
+  align-self: center;
 `;

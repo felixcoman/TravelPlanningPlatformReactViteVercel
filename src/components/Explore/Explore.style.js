@@ -19,8 +19,9 @@ export const ContainerTop = styled.div`
 
 export const ImageCity = styled.img`
   width: 100%;
-  height: auto;
+  height: 70vh;
   opacity: 0.6;
+  object-fit: contain;
 `;
 
 export const ContainerDescriptionTop = styled.div`
