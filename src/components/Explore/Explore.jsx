@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
 import useFetchData from "../../hooks/useFetchData";
 import DestinationCard from "../DestinationCard/DestinationCard";
+import { Error, Loading } from "../MainHome/MainHome.style";
 import {
   ButtonCity,
   CityDescription,
@@ -13,10 +14,11 @@ import {
   ImageCity,
   SectionCityButtons,
   SectionCityData,
+  SectionLandmarkData,
   Subtitle,
   Title,
-  SectionLandmarkData,
 } from "./Explore.style";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 const Explore = () => {
   const { country, city } = useParams();
@@ -38,12 +40,44 @@ const Explore = () => {
   const {
     data: dataDestination,
     error: errorDestination,
-    loading: loadingDestionation,
+    loading: loadingDestination,
   } = useFetchData(urlDestination, clicked, setClicked);
 
   const compactDataCity = dataCity ? dataCity[0] : null;
 
   console.log("compactDataCity", compactDataCity);
+
+  const { localData, handleLocalData, isLocalDataEmpty } =
+    useLocalStorage("city");
+  console.log("localData", localData);
+
+  const addLocalStorage = (value) => {
+    console.log("value", value);
+    // console.log("isLocalDataEmpty", isLocalDataEmpty);
+
+    // const existingData = !isLocalDataEmpty ? JSON.parse(localData) : [];
+    const existingData = !isLocalDataEmpty ? localData : [];
+    // uniqueLocalStorage(JSON.stringify(existingData));
+    console.log("existingData", JSON.stringify(existingData));
+    onsole.log("existingData", existingData);
+    // console.log(
+    //   "unic existingData",
+    //   uniqueLocalStorage(JSON.stringify(existingData))
+    // );
+    const newData = [...existingData, value];
+    // handleLocalData("city", JSON.stringify(newData));
+    handleLocalData("city", newData);
+  };
+
+  // const uniqueLocalStorage = (arr) => {
+  //   const uniqueArr = [arr[0]];
+  //   for (let i = 1; i < arr.length; i++) {
+  //     if (arr[i - 1] !== arr[i]) {
+  //       uniqueArr.push(arr[i]);
+  //     }
+  //   }
+  //   return uniqueArr;
+  // };
 
   return (
     <>
@@ -51,8 +85,15 @@ const Explore = () => {
         <Title loc="Title">
           Feel free to explore our offers regarding your selection:
         </Title>
-        {loadingCity && <div>Loading...</div>}
-        {errorCity && <div>Error: {errorCity.message}</div>}
+        {loadingCity && (
+          <Loading loc="Loading">Loading... Waiting for landing...</Loading>
+        )}
+        {errorCity && (
+          <Error loc="Error">
+            Error: {errorCity.message} Our team is called from the coffe break
+            and will take care of the problem!
+          </Error>
+        )}
         {dataCity && (
           <>
             <ContainerTop loc="ContainerTop">
@@ -76,15 +117,28 @@ const Explore = () => {
         )}
       </SectionCityData>
       <SectionLandmarkData loc="SectionLandmarkData">
-        {loadingDestionation && <div>Loading...</div>}
-        {errorDestination && <div>Error: {errorCity.message}</div>}
+        {loadingDestination && (
+          <Loading loc="Loading">Loading... Waiting for landing...</Loading>
+        )}
+        {errorDestination && (
+          <Error loc="Error">
+            Error: {errorCity.message} Our team is called from the coffe break
+            and will take care of the problem!
+          </Error>
+        )}
         {dataDestination &&
           dataDestination?.map((destination, index) => (
             <DestinationCard key={index} {...destination} />
           ))}
       </SectionLandmarkData>
       <SectionCityButtons loc="SectionCityButtons">
-        <ButtonCity loc="ButtonCity" to={`/intinerary`}>
+        <ButtonCity
+          loc="ButtonCity"
+          onClick={() => {
+            addLocalStorage(city);
+          }}
+          to={`/intinerary`}
+        >
           Save {city} to my intinerary!
         </ButtonCity>
         <ButtonCity loc="ButtonCity">I want to book accommodation!</ButtonCity>

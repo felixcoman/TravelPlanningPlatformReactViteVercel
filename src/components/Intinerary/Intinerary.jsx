@@ -1,8 +1,40 @@
+import useLocalStorage from "../../hooks/useLocalStorage";
+
 function Intinerary() {
   console.log("COMMING SOON!");
+  const { localData, isLocalDataEmpty } = useLocalStorage("city");
+  // const existingData = !isLocalDataEmpty ? JSON.parse(localData) : [];
+
+  console.log("tip date localData", typeof localData, localData);
+
+  // useEffect(() => {
+  //   console.log("localData", localData, "isLocalDataEmpty", isLocalDataEmpty);
+  //   if (localData || isLocalDataEmpty)
+
+  //   console.log("parsed localData", JSON.parse(localData));
+  // }, [localData, isLocalDataEmpty]);
+
+  // let localDataArray = [];
+  // localData !== "string"
+  //   ? (localDataArray = JSON.parse(localData))
+  //   : localData === localData;
+
+  // console.log("localDataArray", localDataArray);
   return (
     <>
-      <div>COMMING SOON!</div>
+      {/* {!isLocalDataEmpty && typeof localData === "object" ? (
+        <div>{localData}</div>
+      ) : (
+        !isLocalDataEmpty &&
+        typeof localData === "array" &&
+        localDataArray?.map((element, index) => (
+          <div key={index}>
+            {index}
+            {element}
+          </div>
+        ))
+      )} */}
+      {!isLocalDataEmpty && console.log(localData)}
     </>
   );
 }
