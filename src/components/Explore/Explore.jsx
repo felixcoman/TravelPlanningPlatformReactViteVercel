@@ -52,21 +52,27 @@ const Explore = () => {
   console.log("localData", localData);
 
   const addLocalStorage = (value) => {
-    console.log("value", value);
+    console.log("value", typeof value, value);
     // console.log("isLocalDataEmpty", isLocalDataEmpty);
 
     // const existingData = !isLocalDataEmpty ? JSON.parse(localData) : [];
-    const existingData = !isLocalDataEmpty ? localData : [];
+    const existingData = !isLocalDataEmpty ? JSON.parse(localData) : [];
     // uniqueLocalStorage(JSON.stringify(existingData));
-    console.log("existingData", JSON.stringify(existingData));
-    onsole.log("existingData", existingData);
+    console.log("existingData raw", typeof existingData, existingData);
+    console.log(
+      "existingData to string",
+      typeof JSON.stringify(existingData),
+      JSON.stringify(existingData)
+    );
+
     // console.log(
     //   "unic existingData",
     //   uniqueLocalStorage(JSON.stringify(existingData))
     // );
     const newData = [...existingData, value];
+    console.log("newData", typeof newData, newData);
     // handleLocalData("city", JSON.stringify(newData));
-    handleLocalData("city", newData);
+    handleLocalData("city", JSON.stringify(newData));
   };
 
   // const uniqueLocalStorage = (arr) => {
