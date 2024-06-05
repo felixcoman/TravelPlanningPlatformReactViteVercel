@@ -8,24 +8,36 @@ const useLocalStorage = (key = null) => {
     localStorage.clear();
     console.log("Local storage cleared!");
   };
+
   const handleLocalData = (key, value) => {
-    if (key !== null && value) localStorage.setItem(key, value);
+    if (key !== null && value) {
+      localStorage.setItem(key, JSON.stringify(value));
+      setLocalData(value);
+    }
   };
 
   const deleteKeyLocalData = (key) => {
-    if (key !== null) localStorage.removeItem(key);
+    if (key !== null) {
+      localStorage.removeItem(key);
+      setLocalData(null);
+    }
   };
 
   const getData = () => {
     if (key) {
       const local = localStorage.getItem(key);
-      local ? setLocalData(local) : setIsLocalDataEmpty(true);
+      if (local) {
+        setLocalData(JSON.parse(local));
+        setIsLocalDataEmpty(false);
+      } else {
+        setIsLocalDataEmpty(true);
+      }
     }
   };
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [key]);
 
   return {
     localData,
@@ -35,4 +47,5 @@ const useLocalStorage = (key = null) => {
     isLocalDataEmpty,
   };
 };
+
 export default useLocalStorage;

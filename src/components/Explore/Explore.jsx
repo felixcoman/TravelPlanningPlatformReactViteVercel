@@ -48,13 +48,17 @@ const Explore = () => {
   console.log("compactDataCity", compactDataCity);
 
   const { localData, handleLocalData, isLocalDataEmpty } =
-    useLocalStorage("city");
+    useLocalStorage("locatie");
   console.log("localData", localData);
 
-  const addLocalStorage = (value) => {
-    console.log("value", typeof value, value);
+  //FUNCTIA DE ADAUGARE LOCALSTORAGE
 
-    const existingData = !isLocalDataEmpty ? JSON.parse(localData) : [];
+  const addLocalStorage = (country, city) => {
+    // console.log("value", typeof value, value);
+    console.log("country", country, "city", city);
+
+    const existingData = !isLocalDataEmpty ? localData : [];
+
     console.log("existingData raw", typeof existingData, existingData);
     console.log(
       "existingData to string",
@@ -62,18 +66,27 @@ const Explore = () => {
       JSON.stringify(existingData)
     );
 
+    //COMING SOON
     // uniqueLocalStorage(JSON.stringify(existingData));
 
     // console.log(
     //   "unic existingData",
     //   uniqueLocalStorage(JSON.stringify(existingData))
     // );
-    const newData = [...existingData, value];
-    console.log("newData", typeof newData, newData);
+    //COMING SOON
 
-    handleLocalData("city", JSON.stringify(newData));
+    const newLocation = { country, city };
+
+    console.log("newLocation", typeof newLocation, newLocation);
+
+    const updatedData = [...existingData, newLocation];
+
+    console.log("updatedData", typeof updatedData, updatedData);
+
+    handleLocalData("locatie", updatedData);
   };
 
+  //COMING SOON
   // const uniqueLocalStorage = (arr) => {
   //   const uniqueArr = [arr[0]];
   //   for (let i = 1; i < arr.length; i++) {
@@ -83,6 +96,7 @@ const Explore = () => {
   //   }
   //   return uniqueArr;
   // };
+  //COMING SOON
 
   return (
     <>
@@ -137,10 +151,11 @@ const Explore = () => {
           ))}
       </SectionLandmarkData>
       <SectionCityButtons loc="SectionCityButtons">
+        {console.log("country", country)}
         <ButtonCity
           loc="ButtonCity"
           onClick={() => {
-            addLocalStorage(city);
+            addLocalStorage(country, city);
           }}
           to={`/intinerary`}
         >

@@ -1,7 +1,8 @@
 import useLocalStorage from "../../hooks/useLocalStorage";
 
-function Intinerary() {
+function Intinerary({ country }) {
   console.log("COMMING SOON!");
+  console.log("country", country);
   const { localData, isLocalDataEmpty } = useLocalStorage("city");
   // const existingData = !isLocalDataEmpty ? JSON.parse(localData) : [];
 
