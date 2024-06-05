@@ -20,6 +20,8 @@ function Intinerary() {
   //   : localData === localData;
 
   // console.log("localDataArray", localDataArray);
+
+  const localDataArray = JSON.parse(localData);
   return (
     <>
       {/* {!isLocalDataEmpty && typeof localData === "object" ? (
@@ -34,6 +36,13 @@ function Intinerary() {
           </div>
         ))
       )} */}
+      {!isLocalDataEmpty &&
+        localDataArray?.map((element, index) => (
+          <div key={index}>
+            {index}
+            {element}
+          </div>
+        ))}
       {!isLocalDataEmpty && console.log(localData)}
     </>
   );
