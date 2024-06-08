@@ -1,50 +1,33 @@
-import useLocalStorage from "../../hooks/useLocalStorage";
+// import useLocalStorage from "../../hooks/useLocalStorage";
+import { useContext } from "react";
+import { IntineraryContext } from "../../global/context";
 
-function Intinerary({ country }) {
-  console.log("COMMING SOON!");
-  console.log("country", country);
-  const { localData, isLocalDataEmpty } = useLocalStorage("city");
-  // const existingData = !isLocalDataEmpty ? JSON.parse(localData) : [];
+// function Intinerary({ country }) {
+//   console.log("country", country);
 
-  console.log("tip date localData", typeof localData, localData);
+function Intinerary() {
+  const { stateGlobalIntinerary } = useContext(IntineraryContext);
+  console.log("stateGlobalIntinerary", stateGlobalIntinerary);
 
-  // useEffect(() => {
-  //   console.log("localData", localData, "isLocalDataEmpty", isLocalDataEmpty);
-  //   if (localData || isLocalDataEmpty)
+  //AFISARE LOCAL STORAGE
+  // const { localData, isLocalDataEmpty } = useLocalStorage("city");
 
-  //   console.log("parsed localData", JSON.parse(localData));
-  // }, [localData, isLocalDataEmpty]);
+  // console.log("tip date localData", typeof localData, localData);
 
-  // let localDataArray = [];
-  // localData !== "string"
-  //   ? (localDataArray = JSON.parse(localData))
-  //   : localData === localData;
+  // const localDataArray = JSON.parse(localData);
+  //AFISARE LOCAL STORAGE SUS
 
-  // console.log("localDataArray", localDataArray);
-
-  const localDataArray = JSON.parse(localData);
   return (
     <>
-      {/* {!isLocalDataEmpty && typeof localData === "object" ? (
-        <div>{localData}</div>
-      ) : (
-        !isLocalDataEmpty &&
-        typeof localData === "array" &&
-        localDataArray?.map((element, index) => (
-          <div key={index}>
-            {index}
-            {element}
-          </div>
-        ))
-      )} */}
-      {!isLocalDataEmpty &&
+      {/*AFISARE LOCAL STORAGE*/}
+      {/* {!isLocalDataEmpty &&
         localDataArray?.map((element, index) => (
           <div key={index}>
             {index}
             {element}
           </div>
         ))}
-      {!isLocalDataEmpty && console.log(localData)}
+      {!isLocalDataEmpty && console.log(localData)} */}
     </>
   );
 }

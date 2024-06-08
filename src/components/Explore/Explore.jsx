@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { useParams } from "react-router-dom";
 import useFetchData from "../../hooks/useFetchData";
@@ -18,9 +18,24 @@ import {
   Subtitle,
   Title,
 } from "./Explore.style";
-import useLocalStorage from "../../hooks/useLocalStorage";
+
+// import useLocalStorage from "../../hooks/useLocalStorage";
+
+import { useContext } from "react";
+import { intineraryPlus } from "../../global/actions";
+import { IntineraryContext } from "../../global/context";
 
 const Explore = () => {
+  const { stateGlobalIntinerary, dispatchIntinerary } =
+    useContext(IntineraryContext);
+
+  console.log(
+    "stateGlobalIntinerary",
+    stateGlobalIntinerary,
+    "dispatchIntinerary",
+    dispatchIntinerary
+  );
+
   const { country, city } = useParams();
 
   const [clicked, setClicked] = useState(true);
@@ -47,43 +62,49 @@ const Explore = () => {
 
   console.log("compactDataCity", compactDataCity);
 
-  const { localData, handleLocalData, isLocalDataEmpty } =
-    useLocalStorage("locatie");
-  console.log("localData", localData);
+  // const { localData, handleLocalData, isLocalDataEmpty } =
+  //   useLocalStorage("locatie");
+  // console.log("localData", localData);
 
   //FUNCTIA DE ADAUGARE LOCALSTORAGE
 
-  const addLocalStorage = (country, city) => {
-    // console.log("value", typeof value, value);
-    console.log("country", country, "city", city);
+  // const addLocalStorage = (country, city) => {
+  //   // console.log("value", typeof value, value);
+  //   console.log("country", country, "city", city);
 
-    const existingData = !isLocalDataEmpty ? localData : [];
+  //   const existingData = !isLocalDataEmpty ? localData : [];
 
-    console.log("existingData raw", typeof existingData, existingData);
-    console.log(
-      "existingData to string",
-      typeof JSON.stringify(existingData),
-      JSON.stringify(existingData)
-    );
+  //   console.log("existingData raw", typeof existingData, existingData);
+  //   console.log(
+  //     "existingData to string",
+  //     typeof JSON.stringify(existingData),
+  //     JSON.stringify(existingData)
+  //   );
 
-    //COMING SOON
-    // uniqueLocalStorage(JSON.stringify(existingData));
+  //   //COMING SOON
+  //   // uniqueLocalStorage(JSON.stringify(existingData));
 
-    // console.log(
-    //   "unic existingData",
-    //   uniqueLocalStorage(JSON.stringify(existingData))
-    // );
-    //COMING SOON
+  //   // console.log(
+  //   //   "unic existingData",
+  //   //   uniqueLocalStorage(JSON.stringify(existingData))
+  //   // );
+  //   //COMING SOON
 
-    const newLocation = { country, city };
+  //   const newLocation = { country, city };
 
-    console.log("newLocation", typeof newLocation, newLocation);
+  //   console.log("newLocation", typeof newLocation, newLocation);
 
-    const updatedData = [...existingData, newLocation];
+  //   const updatedData = [...existingData, newLocation];
 
-    console.log("updatedData", typeof updatedData, updatedData);
+  //   console.log("updatedData", typeof updatedData, updatedData);
 
-    handleLocalData("locatie", updatedData);
+  //   handleLocalData("locatie", updatedData);
+  // };
+
+  //SUS FUNCTIA DE ADAUGARE LOCALSTORAGE
+
+  const handleAddIntinerary = (country, city) => {
+    dispatchIntinerary(intineraryPlus({ country, city }));
   };
 
   //COMING SOON
@@ -154,8 +175,11 @@ const Explore = () => {
         {console.log("country", country)}
         <ButtonCity
           loc="ButtonCity"
+          // onClick={() => {
+          //   addLocalStorage(country, city);
+          // }}
           onClick={() => {
-            addLocalStorage(country, city);
+            handleAddIntinerary(country, city);
           }}
           to={`/intinerary`}
         >
