@@ -24,43 +24,43 @@
       "description": "Rome is often referred to as the City of Seven Hills due to its geographic location, and also as the Eternal City. Rome is generally considered to be the cradle of Western civilization and Western Christian culture, and the centre of the Catholic Church.",
       "category": "",
       "period": {
-        "3days": {
-          "day1": "",
-          "day2": "",
-          "day3": ""
+        "threedays": {
+          "dayone": "Visits: Colosseum, Roman Forum, Palatine Hill,Piazza del Campidoglio / Capitoline MuseumsPiazza Venezia / Victor Emmanuel II Monument",
+          "daytwo": "Visits: Vatican Museums and Sistine Chapel, St. Peter’s Basilica, Castel Sant’ Angelo, Trastevere district",
+          "daythree": "Visits: Piazza Navona, Pantheon, Trevi Fountain,  Via del Corso / Via Condotti, Piazza di Spagna, Villa Borghese"
         },
-        "5days": {
-          "day1": "",
-          "day2": "",
-          "day3": "",
-          "day4": "",
-          "day5": ""
+        "fivedays": {
+          "dayone": "Visits: Colosseum, Roman Forum, Palatine Hill,Piazza del Campidoglio / Capitoline MuseumsPiazza Venezia / Victor Emmanuel II Monument",
+          "daytwo": "Visits: Vatican Museums and Sistine Chapel, St. Peter’s Basilica, Castel Sant’ Angelo, Trastevere district",
+          "daythree": "Visits: Piazza Navona, Pantheon, Trevi Fountain,  Via del Corso / Via Condotti, Piazza di Spagna, Villa Borghese",
+          "dayfour": "Visits: Campo di Fiori market, The Aventine hill, The catacombs of Rome",
+          "dayfive": "Visits around Rome:  Pompeii, Tivoli"
         },
-        "7days": {
-          "day1": "",
-          "day2": "",
-          "day3": "",
-          "day4": "",
-          "day5": "",
-          "day6": "",
-          "day7": ""
+        "sevendays": {
+          "dayone": "Visits: Colosseum, Roman Forum, Palatine Hill,Piazza del Campidoglio / Capitoline MuseumsPiazza Venezia / Victor Emmanuel II Monument",
+          "daytwo": "Visits: Vatican Museums and Sistine Chapel, St. Peter’s Basilica, Castel Sant’ Angelo, Trastevere district",
+          "daythree": "Visits: Piazza Navona, Pantheon, Trevi Fountain,  Via del Corso / Via Condotti, Piazza di Spagna, Villa Borghese",
+          "dayfour": "Visits: Campo di Fiori market, The Aventine hill, The catacombs of Rome",
+          "dayfive": "Visits around Rome:  Pompeii, Tivoli",
+          "daysix": "A day at the beach Lido di Ostia",
+          "dayseven": "Visits: Castel Gandolfo "
         }
       },
       "buget": {
         "lowBuget": {
-          "acomodation1": "",
-          "acomodation2": "",
-          "acomodation3": ""
+          "hotelone": "Hotel Mirti: web: https://hotelmirti.it/en/hotel-rome-mirti-square/ ",
+          "hoteltwo": "Hotel Il Papavero: web:  https://www.hotelilpapavero.com/",
+          "hotelthree": "Hotel Fiorenza : web: https://www.hotelfiorenzarome.com/"
         },
         "mediumBuget": {
-          "acomodation1": "",
-          "acomodation2": "",
-          "acomodation3": ""
+          "hotelone": "Roma 2B: web: https://www.roma2b.it/en/",
+          "hoteltwo": "LH Hotel Andreotti:  web: https://andreotti.italyromehotels.net/en/#main",
+          "hotelthree": "Hotel d'Este: web: https://www.hoteldesterome.it/en/"
         },
         "highBuget": {
-          "acomodation1": "",
-          "acomodation2": "",
-          "acomodation3": ""
+          "hotelone": "Hotel Caravita: web: https://www.hotelcaravita.it/en/",
+          "hoteltwo": "Singer Palace Hotel:  web: https://singerpalacehotel.com/",
+          "hotelthree": "Grand Hotel Plaza:  web: https://www.grandhotelplaza.com/en/"
         }
       },
       "id": 2
@@ -72,43 +72,43 @@
       "description": "Located in the central part of Italy, Florence is the capital of Tuscany Region, it has approximately 380,000 inhabitants – and up to one million in the metropolitan area- for 102 kmq. The Arno River runs through the city and a series of bridges connects its two banks including the famous Ponte Vecchio.",
       "category": "",
       "period": {
-        "3days": {
-          "day1": "",
-          "day2": "",
-          "day3": ""
+        "threedays": {
+          "dayone": "Visit: The Galleria dell’Accademia, The Dome of the Cathedral, The Monuments of Piazza del Duomo",
+          "daytwo": "Visit:  The Uffizi Gallery,  The Ponte Vecchio, The Piazza della Signoria / Palazzo Vecchio",
+          "daythree": "Visit: The Basilica of Santa Croce, The Pitti Palace,  The Boboli Gardens"
         },
-        "5days": {
-          "day1": "",
-          "day2": "",
-          "day3": "",
-          "day4": "",
-          "day5": ""
+        "fivedays": {
+          "dayone": "Visit: The Galleria dell’Accademia, The Dome of the Cathedral, The Monuments of Piazza del Duomo",
+          "daytwo": "Visit:  The Uffizi Gallery,  The Ponte Vecchio, The Piazza della Signoria / Palazzo Vecchio",
+          "daythree": "Visit: The Basilica of Santa Croce, The Pitti Palace,  The Boboli Gardens",
+          "dayfour": "Visit: Bardini Gardens, Michelangelo Square, Shopping in Florence",
+          "dayfive": "Visit:  Pisa,shopping in Florence"
         },
-        "7days": {
-          "day1": "",
-          "day2": "",
-          "day3": "",
-          "day4": "",
-          "day5": "",
-          "day6": "",
-          "day7": ""
+        "sevendays": {
+          "dayone": "Visit: The Galleria dell’Accademia, The Dome of the Cathedral, The Monuments of Piazza del Duomo",
+          "daytwo": "Visit:  The Uffizi Gallery,  The Ponte Vecchio, The Piazza della Signoria / Palazzo Vecchio",
+          "daythree": "Visit: The Basilica of Santa Croce, The Pitti Palace,  The Boboli Gardens",
+          "dayfour": "Visit: Bardini Gardens, Michelangelo Square, Shopping in Florence",
+          "dayfive": "Visit:  Pisa,shopping in Florence",
+          "daysix": "Visit: Sienna",
+          "dayseven": "Visit: San Gimignano"
         }
       },
       "buget": {
         "lowBuget": {
-          "acomodation1": "",
-          "acomodation2": "",
-          "acomodation3": ""
+          "hotelone": "Hotel Mirti:  web: https://hotelmirti.it/en/hotel-rome-mirti-square/ ",
+          "hoteltwo": "Hotel Il Papavero: web:  https://www.hotelilpapavero.com/",
+          "hotelthree": "Hotel Fiorenza : web: https://www.hotelfiorenzarome.com/"
         },
         "mediumBuget": {
-          "acomodation1": "",
-          "acomodation2": "",
-          "acomodation3": ""
+          "hotelone": "Roma 2B:  web: https://www.roma2b.it/en/",
+          "hoteltwo": "LH Hotel Andreotti:  web: https://andreotti.italyromehotels.net/en/#main",
+          "hotelthree": "Hotel d'Este: web: https://www.hoteldesterome.it/en/"
         },
         "highBuget": {
-          "acomodation1": "",
-          "acomodation2": "",
-          "acomodation3": ""
+          "hotelone": "Hotel Caravita: web: https://www.hotelcaravita.it/en/",
+          "hoteltwo": "Singer Palace Hotel  web: https://singerpalacehotel.com/",
+          "hotelthree": "Grand Hotel Plaza: web: https://www.grandhotelplaza.com/en/"
         }
       },
       "id": 3
@@ -120,43 +120,43 @@
       "description": "Venice is a city in northeastern Italy and the capital of the Veneto region. It is sited on a group of 117 small islands that are separated by canals and linked by bridges. These are located in the marshy Venetian Lagoon which stretches along the shoreline, between the mouths of the Po and the Piave Rivers.",
       "category": "",
       "period": {
-        "3days": {
-          "day1": "",
-          "day2": "",
-          "day3": ""
+        "threedays": {
+          "dayone": "Visit: Saint Mark’s Square, Saint Mark’s Basilica, Saint Mark’s campanile, Doge’s Palace",
+          "daytwo": "Visit: Gondola tour, Rialto Bridge,  Ca d’Oro, Rialto market",
+          "daythree": "Visit: Basilica of Santa Maria Gloriosa dei Frari, Ponte dell Accademia"
         },
-        "5days": {
-          "day1": "",
-          "day2": "",
-          "day3": "",
-          "day4": "",
-          "day5": ""
+        "fivedays": {
+          "dayone": "Visit: Saint Mark’s Square, Saint Mark’s Basilica, Saint Mark’s campanile, Doge’s Palace",
+          "daytwo": "Visit: Gondola tour, Rialto Bridge,  Ca d’Oro, Rialto market",
+          "daythree": "Visit: Basilica of Santa Maria Gloriosa dei Frari, Ponte dell Accademia",
+          "dayfour": "Visit: Catch the vaporetto to the Lido for a beach day",
+          "dayfive": "Visit: Murano, Burano "
         },
-        "7days": {
-          "day1": "",
-          "day2": "",
-          "day3": "",
-          "day4": "",
-          "day5": "",
-          "day6": "",
-          "day7": ""
+        "sevendays": {
+          "dayone": "Visit: Saint Mark’s Square, Saint Mark’s Basilica, Saint Mark’s campanile, Doge’s Palace",
+          "daytwo": "Visit: Gondola tour, Rialto Bridge,  Ca d’Oro, Rialto market",
+          "daythree": "Visit: Basilica of Santa Maria Gloriosa dei Frari, Ponte dell Accademia",
+          "dayfour": "Visit: Catch the vaporetto to the Lido for a beach day",
+          "dayfive": "Visit: Murano, Burano ",
+          "daysix": "Visit: The Island of San Giorgio Maggiore",
+          "dayseven": "Visit: Opera House"
         }
       },
       "buget": {
         "lowBuget": {
-          "acomodation1": "",
-          "acomodation2": "",
-          "acomodation3": ""
+          "hotelone": "Hotel Mirti: web: https://hotelmirti.it/en/hotel-rome-mirti-square/ ",
+          "hoteltwo": "Hotel Il Papavero: web:  https://www.hotelilpapavero.com/",
+          "hotelthree": "Hotel Fiorenza :  web: https://www.hotelfiorenzarome.com/"
         },
         "mediumBuget": {
-          "acomodation1": "",
-          "acomodation2": "",
-          "acomodation3": ""
+          "hotelone": "Roma 2B:  web: https://www.roma2b.it/en/",
+          "hoteltwo": "LH Hotel Andreotti:  web: https://andreotti.italyromehotels.net/en/#main",
+          "hotelthree": "Hotel d'Este:  web: https://www.hoteldesterome.it/en/"
         },
         "highBuget": {
-          "acomodation1": "",
-          "acomodation2": "",
-          "acomodation3": ""
+          "hotelone": "Hotel Caravita: web: https://www.hotelcaravita.it/en/",
+          "hoteltwo": "Singer Palace Hotel  web: https://singerpalacehotel.com/",
+          "hotelthree": "Grand Hotel Plaza: web: https://www.grandhotelplaza.com/en/"
         }
       },
       "id": 4
@@ -167,43 +167,43 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpCTeNcNDF9YV2SZAEFfQr67yNoEbjaf7NWQ&s",
       "description": "Tuscany (Italian: Toscana) is a region in the center of Italy. It has an area of 22,990 km² and a population of about 3.6 million people (in 2004). The capital is Florence. Tuscany is known for its landscapes and its artistic legacy.",
       "period": {
-        "3days": {
-          "day1": "",
-          "day2": "",
-          "day3": ""
+        "threedays": {
+          "dayone": "Visit: A day in Florence",
+          "daytwo": "Visit: A day in Chianti and San Gimignano",
+          "daythree": "Visit: A day in Siena"
         },
-        "5days": {
-          "day1": "",
-          "day2": "",
-          "day3": "",
-          "day4": "",
-          "day5": ""
+        "fivedays": {
+          "dayone": "Visit: A day in Florence",
+          "daytwo": "Visit: A day in Chianti and San Gimignano",
+          "daythree": "Visit: A day in Siena",
+          "dayfour": "Visit: Climb towers in Lucca & Pisa.",
+          "dayfive": "Visit: See the countryside in Val d'Orcia."
         },
-        "7days": {
-          "day1": "",
-          "day2": "",
-          "day3": "",
-          "day4": "",
-          "day5": "",
-          "day6": "",
-          "day7": ""
+        "sevendays": {
+          "dayone": "Visit: A day in Florence",
+          "daytwo": "Visit: A day in Chianti",
+          "daythree": "Visit: A day in Siena",
+          "dayfour": "Visit: Climb towers in Lucca & Pisa.",
+          "dayfive": "Visit: See the countryside in Val d'Orcia.",
+          "daysix": "Visit: Arezzo and Cortona",
+          "dayseven": "Visit: San Gimignano"
         }
       },
       "buget": {
         "lowBuget": {
-          "acomodation1": "",
-          "acomodation2": "",
-          "acomodation3": ""
+          "hotelone": "Hotel Mirti: address: Via Dei Platani 101, 00172 Roma, web: https://hotelmirti.it/en/hotel-rome-mirti-square/ ",
+          "hoteltwo": "Hotel Il Papavero: address: Via Castelfidardo 50, Gara Termini, 00185 Roma, web:  https://www.hotelilpapavero.com/",
+          "hotelthree": "Hotel Fiorenza : address: Via Dei Mille 64, Gara Termini, 00185 Roma, web: https://www.hotelfiorenzarome.com/"
         },
         "mediumBuget": {
-          "acomodation1": "",
-          "acomodation2": "",
-          "acomodation3": ""
+          "hotelone": "Roma 2B: address: Via Sallustiana 1/A, 00187 Roma, web: https://www.roma2b.it/en/",
+          "hoteltwo": "LH Hotel Andreotti: address: Via Castelfidardo 55, Gara Termini, 00185 Roma, web: https://andreotti.italyromehotels.net/en/#main",
+          "hotelthree": "Hotel d'Este: address: Via Carlo Alberto 4/B, Gara Termini, 00185 Roma, web: https://www.hoteldesterome.it/en/"
         },
         "highBuget": {
-          "acomodation1": "",
-          "acomodation2": "",
-          "acomodation3": ""
+          "hotelone": "Hotel Caravita: web: https://www.hotelcaravita.it/en/",
+          "hoteltwo": "Singer Palace Hotel  web: https://singerpalacehotel.com/",
+          "hotelthree": "Grand Hotel Plaza: web: https://www.grandhotelplaza.com/en/"
         }
       },
       "id": 5
@@ -214,43 +214,43 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv7dvJuYWrD9N3ePi0CIRrOE1pzDA4X01w6A&s",
       "description": "Apulia , also known by its Italian name Puglia , is a region of Italy, located in the southern peninsular section of the country, bordering the Adriatic Sea to the east, the Strait of Otranto and Ionian Sea to the southeast and the Gulf of Taranto to the south.",
       "period": {
-        "3days": {
-          "day1": "",
-          "day2": "",
-          "day3": ""
+        "threedays": {
+          "dayone": "Visit: Ostuni",
+          "daytwo": "Visit: Lecce",
+          "daythree": "Visit: Bari"
         },
-        "5days": {
-          "day1": "",
-          "day2": "",
-          "day3": "",
-          "day4": "",
-          "day5": ""
+        "fivedays": {
+          "dayone": "Visit: Ostuni",
+          "daytwo": "Visit: Lecce",
+          "daythree": "Visit: Bari",
+          "dayfour": "Visit: Alberobello",
+          "dayfive": "Visit: Matera"
         },
-        "7days": {
-          "day1": "",
-          "day2": "",
-          "day3": "",
-          "day4": "",
-          "day5": "",
-          "day6": "",
-          "day7": ""
+        "sevendays": {
+          "dayone": "Visit: Ostuni",
+          "daytwo": "Visit: Lecce",
+          "daythree": "Visit: Bari",
+          "dayfour": "Visit: Alberobello",
+          "dayfive": "Visit: Matera",
+          "daysix": "Visit: Polignano a Mare",
+          "dayseven": "Visit: Cisternino"
         }
       },
       "buget": {
         "lowBuget": {
-          "acomodation1": "",
-          "acomodation2": "",
-          "acomodation3": ""
+          "hotelone": "Hotel Mirti:web: https://hotelmirti.it/en/hotel-rome-mirti-square/ ",
+          "hoteltwo": "Hotel Il Papavero: web:  https://www.hotelilpapavero.com/",
+          "hotelthree": "Hotel Fiorenza :  web: https://www.hotelfiorenzarome.com/"
         },
         "mediumBuget": {
-          "acomodation1": "",
-          "acomodation2": "",
-          "acomodation3": ""
+          "hotelone": "Roma 2B: web: https://www.roma2b.it/en/",
+          "hoteltwo": "LH Hotel Andreotti: Gara Termini, 00185 Roma, web: https://andreotti.italyromehotels.net/en/#main",
+          "hotelthree": "Hotel d'Este:  web: https://www.hoteldesterome.it/en/"
         },
         "highBuget": {
-          "acomodation1": "",
-          "acomodation2": "",
-          "acomodation3": ""
+          "hotelone": "Hotel Caravita: web: https://www.hotelcaravita.it/en/",
+          "hoteltwo": "Singer Palace Hotel  web: https://singerpalacehotel.com/",
+          "hotelthree": "Grand Hotel Plaza: web: https://www.grandhotelplaza.com/en/"
         }
       },
       "id": 6
@@ -261,43 +261,43 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Tov7aQ_NohLLZo0BQuJiegJ1p_JNY_PHVw&s",
       "description": "Lombardy is a region in the north of Italy known for its industry and finance, of course, but also for its art and extraordinary landscapes, starting with the picturesque lakes and its mountains, Valcamonica and Valtellina in primis.",
       "period": {
-        "3days": {
-          "day1": "",
-          "day2": "",
-          "day3": ""
+        "threedays": {
+          "dayone": "Visit: Milano",
+          "daytwo": "Visit: Lake Como",
+          "daythree": "Visit: Brescia"
         },
-        "5days": {
-          "day1": "",
-          "day2": "",
-          "day3": "",
-          "day4": "",
-          "day5": ""
+        "fivedays": {
+          "dayone": "Visit: Milano",
+          "daytwo": "Visit: Lake Como",
+          "daythree": "Visit: Brescia",
+          "dayfour": "Visit: Bergamo",
+          "dayfive": "Visit: Cremona"
         },
-        "7days": {
-          "day1": "",
-          "day2": "",
-          "day3": "",
-          "day4": "",
-          "day5": "",
-          "day6": "",
-          "day7": ""
+        "sevendays": {
+          "dayone": "Visit: Milano",
+          "daytwo": "Visit: Lake Como",
+          "daythree": "Visit: Brescia",
+          "dayfour": "Visit: Bergamo",
+          "dayfive": "Visit: Cremona",
+          "daysix": "Visit: Lake Garda and Lugano",
+          "dayseven": "Visit: Mantua"
         }
       },
       "buget": {
         "lowBuget": {
-          "acomodation1": "",
-          "acomodation2": "",
-          "acomodation3": ""
+          "hotelone": "Hotel Mirti: address: Via Dei Platani 101, 00172 Roma, web: https://hotelmirti.it/en/hotel-rome-mirti-square/ ",
+          "hoteltwo": "Hotel Il Papavero: address: Via Castelfidardo 50, Gara Termini, 00185 Roma, web:  https://www.hotelilpapavero.com/",
+          "hotelthree": "Hotel Fiorenza : address: Via Dei Mille 64, Gara Termini, 00185 Roma, web: https://www.hotelfiorenzarome.com/"
         },
         "mediumBuget": {
-          "acomodation1": "",
-          "acomodation2": "",
-          "acomodation3": ""
+          "hotelone": "Roma 2B: address: Via Sallustiana 1/A, 00187 Roma, web: https://www.roma2b.it/en/",
+          "hoteltwo": "LH Hotel Andreotti: address: Via Castelfidardo 55, Gara Termini, 00185 Roma, web: https://andreotti.italyromehotels.net/en/#main",
+          "hotelthree": "Hotel d'Este: address: Via Carlo Alberto 4/B, Gara Termini, 00185 Roma, web: https://www.hoteldesterome.it/en/"
         },
         "highBuget": {
-          "acomodation1": "",
-          "acomodation2": "",
-          "acomodation3": ""
+          "hotelone": "Hotel Caravita: web: https://www.hotelcaravita.it/en/",
+          "hoteltwo": "Singer Palace Hotel  web: https://singerpalacehotel.com/",
+          "hotelthree": "Grand Hotel Plaza: web: https://www.grandhotelplaza.com/en/"
         }
       },
       "id": 7
@@ -316,6 +316,46 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD_KAzXa9xFq7UjSoxk8DVwEZuHSdLF1rGGA&s",
       "description": "Paris is the capital and most populous city of France. Situated on the Seine River, in the north of the country, it is in the centre of the Île-de-France region, also known as the région parisienne, Paris Region.",
       "category": "",
+      "period": {
+        "threedays": {
+          "dayone": "Visit: Champs De Mars, Trocadéro Carousel, Pont Alexandre III Bridge",
+          "daytwo": "Visit:  The Louvre Museum",
+          "daythree": "Visit: Avenue Champs-Elysées, Arc De Triomphe"
+        },
+        "fivedays": {
+          "dayone": "Visit: Champs De Mars, Trocadéro Carousel, Pont Alexandre III Bridge",
+          "daytwo": "Visit:  The Louvre Museum",
+          "daythree": "Visit: Avenue Champs-Elysées, Arc De Triomphe",
+          "dayfour": "Visit: Notre-Dame Cathedral, Paris Opera",
+          "dayfive": "Visit: The Moulin Rouge, Sacre Coeur"
+        },
+        "sevendays": {
+          "dayone": "Visit: Champs De Mars, Trocadéro Carousel, Pont Alexandre III Bridge",
+          "daytwo": "Visit:  The Louvre Museum",
+          "daythree": "Visit: Avenue Champs-Elysées, Arc De Triomphe",
+          "dayfour": "Visit: Notre-Dame Cathedral, Paris Opera",
+          "dayfive": "Visit: The Moulin Rouge, Sacre Coeur",
+          "daysix": "Visit: The Versailles Palace",
+          "dayseven": "Visit: The Fontainebleau Palace"
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "hotelone": "Hotel Zora: web: https://hotel-zora.parishotelsfr.com/en/",
+          "hoteltwo": "Hotel Studia: web: https://hotel-studia.parishotelsfr.com/en/",
+          "hotelthree": "Hotel Marignan: web: https://www.hotel-marignan.com/ "
+        },
+        "mediumBuget": {
+          "hotelone": "Boutik Boheme: web: https://boutik-boheme-le-jardin-montmartre.iledefrance-hotel.com/en/",
+          "hoteltwo": "Hotel Cluny Square: web: https://www.cluny-paris-hotel.com/",
+          "hotelthree": "Pavillon Nation: web: https://pavillonnation.parishotels.it/ "
+        },
+        "highBuget": {
+          "hotelone": "La Fantaisie: web: https://www.lafantaisie.com/",
+          "hoteltwo": "Le Grand Mazarin: web: https://www.legrandmazarin.com/",
+          "hotelthree": "Hôtel Raphael: web: https://www.raphael-hotel.com/en/"
+        }
+      },
       "id": 2
     },
     {
@@ -324,6 +364,46 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDGrMYJtjU6XsS1cAYy3Fzwf2HYwgPRDgWbg&s",
       "description": "Nice is a major commercial and administrative centre in the east of the Provence–Alpes–Côte d'Azur region, its influence extending well beyond the boundary of the Alpes-Maritimes département. Numerous small and medium-sized factories are located at Nice, particularly in the Var Plain to the west.",
       "category": "",
+      "period": {
+        "threedays": {
+          "dayone": "Visit:Nice",
+          "daytwo": "Visit: Monaco ",
+          "daythree": "Visit: Antibes"
+        },
+        "fivedays": {
+          "dayone": "Visit:Nice",
+          "daytwo": "Visit: Monaco ",
+          "daythree": "Visit: Antibes",
+          "dayfour": "Visit: Fréjus and Saint-Tropez ",
+          "dayfive": "Visit:  Hyères and its islands"
+        },
+        "sevendays": {
+          "dayone": "Visit:Nice",
+          "daytwo": "Visit: Monaco ",
+          "daythree": "Visit: Antibes",
+          "dayfour": "Visit: Fréjus and Saint-Tropez ",
+          "dayfive": "Visit:  Hyères and its islands",
+          "daysix": "Visit: Cannes",
+          "dayseven": "Visit: Grasse and Saint-Paul-de-Vence"
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "hotelone": "Hotel Zora: web: https://hotel-zora.parishotelsfr.com/en/",
+          "hoteltwo": "Hotel Studia: web: https://hotel-studia.parishotelsfr.com/en/",
+          "hotelthree": "Hotel Marignan: web: https://www.hotel-marignan.com/ "
+        },
+        "mediumBuget": {
+          "hotelone": "Boutik Boheme: web: https://boutik-boheme-le-jardin-montmartre.iledefrance-hotel.com/en/",
+          "hoteltwo": "Hotel Cluny Square: web: https://www.cluny-paris-hotel.com/",
+          "hotelthree": "Pavillon Nation: web: https://pavillonnation.parishotels.it/ "
+        },
+        "highBuget": {
+          "hotelone": "La Fantaisie: web: https://www.lafantaisie.com/",
+          "hoteltwo": "Le Grand Mazarin: web: https://www.legrandmazarin.com/",
+          "hotelthree": "Hôtel Raphael: web: https://www.raphael-hotel.com/en/"
+        }
+      },
       "id": 3
     },
     {
@@ -332,6 +412,46 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwhLmyb7TIkXPzxDGpYPPioMP1aKOkIkkYJg&s",
       "description": "Frontier towns are often cross-cultural capitals. Strasbourg is the embodiment of that role, stirring France and Germany into an appealing brew, even despite the increased complexity of hosting important international institutions like the Council of Europe and European Parliament. Somehow, they only add to the charm of Strasbourg’s historical center – “Little France,” now a UNESCO World Heritage Site – packed with narrow alleyways, canals and half-timbered houses with street-level winstubs (local taverns), all lorded over by an ornate Gothic masterpiece of a cathedral.",
       "category": "",
+      "period": {
+        "threedays": {
+          "dayone": "Visit: Notre Dame, Museums, and Raclette",
+          "daytwo": "Visit: Flea Market, High Tea, and Snails ",
+          "daythree": "Visit: Boat Cruise and a Classic Café Gourmand "
+        },
+        "fivedays": {
+          "dayone": "Visit: Notre Dame, Museums, and Raclette",
+          "daytwo": "Visit: Flea Market, High Tea, and Snails ",
+          "daythree": "Visit: Boat Cruise and a Classic Café Gourmand ",
+          "dayfour": "Visit: The Castle of Haut-Koenigsbourg ",
+          "dayfive": "Visit: Obernai"
+        },
+        "sevendays": {
+          "dayone": "Visit: Notre Dame, Museums, and Raclette",
+          "daytwo": "Visit: Flea Market, High Tea, and Snails ",
+          "daythree": "Visit: Boat Cruise and a Classic Café Gourmand ",
+          "dayfour": "Visit: The Castle of Haut-Koenigsbourg ",
+          "dayfive": "Visit: Obernai",
+          "daysix": "Visit: Alsace Wine Route",
+          "dayseven": "Visit: Colmar"
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "hotelone": "Hotel Zora: web: https://hotel-zora.parishotelsfr.com/en/",
+          "hoteltwo": "Hotel Studia: web: https://hotel-studia.parishotelsfr.com/en/",
+          "hotelthree": "Hotel Marignan: web: https://www.hotel-marignan.com/ "
+        },
+        "mediumBuget": {
+          "hotelone": "Boutik Boheme: web: https://boutik-boheme-le-jardin-montmartre.iledefrance-hotel.com/en/",
+          "hoteltwo": "Hotel Cluny Square: web: https://www.cluny-paris-hotel.com/",
+          "hotelthree": "Pavillon Nation: web: https://pavillonnation.parishotels.it/ "
+        },
+        "highBuget": {
+          "hotelone": "La Fantaisie: web: https://www.lafantaisie.com/",
+          "hoteltwo": "Le Grand Mazarin: web: https://www.legrandmazarin.com/",
+          "hotelthree": "Hôtel Raphael: web: https://www.raphael-hotel.com/en/"
+        }
+      },
       "id": 4
     },
     {
@@ -340,6 +460,46 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3we08VKxXTXBZZ_osk2y_7nkWI11jYskAuQ&s",
       "description": "Provence  is a geographical region and historical province of southeastern France, which extends from the left bank of the lower Rhône to the west to the Italian border to the east; it is bordered by the Mediterranean Sea to the south.",
       "category": "",
+      "period": {
+        "threedays": {
+          "dayone": "Visit: Nice",
+          "daytwo": "Visit: Trip to Monaco and Eze",
+          "daythree": "Visit: Avignon"
+        },
+        "fivedays": {
+          "dayone": "Visit: Nice",
+          "daytwo": "Visit: Trip to Monaco and Eze",
+          "daythree": "Visit: Avignon",
+          "dayfour": "Visit: Arles",
+          "dayfive": "Visit:  Saint-Remy-de-Provence"
+        },
+        "sevendays": {
+          "dayone": "Visit: Nice",
+          "daytwo": "Visit: Trip to Monaco and Eze",
+          "daythree": "Visit: Avignon",
+          "dayfour": "Visit: Arles",
+          "dayfive": "Visit: Saint-Remy-de-Provence",
+          "daysix": "Visit: Marseille",
+          "dayseven": "Visit: Grasse and Saint-Paul-de-Vence "
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "hotelone": "Hotel Zora: web: https://hotel-zora.parishotelsfr.com/en/",
+          "hoteltwo": "Hotel Studia: web: https://hotel-studia.parishotelsfr.com/en/",
+          "hotelthree": "Hotel Marignan: web: https://www.hotel-marignan.com/ "
+        },
+        "mediumBuget": {
+          "hotelone": "Boutik Boheme: web: https://boutik-boheme-le-jardin-montmartre.iledefrance-hotel.com/en/",
+          "hoteltwo": "Hotel Cluny Square: web: https://www.cluny-paris-hotel.com/",
+          "hotelthree": "Pavillon Nation: web: https://pavillonnation.parishotels.it/ "
+        },
+        "highBuget": {
+          "hotelone": "La Fantaisie: web: https://www.lafantaisie.com/",
+          "hoteltwo": "Le Grand Mazarin: web: https://www.legrandmazarin.com/",
+          "hotelthree": "Hôtel Raphael: web: https://www.raphael-hotel.com/en/"
+        }
+      },
       "id": 5
     },
     {
@@ -347,6 +507,46 @@
       "country": "France",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnXvnmk4k59H1-DpvvqTx2LOBonMzlaiPg1A&s",
       "description": "The Loire Valley has been called the Garden of France and is studded with over a thousand châteaux, each with distinct architectural embellishments covering a wide range of variations, from the early medieval to the late Renaissance periods.",
+      "period": {
+        "threedays": {
+          "dayone": "Visit: Chartres or Orléans en route to Blois ",
+          "daytwo": "Visit: Visit Château de Chambord  and Château de Cheverny  ",
+          "daythree": "Visit: Visit Château Blois and do a wine tasting or bike ride along the Loire River"
+        },
+        "fivedays": {
+          "dayone": "Visit: Chartres or Orléans en route to Blois ",
+          "daytwo": "Visit: Visit Château de Chambord  and Château de Cheverny  ",
+          "daythree": "Visit: Visit Château Blois and do a wine tasting or bike ride along the Loire River",
+          "dayfour": "Visit: Château d’Amboise  and Château du Clos Lucé",
+          "dayfive": "Visit: Château Azay-le-Rideau and Château de Villandry. "
+        },
+        "sevendays": {
+          "dayone": "Visit: Chartres or Orléans en route to Blois ",
+          "daytwo": "Visit: Visit Château de Chambord  and Château de Cheverny  ",
+          "daythree": "Visit: Visit Château Blois and do a wine tasting or bike ride along the Loire River",
+          "dayfour": "Visit: Château d’Amboise  and Château du Clos Lucé",
+          "dayfive": "Visit: Château Azay-le-Rideau and Château de Villandry. ",
+          "daysix": "Visit: Château Chaumont-Sur-Loire and Château de Chenonceau",
+          "dayseven": "Visit: Royal Abbey Fontevraud and Château d’Angers"
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "hotelone": "Hotel Zora: web: https://hotel-zora.parishotelsfr.com/en/",
+          "hoteltwo": "Hotel Studia: web: https://hotel-studia.parishotelsfr.com/en/",
+          "hotelthree": "Hotel Marignan: web: https://www.hotel-marignan.com/ "
+        },
+        "mediumBuget": {
+          "hotelone": "Boutik Boheme: web: https://boutik-boheme-le-jardin-montmartre.iledefrance-hotel.com/en/",
+          "hoteltwo": "Hotel Cluny Square: web: https://www.cluny-paris-hotel.com/",
+          "hotelthree": "Pavillon Nation: web: https://pavillonnation.parishotels.it/ "
+        },
+        "highBuget": {
+          "hotelone": "La Fantaisie: web: https://www.lafantaisie.com/",
+          "hoteltwo": "Le Grand Mazarin: web: https://www.legrandmazarin.com/",
+          "hotelthree": "Hôtel Raphael: web: https://www.raphael-hotel.com/en/"
+        }
+      },
       "id": 6
     },
     {
@@ -354,15 +554,55 @@
       "country": "France",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaXlC_NJ_V0fuQ4WloLIQr92cZkT3sX6x90w&s",
       "description": "Normandy, historic and cultural region of northern France encompassing the départements of Manche, Calvados, Orne, Eure, and Seine-Maritime and coextensive with the former province of Normandy. It was recreated as an administrative entity in 2016 with the union of the régions of Basse-Normandie and Haute-Normandie.",
+      "period": {
+        "threedays": {
+          "dayone": "Visit: Rouen, Joan of Arc and the Gros Horloge. ",
+          "daytwo": "Visit: Abbeys of Jumièges and Boscherville. ",
+          "daythree": "Visit: Étretat and its cliffs."
+        },
+        "fivedays": {
+          "dayone": "Visit: Rouen, Joan of Arc and the Gros Horloge. ",
+          "daytwo": "Visit: Abbeys of Jumièges and Boscherville. ",
+          "daythree": "Visit: Étretat and its cliffs.",
+          "dayfour": "Visit: Honfleur and Deauville.",
+          "dayfive": "Visit: Beuvron-en-Auge and Caen Memorial Museum."
+        },
+        "sevendays": {
+          "dayone": "Visit: Rouen, Joan of Arc and the Gros Horloge. ",
+          "daytwo": "Visit: Abbeys of Jumièges and Boscherville. ",
+          "daythree": "Visit: Étretat and its cliffs.",
+          "dayfour": "Visit: Honfleur and Deauville.",
+          "dayfive": "Visit: Beuvron-en-Auge and Caen Memorial Museum.",
+          "daysix": "Visit: Omaha Beach.",
+          "dayseven": "Visit: Mont-Saint-Michel."
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "hotelone": "Hotel Zora: web: https://hotel-zora.parishotelsfr.com/en/",
+          "hoteltwo": "Hotel Studia: web: https://hotel-studia.parishotelsfr.com/en/",
+          "hotelthree": "Hotel Marignan: web: https://www.hotel-marignan.com/ "
+        },
+        "mediumBuget": {
+          "hotelone": "Boutik Boheme: web: https://boutik-boheme-le-jardin-montmartre.iledefrance-hotel.com/en/",
+          "hoteltwo": "Hotel Cluny Square: web: https://www.cluny-paris-hotel.com/",
+          "hotelthree": "Pavillon Nation: web: https://pavillonnation.parishotels.it/ "
+        },
+        "highBuget": {
+          "hotelone": "La Fantaisie: web: https://www.lafantaisie.com/",
+          "hoteltwo": "Le Grand Mazarin: web: https://www.legrandmazarin.com/",
+          "hotelthree": "Hôtel Raphael: web: https://www.raphael-hotel.com/en/"
+        }
+      },
       "id": 7
     }
   ],
-  "romania": [
+  "Romania": [
     {
-      "id": 3,
+      "id": 1,
       "name": "Romania",
-      "description": "",
-      "image": ""
+      "description": "Romania is the biggest country in southeast Europe by population. It has an area of 238,391 square kilometres (92,043 sq mi). It is the twelfth-largest country in Europe. Most of Romania's border with Serbia and Bulgaria is made by the Danube.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQquk11vTzlBC2OFXhy2BTXbcLz6clPN3jelg&s"
     },
     {
       "city": "Sighisoara",
@@ -371,7 +611,47 @@
       "image": "https://img.freepik.com/free-photo/aerial-drone-view-historic-centre-sighisoara-romania-old-buildings-holy-trinity-church_1268-19367.jpg?t=st=1716716105~exp=1716719705~hmac=6c6a7877e2d0b8dffebec9767bae6f83c61633947c5aabf616c272fba81b83ee&w=1380",
       "description": "One of the best-preserved medieval towns in Europe, Sighisoara is a UNESCO World Heritage site. The city's charming old town features colorful buildings, narrow streets, and the iconic Clock Tower. Sighisoara is also famous as the birthplace of Vlad the Impaler, the historical figure who inspired the Dracula legend. Its medieval festival and historical ambiance attract many tourists.",
       "category": ["aerliber", "citybreak", "relaxare"],
-      "id": 4
+      "period": {
+        "threedays": {
+          "dayone": "Visit: Climb up Turnul cu Ceas and see an aerial view of Sighişoara ",
+          "daytwo": "Visit: See all nine watch towers",
+          "daythree": "Visit: Visit the birthplace of Vlad the Impaler, aka Dracula"
+        },
+        "fivedays": {
+          "dayone": "Visit: Climb up Turnul cu Ceas and see an aerial view of Sighişoara ",
+          "daytwo": "Visit: See all nine watch towers",
+          "daythree": "Visit: Visit the birthplace of Vlad the Impaler, aka Dracula",
+          "dayfour": "Visit: Sibiu",
+          "dayfive": "Visit: Brasov"
+        },
+        "sevendays": {
+          "dayone": "Visit: Climb up Turnul cu Ceas and see an aerial view of Sighişoara ",
+          "daytwo": "Visit: See all nine watch towers",
+          "daythree": "Visit: Visit the birthplace of Vlad the Impaler, aka Dracula",
+          "dayfour": "Visit: Sibiu",
+          "dayfive": "Visit: Brasov",
+          "daysix": "Visit: Castle of Rasnov",
+          "dayseven": "Visit: Castle of Bran"
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "hotelone": "Vila Coca: web: https://vila-coca-predeal.hotelmix.ro/",
+          "hoteltwo": "Pensiunea Montan Busteni: web: https://pensiunea-montan-busteni-guest-house.hotelmix.ro/",
+          "hotelthree": "HOSTEL CPPI Nord: web: https://cppibusteni.weebly.com/cazare.html"
+        },
+        "mediumBuget": {
+          "hotelone": "Palatul Brukenthal Avrig: web: https://palatulbrukenthalavrig.ro/en/home-english/",
+          "hoteltwo": "Resort EuroPark Fundata: web: https://europark.ro/",
+          "hotelthree": "Casa Domeniile Vinului: web: https://www.vindeciumbrud.ro/turism/"
+        },
+        "highBuget": {
+          "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
+          "hoteltwo": "Sungarden Golf & Spa Resort: web: https://sungardenresort.ro/",
+          "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
+        }
+      },
+      "id": 2
     },
     {
       "city": "Constanta",
@@ -380,7 +660,47 @@
       "image": "https://images.unsplash.com/photo-1629826958301-2d6c17de6874?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "description": "Constanța, located on the coast of the Black Sea, is Romania's oldest continuously inhabited city and a vibrant tourist destination. It serves as a major port and a hub of cultural and economic activity. The city is renowned for its beautiful beaches, historic landmarks, and rich cultural heritage. Key attractions include the stunning Constanța Casino, an Art Nouveau masterpiece; the Roman Mosaic Edifice, showcasing ancient Roman architecture; and the Genoese Lighthouse, offering panoramic views of the sea. Visitors can also explore the National History and Archaeology Museum and the lively Piata Ovidiu, the city's central square. Constanța combines seaside relaxation with fascinating historical and cultural experiences, making it a compelling destination for tourists.",
       "category": ["plaja", "relaxare", "citybreak"],
-      "id": 5
+      "period": {
+        "threedays": {
+          "dayone": "Visit: Roman mosaic, Casa cu Lei, National History and Archeology Museum ",
+          "daytwo": "Visit: Mamaia Beach ",
+          "daythree": "Visit: Euforie, Navodari"
+        },
+        "fivedays": {
+          "dayone": "Visit: Roman mosaic, Casa cu Lei, National History and Archeology Museum ",
+          "daytwo": "Visit: Mamaia beach ",
+          "daythree": "Visit: Euforie, Navodari",
+          "dayfour": "Visit: Constanta Casino, Ovidiu Square",
+          "dayfive": "Visit: Corbu beach and Vadu beach"
+        },
+        "sevendays": {
+          "dayone": "Visit: Roman mosaic, Casa cu Lei, National History and Archeology Museum ",
+          "daytwo": "Visit: Mamaia beach ",
+          "daythree": "Visit: Euforie, Navodari",
+          "dayfour": "Visit: Constanta Casino, Ovidiu Square",
+          "dayfive": "Visit: Corbu beach and Vadu beach",
+          "daysix": "Visit: Danube Delta",
+          "dayseven": "Visit: Techirghiol,Murfatlar"
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "hotelone": "Vila Coca: web: https://vila-coca-predeal.hotelmix.ro/",
+          "hoteltwo": "Pensiunea Montan Busteni: web: https://pensiunea-montan-busteni-guest-house.hotelmix.ro/",
+          "hotelthree": "HOSTEL CPPI Nord: web: https://cppibusteni.weebly.com/cazare.html"
+        },
+        "mediumBuget": {
+          "hotelone": "Palatul Brukenthal Avrig: web: https://palatulbrukenthalavrig.ro/en/home-english/",
+          "hoteltwo": "Resort EuroPark Fundata: web: https://europark.ro/",
+          "hotelthree": "Casa Domeniile Vinului: web: https://www.vindeciumbrud.ro/turism/"
+        },
+        "highBuget": {
+          "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
+          "hoteltwo": "Sungarden Golf & Spa Resort: web: https://sungardenresort.ro/",
+          "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
+        }
+      },
+      "id": 3
     },
     {
       "city": "Cluj-Napoca",
@@ -389,7 +709,47 @@
       "image": "https://img.freepik.com/free-photo/aerial-drone-view-saint-michael-church-cluj-romania_1268-20559.jpg?t=st=1716715828~exp=1716719428~hmac=375ac07b58b592ca2c4c44d87871ee653a444ab8844f90b268f2fd0a6b01577d&w=1380",
       "description": "As the unofficial capital of Transylvania, Cluj-Napoca is a vibrant university city with a rich history and lively arts scene. Highlights include the Gothic-style St. Michael's Church, the picturesque Central Park, and the National Museum of Transylvanian History. Cluj is known for its youthful energy, thanks to its large student population, and hosts numerous cultural festivals.",
       "category": ["aerliber", "citybreak", "relaxare"],
-      "id": 6
+      "period": {
+        "threedays": {
+          "dayone": "Visit: Alexandru Borza Botanical Garden, Podul Elisabeta, Cetatuia Hill",
+          "daytwo": "Visit: St. Michael's Church, Unirii Square, SteamPunk World ",
+          "daythree": "Visit: Central Park and the Cazino, National Opera"
+        },
+        "fivedays": {
+          "dayone": "Visit: Alexandru Borza Botanical Garden, Podul Elisabeta, Cetatuia Hill",
+          "daytwo": "Visit: St. Michael's Church, Unirii Square, SteamPunk World ",
+          "daythree": "Visit: Central Park and the Cazino, National Opera",
+          "dayfour": "Visit: Lake Tarnita, Lake Fantanele",
+          "dayfive": "Visit:  Hike in Hoia forrest"
+        },
+        "sevendays": {
+          "dayone": "Visit: Alexandru Borza Botanical Garden, Podul Elisabeta, Cetatuia Hill",
+          "daytwo": "Visit: St. Michael's Church, Unirii Square, SteamPunk World ",
+          "daythree": "Visit: Central Park and the Cazino, National Opera",
+          "dayfour": "Visit: Lake Tarnita, Lake Fantanele",
+          "dayfive": "Visit: Hike in Hoia forrest",
+          "daysix": "Visit: Apuseni National Park",
+          "dayseven": "Visit: Turda Salt Mine"
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "hotelone": "Vila Coca: web: https://vila-coca-predeal.hotelmix.ro/",
+          "hoteltwo": "Pensiunea Montan Busteni: web: https://pensiunea-montan-busteni-guest-house.hotelmix.ro/",
+          "hotelthree": "HOSTEL CPPI Nord: web: https://cppibusteni.weebly.com/cazare.html"
+        },
+        "mediumBuget": {
+          "hotelone": "Palatul Brukenthal Avrig: web: https://palatulbrukenthalavrig.ro/en/home-english/",
+          "hoteltwo": "Resort EuroPark Fundata: web: https://europark.ro/",
+          "hotelthree": "Casa Domeniile Vinului: web: https://www.vindeciumbrud.ro/turism/"
+        },
+        "highBuget": {
+          "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
+          "hoteltwo": "Sungarden Golf & Spa Resort: web: https://sungardenresort.ro/",
+          "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
+        }
+      },
+      "id": 4
     },
     {
       "city": "Brasov",
@@ -398,16 +758,47 @@
       "image": "https://img.freepik.com/free-photo/aerial-drone-view-council-square-brasov-romania_1268-20593.jpg?t=st=1716714491~exp=1716718091~hmac=33ea4c5124a5e8d380fe37fca7e687a6a89704974b4048c377be2161978c4caa&w=1060",
       "description": "Brașov is a charming city located in central Romania, nestled in the Carpathian Mountains. Known for its medieval architecture and rich history, Brașov is a major cultural and economic hub in the region. The city's centerpiece is the Black Church, a Gothic-style monument dating back to the 14th century. Brașov's old town is lined with colorful baroque buildings, narrow cobblestone streets, and vibrant squares such as Piața Sfatului. The nearby Tampa Mountain offers panoramic views and hiking opportunities, while the fortified walls and towers, like the White Tower and Black Tower, reflect the city's historical significance as a fortress town. Brașov is also a gateway to the famous Bran Castle, often associated with the Dracula legend. The city's mix of historical charm, natural beauty, and modern amenities make it a popular destination for tourists.",
       "category": ["aerliber", "citybreak", "relaxare"],
-      "id": 7
-    },
-    {
-      "city": "Mamaia",
-      "reg": "Dobrogea",
-      "country": "Romania",
-      "image": "https://images.unsplash.com/photo-1669059166575-f1ea19483c85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "Mamaia is a popular seaside resort located on the coast of the Black Sea in Romania. Situated in the northeastern part of Constanța, it is renowned for its long, sandy beaches and vibrant nightlife, making it a top destination for tourists, especially during the summer months. The resort features numerous luxury hotels, beach clubs, and recreational facilities, including water parks and various water sports. Mamaia is also known for its scenic promenade and a gondola that offers panoramic views of the sea and the surrounding area. The resort's lively atmosphere, modern amenities, and natural beauty make it a favorite spot for both relaxation and entertainment.",
-      "category": ["plaja", "relaxare"],
-      "id": 8
+      "period": {
+        "threedays": {
+          "dayone": "Visit: Sibiu",
+          "daytwo": "Visit: White citadel in Romania and Corvin castle",
+          "daythree": "Visit: Biertan fortified church & Sighisoara citadel"
+        },
+        "fivedays": {
+          "dayone": "Visit: Sibiu",
+          "daytwo": "Visit: White citadel in Romania and Corvin castle",
+          "daythree": "Visit: Biertan fortified church & Sighisoara citadel",
+          "dayfour": "Visit: Fagaras citadel and Brasov",
+          "dayfive": "Visit: Bran Castle and Rasnov citadel"
+        },
+        "sevendays": {
+          "dayone": "Visit: Sibiu",
+          "daytwo": "Visit: White citadel in Romania and Corvin castle",
+          "daythree": "Visit: Biertan fortified church & Sighisoara citadel",
+          "dayfour": "Visit: Fagaras citadel and Brasov",
+          "dayfive": "Visit: Bran Castle and Rasnov citadel",
+          "daysix": "Visit: Cluj-Napoca",
+          "dayseven": "Visit: Peles Castle"
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "hotelone": "Vila Coca: web: https://vila-coca-predeal.hotelmix.ro/",
+          "hoteltwo": "Pensiunea Montan Busteni: web: https://pensiunea-montan-busteni-guest-house.hotelmix.ro/",
+          "hotelthree": "HOSTEL CPPI Nord: web: https://cppibusteni.weebly.com/cazare.html"
+        },
+        "mediumBuget": {
+          "hotelone": "Palatul Brukenthal Avrig: web: https://palatulbrukenthalavrig.ro/en/home-english/",
+          "hoteltwo": "Resort EuroPark Fundata: web: https://europark.ro/",
+          "hotelthree": "Casa Domeniile Vinului: web: https://www.vindeciumbrud.ro/turism/"
+        },
+        "highBuget": {
+          "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
+          "hoteltwo": "Sungarden Golf & Spa Resort: web: https://sungardenresort.ro/",
+          "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
+        }
+      },
+      "id": 5
     },
     {
       "city": "Sibiu",
@@ -416,7 +807,56 @@
       "image": "https://img.freepik.com/free-photo/aerial-drone-view-historic-centre-sibiu-evening-romania_1268-20828.jpg?t=st=1716716228~exp=1716719828~hmac=5182022db7ccec4e61b673186d78227323570e9293c8e5dcf4ccf0a419e0d631&w=1380",
       "description": "Known for its well-preserved medieval architecture, Sibiu was designated a European Capital of Culture in 2007. The city features beautiful squares such as the Grand Square (Piața Mare) and the Small Square (Piața Mică), as well as the iconic Council Tower and the Brukenthal National Museum. Sibiu's charming ambiance and cultural significance draw many visitors.",
       "category": ["aerliber", "citybreak", "relaxare"],
-      "id": 9
+      "period": {
+        "threedays": {
+          "dayone": "Visit: Sibiu",
+          "daytwo": "Visit: White citadel in Romania and Corvin castle",
+          "daythree": "Visit: Biertan fortified church & Sighisoara citadel"
+        },
+        "fivedays": {
+          "dayone": "Visit: Sibiu",
+          "daytwo": "Visit: White citadel in Romania and Corvin castle",
+          "daythree": "Visit: Biertan fortified church & Sighisoara citadel",
+          "dayfour": "Visit: Fagaras citadel and Brasov",
+          "dayfive": "Visit: Bran Castle and Rasnov citadel"
+        },
+        "sevendays": {
+          "dayone": "Visit: Sibiu",
+          "daytwo": "Visit: White citadel in Romania and Corvin castle",
+          "daythree": "Visit: Biertan fortified church & Sighisoara citadel",
+          "dayfour": "Visit: Fagaras citadel and Brasov",
+          "dayfive": "Visit: Bran Castle and Rasnov citadel",
+          "daysix": "Visit: Cluj-Napoca",
+          "dayseven": "Visit: Peles Castle"
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "hotelone": "Vila Coca: web: https://vila-coca-predeal.hotelmix.ro/",
+          "hoteltwo": "Pensiunea Montan Busteni: web: https://pensiunea-montan-busteni-guest-house.hotelmix.ro/",
+          "hotelthree": "HOSTEL CPPI Nord: web: https://cppibusteni.weebly.com/cazare.html"
+        },
+        "mediumBuget": {
+          "hotelone": "Palatul Brukenthal Avrig: web: https://palatulbrukenthalavrig.ro/en/home-english/",
+          "hoteltwo": "Resort EuroPark Fundata: web: https://europark.ro/",
+          "hotelthree": "Casa Domeniile Vinului: web: https://www.vindeciumbrud.ro/turism/"
+        },
+        "highBuget": {
+          "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
+          "hoteltwo": "Sungarden Golf & Spa Resort: web: https://sungardenresort.ro/",
+          "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
+        }
+      },
+      "id": 6
+    },
+    {
+      "city": "Mamaia",
+      "reg": "Dobrogea",
+      "country": "Romania",
+      "image": "https://images.unsplash.com/photo-1669059166575-f1ea19483c85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Mamaia is a popular seaside resort located on the coast of the Black Sea in Romania. Situated in the northeastern part of Constanța, it is renowned for its long, sandy beaches and vibrant nightlife, making it a top destination for tourists, especially during the summer months. The resort features numerous luxury hotels, beach clubs, and recreational facilities, including water parks and various water sports. Mamaia is also known for its scenic promenade and a gondola that offers panoramic views of the sea and the surrounding area. The resort's lively atmosphere, modern amenities, and natural beauty make it a favorite spot for both relaxation and entertainment.",
+      "category": ["plaja", "relaxare"],
+      "id": 7
     },
     {
       "city": "Bucharest",
@@ -425,7 +865,101 @@
       "image": "https://img.freepik.com/free-photo/aerial-drone-view-bucharest-romania-city-downtown-with-palace-parliament_1268-23448.jpg?t=st=1716716563~exp=1716720163~hmac=0b11949910fa572495e163c5aef7a395f5621e2900ec6523d4b412b0c79310f7&w=1380",
       "description": "The capital and largest city of Romania, Bucharest is known for its wide boulevards, historic architecture, and vibrant cultural scene. Key attractions include the massive Palace of the Parliament, the historic Old Town (Lipscani), and numerous museums and parks. The city combines a mix of traditional Romanian charm with modern urban energy.",
       "category": ["aerliber", "citybreak", "relaxare"],
-      "id": 10
+      "id": 8
+    },
+    {
+      "region": "Danube Delta",
+      "country": "Romania",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMlPE6nC8zYc2dT8eZ3qhMwLs4esdwWN3Nww&s",
+      "description": "The waters of the Danube, which flow into the Black Sea, form the largest and best preserved of Europe's deltas. The Danube delta hosts over 300 species of birds as well as 45 freshwater fish species in its numerous lakes and marshes.",
+      "period": {
+        "threedays": {
+          "dayone": "Visit: Hike in Macin Mountains",
+          "daytwo": "Visit: Dobrogea Gorge, Traditional fisherman villages in Dobrogea",
+          "daythree": "Visit: Danube Delta boat tour"
+        },
+        "fivedays": {
+          "dayone": "Visit: Hike in Macin Mountains",
+          "daytwo": "Visit: Dobrogea Gorge, Traditional fisherman villages in Dobrogea",
+          "daythree": "Visit: Danube Delta boat tour",
+          "dayfour": "Visit: Constanta city tour, Mamaia Black sea resort",
+          "dayfive": "Visit: Corbu and Vadu Beach"
+        },
+        "sevendays": {
+          "dayone": "Visit: Hike in Macin Mountains",
+          "daytwo": "Visit: Dobrogea Gorge, Traditional fisherman villages in Dobrogea",
+          "daythree": "Visit: Danube Delta boat tour",
+          "dayfour": "Visit: Constanta city tour, Mamaia Black sea resort",
+          "dayfive": "Visit: Corbu and Vadu Beach",
+          "daysix": "Visit: Archaeological site of the Orgame (Argamum) ",
+          "dayseven": "Visit: Gura Portitei and Jurilovsca"
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "hotelone": "Vila Coca: web: https://vila-coca-predeal.hotelmix.ro/",
+          "hoteltwo": "Pensiunea Montan Busteni: web: https://pensiunea-montan-busteni-guest-house.hotelmix.ro/",
+          "hotelthree": "HOSTEL CPPI Nord: web: https://cppibusteni.weebly.com/cazare.html"
+        },
+        "mediumBuget": {
+          "hotelone": "Palatul Brukenthal Avrig: web: https://palatulbrukenthalavrig.ro/en/home-english/",
+          "hoteltwo": "Resort EuroPark Fundata: web: https://europark.ro/",
+          "hotelthree": "Casa Domeniile Vinului: web: https://www.vindeciumbrud.ro/turism/"
+        },
+        "highBuget": {
+          "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
+          "hoteltwo": "Sungarden Golf & Spa Resort: web: https://sungardenresort.ro/",
+          "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
+        }
+      },
+      "id": 9
+    },
+    {
+      "region": "Bucovina",
+      "country": "Romania",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStV56cPyiCwRLGALDpmDUQD-daSvB3GNonlg&s",
+      "description": "Bucovina is a region in north-eastern Romania and corresponds, nowadays, to the Suceava county and only to the south of the historic Bucovina, the northern part being Ukrainian. The name is originally Germanic, where “Buchenland” means “The Country of Beeches”.",
+      "period": {
+        "threedays": {
+          "dayone": "Visit: Admire the Painted Monasteries of Bucovina",
+          "daytwo": "Visit: Putna Monastery. ",
+          "daythree": "Visit: Travel back in time at Suceava Fortress. "
+        },
+        "fivedays": {
+          "dayone": "Visit: Admire the Painted Monasteries of Bucovina",
+          "daytwo": "Visit: Putna Monastery. ",
+          "daythree": "Visit: Travel back in time at Suceava Fortress. ",
+          "dayfour": "Visit: Explore Bucovina Village Museum",
+          "dayfive": "Visit: Breathe healthy air inside Cacica Salt Mine."
+        },
+        "sevendays": {
+          "dayone": "Visit: Admire the Painted Monasteries of Bucovina",
+          "daytwo": "Visit: Putna Monastery. ",
+          "daythree": "Visit: Travel back in time at Suceava Fortress. ",
+          "dayfour": "Visit: Explore Bucovina Village Museum",
+          "dayfive": "Visit: Breathe healthy air inside Cacica Salt Mine.",
+          "daysix": "Visit: Vatra Dornei, Moldovita Monastery",
+          "dayseven": "Visit: Sucevita Monastery, Voronet Monastery"
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "hotelone": "Vila Coca: web: https://vila-coca-predeal.hotelmix.ro/",
+          "hoteltwo": "Pensiunea Montan Busteni: web: https://pensiunea-montan-busteni-guest-house.hotelmix.ro/",
+          "hotelthree": "HOSTEL CPPI Nord: web: https://cppibusteni.weebly.com/cazare.html"
+        },
+        "mediumBuget": {
+          "hotelone": "Palatul Brukenthal Avrig: web: https://palatulbrukenthalavrig.ro/en/home-english/",
+          "hoteltwo": "Resort EuroPark Fundata: web: https://europark.ro/",
+          "hotelthree": "Casa Domeniile Vinului: web: https://www.vindeciumbrud.ro/turism/"
+        },
+        "highBuget": {
+          "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
+          "hoteltwo": "Sungarden Golf & Spa Resort: web: https://sungardenresort.ro/",
+          "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
+        }
+      },
+      "id": 9
     }
   ],
   "Spain": [
@@ -441,14 +975,94 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiRBfHspE27YCVXRvWj_-4ZRyPvzxQtkYHYQ&s",
       "description": "Overlooking the Mediterranean Sea, and famous for Gaudí and other Art Nouveau architecture, Barcelona is one of Europe's trendiest cities. It's a hub of new trends in the world of culture, fashion and cuisine. It combines the creativity of its artists and designers with respect and care for local traditions.",
       "category": "",
+      "period": {
+        "threedays": {
+          "dayone": "Visit: The Cathedral of Saint Eulalia and the Gothic Quarter, La Rambla,  Boqueria Market",
+          "daytwo": "Visit: Casa Batlló, Casa Milà, Flamenco show",
+          "daythree": "Visit: Park Güell,  Bunkers del Carmel, Sagrada Familia"
+        },
+        "fivedays": {
+          "dayone": "Visit: The Cathedral of Saint Eulalia and the Gothic Quarter, La Rambla,  Boqueria Market",
+          "daytwo": "Visit: Casa Batlló, Casa Milà, Flamenco show",
+          "daythree": "Visit: Park Güell,  Bunkers del Carmel, Sagrada Familia",
+          "dayfour": "Visit: Plaça Espanya, The MNAC ",
+          "dayfive": "Visit: Montjuic Park, The Olympic installations"
+        },
+        "sevendays": {
+          "dayone": "Visit: The Cathedral of Saint Eulalia and the Gothic Quarter, La Rambla,  Boqueria Market",
+          "daytwo": "Visit: Casa Batlló, Casa Milà, Flamenco show",
+          "daythree": "Visit: Park Güell,  Bunkers del Carmel, Sagrada Familia",
+          "dayfour": "Visit: Plaça Espanya, The MNAC ",
+          "dayfive": "Visit: Montjuic Park, The Olympic installations",
+          "daysix": "Visit: Port Vell, Olympic Port",
+          "dayseven": "Visit: A Day at Port Aventura"
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "hotelone": "Center Gran Via: web: https://centergranvia.com/en/",
+          "hoteltwo": "Hotel Pelay: web: http://www.hotelpelayo.com/en/",
+          "hotelthree": "Hotel Peninsular: web: https://hotelpeninsularbarcelona.com/?lang=en "
+        },
+        "mediumBuget": {
+          "hotelone": "Hotel Viladomat: web: https://www.aa-hoteles.com/en/hotel-viladomat-barcelona",
+          "hoteltwo": "Acta Vora: web: https://www.hotelvoraport.com/en/ ",
+          "hotelthree": "Ronda House: web: https://en.hotel-rondahouse.com/"
+        },
+        "highBuget": {
+          "hotelone": "Ohla Eixample: web: https://www.ohlaeixample.com/en/",
+          "hoteltwo": "Hotel Casa Sagnier:web: https://hotelcasasagnier.com/en/",
+          "hotelthree": "Monument Hotel: web: https://www.monumenthotel.com/en/hotel/"
+        }
+      },
       "id": 2
     },
     {
-      "city": "Sevilla",
+      "city": "Seville",
       "country": "Spain",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR10RV3xa9ign2AGNhMGgUZ2Hpwkemza2-Qxg&s",
       "description": "Seville is the capital of Andalusia, the Autonomous Community with the largest population in Spain, the fourth most populous city in the country, and one of the most important capitals of southern Europe. In the past, Seville was the most important city in the world.",
       "category": "",
+      "period": {
+        "threedays": {
+          "dayone": "Visit: Alcázar, Cathedral, Plaza de España",
+          "daytwo": "Visit: Plaza Nueva, Salvador Church, Alfalfa, Flamenco Museum & flamenco show ",
+          "daythree": "Visit: Macarena, Alameda, Las Setas"
+        },
+        "fivedays": {
+          "dayone": "Visit: Alcázar, Cathedral, Plaza de España",
+          "daytwo": "Visit: Plaza Nueva, Salvador Church, Alfalfa, Flamenco Museum & flamenco show ",
+          "daythree": "Visit: Macarena, Alameda, Las Setas",
+          "dayfour": "Visit: Day trip to the beach",
+          "dayfive": "Visit:  Day trip to Córdoba"
+        },
+        "sevendays": {
+          "dayone": "Visit: Alcázar, Cathedral, Plaza de España",
+          "daytwo": "Visit: Plaza Nueva, Salvador Church, Alfalfa, Flamenco Museum & flamenco show ",
+          "daythree": "Visit: Macarena, Alameda, Las Setas",
+          "dayfour": "Visit: Day trip to the beach",
+          "dayfive": "Visit: Day trip to Córdoba",
+          "daysix": "Visit: Triana",
+          "dayseven": "Visit:  Day trip to Ronda"
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "hotelone": "Center Gran Via: web: https://centergranvia.com/en/",
+          "hoteltwo": "Hotel Pelay: web: http://www.hotelpelayo.com/en/",
+          "hotelthree": "Hotel Peninsular: web: https://hotelpeninsularbarcelona.com/?lang=en "
+        },
+        "mediumBuget": {
+          "hotelone": "Hotel Viladomat: web: https://www.aa-hoteles.com/en/hotel-viladomat-barcelona",
+          "hoteltwo": "Acta Vora: web: https://www.hotelvoraport.com/en/ ",
+          "hotelthree": "Ronda House: web: https://en.hotel-rondahouse.com/"
+        },
+        "highBuget": {
+          "hotelone": "Ohla Eixample: web: https://www.ohlaeixample.com/en/",
+          "hoteltwo": "Hotel Casa Sagnier:web: https://hotelcasasagnier.com/en/",
+          "hotelthree": "Monument Hotel: web: https://www.monumenthotel.com/en/hotel/"
+        }
+      },
       "id": 3
     },
     {
@@ -457,6 +1071,46 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSO3XzVYzVKqdIbT9k1VgQWThW9QaNuIirzQ&s",
       "description": "Valencia is Spain's third largest city and it offers tourism for all tastes. The city brings together historic and modern culture. In the old town (El Carmen) you will find a gothic cathedral, a modernist food market and a Rococo palace all in easy walking distance of each other.",
       "category": "",
+      "period": {
+        "threedays": {
+          "dayone": "Visit: Explore the Old Town",
+          "daytwo": "Visit: City of Arts and Sciences ",
+          "daythree": "Visit: Xativa "
+        },
+        "fivedays": {
+          "dayone": "Visit: Explore the Old Town",
+          "daytwo": "Visit: City of Arts and Sciences ",
+          "daythree": "Visit: Xativa ",
+          "dayfour": "Visit: Bocairente and Villena",
+          "dayfive": "Visit: Requena and Sagunto"
+        },
+        "sevendays": {
+          "dayone": "Visit: Explore the Old Town",
+          "daytwo": "Visit: City of Arts and Sciences ",
+          "daythree": "Visit: Xativa ",
+          "dayfour": "Visit: Bocairente and Villena",
+          "dayfive": "Visit: Requena and Sagunto",
+          "daysix": "Visit: Vilafames and/or Benicassim",
+          "dayseven": "Visit: Morella"
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "hotelone": "Center Gran Via: web: https://centergranvia.com/en/",
+          "hoteltwo": "Hotel Pelay: web: http://www.hotelpelayo.com/en/",
+          "hotelthree": "Hotel Peninsular: web: https://hotelpeninsularbarcelona.com/?lang=en "
+        },
+        "mediumBuget": {
+          "hotelone": "Hotel Viladomat: web: https://www.aa-hoteles.com/en/hotel-viladomat-barcelona",
+          "hoteltwo": "Acta Vora: web: https://www.hotelvoraport.com/en/ ",
+          "hotelthree": "Ronda House: web: https://en.hotel-rondahouse.com/"
+        },
+        "highBuget": {
+          "hotelone": "Ohla Eixample: web: https://www.ohlaeixample.com/en/",
+          "hoteltwo": "Hotel Casa Sagnier:web: https://hotelcasasagnier.com/en/",
+          "hotelthree": "Monument Hotel: web: https://www.monumenthotel.com/en/hotel/"
+        }
+      },
       "id": 4
     },
     {
@@ -464,6 +1118,46 @@
       "country": "Spain",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzFE7wXeoh_LnPqCDZUiswUfVtf-a9kU54yA&s",
       "description": "Andalusia (Spanish: Andalucía) is the first in population among the 17 Autonomous communities in Spain and the second in area. The territory is divided into eight provinces: Almería, Cádiz, Córdoba, Granada, Huelva, Jaén, Málaga and Seville. Its capital is the city of Seville (Spanish: Sevilla).",
+      "period": {
+        "threedays": {
+          "dayone": "Visit: Sevilla",
+          "daytwo": "Visit: Córdoba ",
+          "daythree": "Visit: Granada "
+        },
+        "fivedays": {
+          "dayone": "Visit: Sevilla",
+          "daytwo": "Visit: Córdoba ",
+          "daythree": "Visit: Granada ",
+          "dayfour": "Visit: Ronda",
+          "dayfive": "Visit: Malaga"
+        },
+        "sevendays": {
+          "dayone": "Visit: Sevilla",
+          "daytwo": "Visit: Córdoba ",
+          "daythree": "Visit: Granada ",
+          "dayfour": "Visit: Ronda",
+          "dayfive": "Visit: Malaga",
+          "daysix": "Visit: Caminito del Rey",
+          "dayseven": "Visit: Cadiz, Jerez de la Frontera"
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "hotelone": "Center Gran Via: web: https://centergranvia.com/en/",
+          "hoteltwo": "Hotel Pelay: web: http://www.hotelpelayo.com/en/",
+          "hotelthree": "Hotel Peninsular: web: https://hotelpeninsularbarcelona.com/?lang=en "
+        },
+        "mediumBuget": {
+          "hotelone": "Hotel Viladomat: web: https://www.aa-hoteles.com/en/hotel-viladomat-barcelona",
+          "hoteltwo": "Acta Vora: web: https://www.hotelvoraport.com/en/ ",
+          "hotelthree": "Ronda House: web: https://en.hotel-rondahouse.com/"
+        },
+        "highBuget": {
+          "hotelone": "Ohla Eixample: web: https://www.ohlaeixample.com/en/",
+          "hoteltwo": "Hotel Casa Sagnier:web: https://hotelcasasagnier.com/en/",
+          "hotelthree": "Monument Hotel: web: https://www.monumenthotel.com/en/hotel/"
+        }
+      },
       "id": 5
     },
     {
@@ -471,6 +1165,46 @@
       "country": "Spain",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7GkQGnRlGQLndYEs69f7wY_JiO8DJbRWmNg&s",
       "description": "The Basque Country (Basque: Euskal Herria; Spanish: País Vasco; French: Pays basque) is the name given to the home of the Basque people. The Basque Country is located in the western Pyrenees, straddling the border between France and Spain on the coast of the Bay of Biscay.",
+      "period": {
+        "threedays": {
+          "dayone": "Visit: Sopelana and Barrika",
+          "daytwo": "Visit: Bilbao ",
+          "daythree": "Visit: Plentzia and Gorliz"
+        },
+        "fivedays": {
+          "dayone": "Visit: Sopelana and Barrika",
+          "daytwo": "Visit: Bilbao ",
+          "daythree": "Visit: Plentzia and Gorliz",
+          "dayfour": "Visit: The Coastal Road – A must on any Basque Country Itinerary",
+          "dayfive": "Visit: San Sebastian"
+        },
+        "sevendays": {
+          "dayone": "Visit: Sopelana and Barrika",
+          "daytwo": "Visit: Bilbao ",
+          "daythree": "Visit: Plentzia and Gorliz",
+          "dayfour": "Visit: The Coastal Road – A must on any Basque Country Itinerary",
+          "dayfive": "Visit: San Sebastian",
+          "daysix": "Visit:  Alava",
+          "dayseven": "Visit: Off the beaten path"
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "hotelone": "Center Gran Via: web: https://centergranvia.com/en/",
+          "hoteltwo": "Hotel Pelay: web: http://www.hotelpelayo.com/en/",
+          "hotelthree": "Hotel Peninsular: web: https://hotelpeninsularbarcelona.com/?lang=en "
+        },
+        "mediumBuget": {
+          "hotelone": "Hotel Viladomat: web: https://www.aa-hoteles.com/en/hotel-viladomat-barcelona",
+          "hoteltwo": "Acta Vora: web: https://www.hotelvoraport.com/en/ ",
+          "hotelthree": "Ronda House: web: https://en.hotel-rondahouse.com/"
+        },
+        "highBuget": {
+          "hotelone": "Ohla Eixample: web: https://www.ohlaeixample.com/en/",
+          "hoteltwo": "Hotel Casa Sagnier:web: https://hotelcasasagnier.com/en/",
+          "hotelthree": "Monument Hotel: web: https://www.monumenthotel.com/en/hotel/"
+        }
+      },
       "id": 6
     },
     {
@@ -478,6 +1212,46 @@
       "country": "Spain",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwrmuhmwk_NySKTnzqfzzNtEjUoAxG-F8wjw&s",
       "description": "Balearic Islands, archipelago in the western Mediterranean Sea and a comunidad autónoma (autonomous community) of Spain coextensive with the Spanish provincia (province) of the same name. The archipelago lies 50 to 190 miles (80 to 300 km) east of the Spanish mainland. There are two groups of islands.",
+      "period": {
+        "threedays": {
+          "dayone": "Visit: Santa Ponsa is a perfect starting point for sailing around Mallorca ",
+          "daytwo": "Visit: Visit Port de Sóller on Mallorca ",
+          "daythree": "Visit: Cala Tuent, on the northwest coast of Mallorca"
+        },
+        "fivedays": {
+          "dayone": "Visit: Santa Ponsa is a perfect starting point for sailing around Mallorca ",
+          "daytwo": "Visit: Visit Port de Sóller on Mallorca ",
+          "daythree": "Visit: Cala Tuent, on the northwest coast of Mallorca",
+          "dayfour": "Visit: Stroll through the old town to see a different side of Ibiza ",
+          "dayfive": "Visit: Swim in crystal clear, turquoise water at Cala Benirras beach"
+        },
+        "sevendays": {
+          "dayone": "Visit: Santa Ponsa is a perfect starting point for sailing around Mallorca ",
+          "daytwo": "Visit: Visit Port de Sóller on Mallorca ",
+          "daythree": "Visit: Cala Tuent, on the northwest coast of Mallorca",
+          "dayfour": "Visit: Stroll through the old town to see a different side of Ibiza ",
+          "dayfive": "Visit: Swim in crystal clear, turquoise water at Cala Benirras beach",
+          "daysix": "Visit: The Island of Formentera",
+          "dayseven": "Visit: The Island of Minorca (Menorca)"
+        }
+      },
+      "buget": {
+        "lowBuget": {
+          "hotelone": "Center Gran Via: web: https://centergranvia.com/en/",
+          "hoteltwo": "Hotel Pelay: web: http://www.hotelpelayo.com/en/",
+          "hotelthree": "Hotel Peninsular: web: https://hotelpeninsularbarcelona.com/?lang=en "
+        },
+        "mediumBuget": {
+          "hotelone": "Hotel Viladomat: web: https://www.aa-hoteles.com/en/hotel-viladomat-barcelona",
+          "hoteltwo": "Acta Vora: web: https://www.hotelvoraport.com/en/ ",
+          "hotelthree": "Ronda House: web: https://en.hotel-rondahouse.com/"
+        },
+        "highBuget": {
+          "hotelone": "Ohla Eixample: web: https://www.ohlaeixample.com/en/",
+          "hoteltwo": "Hotel Casa Sagnier:web: https://hotelcasasagnier.com/en/",
+          "hotelthree": "Monument Hotel: web: https://www.monumenthotel.com/en/hotel/"
+        }
+      },
       "id": 7
     }
   ],
@@ -509,7 +1283,7 @@
     {
       "name": "Mount Tampa",
       "city": "Brasov",
-      "photo": "https://images.unsplash.com/photo-1558253347-fb1128610003?q=80&w=3634&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Poarta_Ecaterinei_Brasov.jpg/647px-Poarta_Ecaterinei_Brasov.jpg?20160522170145",
       "description": "Offering stunning panoramic views of Brașov and the surrounding area, Mount Tampa is accessible via hiking trails or a cable car. At the summit, visitors can enjoy the scenic overlook and spot the Hollywood-style `Brașov` sign. It’s a great spot for nature lovers and photographers.",
       "popularity": 4.5,
       "id": 3
