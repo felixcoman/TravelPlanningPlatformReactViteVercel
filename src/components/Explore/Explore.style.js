@@ -84,7 +84,9 @@ export const ButtonCity = styled(Link)`
 `;
 
 export const SectionLandmarkData = styled.section`
-  /* display: grid; */
-  display: flex;
-  margin: 10px 0;
+  /* display: flex;
+  margin: 10px 0; */
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
 `;

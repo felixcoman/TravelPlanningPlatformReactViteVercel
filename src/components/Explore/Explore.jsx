@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import { useParams } from "react-router-dom";
 import useFetchData from "../../hooks/useFetchData";
 import DestinationCard from "../DestinationCard/DestinationCard";
@@ -18,8 +17,6 @@ import {
   Subtitle,
   Title,
 } from "./Explore.style";
-
-// import useLocalStorage from "../../hooks/useLocalStorage";
 
 import { useContext } from "react";
 import { intineraryPlus } from "../../global/actions";
@@ -59,49 +56,7 @@ const Explore = () => {
   } = useFetchData(urlDestination, clicked, setClicked);
 
   const compactDataCity = dataCity ? dataCity[0] : null;
-
   console.log("compactDataCity", compactDataCity);
-
-  // const { localData, handleLocalData, isLocalDataEmpty } =
-  //   useLocalStorage("locatie");
-  // console.log("localData", localData);
-
-  //FUNCTIA DE ADAUGARE LOCALSTORAGE
-
-  // const addLocalStorage = (country, city) => {
-  //   // console.log("value", typeof value, value);
-  //   console.log("country", country, "city", city);
-
-  //   const existingData = !isLocalDataEmpty ? localData : [];
-
-  //   console.log("existingData raw", typeof existingData, existingData);
-  //   console.log(
-  //     "existingData to string",
-  //     typeof JSON.stringify(existingData),
-  //     JSON.stringify(existingData)
-  //   );
-
-  //   //COMING SOON
-  //   // uniqueLocalStorage(JSON.stringify(existingData));
-
-  //   // console.log(
-  //   //   "unic existingData",
-  //   //   uniqueLocalStorage(JSON.stringify(existingData))
-  //   // );
-  //   //COMING SOON
-
-  //   const newLocation = { country, city };
-
-  //   console.log("newLocation", typeof newLocation, newLocation);
-
-  //   const updatedData = [...existingData, newLocation];
-
-  //   console.log("updatedData", typeof updatedData, updatedData);
-
-  //   handleLocalData("locatie", updatedData);
-  // };
-
-  //SUS FUNCTIA DE ADAUGARE LOCALSTORAGE
 
   const handleAddIntinerary = (country, city) => {
     dispatchIntinerary(intineraryPlus({ country, city }));
@@ -175,9 +130,6 @@ const Explore = () => {
         {console.log("country", country)}
         <ButtonCity
           loc="ButtonCity"
-          // onClick={() => {
-          //   addLocalStorage(country, city);
-          // }}
           onClick={() => {
             handleAddIntinerary(country, city);
           }}
