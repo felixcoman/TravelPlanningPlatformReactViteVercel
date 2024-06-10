@@ -67,16 +67,16 @@ function SelectOptionExplore() {
               <Option loc="Option" value="">
                 --Pick a country--
               </Option>
-              <Option loc="Option" value="italy">
-                Italy
-              </Option>
-              <Option loc="Option" value="france">
+              <Option loc="Option" value="France">
                 France
               </Option>
-              <Option loc="Option" value="romania">
+              <Option loc="Option" value="Italy">
+                Italy
+              </Option>
+              <Option loc="Option" value="Romania">
                 Romania
               </Option>
-              <Option loc="Option" value="spain">
+              <Option loc="Option" value="Spain">
                 Spain
               </Option>
             </Select>
