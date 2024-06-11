@@ -658,7 +658,7 @@
       "reg": "Dobrogea",
       "country": "Romania",
       "image": "https://images.unsplash.com/photo-1629826958301-2d6c17de6874?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "Constanța, located on the coast of the Black Sea, is Romania's oldest continuously inhabited city and a vibrant tourist destination. It serves as a major port and a hub of cultural and economic activity. The city is renowned for its beautiful beaches, historic landmarks, and rich cultural heritage. Key attractions include the stunning Constanța Casino, an Art Nouveau masterpiece; the Roman Mosaic Edifice, showcasing ancient Roman architecture; and the Genoese Lighthouse, offering panoramic views of the sea. Visitors can also explore the National History and Archaeology Museum and the lively Piata Ovidiu, the city's central square. Constanța combines seaside relaxation with fascinating historical and cultural experiences, making it a compelling destination for tourists.",
+      "description": "Constanța, Romania's oldest continuously inhabited city, is a vibrant Black Sea port offering beautiful beaches, historic landmarks like the stunning Art Nouveau Constanța Casino, and rich cultural heritage. Key attractions include the Roman Mosaic Edifice, the Genoese Lighthouse, and the National History and Archaeology Museum. It’s an ideal destination for both seaside relaxation and historical exploration.",
       "category": ["plaja", "relaxare", "citybreak"],
       "period": {
         "threedays": {
@@ -854,7 +854,7 @@
       "reg": "Dobrogea",
       "country": "Romania",
       "image": "https://images.unsplash.com/photo-1669059166575-f1ea19483c85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "Mamaia is a popular seaside resort located on the coast of the Black Sea in Romania. Situated in the northeastern part of Constanța, it is renowned for its long, sandy beaches and vibrant nightlife, making it a top destination for tourists, especially during the summer months. The resort features numerous luxury hotels, beach clubs, and recreational facilities, including water parks and various water sports. Mamaia is also known for its scenic promenade and a gondola that offers panoramic views of the sea and the surrounding area. The resort's lively atmosphere, modern amenities, and natural beauty make it a favorite spot for both relaxation and entertainment.",
+      "description": "Mamaia, located on Romania's Black Sea coast near Constanța, is a premier summer resort known for its long, sandy beaches and vibrant nightlife. It features luxury hotels, beach clubs, and water parks, making it ideal for both relaxation and entertainment. The resort's scenic promenade and panoramic gondola rides enhance its appeal as a top tourist destination.",
       "category": ["plaja", "relaxare"],
       "id": 7
     },

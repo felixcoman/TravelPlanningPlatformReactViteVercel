@@ -19,3 +19,9 @@ export const ButtonLandmark = styled(Link)`
   text-decoration: none;
   cursor: pointer;
 `;
+
+export const CardImgContainer = styled.div`
+  display: flex;
+  height: 220px;
+  justify-content: center;
+`;
