@@ -18,7 +18,7 @@ const useFetchData = (url, clicked, setClicked) => {
     console.log("sunt in hook 15");
     setClicked(false);
     setError(false);
-    setData(null);
+    // setData(null);
 
     const fetchData = async () => {
       setLoading(true);

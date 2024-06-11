@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { IntineraryContext } from "../../global/context";
+import { IntineraryContext } from "../../global/intinerary/context";
 import CityCard from "../CityCard/CityCard";
 import { SectionIntineraryData } from "./Intinerary.style";
 
