@@ -33,6 +33,10 @@ const Explore = () => {
     dispatchIntinerary
   );
 
+  const intineraryValueArray = stateGlobalIntinerary.intineraryValue;
+
+  console.log("intineraryValueArray", intineraryValueArray);
+
   const { country, city } = useParams();
 
   const [clicked, setClicked] = useState(true);
@@ -58,8 +62,35 @@ const Explore = () => {
   const compactDataCity = dataCity ? dataCity[0] : null;
   console.log("compactDataCity", compactDataCity);
 
+  const [notUnique, setNotUnique] = useState(false);
+
   const handleAddIntinerary = (country, city) => {
-    dispatchIntinerary(intineraryPlus({ country, city }));
+    // console.log("intineraryValueArray", intineraryValueArray);
+    console.log("HANDLE ADD INTINERARY");
+
+    if (intineraryValueArray.length > 0) {
+      console.log(
+        "intineraryValueArray.length mai mare decat zero",
+        intineraryValueArray.length
+      );
+      console.log("CONTINUT intineraryValueArray", intineraryValueArray);
+
+      for (let i = 0; i < intineraryValueArray.length; i++) {
+        console.log("intineraryValueArray[i]", intineraryValueArray[i], "i", i);
+        console.log("intineraryValueArray[i+1]", intineraryValueArray[i + 1]);
+        if (intineraryValueArray[i] === intineraryValueArray[i + 1]) {
+          console.log("nu e unic");
+          setNotUnique(true);
+        }
+      }
+    } else setNotUnique(false);
+
+    notUnique === false
+      ? console.log("se poate adauga")
+      : console.log("nu se poate adauga");
+    notUnique === false
+      ? dispatchIntinerary(intineraryPlus({ country, city }))
+      : null;
   };
 
   //COMING SOON
@@ -133,7 +164,7 @@ const Explore = () => {
           onClick={() => {
             handleAddIntinerary(country, city);
           }}
-          to={`/intinerary`}
+          // to={`/intinerary`}
         >
           Save {city} to my intinerary!
         </ButtonCity>

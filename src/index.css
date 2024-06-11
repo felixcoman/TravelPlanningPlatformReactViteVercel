@@ -1,5 +1,4 @@
 :root {
- 
   background-color: #08032f;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -11,11 +10,27 @@
 
   margin: 0;
   padding: 0;
+
+  --white-neutral: #ffffff;
+  --dark-blue: #08032f;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #08032f !important;
+  background-color: var(--dark-blue) !important;
 }
 
+.card-img {
+  object-fit: contain;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-text {
+  text-align: justify;
+}

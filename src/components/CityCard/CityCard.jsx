@@ -1,10 +1,20 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Card } from "react-bootstrap";
-import { ButtonLandmark } from "../DestinationCard/DestinationCard.style";
+import { IntineraryContext } from "../../global/intinerary/context";
 import useFetchData from "../../hooks/useFetchData";
+import {
+  ButtonLandmark,
+  CardImgContainer,
+} from "../DestinationCard/DestinationCard.style";
 
 function CityCard({ country, city }) {
   console.log("country", country, "city", city);
+
+  const { stateGlobalIntinerary } = useContext(IntineraryContext);
+
+  const intineraryValueArray = stateGlobalIntinerary.intineraryValue;
+
+  console.log("intineraryValueArray", intineraryValueArray);
 
   const [clicked, setClicked] = useState(true);
 
@@ -19,10 +29,17 @@ function CityCard({ country, city }) {
       {data &&
         data?.map((card, index) => (
           <Card key={index} style={{ width: "18rem" }}>
-            <Card.Img variant="top" src={card.image} alt="Image of landmark" />
-            <Card.Body>
+            <CardImgContainer loc="CardImgContainer">
+              <Card.Img
+                className="card-img"
+                variant="top"
+                src={card.image}
+                alt="Image of landmark"
+              />
+            </CardImgContainer>
+            <Card.Body className="card-body">
               <Card.Title>{card.name}</Card.Title>
-              <Card.Text>{card.description}</Card.Text>
+              <Card.Text className="card-text">{card.description}</Card.Text>
               <ButtonLandmark loc="ButtonLandmark" to={`/intinerary`}>
                 Save landmark to my intinerary!
               </ButtonLandmark>
