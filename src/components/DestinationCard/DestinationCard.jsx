@@ -1,7 +1,5 @@
 import { Card } from "react-bootstrap";
 import { ButtonLandmark } from "../DestinationCard/DestinationCard.style";
-// const compactDataDestination = dataDestination ? dataDestination[0] : null;
-// console.log("compactDataDestination", compactDataDestination);
 
 function DestionationCard({ name, image, description, popularity }) {
   return (

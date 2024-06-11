@@ -19,8 +19,8 @@ import {
 } from "./Explore.style";
 
 import { useContext } from "react";
-import { intineraryPlus } from "../../global/actions";
-import { IntineraryContext } from "../../global/context";
+import { intineraryPlus } from "../../global/intinerary/actions";
+import { IntineraryContext } from "../../global/intinerary/context";
 
 const Explore = () => {
   const { stateGlobalIntinerary, dispatchIntinerary } =

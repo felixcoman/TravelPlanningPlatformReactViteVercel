@@ -12,7 +12,8 @@ import { List, X } from "react-bootstrap-icons";
 export const routes = [
   { title: "Home", href: "home" },
   { title: "About", href: "about" },
-  { title: "MyIntinerary", href: "intinerary" },
+  { title: "My Intinerary", href: "intinerary" },
+  { title: "My Choices", href: "my-choices" },
   { title: "Contact", href: "contact" },
 ];
 
