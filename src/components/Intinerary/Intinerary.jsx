@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { IntineraryContext } from "../../global/intinerary/context";
 import CityCard from "../CityCard/CityCard";
-import { SectionIntineraryData, InfoUser } from "./Intinerary.style";
+import { SectionIntineraryData } from "./Intinerary.style";
+import { InfoUser } from "../Explore/Explore.style";
 
 function Intinerary() {
   const { stateGlobalIntinerary } = useContext(IntineraryContext);
