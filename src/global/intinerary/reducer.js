@@ -17,8 +17,8 @@ export function intineraryReducer(state, action) {
     case "INTINERARY_MINUS": {
       let newState = {
         ...state,
-        intineraryValue: state.intineraryValue.filter(
-          (element) => element !== action.payload
+        choiceValue: state.choiceValue.filter(
+          (e, index) => index !== action.payload
         ),
       };
       return newState;
