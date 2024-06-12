@@ -21,8 +21,3 @@ export const SectionIntineraryData = styled.div`
   margin-bottom: 20px;
   justify-items: center;
 `;
-export const InfoUser = styled.div`
-  color: ${MIDDLE_BLUE};
-  width: 60vw;
-  font-size: ${TEXT_SIZE_SMALL};
-`;

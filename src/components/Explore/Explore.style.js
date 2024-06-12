@@ -5,6 +5,7 @@ import {
   ORANGE,
   WHITE_NEUTRAL,
   YELLOW,
+  MIDDLE_BLUE,
 } from "../../constants/Colors";
 import { TEXT_SIZE_MEDIUM, TEXT_SIZE_SMALL } from "../../constants/Dimensions";
 
@@ -89,4 +90,24 @@ export const SectionLandmarkData = styled.section`
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 10px;
+`;
+export const InfoSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+  align-items: center;
+`;
+
+export const InfoUser = styled.div`
+  display: flex;
+  color: ${MIDDLE_BLUE};
+  font-size: ${TEXT_SIZE_SMALL};
+  width: 100%;
+  justify-content: center;
+`;
+
+export const ButtonInfo = styled(ButtonCity)`
+  background: ${MIDDLE_BLUE};
+  color: ${WHITE_NEUTRAL};
+  width: 50vw;
 `;

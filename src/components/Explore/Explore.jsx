@@ -16,6 +16,9 @@ import {
   SectionLandmarkData,
   Subtitle,
   Title,
+  InfoUser,
+  ButtonInfo,
+  InfoSection,
 } from "./Explore.style";
 
 import { useContext } from "react";
@@ -33,7 +36,7 @@ const Explore = () => {
     dispatchIntinerary
   );
 
-  const intineraryValueArray = stateGlobalIntinerary.intineraryValue;
+  const intineraryValueArray = stateGlobalIntinerary.intineraryValue || [];
 
   console.log("intineraryValueArray", intineraryValueArray);
 
@@ -61,50 +64,31 @@ const Explore = () => {
 
   const compactDataCity = dataCity ? dataCity[0] : null;
   console.log("compactDataCity", compactDataCity);
+  const [unique, setUnique] = useState(true);
 
-  const [notUnique, setNotUnique] = useState(false);
-
-  const handleAddIntinerary = (country, city) => {
+  const handleAddIntinerary = (country, city, event) => {
     // console.log("intineraryValueArray", intineraryValueArray);
     console.log("HANDLE ADD INTINERARY");
 
-    if (intineraryValueArray.length > 0) {
-      console.log(
-        "intineraryValueArray.length mai mare decat zero",
-        intineraryValueArray.length
-      );
-      console.log("CONTINUT intineraryValueArray", intineraryValueArray);
+    const addObject = { country, city };
 
-      for (let i = 0; i < intineraryValueArray.length; i++) {
-        console.log("intineraryValueArray[i]", intineraryValueArray[i], "i", i);
-        console.log("intineraryValueArray[i+1]", intineraryValueArray[i + 1]);
-        if (intineraryValueArray[i] === intineraryValueArray[i + 1]) {
-          console.log("nu e unic");
-          setNotUnique(true);
-        }
-      }
-    } else setNotUnique(false);
+    console.log("ADD OBJECT", addObject);
 
-    notUnique === false
-      ? console.log("se poate adauga")
-      : console.log("nu se poate adauga");
-    notUnique === false
-      ? dispatchIntinerary(intineraryPlus({ country, city }))
-      : null;
+    const isDuplicate = intineraryValueArray.some(
+      (element) =>
+        element.country === addObject.country && element.city === addObject.city
+    );
+
+    if (isDuplicate) {
+      console.log("cannot be added");
+      setUnique(false);
+      event.preventDefault();
+    } else {
+      console.log("can be added");
+      setUnique(true);
+      dispatchIntinerary(intineraryPlus({ country, city }));
+    }
   };
-
-  //COMING SOON
-  // const uniqueLocalStorage = (arr) => {
-  //   const uniqueArr = [arr[0]];
-  //   for (let i = 1; i < arr.length; i++) {
-  //     if (arr[i - 1] !== arr[i]) {
-  //       uniqueArr.push(arr[i]);
-  //     }
-  //   }
-  //   return uniqueArr;
-  // };
-  //COMING SOON
-
   return (
     <>
       <SectionCityData loc="SectionCityData">
@@ -120,6 +104,7 @@ const Explore = () => {
             and will take care of the problem!
           </Error>
         )}
+
         {dataCity && (
           <>
             <ContainerTop loc="ContainerTop">
@@ -161,15 +146,21 @@ const Explore = () => {
         {console.log("country", country)}
         <ButtonCity
           loc="ButtonCity"
-          onClick={() => {
-            handleAddIntinerary(country, city);
+          onClick={(event) => {
+            handleAddIntinerary(country, city, event);
           }}
-          // to={`/intinerary`}
+          to={`/intinerary`}
         >
           Save {city} to my intinerary!
         </ButtonCity>
         <ButtonCity loc="ButtonCity">I want to book accommodation!</ButtonCity>
       </SectionCityButtons>
+      {!unique && (
+        <InfoSection>
+          <InfoUser>This item is already in the Intinerary!</InfoUser>
+          <ButtonInfo to={`/home`}>Go back to Home screen</ButtonInfo>
+        </InfoSection>
+      )}
     </>
   );
 };
