@@ -19,6 +19,7 @@ import {
   InfoUser,
   ButtonInfo,
   InfoSection,
+  SectionInfoButtons,
 } from "./Explore.style";
 
 import { useContext } from "react";
@@ -156,9 +157,18 @@ const Explore = () => {
         <ButtonCity loc="ButtonCity">I want to book accommodation!</ButtonCity>
       </SectionCityButtons>
       {!unique && (
-        <InfoSection>
-          <InfoUser>This item is already in the Intinerary!</InfoUser>
-          <ButtonInfo to={`/home`}>Go back to Home screen</ButtonInfo>
+        <InfoSection loc="InfoSection">
+          <InfoUser loc="InfoUser">
+            This item is already in the Intinerary!
+          </InfoUser>
+          <SectionInfoButtons loc="SectionInfoButtons">
+            <ButtonInfo loc="ButtonInfo" to={`/home`}>
+              I want to choose an other option from Home screen!
+            </ButtonInfo>
+            <ButtonInfo loc="ButtonInfo" to={`/intinerary`}>
+              Ok, go to Intinerary!
+            </ButtonInfo>
+          </SectionInfoButtons>
         </InfoSection>
       )}
     </>

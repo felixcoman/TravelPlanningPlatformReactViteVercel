@@ -77,7 +77,7 @@ export const ButtonCity = styled(Link)`
   color: ${DARK_BLUE};
   width: 100%;
   padding: 6px 12px;
-  margin: 2px 0;
+  margin: 10px;
   border-radius: 5px;
   text-align: center;
   text-decoration: none;
@@ -106,8 +106,11 @@ export const InfoUser = styled.div`
   justify-content: center;
 `;
 
+export const SectionInfoButtons = styled(SectionCityButtons)``;
+
 export const ButtonInfo = styled(ButtonCity)`
   background: ${MIDDLE_BLUE};
   color: ${WHITE_NEUTRAL};
-  width: 50vw;
+  align-content: center;
+  height: 64px;
 `;
