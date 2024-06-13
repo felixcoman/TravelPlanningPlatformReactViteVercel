@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Card } from "react-bootstrap";
-import { IntineraryContext } from "../../global/intinerary/context";
+import { ItineraryContext } from "../../global/itinerary/context";
 import useFetchData from "../../hooks/useFetchData";
 import {
   ButtonLandmark,
@@ -10,11 +10,11 @@ import {
 function CityCard({ country, city }) {
   console.log("country", country, "city", city);
 
-  const { stateGlobalIntinerary } = useContext(IntineraryContext);
+  const { stateGlobalItinerary } = useContext(ItineraryContext);
 
-  const intineraryValueArray = stateGlobalIntinerary.intineraryValue;
+  const itineraryValueArray = stateGlobalItinerary.itineraryValue;
 
-  console.log("intineraryValueArray", intineraryValueArray);
+  console.log("itineraryValueArray", itineraryValueArray);
 
   const [clicked, setClicked] = useState(true);
 
@@ -40,8 +40,8 @@ function CityCard({ country, city }) {
             <Card.Body className="card-body">
               <Card.Title>{card.name}</Card.Title>
               <Card.Text className="card-text">{card.description}</Card.Text>
-              <ButtonLandmark loc="ButtonLandmark" to={`/intinerary`}>
-                Save landmark to my intinerary!
+              <ButtonLandmark loc="ButtonLandmark" to={`/itinerary`}>
+                Save landmark to my itinerary!
               </ButtonLandmark>
             </Card.Body>
           </Card>

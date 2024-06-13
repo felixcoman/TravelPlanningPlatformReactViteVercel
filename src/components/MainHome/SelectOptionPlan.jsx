@@ -34,21 +34,33 @@ function SelectOptionPlan() {
 
   return (
     <>
-      <SelectContainer>
+      <SelectContainer loc="SelectContainer">
         <form onSubmit={(e) => handleSubmit(e)}>
           <SelectPlan
+            loc="SelectPlan"
             value={selectedCountry}
             onChange={handleDropdownChangeCountry}
           >
-            <Option value="">Pick a country</Option>
-            <Option value="italy">Italy</Option>
-            <Option value="france">France</Option>
-            <Option value="romania">Romania</Option>
-            <Option value="spain">Spain</Option>
+            <Option loc="Option" value="">
+              Pick a country
+            </Option>
+            <Option loc="Option" value="italy">
+              Italy
+            </Option>
+            <Option loc="Option" value="france">
+              France
+            </Option>
+            <Option loc="Option" value="romania">
+              Romania
+            </Option>
+            <Option loc="Option" value="spain">
+              Spain
+            </Option>
           </SelectPlan>
 
           {data && (
             <HomeBtn
+              loc="HomeBtn"
               type="submit"
               to={`/city-region/${selectedCountry}/${localData}`}
             >

@@ -49,7 +49,7 @@ function CitiesRegions() {
 
   return (
     <>
-      <PageContainer>
+      <PageContainer loc="PageContainer">
         {loading && (
           <Spinner animation="border" role="status">
             <span className="visually-hidden">Loading...</span>
@@ -58,19 +58,26 @@ function CitiesRegions() {
         {error && <div>Error: {error.message}</div>}
         {data && (
           <>
-            <MainContainer>
-              <Text>Country: {compactData.name}</Text>
-              <DataContainer>
-                <ImgContainer src={compactData.image} />
-                <TextContainer>{compactData.description}</TextContainer>
+            <MainContainer loc="MainContainer">
+              <Text loc="Text">Country: {compactData.name}</Text>
+              <DataContainer loc="DataContainer">
+                <ImgContainer loc="ImgContainer" src={compactData.image} />
+                <TextContainer loc="TextContainer">
+                  {compactData.description}
+                </TextContainer>
               </DataContainer>
             </MainContainer>
-            <DataContainer>
+            <DataContainer loc="DataContainer">
               <FiltersContainer
+                loc="FiltersContainer"
                 isCity={isCity}
                 onClick={() => changeCityRegion("city")}
               >
-                <SelectCity onChange={onOptionChangeCity} value={city}>
+                <SelectCity
+                  loc="SelectCity"
+                  onChange={onOptionChangeCity}
+                  value={city}
+                >
                   <option>Choose a city:</option>
                   {data &&
                     data.map((e, index) => {
@@ -79,15 +86,23 @@ function CitiesRegions() {
                       );
                     })}
                 </SelectCity>
-                <ButtonPlan to={`/my-travel1/${country}/${city}/${id}`}>
+                <ButtonPlan
+                  loc="ButtonPlan"
+                  to={`/my-travel1/${country}/${city}/${id}`}
+                >
                   Search
                 </ButtonPlan>
               </FiltersContainer>
               <FiltersContainer
+                loc="FiltersContainer"
                 isCity={!isCity}
                 onClick={() => changeCityRegion("region")}
               >
-                <SelectRegion onChange={onOptionChangeRegion} value={region}>
+                <SelectRegion
+                  loc="SelectRegion"
+                  onChange={onOptionChangeRegion}
+                  value={region}
+                >
                   <option>Choose a region:</option>
                   {data &&
                     data.map((e, index) => {
@@ -98,7 +113,10 @@ function CitiesRegions() {
                       );
                     })}
                 </SelectRegion>
-                <ButtonPlan to={`/my-travel2/${country}/${region}/${id}`}>
+                <ButtonPlan
+                  loc="ButtonPlan"
+                  to={`/my-travel2/${country}/${region}/${id}`}
+                >
                   Search
                 </ButtonPlan>
               </FiltersContainer>

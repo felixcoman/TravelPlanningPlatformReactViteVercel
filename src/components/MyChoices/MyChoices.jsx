@@ -18,7 +18,7 @@ function MyChoices() {
 
   return (
     <>
-      <MainContainerChoice>
+      <MainContainerChoice loc="MainContainerChoice">
         {stateGlobalChoice.choiceValue.map((e, index) => (
           <MyChoicesBox
             id={id}

@@ -1,17 +1,17 @@
-export const initialStateIntinerary = {
-  defaultValue: "Intinerary empty",
-  intineraryValue: [],
+export const initialStateItinerary = {
+  defaultValue: "Itinerary empty",
+  itineraryValue: [],
 };
-export function intineraryReducer(state, action) {
+export function itineraryReducer(state, action) {
   console.log("state", state, "action", action);
   switch (action.type) {
     case "INTINERARY_PLUS": {
-      console.log("intinerary plus", {
-        intineraryValue: [action.payload, ...state.intineraryValue],
+      console.log("itinerary plus", {
+        itineraryValue: [action.payload, ...state.itineraryValue],
       });
       return {
         ...state,
-        intineraryValue: [action.payload, ...state.intineraryValue],
+        itineraryValue: [action.payload, ...state.itineraryValue],
       };
     }
     case "INTINERARY_MINUS": {
@@ -24,7 +24,7 @@ export function intineraryReducer(state, action) {
       return newState;
     }
     case "RETURN_TO_DEFAULT": {
-      return initialStateIntinerary;
+      return initialStateItinerary;
     }
     default:
       return state;

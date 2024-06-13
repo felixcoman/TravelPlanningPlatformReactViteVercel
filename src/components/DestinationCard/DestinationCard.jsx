@@ -8,8 +8,8 @@ function DestionationCard({ name, image, description, popularity }) {
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>{description}</Card.Text>
-        <ButtonLandmark loc="ButtonLandmark" to={`/intinerary`}>
-          Save landmark to my intinerary!
+        <ButtonLandmark loc="ButtonLandmark" to={`/itinerary`}>
+          Save landmark to my itinerary!
         </ButtonLandmark>
       </Card.Body>
     </Card>
