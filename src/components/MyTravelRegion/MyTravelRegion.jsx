@@ -1,31 +1,29 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import Spinner from "react-bootstrap/Spinner";
 import { useParams } from "react-router-dom";
+import { addChoice } from "../../Store/actions";
+import { ChoiceContext } from "../../Store/context";
 import useFetchData from "../../hooks/useFetchData";
-import MyTravelRecommend from "../MyTravelRecommend/MyTravelRecommend";
+import useFetchUsers from "../../hooks/useFetchUsers";
 import {
-  Text,
   DataContainer,
-  ImgContainer,
+  Text,
 } from "../MainHome/CitiesRegions/CitiesRegions.style";
 import {
-  PageContainerTravel,
-  MainContainerTravel,
-  FiltersContainerTravel,
-  SelectTravel,
+  ButtonChoice,
   ButtonPlanTravel,
-  TextContainerTravel,
+  FiltersContainerTravel,
   FiltersTravel,
   ImgContainerTravel,
-  ButtonChoice,
+  MainContainerTravel,
+  PageContainerTravel,
+  SelectTravel,
+  TextContainerTravel,
 } from "../MyTravelCity/MyTravel.style";
-
-import { ChoiceContext } from "../../global/choice/context";
-import { useContext } from "react";
-import { addChoice } from "../../global/choice/actions";
-import Spinner from "react-bootstrap/Spinner";
+import MyTravelRecommend from "../MyTravelRecommend/MyTravelRecommend";
 
 function MyTravelRegion() {
-  const { country, region } = useParams();
+  const { country, region, id } = useParams();
   const [clicked, setClicked] = useState(true);
   const [period, setPeriod] = useState("");
   const [buget, setBuget] = useState("");
@@ -57,14 +55,50 @@ function MyTravelRegion() {
     setShow(!show);
   };
 
-  const { dispatchChoice } = useContext(ChoiceContext);
+  const { users: user } = useFetchUsers("/" + id);
+  console.log("user", user);
+
+  const { stateGlobalChoice, dispatchChoice } = useContext(ChoiceContext);
+  console.log("stateGlobalChoice.choiceValue", stateGlobalChoice.choiceValue);
+
+  const handleUpdateChoice = (updateDataChoice) => {
+    console.log("stateGlobalChoice.choiceValue", stateGlobalChoice.choiceValue);
+    console.log("stateGlobalChoice", stateGlobalChoice);
+    console.log("updateDataChoice", updateDataChoice);
+    fetch(`http://localhost:3001/users/${id}`)
+      .then((response) => response.json())
+      .then((userData) => {
+        // Check if the user has a 'choices' array, if not, initialize it
+        const updatedChoices = userData.choices
+          ? [...userData.choices, updateDataChoice]
+          : [updateDataChoice];
+        // Update the user data with the new choice
+        const updatedUserData = { ...userData, choices: updatedChoices };
+
+        fetch(`http://localhost:3001/users/${id}`, {
+          method: "PUT",
+          body: JSON.stringify(updatedUserData),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((response) => response.json())
+          .then((json) => console.log(json));
+      })
+      .catch((error) => console.error("Error fetching user data:", error));
+  };
+
   const handleAdd = (country, region, buget, period, data) => {
-    dispatchChoice(addChoice({ country, region, buget, period, data }));
+    const updateDataChoice = { country, region, buget, period, data };
+
+    dispatchChoice(addChoice(updateDataChoice));
+    console.log("updateDataChoice", updateDataChoice);
+    handleUpdateChoice(updateDataChoice);
   };
 
   return (
     <>
-      <PageContainerTravel loc="PageContainerTravel">
+      <PageContainerTravel>
         {loading && (
           <Spinner animation="border" role="status">
             <span className="visually-hidden">Loading...</span>
@@ -73,32 +107,26 @@ function MyTravelRegion() {
         {error && <div>Error: {error.message}</div>}
         {data && (
           <>
-            <MainContainerTravel loc="MainContainerTravel">
-              <Text loc="Text">Region: {compactData.region}</Text>
-              <DataContainer loc="DataContainer">
-                <ImgContainerTravel
-                  loc="ImgContainerTravel"
-                  src={compactData.image}
-                />
-                <TextContainerTravel loc="TextContainerTravel">
+            <MainContainerTravel>
+              <Text>Region: {compactData.region}</Text>
+              <DataContainer>
+                <ImgContainerTravel src={compactData.image} />
+                <TextContainerTravel>
                   {compactData.description}
                 </TextContainerTravel>
               </DataContainer>
             </MainContainerTravel>
 
-            <FiltersContainerTravel loc="FiltersContainerTravel">
-              <FiltersTravel loc="FiltersTravel">
-                <SelectTravel
-                  loc="SelectTravel"
-                  onChange={onOptionChangePeriod}
-                >
+            <FiltersContainerTravel>
+              <FiltersTravel>
+                <SelectTravel onChange={onOptionChangePeriod}>
                   <option>Choose a period:</option>
                   {optionPeriod.map((option, index) => {
                     return <option key={index}>{option}</option>;
                   })}
                 </SelectTravel>
 
-                <SelectTravel loc="SelectTravel" onChange={onOptionChangeBuget}>
+                <SelectTravel onChange={onOptionChangeBuget}>
                   <option>Choose a buget:</option>
                   {optionBuget.map((option, index) => {
                     return <option key={index}>{option}</option>;
@@ -106,8 +134,8 @@ function MyTravelRegion() {
                 </SelectTravel>
               </FiltersTravel>
 
-              <FiltersTravel loc="FiltersTravel">
-                <ButtonPlanTravel loc="ButtonPlanTravel" onClick={handleClick}>
+              <FiltersTravel>
+                <ButtonPlanTravel onClick={handleClick}>
                   {show ? "Return" : "Search"}
                 </ButtonPlanTravel>
               </FiltersTravel>
@@ -125,8 +153,7 @@ function MyTravelRegion() {
 
         {show ? (
           <ButtonChoice
-            loc="ButtonChoice"
-            to={`/my-choices`}
+            to={`/my-choices/${id}`}
             onClick={() => handleAdd(country, region, buget, period, data)}
           >
             Save my Choice

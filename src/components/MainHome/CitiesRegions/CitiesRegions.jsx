@@ -18,7 +18,9 @@ import GetOptionCities from "../GetOptionCities";
 import Spinner from "react-bootstrap/Spinner";
 
 function CitiesRegions() {
-  const { country } = useParams();
+  const { country, id } = useParams();
+
+  console.log("country", country, "id", id);
   const [clicked, setClicked] = useState(true);
   const [isCity, setIsCity] = useState(null);
   const [city, setCity] = useState("");
@@ -47,7 +49,7 @@ function CitiesRegions() {
 
   return (
     <>
-      <PageContainer loc="PageContainer">
+      <PageContainer>
         {loading && (
           <Spinner animation="border" role="status">
             <span className="visually-hidden">Loading...</span>
@@ -56,26 +58,19 @@ function CitiesRegions() {
         {error && <div>Error: {error.message}</div>}
         {data && (
           <>
-            <MainContainer loc="MainContainer">
-              <Text loc="Text">Country: {compactData.name}</Text>
-              <DataContainer loc="DataContainer">
-                <ImgContainer loc="ImgContainer" src={compactData.image} />
-                <TextContainer loc="TextContainer">
-                  {compactData.description}
-                </TextContainer>
+            <MainContainer>
+              <Text>Country: {compactData.name}</Text>
+              <DataContainer>
+                <ImgContainer src={compactData.image} />
+                <TextContainer>{compactData.description}</TextContainer>
               </DataContainer>
             </MainContainer>
-            <DataContainer loc="DataContainer">
+            <DataContainer>
               <FiltersContainer
-                loc="FiltersContainer"
                 isCity={isCity}
                 onClick={() => changeCityRegion("city")}
               >
-                <SelectCity
-                  loc="SelectCity"
-                  onChange={onOptionChangeCity}
-                  value={city}
-                >
+                <SelectCity onChange={onOptionChangeCity} value={city}>
                   <option>Choose a city:</option>
                   {data &&
                     data.map((e, index) => {
@@ -84,23 +79,15 @@ function CitiesRegions() {
                       );
                     })}
                 </SelectCity>
-                <ButtonPlan
-                  loc="ButtonPlan"
-                  to={`/my-travel1/${country}/${city}`}
-                >
+                <ButtonPlan to={`/my-travel1/${country}/${city}/${id}`}>
                   Search
                 </ButtonPlan>
               </FiltersContainer>
               <FiltersContainer
-                loc="FiltersContainer"
                 isCity={!isCity}
                 onClick={() => changeCityRegion("region")}
               >
-                <SelectRegion
-                  loc="SelectRegion"
-                  onChange={onOptionChangeRegion}
-                  value={region}
-                >
+                <SelectRegion onChange={onOptionChangeRegion} value={region}>
                   <option>Choose a region:</option>
                   {data &&
                     data.map((e, index) => {
@@ -111,10 +98,7 @@ function CitiesRegions() {
                       );
                     })}
                 </SelectRegion>
-                <ButtonPlan
-                  loc="ButtonPlan"
-                  to={`/my-travel2/${country}/${region}`}
-                >
+                <ButtonPlan to={`/my-travel2/${country}/${region}/${id}`}>
                   Search
                 </ButtonPlan>
               </FiltersContainer>

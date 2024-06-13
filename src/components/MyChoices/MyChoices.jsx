@@ -1,26 +1,27 @@
 import { useContext } from "react";
-import { ChoiceContext } from "../../global/choice/context";
-import {
-  ButtonPlanTravel,
-  MainContainerChoice,
-} from "../MyTravelCity/MyTravel.style";
-import { removeChoice } from "../../global/choice/actions";
+import { useParams } from "react-router-dom";
+import { removeChoice } from "../../Store/actions";
+import { ChoiceContext } from "../../Store/context";
+import { MainContainerChoice } from "../MyTravelCity/MyTravel.style";
 import MyChoicesBox from "./MyChoicesBox";
 
 function MyChoices() {
+  const { id } = useParams();
+
   const { stateGlobalChoice, dispatchChoice } = useContext(ChoiceContext);
 
-  const handleDelete = (country, city, buget, period, data) => {
-    dispatchChoice(removeChoice(country, city, buget, period, data));
+  const handleDelete = (index) => {
+    dispatchChoice(removeChoice(index));
   };
 
-  console.log(stateGlobalChoice.choiceValue);
+  console.log("stateGlobalChoice.choiceValue", stateGlobalChoice.choiceValue);
 
   return (
     <>
-      <MainContainerChoice loc="MainContainerChoice">
+      <MainContainerChoice>
         {stateGlobalChoice.choiceValue.map((e, index) => (
           <MyChoicesBox
+            id={id}
             key={index}
             country={e.country}
             city={e.city}
@@ -28,7 +29,8 @@ function MyChoices() {
             period={e.period}
             buget={e.buget}
             data={e.data}
-            handleDelete={handleDelete}
+            handleDelete={() => handleDelete(index)}
+            handleUpdateChoice={() => handleUpdateChoice()}
           />
         ))}
       </MainContainerChoice>
