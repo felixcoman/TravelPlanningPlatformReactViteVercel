@@ -138,8 +138,10 @@ const Contact = () => {
   };
 
   return (
-    <ContactContainer>
-      <ContactText>We will apreciate your feedback:</ContactText>
+    <ContactContainer loc="ContactContainer">
+      <ContactText loc="ContactText">
+        We will apreciate your feedback:
+      </ContactText>
       {Object.keys(inputObj).map((el, index) =>
         el === "Textarea" ? (
           <ContactFormTextarea
@@ -164,6 +166,7 @@ const Contact = () => {
 
       {isValid === true && (
         <ContactButton
+          loc="ContactButton"
           //to={`/users/${id}`}
           onClick={() => {
             handleSubmit();

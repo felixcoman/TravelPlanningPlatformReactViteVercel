@@ -45,29 +45,31 @@ function MyChoicesBox({
 
   return (
     <>
-      <PageContainerTravel>
-        <DataContainerChoice>
-          <TextOrangeChoice> Country:</TextOrangeChoice>
-          <TextChoice>{country}</TextChoice>
+      <PageContainerTravel loc="PageContainerTravel">
+        <DataContainerChoice loc="DataContainerChoice">
+          <TextOrangeChoice loc="TextOrangeChoice"> Country:</TextOrangeChoice>
+          <TextChoice loc="TextChoice">{country}</TextChoice>
         </DataContainerChoice>
 
         {city ? (
-          <DataContainerChoice>
-            <TextOrangeChoice> City:</TextOrangeChoice>
-            <TextChoice>{city}</TextChoice>
+          <DataContainerChoice loc="DataContainerChoice">
+            <TextOrangeChoice loc="TextOrangeChoice"> City:</TextOrangeChoice>
+            <TextChoice loc="TextChoice">{city}</TextChoice>
           </DataContainerChoice>
         ) : (
-          <DataContainerChoice>
-            <TextOrangeChoice> Region:</TextOrangeChoice>
-            <TextChoice>{region}</TextChoice>
+          <DataContainerChoice loc="DataContainerChoice">
+            <TextOrangeChoice loc="TextOrangeChoice"> Region:</TextOrangeChoice>
+            <TextChoice loc="TextChoice">{region}</TextChoice>
           </DataContainerChoice>
         )}
 
         {period ? (
-          <MainContainerChoice>
-            <DataContainerChoice>
-              <TextOrangeChoice> Period:</TextOrangeChoice>
-              <TextChoice>{period} </TextChoice>
+          <MainContainerChoice loc="MainContainerChoice">
+            <DataContainerChoice loc="DataContainerChoice">
+              <TextOrangeChoice loc="TextOrangeChoice">
+                Period:
+              </TextOrangeChoice>
+              <TextChoice loc="TextChoice">{period} </TextChoice>
             </DataContainerChoice>
             {equalPeriodThree
               ? data.map((e, index) => <ThreeDays key={index} {...e} />)
@@ -82,10 +84,10 @@ function MyChoicesBox({
         ) : null}
 
         {buget ? (
-          <MainContainerChoice>
-            <DataContainerChoice>
-              <TextOrangeChoice> Buget:</TextOrangeChoice>
-              <TextChoice>{buget}</TextChoice>
+          <MainContainerChoice loc="MainContainerChoice">
+            <DataContainerChoice loc="DataContainerChoice">
+              <TextOrangeChoice loc="TextOrangeChoice">Buget:</TextOrangeChoice>
+              <TextChoice loc="TextChoice">{buget}</TextChoice>
             </DataContainerChoice>
             {equalBugetLow
               ? data.map((e, index) => <LowBuget key={index} {...e} />)
@@ -99,7 +101,7 @@ function MyChoicesBox({
               : null}
           </MainContainerChoice>
         ) : null}
-        <ButtonPlanTravel onClick={handleDelete}>
+        <ButtonPlanTravel loc="ButtonPlanTravel" onClick={handleDelete}>
           Delete my choice
         </ButtonPlanTravel>
       </PageContainerTravel>

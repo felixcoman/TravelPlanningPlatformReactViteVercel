@@ -1,8 +1,8 @@
-export function intineraryPlus({ country, city }) {
+export function itineraryPlus({ country, city }) {
   return { type: "INTINERARY_PLUS", payload: { country, city } };
 }
 
-export function intineraryMinus(index) {
+export function itineraryMinus(index) {
   return { type: "INTINERARY_MINUS", payload: index };
 }
 

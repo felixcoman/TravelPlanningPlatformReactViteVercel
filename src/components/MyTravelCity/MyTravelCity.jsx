@@ -102,7 +102,7 @@ function MyTravelCity() {
 
   return (
     <>
-      <PageContainerTravel>
+      <PageContainerTravel loc="PageContainerTravel">
         {loading && (
           <Spinner animation="border" role="status">
             <span className="visually-hidden">Loading...</span>
@@ -111,26 +111,32 @@ function MyTravelCity() {
         {error && <div>Error: {error.message}</div>}
         {data && (
           <>
-            <MainContainerTravel>
-              <Text>City: {compactData.city}</Text>
-              <DataContainer>
-                <ImgContainerTravel src={compactData.image} />
-                <TextContainerTravel>
+            <MainContainerTravel loc="MainContainerTravel">
+              <Text loc="Text">City: {compactData.city}</Text>
+              <DataContainer loc="DataContainer">
+                <ImgContainerTravel
+                  loc="ImgContainerTravel"
+                  src={compactData.image}
+                />
+                <TextContainerTravel loc="TextContainerTravel">
                   {compactData.description}
                 </TextContainerTravel>
               </DataContainer>
             </MainContainerTravel>
 
-            <FiltersContainerTravel>
-              <FiltersTravel>
-                <SelectTravel onChange={onOptionChangePeriod}>
+            <FiltersContainerTravel loc="FiltersContainerTravel">
+              <FiltersTravel loc="FiltersTravel">
+                <SelectTravel
+                  loc="SelectTravel"
+                  onChange={onOptionChangePeriod}
+                >
                   <option>Choose a period:</option>
                   {optionPeriod.map((option, index) => {
                     return <option key={index}>{option}</option>;
                   })}
                 </SelectTravel>
 
-                <SelectTravel onChange={onOptionChangeBuget}>
+                <SelectTravel loc="SelectTravel" onChange={onOptionChangeBuget}>
                   <option>Choose a buget:</option>
                   {optionBuget.map((option, index) => {
                     return <option key={index}>{option}</option>;
@@ -138,8 +144,8 @@ function MyTravelCity() {
                 </SelectTravel>
               </FiltersTravel>
 
-              <FiltersTravel>
-                <ButtonPlanTravel onClick={handleClick}>
+              <FiltersTravel loc="FiltersTravel">
+                <ButtonPlanTravel loc="ButtonPlanTravel" onClick={handleClick}>
                   {show ? "Return" : "Search"}
                 </ButtonPlanTravel>
               </FiltersTravel>
@@ -155,6 +161,7 @@ function MyTravelCity() {
         )}
         {show ? (
           <ButtonChoice
+            loc="ButtonChoice"
             to={`/my-choices/${id}`}
             onClick={() => {
               handleAdd(country, city, buget, period, data);

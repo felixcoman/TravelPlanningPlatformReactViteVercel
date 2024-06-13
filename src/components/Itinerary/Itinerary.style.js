@@ -8,7 +8,7 @@ import {
 } from "../../constants/Colors";
 import { TEXT_SIZE_MEDIUM, TEXT_SIZE_SMALL } from "../../constants/Dimensions";
 
-export const SectionIntineraryData = styled.div`
+export const SectionItineraryData = styled.div`
   /* display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 10px; */

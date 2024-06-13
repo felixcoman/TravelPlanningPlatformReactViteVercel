@@ -23,23 +23,23 @@ import {
 } from "./Explore.style";
 
 import { useContext } from "react";
-import { intineraryPlus } from "../../global/intinerary/actions";
-import { IntineraryContext } from "../../global/intinerary/context";
+import { itineraryPlus } from "../../global/itinerary/actions";
+import { ItineraryContext } from "../../global/itinerary/context";
 
 const Explore = () => {
-  const { stateGlobalIntinerary, dispatchIntinerary } =
-    useContext(IntineraryContext);
+  const { stateGlobalItinerary, dispatchItinerary } =
+    useContext(ItineraryContext);
 
   console.log(
-    "stateGlobalIntinerary",
-    stateGlobalIntinerary,
-    "dispatchIntinerary",
-    dispatchIntinerary
+    "stateGlobalItinerary",
+    stateGlobalItinerary,
+    "dispatchItinerary",
+    dispatchItinerary
   );
 
-  const intineraryValueArray = stateGlobalIntinerary.intineraryValue || [];
+  const itineraryValueArray = stateGlobalItinerary.itineraryValue || [];
 
-  console.log("intineraryValueArray", intineraryValueArray);
+  console.log("itineraryValueArray", itineraryValueArray);
 
   const { country, city } = useParams();
 
@@ -67,15 +67,15 @@ const Explore = () => {
   console.log("compactDataCity", compactDataCity);
   const [unique, setUnique] = useState(true);
 
-  const handleAddIntinerary = (country, city, event) => {
-    // console.log("intineraryValueArray", intineraryValueArray);
+  const handleAddItinerary = (country, city, event) => {
+    // console.log("itineraryValueArray", itineraryValueArray);
     console.log("HANDLE ADD INTINERARY");
 
     const addObject = { country, city };
 
     console.log("ADD OBJECT", addObject);
 
-    const isDuplicate = intineraryValueArray.some(
+    const isDuplicate = itineraryValueArray.some(
       (element) =>
         element.country === addObject.country && element.city === addObject.city
     );
@@ -87,7 +87,7 @@ const Explore = () => {
     } else {
       console.log("can be added");
       setUnique(true);
-      dispatchIntinerary(intineraryPlus({ country, city }));
+      dispatchItinerary(itineraryPlus({ country, city }));
     }
   };
   return (
@@ -148,25 +148,25 @@ const Explore = () => {
         <ButtonCity
           loc="ButtonCity"
           onClick={(event) => {
-            handleAddIntinerary(country, city, event);
+            handleAddItinerary(country, city, event);
           }}
-          to={`/intinerary`}
+          to={`/itinerary`}
         >
-          Save {city} to my intinerary!
+          Save {city} to my itinerary!
         </ButtonCity>
         <ButtonCity loc="ButtonCity">I want to book accommodation!</ButtonCity>
       </SectionCityButtons>
       {!unique && (
         <InfoSection loc="InfoSection">
           <InfoUser loc="InfoUser">
-            This item is already in the Intinerary!
+            This item is already in the Itinerary!
           </InfoUser>
           <SectionInfoButtons loc="SectionInfoButtons">
             <ButtonInfo loc="ButtonInfo" to={`/home`}>
               I want to choose an other option from Home screen!
             </ButtonInfo>
-            <ButtonInfo loc="ButtonInfo" to={`/intinerary`}>
-              Ok, go to Intinerary!
+            <ButtonInfo loc="ButtonInfo" to={`/itinerary`}>
+              Ok, go to Itinerary!
             </ButtonInfo>
           </SectionInfoButtons>
         </InfoSection>
