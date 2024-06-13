@@ -1,9 +1,18 @@
 import { useState } from "react";
+// import { useParams } from "react-router-dom";
+// import useFetchUsers from "../../hooks/useFetchUsers";
 import ContactForm from "./ContactForm";
 import ContactFormTextarea from "./ContactFormTextarea";
-import { ContactContainer, ContactButton, ContactText } from "./Contact.style";
+import {
+  ContactContainer,
+  ContactButton,
+  ContactText,
+  ErrorP,
+} from "./Contact.style";
 
 const Contact = () => {
+  //const { id } = useParams();
+
   const [inputObj, setInputObj] = useState({
     Name: "",
     SurName: "",
@@ -12,7 +21,7 @@ const Contact = () => {
     Textarea: "",
   });
 
-  const [error, setError] = useState({
+  const [errorInput, setErrorInput] = useState({
     Name: undefined,
     Surname: undefined,
     Mobile: undefined,
@@ -27,47 +36,48 @@ const Contact = () => {
     handleError(e.target.value, name);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     console.log(inputObj);
-    fetch(`http://localhost:3001/users`, {
+    const add = await fetch(`http://localhost:3001/feedback`, {
       method: "POST",
       body: JSON.stringify(inputObj),
       headers: {
         "Content-Type": "application/json",
       },
     });
+    const response = await add.json();
+    return response[0].id;
   };
 
   const handleError = (value, name) => {
     switch (name) {
       case "Name":
         if (!value.trim() || value.length < 3) {
-          setError({
-            ...error,
+          setErrorInput({
+            ...errorInput,
             [name]: "This field is required.",
           });
           setIsValid(false);
           console.log(isValid);
         } else if (value === "Name") {
-          setError({ ...error, [name]: "Error" });
+          setErrorInput({ ...errorInput, [name]: "Error" });
           setIsValid(false);
         } else {
-          setError({ ...error, [name]: undefined });
+          setErrorInput({ ...errorInput, [name]: undefined });
           setIsValid(true);
-          console.log(isValid);
         }
         break;
       case "SurName":
         if (!value.trim() || value.length < 3) {
-          setError({
-            ...error,
+          setErrorInput({
+            ...errorInput,
             [name]: "This field is required.",
           });
           setIsValid(false);
         } else if (value === "SurName") {
-          setError({ ...error, [name]: "Error" });
+          setErrorInput({ ...errorInput, [name]: "Error" });
         } else {
-          setError({ ...error, [name]: undefined });
+          setErrorInput({ ...errorInput, [name]: undefined });
           setIsValid(true);
         }
         break;
@@ -75,15 +85,15 @@ const Contact = () => {
         let valueArr = value.split(" ");
         valueArr.filter((e) => {
           if (!value.match("[0-9]{10}") || e[0] != "0" || e[1] != "7") {
-            setError({
-              ...error,
+            setErrorInput({
+              ...errorInput,
               [name]: "Please enter a 10 digit number that starts with 07.",
             });
             setIsValid(false);
           } else if (value === "Mobile") {
-            setError({ ...error, [name]: "Error" });
+            setErrorInput({ ...errorInput, [name]: "Error" });
           } else {
-            setError({ ...error, [name]: undefined });
+            setErrorInput({ ...errorInput, [name]: undefined });
             setIsValid(true);
           }
         });
@@ -96,29 +106,29 @@ const Contact = () => {
         };
 
         if (!isEmailValid(value)) {
-          setError({
-            ...error,
+          setErrorInput({
+            ...errorInput,
             [name]: "Invalid email format.",
           });
           setIsValid(false);
         } else if (value === "Email") {
-          setError({ ...error, [name]: "Error" });
+          setErrorInput({ ...errorInput, [name]: "Error" });
         } else {
-          setError({ ...error, [name]: undefined });
+          setErrorInput({ ...errorInput, [name]: undefined });
           setIsValid(true);
         }
         break;
       case "Textarea":
         if (!value.trim()) {
-          setError({
-            ...error,
+          setErrorInput({
+            ...errorInput,
             [name]: "This field is required.",
           });
           setIsValid(false);
         } else if (value === "Textarea") {
-          setError({ ...error, [name]: "Error" });
+          setErrorInput({ ...errorInput, [name]: "Error" });
         } else {
-          setError({ ...error, [name]: undefined });
+          setErrorInput({ ...errorInput, [name]: undefined });
           setIsValid(true);
         }
         break;
@@ -128,10 +138,8 @@ const Contact = () => {
   };
 
   return (
-    <ContactContainer loc="ContactContainer">
-      <ContactText loc="ContactText">
-        We will apreciate your feedback:
-      </ContactText>
+    <ContactContainer>
+      <ContactText>We will apreciate your feedback:</ContactText>
       {Object.keys(inputObj).map((el, index) =>
         el === "Textarea" ? (
           <ContactFormTextarea
@@ -140,7 +148,7 @@ const Contact = () => {
             type={el}
             value={inputObj[el]}
             handleChange={handleChange}
-            error={error[el]}
+            error={errorInput[el]}
           />
         ) : (
           <ContactForm
@@ -149,14 +157,14 @@ const Contact = () => {
             type={el}
             value={inputObj[el]}
             handleChange={handleChange}
-            error={error[el]}
+            error={errorInput[el]}
           />
         )
       )}
 
       {isValid === true && (
         <ContactButton
-          loc="ContactButton"
+          //to={`/users/${id}`}
           onClick={() => {
             handleSubmit();
           }}
@@ -164,7 +172,7 @@ const Contact = () => {
           Send Feedback
         </ContactButton>
       )}
-      {isValid === false && <p>Not valid</p>}
+      {isValid === false && <ErrorP>Not valid</ErrorP>}
     </ContactContainer>
   );
 };

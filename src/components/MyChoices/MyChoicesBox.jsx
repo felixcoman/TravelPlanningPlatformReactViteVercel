@@ -1,17 +1,17 @@
 import {
-  TextChoice,
-  MainContainerChoice,
-  DataContainerChoice,
-  TextOrangeChoice,
   ButtonPlanTravel,
+  DataContainerChoice,
+  MainContainerChoice,
   PageContainerTravel,
+  TextChoice,
+  TextOrangeChoice,
 } from "../MyTravelCity/MyTravel.style";
-import ThreeDays from "../MyTravelRecommend/ThreeDays";
 import FiveDays from "../MyTravelRecommend/FiveDays";
-import SevenDays from "../MyTravelRecommend/SevenDays";
+import HighBuget from "../MyTravelRecommend/HighBuget";
 import LowBuget from "../MyTravelRecommend/LowBuget";
 import MediumBuget from "../MyTravelRecommend/MediumBuget";
-import HighBuget from "../MyTravelRecommend/HighBuget";
+import SevenDays from "../MyTravelRecommend/SevenDays";
+import ThreeDays from "../MyTravelRecommend/ThreeDays";
 
 function MyChoicesBox({
   country,
@@ -22,6 +22,7 @@ function MyChoicesBox({
   data,
   handleDelete,
 }) {
+  console.log("databox", data);
   const bugetTravelNoSpace = buget.replace(/ /g, "").toLowerCase();
   const periodTravelNoSpace = period.replace(/ /g, "").toLowerCase();
 
@@ -44,31 +45,29 @@ function MyChoicesBox({
 
   return (
     <>
-      <PageContainerTravel loc="PageContainerTravel">
-        <DataContainerChoice loc="DataContainerChoice">
-          <TextOrangeChoice loc="TextOrangeChoice"> Country:</TextOrangeChoice>
-          <TextChoice loc="TextChoice">{country}</TextChoice>
+      <PageContainerTravel>
+        <DataContainerChoice>
+          <TextOrangeChoice> Country:</TextOrangeChoice>
+          <TextChoice>{country}</TextChoice>
         </DataContainerChoice>
 
         {city ? (
-          <DataContainerChoice loc="DataContainerChoice">
-            <TextOrangeChoice loc="TextOrangeChoice"> City:</TextOrangeChoice>
-            <TextChoice loc="TextChoice">{city}</TextChoice>
+          <DataContainerChoice>
+            <TextOrangeChoice> City:</TextOrangeChoice>
+            <TextChoice>{city}</TextChoice>
           </DataContainerChoice>
         ) : (
-          <DataContainerChoice loc="DataContainerChoice">
-            <TextOrangeChoice loc="TextOrangeChoice"> Region:</TextOrangeChoice>
-            <TextChoice loc="TextChoice">{region}</TextChoice>
+          <DataContainerChoice>
+            <TextOrangeChoice> Region:</TextOrangeChoice>
+            <TextChoice>{region}</TextChoice>
           </DataContainerChoice>
         )}
 
         {period ? (
-          <MainContainerChoice loc="MainContainerChoice">
-            <DataContainerChoice loc="DataContainerChoice">
-              <TextOrangeChoice loc="TextOrangeChoice">
-                Period:
-              </TextOrangeChoice>
-              <TextChoice loc="TextChoice">{period} </TextChoice>
+          <MainContainerChoice>
+            <DataContainerChoice>
+              <TextOrangeChoice> Period:</TextOrangeChoice>
+              <TextChoice>{period} </TextChoice>
             </DataContainerChoice>
             {equalPeriodThree
               ? data.map((e, index) => <ThreeDays key={index} {...e} />)
@@ -83,10 +82,10 @@ function MyChoicesBox({
         ) : null}
 
         {buget ? (
-          <MainContainerChoice loc="MainContainerChoice">
-            <DataContainerChoice loc="DataContainerChoice">
-              <TextOrangeChoice loc="TextOrangeChoice">Buget:</TextOrangeChoice>
-              <TextChoice loc="TextChoice">{buget}</TextChoice>
+          <MainContainerChoice>
+            <DataContainerChoice>
+              <TextOrangeChoice> Buget:</TextOrangeChoice>
+              <TextChoice>{buget}</TextChoice>
             </DataContainerChoice>
             {equalBugetLow
               ? data.map((e, index) => <LowBuget key={index} {...e} />)
@@ -100,7 +99,7 @@ function MyChoicesBox({
               : null}
           </MainContainerChoice>
         ) : null}
-        <ButtonPlanTravel loc="ButtonPlanTravel" onClick={handleDelete}>
+        <ButtonPlanTravel onClick={handleDelete}>
           Delete my choice
         </ButtonPlanTravel>
       </PageContainerTravel>

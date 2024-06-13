@@ -1,6 +1,7 @@
 import { useState } from "react";
 import useFetchData from "../../hooks/useFetchData";
 import { HomeBtn, Option, SelectPlan, SelectContainer } from "./MainHome.style";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 function SelectOptionPlan() {
   const [selectedCountry, setSelectedCountry] = useState("");
@@ -16,6 +17,10 @@ function SelectOptionPlan() {
     setClicked
   );
 
+  const { localData } = useLocalStorage("user");
+
+  console.log("localData", localData);
+
   const handleDropdownChangeCountry = (e) => {
     setSelectedCountry(e.target.value);
 
@@ -29,35 +34,23 @@ function SelectOptionPlan() {
 
   return (
     <>
-      <SelectContainer loc="SelectContainer">
+      <SelectContainer>
         <form onSubmit={(e) => handleSubmit(e)}>
           <SelectPlan
-            loc="SelectPlan"
             value={selectedCountry}
             onChange={handleDropdownChangeCountry}
           >
-            <Option loc="Option" value="">
-              Pick a country
-            </Option>
-            <Option loc="Option" value="italy">
-              Italy
-            </Option>
-            <Option loc="Option" value="france">
-              France
-            </Option>
-            <Option loc="Option" value="romania">
-              Romania
-            </Option>
-            <Option loc="Option" value="spain">
-              Spain
-            </Option>
+            <Option value="">Pick a country</Option>
+            <Option value="italy">Italy</Option>
+            <Option value="france">France</Option>
+            <Option value="romania">Romania</Option>
+            <Option value="spain">Spain</Option>
           </SelectPlan>
 
           {data && (
             <HomeBtn
-              loc="HomeBtn"
               type="submit"
-              to={`/city-region/${selectedCountry}`}
+              to={`/city-region/${selectedCountry}/${localData}`}
             >
               Let's Begin To Travel!
             </HomeBtn>

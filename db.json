@@ -1,11 +1,19 @@
 {
-  "users": [
+  "Feedback": [
     {
       "Name": "",
       "SurName": "",
       "Mobile": "",
       "Email": "",
       "Textarea": "",
+      "id": 0
+    }
+  ],
+
+  "Users": [
+    {
+      "Email": "",
+      "Choices": [],
       "id": 0
     }
   ],
@@ -191,14 +199,14 @@
       },
       "buget": {
         "lowBuget": {
-          "hotelone": "Hotel Mirti: address: Via Dei Platani 101, 00172 Roma, web: https://hotelmirti.it/en/hotel-rome-mirti-square/ ",
-          "hoteltwo": "Hotel Il Papavero: address: Via Castelfidardo 50, Gara Termini, 00185 Roma, web:  https://www.hotelilpapavero.com/",
-          "hotelthree": "Hotel Fiorenza : address: Via Dei Mille 64, Gara Termini, 00185 Roma, web: https://www.hotelfiorenzarome.com/"
+          "hotelone": "Hotel Mirti:  web: https://hotelmirti.it/en/hotel-rome-mirti-square/ ",
+          "hoteltwo": "Hotel Il Papavero:  web:  https://www.hotelilpapavero.com/",
+          "hotelthree": "Hotel Fiorenza :  web: https://www.hotelfiorenzarome.com/"
         },
         "mediumBuget": {
-          "hotelone": "Roma 2B: address: Via Sallustiana 1/A, 00187 Roma, web: https://www.roma2b.it/en/",
-          "hoteltwo": "LH Hotel Andreotti: address: Via Castelfidardo 55, Gara Termini, 00185 Roma, web: https://andreotti.italyromehotels.net/en/#main",
-          "hotelthree": "Hotel d'Este: address: Via Carlo Alberto 4/B, Gara Termini, 00185 Roma, web: https://www.hoteldesterome.it/en/"
+          "hotelone": "Roma 2B:  web: https://www.roma2b.it/en/",
+          "hoteltwo": "LH Hotel Andreotti:  web: https://andreotti.italyromehotels.net/en/#main",
+          "hotelthree": "Hotel d'Este: web: https://www.hoteldesterome.it/en/"
         },
         "highBuget": {
           "hotelone": "Hotel Caravita: web: https://www.hotelcaravita.it/en/",
@@ -285,14 +293,14 @@
       },
       "buget": {
         "lowBuget": {
-          "hotelone": "Hotel Mirti: address: Via Dei Platani 101, 00172 Roma, web: https://hotelmirti.it/en/hotel-rome-mirti-square/ ",
-          "hoteltwo": "Hotel Il Papavero: address: Via Castelfidardo 50, Gara Termini, 00185 Roma, web:  https://www.hotelilpapavero.com/",
-          "hotelthree": "Hotel Fiorenza : address: Via Dei Mille 64, Gara Termini, 00185 Roma, web: https://www.hotelfiorenzarome.com/"
+          "hotelone": "Hotel Mirti:  web: https://hotelmirti.it/en/hotel-rome-mirti-square/ ",
+          "hoteltwo": "Hotel Il Papavero: web:  https://www.hotelilpapavero.com/",
+          "hotelthree": "Hotel Fiorenza :  web: https://www.hotelfiorenzarome.com/"
         },
         "mediumBuget": {
-          "hotelone": "Roma 2B: address: Via Sallustiana 1/A, 00187 Roma, web: https://www.roma2b.it/en/",
-          "hoteltwo": "LH Hotel Andreotti: address: Via Castelfidardo 55, Gara Termini, 00185 Roma, web: https://andreotti.italyromehotels.net/en/#main",
-          "hotelthree": "Hotel d'Este: address: Via Carlo Alberto 4/B, Gara Termini, 00185 Roma, web: https://www.hoteldesterome.it/en/"
+          "hotelone": "Roma 2B:  web: https://www.roma2b.it/en/",
+          "hoteltwo": "LH Hotel Andreotti:  web: https://andreotti.italyromehotels.net/en/#main",
+          "hotelthree": "Hotel d'Este:  web: https://www.hoteldesterome.it/en/"
         },
         "highBuget": {
           "hotelone": "Hotel Caravita: web: https://www.hotelcaravita.it/en/",
@@ -606,11 +614,10 @@
     },
     {
       "city": "Sighisoara",
-      "reg": "Transylvania",
       "country": "Romania",
-      "image": "https://img.freepik.com/free-photo/aerial-drone-view-historic-centre-sighisoara-romania-old-buildings-holy-trinity-church_1268-19367.jpg?t=st=1716716105~exp=1716719705~hmac=6c6a7877e2d0b8dffebec9767bae6f83c61633947c5aabf616c272fba81b83ee&w=1380",
-      "description": "One of the best-preserved medieval towns in Europe, Sighisoara is a UNESCO World Heritage site. The city's charming old town features colorful buildings, narrow streets, and the iconic Clock Tower. Sighisoara is also famous as the birthplace of Vlad the Impaler, the historical figure who inspired the Dracula legend. Its medieval festival and historical ambiance attract many tourists.",
-      "category": ["aerliber", "citybreak", "relaxare"],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqcvWJ5zpM74FbKETpJWh8nM-tKa50B6Xjbg&s",
+      "description": "Sighisoara is included in many of our tours in Transylvania.Visit Sighisoara if you wish to step back in time to the medieval centuries when the German colonists settled Transylvania. With its dazzling well-preserved architecture and fortifications, Sighisoara is one of the most beautiful and authentic small medieval towns in Europe. It’s also a favorite vacation destination in Transylvania.Its Upper Town is part of the UNESCO World Heritage Sites for its ‘outstanding testimony to the culture of the Transylvanian Saxons’.",
+      "category": "",
       "period": {
         "threedays": {
           "dayone": "Visit: Climb up Turnul cu Ceas and see an aerial view of Sighişoara ",
@@ -655,11 +662,10 @@
     },
     {
       "city": "Constanta",
-      "reg": "Dobrogea",
       "country": "Romania",
-      "image": "https://images.unsplash.com/photo-1629826958301-2d6c17de6874?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "Constanța, Romania's oldest continuously inhabited city, is a vibrant Black Sea port offering beautiful beaches, historic landmarks like the stunning Art Nouveau Constanța Casino, and rich cultural heritage. Key attractions include the Roman Mosaic Edifice, the Genoese Lighthouse, and the National History and Archaeology Museum. It’s an ideal destination for both seaside relaxation and historical exploration.",
-      "category": ["plaja", "relaxare", "citybreak"],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkiKsL-cJTBMkGsE0VtII5MQ2Dseq-6AXQnA&s",
+      "description": "Constanta lies on the western coast of the Black Sea,185 miles north of Istanbul and Bosphorus Strait (Turkey) and 100 miles north of port of Varna (Bulgaria).Romania's oldest continuously inhabited city and the country's largest sea port,Constanta traces its history some 2,500 years. Originally called Tomis, legend has it that Constanta was visited by Jason and the Argonauts after finding the Golden Fleece.",
+      "category": "",
       "period": {
         "threedays": {
           "dayone": "Visit: Roman mosaic, Casa cu Lei, National History and Archeology Museum ",
@@ -704,11 +710,10 @@
     },
     {
       "city": "Cluj-Napoca",
-      "reg": "Transylvania",
-      "country": "Romania",
-      "image": "https://img.freepik.com/free-photo/aerial-drone-view-saint-michael-church-cluj-romania_1268-20559.jpg?t=st=1716715828~exp=1716719428~hmac=375ac07b58b592ca2c4c44d87871ee653a444ab8844f90b268f2fd0a6b01577d&w=1380",
-      "description": "As the unofficial capital of Transylvania, Cluj-Napoca is a vibrant university city with a rich history and lively arts scene. Highlights include the Gothic-style St. Michael's Church, the picturesque Central Park, and the National Museum of Transylvanian History. Cluj is known for its youthful energy, thanks to its large student population, and hosts numerous cultural festivals.",
-      "category": ["aerliber", "citybreak", "relaxare"],
+      "country": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJlvnrO_r0oMjacTTh4Vh8VRmopahF6xI5ew&s",
+      "description": "Cluj-Napoca (Klausenburg în German, Kolozsvár in Hungarian) is one of the largest cities in Romania. Located in the northwestern part of Transylvania, with an impressive history of over 2000 years, it has developed into a multi-cultural city with a metropolitan area that includes a population of over 500.000 inhabitants and an active business environment oriented towards innovation and development.",
+      "category": "",
       "period": {
         "threedays": {
           "dayone": "Visit: Alexandru Borza Botanical Garden, Podul Elisabeta, Cetatuia Hill",
@@ -752,12 +757,10 @@
       "id": 4
     },
     {
-      "city": "Brasov",
-      "reg": "Transylvania",
+      "region": "Transylvania",
       "country": "Romania",
-      "image": "https://img.freepik.com/free-photo/aerial-drone-view-council-square-brasov-romania_1268-20593.jpg?t=st=1716714491~exp=1716718091~hmac=33ea4c5124a5e8d380fe37fca7e687a6a89704974b4048c377be2161978c4caa&w=1060",
-      "description": "Brașov is a charming city located in central Romania, nestled in the Carpathian Mountains. Known for its medieval architecture and rich history, Brașov is a major cultural and economic hub in the region. The city's centerpiece is the Black Church, a Gothic-style monument dating back to the 14th century. Brașov's old town is lined with colorful baroque buildings, narrow cobblestone streets, and vibrant squares such as Piața Sfatului. The nearby Tampa Mountain offers panoramic views and hiking opportunities, while the fortified walls and towers, like the White Tower and Black Tower, reflect the city's historical significance as a fortress town. Brașov is also a gateway to the famous Bran Castle, often associated with the Dracula legend. The city's mix of historical charm, natural beauty, and modern amenities make it a popular destination for tourists.",
-      "category": ["aerliber", "citybreak", "relaxare"],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHAhWt1Lj71cb06CHiALfVUuzfy4m7-DcteA&s",
+      "description": "Transylvania (Romanian: Transilvania or Ardeal; Hungarian: Erdély; German: Siebenbürgen or Transsilvanien, historically Überwald, also Siweberjen in the Transylvanian Saxon dialect) is a historical and cultural region in Central Europe, encompassing central Romania.",
       "period": {
         "threedays": {
           "dayone": "Visit: Sibiu",
@@ -799,73 +802,6 @@
         }
       },
       "id": 5
-    },
-    {
-      "city": "Sibiu",
-      "reg": "Transilvania",
-      "country": "Romania",
-      "image": "https://img.freepik.com/free-photo/aerial-drone-view-historic-centre-sibiu-evening-romania_1268-20828.jpg?t=st=1716716228~exp=1716719828~hmac=5182022db7ccec4e61b673186d78227323570e9293c8e5dcf4ccf0a419e0d631&w=1380",
-      "description": "Known for its well-preserved medieval architecture, Sibiu was designated a European Capital of Culture in 2007. The city features beautiful squares such as the Grand Square (Piața Mare) and the Small Square (Piața Mică), as well as the iconic Council Tower and the Brukenthal National Museum. Sibiu's charming ambiance and cultural significance draw many visitors.",
-      "category": ["aerliber", "citybreak", "relaxare"],
-      "period": {
-        "threedays": {
-          "dayone": "Visit: Sibiu",
-          "daytwo": "Visit: White citadel in Romania and Corvin castle",
-          "daythree": "Visit: Biertan fortified church & Sighisoara citadel"
-        },
-        "fivedays": {
-          "dayone": "Visit: Sibiu",
-          "daytwo": "Visit: White citadel in Romania and Corvin castle",
-          "daythree": "Visit: Biertan fortified church & Sighisoara citadel",
-          "dayfour": "Visit: Fagaras citadel and Brasov",
-          "dayfive": "Visit: Bran Castle and Rasnov citadel"
-        },
-        "sevendays": {
-          "dayone": "Visit: Sibiu",
-          "daytwo": "Visit: White citadel in Romania and Corvin castle",
-          "daythree": "Visit: Biertan fortified church & Sighisoara citadel",
-          "dayfour": "Visit: Fagaras citadel and Brasov",
-          "dayfive": "Visit: Bran Castle and Rasnov citadel",
-          "daysix": "Visit: Cluj-Napoca",
-          "dayseven": "Visit: Peles Castle"
-        }
-      },
-      "buget": {
-        "lowBuget": {
-          "hotelone": "Vila Coca: web: https://vila-coca-predeal.hotelmix.ro/",
-          "hoteltwo": "Pensiunea Montan Busteni: web: https://pensiunea-montan-busteni-guest-house.hotelmix.ro/",
-          "hotelthree": "HOSTEL CPPI Nord: web: https://cppibusteni.weebly.com/cazare.html"
-        },
-        "mediumBuget": {
-          "hotelone": "Palatul Brukenthal Avrig: web: https://palatulbrukenthalavrig.ro/en/home-english/",
-          "hoteltwo": "Resort EuroPark Fundata: web: https://europark.ro/",
-          "hotelthree": "Casa Domeniile Vinului: web: https://www.vindeciumbrud.ro/turism/"
-        },
-        "highBuget": {
-          "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
-          "hoteltwo": "Sungarden Golf & Spa Resort: web: https://sungardenresort.ro/",
-          "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
-        }
-      },
-      "id": 6
-    },
-    {
-      "city": "Mamaia",
-      "reg": "Dobrogea",
-      "country": "Romania",
-      "image": "https://images.unsplash.com/photo-1669059166575-f1ea19483c85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "Mamaia, located on Romania's Black Sea coast near Constanța, is a premier summer resort known for its long, sandy beaches and vibrant nightlife. It features luxury hotels, beach clubs, and water parks, making it ideal for both relaxation and entertainment. The resort's scenic promenade and panoramic gondola rides enhance its appeal as a top tourist destination.",
-      "category": ["plaja", "relaxare"],
-      "id": 7
-    },
-    {
-      "city": "Bucharest",
-      "reg": "Muntenia",
-      "country": "Romania",
-      "image": "https://img.freepik.com/free-photo/aerial-drone-view-bucharest-romania-city-downtown-with-palace-parliament_1268-23448.jpg?t=st=1716716563~exp=1716720163~hmac=0b11949910fa572495e163c5aef7a395f5621e2900ec6523d4b412b0c79310f7&w=1380",
-      "description": "The capital and largest city of Romania, Bucharest is known for its wide boulevards, historic architecture, and vibrant cultural scene. Key attractions include the massive Palace of the Parliament, the historic Old Town (Lipscani), and numerous museums and parks. The city combines a mix of traditional Romanian charm with modern urban energy.",
-      "category": ["aerliber", "citybreak", "relaxare"],
-      "id": 8
     },
     {
       "region": "Danube Delta",
@@ -912,7 +848,7 @@
           "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
         }
       },
-      "id": 9
+      "id": 6
     },
     {
       "region": "Bucovina",
@@ -959,7 +895,7 @@
           "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
         }
       },
-      "id": 9
+      "id": 7
     }
   ],
   "Spain": [
@@ -1259,7 +1195,7 @@
     {
       "name": "Catherine's Gate (Poarta Ecaterinei)",
       "city": "Brasov",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Poarta_Ecaterinei_Brasov.jpg/647px-Poarta_Ecaterinei_Brasov.jpg?20160522170145",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Poarta_Ecaterinei_Brasov.jpg/647px-Poarta_Ecaterinei_Brasov.jpg?20160522170145",
       "description": "Catherine's Gate is the only original city gate that has survived from medieval times. Built in 1559, it features a unique design with a fairy-tale look, including four small corner turrets symbolizing the city’s right to capital punishment. The gate is a beautiful piece of Brașov's history and a must-see for visitors.",
       "popularity": 4,
       "id": 0
@@ -1267,7 +1203,7 @@
     {
       "name": "Black Church (Biserica Neagră)",
       "city": "Brasov",
-      "image": "https://images.unsplash.com/photo-1629582826428-078d3bdbf5cf?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "photo": "https://images.unsplash.com/photo-1629582826428-078d3bdbf5cf?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "description": "The Black Church is a Gothic-style cathedral and one of the most iconic landmarks in Brașov. It is known for its impressive architecture, stunning interior, and a large collection of Anatolian carpets. The church's name comes from the darkened walls caused by a fire in the 17th century.",
       "popularity": 5,
       "id": 1
@@ -1275,7 +1211,7 @@
     {
       "name": "Council Square (Piața Sfatului)",
       "city": "Brasov",
-      "image": "https://images.unsplash.com/photo-1662553423182-7ab65b441fa0?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "photo": "https://images.unsplash.com/photo-1662553423182-7ab65b441fa0?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "description": "This picturesque square is the heart of Brașov's old town. Surrounded by colorful baroque buildings, it features the historic Council House (Casa Sfatului) and is a vibrant hub for cafes, shops, and events. It's a perfect place for a leisurely stroll and soaking in the local atmosphere.",
       "popularity": 5,
       "id": 2
@@ -1283,7 +1219,7 @@
     {
       "name": "Mount Tampa",
       "city": "Brasov",
-      "image": "https://images.unsplash.com/photo-1558253347-fb1128610003?q=80&w=3634&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Poarta_Ecaterinei_Brasov.jpg/647px-Poarta_Ecaterinei_Brasov.jpg?20160522170145",
       "description": "Offering stunning panoramic views of Brașov and the surrounding area, Mount Tampa is accessible via hiking trails or a cable car. At the summit, visitors can enjoy the scenic overlook and spot the Hollywood-style `Brașov` sign. It’s a great spot for nature lovers and photographers.",
       "popularity": 4.5,
       "id": 3
