@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { ItineraryContext } from "../../global/itinerary/context";
 import CityCard from "../CityCard/CityCard";
+import { ButtonInfo, InfoSection, InfoUser } from "../Explore/Explore.style";
 import { SectionItineraryData } from "./Itinerary.style";
-import { InfoUser, ButtonInfo, InfoSection } from "../Explore/Explore.style";
 
 function Itinerary() {
   const { stateGlobalItinerary } = useContext(ItineraryContext);
@@ -16,7 +16,7 @@ function Itinerary() {
       <SectionItineraryData loc="SectionItineraryData">
         {itineraryValueArray.length === 0 ? (
           <InfoSection loc="InfoSection">
-            <InfoUser>
+            <InfoUser loc="InfoUser">
               You didn't choose any itinerary yet! Go to "I Want To Explore
               Offers" and select a destination that you like to know more about!
             </InfoUser>
@@ -27,7 +27,7 @@ function Itinerary() {
         ) : null}
         {stateGlobalItinerary &&
           itineraryValueArray?.map((element, index) => (
-            <CityCard key={index} {...element} />
+            <CityCard key={index} index={index} {...element} />
           ))}
       </SectionItineraryData>
     </>

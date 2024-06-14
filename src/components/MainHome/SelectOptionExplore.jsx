@@ -38,6 +38,7 @@ function SelectOptionExplore() {
     console.log("selectedCountry", e.target.value);
     setData(null);
     setClicked(true);
+    setSelectedCity(false);
   };
 
   const handleDropdownChangeCity = (e) => {
@@ -49,8 +50,6 @@ function SelectOptionExplore() {
     console.log("in submit");
     e.preventDefault();
     setClicked(true);
-    //Alta modalitate de redirect daca nu merge cu to={`/explore/${selectedCountry}${selectedCity}`} ca si atribut in HomeBtn (buton tb sa fie de tip styled(Link))
-    // navigate(`/explore/${selectedCountry}${selectedCity}`);
   };
 
   return (
@@ -65,7 +64,7 @@ function SelectOptionExplore() {
               loc="Select"
             >
               <Option loc="Option" value="">
-                --Pick a country--
+                Pick a country
               </Option>
               <Option loc="Option" value="France">
                 France
@@ -81,26 +80,28 @@ function SelectOptionExplore() {
               </Option>
             </Select>
           </LabelHead>
-          <LabelHead loc="LabelHead">
-            Select city:
-            <Select
-              value={selectedCity}
-              onChange={handleDropdownChangeCity}
-              loc="Select"
-            >
-              <Option loc="Option" value="">
-                --Pick a city--
-              </Option>
-              {data &&
-                data.map((item, index) => {
-                  return (
-                    item.city && (
-                      <GetOptionCities key={index} value={item.city} />
-                    )
-                  );
-                })}
-            </Select>
-          </LabelHead>
+          {data && (
+            <LabelHead loc="LabelHead">
+              Select city:
+              <Select
+                value={selectedCity}
+                onChange={handleDropdownChangeCity}
+                loc="Select"
+              >
+                <Option loc="Option" value="">
+                  Pick a city
+                </Option>
+                {data &&
+                  data.map((item, index) => {
+                    return (
+                      item.city && (
+                        <GetOptionCities key={index} value={item.city} />
+                      )
+                    );
+                  })}
+              </Select>
+            </LabelHead>
+          )}
           {selectedCountry && selectedCity && (
             <HomeBtn
               loc="HomeBtn"
@@ -118,11 +119,11 @@ function SelectOptionExplore() {
       )}
       {error && (
         <Error loc="Error">
-          Error: {error.message} Our team is called from the coffe break and
+          Error: {error.message} Our team is called from the coffee break and
           will take care of the problem!
         </Error>
       )}
-      {data && console.log(data)}
+      {data && console.log("data", data)}
     </>
   );
 }

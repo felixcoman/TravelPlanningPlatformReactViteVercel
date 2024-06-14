@@ -105,13 +105,8 @@ export const SelectPlan = styled.select`
   margin: 10px;
   text-align: center;
   font-weight: 700;
-  font-size: 18px;
-  transition: 0.3s ease;
-  &:focus {
-    background: ${DARK_BLUE};
-    color: ${WHITE_NEUTRAL};
-    border: solid 2px white;
-  }
+  font-size: ${TEXT_SIZE_MEDIUM};
+
   @media screen and (max-width: 820px) {
     margin-top: 20px;
     width: 90%;

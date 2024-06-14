@@ -17,7 +17,7 @@ export function itineraryReducer(state, action) {
     case "INTINERARY_MINUS": {
       let newState = {
         ...state,
-        choiceValue: state.choiceValue.filter(
+        itineraryValue: state.itineraryValue.filter(
           (e, index) => index !== action.payload
         ),
       };
