@@ -21,6 +21,12 @@ body {
   background-color: var(--dark-blue) !important;
 }
 
+.badge {
+  position: absolute;
+  right: 205px;
+  top: 8px;
+}
+
 .card-img {
   object-fit: contain;
 }

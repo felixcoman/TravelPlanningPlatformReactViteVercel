@@ -1,30 +1,28 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
+import { itineraryPlus } from "../../global/itinerary/actions";
+import { ItineraryContext } from "../../global/itinerary/context";
 import useFetchData from "../../hooks/useFetchData";
 import DestinationCard from "../DestinationCard/DestinationCard";
 import { Error, Loading } from "../MainHome/MainHome.style";
 import {
   ButtonCity,
+  ButtonInfo,
   CityDescription,
   ContainerDescriptionBottom,
   ContainerDescriptionTop,
   ContainerTop,
   CountrySubtitle,
   ImageCity,
+  InfoSection,
+  InfoUser,
   SectionCityButtons,
   SectionCityData,
+  SectionInfoButtons,
   SectionLandmarkData,
   Subtitle,
   Title,
-  InfoUser,
-  ButtonInfo,
-  InfoSection,
-  SectionInfoButtons,
 } from "./Explore.style";
-
-import { useContext } from "react";
-import { itineraryPlus } from "../../global/itinerary/actions";
-import { ItineraryContext } from "../../global/itinerary/context";
 
 const Explore = () => {
   const { stateGlobalItinerary, dispatchItinerary } =
@@ -38,7 +36,6 @@ const Explore = () => {
   );
 
   const itineraryValueArray = stateGlobalItinerary.itineraryValue || [];
-
   console.log("itineraryValueArray", itineraryValueArray);
 
   const { country, city } = useParams();
@@ -69,7 +66,7 @@ const Explore = () => {
 
   const handleAddItinerary = (country, city, event) => {
     // console.log("itineraryValueArray", itineraryValueArray);
-    console.log("HANDLE ADD INTINERARY");
+    console.log("HANDLE ADD ITINERARY");
 
     const addObject = { country, city };
 
@@ -101,7 +98,7 @@ const Explore = () => {
         )}
         {errorCity && (
           <Error loc="Error">
-            Error: {errorCity.message} Our team is called from the coffe break
+            Error: {errorCity.message} Our team is called from the coffee break
             and will take care of the problem!
           </Error>
         )}
@@ -134,7 +131,7 @@ const Explore = () => {
         )}
         {errorDestination && (
           <Error loc="Error">
-            Error: {errorCity.message} Our team is called from the coffe break
+            Error: {errorCity.message} Our team is called from the coffee break
             and will take care of the problem!
           </Error>
         )}

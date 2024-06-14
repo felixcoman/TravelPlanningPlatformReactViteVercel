@@ -66,6 +66,7 @@ export const DropdownContainer = styled.div`
 `;
 
 export const LinkContainerDesktop = styled.div`
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: right;

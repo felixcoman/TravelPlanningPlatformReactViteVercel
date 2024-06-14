@@ -4,7 +4,7 @@ function NavLinks({ href, title }) {
   return (
     <>
       <LinkNavStyle loc="LinkNavStyle" to={href}>
-        {title ? title : "Link"}{" "}
+        {title ? title : "Link"}
       </LinkNavStyle>
     </>
   );

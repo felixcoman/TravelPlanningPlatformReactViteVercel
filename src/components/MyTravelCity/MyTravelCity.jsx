@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import Spinner from "react-bootstrap/Spinner";
 import { useParams } from "react-router-dom";
-import { addChoice } from "../../Store/actions";
-import { ChoiceContext } from "../../Store/context";
+import { addChoice } from "../../global/choice/actions";
+import { ChoiceContext } from "../../global/choice/context";
 import useFetchData from "../../hooks/useFetchData";
 import useFetchUsers from "../../hooks/useFetchUsers";
 import {
