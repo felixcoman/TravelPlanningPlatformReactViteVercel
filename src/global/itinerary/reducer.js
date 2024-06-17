@@ -1,6 +1,7 @@
 export const initialStateItinerary = {
   defaultValue: "Itinerary empty",
   itineraryValue: [],
+  itineraryLandmarkValue: [],
 };
 export function itineraryReducer(state, action) {
   console.log("state", state, "action", action);
@@ -14,10 +15,34 @@ export function itineraryReducer(state, action) {
         itineraryValue: [action.payload, ...state.itineraryValue],
       };
     }
+    case "INTINERARY_LANDMARK_PLUS": {
+      console.log("itinerary landmark plus", {
+        itineraryLandmarkValue: [
+          action.payload,
+          ...state.itineraryLandmarkValue,
+        ],
+      });
+      return {
+        ...state,
+        itineraryLandmarkValue: [
+          action.payload,
+          ...state.itineraryLandmarkValue,
+        ],
+      };
+    }
     case "INTINERARY_MINUS": {
       let newState = {
         ...state,
         itineraryValue: state.itineraryValue.filter(
+          (e, index) => index !== action.payload
+        ),
+      };
+      return newState;
+    }
+    case "INTINERARY_LANDMARK_MINUS": {
+      let newState = {
+        ...state,
+        itineraryLandmarkValue: state.itineraryLandmarkValue.filter(
           (e, index) => index !== action.payload
         ),
       };

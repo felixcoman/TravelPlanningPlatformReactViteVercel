@@ -1,7 +1,5 @@
-import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useFetchUsers from "../../hooks/useFetchUsers";
-import useLocalStorage from "../../hooks/useLocalStorage";
 import { ContactContainer } from "../Contact/Contact.style";
 
 function Feedback() {

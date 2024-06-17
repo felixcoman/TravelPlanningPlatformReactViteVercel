@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Card } from "react-bootstrap";
-import { itineraryPlus } from "../../global/itinerary/actions";
+import { itineraryLandmarkPlus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
 import { ButtonLandmark } from "../DestinationCard/DestinationCard.style";
 import {
@@ -44,7 +44,7 @@ function DestionationCard({ name, image, description, popularity }) {
     } else {
       console.log("can be added");
       setUnique(true);
-      dispatchItinerary(itineraryPlus({ name }));
+      dispatchItinerary(itineraryLandmarkPlus({ name }));
     }
   };
 
