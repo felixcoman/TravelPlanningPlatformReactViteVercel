@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import AccountForm from "./AccountForm";
@@ -11,6 +11,33 @@ import {
 } from "./Account.style";
 
 const Account = () => {
+  const [users, setUsers] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`http://localhost:3001/users`);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const userData = await response.json();
+        console.log("userData", userData);
+        setUsers(userData);
+        setLoading(false);
+      } catch (error) {
+        setError("Eroare 808");
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+    return users;
+  }, []);
+
+  console.log("users", users, "loading", loading, "error", error);
+
   const navigate = useNavigate();
 
   const [inputObj, setInputObj] = useState({
@@ -26,6 +53,20 @@ const Account = () => {
   const handleChange = (e, name) => {
     setInputObj({ ...inputObj, [name]: e.target.value });
     handleError(e.target.value, name);
+
+    const foundUser = users.find((element) => {
+      element.Email === e.target.value;
+      console.log(
+        "element.Email",
+        element.Email,
+        "e.target.value",
+        e.target.value
+      );
+    });
+
+    console.log("!foundUser", !foundUser);
+    console.log("type of foundUser", typeof foundUser);
+    return foundUser;
   };
 
   const handleSubmit = async () => {
@@ -90,7 +131,7 @@ const Account = () => {
         />
       ))}
 
-      {isValid && (
+      {isValid && foundUser && (
         <ContactButton
           onClick={() => {
             addNewId();
