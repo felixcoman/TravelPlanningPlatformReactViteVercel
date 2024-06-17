@@ -21,19 +21,19 @@ function DestionationCard({ name, image, description, popularity }) {
     dispatchItinerary
   );
 
-  const itineraryValueArray = stateGlobalItinerary.itineraryValue || [];
-  console.log("itineraryValueArray", itineraryValueArray);
+  const itineraryLandmarkValueArray =
+    stateGlobalItinerary.itineraryLandmarkValue || [];
+  console.log("itineraryValueArray", itineraryLandmarkValueArray);
 
   const [unique, setUnique] = useState(true);
 
   const handleAddItineraryLandmark = (name, event) => {
-    // console.log("itineraryValueArray", itineraryValueArray);
     console.log("HANDLE ADD ITINERARY LANDMARK");
 
     const addObject = { name };
     console.log("ADD OBJECT", addObject);
 
-    const isDuplicate = itineraryValueArray.some(
+    const isDuplicate = itineraryLandmarkValueArray.some(
       (element) => element.name === addObject.name
     );
 
