@@ -1,31 +1,32 @@
 import { useContext, useState } from "react";
 import { Button, Card, Modal } from "react-bootstrap";
-import { itineraryMinus } from "../../global/itinerary/actions";
+import { itineraryLandmarkMinus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
 import useFetchData from "../../hooks/useFetchData";
 import { DeleteButton } from "../CityCard/CityCard.style";
 import { CardImgContainer } from "../DestinationCard/DestinationCard.style";
 
-function CityCard({ country, city, index }) {
-  console.log("country", country, "city", city, "index", index);
+function LandmarkCard({ name, index }) {
+  console.log("name", name, "index", index);
 
   const { stateGlobalItinerary, dispatchItinerary } =
     useContext(ItineraryContext);
 
-  const itineraryValueArray = stateGlobalItinerary.itineraryValue;
-  console.log("itineraryValueArray", itineraryValueArray);
+  const itineraryLandmarkValueArray =
+    stateGlobalItinerary.itineraryLandmarkValue;
+  console.log("itineraryLandmarkValueArray", itineraryLandmarkValueArray);
 
   const [clicked, setClicked] = useState(true);
   const [show, setShow] = useState(0);
 
-  const url = `http://localhost:3001/${country}?city=${city}`;
+  const url = `http://localhost:3001/destinations?name=${name}`;
   console.log("url", url);
 
   const { data, error, loading } = useFetchData(url, clicked, setClicked);
   console.log("data", "error", "loading", data, error, loading);
 
   const handleDelete = (index) => {
-    dispatchItinerary(itineraryMinus(index));
+    dispatchItinerary(itineraryLandmarkMinus(index));
     setShow(false);
   };
 
@@ -40,7 +41,7 @@ function CityCard({ country, city, index }) {
         </Modal.Header>
 
         <Modal.Body>
-          <p>Are you sure you want to DELETE "{city}" ?</p>
+          <p>Are you sure you want to DELETE "{name}" ?</p>
         </Modal.Body>
 
         <Modal.Footer>
@@ -78,4 +79,4 @@ function CityCard({ country, city, index }) {
     </>
   );
 }
-export default CityCard;
+export default LandmarkCard;
