@@ -11,9 +11,10 @@ import {
 } from "./Account.style";
 
 const Account = () => {
-  const [users, setUsers] = useState(null);
+  const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [isFound, setIsFound] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,7 +34,6 @@ const Account = () => {
     };
 
     fetchData();
-    return users;
   }, []);
 
   console.log("users", users, "loading", loading, "error", error);
@@ -51,22 +51,16 @@ const Account = () => {
   const [isValid, setIsValid] = useState(true);
 
   const handleChange = (e, name) => {
-    setInputObj({ ...inputObj, [name]: e.target.value });
-    handleError(e.target.value, name);
+    const value = e.target.value;
+    setInputObj({ ...inputObj, [name]: value });
+    handleError(value, name);
 
-    const foundUser = users.find((element) => {
-      element.Email === e.target.value;
-      console.log(
-        "element.Email",
-        element.Email,
-        "e.target.value",
-        e.target.value
-      );
-    });
-
-    console.log("!foundUser", !foundUser);
-    console.log("type of foundUser", typeof foundUser);
-    return foundUser;
+    if (users && users.length > 0) {
+      const foundUser = users.find((element) => element.Email === value);
+      setIsFound(foundUser !== undefined);
+    } else {
+      setIsFound(false);
+    }
   };
 
   const handleSubmit = async () => {
@@ -130,8 +124,7 @@ const Account = () => {
           error={errorInput[el]}
         />
       ))}
-
-      {isValid && foundUser && (
+      {isValid && !isFound && (
         <ContactButton
           onClick={() => {
             addNewId();
@@ -141,6 +134,7 @@ const Account = () => {
         </ContactButton>
       )}
       {!isValid && <ErrorP>Not valid</ErrorP>}
+      {isFound && <ErrorP>Email already exists</ErrorP>}
     </ContactContainer>
   );
 };

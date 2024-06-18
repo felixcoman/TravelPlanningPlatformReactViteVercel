@@ -1,13 +1,13 @@
 import { ContactInput, ErrorP, ContactLabel } from "./Account.style";
 
-const ContactForm = ({ name, handleChange, type, value, error }) => {
+const AccountForm = ({ name, handleChange, type, value, error }) => {
   return (
     <>
       <ContactLabel>{name} :</ContactLabel>
       <ContactInput
         placeholder={name}
         defaultValue={value}
-        onBlur={(e) => handleChange(e, name)}
+        onChange={(e) => handleChange(e, name)}
         type={type}
       />
       {error && <ErrorP>{error}</ErrorP>}
@@ -15,4 +15,4 @@ const ContactForm = ({ name, handleChange, type, value, error }) => {
   );
 };
 
-export default ContactForm;
+export default AccountForm;
