@@ -21,7 +21,13 @@ body {
   background-color: var(--dark-blue) !important;
 }
 
-.badge {
+.itinerary-badge {
+  position: absolute;
+  right: 342px;
+  top: 8px;
+}
+
+.choice-badge {
   position: absolute;
   right: 205px;
   top: 8px;
@@ -39,4 +45,9 @@ body {
 
 .card-text {
   text-align: justify;
+}
+
+.my-toast {
+  position: absolute;
+  bottom: -1144px;
 }

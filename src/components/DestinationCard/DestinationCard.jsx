@@ -9,6 +9,7 @@ import {
   InfoUser,
   SectionInfoButtons,
 } from "../Explore/Explore.style";
+import useToast from "../../hooks/useToast";
 
 function DestionationCard({ name, image, description, popularity }) {
   const { stateGlobalItinerary, dispatchItinerary } =
@@ -26,6 +27,8 @@ function DestionationCard({ name, image, description, popularity }) {
   console.log("itineraryValueArray", itineraryLandmarkValueArray);
 
   const [unique, setUnique] = useState(true);
+  const [showA, setShowA] = useState(true);
+  const toggleShowA = () => setShowA(!showA);
 
   const handleAddItineraryLandmark = (name, event) => {
     console.log("HANDLE ADD ITINERARY LANDMARK");
@@ -40,6 +43,7 @@ function DestionationCard({ name, image, description, popularity }) {
     if (isDuplicate) {
       console.log("cannot be added");
       setUnique(false);
+      setShowA(true);
       event.preventDefault();
     } else {
       console.log("can be added");
@@ -60,13 +64,13 @@ function DestionationCard({ name, image, description, popularity }) {
             onClick={(event) => {
               handleAddItineraryLandmark(name, event);
             }}
-            to={`/itinerary`}
+            // to={`/itinerary`}
           >
             Save landmark to my itinerary!
           </ButtonLandmark>
         </Card.Body>
       </Card>
-      {!unique && (
+      {/* {!unique && (
         <InfoSection loc="InfoSection">
           <InfoUser loc="InfoUser">
             This item is already in the Itinerary!
@@ -80,7 +84,15 @@ function DestionationCard({ name, image, description, popularity }) {
             </ButtonInfo>
           </SectionInfoButtons>
         </InfoSection>
-      )}
+      )} */}
+      {!unique &&
+        useToast(
+          "Intinerary",
+          "This item is already in the Itinerary!",
+          "my-toast",
+          showA,
+          toggleShowA
+        )}
     </>
   );
 }
