@@ -2,14 +2,8 @@ import { useContext, useState } from "react";
 import { Card } from "react-bootstrap";
 import { itineraryLandmarkPlus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
-import { ButtonLandmark } from "../DestinationCard/DestinationCard.style";
-import {
-  ButtonInfo,
-  InfoSection,
-  InfoUser,
-  SectionInfoButtons,
-} from "../Explore/Explore.style";
 import useToast from "../../hooks/useToast";
+import { ButtonLandmark } from "../DestinationCard/DestinationCard.style";
 
 function DestionationCard({ name, image, description, popularity }) {
   const { stateGlobalItinerary, dispatchItinerary } =
@@ -70,21 +64,6 @@ function DestionationCard({ name, image, description, popularity }) {
           </ButtonLandmark>
         </Card.Body>
       </Card>
-      {/* {!unique && (
-        <InfoSection loc="InfoSection">
-          <InfoUser loc="InfoUser">
-            This item is already in the Itinerary!
-          </InfoUser>
-          <SectionInfoButtons loc="SectionInfoButtons">
-            <ButtonInfo loc="ButtonInfo" to={`/home`}>
-              I want to choose an other option from Home screen!
-            </ButtonInfo>
-            <ButtonInfo loc="ButtonInfo" to={`/itinerary`}>
-              Ok, go to Itinerary!
-            </ButtonInfo>
-          </SectionInfoButtons>
-        </InfoSection>
-      )} */}
       {!unique &&
         useToast(
           "Intinerary",

@@ -1,8 +1,11 @@
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import useLocalStorage from "../../hooks/useLocalStorage";
+import { Buttons, ButtonsContainer } from "../MainHome/MainHome.style";
 import AccountForm from "./AccountForm";
 
+import { addChoice } from "../../global/choice/actions";
+import { ChoiceContext } from "../../global/choice/context";
 import {
   ContactButton,
   ContactContainer,
@@ -11,10 +14,40 @@ import {
 } from "./Account.style";
 
 const Account = () => {
+  const navigate = useNavigate();
+
+  const [isVisible1, setIsVisible1] = useState(false);
+  const [isVisible2, setIsVisible2] = useState(false);
+  const buttonRef1 = useRef(null);
+  const buttonRef2 = useRef(null);
+
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-  const [isFound, setIsFound] = useState(false);
+  const [error, setError] = useState([]);
+  const [isFound, setIsFound] = useState([]);
+
+  const { stateGlobalChoice, dispatchChoice } = useContext(ChoiceContext);
+
+  const { localData, handleLocalData, resetLocalData } =
+    useLocalStorage("user");
+
+  console.log("localData", localData);
+
+  const handleGetAccount = () => {
+    setIsVisible1(!isVisible1);
+    setIsVisible2(false);
+    setError(false);
+    setIsFound(true);
+    !isVisible1 ? buttonRef1.current.focus() : buttonRef1.current.blur();
+  };
+
+  const handleNewAccount = () => {
+    setIsVisible2(!isVisible2);
+    setIsVisible1(false);
+    setError(false);
+    setIsFound(false);
+    !isVisible2 ? buttonRef2.current.focus() : buttonRef2.current.blur();
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,8 +71,6 @@ const Account = () => {
 
   console.log("users", users, "loading", loading, "error", error);
 
-  const navigate = useNavigate();
-
   const [inputObj, setInputObj] = useState({
     Email: "",
   });
@@ -51,6 +82,7 @@ const Account = () => {
   const [isValid, setIsValid] = useState(true);
 
   const handleChange = (e, name) => {
+    setError(false);
     const value = e.target.value;
     setInputObj({ ...inputObj, [name]: value });
     handleError(value, name);
@@ -78,17 +110,35 @@ const Account = () => {
     return response[0].id;
   };
 
-  const { localData, handleLocalData, resetLocalData } =
-    useLocalStorage("user");
-
-  console.log("localData", localData);
-
   const addNewId = async () => {
     resetLocalData();
     const id = await handleSubmit();
     handleLocalData("user", JSON.stringify(id));
     console.log("S-a adagat un user cu acest id in local storage", id);
     navigate(`/users/${id}`);
+  };
+
+  const getUserData = () => {
+    const userData = users.find((element) => element.Email === inputObj.Email);
+    console.log("users", users);
+    console.log("inputObj", inputObj);
+    console.log("userData", userData);
+
+    handleLocalData("user", JSON.stringify(userData.id));
+
+    if (userData.choices) {
+      // const { country, city, region, buget, period, data } = userData.choices;
+      // dispatchChoice(addChoice({ country, city, region, buget, period, data }));
+      dispatchChoice(addChoice(userData.choices));
+      console.log("userData.choices", userData.choices);
+      console.log(
+        "stateGlobalChoice.choiceValue",
+        stateGlobalChoice.choiceValue
+      );
+      console.log("stateGlobalChoice", stateGlobalChoice);
+    } else {
+      setError("No selected travel choices yet!");
+    }
   };
 
   const handleError = (value, name) => {
@@ -112,30 +162,77 @@ const Account = () => {
   };
 
   return (
-    <ContactContainer>
-      <ContactText>Enter e-mail to create account</ContactText>
-      {Object.keys(inputObj).map((el, index) => (
-        <AccountForm
-          key={index}
-          name={el}
-          type={el}
-          value={inputObj[el]}
-          handleChange={handleChange}
-          error={errorInput[el]}
-        />
-      ))}
-      {isValid && !isFound && (
-        <ContactButton
-          onClick={() => {
-            addNewId();
-          }}
+    <>
+      <ButtonsContainer loc="ButtonsContainer">
+        <Buttons
+          loc="Buttons"
+          ref={buttonRef1}
+          onClick={() => handleGetAccount()}
         >
-          Create account
-        </ContactButton>
+          Login
+        </Buttons>
+        <Buttons
+          loc="Buttons"
+          ref={buttonRef2}
+          onClick={() => handleNewAccount()}
+        >
+          Create new account
+        </Buttons>
+      </ButtonsContainer>
+      {isVisible1 && (
+        <ContactContainer>
+          <ContactText>Enter e-mail to login</ContactText>
+          {Object.keys(inputObj).map((el, index) => (
+            <AccountForm
+              key={index}
+              name={el}
+              type={el}
+              value={inputObj[el]}
+              handleChange={handleChange}
+              error={errorInput[el]}
+            />
+          ))}
+          {isValid && isFound && (
+            <ContactButton
+              onClick={() => {
+                getUserData();
+              }}
+            >
+              Login
+            </ContactButton>
+          )}
+          {isValid && isFound && error && <ErrorP>{error}</ErrorP>}
+          {!isValid && <ErrorP>Not valid</ErrorP>}
+          {!isFound && isVisible1 && <ErrorP>No such user found</ErrorP>}
+        </ContactContainer>
       )}
-      {!isValid && <ErrorP>Not valid</ErrorP>}
-      {isFound && <ErrorP>Email already exists</ErrorP>}
-    </ContactContainer>
+      {isVisible2 && (
+        <ContactContainer>
+          <ContactText>Enter e-mail to create account</ContactText>
+          {Object.keys(inputObj).map((el, index) => (
+            <AccountForm
+              key={index}
+              name={el}
+              type={el}
+              value={inputObj[el]}
+              handleChange={handleChange}
+              error={errorInput[el]}
+            />
+          ))}
+          {isValid && !isFound && (
+            <ContactButton
+              onClick={() => {
+                addNewId();
+              }}
+            >
+              Create account
+            </ContactButton>
+          )}
+          {!isValid && <ErrorP>Not valid</ErrorP>}
+          {isFound && isVisible2 && <ErrorP>Email already exists</ErrorP>}
+        </ContactContainer>
+      )}
+    </>
   );
 };
 
