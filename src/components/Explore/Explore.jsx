@@ -7,18 +7,14 @@ import DestinationCard from "../DestinationCard/DestinationCard";
 import { Error, Loading } from "../MainHome/MainHome.style";
 import {
   ButtonCity,
-  ButtonInfo,
   CityDescription,
   ContainerDescriptionBottom,
   ContainerDescriptionTop,
   ContainerTop,
   CountrySubtitle,
   ImageCity,
-  InfoSection,
-  InfoUser,
   SectionCityButtons,
   SectionCityData,
-  SectionInfoButtons,
   SectionLandmarkData,
   Subtitle,
   Title,
@@ -70,7 +66,6 @@ const Explore = () => {
   const toggleShowA = () => setShowA(!showA);
 
   const handleAddItinerary = (country, city, event) => {
-    // console.log("itineraryValueArray", itineraryValueArray);
     console.log("HANDLE ADD ITINERARY");
 
     const addObject = { country, city };
@@ -160,28 +155,6 @@ const Explore = () => {
         </ButtonCity>
         <ButtonCity loc="ButtonCity">I want to book accommodation!</ButtonCity>
       </SectionCityButtons>
-      {/* {!unique && (
-        <Toast show={showA} onClose={toggleShowA}>
-          <Toast.Header>
-            <img
-              src="holder.js/20x20?text=%20"
-              className="rounded me-2"
-              alt=""
-            />
-            <strong className="me-auto">Itinerary</strong>
-            <small>just now</small>
-          </Toast.Header>
-          <Toast.Body>
-            This item is already in the Itinerary! Checkout Itinerary?
-          </Toast.Body>
-          <ButtonInfo loc="ButtonInfo" to={`/itinerary`}>
-            Yes, go to Itinerary!
-          </ButtonInfo>
-          <ButtonInfo loc="ButtonInfo" onClick={toggleShowA}>
-            No!
-          </ButtonInfo>
-        </Toast>
-      )} */}
       {!unique &&
         useToast(
           "Intinerary",

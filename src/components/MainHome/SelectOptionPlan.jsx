@@ -18,7 +18,6 @@ function SelectOptionPlan() {
   );
 
   const { localData } = useLocalStorage("user");
-
   console.log("localData", localData);
 
   const handleDropdownChangeCountry = (e) => {

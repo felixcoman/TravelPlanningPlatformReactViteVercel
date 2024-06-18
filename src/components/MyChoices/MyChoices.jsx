@@ -1,26 +1,27 @@
 import { useContext } from "react";
-import { useParams } from "react-router-dom";
 import { removeChoice } from "../../global/choice/actions";
 import { ChoiceContext } from "../../global/choice/context";
 import { ButtonInfo, InfoSection, InfoUser } from "../Explore/Explore.style";
 import { MainContainerChoice } from "../MyTravelCity/MyTravel.style";
 import MyChoicesBox from "./MyChoicesBox";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 function MyChoices() {
-  const { id } = useParams();
-
   const { stateGlobalChoice, dispatchChoice } = useContext(ChoiceContext);
+
+  const { localData } = useLocalStorage("user");
+  console.log("localData", localData);
 
   const handleDelete = (index) => {
     dispatchChoice(removeChoice(index));
   };
 
   console.log("stateGlobalChoice.choiceValue", stateGlobalChoice.choiceValue);
-  console.log("id", id);
+  console.log("id", localData);
 
   return (
     <>
-      {id === undefined && (
+      {localData === undefined && (
         <InfoSection loc="InfoSection">
           <InfoUser>
             Please create an account first and then select "Help Me Plan" from
@@ -34,7 +35,7 @@ function MyChoices() {
       <MainContainerChoice loc="MainContainerChoice">
         {stateGlobalChoice.choiceValue.map((e, index) => (
           <MyChoicesBox
-            id={id}
+            id={localData}
             key={index}
             country={e.country}
             city={e.city}
@@ -43,7 +44,7 @@ function MyChoices() {
             buget={e.buget}
             data={e.data}
             handleDelete={() => handleDelete(index)}
-            handleUpdateChoice={() => handleUpdateChoice()}
+            // handleUpdateChoice={() => handleUpdateChoice()}
           />
         ))}
       </MainContainerChoice>
