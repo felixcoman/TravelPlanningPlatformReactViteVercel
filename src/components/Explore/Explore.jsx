@@ -24,6 +24,8 @@ import {
   Title,
 } from "./Explore.style";
 
+import useToast from "../../hooks/useToast";
+
 const Explore = () => {
   const { stateGlobalItinerary, dispatchItinerary } =
     useContext(ItineraryContext);
@@ -62,7 +64,10 @@ const Explore = () => {
 
   const compactDataCity = dataCity ? dataCity[0] : null;
   console.log("compactDataCity", compactDataCity);
+
   const [unique, setUnique] = useState(true);
+  const [showA, setShowA] = useState(true);
+  const toggleShowA = () => setShowA(!showA);
 
   const handleAddItinerary = (country, city, event) => {
     // console.log("itineraryValueArray", itineraryValueArray);
@@ -80,6 +85,7 @@ const Explore = () => {
     if (isDuplicate) {
       console.log("cannot be added");
       setUnique(false);
+      setShowA(true);
       event.preventDefault();
     } else {
       console.log("can be added");
@@ -87,6 +93,7 @@ const Explore = () => {
       dispatchItinerary(itineraryPlus({ country, city }));
     }
   };
+
   return (
     <>
       <SectionCityData loc="SectionCityData">
@@ -147,27 +154,42 @@ const Explore = () => {
           onClick={(event) => {
             handleAddItinerary(country, city, event);
           }}
-          to={`/itinerary`}
+          // to={`/itinerary`}
         >
           Save {city} to my itinerary!
         </ButtonCity>
         <ButtonCity loc="ButtonCity">I want to book accommodation!</ButtonCity>
       </SectionCityButtons>
-      {!unique && (
-        <InfoSection loc="InfoSection">
-          <InfoUser loc="InfoUser">
-            This item is already in the Itinerary!
-          </InfoUser>
-          <SectionInfoButtons loc="SectionInfoButtons">
-            <ButtonInfo loc="ButtonInfo" to={`/home`}>
-              I want to choose an other option from Home screen!
-            </ButtonInfo>
-            <ButtonInfo loc="ButtonInfo" to={`/itinerary`}>
-              Ok, go to Itinerary!
-            </ButtonInfo>
-          </SectionInfoButtons>
-        </InfoSection>
-      )}
+      {/* {!unique && (
+        <Toast show={showA} onClose={toggleShowA}>
+          <Toast.Header>
+            <img
+              src="holder.js/20x20?text=%20"
+              className="rounded me-2"
+              alt=""
+            />
+            <strong className="me-auto">Itinerary</strong>
+            <small>just now</small>
+          </Toast.Header>
+          <Toast.Body>
+            This item is already in the Itinerary! Checkout Itinerary?
+          </Toast.Body>
+          <ButtonInfo loc="ButtonInfo" to={`/itinerary`}>
+            Yes, go to Itinerary!
+          </ButtonInfo>
+          <ButtonInfo loc="ButtonInfo" onClick={toggleShowA}>
+            No!
+          </ButtonInfo>
+        </Toast>
+      )} */}
+      {!unique &&
+        useToast(
+          "Intinerary",
+          "This item is already in the Itinerary!",
+          "",
+          showA,
+          toggleShowA
+        )}
     </>
   );
 };

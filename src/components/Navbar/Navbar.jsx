@@ -11,6 +11,7 @@ import { List, X } from "react-bootstrap-icons";
 import { useContext } from "react";
 import Badge from "react-bootstrap/Badge";
 import { ChoiceContext } from "../../global/choice/context";
+import { ItineraryContext } from "../../global/itinerary/context";
 
 export const routes = [
   { title: "Home", href: "home" },
@@ -27,7 +28,10 @@ function NavBar() {
   const handleDisplayDropdown = () => {
     setDisplayDropdown(!displayDropdown);
   };
+
+  const { stateGlobalItinerary } = useContext(ItineraryContext);
   const { stateGlobalChoice } = useContext(ChoiceContext);
+
   return (
     <NavbarContainer loc="NavbarContainer">
       <Logo
@@ -38,7 +42,11 @@ function NavBar() {
         {routes.map((el, index) => (
           <NavLinks key={index} title={el.title} href={el.href} />
         ))}
-        <Badge className="badge" bg="primary">
+        <Badge className="itinerary-badge" bg="primary">
+          {stateGlobalItinerary.itineraryValue.length +
+            stateGlobalItinerary.itineraryLandmarkValue.length}
+        </Badge>
+        <Badge className="choice-badge" bg="primary">
           {stateGlobalChoice.choiceValue.length}
         </Badge>
       </LinkContainerDesktop>
