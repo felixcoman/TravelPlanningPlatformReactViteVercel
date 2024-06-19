@@ -23,8 +23,10 @@ function DestionationCard({ name, image, description, popularity }) {
   const [unique, setUnique] = useState(true);
   const [showA, setShowA] = useState(true);
   const toggleShowA = () => setShowA(!showA);
+  const [onAdd, setOnAdd] = useState(false);
 
   const handleAddItineraryLandmark = (name, event) => {
+    setOnAdd(true);
     console.log("HANDLE ADD ITINERARY LANDMARK");
 
     const addObject = { name };
@@ -67,7 +69,16 @@ function DestionationCard({ name, image, description, popularity }) {
       {!unique &&
         useToast(
           "Intinerary",
-          "This item is already in the Itinerary!",
+          `${name} is already in the Itinerary!`,
+          "my-toast",
+          showA,
+          toggleShowA
+        )}
+      {unique &&
+        onAdd &&
+        useToast(
+          "Intinerary",
+          `Succes! ${name} was added to the Itinerary!`,
           "my-toast",
           showA,
           toggleShowA

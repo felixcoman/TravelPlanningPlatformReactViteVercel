@@ -21,13 +21,17 @@ import {
   TextContainerTravel,
 } from "../MyTravelCity/MyTravel.style";
 import MyTravelRecommend from "../MyTravelRecommend/MyTravelRecommend";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 function MyTravelRegion() {
-  const { country, region, id } = useParams();
+  const { country, region } = useParams();
   const [clicked, setClicked] = useState(true);
   const [period, setPeriod] = useState("");
   const [buget, setBuget] = useState("");
   const [show, setShow] = useState(false);
+
+  const { localData } = useLocalStorage("user");
+  console.log("localData", localData);
 
   const url = country
     ? `http://localhost:3001/${country}/?region=${region}`
@@ -55,7 +59,7 @@ function MyTravelRegion() {
     setShow(!show);
   };
 
-  const { users: user } = useFetchUsers("/" + id);
+  const { users: user } = useFetchUsers("/" + localData);
   console.log("user", user);
 
   const { stateGlobalChoice, dispatchChoice } = useContext(ChoiceContext);
@@ -65,7 +69,7 @@ function MyTravelRegion() {
     console.log("stateGlobalChoice.choiceValue", stateGlobalChoice.choiceValue);
     console.log("stateGlobalChoice", stateGlobalChoice);
     console.log("updateDataChoice", updateDataChoice);
-    fetch(`http://localhost:3001/users/${id}`)
+    fetch(`http://localhost:3001/users/${localData}`)
       .then((response) => response.json())
       .then((userData) => {
         // Check if the user has a 'choices' array, if not, initialize it
@@ -75,7 +79,7 @@ function MyTravelRegion() {
         // Update the user data with the new choice
         const updatedUserData = { ...userData, choices: updatedChoices };
 
-        fetch(`http://localhost:3001/users/${id}`, {
+        fetch(`http://localhost:3001/users/${localData}`, {
           method: "PUT",
           body: JSON.stringify(updatedUserData),
           headers: {
@@ -160,7 +164,7 @@ function MyTravelRegion() {
         {show ? (
           <ButtonChoice
             loc="ButtonChoice"
-            to={`/my-choices/${id}`}
+            to={`/my-choices/${localData}`}
             onClick={() => handleAdd(country, region, buget, period, data)}
           >
             Save my Choice

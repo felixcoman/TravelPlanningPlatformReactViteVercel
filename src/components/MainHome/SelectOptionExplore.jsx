@@ -106,7 +106,6 @@ function SelectOptionExplore() {
             <HomeBtn
               loc="HomeBtn"
               type="submit"
-              data={data}
               to={`/explore/${selectedCountry}/${selectedCity}`}
             >
               Let's Begin To Travel!

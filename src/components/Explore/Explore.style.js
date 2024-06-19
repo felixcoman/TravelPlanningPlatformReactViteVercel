@@ -84,6 +84,8 @@ export const ButtonCity = styled(Link)`
   cursor: pointer;
 `;
 
+export const ButtonAccomodation = styled(ButtonCity)``;
+
 export const SectionLandmarkData = styled.section`
   /* display: flex;
   margin: 10px 0; */

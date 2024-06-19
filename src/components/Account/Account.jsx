@@ -201,7 +201,12 @@ const Account = () => {
               Login
             </ContactButton>
           )}
-          {isValid && isFound && error && <ErrorP>{error}</ErrorP>}
+          {isValid && isFound && error && (
+            <>
+              <ErrorP>{error}</ErrorP>
+              <ContactButton to={`/home`}>Take me view offers!</ContactButton>
+            </>
+          )}
           {!isValid && <ErrorP>Not valid</ErrorP>}
           {!isFound && isVisible1 && <ErrorP>No such user found</ErrorP>}
         </ContactContainer>

@@ -49,5 +49,6 @@ body {
 
 .my-toast {
   position: absolute;
-  bottom: -1144px;
+  bottom: -1230px;
+  left: 40vw;
 }
