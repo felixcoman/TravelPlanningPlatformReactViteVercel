@@ -4,7 +4,7 @@ import useLocalStorage from "../../hooks/useLocalStorage";
 import { Buttons, ButtonsContainer } from "../MainHome/MainHome.style";
 import AccountForm from "./AccountForm";
 
-import { addChoice } from "../../global/choice/actions";
+import { removeAllChoice, addAllChoice } from "../../global/choice/actions";
 import { ChoiceContext } from "../../global/choice/context";
 import {
   ContactButton,
@@ -31,7 +31,7 @@ const Account = () => {
   const { localData, handleLocalData, resetLocalData } =
     useLocalStorage("user");
 
-  console.log("localData", localData);
+  console.log("localData", localData, stateGlobalChoice);
 
   const handleGetAccount = () => {
     setIsVisible1(!isVisible1);
@@ -48,6 +48,10 @@ const Account = () => {
     setIsFound(false);
     !isVisible2 ? buttonRef2.current.focus() : buttonRef2.current.blur();
   };
+
+  const [inputObj, setInputObj] = useState({
+    Email: "",
+  });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -67,13 +71,9 @@ const Account = () => {
     };
 
     fetchData();
-  }, []);
+  }, [inputObj]);
 
   console.log("users", users, "loading", loading, "error", error);
-
-  const [inputObj, setInputObj] = useState({
-    Email: "",
-  });
 
   const [errorInput, setErrorInput] = useState({
     Email: undefined,
@@ -87,8 +87,9 @@ const Account = () => {
     setInputObj({ ...inputObj, [name]: value });
     handleError(value, name);
 
+    const foundUser = users.find((element) => element.Email === value);
+
     if (users && users.length > 0) {
-      const foundUser = users.find((element) => element.Email === value);
       setIsFound(foundUser !== undefined);
     } else {
       setIsFound(false);
@@ -111,6 +112,7 @@ const Account = () => {
   };
 
   const addNewId = async () => {
+    dispatchChoice(removeAllChoice());
     resetLocalData();
     const id = await handleSubmit();
     handleLocalData("user", JSON.stringify(id));
@@ -126,10 +128,15 @@ const Account = () => {
 
     handleLocalData("user", JSON.stringify(userData.id));
 
+    dispatchChoice(removeAllChoice());
+
+    if (userData) {
+      dispatchChoice(addAllChoice(userData.choices));
+    }
+
     if (userData.choices) {
       // const { country, city, region, buget, period, data } = userData.choices;
       // dispatchChoice(addChoice({ country, city, region, buget, period, data }));
-      dispatchChoice(addChoice(userData.choices));
       console.log("userData.choices", userData.choices);
       console.log(
         "stateGlobalChoice.choiceValue",
