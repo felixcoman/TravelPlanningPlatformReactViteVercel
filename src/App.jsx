@@ -22,6 +22,7 @@ import {
   initialStateItinerary,
   itineraryReducer,
 } from "./global/itinerary/reducer";
+import Accommodation from "./components/Accommodation/Accommodation";
 
 function App() {
   const [stateGlobalItinerary, dispatchItinerary] = useReducer(
@@ -69,6 +70,7 @@ function App() {
           <Route path="/my-choices/:id" element={<MyChoices />}></Route>
           <Route path="/my-choices" element={<MyChoices />}></Route>
           <Route path="/account" element={<Account />}></Route>
+          <Route path="/accommodation/:id" element={<Accommodation />} />
         </Routes>
         <Footer />
       </ItineraryContext.Provider>

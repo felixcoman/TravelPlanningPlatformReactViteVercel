@@ -16,11 +16,15 @@ import {
 
 import GetOptionCities from "../GetOptionCities";
 import Spinner from "react-bootstrap/Spinner";
+import useLocalStorage from "../../../hooks/useLocalStorage";
 
 function CitiesRegions() {
-  const { country, id } = useParams();
+  const { country } = useParams();
 
-  console.log("country", country, "id", id);
+  const { localData } = useLocalStorage("user");
+  console.log("localData", localData);
+
+  console.log("country", country, "id", localData);
   const [clicked, setClicked] = useState(true);
   const [isCity, setIsCity] = useState(null);
   const [city, setCity] = useState("");
@@ -88,7 +92,7 @@ function CitiesRegions() {
                 </SelectCity>
                 <ButtonPlan
                   loc="ButtonPlan"
-                  to={`/my-travel1/${country}/${city}/${id}`}
+                  to={`/my-travel1/${country}/${city}/${localData}`}
                 >
                   Search
                 </ButtonPlan>
@@ -115,7 +119,7 @@ function CitiesRegions() {
                 </SelectRegion>
                 <ButtonPlan
                   loc="ButtonPlan"
-                  to={`/my-travel2/${country}/${region}/${id}`}
+                  to={`/my-travel2/${country}/${region}/${localData}`}
                 >
                   Search
                 </ButtonPlan>
