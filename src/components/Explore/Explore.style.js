@@ -84,7 +84,17 @@ export const ButtonCity = styled(Link)`
   cursor: pointer;
 `;
 
-export const ButtonAccomodation = styled(ButtonCity)``;
+export const ButtonAccomodation = styled.button`
+  background: ${WHITE_NEUTRAL};
+  color: ${DARK_BLUE};
+  width: 100%;
+  padding: 6px 12px;
+  margin: 10px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+`;
 
 export const SectionLandmarkData = styled.section`
   /* display: flex;
