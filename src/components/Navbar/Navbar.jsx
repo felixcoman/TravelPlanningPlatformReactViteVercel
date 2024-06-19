@@ -43,11 +43,11 @@ function NavBar() {
           <NavLinks key={index} title={el.title} href={el.href} />
         ))}
         <Badge className="itinerary-badge" bg="primary">
-          {stateGlobalItinerary.itineraryValue.length +
-            stateGlobalItinerary.itineraryLandmarkValue.length}
+          {stateGlobalItinerary.itineraryValue?.length +
+            stateGlobalItinerary.itineraryLandmarkValue?.length}
         </Badge>
         <Badge className="choice-badge" bg="primary">
-          {stateGlobalChoice.choiceValue.length}
+          {stateGlobalChoice.choiceValue?.length}
         </Badge>
       </LinkContainerDesktop>
 

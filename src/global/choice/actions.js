@@ -5,10 +5,23 @@ export function addChoice({ country, city, region, buget, period, data }) {
   };
 }
 
+export function addAllChoice(choices) {
+  return {
+    type: "ADD_ALL_CHOICE",
+    payload: choices,
+  };
+}
+
 export function removeChoice(index) {
   return {
     type: "REMOVE_CHOICE",
     payload: index,
+  };
+}
+
+export function removeAllChoice() {
+  return {
+    type: "REMOVE_ALL_CHOICE",
   };
 }
 
