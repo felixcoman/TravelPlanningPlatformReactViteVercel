@@ -54,6 +54,14 @@ export const ContactButton = styled(Link)`
   }
 `;
 
+export const ButtonsContainerAccount = styled.div`
+  display: flex;
+  height: 56vh;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+`;
+
 export const ErrorP = styled.p`
   color: ${ORANGE};
   width: 100%;

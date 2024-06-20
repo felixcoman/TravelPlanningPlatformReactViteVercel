@@ -23,14 +23,22 @@ function MyChoicesBox({
   handleDelete,
 }) {
   console.log("databox", data);
+  console.log("buget", buget);
+
   const bugetTravelNoSpace = buget?.replace(/ /g, "").toLowerCase();
+  console.log("bugetTravelNoSpace", bugetTravelNoSpace);
+
   const periodTravelNoSpace = period?.replace(/ /g, "").toLowerCase();
 
   const keyBuget = data && Object.keys(data?.[0]?.buget);
+  console.log("keyBuget", keyBuget);
+
   const keyPeriod = data && Object.keys(data?.[0]?.period);
 
   const equalBugetLow =
     bugetTravelNoSpace == keyBuget?.[0]?.toLowerCase() ? true : false;
+  console.log("equalBugetLow", equalBugetLow);
+
   const equalBugetMedium =
     bugetTravelNoSpace == keyBuget?.[1]?.toLowerCase() ? true : false;
   const equalBugetHigh =

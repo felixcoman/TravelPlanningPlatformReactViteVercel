@@ -1,12 +1,13 @@
-import { useEffect, useRef, useState, useContext } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useLocalStorage from "../../hooks/useLocalStorage";
-import { Buttons, ButtonsContainer } from "../MainHome/MainHome.style";
+import { Buttons } from "../MainHome/MainHome.style";
 import AccountForm from "./AccountForm";
 
-import { removeAllChoice, addAllChoice } from "../../global/choice/actions";
+import { addAllChoice, removeAllChoice } from "../../global/choice/actions";
 import { ChoiceContext } from "../../global/choice/context";
 import {
+  ButtonsContainerAccount,
   ContactButton,
   ContactContainer,
   ContactText,
@@ -135,8 +136,6 @@ const Account = () => {
     }
 
     if (userData.choices) {
-      // const { country, city, region, buget, period, data } = userData.choices;
-      // dispatchChoice(addChoice({ country, city, region, buget, period, data }));
       console.log("userData.choices", userData.choices);
       console.log(
         "stateGlobalChoice.choiceValue",
@@ -170,7 +169,7 @@ const Account = () => {
 
   return (
     <>
-      <ButtonsContainer loc="ButtonsContainer">
+      <ButtonsContainerAccount loc="ButtonsContainerAccount">
         <Buttons
           loc="Buttons"
           ref={buttonRef1}
@@ -185,7 +184,10 @@ const Account = () => {
         >
           Create new account
         </Buttons>
-      </ButtonsContainer>
+        <Buttons loc="Buttons" onClick={() => resetLocalData()}>
+          Reset Local storage
+        </Buttons>
+      </ButtonsContainerAccount>
       {isVisible1 && (
         <ContactContainer>
           <ContactText>Enter e-mail to login</ContactText>
