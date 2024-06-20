@@ -38,9 +38,6 @@ function Users() {
             <ButtonInfo loc="ButtonInfo" to={`/home`}>
               Lets go travel!
             </ButtonInfo>
-            <ButtonInfo loc="ButtonInfo" onClick={() => resetLocalData()}>
-              Reset
-            </ButtonInfo>
           </InfoSection>
         </>
       )}
