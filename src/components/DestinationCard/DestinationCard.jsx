@@ -5,7 +5,14 @@ import { ItineraryContext } from "../../global/itinerary/context";
 import useToast from "../../hooks/useToast";
 import { ButtonLandmark } from "../DestinationCard/DestinationCard.style";
 
-function DestionationCard({ name, image, description, popularity }) {
+function DestionationCard({
+  name,
+  country,
+  city,
+  image,
+  description,
+  popularity,
+}) {
   const { stateGlobalItinerary, dispatchItinerary } =
     useContext(ItineraryContext);
 
@@ -18,22 +25,25 @@ function DestionationCard({ name, image, description, popularity }) {
 
   const itineraryLandmarkValueArray =
     stateGlobalItinerary.itineraryLandmarkValue || [];
-  console.log("itineraryValueArray", itineraryLandmarkValueArray);
+  console.log("itineraryLandmarkValueArray", itineraryLandmarkValueArray);
 
   const [unique, setUnique] = useState(true);
   const [showA, setShowA] = useState(true);
   const toggleShowA = () => setShowA(!showA);
   const [onAdd, setOnAdd] = useState(false);
 
-  const handleAddItineraryLandmark = (name, event) => {
+  const handleAddItineraryLandmark = (country, city, name, event) => {
     setOnAdd(true);
     console.log("HANDLE ADD ITINERARY LANDMARK");
 
-    const addObject = { name };
+    const addObject = { country, city, name };
     console.log("ADD OBJECT", addObject);
 
     const isDuplicate = itineraryLandmarkValueArray.some(
-      (element) => element.name === addObject.name
+      (element) =>
+        element.country === addObject.country &&
+        element.city === addObject.city &&
+        element.name === addObject.name
     );
 
     if (isDuplicate) {
@@ -44,7 +54,7 @@ function DestionationCard({ name, image, description, popularity }) {
     } else {
       console.log("can be added");
       setUnique(true);
-      dispatchItinerary(itineraryLandmarkPlus({ name }));
+      dispatchItinerary(itineraryLandmarkPlus({ country, city, name }));
     }
   };
 
@@ -54,13 +64,13 @@ function DestionationCard({ name, image, description, popularity }) {
         <Card.Img variant="top" src={image} alt="Image of landmark" />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
+          <Card.Text>Location: {city}</Card.Text>
           <Card.Text>{description}</Card.Text>
           <ButtonLandmark
             loc="ButtonLandmark"
             onClick={(event) => {
-              handleAddItineraryLandmark(name, event);
+              handleAddItineraryLandmark(country, city, name, event);
             }}
-            // to={`/itinerary`}
           >
             Save landmark to my itinerary!
           </ButtonLandmark>

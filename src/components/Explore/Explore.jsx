@@ -56,8 +56,9 @@ const Explore = () => {
     loading: loadingCity,
   } = useFetchData(urlCity, clicked, setClicked);
 
-  const urlDestination =
-    country && city ? `http://localhost:3001/destinations?city=${city}` : null;
+  const urlDestination = city
+    ? `http://localhost:3001/destinations?city=${city}`
+    : null;
 
   const {
     data: dataDestination,
@@ -101,9 +102,9 @@ const Explore = () => {
   const goAccomm = () => {
     console.log("GO ACCOMM");
     console.log("Navigating to: ", `/accommodation/${localData}`);
-    console.log("State: ", { dataCity, dataDestination });
+    console.log("State: ", { dataCity });
     navigate(`/accommodation/${localData}`, {
-      state: { dataCity, dataDestination },
+      state: { dataCity },
     });
   };
 
