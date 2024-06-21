@@ -9,8 +9,11 @@ import {
 } from "../Explore/Explore.style";
 import LandmarkCard from "../LandmarkCard/LandmarkCard";
 import { SectionItineraryData } from "./Itinerary.style";
+import { useNavigate } from "react-router-dom";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 function Itinerary() {
+  const navigate = useNavigate();
   const { stateGlobalItinerary } = useContext(ItineraryContext);
 
   const itineraryValueArray = stateGlobalItinerary.itineraryValue;
@@ -19,6 +22,43 @@ function Itinerary() {
   const itineraryLandmarkValueArray =
     stateGlobalItinerary.itineraryLandmarkValue;
   console.log("itineraryLandmarkValueArray", itineraryLandmarkValueArray);
+
+  const { localData } = useLocalStorage("user");
+  console.log("localData", localData);
+
+  let city = "";
+
+  let country = "";
+
+  let accommodationArray = [];
+
+  for (let key of itineraryLandmarkValueArray) {
+    console.log("key", key);
+    city = key["city"];
+    country = key["country"];
+    accommodationArray.push({ country, city });
+    console.log("accommodationArray", accommodationArray);
+  }
+  for (let key of itineraryValueArray) {
+    console.log("key", key);
+
+    city = key["city"];
+    country = key["country"];
+
+    accommodationArray.push({ country, city });
+    console.log("accommodationArray", accommodationArray);
+  }
+
+  console.log("city", city, "country", country);
+
+  const goAccomm = () => {
+    console.log("GO ACCOMM");
+    console.log("Navigating to: ", `/accommodation/${localData}`);
+    console.log("State: ", { accommodationArray });
+    navigate(`/accommodation/${localData}`, {
+      state: [accommodationArray],
+    });
+  };
 
   return (
     <>
@@ -44,7 +84,10 @@ function Itinerary() {
             <LandmarkCard key={index} index={index} {...element} />
           ))}
         {stateGlobalItinerary && (
-          <ButtonAccomodation loc="Button" onClick={() => {}}>
+          <ButtonAccomodation
+            loc="ButtonAccomodation"
+            onClick={() => goAccomm()}
+          >
             I want to book accommodation!
           </ButtonAccomodation>
         )}

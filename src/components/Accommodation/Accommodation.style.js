@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import {
   DARK_BLUE,
@@ -7,38 +6,33 @@ import {
   WHITE_NEUTRAL,
   YELLOW,
 } from "../../constants/Colors";
-import { TEXT_SIZE_MEDIUM } from "../../constants/Dimensions";
+import { TEXT_SIZE_MEDIUM, TEXT_SIZE_SMALL } from "../../constants/Dimensions";
 
 export const Sidebar = styled.aside`
-  width: 130px;
-  position: fixed;
+  width: 140px;
+  /* position: fixed; */
   z-index: 1;
-  top: 20px;
+  top: 110px;
   left: 10px;
-  background: #eee;
+  background: ${DARK_BLUE};
   overflow-x: hidden;
   padding: 8px 0;
 `;
 
 export const LocationTitle = styled.div`
+  background: ${DARK_BLUE};
   color: ${ORANGE};
-  font-size: ${TEXT_SIZE_MEDIUM};
+  font-size: ${TEXT_SIZE_SMALL};
 `;
 
 export const DisplayContainer = styled.section`
   margin-left: 140px; /* Same width as the sidebar + left position in px */
-  font-size: 28px; /* Increased text to enable scrolling */
+  font-size: ${TEXT_SIZE_MEDIUM}; /* Increased text to enable scrolling */
   padding: 0px 10px;
 `;
 
-export const ItemLink = styled(Link)`
-  background: ${WHITE_NEUTRAL};
-  color: ${DARK_BLUE};
+export const ItemLink = styled.div`
   width: 100%;
-  padding: 6px 12px;
-  margin: 10px;
-  border-radius: 5px;
   text-align: center;
-  text-decoration: none;
   cursor: pointer;
 `;

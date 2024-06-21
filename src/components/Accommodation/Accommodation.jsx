@@ -3,64 +3,89 @@ import { ListGroup } from "react-bootstrap";
 import { useLocation, useParams } from "react-router-dom";
 import {
   DisplayContainer,
+  ItemLink,
   LocationTitle,
   Sidebar,
 } from "./Accommodation.style";
+import useFetchData from "../../hooks/useFetchData";
 
 function Accommodation() {
   const { id } = useParams();
   const location = useLocation();
-  const { dataCity, dataDestination } = location.state || {};
+  // const { dataCity} = location.state || {};
+  const [accommodationArray] = location.state || [];
+
+  ///TO BE CONTINUED
+
+  const [clicked, setClicked] = useState(true);
+
+  const urlCity =
+    country && city ? `http://localhost:3001/${country}?city=${city}` : null;
+
+  const {
+    data: dataCity,
+    error: errorCity,
+    loading: loadingCity,
+  } = useFetchData(urlCity, clicked, setClicked);
+
+  console.log("dataCity", dataCity);
+
+  const [selectedBudget, setSelectedBudget] = useState(null);
 
   console.log("id", id);
   console.log("dataCity", dataCity);
-  console.log("dataDestination", dataDestination);
-
-  const [isDisplayed, setIsDisplayed] = useState("");
+  // console.log("dataDestination", dataDestination);
 
   const compactDataCity = dataCity ? dataCity[0] : null;
   console.log("compactDataCity", compactDataCity);
+  if (!compactDataCity) {
+    return <div>Loading...</div>;
+  }
 
-  // const { highBuget, lowBuget, mediumBuget } = compactDataCity.buget;
-
-  //CALCUL
-
-  const searchTerm = "Buget";
   console.log("compactDataCity.buget", compactDataCity.buget);
+  const budgetKeys = Object.keys(compactDataCity.buget);
+  console.log("budgetKeys", budgetKeys);
+  const searchTerm = "Buget";
 
-  const budgetKey = Object.keys(compactDataCity.buget);
-  console.log("budgetKey", budgetKey);
+  const indexOfFirst = (arr, term) => {
+    return arr.indexOf(term);
+  };
 
-  const indexOfFirst = budgetKey[0].indexOf(searchTerm);
-  console.log("indexOfFirst", indexOfFirst);
+  const transformedBudgetKeys = budgetKeys.map((key) => {
+    const slicePosition = key.length - indexOfFirst(key, searchTerm);
+    console.log("slicePosition", slicePosition);
+    return (
+      key.slice(0, -slicePosition) +
+      " " +
+      key.slice(-slicePosition).toLowerCase()
+    );
+  });
 
-  const slicePosition = budgetKey[0].length - indexOfFirst;
-  console.log("slicePosition", slicePosition);
+  console.log("transformedBudgetKeys", transformedBudgetKeys);
 
-  const transBugetKey = budgetKey.map(
-    (e) =>
-      e.slice(0, -slicePosition) + " " + e.slice(-slicePosition).toLowerCase()
-  );
-  console.log("transBugetKey", transBugetKey);
+  const getKeyDisplay = (key) => {
+    const originalKey = budgetKeys[transformedBudgetKeys.indexOf(key)];
+    setSelectedBudget(originalKey);
+  };
 
-  const displayItem = (key) => {
-    console.log("this is select", key);
-    switch (key) {
-      case "low buget":
-        setIsDisplayed(compactDataCity.buget.lowBuget);
-        console.log("DISPLAYED", isDisplayed);
-        break;
-      case "medium buget":
-        setIsDisplayed(compactDataCity.buget.mediumBuget);
-        console.log("DISPLAYED", isDisplayed);
-        break;
-      case "high buget":
-        setIsDisplayed(compactDataCity.buget.highBuget);
-        console.log("DISPLAYED", isDisplayed);
-        break;
-      default:
-        break;
-    }
+  const getHotelDescription = (description) => {
+    const descriptionSlicePos =
+      description[1].length - indexOfFirst(description[1], "web:");
+
+    const hotelNameSlice = description[1].slice(0, -descriptionSlicePos - 2);
+
+    const hotelWebSlice = description[1].slice(-descriptionSlicePos + 5);
+
+    return [`${hotelNameSlice}\nwebpage:\xa0${hotelWebSlice}`];
+  };
+
+  const getIframe = (description) => {
+    const descriptionSlicePos =
+      description[1].length - indexOfFirst(description[1], "web:");
+
+    const hotelWebSlice = description[1].slice(-descriptionSlicePos + 5);
+
+    return hotelWebSlice;
   };
 
   return (
@@ -73,46 +98,35 @@ function Accommodation() {
               <LocationTitle loc="LocationTitle">
                 City: {compactDataCity.city}
               </LocationTitle>
-              {transBugetKey.map((key, index) => (
+              {transformedBudgetKeys.map((key, index) => (
                 <ListGroup.Item key={index}>
-                  <div onClick={() => displayItem(key)}>{key}</div>
+                  <ItemLink onClick={() => getKeyDisplay(key)}>{key}</ItemLink>
                 </ListGroup.Item>
               ))}
             </ListGroup>
           </Sidebar>
-          <DisplayContainer loc="DisplayContainer"></DisplayContainer>
         </>
       )}
-
-      {/* {dataCity ? <p>City: {compactDataCity.city}</p> : null}
-      {dataDestination ? (
-        <div>
-          {dataDestination.map((dest, index) => (
-            <p key={index}>{dest.name}</p>
-          ))}
-        </div>
-      ) : null} */}
-
-      {/* {dataCity && (
-        <>
-          <section>
-            {}
-            <div>{lowBuget.hotelone}</div>
-            <div>{lowBuget.hoteltwo}</div>
-            <div>{lowBuget.hotelthree}</div>
-          </section>
-          <section>
-            <div>{mediumBuget.hotelone}</div>
-            <div>{mediumBuget.hoteltwo}</div>
-            <div>{mediumBuget.hotelthree}</div>
-          </section>
-          <section>
-            <div>{highBuget.hotelone}</div>
-            <div>{highBuget.hoteltwo}</div>
-            <div>{highBuget.hotelthree}</div>
-          </section>
-        </>
-      )} */}
+      {dataCity && selectedBudget && (
+        <DisplayContainer loc="DisplayContainer">
+          {Object.entries(compactDataCity.buget[selectedBudget]).map(
+            (description, index) => (
+              <>
+                <div key={index}>
+                  <strong>Option {index + 1}</strong>:{" "}
+                  {getHotelDescription(description)}
+                </div>
+                <iframe
+                  src={getIframe(description)}
+                  height="300px"
+                  width="100%"
+                  title="accommodation for your selection"
+                ></iframe>
+              </>
+            )
+          )}
+        </DisplayContainer>
+      )}
     </div>
   );
 }
