@@ -185,7 +185,7 @@ const Account = () => {
           Create new account
         </Buttons>
         <Buttons loc="Buttons" onClick={() => resetLocalData()}>
-          Reset Local storage
+          Logout
         </Buttons>
       </ButtonsContainerAccount>
       {isVisible1 && (
