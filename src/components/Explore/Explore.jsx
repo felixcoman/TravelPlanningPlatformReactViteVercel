@@ -99,12 +99,30 @@ const Explore = () => {
     }
   };
 
+  let accommodationArray = [];
+
+  const populateAccommondationArray = (arr) => {
+    let cityArr = "";
+    let countryArr = "";
+
+    for (let key of arr) {
+      console.log("key", key);
+      cityArr = key["city"];
+      countryArr = key["country"];
+      accommodationArray.push({ countryArr, cityArr });
+      console.log("accommodationArray", accommodationArray);
+    }
+    return accommodationArray;
+  };
+
+  populateAccommondationArray(itineraryValueArray);
+
   const goAccomm = () => {
     console.log("GO ACCOMM");
     console.log("Navigating to: ", `/accommodation/${localData}`);
-    console.log("State: ", { dataCity });
+    console.log("State: ", { accommodationArray });
     navigate(`/accommodation/${localData}`, {
-      state: { dataCity },
+      state: [accommodationArray],
     });
   };
 

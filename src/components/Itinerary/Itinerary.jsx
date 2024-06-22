@@ -16,42 +16,35 @@ function Itinerary() {
   const navigate = useNavigate();
   const { stateGlobalItinerary } = useContext(ItineraryContext);
 
-  const itineraryValueArray = stateGlobalItinerary.itineraryValue;
+  const itineraryValueArray = stateGlobalItinerary.itineraryValue || [];
   console.log("itineraryValueArray", itineraryValueArray);
 
   const itineraryLandmarkValueArray =
-    stateGlobalItinerary.itineraryLandmarkValue;
+    stateGlobalItinerary.itineraryLandmarkValue || [];
   console.log("itineraryLandmarkValueArray", itineraryLandmarkValueArray);
 
   const { localData } = useLocalStorage("user");
   console.log("localData", localData);
 
-  let city = "";
-
-  let country = "";
-
   let accommodationArray = [];
 
-  for (let key of itineraryLandmarkValueArray) {
-    console.log("key", key);
-    city = key["city"];
-    country = key["country"];
-    accommodationArray.push({ country, city });
-    console.log("accommodationArray", accommodationArray);
-  }
-  for (let key of itineraryValueArray) {
-    console.log("key", key);
+  const populateAccommondationArray = (arr) => {
+    let cityArr = "";
+    let countryArr = "";
 
-    city = key["city"];
-    country = key["country"];
-
-    accommodationArray.push({ country, city });
-    console.log("accommodationArray", accommodationArray);
-  }
-
-  console.log("city", city, "country", country);
+    for (let key of arr) {
+      console.log("key", key);
+      cityArr = key["city"];
+      countryArr = key["country"];
+      accommodationArray.push({ countryArr, cityArr });
+      console.log("accommodationArray", accommodationArray);
+    }
+    return accommodationArray;
+  };
 
   const goAccomm = () => {
+    populateAccommondationArray(itineraryLandmarkValueArray);
+    populateAccommondationArray(itineraryValueArray);
     console.log("GO ACCOMM");
     console.log("Navigating to: ", `/accommodation/${localData}`);
     console.log("State: ", { accommodationArray });
