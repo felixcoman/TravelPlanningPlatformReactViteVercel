@@ -10,14 +10,13 @@ import {
 
 function Accommodation() {
   const { id } = useParams();
-  console.log("id", id);
-
   const location = useLocation();
   const [accommodationArray] = location.state || [];
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedBudget, setSelectedBudget] = useState(null);
+  const [selectedCity, setSelectedCity] = useState(null);
 
   useEffect(() => {
     const fetchData = async (country, city) => {
@@ -31,17 +30,22 @@ function Accommodation() {
         const dataCity = await response.json();
         return { country, city, dataCity };
       } catch (error) {
-        return { country, city, error: "Eroare 808" };
+        return { country, city, error: "Error 808" };
       }
     };
 
     const fetchAllData = async () => {
-      const promises = accommodationArray.map((element) =>
-        fetchData(element.countryArr, element.cityArr)
-      );
-      const results = await Promise.all(promises);
-      setData(results);
-      setLoading(false);
+      try {
+        const promises = accommodationArray.map((element) =>
+          fetchData(element.countryArr, element.cityArr)
+        );
+        const results = await Promise.all(promises);
+        setData(results);
+      } catch (err) {
+        setError("Failed to fetch data");
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchAllData();
@@ -55,13 +59,11 @@ function Accommodation() {
     return <div>Error: {error}</div>;
   }
 
-  console.log("data", data);
-  const compactDataCity = data.length > 0 ? data[0].dataCity : null;
-  console.log("compactDataCity", compactDataCity);
-  if (!compactDataCity) {
+  if (data.length === 0 || !data[0].dataCity) {
     return <div>No data available</div>;
   }
-  console.log("compactDataCity.buget", compactDataCity[0].buget);
+
+  const compactDataCity = data[0].dataCity;
   const budgetKeys = Object.keys(compactDataCity[0].buget);
   const searchTerm = "Buget";
 
@@ -78,9 +80,12 @@ function Accommodation() {
     );
   });
 
-  const getKeyDisplay = (key) => {
+  const getKeyDisplay = (key, city) => {
+    console.log("GET");
     const originalKey = budgetKeys[transformedBudgetKeys.indexOf(key)];
     setSelectedBudget(originalKey);
+    setSelectedCity(city);
+    console.log("city", city);
   };
 
   const getHotelDescription = (description) => {
@@ -99,31 +104,39 @@ function Accommodation() {
   };
 
   return (
-    <div>
+    <>
       <h1>Accommodation</h1>
-      {data.map(
-        (dataItem, index) =>
-          dataItem.dataCity && (
-            <div key={index}>
-              <Sidebar loc="Sidebar">
-                <ListGroup>
+      {data && (
+        <Sidebar loc="Sidebar">
+          {data.map(
+            (dataItem, index) =>
+              dataItem.dataCity && (
+                <ListGroup key={index}>
                   <LocationTitle loc="LocationTitle">
                     City: {dataItem.city}
                   </LocationTitle>
                   {transformedBudgetKeys.map((key, idx) => (
                     <ListGroup.Item key={idx}>
-                      <ItemLink onClick={() => getKeyDisplay(key)}>
+                      <ItemLink
+                        onClick={() => getKeyDisplay(key, dataItem.city)}
+                      >
                         {key}
                       </ItemLink>
                     </ListGroup.Item>
                   ))}
                 </ListGroup>
-              </Sidebar>
-              {selectedBudget && (
-                <DisplayContainer loc="DisplayContainer">
-                  {Object.entries(
-                    dataItem.dataCity[0].buget[selectedBudget]
-                  ).map((description, idx) => (
+              )
+          )}
+        </Sidebar>
+      )}
+      {selectedBudget &&
+        selectedCity &&
+        data.map((dataItem, index) => {
+          if (selectedCity === dataItem.city && dataItem.dataCity) {
+            return (
+              <DisplayContainer loc="DisplayContainer" key={index}>
+                {Object.entries(dataItem.dataCity[0].buget[selectedBudget]).map(
+                  (description, idx) => (
                     <div key={idx}>
                       <strong>Option {idx + 1}</strong>:{" "}
                       {getHotelDescription(description)}
@@ -134,13 +147,14 @@ function Accommodation() {
                         title="accommodation for your selection"
                       ></iframe>
                     </div>
-                  ))}
-                </DisplayContainer>
-              )}
-            </div>
-          )
-      )}
-    </div>
+                  )
+                )}
+              </DisplayContainer>
+            );
+          }
+          return null;
+        })}
+    </>
   );
 }
 
