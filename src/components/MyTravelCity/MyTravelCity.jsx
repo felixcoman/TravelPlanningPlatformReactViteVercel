@@ -56,6 +56,7 @@ function MyTravelCity() {
     setBuget(buget);
     setShow(!show);
   };
+
   const { users: user } = useFetchUsers("/" + localData);
   console.log("user", user);
 
@@ -96,13 +97,6 @@ function MyTravelCity() {
     console.log("updateDataChoice", updateDataChoice);
     handleUpdateChoice(updateDataChoice);
   };
-
-  // FOR LOCAL STORAGE
-  //   const existingData = !isLocalDataEmpty ? localData : [];
-  //   const updatedData = [...existingData, ...globalLocalStorage];
-  //   handleLocalData("choices", updatedData);
-  // FOR LOCAL STORAGE
-  // };
 
   return (
     <>

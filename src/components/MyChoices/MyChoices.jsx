@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { removeChoice } from "../../global/choice/actions";
 import { ChoiceContext } from "../../global/choice/context";
 import { ButtonInfo, InfoSection, InfoUser } from "../Explore/Explore.style";
@@ -12,8 +12,41 @@ function MyChoices() {
   const { localData } = useLocalStorage("user");
   console.log("localData", localData);
 
+  const handleUpdateChoice = (indexServer) => {
+    console.log("stateGlobalChoice.choiceValue", stateGlobalChoice.choiceValue);
+    console.log("stateGlobalChoice", stateGlobalChoice);
+    fetch(`http://localhost:3001/users/${localData}`)
+      .then((response) => response.json())
+      .then((userData) => {
+        // Filter out the choice object at the specified index
+        const updatedChoices = userData.choices.filter(
+          (choice, i) => i !== indexServer
+        );
+
+        // Send the updated data back to the server
+        fetch(`http://localhost:3001/users/${localData}`, {
+          method: "PUT",
+          body: JSON.stringify({ ...userData, choices: updatedChoices }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((response) => response.json())
+          .then((json) => console.log(json))
+          .catch((error) => console.error("Error updating user data:", error));
+      })
+      .catch((error) => console.error("Error fetching user data:", error));
+  };
+
   const handleDelete = (index) => {
     dispatchChoice(removeChoice(index));
+    console.log(
+      "stateGlobalChoice.choiceValue.length",
+      stateGlobalChoice.choiceValue.length
+    );
+    const indexServer = stateGlobalChoice.choiceValue.length - 1 - index;
+    console.log("indexServer", indexServer, "index", index);
+    handleUpdateChoice(indexServer);
   };
 
   console.log("stateGlobalChoice.choiceValue", stateGlobalChoice.choiceValue);
@@ -44,7 +77,6 @@ function MyChoices() {
             buget={e.buget}
             data={e.data}
             handleDelete={() => handleDelete(index)}
-            // handleUpdateChoice={() => handleUpdateChoice()}
           />
         ))}
       </MainContainerChoice>
