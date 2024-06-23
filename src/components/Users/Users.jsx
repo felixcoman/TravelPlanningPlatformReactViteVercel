@@ -8,7 +8,8 @@ import { Error, Loading } from "../MainHome/MainHome.style";
 function Users() {
   const { id } = useParams();
   const { users: user, error, loading } = useFetchUsers(`/${id}`);
-  const { resetLocalData } = useLocalStorage("user");
+  // const { resetLocalData } = useLocalStorage("user");
+
   const isObjectEmpty = (user) => {
     return JSON.stringify(user) === "{}";
   };

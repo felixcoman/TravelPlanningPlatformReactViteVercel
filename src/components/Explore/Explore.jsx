@@ -21,7 +21,7 @@ import {
   ButtonAccomodation,
 } from "./Explore.style";
 
-import useToast from "../../hooks/useToast";
+import useToast from "../../global/useToast";
 import useLocalStorage from "../../hooks/useLocalStorage";
 
 const Explore = () => {

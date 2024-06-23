@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import { Buttons } from "../MainHome/MainHome.style";
 import AccountForm from "./AccountForm";
+import { UserContext } from "../../global/user/UserContext";
 
 import { addAllChoice, removeAllChoice } from "../../global/choice/actions";
 import { ChoiceContext } from "../../global/choice/context";
@@ -17,6 +18,8 @@ import {
 const Account = () => {
   const navigate = useNavigate();
 
+  const { user, setUser, fetchUser } = useContext(UserContext); // destructurare UserContext
+
   const [isVisible1, setIsVisible1] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
   const buttonRef1 = useRef(null);
@@ -26,6 +29,10 @@ const Account = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState([]);
   const [isFound, setIsFound] = useState([]);
+  const [errorInput, setErrorInput] = useState({
+    Email: undefined,
+  });
+  const [isValid, setIsValid] = useState(true);
 
   const { stateGlobalChoice, dispatchChoice } = useContext(ChoiceContext);
 
@@ -33,6 +40,28 @@ const Account = () => {
     useLocalStorage("user");
 
   console.log("localData", localData, stateGlobalChoice);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`http://localhost:3001/users`);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const userData = await response.json();
+        console.log("userData", userData);
+        setUsers(userData);
+        setLoading(false);
+      } catch (error) {
+        setError("Error 808");
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  console.log("users", users, "loading", loading, "error", error);
 
   const handleGetAccount = () => {
     setIsVisible1(!isVisible1);
@@ -53,34 +82,6 @@ const Account = () => {
   const [inputObj, setInputObj] = useState({
     Email: "",
   });
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`http://localhost:3001/users`);
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const userData = await response.json();
-        console.log("userData", userData);
-        setUsers(userData);
-        setLoading(false);
-      } catch (error) {
-        setError("Eroare 808");
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [inputObj]);
-
-  console.log("users", users, "loading", loading, "error", error);
-
-  const [errorInput, setErrorInput] = useState({
-    Email: undefined,
-  });
-
-  const [isValid, setIsValid] = useState(true);
 
   const handleChange = (e, name) => {
     setError(false);
@@ -114,10 +115,11 @@ const Account = () => {
 
   const addNewId = async () => {
     dispatchChoice(removeAllChoice());
-    resetLocalData();
+    // resetLocalData();
     const id = await handleSubmit();
     handleLocalData("user", JSON.stringify(id));
     console.log("S-a adagat un user cu acest id in local storage", id);
+    setUser({ Email: inputObj.Email, id });
     navigate(`/users/${id}`);
   };
 
@@ -128,23 +130,26 @@ const Account = () => {
     console.log("userData", userData);
 
     handleLocalData("user", JSON.stringify(userData.id));
-
+    setUser(userData);
     dispatchChoice(removeAllChoice());
 
-    if (userData) {
-      dispatchChoice(addAllChoice(userData.choices));
-    }
-
     if (userData.choices) {
-      console.log("userData.choices", userData.choices);
+      dispatchChoice(addAllChoice(userData.choices));
+      console.log("AICI userData.choices", userData.choices);
       console.log(
-        "stateGlobalChoice.choiceValue",
+        "AICI stateGlobalChoice.choiceValue",
         stateGlobalChoice.choiceValue
       );
-      console.log("stateGlobalChoice", stateGlobalChoice);
+      console.log("AICI stateGlobalChoice", stateGlobalChoice);
     } else {
       setError("No selected travel choices yet!");
     }
+  };
+
+  const logoutUser = () => {
+    resetLocalData();
+    setUser(null);
+    dispatchChoice(removeAllChoice());
   };
 
   const handleError = (value, name) => {
@@ -184,7 +189,7 @@ const Account = () => {
         >
           Create new account
         </Buttons>
-        <Buttons loc="Buttons" onClick={() => resetLocalData()}>
+        <Buttons loc="Buttons" onClick={() => logoutUser()}>
           Logout
         </Buttons>
       </ButtonsContainerAccount>

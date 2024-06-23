@@ -128,40 +128,51 @@ function MyTravelCity() {
               </DataContainer>
             </MainContainerTravel>
 
-            <FiltersContainerTravel loc="FiltersContainerTravel">
-              <FiltersTravel loc="FiltersTravel">
-                <SelectTravel
-                  loc="SelectTravel"
-                  onChange={onOptionChangePeriod}
-                >
-                  <option>Choose a period:</option>
-                  {optionPeriod.map((option, index) => {
-                    return <option key={index}>{option}</option>;
-                  })}
-                </SelectTravel>
+            {data[0].buget && data[0].period && (
+              <FiltersContainerTravel loc="FiltersContainerTravel">
+                <FiltersTravel loc="FiltersTravel">
+                  <SelectTravel
+                    loc="SelectTravel"
+                    onChange={onOptionChangePeriod}
+                  >
+                    <option>Choose a period:</option>
+                    {optionPeriod.map((option, index) => {
+                      return <option key={index}>{option}</option>;
+                    })}
+                  </SelectTravel>
 
-                <SelectTravel loc="SelectTravel" onChange={onOptionChangeBuget}>
-                  <option>Choose a buget:</option>
-                  {optionBuget.map((option, index) => {
-                    return <option key={index}>{option}</option>;
-                  })}
-                </SelectTravel>
-              </FiltersTravel>
+                  <SelectTravel
+                    loc="SelectTravel"
+                    onChange={onOptionChangeBuget}
+                  >
+                    <option>Choose a buget:</option>
+                    {optionBuget.map((option, index) => {
+                      return <option key={index}>{option}</option>;
+                    })}
+                  </SelectTravel>
+                </FiltersTravel>
 
-              <FiltersTravel loc="FiltersTravel">
-                <ButtonPlanTravel loc="ButtonPlanTravel" onClick={handleClick}>
-                  {show ? "Return" : "Search"}
-                </ButtonPlanTravel>
-              </FiltersTravel>
-              {show ? (
-                <MyTravelRecommend
-                  bugetTravel={buget}
-                  periodTravel={period}
-                  data={data}
-                />
-              ) : null}
-            </FiltersContainerTravel>
+                <FiltersTravel loc="FiltersTravel">
+                  <ButtonPlanTravel
+                    loc="ButtonPlanTravel"
+                    onClick={handleClick}
+                  >
+                    {show ? "Return" : "Search"}
+                  </ButtonPlanTravel>
+                </FiltersTravel>
+                {show ? (
+                  <MyTravelRecommend
+                    bugetTravel={buget}
+                    periodTravel={period}
+                    data={data}
+                  />
+                ) : null}
+              </FiltersContainerTravel>
+            )}
           </>
+        )}
+        {data && (!data[0].buget || !data[0].period) && (
+          <div>No data available for your selection!</div>
         )}
         {show ? (
           <ButtonChoice
