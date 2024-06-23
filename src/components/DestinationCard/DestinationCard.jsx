@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { Card } from "react-bootstrap";
 import { itineraryLandmarkPlus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
-import useToast from "../../hooks/useToast";
+import useToast from "../../global/useToast";
 import { ButtonLandmark } from "../DestinationCard/DestinationCard.style";
 
 function DestionationCard({

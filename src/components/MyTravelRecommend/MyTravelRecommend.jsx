@@ -10,7 +10,7 @@ import MediumBuget from "./MediumBuget";
 import HighBuget from "./HighBuget";
 
 function MyTravelRecommend({ bugetTravel, periodTravel, data }) {
-  const bugetData = data[0].buget;
+  const bugetData = data ? data[0].buget : null;
   const periodData = data ? data[0].period : null;
 
   const bugetTravelNoSpace = bugetTravel.replace(/ /g, "").toLowerCase();
