@@ -26,7 +26,7 @@ function CitiesRegions() {
 
   console.log("country", country, "id", localData);
   const [clicked, setClicked] = useState(true);
-  const [isCity, setIsCity] = useState(null);
+  const [show, setShow] = useState(null);
   const [city, setCity] = useState("");
   const [region, setRegion] = useState("");
 
@@ -45,9 +45,9 @@ function CitiesRegions() {
   };
   const changeCityRegion = (city) => {
     if (city === "city") {
-      setIsCity(true);
+      setShow(true);
     } else {
-      setIsCity(false);
+      setShow(false);
     }
   };
 
@@ -74,7 +74,7 @@ function CitiesRegions() {
             <DataContainer loc="DataContainer">
               <FiltersContainer
                 loc="FiltersContainer"
-                isCity={isCity}
+                show={show}
                 onClick={() => changeCityRegion("city")}
               >
                 <SelectCity
@@ -99,7 +99,7 @@ function CitiesRegions() {
               </FiltersContainer>
               <FiltersContainer
                 loc="FiltersContainer"
-                isCity={!isCity}
+                show={!show}
                 onClick={() => changeCityRegion("region")}
               >
                 <SelectRegion

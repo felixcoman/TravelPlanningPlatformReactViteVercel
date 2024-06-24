@@ -14,20 +14,29 @@ import {
   ContactText,
   ErrorP,
 } from "./Account.style";
+import useFetchUsers from "../../hooks/useFetchUsers";
 
 const Account = () => {
   const navigate = useNavigate();
+  const [clicked, setClicked] = useState(false);
+  let id = "";
 
   const { user, setUser, fetchUser } = useContext(UserContext); // destructurare UserContext
+
+  const { users, error, loading, setError } = useFetchUsers(
+    id,
+    clicked,
+    setClicked
+  );
 
   const [isVisible1, setIsVisible1] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
   const buttonRef1 = useRef(null);
   const buttonRef2 = useRef(null);
 
-  const [users, setUsers] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState([]);
+  // const [users, setUsers] = useState([]);
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState([]);
   const [isFound, setIsFound] = useState([]);
   const [errorInput, setErrorInput] = useState({
     Email: undefined,
@@ -41,25 +50,25 @@ const Account = () => {
 
   console.log("localData", localData, stateGlobalChoice);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`http://localhost:3001/users`);
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const userData = await response.json();
-        console.log("userData", userData);
-        setUsers(userData);
-        setLoading(false);
-      } catch (error) {
-        setError("Error 808");
-        setLoading(false);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch(`http://localhost:3001/users`);
+  //       if (!response.ok) {
+  //         throw new Error("Network response was not ok");
+  //       }
+  //       const userData = await response.json();
+  //       console.log("userData", userData);
+  //       setUsers(userData);
+  //       setLoading(false);
+  //     } catch (error) {
+  //       setError("Error 808");
+  //       setLoading(false);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   console.log("users", users, "loading", loading, "error", error);
 
@@ -84,6 +93,7 @@ const Account = () => {
   });
 
   const handleChange = (e, name) => {
+    setClicked(true);
     setError(false);
     const value = e.target.value;
     setInputObj({ ...inputObj, [name]: value });
@@ -116,37 +126,36 @@ const Account = () => {
   const addNewId = async () => {
     dispatchChoice(removeAllChoice());
     // resetLocalData();
-    const id = await handleSubmit();
-    handleLocalData("user", JSON.stringify(id));
-    console.log("S-a adagat un user cu acest id in local storage", id);
-    setUser({ Email: inputObj.Email, id });
-    navigate(`/users/${id}`);
+    const idul = await handleSubmit();
+    handleLocalData("user", JSON.stringify(idul));
+    console.log("S-a adagat un user cu acest id in local storage", idul);
+    setUser({ Email: inputObj.Email, idul });
+    navigate(`/users/${idul}`);
   };
 
   const getUserData = () => {
-    const userData = users.find((element) => element.Email === inputObj.Email);
+    setClicked(true);
+    const userData = users?.find((element) => element.Email === inputObj.Email);
     console.log("users", users);
     console.log("inputObj", inputObj);
     console.log("userData", userData);
 
     handleLocalData("user", JSON.stringify(userData.id));
     setUser(userData);
-    dispatchChoice(removeAllChoice());
+    // dispatchChoice(removeAllChoice());
+    // userData.choices
+    //   ? dispatchChoice(addAllChoice(userData.choices))
+    //   : setError("No selected travel choices yet!");
 
     if (userData.choices) {
       dispatchChoice(addAllChoice(userData.choices));
-      console.log("AICI userData.choices", userData.choices);
-      console.log(
-        "AICI stateGlobalChoice.choiceValue",
-        stateGlobalChoice.choiceValue
-      );
-      console.log("AICI stateGlobalChoice", stateGlobalChoice);
     } else {
       setError("No selected travel choices yet!");
     }
   };
 
   const logoutUser = () => {
+    setIsVisible1(false);
     resetLocalData();
     setUser(null);
     dispatchChoice(removeAllChoice());

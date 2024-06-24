@@ -1,6 +1,4 @@
 import { useState } from "react";
-// import { useParams } from "react-router-dom";
-// import useFetchUsers from "../../hooks/useFetchUsers";
 import ContactForm from "./ContactForm";
 import ContactFormTextarea from "./ContactFormTextarea";
 import {
@@ -11,8 +9,6 @@ import {
 } from "./Contact.style";
 
 const Contact = () => {
-  //const { id } = useParams();
-
   const [inputObj, setInputObj] = useState({
     Name: "",
     SurName: "",

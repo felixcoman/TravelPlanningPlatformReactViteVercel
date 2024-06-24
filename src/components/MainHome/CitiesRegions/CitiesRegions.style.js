@@ -16,8 +16,7 @@ export const FiltersContainer = styled.div`
   width: 90%;
   margin: 50px auto;
   border: 2px solid ${WHITE_NEUTRAL};
-  ${(props) =>
-    props.isCity !== null && `opacity: ${props.isCity ? "1" : "0.5"};`};
+  ${(props) => props.show !== null && `opacity: ${props.show ? "1" : "0.5"};`};
 `;
 
 export const MainContainer = styled.div`

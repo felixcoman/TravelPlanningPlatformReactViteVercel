@@ -6,7 +6,6 @@ import Accommodation from "./components/Accommodation/Accommodation";
 import Account from "./components/Account/Account";
 import Contact from "./components/Contact/Contact";
 import Explore from "./components/Explore/Explore";
-import Feedback from "./components/Feedback/Feedback";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import Itinerary from "./components/Itinerary/Itinerary";
@@ -24,6 +23,7 @@ import {
   itineraryReducer,
 } from "./global/itinerary/reducer";
 import { UserProvider } from "./global/user/UserContext";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function App() {
   const [stateGlobalItinerary, dispatchItinerary] = useReducer(
@@ -67,7 +67,6 @@ function App() {
             ></Route>
             <Route path="/explore/:country/:city" element={<Explore />}></Route>
             <Route path="/users/:id" element={<Users />} />
-            <Route path="/feedback/:id" element={<Feedback />} />
             <Route path="/itinerary" element={<Itinerary />}></Route>
             <Route path="/my-choices/:id" element={<MyChoices />}></Route>
             <Route path="/my-choices" element={<MyChoices />}></Route>

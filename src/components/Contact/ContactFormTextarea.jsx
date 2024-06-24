@@ -1,12 +1,6 @@
 import { ContactTextarea, ErrorP, ContactLabel } from "./Contact.style";
 
-const ContactFormTextarea = ({
-  name,
-  handleChangeTextarea,
-  type,
-  value,
-  error,
-}) => {
+const ContactFormTextarea = ({ name, handleChange, type, value, error }) => {
   return (
     <>
       <ContactLabel loc="ContactLabel">{name} :</ContactLabel>
@@ -14,7 +8,7 @@ const ContactFormTextarea = ({
         loc="ContactTextarea"
         placeholder={name}
         defaultValue={value}
-        onBlur={(e) => handleChangeTextarea(e, name)}
+        onBlur={(e) => handleChange(e, name)}
         type={type}
       />
       {error && <ErrorP loc="ErrorP">{error}</ErrorP>}
