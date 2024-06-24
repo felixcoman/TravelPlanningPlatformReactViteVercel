@@ -1,14 +1,18 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import useFetchUsers from "../../hooks/useFetchUsers";
-import useLocalStorage from "../../hooks/useLocalStorage";
 import { ContactContainer } from "../Contact/Contact.style";
 import { ButtonInfo, InfoSection, InfoUser } from "../Explore/Explore.style";
 import { Error, Loading } from "../MainHome/MainHome.style";
 
 function Users() {
   const { id } = useParams();
-  const { users: user, error, loading } = useFetchUsers(`/${id}`);
-  // const { resetLocalData } = useLocalStorage("user");
+  const [clicked, setClicked] = useState(false);
+  const {
+    users: user,
+    error,
+    loading,
+  } = useFetchUsers(id, clicked, setClicked);
 
   const isObjectEmpty = (user) => {
     return JSON.stringify(user) === "{}";

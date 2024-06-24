@@ -57,7 +57,9 @@ function MyTravelCity() {
     setShow(!show);
   };
 
-  const { users: user } = useFetchUsers("/" + localData);
+  const id = localData;
+  const { users: user } = useFetchUsers(id, clicked, setClicked);
+
   console.log("user", user);
 
   const { stateGlobalChoice, dispatchChoice } = useContext(ChoiceContext);
