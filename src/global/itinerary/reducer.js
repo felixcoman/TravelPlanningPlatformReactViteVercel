@@ -52,19 +52,20 @@ export function itineraryReducer(state, action) {
       let newState = {
         ...state,
         itineraryValue: [],
+        itineraryLandmarkValue: [],
       };
 
       return newState;
     }
 
-    case "ADD_ALL_ITINERARY": {
-      let newState = {
-        ...state,
-        itineraryValue: action.payload,
-      };
+    // case "ADD_ALL_ITINERARY": {
+    //   let newState = {
+    //     ...state,
+    //     itineraryValue: action.payload,
+    //   };
 
-      return newState;
-    }
+    //   return newState;
+    // }
     case "RETURN_TO_DEFAULT": {
       return initialStateItinerary;
     }

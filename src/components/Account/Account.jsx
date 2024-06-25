@@ -9,7 +9,8 @@ import { addAllChoice, removeAllChoice } from "../../global/choice/actions";
 import { ChoiceContext } from "../../global/choice/context";
 import {
   removeAllItinerary,
-  addAllItinerary,
+  itineraryPlus,
+  itineraryLandmarkPlus,
 } from "../../global/itinerary/actions";
 import useFetchUsers from "../../hooks/useFetchUsers";
 import {
@@ -140,8 +141,10 @@ const Account = () => {
       setError("No selected travel choices yet!");
     }
 
-    if (userData.itinerary) {
-      dispatchItinerary(addAllItinerary(userData.itinerary));
+    if (userData.itinerarycity) {
+      dispatchItinerary(itineraryPlus(userData.itinerarycity));
+    } else if (userData.itinerarylandmark) {
+      dispatchItinerary(itineraryLandmarkPlus(userData.itinerarylandmark));
     } else {
       setError("No selected itinerary yet!");
     }

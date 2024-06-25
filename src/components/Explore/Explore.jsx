@@ -74,6 +74,13 @@ const Explore = () => {
   const toggleShowA = () => setShowA(!showA);
   const [onAdd, setOnAdd] = useState(false);
 
+  let accommodationArray = [];
+
+  const checkDuplicate = (arr, obj) =>
+    arr.some(
+      (element) => element.country === obj.country && element.city === obj.city
+    );
+
   const handleAddItinerary = (country, city, event) => {
     setOnAdd(true);
     console.log("HANDLE ADD ITINERARY");
@@ -82,12 +89,7 @@ const Explore = () => {
 
     console.log("ADD OBJECT", addObject);
 
-    const isDuplicate = itineraryValueArray.some(
-      (element) =>
-        element.country === addObject.country && element.city === addObject.city
-    );
-
-    if (isDuplicate) {
+    if (checkDuplicate(itineraryValueArray, addObject)) {
       console.log("cannot be added");
       setUnique(false);
       setShowA(true);
@@ -99,30 +101,53 @@ const Explore = () => {
     }
   };
 
-  let accommodationArray = [];
-
-  const populateAccommondationArray = (arr) => {
-    let cityArr = "";
-    let countryArr = "";
-
-    for (let key of arr) {
-      console.log("key", key);
-      cityArr = key["city"];
-      countryArr = key["country"];
-      accommodationArray.push({ countryArr, cityArr });
+  const addObjectPair = (obj) => {
+    const addObject = { country: obj.country, city: obj.city };
+    console.log(
+      "obj",
+      obj,
+      "addObject",
+      addObject,
+      "obj.country",
+      obj.country,
+      "obj.city",
+      obj.city
+    );
+    if (!checkDuplicate(accommodationArray, addObject)) {
+      console.log("UNIC addObject", addObject);
       console.log("accommodationArray", accommodationArray);
+      accommodationArray.push(addObject);
     }
+  };
+
+  const populateAccommondationArray = (arr, accommodationArray) => {
+    arr.forEach((key) => addObjectPair(key));
     return accommodationArray;
   };
 
-  populateAccommondationArray(itineraryValueArray);
-
-  const goAccomm = () => {
+  const goAccomm = (event) => {
     console.log("GO ACCOMM");
     console.log("Navigating to: ", `/accommodation/${localData}`);
     console.log("State: ", { accommodationArray });
+    console.log("itineraryValueArray.length", itineraryValueArray.length);
+
+    if (itineraryValueArray.length !== 0) {
+      populateAccommondationArray(itineraryValueArray, accommodationArray);
+      console.log("accommodationArray", accommodationArray);
+
+      handleAddItinerary(country, city, event);
+
+      addObjectPair({ country, city });
+    } else {
+      console.log("SUNT PE ELSE");
+      handleAddItinerary(country, city, event);
+
+      accommodationArray.push({ country, city });
+    }
+
+    console.log("accommodationArray", accommodationArray);
     navigate(`/accommodation/${localData}`, {
-      state: [accommodationArray],
+      state: accommodationArray,
     });
   };
 
@@ -192,7 +217,7 @@ const Explore = () => {
           </ButtonCity>
           <ButtonAccomodation
             loc="ButtonAccomodation"
-            onClick={() => goAccomm()}
+            onClick={(event) => goAccomm(event)}
           >
             I want to book accommodation!
           </ButtonAccomodation>

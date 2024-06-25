@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ItineraryContext } from "../../global/itinerary/context";
 import CityCard from "../CityCard/CityCard";
 import {
@@ -28,28 +28,73 @@ function Itinerary() {
 
   let accommodationArray = [];
 
-  const populateAccommondationArray = (arr) => {
-    let cityArr = "";
-    let countryArr = "";
+  const checkDuplicate = (arr, obj) =>
+    arr.some(
+      (element) => element.country === obj.country && element.city === obj.city
+    );
 
-    for (let key of arr) {
-      console.log("key", key);
-      cityArr = key["city"];
-      countryArr = key["country"];
-      accommodationArray.push({ countryArr, cityArr });
-      console.log("accommodationArray", accommodationArray);
-    }
+  const populateAccommondationArray = (arr, accommodationArray) => {
+    // let cityArr = "";
+    // let countryArr = "";
+
+    // for (let key of arr) {
+    //   console.log("key", key);
+    //   cityArr = key.city;
+    //   countryArr = key.country;
+    //   const addObject = { countryArr, cityArr };
+
+    //   if (checkDuplicate(accommodationArray, addObject)) {
+    //     console.log(
+    //       "NO ADD accommodationArray",
+    //       accommodationArray,
+    //       "addObject",
+    //       addObject
+    //     );
+    //     console.log("cannot be added");
+    //   } else {
+    //     console.log("can be added");
+    //     accommodationArray.push({ countryArr, cityArr });
+    //   }
+
+    //   console.log("accommodationArray", accommodationArray);
+    // }
+    arr.forEach((key) => {
+      const addObject = { country: key.country, city: key.city };
+      console.log(
+        "key",
+        key,
+        "addObject",
+        addObject,
+        "key.country",
+        key.country,
+        "key.city",
+        key.city
+      );
+      if (!checkDuplicate(accommodationArray, addObject)) {
+        console.log("UNIC addObject", addObject);
+        console.log("accommodationArray", accommodationArray);
+        accommodationArray.push(addObject);
+      }
+    });
     return accommodationArray;
   };
 
   const goAccomm = () => {
-    populateAccommondationArray(itineraryLandmarkValueArray);
-    populateAccommondationArray(itineraryValueArray);
+    let accommodationArray = [];
+    console.log("itineraryLandmarkValueArray", itineraryLandmarkValueArray);
+    populateAccommondationArray(
+      itineraryLandmarkValueArray,
+      accommodationArray
+    );
+    console.log("FIRST accommodationArray", accommodationArray);
+    console.log("itineraryValueArray", itineraryValueArray);
+    populateAccommondationArray(itineraryValueArray, accommodationArray);
+    console.log("SECOND accommodationArray", accommodationArray);
     console.log("GO ACCOMM");
     console.log("Navigating to: ", `/accommodation/${localData}`);
     console.log("State: ", { accommodationArray });
     navigate(`/accommodation/${localData}`, {
-      state: [accommodationArray],
+      state: accommodationArray,
     });
   };
 
@@ -88,4 +133,5 @@ function Itinerary() {
     </>
   );
 }
+
 export default Itinerary;

@@ -11,7 +11,7 @@ import {
 function Accommodation() {
   const { id } = useParams();
   const location = useLocation();
-  const [accommodationArray] = location.state || [];
+  const accommodationArray = location.state || [];
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -20,24 +20,26 @@ function Accommodation() {
 
   useEffect(() => {
     const fetchData = async (country, city) => {
-      try {
-        const response = await fetch(
-          `http://localhost:3001/${country}?city=${city}`
-        );
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
+      if (country !== undefined && city !== undefined) {
+        try {
+          const response = await fetch(
+            `http://localhost:3001/${country}?city=${city}`
+          );
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          const dataCity = await response.json();
+          return { country, city, dataCity };
+        } catch (error) {
+          return { country, city, error: "Error 808" };
         }
-        const dataCity = await response.json();
-        return { country, city, dataCity };
-      } catch (error) {
-        return { country, city, error: "Error 808" };
-      }
+      } else return;
     };
 
     const fetchAllData = async () => {
       try {
         const promises = accommodationArray.map((element) =>
-          fetchData(element.countryArr, element.cityArr)
+          fetchData(element.country, element.city)
         );
         const results = await Promise.all(promises);
         setData(results);
