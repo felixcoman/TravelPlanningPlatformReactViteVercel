@@ -58,14 +58,24 @@ export function itineraryReducer(state, action) {
       return newState;
     }
 
-    // case "ADD_ALL_ITINERARY": {
-    //   let newState = {
-    //     ...state,
-    //     itineraryValue: action.payload,
-    //   };
+    case "ADD_ALL_ITINERARY_CITY": {
+      let newState = {
+        ...state,
+        itineraryValue: action.payload,
+      };
 
-    //   return newState;
-    // }
+      return newState;
+    }
+
+    case "ADD_ALL_ITINERARY_LANDMARK": {
+      let newState = {
+        ...state,
+        itineraryLandmarkValue: action.payload,
+      };
+
+      return newState;
+    }
+
     case "RETURN_TO_DEFAULT": {
       return initialStateItinerary;
     }

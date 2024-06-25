@@ -1,10 +1,10 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { removeChoice } from "../../global/choice/actions";
 import { ChoiceContext } from "../../global/choice/context";
+import useLocalStorage from "../../hooks/useLocalStorage";
 import { ButtonInfo, InfoSection, InfoUser } from "../Explore/Explore.style";
 import { MainContainerChoice } from "../MyTravelCity/MyTravel.style";
 import MyChoicesBox from "./MyChoicesBox";
-import useLocalStorage from "../../hooks/useLocalStorage";
 
 function MyChoices() {
   const { stateGlobalChoice, dispatchChoice } = useContext(ChoiceContext);

@@ -9,8 +9,8 @@ import { addAllChoice, removeAllChoice } from "../../global/choice/actions";
 import { ChoiceContext } from "../../global/choice/context";
 import {
   removeAllItinerary,
-  itineraryPlus,
-  itineraryLandmarkPlus,
+  addAllItinerary,
+  addAllItineraryLandmark,
 } from "../../global/itinerary/actions";
 import useFetchUsers from "../../hooks/useFetchUsers";
 import {
@@ -142,11 +142,17 @@ const Account = () => {
     }
 
     if (userData.itinerarycity) {
-      dispatchItinerary(itineraryPlus(userData.itinerarycity));
-    } else if (userData.itinerarylandmark) {
-      dispatchItinerary(itineraryLandmarkPlus(userData.itinerarylandmark));
+      dispatchItinerary(addAllItinerary(userData.itinerarycity));
+      console.log("userData.itinerarycity", userData.itinerarycity);
     } else {
-      setError("No selected itinerary yet!");
+      setError("No selected city itinerary yet!");
+    }
+
+    if (userData.itinerarylandmark) {
+      dispatchItinerary(addAllItineraryLandmark(userData.itinerarylandmark));
+      console.log("userData.itinerarylandmark", userData.itinerarylandmark);
+    } else {
+      setError("No selected landmark itinerary yet!");
     }
   };
 

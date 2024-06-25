@@ -76,6 +76,30 @@ const Explore = () => {
 
   let accommodationArray = [];
 
+  const handleUpdateItinerary = (updateData) => {
+    fetch(`http://localhost:3001/users/${localData}`)
+      .then((response) => response.json())
+      .then((userData) => {
+        // Check if the user has a "itinerary" array, if not, initialize it
+        const newData = userData.itinerarycity
+          ? [...userData.itinerarycity, updateData]
+          : [updateData];
+        // Update the user data with the new itinerary
+        const updatedUserData = { ...userData, itinerarycity: newData };
+
+        fetch(`http://localhost:3001/users/${localData}`, {
+          method: "PUT",
+          body: JSON.stringify(updatedUserData),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((response) => response.json())
+          .then((json) => console.log(json));
+      })
+      .catch((error) => console.error("Error fetching user data:", error));
+  };
+
   const checkDuplicate = (arr, obj) =>
     arr.some(
       (element) => element.country === obj.country && element.city === obj.city
@@ -98,6 +122,7 @@ const Explore = () => {
       console.log("can be added");
       setUnique(true);
       dispatchItinerary(itineraryPlus({ country, city }));
+      handleUpdateItinerary(addObject);
     }
   };
 

@@ -68,7 +68,6 @@ function App() {
             <Route path="/explore/:country/:city" element={<Explore />}></Route>
             <Route path="/users/:id" element={<Users />} />
             <Route path="/itinerary" element={<Itinerary />}></Route>
-            <Route path="/my-choices/:id" element={<MyChoices />}></Route>
             <Route path="/my-choices" element={<MyChoices />}></Route>
             <Route path="/account" element={<Account />}></Route>
             <Route path="/accommodation/:id" element={<Accommodation />} />

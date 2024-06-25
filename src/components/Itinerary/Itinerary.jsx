@@ -34,30 +34,6 @@ function Itinerary() {
     );
 
   const populateAccommondationArray = (arr, accommodationArray) => {
-    // let cityArr = "";
-    // let countryArr = "";
-
-    // for (let key of arr) {
-    //   console.log("key", key);
-    //   cityArr = key.city;
-    //   countryArr = key.country;
-    //   const addObject = { countryArr, cityArr };
-
-    //   if (checkDuplicate(accommodationArray, addObject)) {
-    //     console.log(
-    //       "NO ADD accommodationArray",
-    //       accommodationArray,
-    //       "addObject",
-    //       addObject
-    //     );
-    //     console.log("cannot be added");
-    //   } else {
-    //     console.log("can be added");
-    //     accommodationArray.push({ countryArr, cityArr });
-    //   }
-
-    //   console.log("accommodationArray", accommodationArray);
-    // }
     arr.forEach((key) => {
       const addObject = { country: key.country, city: key.city };
       console.log(
