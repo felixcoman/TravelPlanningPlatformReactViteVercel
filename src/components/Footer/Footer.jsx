@@ -6,6 +6,7 @@ import {
 } from "./Footer.style";
 
 function Footer() {
+  const year = new Date().getFullYear();
   return (
     <>
       <FooterContainer loc="FooterContainer">
@@ -15,7 +16,7 @@ function Footer() {
             Email: travelplanningplatform@gmail.com
           </FooterInfo>
         </FooterInfoContainer>
-        <Copyrights loc="Copyrights">@copyrights 2024</Copyrights>
+        <Copyrights loc="Copyrights">copyright {year}</Copyrights>
       </FooterContainer>
     </>
   );
