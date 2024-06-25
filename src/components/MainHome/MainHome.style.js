@@ -11,11 +11,15 @@ import { TEXT_SIZE_MEDIUM } from "../../constants/Dimensions";
 
 export const MainContainer = styled.div`
   display: grid;
-  height: 450px;
+  height: 600px;
   grid-template-columns: 0fr 0fr 0fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 1px;
   margin: 10px auto;
+
+  @media screen and (max-width: 1600px) {
+    height: auto;
+  }
 
   @media screen and (max-width: 768px) {
     grid-gap: 1px;
@@ -24,15 +28,29 @@ export const MainContainer = styled.div`
 `;
 
 export const MainHomeGalleryItem = styled.img`
-  width: 220px;
+  width: 300px;
   height: auto;
   object-fit: cover;
   transition: transform 0.2s ease-in-out;
   &:hover {
     transform: scale(1.05);
   }
+  @media screen and (max-width: 1600px) {
+    width: 250px;
+  }
+
   @media screen and (max-width: 768px) {
     width: 70px;
+  }
+`;
+
+export const MainButtonsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+
+  @media screen and (max-width: 1600px) {
+    justify-content: center;
   }
 `;
 
@@ -42,6 +60,7 @@ export const OptionContainer = styled.div`
   height: auto;
   flex-direction: column;
   align-items: center;
+  position: relative;
 
   @media screen and (max-width: 768px) {
     height: auto;
@@ -87,6 +106,11 @@ export const SelectContainer = styled.div`
   /* position: absolute; */
   border-radius: 8px;
   margin: 15px 30px auto;
+
+  @media screen and (max-width: 1600px) {
+    position: absolute;
+    top: 100px;
+  }
 `;
 export const Select = styled.select`
   width: auto;

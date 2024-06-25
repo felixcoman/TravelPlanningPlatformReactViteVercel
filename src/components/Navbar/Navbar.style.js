@@ -12,15 +12,17 @@ export const Logo = styled.img`
 `;
 
 export const NavbarContainer = styled.div`
+  /* height: 60px; */
+  /* margin-bottom: 50px; */
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   vertical-align: middle;
+  align-items: center;
+  width: 100%;
+  padding: 15px 15px;
+  height: 15vh;
   background-color: ${DARK_BLUE};
   color: ${WHITE_NEUTRAL};
-  width: 100%;
-  height: 60px;
-  margin-bottom: 50px;
 `;
 
 export const LinkNavStyle = styled(Link)`
@@ -28,6 +30,7 @@ export const LinkNavStyle = styled(Link)`
   cursor: pointer;
   color: ${ORANGE};
   padding: 8px;
+  height: 50px;
   margin: 10px;
   border-radius: 4px;
   &:hover {
@@ -91,4 +94,15 @@ export const ButtonDropdown = styled.button`
   @media screen and (max-width: 820px) {
     display: block;
   }
+`;
+
+export const IconBox = styled.span`
+  width: 400px;
+  padding: 8px;
+  height: 50px;
+  margin: 10px;
+`;
+
+export const Icon = styled.i`
+  padding: 8px;
 `;

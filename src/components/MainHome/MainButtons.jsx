@@ -1,5 +1,10 @@
 import { useState, useRef } from "react";
-import { Buttons, ButtonsContainer, OptionContainer } from "./MainHome.style";
+import {
+  Buttons,
+  ButtonsContainer,
+  OptionContainer,
+  MainButtonsContainer,
+} from "./MainHome.style";
 import SelectOptionExplore from "./SelectOptionExplore";
 import SelectOptionPlan from "./SelectOptionPlan";
 
@@ -21,7 +26,7 @@ function MainButtons() {
   };
 
   return (
-    <>
+    <MainButtonsContainer loc="MainButtonsContainer">
       <OptionContainer loc="OptionContainer">
         <ButtonsContainer loc="ButtonsContainer">
           <Buttons
@@ -42,7 +47,7 @@ function MainButtons() {
         {isVisible1 && <SelectOptionExplore />}
         {isVisible2 && <SelectOptionPlan />}
       </OptionContainer>
-    </>
+    </MainButtonsContainer>
   );
 }
 
