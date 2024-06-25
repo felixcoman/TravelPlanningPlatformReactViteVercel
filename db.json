@@ -14,6 +14,8 @@
     {
       "Email": "",
       "choices": [],
+      "itinerarycity": [],
+      "itinerarylandmark": [],
       "id": 0
     }
   ],

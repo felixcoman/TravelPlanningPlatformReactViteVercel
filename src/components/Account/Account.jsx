@@ -1,12 +1,18 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../global/user/UserContext";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import { Buttons } from "../MainHome/MainHome.style";
 import AccountForm from "./AccountForm";
-import { UserContext } from "../../global/user/UserContext";
 
 import { addAllChoice, removeAllChoice } from "../../global/choice/actions";
 import { ChoiceContext } from "../../global/choice/context";
+import {
+  removeAllItinerary,
+  addAllItinerary,
+  addAllItineraryLandmark,
+} from "../../global/itinerary/actions";
+import useFetchUsers from "../../hooks/useFetchUsers";
 import {
   ButtonsContainerAccount,
   ContactButton,
@@ -14,7 +20,7 @@ import {
   ContactText,
   ErrorP,
 } from "./Account.style";
-import useFetchUsers from "../../hooks/useFetchUsers";
+import { ItineraryContext } from "../../global/itinerary/context";
 
 const Account = () => {
   const navigate = useNavigate();
@@ -34,9 +40,6 @@ const Account = () => {
   const buttonRef1 = useRef(null);
   const buttonRef2 = useRef(null);
 
-  // const [users, setUsers] = useState([]);
-  // const [loading, setLoading] = useState(true);
-  // const [error, setError] = useState([]);
   const [isFound, setIsFound] = useState([]);
   const [errorInput, setErrorInput] = useState({
     Email: undefined,
@@ -44,31 +47,20 @@ const Account = () => {
   const [isValid, setIsValid] = useState(true);
 
   const { stateGlobalChoice, dispatchChoice } = useContext(ChoiceContext);
+  const { stateGlobalItinerary, dispatchItinerary } =
+    useContext(ItineraryContext);
 
   const { localData, handleLocalData, resetLocalData } =
     useLocalStorage("user");
 
-  console.log("localData", localData, stateGlobalChoice);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch(`http://localhost:3001/users`);
-  //       if (!response.ok) {
-  //         throw new Error("Network response was not ok");
-  //       }
-  //       const userData = await response.json();
-  //       console.log("userData", userData);
-  //       setUsers(userData);
-  //       setLoading(false);
-  //     } catch (error) {
-  //       setError("Error 808");
-  //       setLoading(false);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, []);
+  console.log(
+    "localData",
+    localData,
+    "stateGlobalChoice",
+    stateGlobalChoice,
+    "stateGlobalItinerary",
+    stateGlobalItinerary
+  );
 
   console.log("users", users, "loading", loading, "error", error);
 
@@ -93,13 +85,13 @@ const Account = () => {
   });
 
   const handleChange = (e, name) => {
-    setClicked(true);
     setError(false);
+    setClicked(true);
     const value = e.target.value;
     setInputObj({ ...inputObj, [name]: value });
     handleError(value, name);
 
-    const foundUser = users.find((element) => element.Email === value);
+    const foundUser = users?.find((element) => element.Email === value);
 
     if (users && users.length > 0) {
       setIsFound(foundUser !== undefined);
@@ -125,7 +117,7 @@ const Account = () => {
 
   const addNewId = async () => {
     dispatchChoice(removeAllChoice());
-    // resetLocalData();
+    dispatchItinerary(removeAllItinerary());
     const idul = await handleSubmit();
     handleLocalData("user", JSON.stringify(idul));
     console.log("S-a adagat un user cu acest id in local storage", idul);
@@ -142,15 +134,25 @@ const Account = () => {
 
     handleLocalData("user", JSON.stringify(userData.id));
     setUser(userData);
-    // dispatchChoice(removeAllChoice());
-    // userData.choices
-    //   ? dispatchChoice(addAllChoice(userData.choices))
-    //   : setError("No selected travel choices yet!");
 
     if (userData.choices) {
       dispatchChoice(addAllChoice(userData.choices));
     } else {
       setError("No selected travel choices yet!");
+    }
+
+    if (userData.itinerarycity) {
+      dispatchItinerary(addAllItinerary(userData.itinerarycity));
+      console.log("userData.itinerarycity", userData.itinerarycity);
+    } else {
+      setError("No selected city itinerary yet!");
+    }
+
+    if (userData.itinerarylandmark) {
+      dispatchItinerary(addAllItineraryLandmark(userData.itinerarylandmark));
+      console.log("userData.itinerarylandmark", userData.itinerarylandmark);
+    } else {
+      setError("No selected landmark itinerary yet!");
     }
   };
 
@@ -159,6 +161,7 @@ const Account = () => {
     resetLocalData();
     setUser(null);
     dispatchChoice(removeAllChoice());
+    dispatchItinerary(removeAllItinerary());
   };
 
   const handleError = (value, name) => {
