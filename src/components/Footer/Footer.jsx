@@ -3,6 +3,7 @@ import {
   FooterInfoContainer,
   FooterInfo,
   Copyrights,
+  AboutCredits,
 } from "./Footer.style";
 
 function Footer() {
@@ -17,6 +18,9 @@ function Footer() {
           </FooterInfo>
         </FooterInfoContainer>
         <Copyrights loc="Copyrights">copyright {year}</Copyrights>
+        <AboutCredits loc="AboutCredits" to={`/about`}>
+          Credits
+        </AboutCredits>
       </FooterContainer>
     </>
   );
