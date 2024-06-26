@@ -5,6 +5,7 @@ import {
   FormBody,
   HomeBtn,
   LabelHead,
+  LabelHeadText,
   Option,
   Select,
   SelectContainer,
@@ -57,7 +58,7 @@ function SelectOptionExplore() {
       <SelectContainer loc="SelectContainer">
         <FormBody loc="FormBody" onSubmit={(e) => handleSubmit(e)}>
           <LabelHead loc="LabelHead">
-            Select country:
+            <LabelHeadText>Select country:</LabelHeadText>
             <Select
               value={selectedCountry}
               onChange={handleDropdownChangeCountry}
@@ -82,7 +83,7 @@ function SelectOptionExplore() {
           </LabelHead>
           {data && (
             <LabelHead loc="LabelHead">
-              Select city:
+              <LabelHeadText>Select city:</LabelHeadText>
               <Select
                 value={selectedCity}
                 onChange={handleDropdownChangeCity}
@@ -118,11 +119,10 @@ function SelectOptionExplore() {
       )}
       {error && (
         <Error loc="Error">
-          Error: {error.message} Our team is called from the coffee break and
+          Error: {error.message}! Our team is called from the coffee break and
           will take care of the problem!
         </Error>
       )}
-      {data && console.log("data", data)}
     </>
   );
 }

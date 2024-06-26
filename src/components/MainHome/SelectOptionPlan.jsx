@@ -1,6 +1,14 @@
 import { useState } from "react";
 import useFetchData from "../../hooks/useFetchData";
-import { HomeBtn, Option, SelectPlan, SelectContainer } from "./MainHome.style";
+import {
+  HomeBtn,
+  Option,
+  SelectPlan,
+  SelectContainer,
+  FormBody,
+  Loading,
+  Error,
+} from "./MainHome.style";
 import useLocalStorage from "../../hooks/useLocalStorage";
 
 function SelectOptionPlan() {
@@ -34,7 +42,7 @@ function SelectOptionPlan() {
   return (
     <>
       <SelectContainer loc="SelectContainer">
-        <form onSubmit={(e) => handleSubmit(e)}>
+        <FormBody loc="FormBody" onSubmit={(e) => handleSubmit(e)}>
           <SelectPlan
             loc="SelectPlan"
             value={selectedCountry}
@@ -66,8 +74,17 @@ function SelectOptionPlan() {
               Let's Begin To Travel!
             </HomeBtn>
           )}
-        </form>
+        </FormBody>
       </SelectContainer>
+      {loading && (
+        <Loading loc="Loading">Loading... Waiting for landing...</Loading>
+      )}
+      {error && (
+        <Error loc="Error">
+          Error: {error.message}! Our team is called from the coffee break and
+          will take care of the problem!
+        </Error>
+      )}
     </>
   );
 }

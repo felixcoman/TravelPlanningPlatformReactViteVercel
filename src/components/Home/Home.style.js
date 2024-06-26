@@ -15,4 +15,8 @@ export const HomeContainer = styled.div`
     flex-direction: row;
     justify-content: center;
   }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;

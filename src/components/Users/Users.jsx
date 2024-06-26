@@ -18,6 +18,7 @@ function Users() {
     return JSON.stringify(user) === "{}";
   };
   console.log("id", id, "user", user, "error", error, "loading", loading);
+  console.log("JSON.stringify(user)", JSON.stringify(user));
   return (
     <ContactContainer>
       {loading && !error && <Loading loc="Loading">Loading...</Loading>}

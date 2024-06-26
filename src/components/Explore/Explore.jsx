@@ -196,13 +196,26 @@ const Explore = () => {
           <>
             <ContainerTop loc="ContainerTop">
               <ImageCity loc="ImageCity" src={compactDataCity.image} />
+              <a
+                className="stamp"
+                href="https://www.freeiconspng.com/img/24416"
+                title="Image from freeiconspng.com"
+              >
+                <img
+                  src="https://www.freeiconspng.com/uploads/mail-stamp-template-png-33.png"
+                  width="350"
+                  alt="Mail Stamp Template png"
+                />
+              </a>
               <ContainerDescriptionTop loc="ContainerDescriptionTop">
                 <CountrySubtitle loc="CountrySubtitle">
                   Country: {country}
                 </CountrySubtitle>
-                <Subtitle loc="Subtitle">
-                  Region: {compactDataCity.reg}
-                </Subtitle>
+                {compactDataCity.reg && (
+                  <Subtitle loc="Subtitle">
+                    Region: {compactDataCity.reg}
+                  </Subtitle>
+                )}
                 <Subtitle loc="Subtitle">City: {city}</Subtitle>
               </ContainerDescriptionTop>
             </ContainerTop>

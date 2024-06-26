@@ -26,11 +26,19 @@ export const ImageCity = styled.img`
 `;
 
 export const ContainerDescriptionTop = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 10px;
   color: ${ORANGE};
+  position: absolute;
+  top: -42px;
+  left: 153px;
+  margin: 10px;
+  transform: rotate(348deg);
+  background: rgba(89, 1, 15);
+  width: 140px;
+  height: 182px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 export const Subtitle = styled.h2`
@@ -46,7 +54,8 @@ export const ContainerDescriptionBottom = styled.div`
   display: flex;
   width: 100%;
   margin-top: 10px;
-  background-color: rgba(255, 165, 0, 0.3);
+  /* background-color: rgba(255, 165, 0, 0.3); */
+  background-image: url("../../../src/assets/897940_2588.jpg");
 `;
 
 export const CityDescription = styled.h3`

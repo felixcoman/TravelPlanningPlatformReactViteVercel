@@ -1,8 +1,5 @@
 :root {
-  background-color: #08032f;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -19,6 +16,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--dark-blue) !important;
+  font-family: "Trebuchet MS", sans-serif !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,4 +53,12 @@ body {
   position: absolute;
   bottom: -1230px;
   left: 40vw;
+}
+.stamp {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  transform: rotate(340deg);
+  opacity: 0.6;
+  z-index: 1;
 }

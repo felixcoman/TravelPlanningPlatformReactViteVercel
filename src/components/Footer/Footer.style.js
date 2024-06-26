@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { DARK_BLUE, WHITE_NEUTRAL } from "../../constants/Colors";
+import { DARK_BLUE, WHITE_NEUTRAL, MIDDLE_BLUE } from "../../constants/Colors";
 import { TEXT_SIZE_SMALL } from "../../constants/Dimensions";
+import { Link } from "react-bootstrap-icons";
 
 export const FooterContainer = styled.div`
   background-color: ${DARK_BLUE};
@@ -16,6 +17,7 @@ export const FooterContainer = styled.div`
   height: 15vh;
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    flex-wrap: nowrap;
   }
 `;
 
@@ -40,4 +42,18 @@ export const Copyrights = styled.p`
     font-size: ${TEXT_SIZE_SMALL};
     margin-top: 20px;
   }
+`;
+
+export const AboutCredits = styled(Link)`
+  background: ${MIDDLE_BLUE};
+  color: ${WHITE_NEUTRAL};
+  align-content: center;
+  height: 64px;
+  width: 100%;
+  padding: 6px 12px;
+  margin: 10px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
 `;
