@@ -95,6 +95,10 @@ export const OptionContainer = styled.div`
     height: auto;
     top: -70px;
   }
+  @media screen and (max-width: 440px) {
+    /* height: auto;
+    top: -70px; */
+  }
 `;
 
 export const ButtonsContainer = styled.div`

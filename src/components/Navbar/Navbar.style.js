@@ -22,7 +22,7 @@ export const NavbarContainer = styled.div`
   height: 15vh;
   background-color: ${DARK_BLUE};
   color: ${WHITE_NEUTRAL};
-  @media screen and (max-width: 840px) {
+  @media screen and (max-width: 900px) {
     height: 17vh;
   }
 `;
@@ -40,7 +40,7 @@ export const LinkNavStyle = styled(Link)`
     color: ${DARK_BLUE};
     border-radius: 0;
   }
-  @media screen and (max-width: 840px) {
+  @media screen and (max-width: 900px) {
     color: ${DARK_BLUE};
     margin: 0 auto;
     height: fit-content;
@@ -54,7 +54,7 @@ export const LinkContainer = styled.div`
   width: 100%;
   /* min-width: max-content; */
   position: absolute;
-  top: 45px;
+  top: 75px;
   left: 0;
   z-index: 1;
   /* 
@@ -69,7 +69,6 @@ export const LinkContainer = styled.div`
     flex-direction: column;
     width: 100%;
     position: relative;
-    z-index: 0;
   }
 `;
 
@@ -84,7 +83,7 @@ export const DropdownContainer = styled.div`
   display: none;
   border-radius: 8px;
 
-  @media screen and (max-width: 840px) {
+  @media screen and (max-width: 900px) {
     display: block;
   }
 `;
@@ -97,7 +96,7 @@ export const LinkContainerDesktop = styled.div`
   width: 100%;
   font-size: ${TEXT_SIZE_MEDIUM};
 
-  @media screen and (max-width: 840px) {
+  @media screen and (max-width: 900px) {
     display: none;
   }
 `;
@@ -112,16 +111,15 @@ export const ButtonDropdown = styled.button`
   margin: 10px;
   border: none;
 
-  @media screen and (max-width: 840px) {
+  @media screen and (max-width: 900px) {
     display: block;
   }
 `;
 
 export const IconBox = styled.span`
-  /* width: max-content; */
   padding: 8px;
   height: auto;
-  margin: 10px;
+  /* margin: 10px; */
   min-width: 100px;
 `;
 
@@ -131,9 +129,9 @@ export const Icon = styled.i`
 
 export const BadgeBox = styled.span`
   display: none;
-  @media screen and (max-width: 840px) {
+  padding: 8px;
+  @media screen and (max-width: 900px) {
     display: block;
-    background: ${ORANGE};
     min-width: 65px;
   }
 `;
