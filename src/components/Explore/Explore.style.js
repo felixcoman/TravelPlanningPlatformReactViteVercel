@@ -37,7 +37,7 @@ export const ContainerDescriptionTop = styled.div`
   height: 182px;
   display: flex;
   justify-content: space-evenly;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
 `;
 
