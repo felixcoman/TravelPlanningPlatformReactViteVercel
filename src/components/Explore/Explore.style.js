@@ -6,30 +6,58 @@ import {
   WHITE_NEUTRAL,
   YELLOW,
   MIDDLE_BLUE,
+  HANDWRITING,
+  PAPER_COLOR,
+  LIFELINE_ORANGE,
 } from "../../constants/Colors";
 import { TEXT_SIZE_MEDIUM, TEXT_SIZE_SMALL } from "../../constants/Dimensions";
+
+export const SectionExplore = styled.section`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  font-size: ${TEXT_SIZE_MEDIUM};
+`;
 
 export const Title = styled.h1`
   color: ${ORANGE};
   font-size: ${TEXT_SIZE_MEDIUM};
+  margin-bottom: 65px;
 `;
 
 export const ContainerTop = styled.div`
   position: relative;
+  align-self: center;
+  width: 100%;
 `;
 
 export const ImageCity = styled.img`
+  padding: 10px;
   width: 100%;
   height: 70vh;
   opacity: 0.6;
   object-fit: contain;
+  align-self: center;
+`;
+
+export const MyStamp = styled.div`
+  @media screen and (max-width: 840px) {
+    transition: all 1s;
+    position: absolute;
+    transform: scale(0.75);
+    top: -10px;
+    left: 10px;
+  }
 `;
 
 export const ContainerDescriptionTop = styled.div`
   color: ${ORANGE};
   position: absolute;
-  top: -42px;
-  left: 153px;
+  top: -21px;
+  left: 174px;
   margin: 10px;
   transform: rotate(348deg);
   background: rgba(89, 1, 15);
@@ -39,6 +67,8 @@ export const ContainerDescriptionTop = styled.div`
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  @media screen and (max-width: 840px) {
+  }
 `;
 
 export const Subtitle = styled.h2`
@@ -53,48 +83,60 @@ export const CountrySubtitle = styled(Subtitle)`
 export const ContainerDescriptionBottom = styled.div`
   display: flex;
   width: 100%;
-  margin-top: 10px;
-  /* background-color: rgba(255, 165, 0, 0.3); */
+  /* margin-top: 10px; */
   background-image: url("../../../src/assets/897940_2588.jpg");
+  align-self: center;
+  padding: 50px 0px;
 `;
 
 export const CityDescription = styled.h3`
+  color: ${HANDWRITING};
+  font-size: 40px;
   display: flex;
-  width: 80%;
+  width: 60%;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: ${TEXT_SIZE_SMALL};
-  color: ${WHITE_NEUTRAL};
   text-align: justify;
+  font-weight: bold;
 `;
 
 export const SectionCityData = styled.section`
   display: flex;
   flex-direction: column;
   margin: 0 0 50px 0;
+  width: 90%;
 `;
 
 export const SectionCityButtons = styled.section`
   display: flex;
   flex-direction: row;
-  margin: 50px 0;
+  margin: 16px 0;
 `;
 
 export const ButtonCity = styled(Link)`
-  background: ${WHITE_NEUTRAL};
+  background: ${PAPER_COLOR};
   color: ${DARK_BLUE};
   width: 100%;
   padding: 6px 12px;
   margin: 10px;
   border-radius: 5px;
   text-align: center;
+  align-content: center;
   text-decoration: none;
+  border: none;
   cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+  transition: all 0.5s;
+  &:hover {
+    border: solid 2px white;
+    box-shadow: 0 0 80px ${LIFELINE_ORANGE};
+  }
 `;
 
 export const ButtonAccomodation = styled.button`
-  background: ${WHITE_NEUTRAL};
+  background: ${PAPER_COLOR};
   color: ${DARK_BLUE};
   width: 100%;
   padding: 6px 12px;
@@ -102,7 +144,15 @@ export const ButtonAccomodation = styled.button`
   border-radius: 5px;
   text-align: center;
   text-decoration: none;
+  border: none;
   cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+  transition: all 0.5s;
+  &:hover {
+    border: solid 2px white;
+    box-shadow: 0 0 80px ${LIFELINE_ORANGE};
+  }
 `;
 
 export const SectionLandmarkData = styled.section`

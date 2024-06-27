@@ -90,10 +90,7 @@ function NavBar() {
         )}
       </LinkContainerDesktop>
 
-      <ButtonDropdown
-        loc="ButtonDropdown"
-        onClick={() => handleDisplayDropdown()}
-      >
+      <ButtonDropdown loc="ButtonDropdown" onClick={handleDisplayDropdown}>
         {!displayDropdown ? <List size={40} /> : <X size={40} />}
       </ButtonDropdown>
       {displayDropdown && (
