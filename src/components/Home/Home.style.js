@@ -20,5 +20,8 @@ export const HomeContainer = styled.div`
 
   @media screen and (max-width: 840px) {
     flex-direction: column;
+    height: 60vh;
   }
+  /* @media screen and (max-width: 440px) {
+  } */
 `;

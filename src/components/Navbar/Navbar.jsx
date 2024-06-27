@@ -59,24 +59,19 @@ function NavBar() {
             </Icon>
           </IconBox>
         )}
-        {displayDropdown && (
-          <>
-            <BadgeBox loc="BadgeBox">
-              My Itinerary:{" "}
-              <Badge className="itinerary-badge" bg="primary">
-                {stateGlobalItinerary.itineraryValue?.length +
-                  stateGlobalItinerary.itineraryLandmarkValue?.length}
-              </Badge>
-            </BadgeBox>
-            <BadgeBox loc="BadgeBox">
-              My Choices:{" "}
-              <Badge className="choice-badge" bg="primary">
-                {stateGlobalChoice.choiceValue?.length}
-              </Badge>
-            </BadgeBox>
-            <MobileDropdown handleDisplayDropdown={handleDisplayDropdown} />
-          </>
-        )}
+        <BadgeBox loc="BadgeBox">
+          My Itinerary:{" "}
+          <Badge className="itinerary-badge" bg="primary">
+            {stateGlobalItinerary.itineraryValue?.length +
+              stateGlobalItinerary.itineraryLandmarkValue?.length}
+          </Badge>
+        </BadgeBox>
+        <BadgeBox loc="BadgeBox">
+          My Choices:{" "}
+          <Badge className="choice-badge" bg="primary">
+            {stateGlobalChoice.choiceValue?.length}
+          </Badge>
+        </BadgeBox>
       </AlertWrap>
       <LinkContainerDesktop loc="LinkContainerDesktop">
         {routes.map((el, index) => (
@@ -101,6 +96,9 @@ function NavBar() {
       >
         {!displayDropdown ? <List size={40} /> : <X size={40} />}
       </ButtonDropdown>
+      {displayDropdown && (
+        <MobileDropdown handleDisplayDropdown={handleDisplayDropdown} />
+      )}
     </NavbarContainer>
   );
 }

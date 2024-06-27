@@ -25,10 +25,10 @@ body {
 
 .itinerary-badge {
   position: absolute;
-  right: 342px;
+  right: 340px;
   top: 8px;
 
-  @media screen and (max-width: 840px) {
+  @media screen and (max-width: 900px) {
     position: inherit;
   }
 }
@@ -37,7 +37,7 @@ body {
   position: absolute;
   right: 205px;
   top: 8px;
-  @media screen and (max-width: 840px) {
+  @media screen and (max-width: 900px) {
     position: inherit;
   }
 }
