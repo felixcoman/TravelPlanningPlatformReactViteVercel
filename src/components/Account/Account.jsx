@@ -21,6 +21,7 @@ import {
   ErrorP,
 } from "./Account.style";
 import { ItineraryContext } from "../../global/itinerary/context";
+import { InfoUser } from "../Explore/Explore.style";
 
 const Account = () => {
   const navigate = useNavigate();
@@ -39,6 +40,8 @@ const Account = () => {
   const [isVisible2, setIsVisible2] = useState(false);
   const buttonRef1 = useRef(null);
   const buttonRef2 = useRef(null);
+
+  const [message, setMessage] = useState(false);
 
   const [isFound, setIsFound] = useState([]);
   const [errorInput, setErrorInput] = useState({
@@ -138,21 +141,21 @@ const Account = () => {
     if (userData.choices) {
       dispatchChoice(addAllChoice(userData.choices));
     } else {
-      setError("No selected travel choices yet!");
+      setMessage("No selected travel choices yet!");
     }
 
     if (userData.itinerarycity) {
       dispatchItinerary(addAllItinerary(userData.itinerarycity));
       console.log("userData.itinerarycity", userData.itinerarycity);
     } else {
-      setError("No selected city itinerary yet!");
+      setMessage("No selected city itinerary yet!");
     }
 
     if (userData.itinerarylandmark) {
       dispatchItinerary(addAllItineraryLandmark(userData.itinerarylandmark));
       console.log("userData.itinerarylandmark", userData.itinerarylandmark);
     } else {
-      setError("No selected landmark itinerary yet!");
+      setMessage("No selected landmark itinerary yet!");
     }
   };
 
@@ -220,6 +223,7 @@ const Account = () => {
           ))}
           {isValid && isFound && (
             <ContactButton
+              loc="ContactButton"
               onClick={() => {
                 getUserData();
               }}
@@ -227,10 +231,12 @@ const Account = () => {
               Login
             </ContactButton>
           )}
-          {isValid && isFound && error && (
+          {isValid && isFound && message && (
             <>
-              <ErrorP>{error}</ErrorP>
-              <ContactButton to={`/home`}>Take me view offers!</ContactButton>
+              <InfoUser loc="InfoUser">{message}</InfoUser>
+              <ContactButton loc="ContactButton" to={`/home`}>
+                Take me to view offers!
+              </ContactButton>
             </>
           )}
           {!isValid && <ErrorP>Not valid</ErrorP>}

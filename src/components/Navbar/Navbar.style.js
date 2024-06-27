@@ -12,12 +12,11 @@ export const Logo = styled.img`
 `;
 
 export const NavbarContainer = styled.div`
-  /* height: 60px; */
-  /* margin-bottom: 50px; */
   display: flex;
   flex-direction: row;
   vertical-align: middle;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   padding: 15px 15px;
   height: 15vh;
@@ -38,7 +37,7 @@ export const LinkNavStyle = styled(Link)`
     color: ${DARK_BLUE};
     border-radius: 0;
   }
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 840px) {
     color: ${DARK_BLUE};
     margin: 0 auto;
   }
@@ -63,7 +62,7 @@ export const DropdownContainer = styled.div`
   display: none;
   border-radius: 8px;
 
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 840px) {
     display: block;
   }
 `;
@@ -76,7 +75,7 @@ export const LinkContainerDesktop = styled.div`
   width: 100%;
   font-size: ${TEXT_SIZE_MEDIUM};
 
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 840px) {
     display: none;
   }
 `;
@@ -91,7 +90,7 @@ export const ButtonDropdown = styled.button`
   margin: 10px;
   border: none;
 
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 840px) {
     display: block;
   }
 `;

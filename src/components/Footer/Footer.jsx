@@ -3,7 +3,7 @@ import {
   FooterInfoContainer,
   FooterInfo,
   Copyrights,
-  AboutCredits,
+  Credits,
 } from "./Footer.style";
 
 function Footer() {
@@ -17,10 +17,10 @@ function Footer() {
             Email: travelplanningplatform@gmail.com
           </FooterInfo>
         </FooterInfoContainer>
+        <Credits loc="Credits" to={`/about`}>
+          Click for credits
+        </Credits>
         <Copyrights loc="Copyrights">copyright {year}</Copyrights>
-        <AboutCredits loc="AboutCredits" to={`/about`}>
-          Credits
-        </AboutCredits>
       </FooterContainer>
     </>
   );
