@@ -27,12 +27,19 @@ body {
   position: absolute;
   right: 342px;
   top: 8px;
+
+  @media screen and (max-width: 840px) {
+    position: inherit;
+  }
 }
 
 .choice-badge {
   position: absolute;
   right: 205px;
   top: 8px;
+  @media screen and (max-width: 840px) {
+    position: inherit;
+  }
 }
 
 .card-img {
