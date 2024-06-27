@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
+
 :root {
   line-height: 1.5;
   font-synthesis: none;
@@ -56,16 +58,41 @@ body {
   text-align: justify;
 }
 
-.my-toast {
+.my-landmark-toast {
   position: absolute;
-  bottom: -1230px;
-  left: 40vw;
+  bottom: -1500px;
+}
+.my-city-toast {
+  position: absolute;
+  bottom: -270px;
+}
+
+.toast {
+  width: 600px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 1;
+  left: 30vw;
 }
 .stamp {
   position: absolute;
+  padding: 20px;
   top: -20px;
   left: -20px;
   transform: rotate(340deg);
   opacity: 0.6;
   z-index: 1;
+}
+
+/* FONTS */
+.tangerine-bold {
+  font-family: "Tangerine", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.tangerine-regular {
+  font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-style: normal;
 }

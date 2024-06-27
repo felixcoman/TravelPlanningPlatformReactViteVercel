@@ -111,7 +111,7 @@ function DestionationCard({
         useToast(
           "Intinerary",
           `${name} is already in the Itinerary!`,
-          "my-toast",
+          "my-landmark-toast",
           showA,
           toggleShowA
         )}
@@ -120,7 +120,7 @@ function DestionationCard({
         useToast(
           "Intinerary",
           `Succes! ${name} was added to the Itinerary!`,
-          "my-toast",
+          "my-landmark-toast",
           showA,
           toggleShowA
         )}

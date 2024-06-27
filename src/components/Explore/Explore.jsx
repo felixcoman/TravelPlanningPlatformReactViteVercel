@@ -19,6 +19,8 @@ import {
   Subtitle,
   Title,
   ButtonAccomodation,
+  SectionExplore,
+  MyStamp,
 } from "./Explore.style";
 
 import useToast from "../../global/useToast";
@@ -177,11 +179,11 @@ const Explore = () => {
   };
 
   return (
-    <>
+    <SectionExplore loc="SectionExplore">
+      <Title loc="Title">
+        Feel free to explore our offers regarding your selection:
+      </Title>
       <SectionCityData loc="SectionCityData">
-        <Title loc="Title">
-          Feel free to explore our offers regarding your selection:
-        </Title>
         {loadingCity && (
           <Loading loc="Loading">Loading... Waiting for landing...</Loading>
         )}
@@ -196,29 +198,34 @@ const Explore = () => {
           <>
             <ContainerTop loc="ContainerTop">
               <ImageCity loc="ImageCity" src={compactDataCity.image} />
-              <a
-                className="stamp"
-                href="https://www.freeiconspng.com/img/24416"
-                title="Image from freeiconspng.com"
-              >
-                <img
-                  src="https://www.freeiconspng.com/uploads/mail-stamp-template-png-33.png"
-                  width="350"
-                  alt="Mail Stamp Template png"
-                />
-              </a>
-              <ContainerDescriptionTop loc="ContainerDescriptionTop">
-                <CountrySubtitle loc="CountrySubtitle">
-                  {country}
-                </CountrySubtitle>
-                {compactDataCity.reg && (
-                  <Subtitle loc="Subtitle">{compactDataCity.reg}</Subtitle>
-                )}
-                <Subtitle loc="Subtitle">{city}</Subtitle>
-              </ContainerDescriptionTop>
+              <MyStamp loc="MyStamp">
+                <a
+                  className="stamp"
+                  href="https://www.freeiconspng.com/img/24416"
+                  title="Image from freeiconspng.com"
+                >
+                  <img
+                    src="https://www.freeiconspng.com/uploads/mail-stamp-template-png-33.png"
+                    width="350"
+                    alt="Mail Stamp Template png"
+                  />
+                </a>
+                <ContainerDescriptionTop loc="ContainerDescriptionTop">
+                  <CountrySubtitle loc="CountrySubtitle">
+                    {country}
+                  </CountrySubtitle>
+                  {compactDataCity.reg && (
+                    <Subtitle loc="Subtitle">{compactDataCity.reg}</Subtitle>
+                  )}
+                  <Subtitle loc="Subtitle">{city}</Subtitle>
+                </ContainerDescriptionTop>
+              </MyStamp>
             </ContainerTop>
             <ContainerDescriptionBottom loc="ContainerDescriptionBottom">
-              <CityDescription loc="CityDescription">
+              <CityDescription
+                className="tangerine-regular"
+                loc="CityDescription"
+              >
                 Description: {compactDataCity.description}
               </CityDescription>
             </ContainerDescriptionBottom>
@@ -244,6 +251,7 @@ const Explore = () => {
         <SectionCityButtons loc="SectionCityButtons">
           {console.log("country", country)}
           <ButtonCity
+            className="tangerine-regular"
             loc="ButtonCity"
             onClick={(event) => {
               handleAddItinerary(country, city, event);
@@ -252,6 +260,7 @@ const Explore = () => {
             Save {city} to my itinerary!
           </ButtonCity>
           <ButtonAccomodation
+            className="tangerine-regular"
             loc="ButtonAccomodation"
             onClick={(event) => goAccomm(event)}
           >
@@ -263,7 +272,7 @@ const Explore = () => {
         useToast(
           "Intinerary",
           `${city} is already in the Itinerary!`,
-          "",
+          "my-city-toast",
           showA,
           toggleShowA
         )}
@@ -272,11 +281,11 @@ const Explore = () => {
         useToast(
           "Intinerary",
           `Succes! ${city} was added to the Itinerary!`,
-          "",
+          "my-city-toast",
           showA,
           toggleShowA
         )}
-    </>
+    </SectionExplore>
   );
 };
 

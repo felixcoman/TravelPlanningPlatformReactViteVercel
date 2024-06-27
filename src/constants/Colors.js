@@ -10,4 +10,6 @@ export const RED = "#ae412e";
 export const GRADIENT_BLUE_DARK = "#1d4f5d";
 export const GRADIENT_BLUE_MIDDLE = "#026481";
 export const GRADIENT_BLUE_LIGHT = "#009cac";
+export const HANDWRITING = "#16264c";
 export const LIFELINE_ORANGE = "#f1811f";
+export const PAPER_COLOR = "#d4b57f";
