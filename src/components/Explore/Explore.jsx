@@ -209,14 +209,12 @@ const Explore = () => {
               </a>
               <ContainerDescriptionTop loc="ContainerDescriptionTop">
                 <CountrySubtitle loc="CountrySubtitle">
-                  Country: {country}
+                  {country}
                 </CountrySubtitle>
                 {compactDataCity.reg && (
-                  <Subtitle loc="Subtitle">
-                    Region: {compactDataCity.reg}
-                  </Subtitle>
+                  <Subtitle loc="Subtitle">{compactDataCity.reg}</Subtitle>
                 )}
-                <Subtitle loc="Subtitle">City: {city}</Subtitle>
+                <Subtitle loc="Subtitle">{city}</Subtitle>
               </ContainerDescriptionTop>
             </ContainerTop>
             <ContainerDescriptionBottom loc="ContainerDescriptionBottom">

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { DARK_BLUE, WHITE_NEUTRAL, MIDDLE_BLUE } from "../../constants/Colors";
 import { TEXT_SIZE_SMALL } from "../../constants/Dimensions";
-import { Link } from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
 
 export const FooterContainer = styled.div`
   background-color: ${DARK_BLUE};
@@ -12,12 +12,14 @@ export const FooterContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin-top: 20px; */
   padding: 15px 15px;
   height: 15vh;
-  @media screen and (max-width: 768px) {
+  font-size: ${TEXT_SIZE_SMALL};
+
+  @media screen and (max-width: 840px) {
     flex-direction: column;
     flex-wrap: nowrap;
+    gap: 0;
   }
 `;
 
@@ -30,30 +32,27 @@ export const FooterInfoContainer = styled.div`
 
 export const FooterInfo = styled.p`
   margin: 5px;
-  @media screen and (max-width: 768px) {
-    font-size: ${TEXT_SIZE_SMALL};
+  @media screen and (max-width: 840px) {
   }
 `;
 
 export const Copyrights = styled.p`
   margin: 10px;
 
-  @media screen and (max-width: 768px) {
-    font-size: ${TEXT_SIZE_SMALL};
-    margin-top: 20px;
+  @media screen and (max-width: 840px) {
   }
 `;
 
-export const AboutCredits = styled(Link)`
-  background: ${MIDDLE_BLUE};
+export const Credits = styled(Link)`
   color: ${WHITE_NEUTRAL};
-  align-content: center;
-  height: 64px;
-  width: 100%;
-  padding: 6px 12px;
   margin: 10px;
-  border-radius: 5px;
   text-align: center;
+  align-content: center;
+  width: fit-content;
   text-decoration: none;
   cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;

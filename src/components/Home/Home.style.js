@@ -9,6 +9,8 @@ export const HomeContainer = styled.div`
   align-items: center;
   /* padding: 10px; */
   padding-bottom: 10px;
+  min-height: 470px;
+  min-width: 290px;
   height: 70vh;
 
   @media screen and (max-width: 1600px) {
@@ -16,7 +18,7 @@ export const HomeContainer = styled.div`
     justify-content: center;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     flex-direction: column;
   }
 `;

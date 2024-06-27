@@ -26,14 +26,13 @@ export const MainContainer = styled.div`
     height: auto;
   }
 
-  @media screen and (max-width: 1300px) {
-    height: 300px;
+  /* @media screen and (max-width: 1300px) {
+
   }
 
-  @media screen and (max-width: 768px) {
-    grid-gap: 1px;
-    height: auto;
-  }
+  @media screen and (max-width: 840px) {
+
+  } */
 `;
 
 export const MainHomeGalleryItem = styled.img`
@@ -52,8 +51,8 @@ export const MainHomeGalleryItem = styled.img`
     width: 150px;
   }
 
-  @media screen and (max-width: 768px) {
-    width: 70px;
+  @media screen and (max-width: 840px) {
+    width: 90px;
   }
 `;
 
@@ -70,6 +69,9 @@ export const MainButtonsContainer = styled.div`
   @media screen and (max-width: 1300px) {
     width: 350px;
     height: 300px;
+  }
+  @media screen and (max-width: 840px) {
+    height: 200px;
   }
 `;
 
@@ -89,8 +91,9 @@ export const OptionContainer = styled.div`
     margin: 10px auto;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     height: auto;
+    top: -70px;
   }
 `;
 
@@ -138,7 +141,7 @@ export const Buttons = styled.button`
     height: auto;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     width: 100%;
     margin: 5px 0px;
     flex-direction: column;
@@ -187,7 +190,7 @@ export const SelectPlan = styled.select`
   font-size: ${TEXT_SIZE_SMALL};
   background: ${GRADIENT_BLUE_LIGHT};
 
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 840px) {
     margin-top: 20px;
     width: 90%;
     height: 35px;
@@ -226,7 +229,7 @@ export const HomeBtn = styled(Link)`
     height: auto;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     width: 70%;
   }
 `;
