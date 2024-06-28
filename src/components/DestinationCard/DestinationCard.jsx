@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { Card } from "react-bootstrap";
 import { itineraryLandmarkPlus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
-import useToast from "../../global/useToast";
+import { useToast } from "../../global/toast/ToastContext";
 import {
   ButtonLandmark,
   ImgWrapper,
@@ -27,14 +27,11 @@ function DestinationCard({
     dispatchItinerary
   );
 
+  const { showToast } = useToast();
+
   const itineraryLandmarkValueArray =
     stateGlobalItinerary.itineraryLandmarkValue || [];
   console.log("itineraryLandmarkValueArray", itineraryLandmarkValueArray);
-
-  const [unique, setUnique] = useState(true);
-  const [showA, setShowA] = useState(true);
-  const toggleShowA = () => setShowA(!showA);
-  const [onAdd, setOnAdd] = useState(false);
 
   const { localData } = useLocalStorage("user");
   console.log("localData", localData);
@@ -72,7 +69,6 @@ function DestinationCard({
     );
 
   const handleAddItineraryLandmark = (country, city, name, event) => {
-    setOnAdd(true);
     console.log("HANDLE ADD ITINERARY LANDMARK");
 
     const addObject = { country, city, name };
@@ -81,55 +77,45 @@ function DestinationCard({
 
     if (checkDuplicate(itineraryLandmarkValueArray, addObject)) {
       console.log("cannot be added");
-      setUnique(false);
-      setShowA(true);
+
+      showToast(
+        "Itinerary",
+        `${name} is already in the Itinerary!`,
+        "my-landmark-toast"
+      );
       event.preventDefault();
     } else {
       console.log("can be added");
-      setUnique(true);
+
       dispatchItinerary(itineraryLandmarkPlus({ country, city, name }));
       handleUpdateItinerary(addObject);
+
+      showToast(
+        "Itinerary",
+        `Success! ${name} was added to the Itinerary!`,
+        "my-landmark-toast"
+      );
     }
   };
-
   return (
-    <>
-      <Card className="tangerine-bold">
-        <ImgWrapper loc="CardWrapper">
-          <Card.Img variant="top" src={image} alt="Image of landmark" />
-        </ImgWrapper>
-        <Card.Body>
-          <Card.Title>{name}</Card.Title>
-          <Card.Text>Location: {city}</Card.Text>
-          <Card.Text>{description}</Card.Text>
-          <ButtonLandmark
-            loc="ButtonLandmark"
-            onClick={(event) => {
-              handleAddItineraryLandmark(country, city, name, event);
-            }}
-          >
-            Save landmark to my itinerary!
-          </ButtonLandmark>
-        </Card.Body>
-      </Card>
-      {!unique &&
-        useToast(
-          "Intinerary",
-          `${name} is already in the Itinerary!`,
-          "my-landmark-toast",
-          showA,
-          toggleShowA
-        )}
-      {unique &&
-        onAdd &&
-        useToast(
-          "Intinerary",
-          `Succes! ${name} was added to the Itinerary!`,
-          "my-landmark-toast",
-          showA,
-          toggleShowA
-        )}
-    </>
+    <Card className="tangerine-bold">
+      <ImgWrapper loc="ImgWrapper">
+        <Card.Img variant="top" src={image} alt="Image of landmark" />
+      </ImgWrapper>
+      <Card.Body>
+        <Card.Title>{name}</Card.Title>
+        <Card.Text>Location: {city}</Card.Text>
+        <Card.Text>{description}</Card.Text>
+        <ButtonLandmark
+          loc="ButtonLandmark"
+          onClick={(event) => {
+            handleAddItineraryLandmark(country, city, name, event);
+          }}
+        >
+          Save this landmark to My Itinerary!
+        </ButtonLandmark>
+      </Card.Body>
+    </Card>
   );
 }
 export default DestinationCard;

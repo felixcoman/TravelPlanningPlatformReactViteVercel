@@ -23,10 +23,13 @@ import {
   MyStamp,
 } from "./Explore.style";
 
-import useToast from "../../global/useToast";
+import { useToast } from "../../global/toast/ToastContext";
+import ToastComponent from "../Toast/ToastComponent";
 import useLocalStorage from "../../hooks/useLocalStorage";
 
 const Explore = () => {
+  const { toast, showToast } = useToast();
+
   const navigate = useNavigate();
 
   const { stateGlobalItinerary, dispatchItinerary } =
@@ -71,11 +74,6 @@ const Explore = () => {
   const compactDataCity = dataCity ? dataCity[0] : null;
   console.log("compactDataCity", compactDataCity);
 
-  const [unique, setUnique] = useState(true);
-  const [showA, setShowA] = useState(true);
-  const toggleShowA = () => setShowA(!showA);
-  const [onAdd, setOnAdd] = useState(false);
-
   let accommodationArray = [];
 
   const handleUpdateItinerary = (updateData) => {
@@ -108,7 +106,6 @@ const Explore = () => {
     );
 
   const handleAddItinerary = (country, city, event) => {
-    setOnAdd(true);
     console.log("HANDLE ADD ITINERARY");
 
     const addObject = { country, city };
@@ -117,14 +114,23 @@ const Explore = () => {
 
     if (checkDuplicate(itineraryValueArray, addObject)) {
       console.log("cannot be added");
-      setUnique(false);
-      setShowA(true);
+      showToast(
+        "Itinerary",
+        `${city} is already in the Itinerary!`,
+        "my-city-toast"
+      );
+
       event.preventDefault();
     } else {
       console.log("can be added");
-      setUnique(true);
+
       dispatchItinerary(itineraryPlus({ country, city }));
       handleUpdateItinerary(addObject);
+      showToast(
+        "Itinerary",
+        `Succes! ${city} was added to the Itinerary!`,
+        "my-city-toast"
+      );
     }
   };
 
@@ -247,11 +253,14 @@ const Explore = () => {
             <DestinationCard key={index} {...destination} />
           ))}
       </SectionLandmarkData>
+      <ToastComponent
+        toast={toast}
+        toggleShow={() => showToast({ ...toast, show: false })}
+      />
       {dataCity && (
         <SectionCityButtons loc="SectionCityButtons">
           {console.log("country", country)}
           <ButtonCity
-            className="tangerine-regular"
             loc="ButtonCity"
             onClick={(event) => {
               handleAddItinerary(country, city, event);
@@ -260,7 +269,6 @@ const Explore = () => {
             Save {city} to my itinerary!
           </ButtonCity>
           <ButtonAccomodation
-            className="tangerine-regular"
             loc="ButtonAccomodation"
             onClick={(event) => goAccomm(event)}
           >
@@ -268,23 +276,6 @@ const Explore = () => {
           </ButtonAccomodation>
         </SectionCityButtons>
       )}
-      {!unique &&
-        useToast(
-          "Intinerary",
-          `${city} is already in the Itinerary!`,
-          "my-city-toast",
-          showA,
-          toggleShowA
-        )}
-      {unique &&
-        onAdd &&
-        useToast(
-          "Intinerary",
-          `Succes! ${city} was added to the Itinerary!`,
-          "my-city-toast",
-          showA,
-          toggleShowA
-        )}
     </SectionExplore>
   );
 };
