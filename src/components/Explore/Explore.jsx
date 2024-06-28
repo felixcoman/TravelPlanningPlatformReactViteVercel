@@ -22,14 +22,10 @@ import {
   SectionExplore,
   MyStamp,
 } from "./Explore.style";
-
-import { useToast } from "../../global/toast/ToastContext";
 import ToastComponent from "../Toast/ToastComponent";
 import useLocalStorage from "../../hooks/useLocalStorage";
 
 const Explore = () => {
-  const { toast, showToast } = useToast();
-
   const navigate = useNavigate();
 
   const { stateGlobalItinerary, dispatchItinerary } =
@@ -51,6 +47,10 @@ const Explore = () => {
   const { country, city } = useParams();
 
   const [clicked, setClicked] = useState(true);
+  const [showA, setShowA] = useState(false);
+  const [toastTitle, setToastTitle] = useState("");
+  const [toastText, setToastText] = useState("");
+  const [toastClass, setToastClass] = useState("");
 
   const urlCity =
     country && city ? `http://localhost:3001/${country}?city=${city}` : null;
@@ -100,6 +100,19 @@ const Explore = () => {
       .catch((error) => console.error("Error fetching user data:", error));
   };
 
+  const notify = (isSuccess, nameValue, classValue) => {
+    if (isSuccess) {
+      setToastTitle("Itinerary");
+      setToastText(`Success! ${nameValue} was added to the Itinerary!`);
+      setToastClass(classValue);
+    } else {
+      setToastTitle("Itinerary");
+      setToastText(`${nameValue} is already in the Itinerary!`);
+      setToastClass(classValue);
+    }
+    setShowA(true);
+  };
+
   const checkDuplicate = (arr, obj) =>
     arr.some(
       (element) => element.country === obj.country && element.city === obj.city
@@ -114,23 +127,14 @@ const Explore = () => {
 
     if (checkDuplicate(itineraryValueArray, addObject)) {
       console.log("cannot be added");
-      showToast(
-        "Itinerary",
-        `${city} is already in the Itinerary!`,
-        "my-city-toast"
-      );
-
+      notify(false, city, "my-city-toast");
       event.preventDefault();
     } else {
       console.log("can be added");
 
       dispatchItinerary(itineraryPlus({ country, city }));
       handleUpdateItinerary(addObject);
-      showToast(
-        "Itinerary",
-        `Succes! ${city} was added to the Itinerary!`,
-        "my-city-toast"
-      );
+      notify(true, city, "my-city-toast");
     }
   };
 
@@ -250,12 +254,15 @@ const Explore = () => {
         )}
         {dataDestination &&
           dataDestination?.map((destination, index) => (
-            <DestinationCard key={index} {...destination} />
+            <DestinationCard key={index} {...destination} notify={notify} />
           ))}
       </SectionLandmarkData>
       <ToastComponent
-        toast={toast}
-        toggleShow={() => showToast({ ...toast, show: false })}
+        toastTitle={toastTitle}
+        toastText={toastText}
+        className={toastClass}
+        show={showA}
+        toggleShow={() => setShowA(false)}
       />
       {dataCity && (
         <SectionCityButtons loc="SectionCityButtons">

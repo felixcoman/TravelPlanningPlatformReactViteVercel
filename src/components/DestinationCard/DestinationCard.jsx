@@ -1,8 +1,7 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Card } from "react-bootstrap";
 import { itineraryLandmarkPlus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
-import { useToast } from "../../global/toast/ToastContext";
 import {
   ButtonLandmark,
   ImgWrapper,
@@ -16,6 +15,7 @@ function DestinationCard({
   image,
   description,
   popularity,
+  notify,
 }) {
   const { stateGlobalItinerary, dispatchItinerary } =
     useContext(ItineraryContext);
@@ -26,8 +26,6 @@ function DestinationCard({
     "dispatchItinerary",
     dispatchItinerary
   );
-
-  const { showToast } = useToast();
 
   const itineraryLandmarkValueArray =
     stateGlobalItinerary.itineraryLandmarkValue || [];
@@ -77,24 +75,14 @@ function DestinationCard({
 
     if (checkDuplicate(itineraryLandmarkValueArray, addObject)) {
       console.log("cannot be added");
-
-      showToast(
-        "Itinerary",
-        `${name} is already in the Itinerary!`,
-        "my-landmark-toast"
-      );
+      notify(false, name, "my-landmark-toast");
       event.preventDefault();
     } else {
       console.log("can be added");
 
       dispatchItinerary(itineraryLandmarkPlus({ country, city, name }));
       handleUpdateItinerary(addObject);
-
-      showToast(
-        "Itinerary",
-        `Success! ${name} was added to the Itinerary!`,
-        "my-landmark-toast"
-      );
+      notify(true, name, "my-landmark-toast");
     }
   };
   return (
