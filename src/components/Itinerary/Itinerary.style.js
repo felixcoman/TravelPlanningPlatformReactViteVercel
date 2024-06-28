@@ -9,10 +9,6 @@ import {
 import { TEXT_SIZE_MEDIUM, TEXT_SIZE_SMALL } from "../../constants/Dimensions";
 
 export const SectionItineraryData = styled.div`
-  /* display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 10px; */
-
   display: grid;
   gap: 10px;
   width: 90vw;
