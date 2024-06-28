@@ -20,6 +20,7 @@ export const SectionExplore = styled.section`
   flex-wrap: wrap;
   align-content: center;
   font-size: ${TEXT_SIZE_MEDIUM};
+  padding: 15px;
 `;
 
 export const Title = styled.h1`
@@ -32,24 +33,43 @@ export const ContainerTop = styled.div`
   position: relative;
   align-self: center;
   width: 100%;
+  min-height: 85vh;
+  margin-bottom: 10px;
+  @media screen and (max-width: 1600px) {
+    height: auto;
+  }
 `;
 
 export const ImageCity = styled.img`
   padding: 10px;
   width: 100%;
-  height: 70vh;
+  /* height: 70vh; */
   opacity: 0.6;
   object-fit: contain;
-  align-self: center;
+  border-radius: 6px;
 `;
 
 export const MyStamp = styled.div`
-  @media screen and (max-width: 840px) {
+  @media screen and (max-width: 1400px) {
     transition: all 1s;
     position: absolute;
     transform: scale(0.75);
-    top: -10px;
-    left: 10px;
+    top: 70px;
+    left: -40px;
+  }
+  @media screen and (max-width: 1000px) {
+    top: 75px;
+    left: -45px;
+  }
+  @media screen and (max-width: 800px) {
+    transform: scale(0.6);
+    top: 75px;
+    left: -20px;
+  }
+  @media screen and (max-width: 500px) {
+    transform: scale(0.5);
+    top: 75px;
+    left: -20px;
   }
 `;
 
@@ -83,20 +103,20 @@ export const CountrySubtitle = styled(Subtitle)`
 export const ContainerDescriptionBottom = styled.div`
   display: flex;
   width: 100%;
-  /* margin-top: 10px; */
+  border-radius: 6px;
   background-image: url("../../../src/assets/897940_2588.jpg");
+  background-size: cover;
   align-self: center;
-  padding: 50px 0px;
+  padding: 50px 10px;
+  justify-content: center;
 `;
 
 export const CityDescription = styled.h3`
   color: ${HANDWRITING};
-  font-size: 40px;
+  font-size: clamp(25px, 2vw, 40px);
   display: flex;
-  width: 60%;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  width: 80%;
+  margin: 20px 20px;
   text-align: justify;
   font-weight: bold;
 `;
@@ -112,6 +132,12 @@ export const SectionCityButtons = styled.section`
   display: flex;
   flex-direction: row;
   margin: 16px 0;
+
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+  }
 `;
 
 export const ButtonCity = styled(Link)`
@@ -156,12 +182,24 @@ export const ButtonAccomodation = styled.button`
 `;
 
 export const SectionLandmarkData = styled.section`
-  /* display: flex;
-  margin: 10px 0; */
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 10px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+
+  @media screen and (max-width: 1400px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @media screen and (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
 `;
+
 export const InfoSection = styled.div`
   display: flex;
   flex-direction: column;
