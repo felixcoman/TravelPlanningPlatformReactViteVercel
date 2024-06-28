@@ -20,8 +20,21 @@ export const ButtonLandmark = styled(Link)`
   cursor: pointer;
 `;
 
+//RAMANE?
 export const CardImgContainer = styled.div`
   display: flex;
   height: 220px;
   justify-content: center;
+`;
+
+export const ImgWrapper = styled.div`
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: flex-end;
+
+  @media screen and (max-width: 700px) {
+    height: auto;
+  }
 `;

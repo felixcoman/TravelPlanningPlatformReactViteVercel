@@ -180,9 +180,6 @@ const Explore = () => {
 
   return (
     <SectionExplore loc="SectionExplore">
-      <Title loc="Title">
-        Feel free to explore our offers regarding your selection:
-      </Title>
       <SectionCityData loc="SectionCityData">
         {loadingCity && (
           <Loading loc="Loading">Loading... Waiting for landing...</Loading>
@@ -197,6 +194,9 @@ const Explore = () => {
         {dataCity && (
           <>
             <ContainerTop loc="ContainerTop">
+              <Title loc="Title">
+                Feel free to explore our offers regarding your selection:
+              </Title>
               <ImageCity loc="ImageCity" src={compactDataCity.image} />
               <MyStamp loc="MyStamp">
                 <a

@@ -3,10 +3,13 @@ import { Card } from "react-bootstrap";
 import { itineraryLandmarkPlus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
 import useToast from "../../global/useToast";
-import { ButtonLandmark } from "../DestinationCard/DestinationCard.style";
+import {
+  ButtonLandmark,
+  ImgWrapper,
+} from "../DestinationCard/DestinationCard.style";
 import useLocalStorage from "../../hooks/useLocalStorage";
 
-function DestionationCard({
+function DestinationCard({
   name,
   country,
   city,
@@ -91,8 +94,10 @@ function DestionationCard({
 
   return (
     <>
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={image} alt="Image of landmark" />
+      <Card className="tangerine-bold">
+        <ImgWrapper loc="CardWrapper">
+          <Card.Img variant="top" src={image} alt="Image of landmark" />
+        </ImgWrapper>
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>Location: {city}</Card.Text>
@@ -127,4 +132,4 @@ function DestionationCard({
     </>
   );
 }
-export default DestionationCard;
+export default DestinationCard;
