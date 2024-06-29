@@ -1,11 +1,14 @@
 import { useContext, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { itineraryPlus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
 import useFetchData from "../../hooks/useFetchData";
+import useLocalStorage from "../../hooks/useLocalStorage";
 import DestinationCard from "../DestinationCard/DestinationCard";
 import { Error, Loading } from "../MainHome/MainHome.style";
+import ToastComponent from "../Toast/ToastComponent";
 import {
+  ButtonAccommodationExplore,
   ButtonCity,
   CityDescription,
   ContainerDescriptionBottom,
@@ -13,17 +16,14 @@ import {
   ContainerTop,
   CountrySubtitle,
   ImageCity,
+  MyStamp,
   SectionCityButtons,
   SectionCityData,
+  SectionExplore,
   SectionLandmarkData,
   Subtitle,
   Title,
-  ButtonAccomodation,
-  SectionExplore,
-  MyStamp,
 } from "./Explore.style";
-import ToastComponent from "../Toast/ToastComponent";
-import useLocalStorage from "../../hooks/useLocalStorage";
 
 const Explore = () => {
   const navigate = useNavigate();
@@ -275,12 +275,12 @@ const Explore = () => {
           >
             Save {city} to my itinerary!
           </ButtonCity>
-          <ButtonAccomodation
-            loc="ButtonAccomodation"
+          <ButtonAccommodationExplore
+            loc="ButtonAccommodationExplore"
             onClick={(event) => goAccomm(event)}
           >
             I want to book accommodation!
-          </ButtonAccomodation>
+          </ButtonAccommodationExplore>
         </SectionCityButtons>
       )}
     </SectionExplore>
