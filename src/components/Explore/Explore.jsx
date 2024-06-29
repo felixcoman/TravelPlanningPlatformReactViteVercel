@@ -18,7 +18,7 @@ import {
   SectionLandmarkData,
   Subtitle,
   Title,
-  ButtonAccomodation,
+  ButtonAccommodationExplore,
   SectionExplore,
   MyStamp,
 } from "./Explore.style";
@@ -275,12 +275,12 @@ const Explore = () => {
           >
             Save {city} to my itinerary!
           </ButtonCity>
-          <ButtonAccomodation
-            loc="ButtonAccomodation"
+          <ButtonAccommodationExplore
+            loc="ButtonAccommodationExplore"
             onClick={(event) => goAccomm(event)}
           >
             I want to book accommodation!
-          </ButtonAccomodation>
+          </ButtonAccommodationExplore>
         </SectionCityButtons>
       )}
     </SectionExplore>

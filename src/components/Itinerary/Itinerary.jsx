@@ -1,14 +1,13 @@
 import { useContext, useState } from "react";
 import { ItineraryContext } from "../../global/itinerary/context";
 import CityCard from "../CityCard/CityCard";
-import {
-  ButtonInfo,
-  InfoSection,
-  InfoUser,
-  ButtonAccomodation,
-} from "../Explore/Explore.style";
+import { ButtonInfo, InfoSection, InfoUser } from "../Explore/Explore.style";
 import LandmarkCard from "../LandmarkCard/LandmarkCard";
-import { SectionItineraryData } from "./Itinerary.style";
+import {
+  ItineraryData,
+  ButtonAccommodation,
+  SectionItinerary,
+} from "./Itinerary.style";
 import { useNavigate } from "react-router-dom";
 import useLocalStorage from "../../hooks/useLocalStorage";
 
@@ -75,8 +74,8 @@ function Itinerary() {
   };
 
   return (
-    <>
-      <SectionItineraryData loc="SectionItineraryData">
+    <SectionItinerary loc="SectionItinerary">
+      <ItineraryData loc="ItineraryData">
         {itineraryValueArray.length === 0 &&
         itineraryLandmarkValueArray.length === 0 ? (
           <InfoSection loc="InfoSection">
@@ -97,16 +96,16 @@ function Itinerary() {
           itineraryLandmarkValueArray?.map((element, index) => (
             <LandmarkCard key={index} index={index} {...element} />
           ))}
-        {stateGlobalItinerary && (
-          <ButtonAccomodation
-            loc="ButtonAccomodation"
-            onClick={() => goAccomm()}
-          >
-            I want to book accommodation!
-          </ButtonAccomodation>
-        )}
-      </SectionItineraryData>
-    </>
+      </ItineraryData>
+      {stateGlobalItinerary && (
+        <ButtonAccommodation
+          loc="ButtonAccommodation"
+          onClick={() => goAccomm()}
+        >
+          I want to book accommodation!
+        </ButtonAccommodation>
+      )}
+    </SectionItinerary>
   );
 }
 

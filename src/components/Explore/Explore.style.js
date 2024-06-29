@@ -11,6 +11,7 @@ import {
   LIFELINE_ORANGE,
 } from "../../constants/Colors";
 import { TEXT_SIZE_MEDIUM, TEXT_SIZE_SMALL } from "../../constants/Dimensions";
+import { ButtonAccommodation } from "../Itinerary/Itinerary.style";
 
 export const SectionExplore = styled.section`
   display: flex;
@@ -163,26 +164,8 @@ export const ButtonCity = styled(Link)`
   }
 `;
 
-export const ButtonAccomodation = styled.button`
-  background: ${PAPER_COLOR};
-  color: ${DARK_BLUE};
-  font-family: "Trebuchet MS", sans-serif;
-  font-size: ${TEXT_SIZE_SMALL};
-  font-weight: 500;
+export const ButtonAccommodationExplore = styled(ButtonAccommodation)`
   width: 100%;
-  min-width: fit-content;
-  padding: 6px 12px;
-  margin: 10px;
-  border-radius: 5px;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.5s;
-  &:hover {
-    border: solid 2px white;
-    box-shadow: 0 0 80px ${LIFELINE_ORANGE};
-  }
 `;
 
 export const SectionLandmarkData = styled.section`

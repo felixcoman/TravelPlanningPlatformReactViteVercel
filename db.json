@@ -766,7 +766,7 @@
       "reg": "Transylvania",
       "country": "Romania",
       "image": "https://img.freepik.com/free-photo/aerial-drone-view-council-square-brasov-romania_1268-20593.jpg?t=st=1716714491~exp=1716718091~hmac=33ea4c5124a5e8d380fe37fca7e687a6a89704974b4048c377be2161978c4caa&w=1060",
-      "description": "Brașov, located in the heart of Transylvania, is renowned for its medieval charm, featuring the Gothic Black Church, picturesque Council Square, and scenic Mount Tampa. Its well-preserved old town, vibrant cultural scene, and stunning mountain backdrop make it a captivating destination for history enthusiasts and nature lovers alike.",
+      "description": "Brasov, located in the heart of Transylvania, is renowned for its medieval charm, featuring the Gothic Black Church, picturesque Council Square, and scenic Mount Tampa. Its well-preserved old town, vibrant cultural scene, and stunning mountain backdrop make it a captivating destination for history enthusiasts and nature lovers alike.",
       "category": ["aerliber", "citybreak", "relaxare"],
       "period": {
         "threedays": {
@@ -800,7 +800,7 @@
         "mediumBudget": {
           "hotelone": "Hotel Bella Muzica: web: https://bellamuzica.ro/",
           "hoteltwo": "Hotel Kolping: web: https://hotel.kolping.ro/",
-          "hotelthree": "Casa Wagner Brașov: web: https://brasov.casa-wagner.com/en/"
+          "hotelthree": "Casa Wagner Brasov: web: https://brasov.casa-wagner.com/en/"
         },
         "highBudget": {
           "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
