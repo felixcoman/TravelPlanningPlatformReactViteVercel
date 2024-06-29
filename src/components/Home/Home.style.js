@@ -7,18 +7,19 @@ export const HomeContainer = styled.div`
   justify-content: center;
   justify-content: flex-start;
   align-items: center;
-  /* padding: 10px; */
   padding-bottom: 10px;
-  min-height: 470px;
   min-width: 290px;
   height: 70vh;
+  min-height: 880px;
 
   @media screen and (max-width: 1600px) {
+    min-height: unset;
     flex-direction: row;
     justify-content: center;
   }
 
   @media screen and (max-width: 840px) {
+    min-height: unset;
     flex-direction: column;
     height: 60vh;
   }

@@ -3,9 +3,9 @@ import {
   TextContainerRecommend,
   TextRecommend,
   DataContainerRecommend,
-} from "../MyTravelRecommend/MyTravelRecommend.style";
+} from "./MyTravelRecommend.style";
 
-function MediumBuget({ buget }) {
+function MediumBudget({ budget }) {
   return (
     <>
       <MainContainerRecommend loc="MainContainerRecommend">
@@ -15,21 +15,21 @@ function MediumBuget({ buget }) {
         <DataContainerRecommend loc="DataContainerRecommend">
           <TextRecommend loc="TextRecommend"> Hotel:</TextRecommend>
           <TextContainerRecommend loc="TextContainerRecommend">
-            {buget.mediumBuget.hotelone}
+            {budget.mediumBudget.hotelone}
           </TextContainerRecommend>
         </DataContainerRecommend>
 
         <DataContainerRecommend loc="DataContainerRecommend">
           <TextRecommend loc="TextRecommend">Hotel:</TextRecommend>
           <TextContainerRecommend loc="TextContainerRecommend">
-            {buget.mediumBuget.hoteltwo}
+            {budget.mediumBudget.hoteltwo}
           </TextContainerRecommend>
         </DataContainerRecommend>
 
         <DataContainerRecommend loc="DataContainerRecommend">
           <TextRecommend loc="TextRecommend">Hotel:</TextRecommend>
           <TextContainerRecommend loc="TextContainerRecommend">
-            {buget.mediumBuget.hotelthree}
+            {budget.mediumBudget.hotelthree}
           </TextContainerRecommend>
         </DataContainerRecommend>
       </MainContainerRecommend>
@@ -37,4 +37,4 @@ function MediumBuget({ buget }) {
   );
 }
 
-export default MediumBuget;
+export default MediumBudget;

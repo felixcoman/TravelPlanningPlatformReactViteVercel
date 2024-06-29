@@ -27,7 +27,7 @@ function MyTravelRegion() {
   const { country, region } = useParams();
   const [clicked, setClicked] = useState(true);
   const [period, setPeriod] = useState("");
-  const [buget, setBuget] = useState("");
+  const [budget, setBudget] = useState("");
   const [show, setShow] = useState(false);
 
   const { localData } = useLocalStorage("user");
@@ -41,21 +41,21 @@ function MyTravelRegion() {
   const compactData = data ? data[0] : null;
 
   const optionPeriod = ["three days", "five days", "seven days"];
-  const optionBuget = ["Low buget", "Medium buget", "High buget"];
+  const optionBudget = ["Low budget", "Medium budget", "High budget"];
 
   const onOptionChangePeriod = (e) => {
     setPeriod(e.target.value);
     setClicked(true);
   };
 
-  const onOptionChangeBuget = (e) => {
-    setBuget(e.target.value);
+  const onOptionChangeBudget = (e) => {
+    setBudget(e.target.value);
     setClicked(true);
   };
 
   const handleClick = () => {
     setPeriod(period);
-    setBuget(buget);
+    setBudget(budget);
     setShow(!show);
   };
 
@@ -94,8 +94,8 @@ function MyTravelRegion() {
       .catch((error) => console.error("Error fetching user data:", error));
   };
 
-  const handleAdd = (country, region, buget, period, data) => {
-    const updateDataChoice = { country, region, buget, period, data };
+  const handleAdd = (country, region, budget, period, data) => {
+    const updateDataChoice = { country, region, budget, period, data };
 
     dispatchChoice(addChoice(updateDataChoice));
     console.log("updateDataChoice", updateDataChoice);
@@ -138,9 +138,12 @@ function MyTravelRegion() {
                   })}
                 </SelectTravel>
 
-                <SelectTravel loc="SelectTravel" onChange={onOptionChangeBuget}>
-                  <option>Choose a buget:</option>
-                  {optionBuget.map((option, index) => {
+                <SelectTravel
+                  loc="SelectTravel"
+                  onChange={onOptionChangeBudget}
+                >
+                  <option>Choose a budget:</option>
+                  {optionBudget.map((option, index) => {
                     return <option key={index}>{option}</option>;
                   })}
                 </SelectTravel>
@@ -154,7 +157,7 @@ function MyTravelRegion() {
 
               {show ? (
                 <MyTravelRecommend
-                  bugetTravel={buget}
+                  budgetTravel={budget}
                   periodTravel={period}
                   data={data}
                 />
@@ -167,7 +170,7 @@ function MyTravelRegion() {
           <ButtonChoice
             loc="ButtonChoice"
             to={`/my-choices/${localData}`}
-            onClick={() => handleAdd(country, region, buget, period, data)}
+            onClick={() => handleAdd(country, region, budget, period, data)}
           >
             Save my Choice
           </ButtonChoice>

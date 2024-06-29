@@ -33,9 +33,9 @@ export const ContainerTop = styled.div`
   position: relative;
   align-self: center;
   width: 100%;
-  min-height: 85vh;
+  height: 82vh;
   margin-bottom: 10px;
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 840px) {
     height: auto;
   }
 `;
@@ -43,7 +43,7 @@ export const ContainerTop = styled.div`
 export const ImageCity = styled.img`
   padding: 10px;
   width: 100%;
-  /* height: 70vh; */
+  height: calc(100% - 89px);
   opacity: 0.6;
   object-fit: contain;
   border-radius: 6px;

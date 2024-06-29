@@ -74,7 +74,7 @@ function MyChoices() {
             city={e.city}
             region={e.region}
             period={e.period}
-            buget={e.buget}
+            budget={e.budget}
             data={e.data}
             handleDelete={() => handleDelete(index)}
           />

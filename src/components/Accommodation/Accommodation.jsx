@@ -66,8 +66,8 @@ function Accommodation() {
   }
 
   const compactDataCity = data[0].dataCity;
-  const budgetKeys = Object.keys(compactDataCity[0].buget);
-  const searchTerm = "Buget";
+  const budgetKeys = Object.keys(compactDataCity[0].budget);
+  const searchTerm = "Budget";
 
   const indexOfFirst = (arr, term) => {
     return arr.indexOf(term);
@@ -137,20 +137,20 @@ function Accommodation() {
           if (selectedCity === dataItem.city && dataItem.dataCity) {
             return (
               <DisplayContainer loc="DisplayContainer" key={index}>
-                {Object.entries(dataItem.dataCity[0].buget[selectedBudget]).map(
-                  (description, idx) => (
-                    <div key={idx}>
-                      <strong>Option {idx + 1}</strong>:{" "}
-                      {getHotelDescription(description)}
-                      <iframe
-                        src={getIframe(description)}
-                        height="300px"
-                        width="100%"
-                        title="accommodation for your selection"
-                      ></iframe>
-                    </div>
-                  )
-                )}
+                {Object.entries(
+                  dataItem.dataCity[0].budget[selectedBudget]
+                ).map((description, idx) => (
+                  <div key={idx}>
+                    <strong>Option {idx + 1}</strong>:{" "}
+                    {getHotelDescription(description)}
+                    <iframe
+                      src={getIframe(description)}
+                      height="300px"
+                      width="100%"
+                      title="accommodation for your selection"
+                    ></iframe>
+                  </div>
+                ))}
               </DisplayContainer>
             );
           }

@@ -3,9 +3,9 @@ import {
   TextContainerRecommend,
   TextRecommend,
   DataContainerRecommend,
-} from "../MyTravelRecommend/MyTravelRecommend.style";
+} from "./MyTravelRecommend.style";
 
-function HighBuget({ buget }) {
+function LowBudget({ budget }) {
   return (
     <>
       <MainContainerRecommend loc="MainContainerRecommend">
@@ -15,21 +15,21 @@ function HighBuget({ buget }) {
         <DataContainerRecommend loc="DataContainerRecommend">
           <TextRecommend loc="TextRecommend"> Hotel:</TextRecommend>
           <TextContainerRecommend loc="TextContainerRecommend">
-            {buget.highBuget.hotelone}
+            {budget.lowBudget.hotelone}
           </TextContainerRecommend>
         </DataContainerRecommend>
 
         <DataContainerRecommend loc="DataContainerRecommend">
           <TextRecommend loc="TextRecommend">Hotel:</TextRecommend>
           <TextContainerRecommend loc="TextContainerRecommend">
-            {buget.highBuget.hoteltwo}
+            {budget.lowBudget.hoteltwo}
           </TextContainerRecommend>
         </DataContainerRecommend>
 
         <DataContainerRecommend loc="DataContainerRecommend">
           <TextRecommend loc="TextRecommend">Hotel:</TextRecommend>
           <TextContainerRecommend loc="TextContainerRecommend">
-            {buget.highBuget.hotelthree}
+            {budget.lowBudget.hotelthree}
           </TextContainerRecommend>
         </DataContainerRecommend>
       </MainContainerRecommend>
@@ -37,4 +37,4 @@ function HighBuget({ buget }) {
   );
 }
 
-export default HighBuget;
+export default LowBudget;

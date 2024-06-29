@@ -59,7 +59,7 @@ export const MainHomeGalleryItem = styled.img`
 export const MainButtonsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 500px;
+  height: max-content;
 
   @media screen and (max-width: 1600px) {
     justify-content: center;
@@ -77,7 +77,7 @@ export const MainButtonsContainer = styled.div`
 
 export const OptionContainer = styled.div`
   display: flex;
-  margin: 30px auto;
+  margin: 15px auto;
   height: auto;
   flex-direction: column;
   align-items: center;

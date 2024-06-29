@@ -27,7 +27,7 @@ function MyTravelCity() {
   const { country, city } = useParams();
   const [clicked, setClicked] = useState(true);
   const [period, setPeriod] = useState("");
-  const [buget, setBuget] = useState("");
+  const [budget, setBudget] = useState("");
   const [show, setShow] = useState(false);
 
   const { localData } = useLocalStorage("user");
@@ -39,21 +39,21 @@ function MyTravelCity() {
   const compactData = data ? data[0] : null;
 
   const optionPeriod = ["three days", "five days", "seven days"];
-  const optionBuget = ["Low buget", "Medium buget", "High buget"];
+  const optionBudget = ["Low budget", "Medium budget", "High budget"];
 
   const onOptionChangePeriod = (e) => {
     setPeriod(e.target.value);
     setClicked(true);
   };
 
-  const onOptionChangeBuget = (e) => {
-    setBuget(e.target.value);
+  const onOptionChangeBudget = (e) => {
+    setBudget(e.target.value);
     setClicked(true);
   };
 
   const handleClick = () => {
     setPeriod(period);
-    setBuget(buget);
+    setBudget(budget);
     setShow(!show);
   };
 
@@ -92,8 +92,8 @@ function MyTravelCity() {
       .catch((error) => console.error("Error fetching user data:", error));
   };
 
-  const handleAdd = (country, city, buget, period, data) => {
-    const updateDataChoice = { country, city, buget, period, data };
+  const handleAdd = (country, city, budget, period, data) => {
+    const updateDataChoice = { country, city, budget, period, data };
 
     dispatchChoice(addChoice(updateDataChoice));
     console.log("updateDataChoice", updateDataChoice);
@@ -124,7 +124,7 @@ function MyTravelCity() {
               </DataContainer>
             </MainContainerTravel>
 
-            {data[0].buget && data[0].period && (
+            {data[0].budget && data[0].period && (
               <FiltersContainerTravel loc="FiltersContainerTravel">
                 <FiltersTravel loc="FiltersTravel">
                   <SelectTravel
@@ -139,10 +139,10 @@ function MyTravelCity() {
 
                   <SelectTravel
                     loc="SelectTravel"
-                    onChange={onOptionChangeBuget}
+                    onChange={onOptionChangeBudget}
                   >
-                    <option>Choose a buget:</option>
-                    {optionBuget.map((option, index) => {
+                    <option>Choose a budget:</option>
+                    {optionBudget.map((option, index) => {
                       return <option key={index}>{option}</option>;
                     })}
                   </SelectTravel>
@@ -158,7 +158,7 @@ function MyTravelCity() {
                 </FiltersTravel>
                 {show ? (
                   <MyTravelRecommend
-                    bugetTravel={buget}
+                    budgetTravel={budget}
                     periodTravel={period}
                     data={data}
                   />
@@ -167,7 +167,7 @@ function MyTravelCity() {
             )}
           </>
         )}
-        {data && (!data[0].buget || !data[0].period) && (
+        {data && (!data[0].budget || !data[0].period) && (
           <div>No data available for your selection!</div>
         )}
         {show ? (
@@ -175,7 +175,7 @@ function MyTravelCity() {
             loc="ButtonChoice"
             to={`/my-choices/${localData}`}
             onClick={() => {
-              handleAdd(country, city, buget, period, data);
+              handleAdd(country, city, budget, period, data);
             }}
           >
             Save my Choice

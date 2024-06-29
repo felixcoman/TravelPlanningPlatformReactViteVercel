@@ -5,26 +5,26 @@ import {
 import ThreeDays from "./ThreeDays";
 import FiveDays from "./FiveDays";
 import SevenDays from "./SevenDays";
-import LowBuget from "./LowBuget";
-import MediumBuget from "./MediumBuget";
-import HighBuget from "./HighBuget";
+import LowBudget from "./LowBudget";
+import MediumBudget from "./MediumBudget";
+import HighBudget from "./HighBudget";
 
-function MyTravelRecommend({ bugetTravel, periodTravel, data }) {
-  const bugetData = data ? data[0].buget : null;
+function MyTravelRecommend({ budgetTravel, periodTravel, data }) {
+  const budgetData = data ? data[0].budget : null;
   const periodData = data ? data[0].period : null;
 
-  const bugetTravelNoSpace = bugetTravel.replace(/ /g, "").toLowerCase();
+  const budgetTravelNoSpace = budgetTravel.replace(/ /g, "").toLowerCase();
   const periodTravelNoSpace = periodTravel.replace(/ /g, "").toLowerCase();
 
-  const keyBuget = Object.keys(bugetData);
+  const keyBudget = Object.keys(budgetData);
   const keyPeriod = Object.keys(periodData);
 
-  const equalBugetLow =
-    bugetTravelNoSpace == keyBuget[0].toLowerCase() ? true : false;
-  const equalBugetMedium =
-    bugetTravelNoSpace == keyBuget[1].toLowerCase() ? true : false;
-  const equalBugetHigh =
-    bugetTravelNoSpace == keyBuget[2].toLowerCase() ? true : false;
+  const equalBudgetLow =
+    budgetTravelNoSpace == keyBudget[0].toLowerCase() ? true : false;
+  const equalBudgetMedium =
+    budgetTravelNoSpace == keyBudget[1].toLowerCase() ? true : false;
+  const equalBudgetHigh =
+    budgetTravelNoSpace == keyBudget[2].toLowerCase() ? true : false;
 
   const equalPeriodThree =
     periodTravelNoSpace == keyPeriod[0].toLowerCase() ? true : false;
@@ -50,15 +50,15 @@ function MyTravelRecommend({ bugetTravel, periodTravel, data }) {
                 : null}
             </DataContainerRecommend>
             <DataContainerRecommend loc="DataContainerRecommend">
-              {equalBugetLow
-                ? data.map((e, index) => <LowBuget key={index} {...e} />)
+              {equalBudgetLow
+                ? data.map((e, index) => <LowBudget key={index} {...e} />)
                 : null}
-              {equalBugetMedium
-                ? data.map((e, index) => <MediumBuget key={index} {...e} />)
+              {equalBudgetMedium
+                ? data.map((e, index) => <MediumBudget key={index} {...e} />)
                 : null}
 
-              {equalBugetHigh
-                ? data.map((e, index) => <HighBuget key={index} {...e} />)
+              {equalBudgetHigh
+                ? data.map((e, index) => <HighBudget key={index} {...e} />)
                 : null}
             </DataContainerRecommend>
           </>
