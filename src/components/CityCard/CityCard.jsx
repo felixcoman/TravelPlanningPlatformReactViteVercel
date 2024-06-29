@@ -59,13 +59,13 @@ function CityCard({ country, city, index }) {
               <Card.Img variant="top" src={card.image} alt="Image of city" />
             </ImgWrapper>
             <Card.Body>
-              <Card.Title>{card.name}</Card.Title>
+              <Card.Title>{card.city}</Card.Title>
               <Card.Text>{card.description}</Card.Text>
               <DeleteButton
                 loc="DeleteButton"
                 onClick={() => handleCloseShow(index)}
               >
-                Delete from Itinerary
+                Remove from My Itinerary
               </DeleteButton>
             </Card.Body>
           </Card>
