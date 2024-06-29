@@ -30,7 +30,7 @@
     {
       "city": "Rome",
       "country": "Italy",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNehd2qBgSE2QT5e9gGWEdgALG4HXfuaL1xw&s",
+      "image": "https://img.freepik.com/free-photo/cityscape-rome-ancient-centre-italy_1268-20482.jpg?t=st=1719649855~exp=1719653455~hmac=6212a17e7c04bbc6751b00cccaa484b910970222d7f315488081c073ad7e3d25&w=1380",
       "description": "Rome is often referred to as the City of Seven Hills due to its geographic location, and also as the Eternal City. Rome is generally considered to be the cradle of Western civilization and Western Christian culture, and the centre of the Catholic Church.",
       "category": "",
       "period": {
@@ -56,18 +56,18 @@
           "dayseven": "Visits: Castel Gandolfo "
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Hotel Mirti: web: https://hotelmirti.it/en/hotel-rome-mirti-square/ ",
           "hoteltwo": "Hotel Il Papavero: web:  https://www.hotelilpapavero.com/",
           "hotelthree": "Hotel Fiorenza : web: https://www.hotelfiorenzarome.com/"
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Roma 2B: web: https://www.roma2b.it/en/",
           "hoteltwo": "LH Hotel Andreotti:  web: https://andreotti.italyromehotels.net/en/#main",
           "hotelthree": "Hotel d'Este: web: https://www.hoteldesterome.it/en/"
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "Hotel Caravita: web: https://www.hotelcaravita.it/en/",
           "hoteltwo": "Singer Palace Hotel:  web: https://singerpalacehotel.com/",
           "hotelthree": "Grand Hotel Plaza:  web: https://www.grandhotelplaza.com/en/"
@@ -78,7 +78,7 @@
     {
       "city": "Florence",
       "country": "Italy",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOVCFLKUzlXpEtCR_Vx9cFPz8HZsWWsZb-ew&s",
+      "image": "https://img.freepik.com/free-photo/beautiful-aerial-shot-florence-italy-architecture-evening_181624-2203.jpg?t=st=1719649813~exp=1719653413~hmac=6fdbee41ae808f91c132e12bf314ede05bf0b07d4e085ef90487f1ebed226e89&w=996",
       "description": "Located in the central part of Italy, Florence is the capital of Tuscany Region, it has approximately 380,000 inhabitants – and up to one million in the metropolitan area- for 102 kmq. The Arno River runs through the city and a series of bridges connects its two banks including the famous Ponte Vecchio.",
       "category": "",
       "period": {
@@ -104,18 +104,18 @@
           "dayseven": "Visit: San Gimignano"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Hotel Mirti:  web: https://hotelmirti.it/en/hotel-rome-mirti-square/ ",
           "hoteltwo": "Hotel Il Papavero: web:  https://www.hotelilpapavero.com/",
           "hotelthree": "Hotel Fiorenza : web: https://www.hotelfiorenzarome.com/"
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Roma 2B:  web: https://www.roma2b.it/en/",
           "hoteltwo": "LH Hotel Andreotti:  web: https://andreotti.italyromehotels.net/en/#main",
           "hotelthree": "Hotel d'Este: web: https://www.hoteldesterome.it/en/"
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "Hotel Caravita: web: https://www.hotelcaravita.it/en/",
           "hoteltwo": "Singer Palace Hotel  web: https://singerpalacehotel.com/",
           "hotelthree": "Grand Hotel Plaza: web: https://www.grandhotelplaza.com/en/"
@@ -126,7 +126,7 @@
     {
       "city": "Venice",
       "country": "Italy",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmbesDVL1vnuX2-kDLSFu7Tn8wq47cZC6j5g&s",
+      "image": "https://img.freepik.com/free-photo/basilica-santa-maria-della-salud-venice_181624-27270.jpg?t=st=1719650005~exp=1719653605~hmac=88b4b94e03ffb5fcb5b6a793e6be65ac7f6be0272a9d41c9768806a9646bd0a3&w=996",
       "description": "Venice is a city in northeastern Italy and the capital of the Veneto region. It is sited on a group of 117 small islands that are separated by canals and linked by bridges. These are located in the marshy Venetian Lagoon which stretches along the shoreline, between the mouths of the Po and the Piave Rivers.",
       "category": "",
       "period": {
@@ -152,18 +152,18 @@
           "dayseven": "Visit: Opera House"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Hotel Mirti: web: https://hotelmirti.it/en/hotel-rome-mirti-square/ ",
           "hoteltwo": "Hotel Il Papavero: web:  https://www.hotelilpapavero.com/",
           "hotelthree": "Hotel Fiorenza :  web: https://www.hotelfiorenzarome.com/"
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Roma 2B:  web: https://www.roma2b.it/en/",
           "hoteltwo": "LH Hotel Andreotti:  web: https://andreotti.italyromehotels.net/en/#main",
           "hotelthree": "Hotel d'Este:  web: https://www.hoteldesterome.it/en/"
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "Hotel Caravita: web: https://www.hotelcaravita.it/en/",
           "hoteltwo": "Singer Palace Hotel  web: https://singerpalacehotel.com/",
           "hotelthree": "Grand Hotel Plaza: web: https://www.grandhotelplaza.com/en/"
@@ -199,18 +199,18 @@
           "dayseven": "Visit: San Gimignano"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Hotel Mirti: address: Via Dei Platani 101, 00172 Roma, web: https://hotelmirti.it/en/hotel-rome-mirti-square/ ",
           "hoteltwo": "Hotel Il Papavero: address: Via Castelfidardo 50, Gara Termini, 00185 Roma, web:  https://www.hotelilpapavero.com/",
           "hotelthree": "Hotel Fiorenza : address: Via Dei Mille 64, Gara Termini, 00185 Roma, web: https://www.hotelfiorenzarome.com/"
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Roma 2B: address: Via Sallustiana 1/A, 00187 Roma, web: https://www.roma2b.it/en/",
           "hoteltwo": "LH Hotel Andreotti: address: Via Castelfidardo 55, Gara Termini, 00185 Roma, web: https://andreotti.italyromehotels.net/en/#main",
           "hotelthree": "Hotel d'Este: address: Via Carlo Alberto 4/B, Gara Termini, 00185 Roma, web: https://www.hoteldesterome.it/en/"
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "Hotel Caravita: web: https://www.hotelcaravita.it/en/",
           "hoteltwo": "Singer Palace Hotel  web: https://singerpalacehotel.com/",
           "hotelthree": "Grand Hotel Plaza: web: https://www.grandhotelplaza.com/en/"
@@ -246,18 +246,18 @@
           "dayseven": "Visit: Cisternino"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Hotel Mirti:web: https://hotelmirti.it/en/hotel-rome-mirti-square/ ",
           "hoteltwo": "Hotel Il Papavero: web:  https://www.hotelilpapavero.com/",
           "hotelthree": "Hotel Fiorenza :  web: https://www.hotelfiorenzarome.com/"
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Roma 2B: web: https://www.roma2b.it/en/",
           "hoteltwo": "LH Hotel Andreotti: Gara Termini, 00185 Roma, web: https://andreotti.italyromehotels.net/en/#main",
           "hotelthree": "Hotel d'Este:  web: https://www.hoteldesterome.it/en/"
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "Hotel Caravita: web: https://www.hotelcaravita.it/en/",
           "hoteltwo": "Singer Palace Hotel  web: https://singerpalacehotel.com/",
           "hotelthree": "Grand Hotel Plaza: web: https://www.grandhotelplaza.com/en/"
@@ -293,18 +293,18 @@
           "dayseven": "Visit: Mantua"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Hotel Mirti: address: Via Dei Platani 101, 00172 Roma, web: https://hotelmirti.it/en/hotel-rome-mirti-square/ ",
           "hoteltwo": "Hotel Il Papavero: address: Via Castelfidardo 50, Gara Termini, 00185 Roma, web:  https://www.hotelilpapavero.com/",
           "hotelthree": "Hotel Fiorenza : address: Via Dei Mille 64, Gara Termini, 00185 Roma, web: https://www.hotelfiorenzarome.com/"
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Roma 2B: address: Via Sallustiana 1/A, 00187 Roma, web: https://www.roma2b.it/en/",
           "hoteltwo": "LH Hotel Andreotti: address: Via Castelfidardo 55, Gara Termini, 00185 Roma, web: https://andreotti.italyromehotels.net/en/#main",
           "hotelthree": "Hotel d'Este: address: Via Carlo Alberto 4/B, Gara Termini, 00185 Roma, web: https://www.hoteldesterome.it/en/"
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "Hotel Caravita: web: https://www.hotelcaravita.it/en/",
           "hoteltwo": "Singer Palace Hotel  web: https://singerpalacehotel.com/",
           "hotelthree": "Grand Hotel Plaza: web: https://www.grandhotelplaza.com/en/"
@@ -323,7 +323,7 @@
     {
       "city": "Paris",
       "country": "France",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD_KAzXa9xFq7UjSoxk8DVwEZuHSdLF1rGGA&s",
+      "image": "https://img.freepik.com/free-photo/sunset-illuminates-famous-city-skyline-romantic-view-generated-by-ai_188544-24134.jpg?t=st=1719648201~exp=1719651801~hmac=292059fd1819577d0779c52cb9453abf1770627dc9faea4ac5422a1aa83dac62&w=1060",
       "description": "Paris is the capital and most populous city of France. Situated on the Seine River, in the north of the country, it is in the centre of the Île-de-France region, also known as the région parisienne, Paris Region.",
       "category": "",
       "period": {
@@ -349,18 +349,18 @@
           "dayseven": "Visit: The Fontainebleau Palace"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Hotel Zora: web: https://hotel-zora.parishotelsfr.com/en/",
           "hoteltwo": "Hotel Studia: web: https://hotel-studia.parishotelsfr.com/en/",
           "hotelthree": "Hotel Marignan: web: https://www.hotel-marignan.com/ "
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Boutik Boheme: web: https://boutik-boheme-le-jardin-montmartre.iledefrance-hotel.com/en/",
           "hoteltwo": "Hotel Cluny Square: web: https://www.cluny-paris-hotel.com/",
           "hotelthree": "Pavillon Nation: web: https://pavillonnation.parishotels.it/ "
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "La Fantaisie: web: https://www.lafantaisie.com/",
           "hoteltwo": "Le Grand Mazarin: web: https://www.legrandmazarin.com/",
           "hotelthree": "Hôtel Raphael: web: https://www.raphael-hotel.com/en/"
@@ -371,7 +371,7 @@
     {
       "city": "Nice",
       "country": "France",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDGrMYJtjU6XsS1cAYy3Fzwf2HYwgPRDgWbg&s",
+      "image": "https://images.unsplash.com/photo-1554149082-75d460afced3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "description": "Nice is a major commercial and administrative centre in the east of the Provence–Alpes–Côte d'Azur region, its influence extending well beyond the boundary of the Alpes-Maritimes département. Numerous small and medium-sized factories are located at Nice, particularly in the Var Plain to the west.",
       "category": "",
       "period": {
@@ -397,18 +397,18 @@
           "dayseven": "Visit: Grasse and Saint-Paul-de-Vence"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Hotel Zora: web: https://hotel-zora.parishotelsfr.com/en/",
           "hoteltwo": "Hotel Studia: web: https://hotel-studia.parishotelsfr.com/en/",
           "hotelthree": "Hotel Marignan: web: https://www.hotel-marignan.com/ "
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Boutik Boheme: web: https://boutik-boheme-le-jardin-montmartre.iledefrance-hotel.com/en/",
           "hoteltwo": "Hotel Cluny Square: web: https://www.cluny-paris-hotel.com/",
           "hotelthree": "Pavillon Nation: web: https://pavillonnation.parishotels.it/ "
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "La Fantaisie: web: https://www.lafantaisie.com/",
           "hoteltwo": "Le Grand Mazarin: web: https://www.legrandmazarin.com/",
           "hotelthree": "Hôtel Raphael: web: https://www.raphael-hotel.com/en/"
@@ -417,9 +417,9 @@
       "id": 3
     },
     {
-      "city": "Strassburg",
+      "city": "Strasbourg",
       "country": "France",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwhLmyb7TIkXPzxDGpYPPioMP1aKOkIkkYJg&s",
+      "image": "https://img.freepik.com/free-photo/canal-surrounded-by-buildings-greenery-cloudy-sky-strasbourg-france_181624-15366.jpg?t=st=1719648937~exp=1719652537~hmac=49b984abce9981e26429b640a9404b4bf51f603b83a551c4a9ad85565af623cb&w=996",
       "description": "Frontier towns are often cross-cultural capitals. Strasbourg is the embodiment of that role, stirring France and Germany into an appealing brew, even despite the increased complexity of hosting important international institutions like the Council of Europe and European Parliament. Somehow, they only add to the charm of Strasbourg’s historical center – “Little France,” now a UNESCO World Heritage Site – packed with narrow alleyways, canals and half-timbered houses with street-level winstubs (local taverns), all lorded over by an ornate Gothic masterpiece of a cathedral.",
       "category": "",
       "period": {
@@ -445,18 +445,18 @@
           "dayseven": "Visit: Colmar"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Hotel Zora: web: https://hotel-zora.parishotelsfr.com/en/",
           "hoteltwo": "Hotel Studia: web: https://hotel-studia.parishotelsfr.com/en/",
           "hotelthree": "Hotel Marignan: web: https://www.hotel-marignan.com/ "
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Boutik Boheme: web: https://boutik-boheme-le-jardin-montmartre.iledefrance-hotel.com/en/",
           "hoteltwo": "Hotel Cluny Square: web: https://www.cluny-paris-hotel.com/",
           "hotelthree": "Pavillon Nation: web: https://pavillonnation.parishotels.it/ "
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "La Fantaisie: web: https://www.lafantaisie.com/",
           "hoteltwo": "Le Grand Mazarin: web: https://www.legrandmazarin.com/",
           "hotelthree": "Hôtel Raphael: web: https://www.raphael-hotel.com/en/"
@@ -493,18 +493,18 @@
           "dayseven": "Visit: Grasse and Saint-Paul-de-Vence "
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Hotel Zora: web: https://hotel-zora.parishotelsfr.com/en/",
           "hoteltwo": "Hotel Studia: web: https://hotel-studia.parishotelsfr.com/en/",
           "hotelthree": "Hotel Marignan: web: https://www.hotel-marignan.com/ "
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Boutik Boheme: web: https://boutik-boheme-le-jardin-montmartre.iledefrance-hotel.com/en/",
           "hoteltwo": "Hotel Cluny Square: web: https://www.cluny-paris-hotel.com/",
           "hotelthree": "Pavillon Nation: web: https://pavillonnation.parishotels.it/ "
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "La Fantaisie: web: https://www.lafantaisie.com/",
           "hoteltwo": "Le Grand Mazarin: web: https://www.legrandmazarin.com/",
           "hotelthree": "Hôtel Raphael: web: https://www.raphael-hotel.com/en/"
@@ -516,42 +516,42 @@
       "region": "Loir Valley",
       "country": "France",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnXvnmk4k59H1-DpvvqTx2LOBonMzlaiPg1A&s",
-      "description": "The Loire Valley has been called the Garden of France and is studded with over a thousand châteaux, each with distinct architectural embellishments covering a wide range of variations, from the early medieval to the late Renaissance periods.",
+      "description": "The Loire Valley has been called the Garden of France and is studded with over a thousand chateaux, each with distinct architectural embellishments covering a wide range of variations, from the early medieval to the late Renaissance periods.",
       "period": {
         "threedays": {
           "dayone": "Visit: Chartres or Orléans en route to Blois ",
-          "daytwo": "Visit: Visit Château de Chambord  and Château de Cheverny  ",
-          "daythree": "Visit: Visit Château Blois and do a wine tasting or bike ride along the Loire River"
+          "daytwo": "Visit: Visit Chateau de Chambord  and Chateau de Cheverny  ",
+          "daythree": "Visit: Visit Chateau Blois and do a wine tasting or bike ride along the Loire River"
         },
         "fivedays": {
           "dayone": "Visit: Chartres or Orléans en route to Blois ",
-          "daytwo": "Visit: Visit Château de Chambord  and Château de Cheverny  ",
-          "daythree": "Visit: Visit Château Blois and do a wine tasting or bike ride along the Loire River",
-          "dayfour": "Visit: Château d’Amboise  and Château du Clos Lucé",
-          "dayfive": "Visit: Château Azay-le-Rideau and Château de Villandry. "
+          "daytwo": "Visit: Visit Chateau de Chambord  and Chateau de Cheverny  ",
+          "daythree": "Visit: Visit Chateau Blois and do a wine tasting or bike ride along the Loire River",
+          "dayfour": "Visit: Chateau d’Amboise  and Chateau du Clos Lucé",
+          "dayfive": "Visit: Chateau Azay-le-Rideau and Chateau de Villandry. "
         },
         "sevendays": {
           "dayone": "Visit: Chartres or Orléans en route to Blois ",
-          "daytwo": "Visit: Visit Château de Chambord  and Château de Cheverny  ",
-          "daythree": "Visit: Visit Château Blois and do a wine tasting or bike ride along the Loire River",
-          "dayfour": "Visit: Château d’Amboise  and Château du Clos Lucé",
-          "dayfive": "Visit: Château Azay-le-Rideau and Château de Villandry. ",
-          "daysix": "Visit: Château Chaumont-Sur-Loire and Château de Chenonceau",
-          "dayseven": "Visit: Royal Abbey Fontevraud and Château d’Angers"
+          "daytwo": "Visit: Visit Chateau de Chambord  and Chateau de Cheverny  ",
+          "daythree": "Visit: Visit Chateau Blois and do a wine tasting or bike ride along the Loire River",
+          "dayfour": "Visit: Chateau d’Amboise  and Chateau du Clos Lucé",
+          "dayfive": "Visit: Chateau Azay-le-Rideau and Chateau de Villandry. ",
+          "daysix": "Visit: Chateau Chaumont-Sur-Loire and Chateau de Chenonceau",
+          "dayseven": "Visit: Royal Abbey Fontevraud and Chateau d’Angers"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Hotel Zora: web: https://hotel-zora.parishotelsfr.com/en/",
           "hoteltwo": "Hotel Studia: web: https://hotel-studia.parishotelsfr.com/en/",
           "hotelthree": "Hotel Marignan: web: https://www.hotel-marignan.com/ "
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Boutik Boheme: web: https://boutik-boheme-le-jardin-montmartre.iledefrance-hotel.com/en/",
           "hoteltwo": "Hotel Cluny Square: web: https://www.cluny-paris-hotel.com/",
           "hotelthree": "Pavillon Nation: web: https://pavillonnation.parishotels.it/ "
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "La Fantaisie: web: https://www.lafantaisie.com/",
           "hoteltwo": "Le Grand Mazarin: web: https://www.legrandmazarin.com/",
           "hotelthree": "Hôtel Raphael: web: https://www.raphael-hotel.com/en/"
@@ -587,18 +587,18 @@
           "dayseven": "Visit: Mont-Saint-Michel."
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Hotel Zora: web: https://hotel-zora.parishotelsfr.com/en/",
           "hoteltwo": "Hotel Studia: web: https://hotel-studia.parishotelsfr.com/en/",
           "hotelthree": "Hotel Marignan: web: https://www.hotel-marignan.com/ "
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Boutik Boheme: web: https://boutik-boheme-le-jardin-montmartre.iledefrance-hotel.com/en/",
           "hoteltwo": "Hotel Cluny Square: web: https://www.cluny-paris-hotel.com/",
           "hotelthree": "Pavillon Nation: web: https://pavillonnation.parishotels.it/ "
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "La Fantaisie: web: https://www.lafantaisie.com/",
           "hoteltwo": "Le Grand Mazarin: web: https://www.legrandmazarin.com/",
           "hotelthree": "Hôtel Raphael: web: https://www.raphael-hotel.com/en/"
@@ -644,18 +644,18 @@
           "dayseven": "Visit: Castle of Bran"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Vila Coca: web: https://vila-coca-predeal.hotelmix.ro/",
           "hoteltwo": "Pensiunea Montan Busteni: web: https://pensiunea-montan-busteni-guest-house.hotelmix.ro/",
           "hotelthree": "HOSTEL CPPI Nord: web: https://cppibusteni.weebly.com/cazare.html"
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Palatul Brukenthal Avrig: web: https://palatulbrukenthalavrig.ro/en/home-english/",
           "hoteltwo": "Resort EuroPark Fundata: web: https://europark.ro/",
           "hotelthree": "Casa Domeniile Vinului: web: https://www.vindeciumbrud.ro/turism/"
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
           "hoteltwo": "Sungarden Golf & Spa Resort: web: https://sungardenresort.ro/",
           "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
@@ -668,7 +668,7 @@
       "reg": "Dobrogea",
       "country": "Romania",
       "image": "https://images.unsplash.com/photo-1629826958301-2d6c17de6874?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "Constanța, Romania's oldest continuously inhabited city, is a vibrant Black Sea port offering beautiful beaches, historic landmarks like the stunning Art Nouveau Constanța Casino, and rich cultural heritage. Key attractions include the Roman Mosaic Edifice, the Genoese Lighthouse, and the National History and Archaeology Museum. It’s an ideal destination for both seaside relaxation and historical exploration.",
+      "description": "Constanta, Romania's oldest continuously inhabited city, is a vibrant Black Sea port offering beautiful beaches, historic landmarks like the stunning Art Nouveau Constanta Casino, and rich cultural heritage. Key attractions include the Roman Mosaic Edifice, the Genoese Lighthouse, and the National History and Archaeology Museum. It’s an ideal destination for both seaside relaxation and historical exploration.",
       "category": ["plaja", "relaxare", "citybreak"],
       "period": {
         "threedays": {
@@ -693,18 +693,18 @@
           "dayseven": "Visit: Techirghiol,Murfatlar"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Vila Coca: web: https://vila-coca-predeal.hotelmix.ro/",
           "hoteltwo": "Pensiunea Montan Busteni: web: https://pensiunea-montan-busteni-guest-house.hotelmix.ro/",
           "hotelthree": "HOSTEL CPPI Nord: web: https://cppibusteni.weebly.com/cazare.html"
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Palatul Brukenthal Avrig: web: https://palatulbrukenthalavrig.ro/en/home-english/",
           "hoteltwo": "Resort EuroPark Fundata: web: https://europark.ro/",
           "hotelthree": "Casa Domeniile Vinului: web: https://www.vindeciumbrud.ro/turism/"
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
           "hoteltwo": "Sungarden Golf & Spa Resort: web: https://sungardenresort.ro/",
           "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
@@ -742,18 +742,18 @@
           "dayseven": "Visit: Turda Salt Mine"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Vila Coca: web: https://vila-coca-predeal.hotelmix.ro/",
           "hoteltwo": "Pensiunea Montan Busteni: web: https://pensiunea-montan-busteni-guest-house.hotelmix.ro/",
           "hotelthree": "HOSTEL CPPI Nord: web: https://cppibusteni.weebly.com/cazare.html"
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Palatul Brukenthal Avrig: web: https://palatulbrukenthalavrig.ro/en/home-english/",
           "hoteltwo": "Resort EuroPark Fundata: web: https://europark.ro/",
           "hotelthree": "Casa Domeniile Vinului: web: https://www.vindeciumbrud.ro/turism/"
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
           "hoteltwo": "Sungarden Golf & Spa Resort: web: https://sungardenresort.ro/",
           "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
@@ -766,7 +766,7 @@
       "reg": "Transylvania",
       "country": "Romania",
       "image": "https://img.freepik.com/free-photo/aerial-drone-view-council-square-brasov-romania_1268-20593.jpg?t=st=1716714491~exp=1716718091~hmac=33ea4c5124a5e8d380fe37fca7e687a6a89704974b4048c377be2161978c4caa&w=1060",
-      "description": "Brașov is a charming city located in central Romania, nestled in the Carpathian Mountains. Known for its medieval architecture and rich history, Brașov is a major cultural and economic hub in the region. The city's centerpiece is the Black Church, a Gothic-style monument dating back to the 14th century. Brașov's old town is lined with colorful baroque buildings, narrow cobblestone streets, and vibrant squares such as Piața Sfatului. The nearby Tampa Mountain offers panoramic views and hiking opportunities, while the fortified walls and towers, like the White Tower and Black Tower, reflect the city's historical significance as a fortress town. Brașov is also a gateway to the famous Bran Castle, often associated with the Dracula legend. The city's mix of historical charm, natural beauty, and modern amenities make it a popular destination for tourists.",
+      "description": "Brasov is a charming city located in central Romania, nestled in the Carpathian Mountains. Known for its medieval architecture and rich history, Brasov is a major cultural and economic hub in the region. The city's centerpiece is the Black Church, a Gothic-style monument dating back to the 14th century. Brasov's old town is lined with colorful baroque buildings, narrow cobblestone streets, and vibrant squares such as Piata Sfatului. The nearby Tampa Mountain offers panoramic views and hiking opportunities, while the fortified walls and towers, like the White Tower and Black Tower, reflect the city's historical significance as a fortress town. Brasov is also a gateway to the famous Bran Castle, often associated with the Dracula legend. The city's mix of historical charm, natural beauty, and modern amenities make it a popular destination for tourists.",
       "category": ["aerliber", "citybreak", "relaxare"],
       "period": {
         "threedays": {
@@ -791,18 +791,18 @@
           "dayseven": "Visit: Peles Castle"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Vila Coca: web: https://vila-coca-predeal.hotelmix.ro/",
           "hoteltwo": "Pensiunea Montan Busteni: web: https://pensiunea-montan-busteni-guest-house.hotelmix.ro/",
           "hotelthree": "HOSTEL CPPI Nord: web: https://cppibusteni.weebly.com/cazare.html"
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Palatul Brukenthal Avrig: web: https://palatulbrukenthalavrig.ro/en/home-english/",
           "hoteltwo": "Resort EuroPark Fundata: web: https://europark.ro/",
           "hotelthree": "Casa Domeniile Vinului: web: https://www.vindeciumbrud.ro/turism/"
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
           "hoteltwo": "Sungarden Golf & Spa Resort: web: https://sungardenresort.ro/",
           "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
@@ -815,7 +815,7 @@
       "reg": "Transilvania",
       "country": "Romania",
       "image": "https://img.freepik.com/free-photo/aerial-drone-view-historic-centre-sibiu-evening-romania_1268-20828.jpg?t=st=1716716228~exp=1716719828~hmac=5182022db7ccec4e61b673186d78227323570e9293c8e5dcf4ccf0a419e0d631&w=1380",
-      "description": "Known for its well-preserved medieval architecture, Sibiu was designated a European Capital of Culture in 2007. The city features beautiful squares such as the Grand Square (Piața Mare) and the Small Square (Piața Mică), as well as the iconic Council Tower and the Brukenthal National Museum. Sibiu's charming ambiance and cultural significance draw many visitors.",
+      "description": "Known for its well-preserved medieval architecture, Sibiu was designated a European Capital of Culture in 2007. The city features beautiful squares such as the Grand Square (Piata Mare) and the Small Square (Piata Mica), as well as the iconic Council Tower and the Brukenthal National Museum. Sibiu's charming ambiance and cultural significance draw many visitors.",
       "category": ["aerliber", "citybreak", "relaxare"],
       "period": {
         "threedays": {
@@ -840,18 +840,18 @@
           "dayseven": "Visit: Peles Castle"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Vila Coca: web: https://vila-coca-predeal.hotelmix.ro/",
           "hoteltwo": "Pensiunea Montan Busteni: web: https://pensiunea-montan-busteni-guest-house.hotelmix.ro/",
           "hotelthree": "HOSTEL CPPI Nord: web: https://cppibusteni.weebly.com/cazare.html"
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Palatul Brukenthal Avrig: web: https://palatulbrukenthalavrig.ro/en/home-english/",
           "hoteltwo": "Resort EuroPark Fundata: web: https://europark.ro/",
           "hotelthree": "Casa Domeniile Vinului: web: https://www.vindeciumbrud.ro/turism/"
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
           "hoteltwo": "Sungarden Golf & Spa Resort: web: https://sungardenresort.ro/",
           "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
@@ -864,7 +864,7 @@
       "reg": "Dobrogea",
       "country": "Romania",
       "image": "https://images.unsplash.com/photo-1669059166575-f1ea19483c85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "Mamaia, located on Romania's Black Sea coast near Constanța, is a premier summer resort known for its long, sandy beaches and vibrant nightlife. It features luxury hotels, beach clubs, and water parks, making it ideal for both relaxation and entertainment. The resort's scenic promenade and panoramic gondola rides enhance its appeal as a top tourist destination.",
+      "description": "Mamaia, located on Romania's Black Sea coast near Constanta, is a premier summer resort known for its long, sandy beaches and vibrant nightlife. It features luxury hotels, beach clubs, and water parks, making it ideal for both relaxation and entertainment. The resort's scenic promenade and panoramic gondola rides enhance its appeal as a top tourist destination.",
       "category": ["plaja", "relaxare"],
       "id": 7
     },
@@ -905,18 +905,18 @@
           "dayseven": "Visit: Gura Portitei and Jurilovsca"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Vila Coca: web: https://vila-coca-predeal.hotelmix.ro/",
           "hoteltwo": "Pensiunea Montan Busteni: web: https://pensiunea-montan-busteni-guest-house.hotelmix.ro/",
           "hotelthree": "HOSTEL CPPI Nord: web: https://cppibusteni.weebly.com/cazare.html"
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Palatul Brukenthal Avrig: web: https://palatulbrukenthalavrig.ro/en/home-english/",
           "hoteltwo": "Resort EuroPark Fundata: web: https://europark.ro/",
           "hotelthree": "Casa Domeniile Vinului: web: https://www.vindeciumbrud.ro/turism/"
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
           "hoteltwo": "Sungarden Golf & Spa Resort: web: https://sungardenresort.ro/",
           "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
@@ -952,18 +952,18 @@
           "dayseven": "Visit: Sucevita Monastery, Voronet Monastery"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Vila Coca: web: https://vila-coca-predeal.hotelmix.ro/",
           "hoteltwo": "Pensiunea Montan Busteni: web: https://pensiunea-montan-busteni-guest-house.hotelmix.ro/",
           "hotelthree": "HOSTEL CPPI Nord: web: https://cppibusteni.weebly.com/cazare.html"
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Palatul Brukenthal Avrig: web: https://palatulbrukenthalavrig.ro/en/home-english/",
           "hoteltwo": "Resort EuroPark Fundata: web: https://europark.ro/",
           "hotelthree": "Casa Domeniile Vinului: web: https://www.vindeciumbrud.ro/turism/"
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
           "hoteltwo": "Sungarden Golf & Spa Resort: web: https://sungardenresort.ro/",
           "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
@@ -982,7 +982,7 @@
     {
       "city": "Barcelona",
       "country": "Spain",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiRBfHspE27YCVXRvWj_-4ZRyPvzxQtkYHYQ&s",
+      "image": "https://img.freepik.com/free-photo/view-park-guell-winter-barcelona_1398-4411.jpg?t=st=1719651186~exp=1719654786~hmac=ac45a9641a9033ba4bfe69dce348abe63140c5534a20d9466bf78fec6ba6db93&w=996",
       "description": "Overlooking the Mediterranean Sea, and famous for Gaudí and other Art Nouveau architecture, Barcelona is one of Europe's trendiest cities. It's a hub of new trends in the world of culture, fashion and cuisine. It combines the creativity of its artists and designers with respect and care for local traditions.",
       "category": "",
       "period": {
@@ -1008,18 +1008,18 @@
           "dayseven": "Visit: A Day at Port Aventura"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Center Gran Via: web: https://centergranvia.com/en/",
           "hoteltwo": "Hotel Pelay: web: http://www.hotelpelayo.com/en/",
           "hotelthree": "Hotel Peninsular: web: https://hotelpeninsularbarcelona.com/?lang=en "
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Hotel Viladomat: web: https://www.aa-hoteles.com/en/hotel-viladomat-barcelona",
           "hoteltwo": "Acta Vora: web: https://www.hotelvoraport.com/en/ ",
           "hotelthree": "Ronda House: web: https://en.hotel-rondahouse.com/"
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "Ohla Eixample: web: https://www.ohlaeixample.com/en/",
           "hoteltwo": "Hotel Casa Sagnier:web: https://hotelcasasagnier.com/en/",
           "hotelthree": "Monument Hotel: web: https://www.monumenthotel.com/en/hotel/"
@@ -1030,7 +1030,7 @@
     {
       "city": "Seville",
       "country": "Spain",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR10RV3xa9ign2AGNhMGgUZ2Hpwkemza2-Qxg&s",
+      "image": "https://img.freepik.com/free-photo/beautiful-view-plaza-de-espana-seville-spain_181624-39542.jpg?t=st=1719647351~exp=1719650951~hmac=4e3f3b42793d9c0c00bca985aad0b88200c2a35fd372f0da661c455fc7b88952&w=1380",
       "description": "Seville is the capital of Andalusia, the Autonomous Community with the largest population in Spain, the fourth most populous city in the country, and one of the most important capitals of southern Europe. In the past, Seville was the most important city in the world.",
       "category": "",
       "period": {
@@ -1056,18 +1056,18 @@
           "dayseven": "Visit:  Day trip to Ronda"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Center Gran Via: web: https://centergranvia.com/en/",
           "hoteltwo": "Hotel Pelay: web: http://www.hotelpelayo.com/en/",
           "hotelthree": "Hotel Peninsular: web: https://hotelpeninsularbarcelona.com/?lang=en "
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Hotel Viladomat: web: https://www.aa-hoteles.com/en/hotel-viladomat-barcelona",
           "hoteltwo": "Acta Vora: web: https://www.hotelvoraport.com/en/ ",
           "hotelthree": "Ronda House: web: https://en.hotel-rondahouse.com/"
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "Ohla Eixample: web: https://www.ohlaeixample.com/en/",
           "hoteltwo": "Hotel Casa Sagnier:web: https://hotelcasasagnier.com/en/",
           "hotelthree": "Monument Hotel: web: https://www.monumenthotel.com/en/hotel/"
@@ -1078,7 +1078,7 @@
     {
       "city": "Valencia",
       "country": "Spain",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSO3XzVYzVKqdIbT9k1VgQWThW9QaNuIirzQ&s",
+      "image": "https://img.freepik.com/free-photo/white-concrete-structure-beside-body-water_400718-9.jpg?t=st=1719647262~exp=1719650862~hmac=8264b9c61d4efd0905ac10257ee7f856d7c9fae8948dfe6cbb5bafac8bb8ebfc&w=996",
       "description": "Valencia is Spain's third largest city and it offers tourism for all tastes. The city brings together historic and modern culture. In the old town (El Carmen) you will find a gothic cathedral, a modernist food market and a Rococo palace all in easy walking distance of each other.",
       "category": "",
       "period": {
@@ -1104,18 +1104,18 @@
           "dayseven": "Visit: Morella"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Center Gran Via: web: https://centergranvia.com/en/",
           "hoteltwo": "Hotel Pelay: web: http://www.hotelpelayo.com/en/",
           "hotelthree": "Hotel Peninsular: web: https://hotelpeninsularbarcelona.com/?lang=en "
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Hotel Viladomat: web: https://www.aa-hoteles.com/en/hotel-viladomat-barcelona",
           "hoteltwo": "Acta Vora: web: https://www.hotelvoraport.com/en/ ",
           "hotelthree": "Ronda House: web: https://en.hotel-rondahouse.com/"
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "Ohla Eixample: web: https://www.ohlaeixample.com/en/",
           "hoteltwo": "Hotel Casa Sagnier:web: https://hotelcasasagnier.com/en/",
           "hotelthree": "Monument Hotel: web: https://www.monumenthotel.com/en/hotel/"
@@ -1151,18 +1151,18 @@
           "dayseven": "Visit: Cadiz, Jerez de la Frontera"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Center Gran Via: web: https://centergranvia.com/en/",
           "hoteltwo": "Hotel Pelay: web: http://www.hotelpelayo.com/en/",
           "hotelthree": "Hotel Peninsular: web: https://hotelpeninsularbarcelona.com/?lang=en "
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Hotel Viladomat: web: https://www.aa-hoteles.com/en/hotel-viladomat-barcelona",
           "hoteltwo": "Acta Vora: web: https://www.hotelvoraport.com/en/ ",
           "hotelthree": "Ronda House: web: https://en.hotel-rondahouse.com/"
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "Ohla Eixample: web: https://www.ohlaeixample.com/en/",
           "hoteltwo": "Hotel Casa Sagnier:web: https://hotelcasasagnier.com/en/",
           "hotelthree": "Monument Hotel: web: https://www.monumenthotel.com/en/hotel/"
@@ -1198,18 +1198,18 @@
           "dayseven": "Visit: Off the beaten path"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Center Gran Via: web: https://centergranvia.com/en/",
           "hoteltwo": "Hotel Pelay: web: http://www.hotelpelayo.com/en/",
           "hotelthree": "Hotel Peninsular: web: https://hotelpeninsularbarcelona.com/?lang=en "
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Hotel Viladomat: web: https://www.aa-hoteles.com/en/hotel-viladomat-barcelona",
           "hoteltwo": "Acta Vora: web: https://www.hotelvoraport.com/en/ ",
           "hotelthree": "Ronda House: web: https://en.hotel-rondahouse.com/"
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "Ohla Eixample: web: https://www.ohlaeixample.com/en/",
           "hoteltwo": "Hotel Casa Sagnier:web: https://hotelcasasagnier.com/en/",
           "hotelthree": "Monument Hotel: web: https://www.monumenthotel.com/en/hotel/"
@@ -1245,18 +1245,18 @@
           "dayseven": "Visit: The Island of Minorca (Menorca)"
         }
       },
-      "buget": {
-        "lowBuget": {
+      "budget": {
+        "lowBudget": {
           "hotelone": "Center Gran Via: web: https://centergranvia.com/en/",
           "hoteltwo": "Hotel Pelay: web: http://www.hotelpelayo.com/en/",
           "hotelthree": "Hotel Peninsular: web: https://hotelpeninsularbarcelona.com/?lang=en "
         },
-        "mediumBuget": {
+        "mediumBudget": {
           "hotelone": "Hotel Viladomat: web: https://www.aa-hoteles.com/en/hotel-viladomat-barcelona",
           "hoteltwo": "Acta Vora: web: https://www.hotelvoraport.com/en/ ",
           "hotelthree": "Ronda House: web: https://en.hotel-rondahouse.com/"
         },
-        "highBuget": {
+        "highBudget": {
           "hotelone": "Ohla Eixample: web: https://www.ohlaeixample.com/en/",
           "hoteltwo": "Hotel Casa Sagnier:web: https://hotelcasasagnier.com/en/",
           "hotelthree": "Monument Hotel: web: https://www.monumenthotel.com/en/hotel/"
@@ -1271,25 +1271,25 @@
       "city": "Brasov",
       "country": "Romania",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Poarta_Ecaterinei_Brasov.jpg/647px-Poarta_Ecaterinei_Brasov.jpg?20160522170145",
-      "description": "Catherine's Gate is the only original city gate that has survived from medieval times. Built in 1559, it features a unique design with a fairy-tale look, including four small corner turrets symbolizing the city’s right to capital punishment. The gate is a beautiful piece of Brașov's history and a must-see for visitors.",
+      "description": "Catherine's Gate is the only original city gate that has survived from medieval times. Built in 1559, it features a unique design with a fairy-tale look, including four small corner turrets symbolizing the city’s right to capital punishment. The gate is a beautiful piece of Brasov's history and a must-see for visitors.",
       "popularity": 4,
       "id": 0
     },
     {
-      "name": "Black Church (Biserica Neagră)",
+      "name": "Black Church (Biserica Neagra)",
       "city": "Brasov",
       "country": "Romania",
       "image": "https://images.unsplash.com/photo-1629582826428-078d3bdbf5cf?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "The Black Church is a Gothic-style cathedral and one of the most iconic landmarks in Brașov. It is known for its impressive architecture, stunning interior, and a large collection of Anatolian carpets. The church's name comes from the darkened walls caused by a fire in the 17th century.",
+      "description": "The Black Church is a Gothic-style cathedral and one of the most iconic landmarks in Brasov. It is known for its impressive architecture, stunning interior, and a large collection of Anatolian carpets. The church's name comes from the darkened walls caused by a fire in the 17th century.",
       "popularity": 5,
       "id": 1
     },
     {
-      "name": "Council Square (Piața Sfatului)",
+      "name": "Council Square (Piata Sfatului)",
       "city": "Brasov",
       "country": "Romania",
       "image": "https://images.unsplash.com/photo-1662553423182-7ab65b441fa0?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "This picturesque square is the heart of Brașov's old town. Surrounded by colorful baroque buildings, it features the historic Council House (Casa Sfatului) and is a vibrant hub for cafes, shops, and events. It's a perfect place for a leisurely stroll and soaking in the local atmosphere.",
+      "description": "This picturesque square is the heart of Brasov's old town. Surrounded by colorful baroque buildings, it features the historic Council House (Casa Sfatului) and is a vibrant hub for cafes, shops, and events. It's a perfect place for a leisurely stroll and soaking in the local atmosphere.",
       "popularity": 5,
       "id": 2
     },
@@ -1298,7 +1298,7 @@
       "city": "Brasov",
       "country": "Romania",
       "image": "https://images.unsplash.com/photo-1558253347-fb1128610003?q=80&w=3634&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "Offering stunning panoramic views of Brașov and the surrounding area, Mount Tampa is accessible via hiking trails or a cable car. At the summit, visitors can enjoy the scenic overlook and spot the Hollywood-style `Brașov` sign. It’s a great spot for nature lovers and photographers.",
+      "description": "Offering stunning panoramic views of Brasov and the surrounding area, Mount Tampa is accessible via hiking trails or a cable car. At the summit, visitors can enjoy the scenic overlook and spot the Hollywood-style `Brasov` sign. It’s a great spot for nature lovers and photographers.",
       "popularity": 4.5,
       "id": 3
     }

@@ -7,9 +7,9 @@ import {
   TextOrangeChoice,
 } from "../MyTravelCity/MyTravel.style";
 import FiveDays from "../MyTravelRecommend/FiveDays";
-import HighBuget from "../MyTravelRecommend/HighBuget";
-import LowBuget from "../MyTravelRecommend/LowBuget";
-import MediumBuget from "../MyTravelRecommend/MediumBuget";
+import HighBudget from "../MyTravelRecommend/HighBudget";
+import LowBudget from "../MyTravelRecommend/LowBudget";
+import MediumBudget from "../MyTravelRecommend/MediumBudget";
 import SevenDays from "../MyTravelRecommend/SevenDays";
 import ThreeDays from "../MyTravelRecommend/ThreeDays";
 
@@ -17,32 +17,32 @@ function MyChoicesBox({
   country,
   city,
   region,
-  buget,
+  budget,
   period,
   data,
   handleDelete,
 }) {
   console.log("databox", data);
-  console.log("buget", buget);
+  console.log("budget", budget);
 
-  const bugetTravelNoSpace = buget?.replace(/ /g, "").toLowerCase();
-  console.log("bugetTravelNoSpace", bugetTravelNoSpace);
+  const budgetTravelNoSpace = budget?.replace(/ /g, "").toLowerCase();
+  console.log("budgetTravelNoSpace", budgetTravelNoSpace);
 
   const periodTravelNoSpace = period?.replace(/ /g, "").toLowerCase();
 
-  const keyBuget = data && Object.keys(data?.[0]?.buget);
-  console.log("keyBuget", keyBuget);
+  const keyBudget = data && Object.keys(data?.[0]?.budget);
+  console.log("keyBudget", keyBudget);
 
   const keyPeriod = data && Object.keys(data?.[0]?.period);
 
-  const equalBugetLow =
-    bugetTravelNoSpace == keyBuget?.[0]?.toLowerCase() ? true : false;
-  console.log("equalBugetLow", equalBugetLow);
+  const equalBudgetLow =
+    budgetTravelNoSpace == keyBudget?.[0]?.toLowerCase() ? true : false;
+  console.log("equalBudgetLow", equalBudgetLow);
 
-  const equalBugetMedium =
-    bugetTravelNoSpace == keyBuget?.[1]?.toLowerCase() ? true : false;
-  const equalBugetHigh =
-    bugetTravelNoSpace == keyBuget?.[2]?.toLowerCase() ? true : false;
+  const equalBudgetMedium =
+    budgetTravelNoSpace == keyBudget?.[1]?.toLowerCase() ? true : false;
+  const equalBudgetHigh =
+    budgetTravelNoSpace == keyBudget?.[2]?.toLowerCase() ? true : false;
 
   const equalPeriodThree =
     periodTravelNoSpace == keyPeriod?.[0].toLowerCase() ? true : false;
@@ -91,21 +91,23 @@ function MyChoicesBox({
           </MainContainerChoice>
         ) : null}
 
-        {buget ? (
+        {budget ? (
           <MainContainerChoice loc="MainContainerChoice">
             <DataContainerChoice loc="DataContainerChoice">
-              <TextOrangeChoice loc="TextOrangeChoice">Buget:</TextOrangeChoice>
-              <TextChoice loc="TextChoice">{buget}</TextChoice>
+              <TextOrangeChoice loc="TextOrangeChoice">
+                Budget:
+              </TextOrangeChoice>
+              <TextChoice loc="TextChoice">{budget}</TextChoice>
             </DataContainerChoice>
-            {equalBugetLow
-              ? data?.map((e, index) => <LowBuget key={index} {...e} />)
+            {equalBudgetLow
+              ? data?.map((e, index) => <LowBudget key={index} {...e} />)
               : null}
-            {equalBugetMedium
-              ? data?.map((e, index) => <MediumBuget key={index} {...e} />)
+            {equalBudgetMedium
+              ? data?.map((e, index) => <MediumBudget key={index} {...e} />)
               : null}
 
-            {equalBugetHigh
-              ? data?.map((e, index) => <HighBuget key={index} {...e} />)
+            {equalBudgetHigh
+              ? data?.map((e, index) => <HighBudget key={index} {...e} />)
               : null}
           </MainContainerChoice>
         ) : null}

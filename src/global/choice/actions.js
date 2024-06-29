@@ -1,7 +1,7 @@
-export function addChoice({ country, city, region, buget, period, data }) {
+export function addChoice({ country, city, region, budget, period, data }) {
   return {
     type: "ADD_CHOICE",
-    payload: { country, city, region, buget, period, data },
+    payload: { country, city, region, budget, period, data },
   };
 }
 

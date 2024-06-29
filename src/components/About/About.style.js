@@ -36,3 +36,14 @@ export const AboutTextCenter = styled(AboutText)`
 export const AboutTitle = styled.h1`
   color: ${ORANGE};
 `;
+
+export const CreditsSection = styled.section`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const CreditsText = styled.p`
+  color: ${WHITE_NEUTRAL};
+  width: 70vw;
+  margin: 30px auto;
+`;
