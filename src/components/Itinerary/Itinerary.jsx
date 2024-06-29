@@ -1,5 +1,7 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { ItineraryContext } from "../../global/itinerary/context";
+import useLocalStorage from "../../hooks/useLocalStorage";
 import CityCard from "../CityCard/CityCard";
 import { ButtonInfo, InfoSection, InfoUser } from "../Explore/Explore.style";
 import LandmarkCard from "../LandmarkCard/LandmarkCard";
