@@ -23,9 +23,6 @@ import {
   SectionLandmarkData,
   Subtitle,
   Title,
-  ButtonAccommodationExplore,
-  SectionExplore,
-  MyStamp,
 } from "./Explore.style";
 
 const Explore = () => {
@@ -280,12 +277,9 @@ const Explore = () => {
           </ButtonCity>
           <ButtonAccommodationExplore
             loc="ButtonAccommodationExplore"
-          <ButtonAccommodationExplore
-            loc="ButtonAccommodationExplore"
             onClick={(event) => goAccomm(event)}
           >
             I want to book accommodation!
-          </ButtonAccommodationExplore>
           </ButtonAccommodationExplore>
         </SectionCityButtons>
       )}

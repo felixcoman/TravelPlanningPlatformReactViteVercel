@@ -10,8 +10,6 @@ import {
   ButtonAccommodation,
   SectionItinerary,
 } from "./Itinerary.style";
-import { useNavigate } from "react-router-dom";
-import useLocalStorage from "../../hooks/useLocalStorage";
 
 function Itinerary() {
   const navigate = useNavigate();
