@@ -48,6 +48,7 @@ body {
 .card {
   width: 300px;
   background-image: url("../../../src/assets/897940_2588.jpg");
+  background-size: cover;
   font-size: 25px;
   margin: 10px;
   display: flex;

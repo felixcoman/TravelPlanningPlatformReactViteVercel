@@ -31,7 +31,7 @@
       "city": "Rome",
       "country": "Italy",
       "image": "https://img.freepik.com/free-photo/cityscape-rome-ancient-centre-italy_1268-20482.jpg?t=st=1719649855~exp=1719653455~hmac=6212a17e7c04bbc6751b00cccaa484b910970222d7f315488081c073ad7e3d25&w=1380",
-      "description": "Rome is often referred to as the City of Seven Hills due to its geographic location, and also as the Eternal City. Rome is generally considered to be the cradle of Western civilization and Western Christian culture, and the centre of the Catholic Church.",
+      "description": "Rome, Italy's capital, is a treasure trove of history and culture, featuring iconic landmarks such as the Colosseum, the Roman Forum, and the Vatican City. Its charming streets, vibrant piazzas, and exquisite cuisine offer an unforgettable experience, blending ancient wonders with modern vibrancy.",
       "category": "",
       "period": {
         "threedays": {
@@ -58,19 +58,19 @@
       },
       "budget": {
         "lowBudget": {
-          "hotelone": "Hotel Mirti: web: https://hotelmirti.it/en/hotel-rome-mirti-square/ ",
-          "hoteltwo": "Hotel Il Papavero: web:  https://www.hotelilpapavero.com/",
-          "hotelthree": "Hotel Fiorenza : web: https://www.hotelfiorenzarome.com/"
+          "hotelone": "Hotel Des Artistes: web: https://www.hoteldesartistes.com/en/",
+          "hoteltwo": "Hotel Virginia: web: https://www.hotelvirginiaroma.com/en/",
+          "hotelthree": "Hotel Philia Rome : web: http://philia.rometravelhotel.com/en/"
         },
         "mediumBudget": {
-          "hotelone": "Roma 2B: web: https://www.roma2b.it/en/",
-          "hoteltwo": "LH Hotel Andreotti:  web: https://andreotti.italyromehotels.net/en/#main",
-          "hotelthree": "Hotel d'Este: web: https://www.hoteldesterome.it/en/"
+          "hotelone": "Hotel Artemide: web: https://www.hotelartemide.it/en/",
+          "hoteltwo": "Hotel Mozart:  web: https://www.hotelmozart.com/en/",
+          "hotelthree": "Sophie Terrace Hotel Rome: web: https://www.sophieterracehotel.com/en/"
         },
         "highBudget": {
-          "hotelone": "Hotel Caravita: web: https://www.hotelcaravita.it/en/",
-          "hoteltwo": "Singer Palace Hotel:  web: https://singerpalacehotel.com/",
-          "hotelthree": "Grand Hotel Plaza:  web: https://www.grandhotelplaza.com/en/"
+          "hotelone": "Hotel Hassler Roma: web: https://www.hotelhasslerroma.com/",
+          "hoteltwo": "Grand Hotel Plaza:  web: https://www.grandhotelplaza.com/en/",
+          "hotelthree": "The St. Regis Rome:  web: https://www.marriott.com/en-us/hotels/romxr-the-st-regis-rome/overview/"
         }
       },
       "id": 2
@@ -106,19 +106,19 @@
       },
       "budget": {
         "lowBudget": {
-          "hotelone": "Hotel Mirti:  web: https://hotelmirti.it/en/hotel-rome-mirti-square/ ",
-          "hoteltwo": "Hotel Il Papavero: web:  https://www.hotelilpapavero.com/",
-          "hotelthree": "Hotel Fiorenza : web: https://www.hotelfiorenzarome.com/"
+          "hotelone": "Hotel Mia Cara: web: https://101620.octosite.net/index.html",
+          "hoteltwo": "Hotel San Giorgio & Olimpic: web: https://www.hotelsangiorgioflorence.com/",
+          "hotelthree": "Plus Florence: web: https://plushostels.com/en/florence"
         },
         "mediumBudget": {
-          "hotelone": "Roma 2B:  web: https://www.roma2b.it/en/",
-          "hoteltwo": "LH Hotel Andreotti:  web: https://andreotti.italyromehotels.net/en/#main",
-          "hotelthree": "Hotel d'Este: web: https://www.hoteldesterome.it/en/"
+          "hotelone": "Hotel Palazzo Guadagni: web: https://www.palazzoguadagni.com/it/",
+          "hoteltwo": "Hotel Botticelli: web: https://botticellihotelflorence.com/",
+          "hotelthree": "Hotel De La Ville: web: https://www.hoteldelaville.it/en/index"
         },
         "highBudget": {
-          "hotelone": "Hotel Caravita: web: https://www.hotelcaravita.it/en/",
-          "hoteltwo": "Singer Palace Hotel  web: https://singerpalacehotel.com/",
-          "hotelthree": "Grand Hotel Plaza: web: https://www.grandhotelplaza.com/en/"
+          "hotelone": "Hotel Savoy: web: https://www.roccofortehotels.com/hotels-and-resorts/hotel-savoy/",
+          "hoteltwo": "Hotel Lungarno: web: https://www.lungarnocollection.com/hotel-lungarno/",
+          "hotelthree": "The St. Regis Florence: web: https://www.marriott.com/en-us/hotels/flrxr-the-st-regis-florence/overview/"
         }
       },
       "id": 3
@@ -127,7 +127,7 @@
       "city": "Venice",
       "country": "Italy",
       "image": "https://img.freepik.com/free-photo/basilica-santa-maria-della-salud-venice_181624-27270.jpg?t=st=1719650005~exp=1719653605~hmac=88b4b94e03ffb5fcb5b6a793e6be65ac7f6be0272a9d41c9768806a9646bd0a3&w=996",
-      "description": "Venice is a city in northeastern Italy and the capital of the Veneto region. It is sited on a group of 117 small islands that are separated by canals and linked by bridges. These are located in the marshy Venetian Lagoon which stretches along the shoreline, between the mouths of the Po and the Piave Rivers.",
+      "description": "Venice, renowned for its romantic canals and historic architecture, offers a unique experience with its gondola rides, stunning St. Mark's Basilica, and the grandeur of the Doge's Palace. Visitors are captivated by its charming bridges, vibrant piazzas, and rich cultural heritage, making it an unforgettable destination.",
       "category": "",
       "period": {
         "threedays": {
@@ -154,19 +154,19 @@
       },
       "budget": {
         "lowBudget": {
-          "hotelone": "Hotel Mirti: web: https://hotelmirti.it/en/hotel-rome-mirti-square/ ",
-          "hoteltwo": "Hotel Il Papavero: web:  https://www.hotelilpapavero.com/",
-          "hotelthree": "Hotel Fiorenza :  web: https://www.hotelfiorenzarome.com/"
+          "hotelone": "Hotel Ariel Silva: web: https://www.arielsilva.it/en",
+          "hoteltwo": "Hotel Al Sole: web: https://www.alsolehotels.com/en/home",
+          "hotelthree": "Hotel Guerrini: web: https://www.hotelguerrini.it/en/"
         },
         "mediumBudget": {
-          "hotelone": "Roma 2B:  web: https://www.roma2b.it/en/",
-          "hoteltwo": "LH Hotel Andreotti:  web: https://andreotti.italyromehotels.net/en/#main",
-          "hotelthree": "Hotel d'Este:  web: https://www.hoteldesterome.it/en/"
+          "hotelone": "Hotel Giorgione: web: https://www.hotelgiorgione.com/",
+          "hoteltwo": "Hotel Saturnia & International: web: https://www.hotelsaturnia.it/",
+          "hotelthree": "Hotel Ai Reali: web: https://www.hotelaireali.com/"
         },
         "highBudget": {
-          "hotelone": "Hotel Caravita: web: https://www.hotelcaravita.it/en/",
-          "hoteltwo": "Singer Palace Hotel  web: https://singerpalacehotel.com/",
-          "hotelthree": "Grand Hotel Plaza: web: https://www.grandhotelplaza.com/en/"
+          "hotelone": "Hotel Danieli: web: https://www.hoteldanieli.com/",
+          "hoteltwo": "The Gritti Palace, a Luxury Collection Hotel: web: https://www.marriott.com/en-us/hotels/vcegl-the-gritti-palace-a-luxury-collection-hotel-venice/overview/",
+          "hotelthree": "Belmond Hotel Cipriani: web: https://www.belmond.com/hotels/europe/italy/venice/belmond-hotel-cipriani/"
         }
       },
       "id": 4
@@ -324,7 +324,7 @@
       "city": "Paris",
       "country": "France",
       "image": "https://img.freepik.com/free-photo/sunset-illuminates-famous-city-skyline-romantic-view-generated-by-ai_188544-24134.jpg?t=st=1719648201~exp=1719651801~hmac=292059fd1819577d0779c52cb9453abf1770627dc9faea4ac5422a1aa83dac62&w=1060",
-      "description": "Paris is the capital and most populous city of France. Situated on the Seine River, in the north of the country, it is in the centre of the Île-de-France region, also known as the région parisienne, Paris Region.",
+      "description": "Paris, the City of Light, enchants visitors with iconic landmarks like the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum. Its charming streets, romantic Seine River, world-class cuisine, and vibrant arts scene create an unforgettable atmosphere, making it a dream destination for travelers.",
       "category": "",
       "period": {
         "threedays": {
@@ -351,19 +351,19 @@
       },
       "budget": {
         "lowBudget": {
-          "hotelone": "Hotel Zora: web: https://hotel-zora.parishotelsfr.com/en/",
-          "hoteltwo": "Hotel Studia: web: https://hotel-studia.parishotelsfr.com/en/",
-          "hotelthree": "Hotel Marignan: web: https://www.hotel-marignan.com/ "
+          "hotelone": "Hotel Scarlett: web: https://www.hotelscarlett.com/",
+          "hoteltwo": "Hotel du College de France: web: https://www.hotel-collegedefrance.com/",
+          "hotelthree": "Hotel Eldorado: web: https://hoteleldoradoparis.com/en/"
         },
         "mediumBudget": {
-          "hotelone": "Boutik Boheme: web: https://boutik-boheme-le-jardin-montmartre.iledefrance-hotel.com/en/",
-          "hoteltwo": "Hotel Cluny Square: web: https://www.cluny-paris-hotel.com/",
-          "hotelthree": "Pavillon Nation: web: https://pavillonnation.parishotels.it/ "
+          "hotelone": "Hotel Le Relais Saint Charles: web: https://www.relaisstcharles.fr/",
+          "hoteltwo": "Hotel La Parizienne by Elegancia: web: https://hotel-laparizienne.com/",
+          "hotelthree": "Hotel Magenta 38 by HappyCulture: web: https://hotelmagenta38.com/"
         },
         "highBudget": {
-          "hotelone": "La Fantaisie: web: https://www.lafantaisie.com/",
-          "hoteltwo": "Le Grand Mazarin: web: https://www.legrandmazarin.com/",
-          "hotelthree": "Hôtel Raphael: web: https://www.raphael-hotel.com/en/"
+          "hotelone": "Hotel Plaza Athénée Paris: web: https://www.dorchestercollection.com/paris/hotel-plaza-athenee",
+          "hoteltwo": "Le Meurice: web: https://www.dorchestercollection.com/paris/le-meurice",
+          "hotelthree": "Four Seasons Hotel George V Paris: web: https://www.fourseasons.com/paris/"
         }
       },
       "id": 2
@@ -372,7 +372,7 @@
       "city": "Nice",
       "country": "France",
       "image": "https://images.unsplash.com/photo-1554149082-75d460afced3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "Nice is a major commercial and administrative centre in the east of the Provence–Alpes–Côte d'Azur region, its influence extending well beyond the boundary of the Alpes-Maritimes département. Numerous small and medium-sized factories are located at Nice, particularly in the Var Plain to the west.",
+      "description": "Nice, located on the French Riviera, is famed for its stunning Mediterranean coastline, vibrant Promenade des Anglais, and charming Old Town with colorful markets. The city offers a blend of cultural attractions, beautiful beaches, and exquisite cuisine, making it a delightful destination for relaxation and exploration.",
       "category": "",
       "period": {
         "threedays": {
@@ -399,19 +399,19 @@
       },
       "budget": {
         "lowBudget": {
-          "hotelone": "Hotel Zora: web: https://hotel-zora.parishotelsfr.com/en/",
-          "hoteltwo": "Hotel Studia: web: https://hotel-studia.parishotelsfr.com/en/",
-          "hotelthree": "Hotel Marignan: web: https://www.hotel-marignan.com/ "
+          "hotelone": "Hotel Azurea: web: https://azurea-hotel-nice.hotelmix.ro/",
+          "hoteltwo": "Hotel Trocadero: web: https://www.hoteltrocadero.net/en/",
+          "hotelthree": "Aparthotel AMMI Vieux Nice: web: https://www.ammihotels.com/en/ammi-vieux-nice"
         },
         "mediumBudget": {
-          "hotelone": "Boutik Boheme: web: https://boutik-boheme-le-jardin-montmartre.iledefrance-hotel.com/en/",
-          "hoteltwo": "Hotel Cluny Square: web: https://www.cluny-paris-hotel.com/",
-          "hotelthree": "Pavillon Nation: web: https://pavillonnation.parishotels.it/ "
+          "hotelone": "Hotel Aston La Scala: web: https://hotel-aston.com/en/",
+          "hoteltwo": "Hotel Le Grimaldi by HappyCulture: web: https://www.le-grimaldi.com/",
+          "hotelthree": "Hotel Villa Rivoli: web: https://villa-rivoli.com/en/index.php"
         },
         "highBudget": {
-          "hotelone": "La Fantaisie: web: https://www.lafantaisie.com/",
-          "hoteltwo": "Le Grand Mazarin: web: https://www.legrandmazarin.com/",
-          "hotelthree": "Hôtel Raphael: web: https://www.raphael-hotel.com/en/"
+          "hotelone": "Hyatt Regency Nice Palais de la Méditerranée: web: https://www.hyatt.com/hyatt-regency/en-US/ncehr-hyatt-regency-nice-palais-de-la-mediterranee",
+          "hoteltwo": "Le Meridien Nice: web: https://www.marriott.com/en-us/hotels/ncemd-le-meridien-nice/overview/",
+          "hotelthree": "Hotel Negresco: web: https://www.hotel-negresco-nice.com/en/hotel"
         }
       },
       "id": 3
@@ -420,7 +420,7 @@
       "city": "Strasbourg",
       "country": "France",
       "image": "https://img.freepik.com/free-photo/canal-surrounded-by-buildings-greenery-cloudy-sky-strasbourg-france_181624-15366.jpg?t=st=1719648937~exp=1719652537~hmac=49b984abce9981e26429b640a9404b4bf51f603b83a551c4a9ad85565af623cb&w=996",
-      "description": "Frontier towns are often cross-cultural capitals. Strasbourg is the embodiment of that role, stirring France and Germany into an appealing brew, even despite the increased complexity of hosting important international institutions like the Council of Europe and European Parliament. Somehow, they only add to the charm of Strasbourg’s historical center – “Little France,” now a UNESCO World Heritage Site – packed with narrow alleyways, canals and half-timbered houses with street-level winstubs (local taverns), all lorded over by an ornate Gothic masterpiece of a cathedral.",
+      "description": "Strasbourg, located in the Alsace region, is renowned for its picturesque half-timbered houses, the stunning Strasbourg Cathedral, and the charming La Petite France district. The city's rich history, vibrant cultural scene, and beautiful canals make it a captivating destination for visitors seeking both charm and architectural beauty.",
       "category": "",
       "period": {
         "threedays": {
@@ -447,19 +447,19 @@
       },
       "budget": {
         "lowBudget": {
-          "hotelone": "Hotel Zora: web: https://hotel-zora.parishotelsfr.com/en/",
-          "hoteltwo": "Hotel Studia: web: https://hotel-studia.parishotelsfr.com/en/",
-          "hotelthree": "Hotel Marignan: web: https://www.hotel-marignan.com/ "
+          "hotelone": "Ciarus: web: https://www.ciarus.com/",
+          "hoteltwo": "Hotel des Arts: web: https://www.hotel-arts.com/en/",
+          "hotelthree": "Ibis Budget Strasbourg Centre Gare: web: https://all.accor.com/hotel/3183/index.en.shtml"
         },
         "mediumBudget": {
-          "hotelone": "Boutik Boheme: web: https://boutik-boheme-le-jardin-montmartre.iledefrance-hotel.com/en/",
-          "hoteltwo": "Hotel Cluny Square: web: https://www.cluny-paris-hotel.com/",
-          "hotelthree": "Pavillon Nation: web: https://pavillonnation.parishotels.it/ "
+          "hotelone": "Hotel Hannong: web: https://www.hotel-hannong.com/en/",
+          "hoteltwo": "Hotel Rohan: web: https://www.hotel-rohan.com/en/",
+          "hotelthree": "Hotel Gutenberg: web: https://www.hotel-gutenberg.com/en/"
         },
         "highBudget": {
-          "hotelone": "La Fantaisie: web: https://www.lafantaisie.com/",
-          "hoteltwo": "Le Grand Mazarin: web: https://www.legrandmazarin.com/",
-          "hotelthree": "Hôtel Raphael: web: https://www.raphael-hotel.com/en/"
+          "hotelone": "Regent Petite France & Spa: web: https://regent-petite-france.com/",
+          "hoteltwo": "Pavillon Régent Petite France: web: https://pavillon-regent-petite-france.com/",
+          "hotelthree": "Sofitel Strasbourg Grande Ile: web: https://all.accor.com/hotel/0568/index.en.shtml"
         }
       },
       "id": 4
@@ -646,19 +646,19 @@
       },
       "budget": {
         "lowBudget": {
-          "hotelone": "Vila Coca: web: https://vila-coca-predeal.hotelmix.ro/",
-          "hoteltwo": "Pensiunea Montan Busteni: web: https://pensiunea-montan-busteni-guest-house.hotelmix.ro/",
-          "hotelthree": "HOSTEL CPPI Nord: web: https://cppibusteni.weebly.com/cazare.html"
+          "hotelone": "Casa Lia: web: https://www.booking.com/hotel/ro/casa-lia.ro.html",
+          "hoteltwo": "Pensiunea Joker: web: https://www.booking.com/hotel/ro/pensiunea-joker.ro.html",
+          "hotelthree": "Pensiunea Sighisoara: web: https://www.booking.com/hotel/ro/pensiunea-sighisoara.ro.html"
         },
         "mediumBudget": {
-          "hotelone": "Palatul Brukenthal Avrig: web: https://palatulbrukenthalavrig.ro/en/home-english/",
-          "hoteltwo": "Resort EuroPark Fundata: web: https://europark.ro/",
-          "hotelthree": "Casa Domeniile Vinului: web: https://www.vindeciumbrud.ro/turism/"
+          "hotelone": "Hotel Casa Wagner: web: https://sighisoara.casa-wagner.com/en/",
+          "hoteltwo": "Hotel Sighisoara: web: https://sighisoarahotels.ro/?page_id=16",
+          "hotelthree": "Hotel Central Park: web: https://www.hotelcentralpark.ro/"
         },
         "highBudget": {
-          "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
-          "hoteltwo": "Sungarden Golf & Spa Resort: web: https://sungardenresort.ro/",
-          "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
+          "hotelone": "Fronius Residence: web: https://fronius-residence.ro/",
+          "hoteltwo": "Hotel BinderBubi: web: https://all.accor.com/hotel/B1A9/index.en.shtml",
+          "hotelthree": "DoubleTree by Hilton Hotel Sighisoara - Cavaler: web: https://www.hilton.com/ro/hotels/tgmscdi-doubletree-sighisoara-cavaler/"
         }
       },
       "id": 2
@@ -695,19 +695,19 @@
       },
       "budget": {
         "lowBudget": {
-          "hotelone": "Vila Coca: web: https://vila-coca-predeal.hotelmix.ro/",
-          "hoteltwo": "Pensiunea Montan Busteni: web: https://pensiunea-montan-busteni-guest-house.hotelmix.ro/",
-          "hotelthree": "HOSTEL CPPI Nord: web: https://cppibusteni.weebly.com/cazare.html"
+          "hotelone": "Hotel Maria: web: http://www.hotelmaria-ct.ro/",
+          "hoteltwo": "Hotel Arion: web: https://www.hotelarion.ro/",
+          "hotelthree": "Hotel Ibis Constanta: web: https://www.hotel-constanta.com/hotel/hotel_ibis_constanta.php"
         },
         "mediumBudget": {
-          "hotelone": "Palatul Brukenthal Avrig: web: https://palatulbrukenthalavrig.ro/en/home-english/",
-          "hoteltwo": "Resort EuroPark Fundata: web: https://europark.ro/",
-          "hotelthree": "Casa Domeniile Vinului: web: https://www.vindeciumbrud.ro/turism/"
+          "hotelone": "Hotel Cherica: web: https://www.cherica.ro/",
+          "hoteltwo": "Hotel Class: web: https://hotelclass.ro/",
+          "hotelthree": "Hotel Guci: web: https://www.guci-hotel.ro/"
         },
         "highBudget": {
-          "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
-          "hoteltwo": "Sungarden Golf & Spa Resort: web: https://sungardenresort.ro/",
-          "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
+          "hotelone": "Vega Hotel: web: https://hotelvega.ro/",
+          "hoteltwo": "Hotel Belle Epoque: web: https://www.belle-epoque-villa.ro/",
+          "hotelthree": "Phoenicia Royal: web: https://www.booking.com/hotel/ro/phoenicia-royal.ro.html"
         }
       },
       "id": 3
@@ -717,7 +717,7 @@
       "reg": "Transylvania",
       "country": "Romania",
       "image": "https://img.freepik.com/free-photo/aerial-drone-view-saint-michael-church-cluj-romania_1268-20559.jpg?t=st=1716715828~exp=1716719428~hmac=375ac07b58b592ca2c4c44d87871ee653a444ab8844f90b268f2fd0a6b01577d&w=1380",
-      "description": "As the unofficial capital of Transylvania, Cluj-Napoca is a vibrant university city with a rich history and lively arts scene. Highlights include the Gothic-style St. Michael's Church, the picturesque Central Park, and the National Museum of Transylvanian History. Cluj is known for its youthful energy, thanks to its large student population, and hosts numerous cultural festivals.",
+      "description": "Cluj-Napoca, a vibrant city in Transylvania, is known for its lively arts scene, historic architecture, and youthful energy. Key attractions include St. Michael's Church, Central Park, and the National Museum of Transylvanian History. Its blend of cultural events, cafes, and green spaces make it a captivating destination.",
       "category": ["aerliber", "citybreak", "relaxare"],
       "period": {
         "threedays": {
@@ -744,19 +744,19 @@
       },
       "budget": {
         "lowBudget": {
-          "hotelone": "Vila Coca: web: https://vila-coca-predeal.hotelmix.ro/",
-          "hoteltwo": "Pensiunea Montan Busteni: web: https://pensiunea-montan-busteni-guest-house.hotelmix.ro/",
-          "hotelthree": "HOSTEL CPPI Nord: web: https://cppibusteni.weebly.com/cazare.html"
+          "hotelone": "Hotel Ary: web: https://www.hotelary.ro/",
+          "hoteltwo": "Retro Hostel: web: https://www.retro.ro/",
+          "hotelthree": "Hotel Beta: web: https://hotelbeta-cluj.ro/"
         },
         "mediumBudget": {
-          "hotelone": "Palatul Brukenthal Avrig: web: https://palatulbrukenthalavrig.ro/en/home-english/",
-          "hoteltwo": "Resort EuroPark Fundata: web: https://europark.ro/",
-          "hotelthree": "Casa Domeniile Vinului: web: https://www.vindeciumbrud.ro/turism/"
+          "hotelone": "Hotel Capitolina City Chic: web: http://www.hotel-capitolina.ro/",
+          "hoteltwo": "Hampton by Hilton Cluj-Napoca: web: https://www.hilton.com/ro/hotels/cljhxhx-hampton-cluj-napoca/",
+          "hotelthree": "Hotel Belvedere: web: https://www.unita-turism.ro/m/hotel/cluj-napoca/belvedere.html"
         },
         "highBudget": {
-          "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
-          "hoteltwo": "Sungarden Golf & Spa Resort: web: https://sungardenresort.ro/",
-          "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
+          "hotelone": "Hotel Platinia: web: https://hotelplatinia.ro/",
+          "hoteltwo": "DoubleTree by Hilton Hotel Cluj - City Plaza: web: https://www.hilton.com/ro/hotels/cljcpdi-doubletree-cluj-city-plaza/",
+          "hotelthree": "Grand Hotel Italia: web: https://grandhotelitaliacluj.ro/"
         }
       },
       "id": 4
@@ -766,23 +766,23 @@
       "reg": "Transylvania",
       "country": "Romania",
       "image": "https://img.freepik.com/free-photo/aerial-drone-view-council-square-brasov-romania_1268-20593.jpg?t=st=1716714491~exp=1716718091~hmac=33ea4c5124a5e8d380fe37fca7e687a6a89704974b4048c377be2161978c4caa&w=1060",
-      "description": "Brasov is a charming city located in central Romania, nestled in the Carpathian Mountains. Known for its medieval architecture and rich history, Brasov is a major cultural and economic hub in the region. The city's centerpiece is the Black Church, a Gothic-style monument dating back to the 14th century. Brasov's old town is lined with colorful baroque buildings, narrow cobblestone streets, and vibrant squares such as Piata Sfatului. The nearby Tampa Mountain offers panoramic views and hiking opportunities, while the fortified walls and towers, like the White Tower and Black Tower, reflect the city's historical significance as a fortress town. Brasov is also a gateway to the famous Bran Castle, often associated with the Dracula legend. The city's mix of historical charm, natural beauty, and modern amenities make it a popular destination for tourists.",
+      "description": "Brașov, located in the heart of Transylvania, is renowned for its medieval charm, featuring the Gothic Black Church, picturesque Council Square, and scenic Mount Tampa. Its well-preserved old town, vibrant cultural scene, and stunning mountain backdrop make it a captivating destination for history enthusiasts and nature lovers alike.",
       "category": ["aerliber", "citybreak", "relaxare"],
       "period": {
         "threedays": {
-          "dayone": "Visit: Sibiu",
+          "dayone": "Visit: Brasov",
           "daytwo": "Visit: White citadel in Romania and Corvin castle",
           "daythree": "Visit: Biertan fortified church & Sighisoara citadel"
         },
         "fivedays": {
-          "dayone": "Visit: Sibiu",
+          "dayone": "Visit: Brasov",
           "daytwo": "Visit: White citadel in Romania and Corvin castle",
           "daythree": "Visit: Biertan fortified church & Sighisoara citadel",
           "dayfour": "Visit: Fagaras citadel and Brasov",
           "dayfive": "Visit: Bran Castle and Rasnov citadel"
         },
         "sevendays": {
-          "dayone": "Visit: Sibiu",
+          "dayone": "Visit: Brasov",
           "daytwo": "Visit: White citadel in Romania and Corvin castle",
           "daythree": "Visit: Biertan fortified church & Sighisoara citadel",
           "dayfour": "Visit: Fagaras citadel and Brasov",
@@ -793,19 +793,19 @@
       },
       "budget": {
         "lowBudget": {
-          "hotelone": "Vila Coca: web: https://vila-coca-predeal.hotelmix.ro/",
-          "hoteltwo": "Pensiunea Montan Busteni: web: https://pensiunea-montan-busteni-guest-house.hotelmix.ro/",
-          "hotelthree": "HOSTEL CPPI Nord: web: https://cppibusteni.weebly.com/cazare.html"
+          "hotelone": "Kismet Dao Hostel: web: https://travelminit.ro/kismet-dao-hostel-brasov",
+          "hoteltwo": "Centrum House Hostel: web: https://www.hostelbrasov.eu/",
+          "hotelthree": "Gabriel Hostel: web: https://www.hostelworld.com/st/hostels/p/37770/gabriel-hostel/"
         },
         "mediumBudget": {
-          "hotelone": "Palatul Brukenthal Avrig: web: https://palatulbrukenthalavrig.ro/en/home-english/",
-          "hoteltwo": "Resort EuroPark Fundata: web: https://europark.ro/",
-          "hotelthree": "Casa Domeniile Vinului: web: https://www.vindeciumbrud.ro/turism/"
+          "hotelone": "Hotel Bella Muzica: web: https://bellamuzica.ro/",
+          "hoteltwo": "Hotel Kolping: web: https://hotel.kolping.ro/",
+          "hotelthree": "Casa Wagner Brașov: web: https://brasov.casa-wagner.com/en/"
         },
         "highBudget": {
           "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
-          "hoteltwo": "Sungarden Golf & Spa Resort: web: https://sungardenresort.ro/",
-          "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
+          "hoteltwo": "Qosmo Brasov Hotel: web: https://qosmohotels.com/ro/",
+          "hotelthree": "Teleferic Grand Hotel: web: https://telefericgrandhotel.ro/"
         }
       },
       "id": 5
@@ -842,19 +842,19 @@
       },
       "budget": {
         "lowBudget": {
-          "hotelone": "Vila Coca: web: https://vila-coca-predeal.hotelmix.ro/",
-          "hoteltwo": "Pensiunea Montan Busteni: web: https://pensiunea-montan-busteni-guest-house.hotelmix.ro/",
-          "hotelthree": "HOSTEL CPPI Nord: web: https://cppibusteni.weebly.com/cazare.html"
+          "hotelone": "Pensiunea Maria: web: https://pensiunea-romaria.ro/",
+          "hoteltwo": "Hostel PanGeea: web: https://www.sibiuhostel.ro/",
+          "hotelthree": "6rooms Sibiu: web: https://6rooms.ro/"
         },
         "mediumBudget": {
-          "hotelone": "Palatul Brukenthal Avrig: web: https://palatulbrukenthalavrig.ro/en/home-english/",
-          "hoteltwo": "Resort EuroPark Fundata: web: https://europark.ro/",
-          "hotelthree": "Casa Domeniile Vinului: web: https://www.vindeciumbrud.ro/turism/"
+          "hotelone": "Hotel Ibis Sibiu: web: https://www.booking.com/hotel/ro/ibis-styles-sibiu-arsenal.ro.html",
+          "hoteltwo": "Hotel Continental Forum Sibiu: web: https://continental-forum-sibiu.continentalhotels.ro/",
+          "hotelthree": "Vi’studio Sibiu: web: https://www.booking.com/hotel/ro/vi-studio.ro.html"
         },
         "highBudget": {
-          "hotelone": "Hotel Aro Palace: web: https://aro-palace.ro/",
-          "hoteltwo": "Sungarden Golf & Spa Resort: web: https://sungardenresort.ro/",
-          "hotelthree": "Wild Hunts Lodge Retezat: web: https://www.chambres-hotes.fr/chambres-hotes_wild-hunts-lodge-retezat_rausor_h7134686_it.htm"
+          "hotelone": "Hilton Sibiu: web: https://www.hilton.com/ro/hotels/sbzhihi-hilton-sibiu/",
+          "hoteltwo": "ART Hotel Sibiu: web: https://www.arthotel.ro/",
+          "hotelthree": "Hotel Golden Tulip Ana Tower Sibiu: web: https://ana-tower-sibiu.goldentulip.com/ro/"
         }
       },
       "id": 6
@@ -866,6 +866,46 @@
       "image": "https://images.unsplash.com/photo-1669059166575-f1ea19483c85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "description": "Mamaia, located on Romania's Black Sea coast near Constanta, is a premier summer resort known for its long, sandy beaches and vibrant nightlife. It features luxury hotels, beach clubs, and water parks, making it ideal for both relaxation and entertainment. The resort's scenic promenade and panoramic gondola rides enhance its appeal as a top tourist destination.",
       "category": ["plaja", "relaxare"],
+      "period": {
+        "threedays": {
+          "dayone": "Visit: Roman mosaic, Casa cu Lei, National History and Archeology Museum ",
+          "daytwo": "Visit: Mamaia Beach ",
+          "daythree": "Visit: Euforie, Navodari"
+        },
+        "fivedays": {
+          "dayone": "Visit: Roman mosaic, Casa cu Lei, National History and Archeology Museum ",
+          "daytwo": "Visit: Mamaia beach ",
+          "daythree": "Visit: Euforie, Navodari",
+          "dayfour": "Visit: Constanta Casino, Ovidiu Square",
+          "dayfive": "Visit: Corbu beach and Vadu beach"
+        },
+        "sevendays": {
+          "dayone": "Visit: Roman mosaic, Casa cu Lei, National History and Archeology Museum ",
+          "daytwo": "Visit: Mamaia beach ",
+          "daythree": "Visit: Euforie, Navodari",
+          "dayfour": "Visit: Constanta Casino, Ovidiu Square",
+          "dayfive": "Visit: Corbu beach and Vadu beach",
+          "daysix": "Visit: Danube Delta",
+          "dayseven": "Visit: Techirghiol,Murfatlar"
+        }
+      },
+      "budget": {
+        "lowBudget": {
+          "hotelone": "Hotel Alcor: web: https://hotelalcor.ro/",
+          "hoteltwo": "Hotel Aurora: web: https://www.hotelaurora.ro/",
+          "hotelthree": "Hotel Ovidiu: web: https://www.hotelovidiumamaia.ro/"
+        },
+        "mediumBudget": {
+          "hotelone": "Hotel Dacia Sud: web: https://www.booking.com/hotel/ro/dacia-sud-mamaia.ro.html",
+          "hoteltwo": "Hotel Riviera: web: https://hotelriviera.ro/",
+          "hotelthree": "Hotel Malibu: web: https://hotelmalibu.ro/"
+        },
+        "highBudget": {
+          "hotelone": "Vega Hotel: web: https://hotelvega.ro/",
+          "hoteltwo": "Hotel Phoenicia Luxury: web: https://phoeniciahotels.ro/",
+          "hotelthree": "Hotel Opera Mamaia: web: https://www.operahotel.ro/#operaresidencemamaia"
+        }
+      },
       "id": 7
     },
     {
@@ -875,6 +915,23 @@
       "image": "https://img.freepik.com/free-photo/aerial-drone-view-bucharest-romania-city-downtown-with-palace-parliament_1268-23448.jpg?t=st=1716716563~exp=1716720163~hmac=0b11949910fa572495e163c5aef7a395f5621e2900ec6523d4b412b0c79310f7&w=1380",
       "description": "The capital and largest city of Romania, Bucharest is known for its wide boulevards, historic architecture, and vibrant cultural scene. Key attractions include the massive Palace of the Parliament, the historic Old Town (Lipscani), and numerous museums and parks. The city combines a mix of traditional Romanian charm with modern urban energy.",
       "category": ["aerliber", "citybreak", "relaxare"],
+      "budget": {
+        "lowBudget": {
+          "hotelone": "Hello Hotels: web: https://hello-hotels-bucuresti.continentalhotels.ro/",
+          "hoteltwo": "Hotel Ibis Bucharest Gare de Nord: web: https://www.hotel-bucuresti.com/hoteluri/hotel_ibis_gara_de_nord-71.html",
+          "hotelthree": "Tomis Garden Aparthotel Bucuresti: web: https://www.tomisgarden.ro/"
+        },
+        "mediumBudget": {
+          "hotelone": "Hotel Cismigiu: web: https://www.hotelcismigiu.ro/",
+          "hoteltwo": "Mercure Bucharest City Center: web: https://mercurebucharestcenter.com/ro/",
+          "hotelthree": "Hotel Christina: web: https://www.hotelchristina.ro/"
+        },
+        "highBudget": {
+          "hotelone": "JW Marriott Bucharest Grand Hotel: web: https://www.marriott.com/en-us/hotels/buhro-jw-marriott-bucharest-grand-hotel/overview/",
+          "hoteltwo": "Athenee Palace Hilton Bucharest: web: https://www.atheneepalace-hotel.ro/",
+          "hotelthree": "Radisson Blu Hotel Bucharest: web: https://www.radissonhotels.com/ro-ro/hoteluri/radisson-blu-bucharest"
+        }
+      },
       "id": 8
     },
     {
@@ -1010,19 +1067,19 @@
       },
       "budget": {
         "lowBudget": {
-          "hotelone": "Center Gran Via: web: https://centergranvia.com/en/",
-          "hoteltwo": "Hotel Pelay: web: http://www.hotelpelayo.com/en/",
-          "hotelthree": "Hotel Peninsular: web: https://hotelpeninsularbarcelona.com/?lang=en "
+          "hotelone": "Hostal Paris: web: https://www.hostalparisbarcelona.com/en/",
+          "hoteltwo": "Andante Hotel: web: https://www.andantehotel.com/en",
+          "hotelthree": "Travelodge Barcelona Poblenou: web: https://www.booking.com/hotel/es/travelodge-barcelona-poblenou.ro.html"
         },
         "mediumBudget": {
-          "hotelone": "Hotel Viladomat: web: https://www.aa-hoteles.com/en/hotel-viladomat-barcelona",
-          "hoteltwo": "Acta Vora: web: https://www.hotelvoraport.com/en/ ",
-          "hotelthree": "Ronda House: web: https://en.hotel-rondahouse.com/"
+          "hotelone": "Hotel Acta Atrium Palace: web: https://www.hotel-atriumpalacebarcelona.com/en/",
+          "hoteltwo": "Hotel Ciutat de Barcelona: web: https://en.ciutatbarcelona.com/",
+          "hotelthree": "Catalonia Barcelona Plaza: web: https://www.booking.com/hotel/es/cataloniabarcelonaplaza.ro.html"
         },
         "highBudget": {
-          "hotelone": "Ohla Eixample: web: https://www.ohlaeixample.com/en/",
-          "hoteltwo": "Hotel Casa Sagnier:web: https://hotelcasasagnier.com/en/",
-          "hotelthree": "Monument Hotel: web: https://www.monumenthotel.com/en/hotel/"
+          "hotelone": "Hotel Arts Barcelona: web: https://www.hotelartsbarcelona.com/en/",
+          "hoteltwo": "Majestic Hotel & Spa Barcelona: web: https://majestichotelgroup.com/en/barcelona/hotel-majestic/introduction",
+          "hotelthree": "W Barcelona: web: https://www.marriott.com/en-us/hotels/bcnwh-w-barcelona/overview/"
         }
       },
       "id": 2
@@ -1058,19 +1115,19 @@
       },
       "budget": {
         "lowBudget": {
-          "hotelone": "Center Gran Via: web: https://centergranvia.com/en/",
-          "hoteltwo": "Hotel Pelay: web: http://www.hotelpelayo.com/en/",
-          "hotelthree": "Hotel Peninsular: web: https://hotelpeninsularbarcelona.com/?lang=en "
+          "hotelone": "Hotel Abril: web: https://www.bypillow.com/en/accommodation/hotels-in-seville/abril-by-pillow/",
+          "hoteltwo": "Pension Nuevo Pino: web: https://es.hoteles.com/ho385629/pension-nuevo-pino-sevilla-espana/",
+          "hotelthree": "Hostal Jentoft: web: https://hostaljentoft.com/"
         },
         "mediumBudget": {
-          "hotelone": "Hotel Viladomat: web: https://www.aa-hoteles.com/en/hotel-viladomat-barcelona",
-          "hoteltwo": "Acta Vora: web: https://www.hotelvoraport.com/en/ ",
-          "hotelthree": "Ronda House: web: https://en.hotel-rondahouse.com/"
+          "hotelone": "Hotel Fernando III: web: https://www.hotelfernandoiii.es/en/",
+          "hoteltwo": "Hotel Don Paco: web: https://www.hoteldonpaco.com/en/",
+          "hotelthree": "Hotel Las Casas de la Judería: web: https://www.lascasasdelajuderiasevilla.com/"
         },
         "highBudget": {
-          "hotelone": "Ohla Eixample: web: https://www.ohlaeixample.com/en/",
-          "hoteltwo": "Hotel Casa Sagnier:web: https://hotelcasasagnier.com/en/",
-          "hotelthree": "Monument Hotel: web: https://www.monumenthotel.com/en/hotel/"
+          "hotelone": "Hotel Alfonso XIII: web: https://www.marriott.com/en-us/hotels/svqlc-hotel-alfonso-xiii-a-luxury-collection-hotel-seville/overview/",
+          "hoteltwo": "Hotel Mercer Sevilla: web: https://www.mercersevilla.com/en",
+          "hotelthree": "Gran Meliá Colón: web: https://www.melia.com/en/hotels/spain/seville/colon-gran-melia"
         }
       },
       "id": 3
@@ -1106,19 +1163,19 @@
       },
       "budget": {
         "lowBudget": {
-          "hotelone": "Center Gran Via: web: https://centergranvia.com/en/",
-          "hoteltwo": "Hotel Pelay: web: http://www.hotelpelayo.com/en/",
-          "hotelthree": "Hotel Peninsular: web: https://hotelpeninsularbarcelona.com/?lang=en "
+          "hotelone": "Hostal Venecia: web: https://www.hotelvenecia.com/",
+          "hoteltwo": "Red Nest Hostel: web: https://www.booking.com/hotel/es/nest-youth-hostel.ro.html",
+          "hotelthree": "Russafa Youth Hostel: web: https://www.russafayouthhostel.com/"
         },
         "mediumBudget": {
-          "hotelone": "Hotel Viladomat: web: https://www.aa-hoteles.com/en/hotel-viladomat-barcelona",
-          "hoteltwo": "Acta Vora: web: https://www.hotelvoraport.com/en/ ",
-          "hotelthree": "Ronda House: web: https://en.hotel-rondahouse.com/"
+          "hotelone": "Hotel Vincci Mercat: web: https://en.vinccimercat.com/",
+          "hoteltwo": "Hotel Primus Valencia: web: https://hotelprimusvalencia.com/en/",
+          "hotelthree": "SH Ingles Boutique Hotel: web: https://www.inglesboutique.com/en/"
         },
         "highBudget": {
-          "hotelone": "Ohla Eixample: web: https://www.ohlaeixample.com/en/",
-          "hoteltwo": "Hotel Casa Sagnier:web: https://hotelcasasagnier.com/en/",
-          "hotelthree": "Monument Hotel: web: https://www.monumenthotel.com/en/hotel/"
+          "hotelone": "The Westin Valencia: web: https://www.marriott.com/en-us/hotels/vlcwi-the-westin-valencia/overview/",
+          "hoteltwo": "Hotel Las Arenas Balneario Resort: web: https://www.hotelvalencialasarenas.com/en/",
+          "hotelthree": "Caro Hotel: web: https://www.carohotel.com/en/"
         }
       },
       "id": 4
