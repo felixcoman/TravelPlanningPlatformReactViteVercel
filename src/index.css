@@ -13,6 +13,10 @@
   --white-neutral: #ffffff;
   --dark-blue: #08032f;
   --red: #ae412e;
+  --middle-blue: #2a299f;
+  --orange: #ffa500;
+
+  --text-size-small: 15px;
 }
 
 body {
@@ -137,4 +141,17 @@ body {
   font-family: "Tangerine", cursive;
   font-weight: 400;
   font-style: normal;
+}
+
+.list-group {
+  font-size: var(--text-size-small);
+}
+
+.list-group-item :hover {
+  color: var(--white-neutral);
+  background-color: var(--middle-blue);
+}
+
+.list-group-item :active {
+  color: var(--orange);
 }

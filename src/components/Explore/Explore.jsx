@@ -206,7 +206,7 @@ const Explore = () => {
           <>
             <ContainerTop loc="ContainerTop">
               <Title loc="Title">
-                Feel free to explore our offers regarding your selection:
+                Feel free to explore our offers regarding your selection
               </Title>
               <ImageCity loc="ImageCity" src={compactDataCity.image} />
               <MyStamp loc="MyStamp">

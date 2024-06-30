@@ -97,15 +97,15 @@ function Itinerary() {
           </ButtonInfo>
         </InfoSection>
       ) : null}
-      {itineraryValueArray.length !== 0 &&
-        itineraryLandmarkValueArray.length !== 0 && (
-          <ButtonAccommodation
-            loc="ButtonAccommodation"
-            onClick={() => goAccomm()}
-          >
-            I want to book accommodation!
-          </ButtonAccommodation>
-        )}
+      {(itineraryValueArray.length !== 0 ||
+        itineraryLandmarkValueArray.length !== 0) && (
+        <ButtonAccommodation
+          loc="ButtonAccommodation"
+          onClick={() => goAccomm()}
+        >
+          I want to book accommodation!
+        </ButtonAccommodation>
+      )}
     </SectionItinerary>
   );
 }

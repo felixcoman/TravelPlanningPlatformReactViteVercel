@@ -28,6 +28,7 @@ export const Title = styled.h1`
   color: ${ORANGE};
   font-size: ${TEXT_SIZE_MEDIUM};
   margin-bottom: 65px;
+  padding: 5px;
 `;
 
 export const ContainerTop = styled.div`
@@ -190,16 +191,6 @@ export const SectionLandmarkData = styled.section`
     align-items: center;
   }
 `;
-
-// export const InfoSection = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   width: 100%;
-//   margin: 30px 0;
-//   align-items: center;
-//   height: 60vh;
-// `;
-
 export const InfoSection = styled.div`
   display: flex;
   flex-direction: column;

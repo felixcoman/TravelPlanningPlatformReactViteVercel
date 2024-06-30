@@ -1,15 +1,22 @@
 import { useEffect, useState } from "react";
 import { ListGroup } from "react-bootstrap";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import {
   DisplayContainer,
   ItemLink,
   LocationTitle,
   Sidebar,
+  PlaceholderAcc,
+  AccommodationMain,
+  AccommodationContainer,
+  AccommodationDescription,
+  HighlightText,
+  Iframe,
 } from "./Accommodation.style";
+import { Title, InfoUser } from "../Explore/Explore.style";
+import { Loading, Error } from "../MainHome/MainHome.style";
 
 function Accommodation() {
-  const { id } = useParams();
   const location = useLocation();
   const accommodationArray = location.state || [];
   const [data, setData] = useState([]);
@@ -54,15 +61,15 @@ function Accommodation() {
   }, [accommodationArray]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loading>Loading...</Loading>;
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <Error>Error: {error}</Error>;
   }
 
   if (data.length === 0 || !data[0].dataCity) {
-    return <div>No data available</div>;
+    return <Error>No data available</Error>;
   }
 
   const compactDataCity = data[0].dataCity;
@@ -107,55 +114,75 @@ function Accommodation() {
 
   return (
     <>
-      <h1>Accommodation</h1>
-      {data && (
-        <Sidebar loc="Sidebar">
-          {data.map(
-            (dataItem, index) =>
-              dataItem.dataCity && (
-                <ListGroup key={index}>
-                  <LocationTitle loc="LocationTitle">
-                    City: {dataItem.city}
-                  </LocationTitle>
-                  {transformedBudgetKeys.map((key, idx) => (
-                    <ListGroup.Item key={idx}>
-                      <ItemLink
-                        onClick={() => getKeyDisplay(key, dataItem.city)}
-                      >
-                        {key}
-                      </ItemLink>
-                    </ListGroup.Item>
+      <Title loc="Title">
+        Feel free to explore accommodation for the options you have selected
+      </Title>
+      <AccommodationMain loc="AccommodationMain">
+        {data && (
+          <Sidebar loc="Sidebar">
+            {data.map(
+              (dataItem, index) =>
+                dataItem.dataCity && (
+                  <ListGroup as="ul" key={index}>
+                    <LocationTitle loc="LocationTitle">
+                      City: {dataItem.city}
+                    </LocationTitle>
+                    {transformedBudgetKeys.map((key, idx) => (
+                      <ListGroup.Item as="li" key={idx}>
+                        <ItemLink
+                          loc="ItemLink"
+                          onClick={() => getKeyDisplay(key, dataItem.city)}
+                        >
+                          {key}
+                        </ItemLink>
+                      </ListGroup.Item>
+                    ))}
+                  </ListGroup>
+                )
+            )}
+          </Sidebar>
+        )}
+        {selectedBudget &&
+          selectedCity &&
+          data.map((dataItem, index) => {
+            if (selectedCity === dataItem.city && dataItem.dataCity) {
+              return (
+                <DisplayContainer loc="DisplayContainer" key={index}>
+                  {Object.entries(
+                    dataItem.dataCity[0].budget[selectedBudget]
+                  ).map((description, idx) => (
+                    <AccommodationContainer
+                      loc="AccommodationContainer"
+                      key={idx}
+                    >
+                      <AccommodationDescription loc="AccommodationDescription">
+                        <HighlightText loc="HighlightText">
+                          Option {idx + 1}
+                        </HighlightText>
+                        {getHotelDescription(description)}
+                      </AccommodationDescription>
+                      <Iframe
+                        loc="Iframe"
+                        src={getIframe(description)}
+                        height="300px"
+                        width="100%"
+                        title="accommodation for your selection"
+                      ></Iframe>
+                    </AccommodationContainer>
                   ))}
-                </ListGroup>
-              )
-          )}
-        </Sidebar>
-      )}
-      {selectedBudget &&
-        selectedCity &&
-        data.map((dataItem, index) => {
-          if (selectedCity === dataItem.city && dataItem.dataCity) {
-            return (
-              <DisplayContainer loc="DisplayContainer" key={index}>
-                {Object.entries(
-                  dataItem.dataCity[0].budget[selectedBudget]
-                ).map((description, idx) => (
-                  <div key={idx}>
-                    <strong>Option {idx + 1}</strong>:{" "}
-                    {getHotelDescription(description)}
-                    <iframe
-                      src={getIframe(description)}
-                      height="300px"
-                      width="100%"
-                      title="accommodation for your selection"
-                    ></iframe>
-                  </div>
-                ))}
-              </DisplayContainer>
-            );
-          }
-          return null;
-        })}
+                </DisplayContainer>
+              );
+            }
+            return null;
+          })}
+        {data && !selectedCity && (
+          <PlaceholderAcc loc="PlaceholderAcc">
+            <InfoUser loc="InfoUser">
+              No buget from the side navbar selected
+            </InfoUser>
+          </PlaceholderAcc>
+        )}
+      </AccommodationMain>
     </>
   );
 }
