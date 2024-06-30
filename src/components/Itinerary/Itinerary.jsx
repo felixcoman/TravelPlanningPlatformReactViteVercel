@@ -68,7 +68,7 @@ function Itinerary() {
     console.log("GO ACCOMM");
     console.log("Navigating to: ", `/accommodation/${localData}`);
     console.log("State: ", { accommodationArray });
-    navigate(`/accommodation/${localData}`, {
+    navigate(`/accommodation`, {
       state: accommodationArray,
     });
   };

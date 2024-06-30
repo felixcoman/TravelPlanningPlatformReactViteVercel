@@ -5,7 +5,7 @@ import { ItineraryContext } from "../../global/itinerary/context";
 import useFetchData from "../../hooks/useFetchData";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import DestinationCard from "../DestinationCard/DestinationCard";
-import { Error, Loading } from "../MainHome/MainHome.style";
+import { Error, Loading } from "../Contact/Contact.style";
 import ToastComponent from "../Toast/ToastComponent";
 import {
   ButtonAccommodationExplore,
@@ -165,7 +165,7 @@ const Explore = () => {
 
   const goAccomm = (event) => {
     console.log("GO ACCOMM");
-    console.log("Navigating to: ", `/accommodation/${localData}`);
+    console.log("Navigating to: ", `/accommodation`);
     console.log("State: ", { accommodationArray });
     console.log("itineraryValueArray.length", itineraryValueArray.length);
 
@@ -184,7 +184,7 @@ const Explore = () => {
     }
 
     console.log("accommodationArray", accommodationArray);
-    navigate(`/accommodation/${localData}`, {
+    navigate(`/accommodation`, {
       state: accommodationArray,
     });
   };

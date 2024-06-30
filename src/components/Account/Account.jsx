@@ -18,10 +18,12 @@ import {
   ContactButton,
   ContactContainer,
   ContactText,
-  ErrorP,
+  InputContainerAccount,
+  AccountSection,
 } from "./Account.style";
 import { ItineraryContext } from "../../global/itinerary/context";
 import { InfoUser } from "../Explore/Explore.style";
+import { Error } from "../Contact/Contact.style";
 
 const Account = () => {
   const navigate = useNavigate();
@@ -188,7 +190,7 @@ const Account = () => {
   };
 
   return (
-    <>
+    <AccountSection loc="AccountSection">
       <ButtonsContainerAccount loc="ButtonsContainerAccount">
         <Buttons
           loc="Buttons"
@@ -208,68 +210,77 @@ const Account = () => {
           Logout
         </Buttons>
       </ButtonsContainerAccount>
-      {isVisible1 && (
-        <ContactContainer>
-          <ContactText>Enter e-mail to login</ContactText>
-          {Object.keys(inputObj).map((el, index) => (
-            <AccountForm
-              key={index}
-              name={el}
-              type={el}
-              value={inputObj[el]}
-              handleChange={handleChange}
-              error={errorInput[el]}
-            />
-          ))}
-          {isValid && isFound && (
-            <ContactButton
-              loc="ContactButton"
-              onClick={() => {
-                getUserData();
-              }}
-            >
-              Login
-            </ContactButton>
-          )}
-          {isValid && isFound && message && (
-            <>
-              <InfoUser loc="InfoUser">{message}</InfoUser>
-              <ContactButton loc="ContactButton" to={`/home`}>
-                Take me to view offers!
+      <InputContainerAccount loc="InputContainerAccount">
+        {isVisible1 && (
+          <ContactContainer loc="ContactContainer">
+            <ContactText loc="ContactText">Enter e-mail to login</ContactText>
+            {Object.keys(inputObj).map((el, index) => (
+              <AccountForm
+                key={index}
+                name={el}
+                type={el}
+                value={inputObj[el]}
+                handleChange={handleChange}
+                error={errorInput[el]}
+              />
+            ))}
+            {isValid && isFound && (
+              <ContactButton
+                loc="ContactButton"
+                onClick={() => {
+                  getUserData();
+                }}
+              >
+                Login
               </ContactButton>
-            </>
-          )}
-          {!isValid && <ErrorP>Not valid</ErrorP>}
-          {!isFound && isVisible1 && <ErrorP>No such user found</ErrorP>}
-        </ContactContainer>
-      )}
-      {isVisible2 && (
-        <ContactContainer>
-          <ContactText>Enter e-mail to create account</ContactText>
-          {Object.keys(inputObj).map((el, index) => (
-            <AccountForm
-              key={index}
-              name={el}
-              type={el}
-              value={inputObj[el]}
-              handleChange={handleChange}
-              error={errorInput[el]}
-            />
-          ))}
-          {isValid && !isFound && (
-            <ContactButton
-              onClick={() => {
-                addNewId();
-              }}
-            >
-              Create account
-            </ContactButton>
-          )}
-          {!isValid && <ErrorP>Not valid</ErrorP>}
-          {isFound && isVisible2 && <ErrorP>Email already exists</ErrorP>}
-        </ContactContainer>
-      )}
-    </>
+            )}
+            {isValid && isFound && message && (
+              <>
+                <InfoUser loc="InfoUser">{message}</InfoUser>
+                <ContactButton loc="ContactButton" to={`/home`}>
+                  Take me to view offers!
+                </ContactButton>
+              </>
+            )}
+            {!isValid && <Error loc="Error">Not valid</Error>}
+            {!isFound && isVisible1 && (
+              <Error loc="Error">No such user found</Error>
+            )}
+          </ContactContainer>
+        )}
+        {isVisible2 && (
+          <ContactContainer loc="ContactContainer">
+            <ContactText loc="ContactText">
+              Enter e-mail to create account
+            </ContactText>
+            {Object.keys(inputObj).map((el, index) => (
+              <AccountForm
+                key={index}
+                name={el}
+                type={el}
+                value={inputObj[el]}
+                handleChange={handleChange}
+                error={errorInput[el]}
+              />
+            ))}
+            {isValid && !isFound && (
+              <ContactButton
+                loc="ContactButton"
+                onClick={() => {
+                  addNewId();
+                }}
+              >
+                Create account
+              </ContactButton>
+            )}
+            {!isValid && <Error loc="Error">Not valid</Error>}
+            {isFound && isVisible2 && (
+              <Error loc="Error">Email already exists</Error>
+            )}
+          </ContactContainer>
+        )}
+      </InputContainerAccount>
+    </AccountSection>
   );
 };
 

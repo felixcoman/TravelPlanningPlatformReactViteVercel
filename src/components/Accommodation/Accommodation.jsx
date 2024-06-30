@@ -14,7 +14,7 @@ import {
   Iframe,
 } from "./Accommodation.style";
 import { Title, InfoUser } from "../Explore/Explore.style";
-import { Loading, Error } from "../MainHome/MainHome.style";
+import { Error, Loading } from "../Contact/Contact.style";
 
 function Accommodation() {
   const location = useLocation();
