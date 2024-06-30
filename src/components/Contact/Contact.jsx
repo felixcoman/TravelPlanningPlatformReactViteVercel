@@ -5,13 +5,13 @@ import {
   ContactContainer,
   ContactButton,
   ContactText,
-  ErrorP,
+  Error,
 } from "./Contact.style";
 
 const Contact = () => {
   const [inputObj, setInputObj] = useState({
     Name: "",
-    SurName: "",
+    Surname: "",
     Mobile: "",
     Email: "",
     Textarea: "",
@@ -63,14 +63,14 @@ const Contact = () => {
           setIsValid(true);
         }
         break;
-      case "SurName":
+      case "Surname":
         if (!value.trim() || value.length < 3) {
           setErrorInput({
             ...errorInput,
             [name]: "This field is required.",
           });
           setIsValid(false);
-        } else if (value === "SurName") {
+        } else if (value === "Surname") {
           setErrorInput({ ...errorInput, [name]: "Error" });
         } else {
           setErrorInput({ ...errorInput, [name]: undefined });
@@ -171,7 +171,7 @@ const Contact = () => {
           Send Feedback
         </ContactButton>
       )}
-      {isValid === false && <ErrorP>Not valid</ErrorP>}
+      {isValid === false && <Error>Not valid</Error>}
     </ContactContainer>
   );
 };

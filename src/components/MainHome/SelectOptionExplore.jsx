@@ -9,8 +9,8 @@ import {
   Option,
   Select,
   SelectContainer,
-  Loading,
-  Error,
+  LoadingHome,
+  ErrorHome,
 } from "./MainHome.style";
 import GetOptionCities from "./GetOptionCities";
 
@@ -115,13 +115,15 @@ function SelectOptionExplore() {
         </FormBody>
       </SelectContainer>
       {loading && (
-        <Loading loc="Loading">Loading... Waiting for landing...</Loading>
+        <LoadingHome loc="LoadingHome">
+          Loading... Waiting for landing...
+        </LoadingHome>
       )}
       {error && (
-        <Error loc="Error">
+        <ErrorHome loc="ErrorHome">
           Error: {error.message}! Our team is called from the coffee break and
           will take care of the problem!
-        </Error>
+        </ErrorHome>
       )}
     </>
   );

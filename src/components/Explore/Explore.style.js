@@ -228,6 +228,6 @@ export const SectionInfoButtons = styled(SectionCityButtons)``;
 export const ButtonInfo = styled(ButtonCity)`
   background: ${MIDDLE_BLUE};
   color: ${WHITE_NEUTRAL};
-  align-content: center;
   width: 40%;
+  align-self: center;
 `;

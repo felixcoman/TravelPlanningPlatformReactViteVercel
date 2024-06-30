@@ -259,7 +259,7 @@ export const LabelHeadText = styled.span`
   display: inline-block;
 `;
 
-export const Loading = styled.div`
+export const LoadingHome = styled.div`
   position: absolute;
   top: 90px;
   color: ${YELLOW};
@@ -270,7 +270,7 @@ export const Loading = styled.div`
   }
 `;
 
-export const Error = styled.div`
+export const ErrorHome = styled.div`
   position: absolute;
   top: 75px;
   color: ${RED};

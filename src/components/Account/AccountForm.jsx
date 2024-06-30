@@ -1,16 +1,18 @@
-import { ContactInput, ErrorP, ContactLabel } from "./Account.style";
+import { ContactInput, ContactLabel } from "./Account.style";
+import { Error } from "../Contact/Contact.style";
 
 const AccountForm = ({ name, handleChange, type, value, error }) => {
   return (
     <>
-      <ContactLabel>{name} :</ContactLabel>
+      <ContactLabel loc="ContactLabel">{name} :</ContactLabel>
       <ContactInput
+        loc="ContactInput"
         placeholder={name}
         defaultValue={value}
         onChange={(e) => handleChange(e, name)}
         type={type}
       />
-      {error && <ErrorP>{error}</ErrorP>}
+      {error && <Error loc="Error">{error}</Error>}
     </>
   );
 };

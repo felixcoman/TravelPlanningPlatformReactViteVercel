@@ -1,4 +1,4 @@
-import { ContactInput, ErrorP, ContactLabel } from "./Contact.style";
+import { ContactInput, Error, ContactLabel } from "./Contact.style";
 
 const ContactForm = ({ name, handleChange, type, value, error }) => {
   return (
@@ -11,7 +11,7 @@ const ContactForm = ({ name, handleChange, type, value, error }) => {
         onBlur={(e) => handleChange(e, name)}
         type={type}
       />
-      {error && <ErrorP loc="ErrorP">{error}</ErrorP>}
+      {error && <Error loc="Error">{error}</Error>}
     </>
   );
 };
