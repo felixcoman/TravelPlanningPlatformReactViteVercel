@@ -25,7 +25,8 @@ export const ButtonLandmark = styled(Link)`
 
 export const ImgWrapper = styled.div`
   display: flex;
-  height: 500px;
+  min-height: 500px;
+  height: auto;
   justify-content: center;
   flex-wrap: wrap;
   align-content: flex-end;

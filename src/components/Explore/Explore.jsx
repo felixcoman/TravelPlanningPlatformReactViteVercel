@@ -23,6 +23,7 @@ import {
   SectionLandmarkData,
   Subtitle,
   Title,
+  SectionLandmarkDataWrapper,
 } from "./Explore.style";
 
 const Explore = () => {
@@ -242,21 +243,23 @@ const Explore = () => {
           </>
         )}
       </SectionCityData>
-      <SectionLandmarkData loc="SectionLandmarkData">
-        {loadingDestination && (
-          <Loading loc="Loading">Loading... Waiting for landing...</Loading>
-        )}
-        {errorDestination && (
-          <Error loc="Error">
-            Error: {errorCity.message} Our team is called from the coffee break
-            and will take care of the problem!
-          </Error>
-        )}
-        {dataDestination &&
-          dataDestination?.map((destination, index) => (
-            <DestinationCard key={index} {...destination} notify={notify} />
-          ))}
-      </SectionLandmarkData>
+      <SectionLandmarkDataWrapper loc="SectionLandmarkDataWrapper">
+        <SectionLandmarkData loc="SectionLandmarkData">
+          {loadingDestination && (
+            <Loading loc="Loading">Loading... Waiting for landing...</Loading>
+          )}
+          {errorDestination && (
+            <Error loc="Error">
+              Error: {errorCity.message} Our team is called from the coffee
+              break and will take care of the problem!
+            </Error>
+          )}
+          {dataDestination &&
+            dataDestination?.map((destination, index) => (
+              <DestinationCard key={index} {...destination} notify={notify} />
+            ))}
+        </SectionLandmarkData>
+      </SectionLandmarkDataWrapper>
       <ToastComponent
         toastTitle={toastTitle}
         toastText={toastText}
