@@ -46,7 +46,7 @@ body {
 }
 
 .card {
-  width: 300px;
+  width: calc(100% - 20px);
   background-image: url("../../../src/assets/897940_2588.jpg");
   background-size: cover;
   font-size: 25px;
@@ -73,7 +73,7 @@ body {
 
 .card-img-top {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
 

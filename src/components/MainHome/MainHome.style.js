@@ -17,8 +17,8 @@ import { TEXT_SIZE_MEDIUM, TEXT_SIZE_SMALL } from "../../constants/Dimensions";
 export const MainContainer = styled.div`
   display: grid;
   height: 600px;
-  grid-template-columns: 0fr 0fr 0fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
   gap: 1px;
   margin: 10px 20px;
 

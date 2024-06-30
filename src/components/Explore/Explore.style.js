@@ -42,7 +42,6 @@ export const ContainerTop = styled.div`
 `;
 
 export const ImageCity = styled.img`
-  padding: 10px;
   width: 100%;
   height: calc(100% - 89px);
   opacity: 0.6;
@@ -127,6 +126,7 @@ export const SectionCityData = styled.section`
   flex-direction: column;
   margin: 0 0 50px 0;
   width: 90%;
+  padding: 0 10px;
 `;
 
 export const SectionCityButtons = styled.section`
@@ -168,16 +168,20 @@ export const ButtonAccommodationExplore = styled(ButtonAccommodation)`
   width: 100%;
 `;
 
+export const SectionLandmarkDataWrapper = styled.section`
+  width: 90%;
+`;
+
 export const SectionLandmarkData = styled.section`
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 
   @media screen and (max-width: 1400px) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
   @media screen and (max-width: 1200px) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
   @media screen and (max-width: 700px) {
     display: flex;
@@ -187,18 +191,44 @@ export const SectionLandmarkData = styled.section`
   }
 `;
 
+// export const InfoSection = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   margin: 30px 0;
+//   align-items: center;
+//   height: 60vh;
+// `;
+
 export const InfoSection = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 50px 0;
+  justify-content: center;
   align-items: center;
+  padding-bottom: 10px;
+  min-width: 290px;
+  height: 67vh;
+  min-height: 880px;
+
+  @media screen and (max-width: 1600px) {
+    min-height: unset;
+
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 840px) {
+    min-height: unset;
+
+    height: 60vh;
+  }
 `;
 
 export const InfoUser = styled.div`
-  display: flex;
   color: ${MIDDLE_BLUE};
   font-size: ${TEXT_SIZE_SMALL};
+  display: flex;
   width: 100%;
+  margin: 30px 0;
   justify-content: center;
 `;
 
@@ -208,5 +238,5 @@ export const ButtonInfo = styled(ButtonCity)`
   background: ${MIDDLE_BLUE};
   color: ${WHITE_NEUTRAL};
   align-content: center;
-  height: 64px;
+  width: 40%;
 `;

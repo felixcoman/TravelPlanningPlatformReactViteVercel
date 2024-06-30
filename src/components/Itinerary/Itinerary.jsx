@@ -76,18 +76,6 @@ function Itinerary() {
   return (
     <SectionItinerary loc="SectionItinerary">
       <ItineraryData loc="ItineraryData">
-        {itineraryValueArray.length === 0 &&
-        itineraryLandmarkValueArray.length === 0 ? (
-          <InfoSection loc="InfoSection">
-            <InfoUser loc="InfoUser">
-              You didn't choose any itinerary yet! Go to "I Want To Explore
-              Offers" and select a destination that you like to know more about!
-            </InfoUser>
-            <ButtonInfo loc="ButtonInfo" to={`/home`}>
-              Take me back to Home screen!
-            </ButtonInfo>
-          </InfoSection>
-        ) : null}
         {stateGlobalItinerary &&
           itineraryValueArray?.map((element, index) => (
             <CityCard key={index} index={index} {...element} />
@@ -97,14 +85,27 @@ function Itinerary() {
             <LandmarkCard key={index} index={index} {...element} />
           ))}
       </ItineraryData>
-      {stateGlobalItinerary && (
-        <ButtonAccommodation
-          loc="ButtonAccommodation"
-          onClick={() => goAccomm()}
-        >
-          I want to book accommodation!
-        </ButtonAccommodation>
-      )}
+      {itineraryValueArray.length === 0 &&
+      itineraryLandmarkValueArray.length === 0 ? (
+        <InfoSection loc="InfoSection">
+          <InfoUser loc="InfoUser">
+            You didn't choose any itinerary yet! Go to "I Want To Explore
+            Offers" and select a destination that you like to know more about!
+          </InfoUser>
+          <ButtonInfo loc="ButtonInfo" to={`/home`}>
+            Take me back to Home screen!
+          </ButtonInfo>
+        </InfoSection>
+      ) : null}
+      {itineraryValueArray.length !== 0 &&
+        itineraryLandmarkValueArray.length !== 0 && (
+          <ButtonAccommodation
+            loc="ButtonAccommodation"
+            onClick={() => goAccomm()}
+          >
+            I want to book accommodation!
+          </ButtonAccommodation>
+        )}
     </SectionItinerary>
   );
 }
