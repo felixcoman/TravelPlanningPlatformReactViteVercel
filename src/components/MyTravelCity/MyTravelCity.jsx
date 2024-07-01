@@ -173,7 +173,7 @@ function MyTravelCity() {
         {show ? (
           <ButtonChoice
             loc="ButtonChoice"
-            to={`/my-choices/${localData}`}
+            to={`/my-choices`}
             onClick={() => {
               handleAdd(country, city, budget, period, data);
             }}

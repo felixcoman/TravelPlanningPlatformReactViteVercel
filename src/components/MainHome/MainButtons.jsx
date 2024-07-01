@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import {
   Buttons,
   ButtonsContainer,
@@ -11,36 +11,24 @@ import SelectOptionPlan from "./SelectOptionPlan";
 function MainButtons() {
   const [isVisible1, setIsVisible1] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
-  const buttonRef1 = useRef(null);
-  const buttonRef2 = useRef(null);
 
   const handleClickExplore = () => {
     setIsVisible1(!isVisible1);
     setIsVisible2(false);
-    !isVisible1 ? buttonRef1.current.focus() : buttonRef1.current.blur();
   };
   const handleClickPlan = () => {
     setIsVisible2(!isVisible2);
     setIsVisible1(false);
-    !isVisible2 ? buttonRef2.current.focus() : buttonRef2.current.blur();
   };
 
   return (
     <MainButtonsContainer loc="MainButtonsContainer">
       <OptionContainer loc="OptionContainer">
         <ButtonsContainer loc="ButtonsContainer">
-          <Buttons
-            loc="Buttons"
-            ref={buttonRef1}
-            onClick={() => handleClickExplore()}
-          >
+          <Buttons loc="Buttons" onClick={() => handleClickExplore()}>
             I Want To Explore Offers
           </Buttons>
-          <Buttons
-            loc="Buttons"
-            ref={buttonRef2}
-            onClick={() => handleClickPlan()}
-          >
+          <Buttons loc="Buttons" onClick={() => handleClickPlan()}>
             Help me Plan
           </Buttons>
         </ButtonsContainer>

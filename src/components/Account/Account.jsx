@@ -142,22 +142,16 @@ const Account = () => {
 
     if (userData.choices) {
       dispatchChoice(addAllChoice(userData.choices));
-    } else {
-      setMessage("No selected travel choices yet!");
     }
 
     if (userData.itinerarycity) {
       dispatchItinerary(addAllItinerary(userData.itinerarycity));
       console.log("userData.itinerarycity", userData.itinerarycity);
-    } else {
-      setMessage("No selected city itinerary yet!");
     }
 
     if (userData.itinerarylandmark) {
       dispatchItinerary(addAllItineraryLandmark(userData.itinerarylandmark));
       console.log("userData.itinerarylandmark", userData.itinerarylandmark);
-    } else {
-      setMessage("No selected landmark itinerary yet!");
     }
   };
 
