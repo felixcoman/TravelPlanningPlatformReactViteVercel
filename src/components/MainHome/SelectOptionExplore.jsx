@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
 import useFetchData from "../../hooks/useFetchData";
 import {
   FormBody,
@@ -18,7 +17,6 @@ function SelectOptionExplore() {
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
   const [clicked, setClicked] = useState(false);
-  // const navigate = useNavigate();
 
   let url = null;
 
