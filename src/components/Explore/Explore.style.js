@@ -36,7 +36,7 @@ export const ContainerTop = styled.div`
   align-self: center;
   width: 100%;
   height: 82vh;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   @media screen and (max-width: 840px) {
     height: auto;
   }
