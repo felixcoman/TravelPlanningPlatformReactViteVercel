@@ -1,6 +1,5 @@
 import Carousel from "react-bootstrap/Carousel";
 import { SliderImg } from "./About.style";
-import "bootstrap/dist/css/bootstrap.css";
 
 function Slider() {
   return (

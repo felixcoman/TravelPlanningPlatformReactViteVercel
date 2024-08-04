@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ListGroup } from "react-bootstrap";
+import ListGroup from "react-bootstrap/ListGroup";
 import { useLocation } from "react-router-dom";
 import {
   DisplayContainer,
