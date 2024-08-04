@@ -1,5 +1,7 @@
 import { useContext, useState } from "react";
-import { Button, Card, Modal } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import Modal from "react-bootstrap/Modal";
 import { itineraryLandmarkMinus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
 import useFetchData from "../../hooks/useFetchData";

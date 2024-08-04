@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Card } from "react-bootstrap";
+import Card from "react-bootstrap/Card";
 import { itineraryLandmarkPlus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
 import {
