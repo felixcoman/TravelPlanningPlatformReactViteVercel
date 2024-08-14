@@ -1,16 +1,16 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { itineraryMinus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import CityCard from "../CityCard/CityCard";
 import { ButtonInfo, InfoSection, InfoUser } from "../Explore/Explore.style";
 import LandmarkCard from "../LandmarkCard/LandmarkCard";
 import {
-  ItineraryData,
   ButtonAccommodation,
+  ItineraryData,
   SectionItinerary,
 } from "./Itinerary.style";
-import { itineraryMinus } from "../../global/itinerary/actions";
 
 function Itinerary() {
   const navigate = useNavigate();
@@ -80,7 +80,6 @@ function Itinerary() {
   };
   const handleDelete = (index) => {
     setClicked(true);
-    console.log("index to be deleted", index);
     dispatchItinerary(itineraryMinus(index));
     setShow(false);
   };
