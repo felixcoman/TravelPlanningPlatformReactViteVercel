@@ -7,6 +7,8 @@ const useFetchData = (url, clicked, setClicked) => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  console.log("data old", "error", "loading", data, error, loading);
+
   console.log("sunt in hook 8");
 
   useEffect(() => {
@@ -15,12 +17,18 @@ const useFetchData = (url, clicked, setClicked) => {
       console.log("No url or not clicked");
       return;
     }
+    if (url && !clicked) {
+      console.log("Evitare bucla");
+      return;
+    }
+
     console.log("sunt in hook 15");
     setClicked(false);
     setError(false);
-    // setData(null);
+    setData(null);
 
     const fetchData = async () => {
+      console.log("sunt in fetchData");
       setLoading(true);
       try {
         const response = await fetch(url);
@@ -29,6 +37,8 @@ const useFetchData = (url, clicked, setClicked) => {
         }
         const data = await response.json();
         setData(data);
+        console.log("set data", data);
+        url = null;
       } catch (error) {
         setError(error);
       } finally {

@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Modal from "react-bootstrap/Modal";
-// import { itineraryMinus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
 import useFetchData from "../../hooks/useFetchData";
 import { DeleteButton } from "../CityCard/CityCard.style";
@@ -27,7 +26,7 @@ function CityCard({
   console.log("itineraryValueArray", itineraryValueArray);
 
   const url = `http://localhost:3001/${country}?city=${city}`;
-  console.log("url", url);
+  console.log("url", url, "clicked", clicked);
 
   const { data, error, loading } = useFetchData(url, clicked, setClicked);
   console.log("data", "error", "loading", data, error, loading);

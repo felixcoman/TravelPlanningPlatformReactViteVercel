@@ -78,13 +78,12 @@ function Itinerary() {
       state: accommodationArray,
     });
   };
-
   const handleDelete = (index) => {
-    dispatchItinerary(itineraryMinus(index));
     setClicked(true);
+    console.log("index to be deleted", index);
+    dispatchItinerary(itineraryMinus(index));
     setShow(false);
   };
-
   return (
     <SectionItinerary loc="SectionItinerary">
       <ItineraryData loc="ItineraryData">
