@@ -1,6 +1,9 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { itineraryMinus } from "../../global/itinerary/actions";
+import {
+  itineraryMinus,
+  itineraryLandmarkMinus,
+} from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import CityCard from "../CityCard/CityCard";
@@ -28,8 +31,10 @@ function Itinerary() {
   console.log("localData", localData);
 
   const [clicked, setClicked] = useState(true);
-  const [show, setShow] = useState(false);
-  const [showId, setShowId] = useState(0);
+  const [showC, setShowC] = useState(false);
+  const [showL, setShowL] = useState(false);
+  const [showIdC, setShowIdC] = useState(0);
+  const [showIdL, setShowIdL] = useState(0);
 
   let accommodationArray = [];
 
@@ -78,31 +83,46 @@ function Itinerary() {
       state: accommodationArray,
     });
   };
-  const handleDelete = (index) => {
+  const handleDeleteC = (indexC) => {
     setClicked(true);
-    dispatchItinerary(itineraryMinus(index));
-    setShow(false);
+    dispatchItinerary(itineraryMinus(indexC));
+    setShowC(false);
+  };
+  const handleDeleteL = (indexL) => {
+    setClicked(true);
+    dispatchItinerary(itineraryLandmarkMinus(indexL));
+    setShowL(false);
   };
   return (
     <SectionItinerary loc="SectionItinerary">
       <ItineraryData loc="ItineraryData">
         {stateGlobalItinerary &&
-          itineraryValueArray?.map((element, index) => (
+          itineraryValueArray?.map((element, indexC) => (
             <CityCard
-              key={index}
-              index={index}
-              handleDelete={handleDelete}
-              show={show && showId === index}
-              setShow={setShow}
-              setShowId={setShowId}
+              key={indexC}
+              indexC={indexC}
+              handleDeleteC={handleDeleteC}
+              showC={showC && showIdC === indexC}
+              setShowC={setShowC}
+              setShowIdC={setShowIdC}
               clicked={clicked}
               setClicked={setClicked}
               {...element}
             />
           ))}
         {stateGlobalItinerary &&
-          itineraryLandmarkValueArray?.map((element, index) => (
-            <LandmarkCard key={index} index={index} {...element} />
+          itineraryLandmarkValueArray?.map((element, indexL) => (
+            <LandmarkCard
+              key={indexL}
+              indexL={indexL}
+              handleDeleteL={handleDeleteL}
+              showL={showL && showIdL === indexL}
+              setShowL={setShowL}
+              setShowIdL={setShowIdL}
+              clicked={clicked}
+              setClicked={setClicked}
+              {...element}
+            />
           ))}
       </ItineraryData>
       {itineraryValueArray.length === 0 &&

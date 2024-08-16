@@ -10,15 +10,15 @@ import { ImgWrapper } from "../DestinationCard/DestinationCard.style";
 function CityCard({
   country,
   city,
-  index,
-  handleDelete,
-  show,
-  setShow,
-  setShowId,
+  indexC,
+  handleDeleteC,
+  showC,
+  setShowC,
+  setShowIdC,
   clicked,
   setClicked,
 }) {
-  console.log("country", country, "city", city, "index", index);
+  console.log("country", country, "city", city, "indexC", indexC);
 
   const { stateGlobalItinerary } = useContext(ItineraryContext);
 
@@ -31,12 +31,12 @@ function CityCard({
   const { data, error, loading } = useFetchData(url, clicked, setClicked);
   console.log("data", "error", "loading", data, error, loading);
 
-  const handleCloseShow = () => {
-    setShow(!show), setShowId(index);
+  const handleCloseShowC = () => {
+    setShowC(!showC), setShowIdC(indexC);
   };
   return (
     <>
-      <Modal show={show} onHide={handleCloseShow}>
+      <Modal show={showC} onHide={handleCloseShowC}>
         <Modal.Header closeButton>
           <Modal.Title>Delete</Modal.Title>
         </Modal.Header>
@@ -46,10 +46,10 @@ function CityCard({
         </Modal.Body>
 
         <Modal.Footer>
-          <Button variant="danger" onClick={() => handleDelete(index)}>
+          <Button variant="danger" onClick={() => handleDeleteC(indexC)}>
             YES
           </Button>
-          <Button variant="secondary" onClick={handleCloseShow}>
+          <Button variant="secondary" onClick={handleCloseShowC}>
             NO
           </Button>
         </Modal.Footer>
@@ -65,7 +65,7 @@ function CityCard({
               <Card.Text>{card.description}</Card.Text>
               <DeleteButton
                 loc="DeleteButton"
-                onClick={() => handleCloseShow()}
+                onClick={() => handleCloseShowC()}
               >
                 Remove from My Itinerary
               </DeleteButton>
