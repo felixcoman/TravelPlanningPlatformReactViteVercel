@@ -2,17 +2,16 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import {
   DARK_BLUE,
+  GRADIENT_BLUE_DARK,
+  GRADIENT_BLUE_LIGHT,
+  GRADIENT_BLUE_MIDDLE,
+  LIFELINE_ORANGE,
   ORANGE,
   RED,
   WHITE_NEUTRAL,
   YELLOW,
-  MIDDLE_BLUE,
-  GRADIENT_BLUE_DARK,
-  GRADIENT_BLUE_MIDDLE,
-  GRADIENT_BLUE_LIGHT,
-  LIFELINE_ORANGE,
 } from "../../constants/Colors";
-import { TEXT_SIZE_MEDIUM, TEXT_SIZE_SMALL } from "../../constants/Dimensions";
+import { TEXT_SIZE_SMALL } from "../../constants/Dimensions";
 
 export const MainContainer = styled.div`
   display: grid;

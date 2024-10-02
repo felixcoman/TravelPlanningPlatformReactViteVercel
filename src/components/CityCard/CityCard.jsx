@@ -1,8 +1,6 @@
-import { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Modal from "react-bootstrap/Modal";
-import { ItineraryContext } from "../../global/itinerary/context";
 import useFetchData from "../../hooks/useFetchData";
 import { DeleteButton } from "../CityCard/CityCard.style";
 import { ImgWrapper } from "../DestinationCard/DestinationCard.style";
@@ -20,10 +18,12 @@ function CityCard({
 }) {
   console.log("country", country, "city", city, "indexC", indexC);
 
-  const { stateGlobalItinerary } = useContext(ItineraryContext);
+  // Context API not necessary here because we get data from parameters
 
-  const itineraryValueArray = stateGlobalItinerary.itineraryValue;
-  console.log("itineraryValueArray", itineraryValueArray);
+  // const { stateGlobalItinerary } = useContext(ItineraryContext);
+
+  // const itineraryValueArray = stateGlobalItinerary.itineraryValue;
+  // console.log("itineraryValueArray", itineraryValueArray);
 
   const url = `http://localhost:3001/${country}?city=${city}`;
   console.log("url", url, "clicked", clicked);
@@ -61,7 +61,7 @@ function CityCard({
               <Card.Img variant="top" src={card.image} alt="Image of city" />
             </ImgWrapper>
             <Card.Body>
-              <Card.Title>{card.city}</Card.Title>
+              <Card.Title>{city}</Card.Title>
               <Card.Text>{card.description}</Card.Text>
               <DeleteButton
                 loc="DeleteButton"

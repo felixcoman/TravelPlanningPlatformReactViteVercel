@@ -1,13 +1,6 @@
 import styled from "styled-components";
-import {
-  DARK_BLUE,
-  ORANGE,
-  RED,
-  WHITE_NEUTRAL,
-  YELLOW,
-  MIDDLE_BLUE,
-} from "../../constants/Colors";
-import { TEXT_SIZE_MEDIUM, TEXT_SIZE_SMALL } from "../../constants/Dimensions";
+import { ORANGE, WHITE_NEUTRAL } from "../../constants/Colors";
+import { TEXT_SIZE_SMALL } from "../../constants/Dimensions";
 
 export const AccommodationMain = styled.section`
   position: relative;

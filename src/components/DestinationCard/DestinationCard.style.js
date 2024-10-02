@@ -1,12 +1,7 @@
-import styled from "styled-components";
-import {
-  DARK_BLUE,
-  ORANGE,
-  WHITE_NEUTRAL,
-  YELLOW,
-} from "../../constants/Colors";
-import { TEXT_SIZE_MEDIUM, TEXT_SIZE_SMALL } from "../../constants/Dimensions";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { DARK_BLUE, WHITE_NEUTRAL } from "../../constants/Colors";
+import { TEXT_SIZE_SMALL } from "../../constants/Dimensions";
 
 export const ButtonLandmark = styled(Link)`
   background: ${DARK_BLUE};

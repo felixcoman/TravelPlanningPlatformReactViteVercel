@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { DARK_BLUE, ORANGE, WHITE_NEUTRAL } from "../../constants/Colors";
-import { Link } from "react-router-dom";
+import { WHITE_NEUTRAL } from "../../constants/Colors";
+import { TEXT_SIZE_MEDIUM } from "../../constants/Dimensions";
 import { ButtonInfo } from "../Explore/Explore.style";
-import { TEXT_SIZE_MEDIUM, TEXT_SIZE_SMALL } from "../../constants/Dimensions";
 
 export const ContactContainer = styled.div`
   display: flex;

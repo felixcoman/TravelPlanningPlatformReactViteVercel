@@ -2,13 +2,12 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import {
   DARK_BLUE,
-  ORANGE,
-  WHITE_NEUTRAL,
-  YELLOW,
-  MIDDLE_BLUE,
   HANDWRITING,
-  PAPER_COLOR,
   LIFELINE_ORANGE,
+  MIDDLE_BLUE,
+  ORANGE,
+  PAPER_COLOR,
+  WHITE_NEUTRAL,
 } from "../../constants/Colors";
 import { TEXT_SIZE_MEDIUM, TEXT_SIZE_SMALL } from "../../constants/Dimensions";
 import { ButtonAccommodation } from "../Itinerary/Itinerary.style";

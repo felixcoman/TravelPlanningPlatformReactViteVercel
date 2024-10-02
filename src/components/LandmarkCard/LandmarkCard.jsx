@@ -1,8 +1,6 @@
-import { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Modal from "react-bootstrap/Modal";
-import { ItineraryContext } from "../../global/itinerary/context";
 import useFetchData from "../../hooks/useFetchData";
 import { DeleteButton } from "../CityCard/CityCard.style";
 import { ImgWrapper } from "../DestinationCard/DestinationCard.style";
@@ -19,11 +17,13 @@ function LandmarkCard({
 }) {
   console.log("name", name, "indexL", indexL);
 
-  const { stateGlobalItinerary } = useContext(ItineraryContext);
+  // Context API not necessary here because we get data from parameters
 
-  const itineraryLandmarkValueArray =
-    stateGlobalItinerary.itineraryLandmarkValue;
-  console.log("itineraryLandmarkValueArray", itineraryLandmarkValueArray);
+  // const { stateGlobalItinerary } = useContext(ItineraryContext);
+
+  // const itineraryLandmarkValueArray =
+  //   stateGlobalItinerary.itineraryLandmarkValue;
+  // console.log("itineraryLandmarkValueArray", itineraryLandmarkValueArray);
 
   const url = `http://localhost:3001/destinations?name=${name}`;
   console.log("url", url);
@@ -65,7 +65,7 @@ function LandmarkCard({
               />
             </ImgWrapper>
             <Card.Body>
-              <Card.Title>{card.name}</Card.Title>
+              <Card.Title>{name}</Card.Title>
               <Card.Text>{card.description}</Card.Text>
               <DeleteButton
                 loc="DeleteButton"

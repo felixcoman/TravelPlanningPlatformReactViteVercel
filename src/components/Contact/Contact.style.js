@@ -1,11 +1,5 @@
 import styled from "styled-components";
-import {
-  DARK_BLUE,
-  ORANGE,
-  WHITE_NEUTRAL,
-  RED,
-  YELLOW,
-} from "../../constants/Colors";
+import { ORANGE, RED, WHITE_NEUTRAL, YELLOW } from "../../constants/Colors";
 import {
   TEXT_SIZE_BIG,
   TEXT_SIZE_MEDIUM,
