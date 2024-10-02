@@ -8,22 +8,15 @@ import { ImgWrapper } from "../DestinationCard/DestinationCard.style";
 function CityCard({
   country,
   city,
-  indexC,
-  handleDeleteC,
-  showC,
-  setShowC,
-  setShowIdC,
+  index,
+  handleDelete,
+  show,
+  setShow,
+  setShowId,
   clicked,
   setClicked,
 }) {
-  console.log("country", country, "city", city, "indexC", indexC);
-
-  // Context API not necessary here because we get data from parameters
-
-  // const { stateGlobalItinerary } = useContext(ItineraryContext);
-
-  // const itineraryValueArray = stateGlobalItinerary.itineraryValue;
-  // console.log("itineraryValueArray", itineraryValueArray);
+  console.log("country", country, "city", city, "index", index);
 
   const url = `http://localhost:3001/${country}?city=${city}`;
   console.log("url", url, "clicked", clicked);
@@ -31,12 +24,12 @@ function CityCard({
   const { data, error, loading } = useFetchData(url, clicked, setClicked);
   console.log("data", "error", "loading", data, error, loading);
 
-  const handleCloseShowC = () => {
-    setShowC(!showC), setShowIdC(indexC);
+  const handleCloseShow = () => {
+    setShow(!show), setShowId(index);
   };
   return (
     <>
-      <Modal show={showC} onHide={handleCloseShowC}>
+      <Modal show={show} onHide={handleCloseShow}>
         <Modal.Header closeButton>
           <Modal.Title>Delete</Modal.Title>
         </Modal.Header>
@@ -46,10 +39,10 @@ function CityCard({
         </Modal.Body>
 
         <Modal.Footer>
-          <Button variant="danger" onClick={() => handleDeleteC(indexC)}>
+          <Button variant="danger" onClick={() => handleDelete(index)}>
             YES
           </Button>
-          <Button variant="secondary" onClick={handleCloseShowC}>
+          <Button variant="secondary" onClick={handleCloseShow}>
             NO
           </Button>
         </Modal.Footer>
@@ -65,7 +58,7 @@ function CityCard({
               <Card.Text>{card.description}</Card.Text>
               <DeleteButton
                 loc="DeleteButton"
-                onClick={() => handleCloseShowC()}
+                onClick={() => handleCloseShow()}
               >
                 Remove from My Itinerary
               </DeleteButton>
