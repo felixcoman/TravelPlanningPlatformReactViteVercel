@@ -66,7 +66,7 @@ function Itinerary() {
   };
 
   const goAccomm = () => {
-    let accommodationArray = [];
+    // let accommodationArray = [];
     console.log("itineraryLandmarkValueArray", itineraryLandmarkValueArray);
     populateAccommondationArray(
       itineraryLandmarkValueArray,

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { WHITE_NEUTRAL } from "../../constants/Colors";
 
 export const HomeContainer = styled.div`
   display: flex;

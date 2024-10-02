@@ -77,6 +77,8 @@ const Explore = () => {
 
   let accommodationArray = [];
 
+  // function for adding intinerary data to user on server
+
   const handleUpdateItinerary = (updateData) => {
     fetch(`http://localhost:3001/users/${localData}`)
       .then((response) => response.json())
@@ -118,6 +120,8 @@ const Explore = () => {
     arr.some(
       (element) => element.country === obj.country && element.city === obj.city
     );
+
+  // this function handles 2 cases and calls different separate functions depending on which case is true: if there is duplicate it notifies the user and prevents the onClick event; else it dispatches data to State Management, adds intinerary data to user on server and notifies user that data was added
 
   const handleAddItinerary = (country, city, event) => {
     console.log("HANDLE ADD ITINERARY");

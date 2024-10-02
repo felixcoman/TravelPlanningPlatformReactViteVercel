@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { DARK_BLUE, WHITE_NEUTRAL, MIDDLE_BLUE } from "../../constants/Colors";
-import { TEXT_SIZE_SMALL } from "../../constants/Dimensions";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { DARK_BLUE, WHITE_NEUTRAL } from "../../constants/Colors";
+import { TEXT_SIZE_SMALL } from "../../constants/Dimensions";
 
 export const FooterContainer = styled.div`
   background-color: ${DARK_BLUE};

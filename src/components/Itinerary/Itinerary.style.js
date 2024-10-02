@@ -1,14 +1,10 @@
 import styled from "styled-components";
 import {
   DARK_BLUE,
-  ORANGE,
-  WHITE_NEUTRAL,
-  YELLOW,
-  MIDDLE_BLUE,
-  PAPER_COLOR,
   LIFELINE_ORANGE,
+  PAPER_COLOR,
 } from "../../constants/Colors";
-import { TEXT_SIZE_MEDIUM, TEXT_SIZE_SMALL } from "../../constants/Dimensions";
+import { TEXT_SIZE_SMALL } from "../../constants/Dimensions";
 
 export const SectionItinerary = styled.section`
   display: flex;
