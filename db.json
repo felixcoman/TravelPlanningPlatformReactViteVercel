@@ -30,7 +30,15 @@
     {
       "city": "Rome",
       "country": "Italy",
-      "image": "https://img.freepik.com/free-photo/cityscape-rome-ancient-centre-italy_1268-20482.jpg?t=st=1719649855~exp=1719653455~hmac=6212a17e7c04bbc6751b00cccaa484b910970222d7f315488081c073ad7e3d25&w=1380",
+      "image": "/src/assets/cityscape-rome-ancient-centre-italy.jpg",
+      "attributions": [
+        {
+          "source": "Freepik",
+          "linkImage": "",
+          "linkAuthor": "https://www.freepik.com/author/frimufilms",
+          "text": "Image by frimufilms on Freepik"
+        }
+      ],
       "description": "Rome, Italy's capital, is a treasure trove of history and culture, featuring iconic landmarks such as the Colosseum, the Roman Forum, and the Vatican City. Its charming streets, vibrant piazzas, and exquisite cuisine offer an unforgettable experience, blending ancient wonders with modern vibrancy.",
       "category": "",
       "period": {
@@ -371,7 +379,15 @@
     {
       "city": "Nice",
       "country": "France",
-      "image": "https://images.unsplash.com/photo-1554149082-75d460afced3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "image": "/src/assets/arno-smit-lndaG6uN1yw-unsplash.jpg",
+      "attributions": [
+        {
+          "source": "Unsplash",
+          "linkImage": "https://unsplash.com/photos/aerial-photography-of-building-near-seashore-at-daytime-lndaG6uN1yw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "linkAuthor": "https://unsplash.com/@_entreprenerd?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "text": "Arno Smit"
+        }
+      ],
       "description": "Nice, located on the French Riviera, is famed for its stunning Mediterranean coastline, vibrant Promenade des Anglais, and charming Old Town with colorful markets. The city offers a blend of cultural attractions, beautiful beaches, and exquisite cuisine, making it a delightful destination for relaxation and exploration.",
       "category": "",
       "period": {

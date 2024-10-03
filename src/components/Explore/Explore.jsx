@@ -25,6 +25,7 @@ import {
   Title,
   SectionLandmarkDataWrapper,
 } from "./Explore.style";
+import Attributions from "../Attributions/Attributions";
 
 const Explore = () => {
   const navigate = useNavigate();
@@ -213,6 +214,7 @@ const Explore = () => {
                 Feel free to explore our offers regarding your selection
               </Title>
               <ImageCity loc="ImageCity" src={compactDataCity.image} />
+              <Attributions attributions={compactDataCity.attributions[0]} />
               <MyStamp loc="MyStamp">
                 <a
                   className="stamp"
