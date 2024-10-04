@@ -4,8 +4,10 @@ import { itineraryPlus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
 import useFetchData from "../../hooks/useFetchData";
 import useLocalStorage from "../../hooks/useLocalStorage";
-import DestinationCard from "../DestinationCard/DestinationCard";
+import Attributions from "../Attributions/Attributions";
 import { Error, Loading } from "../Contact/Contact.style";
+import DestinationCard from "../DestinationCard/DestinationCard";
+import { ImgWrapper } from "../DestinationCard/DestinationCard.style";
 import ToastComponent from "../Toast/ToastComponent";
 import {
   ButtonAccommodationExplore,
@@ -21,11 +23,10 @@ import {
   SectionCityData,
   SectionExplore,
   SectionLandmarkData,
+  SectionLandmarkDataWrapper,
   Subtitle,
   Title,
-  SectionLandmarkDataWrapper,
 } from "./Explore.style";
-import Attributions from "../Attributions/Attributions";
 
 const Explore = () => {
   const navigate = useNavigate();
@@ -213,8 +214,14 @@ const Explore = () => {
               <Title loc="Title">
                 Feel free to explore our offers regarding your selection
               </Title>
-              <ImageCity loc="ImageCity" src={compactDataCity.image} />
-              <Attributions attributions={compactDataCity.attributions[0]} />
+              <ImgWrapper loc="ImgWrapper">
+                <ImageCity loc="ImageCity" src={compactDataCity.image} />
+                {compactDataCity.attributions && (
+                  <Attributions
+                    attributions={compactDataCity.attributions[0]}
+                  />
+                )}
+              </ImgWrapper>
               <MyStamp loc="MyStamp">
                 <a
                   className="stamp"

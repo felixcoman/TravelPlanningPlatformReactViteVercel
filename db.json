@@ -34,8 +34,8 @@
       "attributions": [
         {
           "source": "Freepik",
-          "linkImage": "",
-          "linkAuthor": "https://www.freepik.com/author/frimufilms",
+          "linkImage": "https://www.freepik.com/free-photo/cityscape-rome-ancient-centre-italy_29220759.htm#fromView=search&page=1&position=0&uuid=5bcedff7-3291-4f8f-931d-8a8b152fdf88",
+          "linkAuthor": "",
           "text": "Image by frimufilms on Freepik"
         }
       ],
@@ -86,7 +86,15 @@
     {
       "city": "Florence",
       "country": "Italy",
-      "image": "https://img.freepik.com/free-photo/beautiful-aerial-shot-florence-italy-architecture-evening_181624-2203.jpg?t=st=1719649813~exp=1719653413~hmac=6fdbee41ae808f91c132e12bf314ede05bf0b07d4e085ef90487f1ebed226e89&w=996",
+      "image": "/src/assets/beautiful-aerial-shot-florence-italy-architecture-evening.jpg",
+      "attributions": [
+        {
+          "source": "Freepik",
+          "linkImage": "https://www.freepik.com/free-photo/beautiful-aerial-shot-florence-italy-architecture-evening_7814586.htm#fromView=search&page=1&position=0&uuid=2e17a8ce-2ac6-45dc-8879-4b39d97907da",
+          "linkAuthor": "",
+          "text": "Image by wirestock on Freepik"
+        }
+      ],
       "description": "Located in the central part of Italy, Florence is the capital of Tuscany Region, it has approximately 380,000 inhabitants – and up to one million in the metropolitan area- for 102 kmq. The Arno River runs through the city and a series of bridges connects its two banks including the famous Ponte Vecchio.",
       "category": "",
       "period": {
@@ -134,7 +142,15 @@
     {
       "city": "Venice",
       "country": "Italy",
-      "image": "https://img.freepik.com/free-photo/basilica-santa-maria-della-salud-venice_181624-27270.jpg?t=st=1719650005~exp=1719653605~hmac=88b4b94e03ffb5fcb5b6a793e6be65ac7f6be0272a9d41c9768806a9646bd0a3&w=996",
+      "image": "/src/assets/basilica-santa-maria-della-salud-venice.jpg",
+      "attributions": [
+        {
+          "source": "Freepik",
+          "linkImage": "https://www.freepik.com/free-photo/basilica-santa-maria-della-salud-venice_12177119.htm#fromView=search&page=1&position=0&uuid=0798542d-854d-4ea8-91dd-6a490b89f5a1",
+          "linkAuthor": "",
+          "text": "Image by wirestock on Freepik"
+        }
+      ],
       "description": "Venice, renowned for its romantic canals and historic architecture, offers a unique experience with its gondola rides, stunning St. Mark's Basilica, and the grandeur of the Doge's Palace. Visitors are captivated by its charming bridges, vibrant piazzas, and rich cultural heritage, making it an unforgettable destination.",
       "category": "",
       "period": {
@@ -331,7 +347,15 @@
     {
       "city": "Paris",
       "country": "France",
-      "image": "https://img.freepik.com/free-photo/sunset-illuminates-famous-city-skyline-romantic-view-generated-by-ai_188544-24134.jpg?t=st=1719648201~exp=1719651801~hmac=292059fd1819577d0779c52cb9453abf1770627dc9faea4ac5422a1aa83dac62&w=1060",
+      "image": "/src/assets/sunset-illuminates-famous-city-skyline-romantic-view-generated-by-ai.jpg",
+      "attributions": [
+        {
+          "source": "Freepik",
+          "linkImage": "https://www.freepik.com/free-photo/sunset-illuminates-famous-city-skyline-romantic-view-generated-by-ai_41481470.htm#fromView=search&page=1&position=1&uuid=c76dc8c1-d756-4a79-8811-d2e836895807",
+          "linkAuthor": "",
+          "text": "Image by vecstock on Freepik"
+        }
+      ],
       "description": "Paris, the City of Light, enchants visitors with iconic landmarks like the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum. Its charming streets, romantic Seine River, world-class cuisine, and vibrant arts scene create an unforgettable atmosphere, making it a dream destination for travelers.",
       "category": "",
       "period": {
@@ -435,7 +459,15 @@
     {
       "city": "Strasbourg",
       "country": "France",
-      "image": "https://img.freepik.com/free-photo/canal-surrounded-by-buildings-greenery-cloudy-sky-strasbourg-france_181624-15366.jpg?t=st=1719648937~exp=1719652537~hmac=49b984abce9981e26429b640a9404b4bf51f603b83a551c4a9ad85565af623cb&w=996",
+      "image": "/src/assets/canal-surrounded-by-buildings-greenery-cloudy-sky-strasbourg-france.jpg",
+      "attributions": [
+        {
+          "source": "Freepik",
+          "linkImage": "https://www.freepik.com/free-photo/canal-surrounded-by-buildings-greenery-cloudy-sky-strasbourg-france_10303436.htm#fromView=search&page=1&position=0&uuid=ab738854-1b5b-4dab-8529-e592c90dcfc9",
+          "linkAuthor": "",
+          "text": "Image by wirestock on Freepik"
+        }
+      ],
       "description": "Strasbourg, located in the Alsace region, is renowned for its picturesque half-timbered houses, the stunning Strasbourg Cathedral, and the charming La Petite France district. The city's rich history, vibrant cultural scene, and beautiful canals make it a captivating destination for visitors seeking both charm and architectural beauty.",
       "category": "",
       "period": {
@@ -634,7 +666,15 @@
       "city": "Sighisoara",
       "reg": "Transylvania",
       "country": "Romania",
-      "image": "https://img.freepik.com/free-photo/aerial-drone-view-historic-centre-sighisoara-romania-old-buildings-holy-trinity-church_1268-19367.jpg?t=st=1716716105~exp=1716719705~hmac=6c6a7877e2d0b8dffebec9767bae6f83c61633947c5aabf616c272fba81b83ee&w=1380",
+      "image": "/src/assets/aerial-drone-view-historic-centre-sighisoara-romania-old-buildings-holy-trinity-church.jpg",
+      "attributions": [
+        {
+          "source": "Freepik",
+          "linkImage": "https://www.freepik.com/free-photo/aerial-drone-view-historic-centre-sighisoara-romania-old-buildings-holy-trinity-church_22402045.htm#fromView=search&page=1&position=0&uuid=fb3246fb-72b1-463c-8015-bd14b6311aaf",
+          "linkAuthor": "",
+          "text": "Image by frimufilms on Freepik"
+        }
+      ],
       "description": "One of the best-preserved medieval towns in Europe, Sighisoara is a UNESCO World Heritage site. The city's charming old town features colorful buildings, narrow streets, and the iconic Clock Tower. Sighisoara is also famous as the birthplace of Vlad the Impaler, the historical figure who inspired the Dracula legend. Its medieval festival and historical ambiance attract many tourists.",
       "category": ["aerliber", "citybreak", "relaxare"],
       "period": {
@@ -683,7 +723,15 @@
       "city": "Constanta",
       "reg": "Dobrogea",
       "country": "Romania",
-      "image": "https://images.unsplash.com/photo-1629826958301-2d6c17de6874?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "image": "/src/assets/matei-pruteanu-TaJgC0AE1lw-unsplash.jpg",
+      "attributions": [
+        {
+          "source": "Unsplash",
+          "linkImage": "https://unsplash.com/photos/people-walking-on-sidewalk-near-white-concrete-building-during-daytime-TaJgC0AE1lw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "linkAuthor": "https://unsplash.com/@mateipruteanu?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "text": "Matei Pruteanu"
+        }
+      ],
       "description": "Constanta, Romania's oldest continuously inhabited city, is a vibrant Black Sea port offering beautiful beaches, historic landmarks like the stunning Art Nouveau Constanta Casino, and rich cultural heritage. Key attractions include the Roman Mosaic Edifice, the Genoese Lighthouse, and the National History and Archaeology Museum. It’s an ideal destination for both seaside relaxation and historical exploration.",
       "category": ["plaja", "relaxare", "citybreak"],
       "period": {
@@ -732,7 +780,15 @@
       "city": "Cluj-Napoca",
       "reg": "Transylvania",
       "country": "Romania",
-      "image": "https://img.freepik.com/free-photo/aerial-drone-view-saint-michael-church-cluj-romania_1268-20559.jpg?t=st=1716715828~exp=1716719428~hmac=375ac07b58b592ca2c4c44d87871ee653a444ab8844f90b268f2fd0a6b01577d&w=1380",
+      "image": "/src/assets/aerial-drone-view-saint-michael-church-cluj-evening-romania.jpg",
+      "attributions": [
+        {
+          "source": "Freepik",
+          "linkImage": "https://www.freepik.com/free-photo/aerial-drone-view-saint-michael-church-cluj-evening-romania_27412366.htm#fromView=search&page=1&position=0&uuid=601168de-16ba-4f39-bd29-38672abfcfcf",
+          "linkAuthor": "",
+          "text": "Image by frimufilms on Freepik"
+        }
+      ],
       "description": "Cluj-Napoca, a vibrant city in Transylvania, is known for its lively arts scene, historic architecture, and youthful energy. Key attractions include St. Michael's Church, Central Park, and the National Museum of Transylvanian History. Its blend of cultural events, cafes, and green spaces make it a captivating destination.",
       "category": ["aerliber", "citybreak", "relaxare"],
       "period": {
@@ -830,7 +886,15 @@
       "city": "Sibiu",
       "reg": "Transilvania",
       "country": "Romania",
-      "image": "https://img.freepik.com/free-photo/aerial-drone-view-historic-centre-sibiu-evening-romania_1268-20828.jpg?t=st=1716716228~exp=1716719828~hmac=5182022db7ccec4e61b673186d78227323570e9293c8e5dcf4ccf0a419e0d631&w=1380",
+      "image": "/src/assets/aerial-drone-view-historic-centre-sibiu-evening-romania.jpg",
+      "attributions": [
+        {
+          "source": "Freepik",
+          "linkImage": "https://www.freepik.com/free-photo/aerial-drone-view-historic-centre-sibiu-evening-romania_31601887.htm#fromView=search&page=1&position=1&uuid=231acd87-61bd-45ba-a675-9c6d2c5066cf",
+          "linkAuthor": "",
+          "text": "Image by frimufilms on Freepik"
+        }
+      ],
       "description": "Known for its well-preserved medieval architecture, Sibiu was designated a European Capital of Culture in 2007. The city features beautiful squares such as the Grand Square (Piata Mare) and the Small Square (Piata Mica), as well as the iconic Council Tower and the Brukenthal National Museum. Sibiu's charming ambiance and cultural significance draw many visitors.",
       "category": ["aerliber", "citybreak", "relaxare"],
       "period": {
@@ -879,7 +943,15 @@
       "city": "Mamaia",
       "reg": "Dobrogea",
       "country": "Romania",
-      "image": "https://images.unsplash.com/photo-1669059166575-f1ea19483c85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "image": "/src/assets/gabriel-vasiliu-thAtOx4W6WU-unsplash.jpg",
+      "attributions": [
+        {
+          "source": "Unsplash",
+          "linkImage": "https://unsplash.com/photos/a-large-group-of-people-at-a-beach-thAtOx4W6WU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "linkAuthor": "https://unsplash.com/@gabimedia?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "text": "Gabriel Vasiliu"
+        }
+      ],
       "description": "Mamaia, located on Romania's Black Sea coast near Constanta, is a premier summer resort known for its long, sandy beaches and vibrant nightlife. It features luxury hotels, beach clubs, and water parks, making it ideal for both relaxation and entertainment. The resort's scenic promenade and panoramic gondola rides enhance its appeal as a top tourist destination.",
       "category": ["plaja", "relaxare"],
       "period": {
@@ -928,7 +1000,15 @@
       "city": "Bucharest",
       "reg": "Muntenia",
       "country": "Romania",
-      "image": "https://img.freepik.com/free-photo/aerial-drone-view-bucharest-romania-city-downtown-with-palace-parliament_1268-23448.jpg?t=st=1716716563~exp=1716720163~hmac=0b11949910fa572495e163c5aef7a395f5621e2900ec6523d4b412b0c79310f7&w=1380",
+      "image": "/src/assets/aerial-drone-view-bucharest-romania-city-downtown-with-palace-parliament.jpg",
+      "attributions": [
+        {
+          "source": "Freepik",
+          "linkImage": "https://www.freepik.com/free-photo/aerial-drone-view-bucharest-romania-city-downtown-with-palace-parliament_59152234.htm#fromView=search&page=1&position=0&uuid=6d09f8b0-4c86-488d-a306-7ede4f33fdc5",
+          "linkAuthor": "",
+          "text": "Image by frimufilms on Freepik"
+        }
+      ],
       "description": "The capital and largest city of Romania, Bucharest is known for its wide boulevards, historic architecture, and vibrant cultural scene. Key attractions include the massive Palace of the Parliament, the historic Old Town (Lipscani), and numerous museums and parks. The city combines a mix of traditional Romanian charm with modern urban energy.",
       "category": ["aerliber", "citybreak", "relaxare"],
       "budget": {
@@ -1055,7 +1135,15 @@
     {
       "city": "Barcelona",
       "country": "Spain",
-      "image": "https://img.freepik.com/free-photo/view-park-guell-winter-barcelona_1398-4411.jpg?t=st=1719651186~exp=1719654786~hmac=ac45a9641a9033ba4bfe69dce348abe63140c5534a20d9466bf78fec6ba6db93&w=996",
+      "image": "/src/assets/view-park-guell-winter-barcelona.jpg",
+      "attributions": [
+        {
+          "source": "Freepik",
+          "linkImage": "https://www.freepik.com/free-photo/view-park-guell-winter-barcelona_1489321.htm#fromView=search&page=1&position=0&uuid=525d3294-265a-47ed-8a58-6157fe6a7bfd",
+          "linkAuthor": "",
+          "text": "Image by bearfotos on Freepik"
+        }
+      ],
       "description": "Overlooking the Mediterranean Sea, and famous for Gaudí and other Art Nouveau architecture, Barcelona is one of Europe's trendiest cities. It's a hub of new trends in the world of culture, fashion and cuisine. It combines the creativity of its artists and designers with respect and care for local traditions.",
       "category": "",
       "period": {
@@ -1103,7 +1191,16 @@
     {
       "city": "Seville",
       "country": "Spain",
-      "image": "https://img.freepik.com/free-photo/beautiful-view-plaza-de-espana-seville-spain_181624-39542.jpg?t=st=1719647351~exp=1719650951~hmac=4e3f3b42793d9c0c00bca985aad0b88200c2a35fd372f0da661c455fc7b88952&w=1380",
+      "image": "/src/assets/beautiful-view-plaza-de-espana-seville-spain.jpg",
+      "attributions": [
+        {
+          "source": "Freepik",
+          "linkImage": "https://www.freepik.com/free-photo/beautiful-view-plaza-de-espana-seville-spain_15696553.htm#fromView=search&page=1&position=0&uuid=5bb9e63d-9849-4541-ab99-9ce7dd5b73ce",
+          "linkAuthor": "",
+          "text": "Image by wirestock on Freepik"
+        }
+      ],
+
       "description": "Seville is the capital of Andalusia, the Autonomous Community with the largest population in Spain, the fourth most populous city in the country, and one of the most important capitals of southern Europe. In the past, Seville was the most important city in the world.",
       "category": "",
       "period": {
@@ -1151,7 +1248,15 @@
     {
       "city": "Valencia",
       "country": "Spain",
-      "image": "https://img.freepik.com/free-photo/white-concrete-structure-beside-body-water_400718-9.jpg?t=st=1719647262~exp=1719650862~hmac=8264b9c61d4efd0905ac10257ee7f856d7c9fae8948dfe6cbb5bafac8bb8ebfc&w=996",
+      "image": "/src/assets/white-concrete-structure-beside-body-water.jpg",
+      "attributions": [
+        {
+          "source": "Freepik",
+          "linkImage": "https://www.freepik.com/free-photo/white-concrete-structure-beside-body-water_12661276.htm#fromView=image_search_similar&page=1&position=6&uuid=648c41d8-d8d4-4fde-aee8-3ff0715fa367",
+          "linkAuthor": "",
+          "text": "Image by lucabravo on Freepik"
+        }
+      ],
       "description": "Valencia is Spain's third largest city and it offers tourism for all tastes. The city brings together historic and modern culture. In the old town (El Carmen) you will find a gothic cathedral, a modernist food market and a Rococo palace all in easy walking distance of each other.",
       "category": "",
       "period": {
