@@ -8,7 +8,7 @@ function Attributions({ attributions }) {
   switch (source) {
     case "Freepik":
       outputAttrib = (
-        <a href={linkAuthor} target="_blank">
+        <a href={linkImage} target="_blank">
           {text}
         </a>
       );

@@ -25,8 +25,4 @@ export const ImgWrapper = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   align-content: flex-end;
-
-  @media screen and (max-width: 700px) {
-    height: auto;
-  }
 `;

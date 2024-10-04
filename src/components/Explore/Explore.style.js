@@ -34,11 +34,12 @@ export const ContainerTop = styled.div`
   position: relative;
   align-self: center;
   width: 100%;
-  height: 82vh;
+  height: auto;
   margin-bottom: 20px;
-  @media screen and (max-width: 840px) {
+
+  /* @media screen and (max-width: 840px) {
     height: auto;
-  }
+  } */
 `;
 
 export const ImageCity = styled.img`
