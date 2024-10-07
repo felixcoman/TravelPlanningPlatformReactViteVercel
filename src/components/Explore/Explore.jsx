@@ -5,6 +5,7 @@ import { ItineraryContext } from "../../global/itinerary/context";
 import useFetchData from "../../hooks/useFetchData";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import Attributions from "../Attributions/Attributions";
+import { AttributionsSection } from "../Attributions/Attributions.style";
 import { Error, Loading } from "../Contact/Contact.style";
 import DestinationCard from "../DestinationCard/DestinationCard";
 import { ImgWrapper } from "../DestinationCard/DestinationCard.style";
@@ -253,6 +254,19 @@ const Explore = () => {
                 Description: {compactDataCity.description}
               </CityDescription>
             </ContainerDescriptionBottom>
+            <AttributionsSection loc="AttributionsSection">
+              Background vintage paper:
+              <a href="https://www.freepik.com/free-vector/old-paper-background-with-stains_897940.htm#fromView=search&page=1&position=1&uuid=5324dae9-1f13-4763-a6da-3e59b6e6be57">
+                {" "}
+                Image by kjpargeter on Freepik
+              </a>
+              <br />
+              Stamp:
+              <a href="https://www.freeiconspng.com/img/24416">
+                {" "}
+                Mail Stamp Template png
+              </a>
+            </AttributionsSection>
           </>
         )}
       </SectionCityData>

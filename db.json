@@ -25,7 +25,15 @@
       "id": 1,
       "name": "Italy",
       "description": "Italy is a boot-shaped peninsula that juts out of southern Europe into the Adriatic Sea, Tyrrhenian Sea, Mediterranean Sea, and other waters. Its location has played an important role in its history. The sea surrounds Italy, and mountains crisscross the interior, dividing it into regions.",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyUfx-_2yXZ4pEzCIlQDe8KelUVj4YsUY1gg&s"
+      "image": "/src/assets/canmandawe-ftTsK4QinMw-unsplash.jpg",
+      "attributions": [
+        {
+          "source": "Unsplash",
+          "linkImage": "https://unsplash.com/photos/aerial-photo-of-concrete-buildings-near-calm-water-ftTsK4QinMw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "linkAuthor": "https://unsplash.com/@canmandawe?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "text": "canmandawe"
+        }
+      ]
     },
     {
       "city": "Rome",
@@ -198,7 +206,15 @@
     {
       "region": "Toscana",
       "country": "Italy",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpCTeNcNDF9YV2SZAEFfQr67yNoEbjaf7NWQ&s",
+      "image": "/src/assets/doozydoom-_v5HCKSZOkA-unsplash.jpg",
+      "attributions": [
+        {
+          "source": "Unsplash",
+          "linkImage": "https://unsplash.com/photos/a-row-of-trees-in-the-middle-of-a-field-_v5HCKSZOkA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "linkAuthor": "https://unsplash.com/@doozydoom?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "text": "doozydoom"
+        }
+      ],
       "description": "Tuscany (Italian: Toscana) is a region in the center of Italy. It has an area of 22,990 km² and a population of about 3.6 million people (in 2004). The capital is Florence. Tuscany is known for its landscapes and its artistic legacy.",
       "period": {
         "threedays": {
@@ -245,7 +261,15 @@
     {
       "region": "Puglia",
       "country": "Italy",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv7dvJuYWrD9N3ePi0CIRrOE1pzDA4X01w6A&s",
+      "image": "/src/assets/soop-kim-7Nyt3uDKKSo-unsplash.jpg",
+      "attributions": [
+        {
+          "source": "Unsplash",
+          "linkImage": "https://unsplash.com/photos/clear-glass-ball-on-brown-wooden-table-7Nyt3uDKKSo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "linkAuthor": "https://unsplash.com/@soopkim?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "text": "Soop kim"
+        }
+      ],
       "description": "Apulia , also known by its Italian name Puglia , is a region of Italy, located in the southern peninsular section of the country, bordering the Adriatic Sea to the east, the Strait of Otranto and Ionian Sea to the southeast and the Gulf of Taranto to the south.",
       "period": {
         "threedays": {
@@ -292,7 +316,15 @@
     {
       "region": "Lombardy",
       "country": "Italy",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Tov7aQ_NohLLZo0BQuJiegJ1p_JNY_PHVw&s",
+      "image": "/src/assets/axp-photography-WhtNsIN--j8-unsplash.jpg",
+      "attributions": [
+        {
+          "source": "Unsplash",
+          "linkImage": "https://unsplash.com/photos/a-statue-on-a-stone-wall-overlooking-a-body-of-water-WhtNsIN--j8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "linkAuthor": "https://unsplash.com/@axpphotography?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "text": "AXP Photography"
+        }
+      ],
       "description": "Lombardy is a region in the north of Italy known for its industry and finance, of course, but also for its art and extraordinary landscapes, starting with the picturesque lakes and its mountains, Valcamonica and Valtellina in primis.",
       "period": {
         "threedays": {
@@ -342,7 +374,15 @@
       "id": 1,
       "name": "France",
       "description": "France is one of the oldest nations on Earth and the most ethnically diverse country in Europe. These deep and broad influences have made France a world leader throughout history in nearly all aspects of culture, including cuisine, wine-making, politics, philosophy, music, art, film, fashion, literature, and sports.",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIKMHNkV4YKsg609cxv2A5kO2CKOA5bIgq9g&s"
+      "image": "/src/assets/rodrigo-kugnharski-pdWc5wm1STw-unsplash.jpg",
+      "attributions": [
+        {
+          "source": "Unsplash",
+          "linkImage": "https://unsplash.com/photos/aerial-view-photography-of-city-pdWc5wm1STw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "linkAuthor": "https://unsplash.com/@kugnharski?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "text": "Rodrigo Kugnharski"
+        }
+      ]
     },
     {
       "city": "Paris",
@@ -515,7 +555,15 @@
     {
       "region": "Provence",
       "country": "France",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3we08VKxXTXBZZ_osk2y_7nkWI11jYskAuQ&s",
+      "image": "/src/assets/c-valdez-A2gKlf8JgGA-unsplash.jpg",
+      "attributions": [
+        {
+          "source": "Unsplash",
+          "linkImage": "https://unsplash.com/photos/bed-of-lavender-flowers-A2gKlf8JgGA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "linkAuthor": "https://unsplash.com/@valdez?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "text": "C.Valdez"
+        }
+      ],
       "description": "Provence  is a geographical region and historical province of southeastern France, which extends from the left bank of the lower Rhône to the west to the Italian border to the east; it is bordered by the Mediterranean Sea to the south.",
       "category": "",
       "period": {
@@ -563,7 +611,15 @@
     {
       "region": "Loir Valley",
       "country": "France",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnXvnmk4k59H1-DpvvqTx2LOBonMzlaiPg1A&s",
+      "image": "/src/assets/colin-watts-_R494eEbvB4-unsplash.jpg",
+      "attributions": [
+        {
+          "source": "Unsplash",
+          "linkImage": "https://unsplash.com/photos/a-large-castle-sitting-on-top-of-a-lake-next-to-a-bridge-_R494eEbvB4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "linkAuthor": "https://unsplash.com/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "text": "Colin Watts"
+        }
+      ],
       "description": "The Loire Valley has been called the Garden of France and is studded with over a thousand chateaux, each with distinct architectural embellishments covering a wide range of variations, from the early medieval to the late Renaissance periods.",
       "period": {
         "threedays": {
@@ -610,7 +666,15 @@
     {
       "region": "Normandy",
       "country": "France",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaXlC_NJ_V0fuQ4WloLIQr92cZkT3sX6x90w&s",
+      "image": "/src/assets/rodolphe-abad-pg7BtkKDuo8-unsplash.jpg",
+      "attributions": [
+        {
+          "source": "Unsplash",
+          "linkImage": "https://unsplash.com/photos/a-castle-on-a-small-island-with-mont-saint-michel-in-the-background-pg7BtkKDuo8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "linkAuthor": "https://unsplash.com/@rodolphe_abad?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "text": "Rodolphe Abad"
+        }
+      ],
       "description": "Normandy, historic and cultural region of northern France encompassing the départements of Manche, Calvados, Orne, Eure, and Seine-Maritime and coextensive with the former province of Normandy. It was recreated as an administrative entity in 2016 with the union of the régions of Basse-Normandie and Haute-Normandie.",
       "period": {
         "threedays": {
@@ -660,7 +724,15 @@
       "id": 1,
       "name": "Romania",
       "description": "Romania is the biggest country in southeast Europe by population. It has an area of 238,391 square kilometres (92,043 sq mi). It is the twelfth-largest country in Europe. Most of Romania's border with Serbia and Bulgaria is made by the Danube.",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQquk11vTzlBC2OFXhy2BTXbcLz6clPN3jelg&s"
+      "image": "/src/assets/alisa-anton-VJSUSrgN56w-unsplash.jpg",
+      "attributions": [
+        {
+          "source": "Unsplash",
+          "linkImage": "https://unsplash.com/photos/beige-and-brown-gothic-building-on-hill-VJSUSrgN56w?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "linkAuthor": "https://unsplash.com/@alisaanton?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "text": "Alisa Anton"
+        }
+      ]
     },
     {
       "city": "Sighisoara",
@@ -1033,7 +1105,15 @@
     {
       "region": "Danube Delta",
       "country": "Romania",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMlPE6nC8zYc2dT8eZ3qhMwLs4esdwWN3Nww&s",
+      "image": "/src/assets/zdenek-machacek-RJhIaos1kuU-unsplash.jpg",
+      "attributions": [
+        {
+          "source": "Unsplash",
+          "linkImage": "https://unsplash.com/photos/white-and-black-pelican-bird-dipped-on-mud-RJhIaos1kuU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "linkAuthor": "https://unsplash.com/@zmachacek?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "text": "Zdeněk Macháček"
+        }
+      ],
       "description": "The waters of the Danube, which flow into the Black Sea, form the largest and best preserved of Europe's deltas. The Danube delta hosts over 300 species of birds as well as 45 freshwater fish species in its numerous lakes and marshes.",
       "period": {
         "threedays": {
@@ -1080,7 +1160,15 @@
     {
       "region": "Bucovina",
       "country": "Romania",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStV56cPyiCwRLGALDpmDUQD-daSvB3GNonlg&s",
+      "image": "/src/assets/daniel-voicu-2D6pyiNPC54-unsplash.jpg",
+      "attributions": [
+        {
+          "source": "Unsplash",
+          "linkImage": "https://unsplash.com/photos/a-building-that-has-a-tower-in-the-middle-of-it-2D6pyiNPC54?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "linkAuthor": "https://unsplash.com/@danielvoicu?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "text": "Daniel Voicu"
+        }
+      ],
       "description": "Bucovina is a region in north-eastern Romania and corresponds, nowadays, to the Suceava county and only to the south of the historic Bucovina, the northern part being Ukrainian. The name is originally Germanic, where “Buchenland” means “The Country of Beeches”.",
       "period": {
         "threedays": {
@@ -1130,7 +1218,15 @@
       "id": 1,
       "name": "Spain",
       "description": "Spain is a storied country of stone castles, snowcapped mountains, vast monuments, and sophisticated cities, all of which have made it a favoured travel destination. The country is geographically and culturally diverse. Its heartland is the Meseta, a broad central plateau half a mile above sea level.",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb_XVoq9d4Ff2787M_2ZO9ewIurE89w1hOMw&s"
+      "image": "/src/assets/flavio-E2iWteTjfg8-unsplash.jpg",
+      "attributions": [
+        {
+          "source": "Unsplash",
+          "linkImage": "https://unsplash.com/photos/blue-and-white-floral-ceiling-E2iWteTjfg8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "linkAuthor": "https://unsplash.com/@flaviewxvx?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "text": "Flavio"
+        }
+      ]
     },
     {
       "city": "Barcelona",
@@ -1304,7 +1400,15 @@
     {
       "region": "Andalusia",
       "country": "Spain",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzFE7wXeoh_LnPqCDZUiswUfVtf-a9kU54yA&s",
+      "image": "/src/assets/amanda-anusane-KfJyBno78R4-unsplash.jpg",
+      "attributions": [
+        {
+          "source": "Unsplash",
+          "linkImage": "https://unsplash.com/photos/a-field-full-of-red-flowers-with-a-mountain-in-the-background-KfJyBno78R4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "linkAuthor": "https://unsplash.com/@muna_muoksla?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "text": "Amanda Anusane"
+        }
+      ],
       "description": "Andalusia (Spanish: Andalucía) is the first in population among the 17 Autonomous communities in Spain and the second in area. The territory is divided into eight provinces: Almería, Cádiz, Córdoba, Granada, Huelva, Jaén, Málaga and Seville. Its capital is the city of Seville (Spanish: Sevilla).",
       "period": {
         "threedays": {
@@ -1351,7 +1455,15 @@
     {
       "region": "Basque Country",
       "country": "Spain",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7GkQGnRlGQLndYEs69f7wY_JiO8DJbRWmNg&s",
+      "image": "/src/assets/des-mc-carthy-w7lyz178Xp0-unsplash.jpg",
+      "attributions": [
+        {
+          "source": "Unsplash",
+          "linkImage": "https://unsplash.com/photos/a-large-rock-with-a-small-building-on-top-of-it-w7lyz178Xp0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "linkAuthor": "https://unsplash.com/@cellartours?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "text": "Des Mc Carthy"
+        }
+      ],
       "description": "The Basque Country (Basque: Euskal Herria; Spanish: País Vasco; French: Pays basque) is the name given to the home of the Basque people. The Basque Country is located in the western Pyrenees, straddling the border between France and Spain on the coast of the Bay of Biscay.",
       "period": {
         "threedays": {
@@ -1398,7 +1510,15 @@
     {
       "region": "Balearic Islands",
       "country": "Spain",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwrmuhmwk_NySKTnzqfzzNtEjUoAxG-F8wjw&s",
+      "image": "/src/assets/luke-moss-haAEjj6fDjk-unsplash.jpg",
+      "attributions": [
+        {
+          "source": "Unsplash",
+          "linkImage": "https://unsplash.com/photos/a-body-of-water-with-boats-floating-in-it-haAEjj6fDjk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "linkAuthor": "https://unsplash.com/@_____visions?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "text": "Luke Moss"
+        }
+      ],
       "description": "Balearic Islands, archipelago in the western Mediterranean Sea and a comunidad autónoma (autonomous community) of Spain coextensive with the Spanish provincia (province) of the same name. The archipelago lies 50 to 190 miles (80 to 300 km) east of the Spanish mainland. There are two groups of islands.",
       "period": {
         "threedays": {
@@ -1479,6 +1599,74 @@
       "description": "Offering stunning panoramic views of Brasov and the surrounding area, Mount Tampa is accessible via hiking trails or a cable car. At the summit, visitors can enjoy the scenic overlook and spot the Hollywood-style `Brasov` sign. It’s a great spot for nature lovers and photographers.",
       "popularity": 4.5,
       "id": 3
+    },
+    {
+      "name": "Sighisoara Citadel",
+      "city": "Sighisoara",
+      "country": "Romania",
+      "image": "/src/assets/20353.jpg",
+      "attributions": [
+        {
+          "source": "Freepik",
+          "linkImage": "https://www.freepik.com/free-photo/aerial-drone-view-historic-centre-sighisoara-romania_28092094.htm#fromView=search&page=1&position=13&uuid=5318d548-184c-4fc1-b8ad-db0d19554575",
+          "linkAuthor": "",
+          "text": "Image by frimufilms on Freepik"
+        }
+      ],
+      "description": "A UNESCO World Heritage Site, the Sighisoara Citadel is a fortified medieval complex built in the 12th century. It features cobblestone streets, colorful houses, and defensive towers. The citadel's Clock Tower offers stunning views of the town and is home to a historical museum.",
+      "popularity": 5,
+      "id": 4
+    },
+    {
+      "name": "The Clock Tower",
+      "city": "Sighisoara",
+      "country": "Romania",
+      "image": "/src/assets/theo-onic-GegG_U07rvk-unsplash.jpg",
+      "attributions": [
+        {
+          "source": "Unsplash",
+          "linkImage": "https://unsplash.com/photos/a-group-of-buildings-with-a-tower-GegG_U07rvk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "linkAuthor": "https://unsplash.com/@thorai9akira?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "text": "Theo Onic"
+        }
+      ],
+      "description": "Standing 64 meters tall, the Clock Tower is the most iconic landmark of Sighisoara. Built in the 14th century, it once served as the main gate to the citadel. Visitors can explore its museum, and admire the wooden figurines that emerge from its clock mechanism hourly.",
+      "popularity": 5,
+      "id": 5
+    },
+    {
+      "name": "Vlad Dracul House",
+      "city": "Sighisoara",
+      "country": "Romania",
+      "image": "/src/assets/medeea-codalbu-JyB_e_wqGIo-unsplash.jpg",
+      "attributions": [
+        {
+          "source": "Unsplash",
+          "linkImage": "https://unsplash.com/photos/low-angle-photography-of-flock-of-birds-flying-over-the-buildings-during-daytime-JyB_e_wqGIo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "linkAuthor": "https://unsplash.com/@_earthprix_?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+          "text": "medeea codalbu"
+        }
+      ],
+      "description": "This yellow, 15th-century house is believed to be the birthplace of Vlad the Impaler, the historical figure who inspired the Dracula legend. It now houses a restaurant, but plaques and exhibits remind visitors of its historical significance.",
+      "popularity": 4,
+      "id": 6
+    },
+    {
+      "name": "The Church on the Hill",
+      "city": "Sighisoara",
+      "country": "Romania",
+      "image": "/src/assets/19383.jpg",
+      "attributions": [
+        {
+          "source": "Freepik",
+          "linkImage": "https://www.freepik.com/free-photo/aerial-drone-view-historic-centre-sighisoara-romania-church-hill-surrounded_22402051.htm#fromView=search&page=1&position=13&uuid=e6f32122-7551-4d05-ba57-d3052abde13a",
+          "linkAuthor": "",
+          "text": "Image by frimufilms on Freepik"
+        }
+      ],
+      "description": "Located atop the citadel hill, this Gothic church from the 14th century is renowned for its intricate frescoes and wooden altar. Visitors can also enjoy a serene walk up the covered wooden staircase leading to the church, offering panoramic views of the town below.",
+      "popularity": 4.5,
+      "id": 7
     }
   ]
 }

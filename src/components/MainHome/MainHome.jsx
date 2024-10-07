@@ -1,4 +1,5 @@
 import { MainContainer, MainHomeGalleryItem } from "./MainHome.style";
+import { AttributionsSection } from "../Attributions/Attributions.style";
 
 const images = [
   {
@@ -41,16 +42,21 @@ const images = [
 
 function MainHome() {
   return (
-    <MainContainer loc="MainContainer">
-      {images.map((image, index) => (
-        <MainHomeGalleryItem
-          loc="MainHomeGalleryItem"
-          key={index}
-          src={image.src}
-          alt={image.alt}
-        />
-      ))}
-    </MainContainer>
+    <>
+      <MainContainer loc="MainContainer">
+        {images.map((image, index) => (
+          <MainHomeGalleryItem
+            loc="MainHomeGalleryItem"
+            key={index}
+            src={image.src}
+            alt={image.alt}
+          />
+        ))}
+      </MainContainer>
+      <AttributionsSection>
+        Images from <a href="https://picsum.photos/">Lorem Picsum</a>.
+      </AttributionsSection>
+    </>
   );
 }
 

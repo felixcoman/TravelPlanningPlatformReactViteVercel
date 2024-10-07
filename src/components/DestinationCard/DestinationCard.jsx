@@ -2,11 +2,12 @@ import { useContext } from "react";
 import Card from "react-bootstrap/Card";
 import { itineraryLandmarkPlus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
+import useLocalStorage from "../../hooks/useLocalStorage";
+import Attributions from "../Attributions/Attributions";
 import {
   ButtonLandmark,
   ImgWrapper,
 } from "../DestinationCard/DestinationCard.style";
-import useLocalStorage from "../../hooks/useLocalStorage";
 
 function DestinationCard({
   name,
@@ -15,6 +16,7 @@ function DestinationCard({
   image,
   description,
   popularity,
+  attributions,
   notify,
 }) {
   const { stateGlobalItinerary, dispatchItinerary } =
@@ -89,6 +91,7 @@ function DestinationCard({
     <Card className="tangerine-bold">
       <ImgWrapper loc="ImgWrapper">
         <Card.Img variant="top" src={image} alt="Image of landmark" />
+        {attributions && <Attributions attributions={attributions[0]} />}
       </ImgWrapper>
       <Card.Body>
         <Card.Title>{name}</Card.Title>

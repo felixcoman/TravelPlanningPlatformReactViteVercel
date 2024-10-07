@@ -44,6 +44,3 @@ function Attributions({ attributions }) {
   );
 }
 export default Attributions;
-
-// return <>{source === "Freepik" ? <a href={linkAuthor}>{text}</a> : <></>}</>;
-// }
