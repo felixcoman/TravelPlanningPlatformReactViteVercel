@@ -4,6 +4,7 @@ import Modal from "react-bootstrap/Modal";
 import useFetchData from "../../hooks/useFetchData";
 import { DeleteButton } from "../CityCard/CityCard.style";
 import { ImgWrapper } from "../DestinationCard/DestinationCard.style";
+import Attributions from "../Attributions/Attributions";
 
 function LandmarkCard({
   name,
@@ -55,6 +56,9 @@ function LandmarkCard({
                 src={card.image}
                 alt="Image of landmark"
               />
+              {card.attributions && (
+                <Attributions attributions={card.attributions[0]} />
+              )}
             </ImgWrapper>
             <Card.Body>
               <Card.Title>{name}</Card.Title>

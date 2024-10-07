@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { ItineraryContext } from "../../global/itinerary/context";
 import useLocalStorage from "../../hooks/useLocalStorage";
+import { AttributionsSection } from "../Attributions/Attributions.style";
 import { ButtonInfo, InfoSection, InfoUser } from "../Explore/Explore.style";
 import CitySection from "./CitySection";
 import {
@@ -93,12 +94,21 @@ function Itinerary() {
       ) : null}
       {(itineraryValueArray.length !== 0 ||
         itineraryLandmarkValueArray.length !== 0) && (
-        <ButtonAccommodation
-          loc="ButtonAccommodation"
-          onClick={() => goAccomm()}
-        >
-          I want to book accommodation!
-        </ButtonAccommodation>
+        <>
+          <ButtonAccommodation
+            loc="ButtonAccommodation"
+            onClick={() => goAccomm()}
+          >
+            I want to book accommodation!
+          </ButtonAccommodation>
+          <AttributionsSection loc="AttributionsSection">
+            Background vintage paper:
+            <a href="https://www.freepik.com/free-vector/old-paper-background-with-stains_897940.htm#fromView=search&page=1&position=1&uuid=5324dae9-1f13-4763-a6da-3e59b6e6be57">
+              {" "}
+              Image by kjpargeter on Freepik
+            </a>
+          </AttributionsSection>
+        </>
       )}
     </SectionItinerary>
   );

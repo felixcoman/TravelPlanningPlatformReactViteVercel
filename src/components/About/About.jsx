@@ -20,6 +20,9 @@ function About() {
         we've got you covered.
       </AboutText>
       <Slider loc="Slider" />
+      <small>
+        Images from <a href="https://picsum.photos/">Lorem Picsum</a>.
+      </small>
       <AboutText loc="AboutText">
         Our website offers two main pathways for your travel planning. You can
         choose to explore specific travel destinations by selecting the country
