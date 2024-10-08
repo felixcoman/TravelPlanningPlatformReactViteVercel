@@ -54,7 +54,10 @@ function CityCard({
             <ImgWrapper loc="ImgWrapper">
               <Card.Img variant="top" src={card.image} alt="Image of city" />
               {card.attributions && (
-                <Attributions attributions={card.attributions[0]} />
+                <Attributions
+                  variant="card"
+                  attributions={card.attributions[0]}
+                />
               )}
             </ImgWrapper>
             <Card.Body>

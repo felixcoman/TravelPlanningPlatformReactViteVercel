@@ -1,4 +1,8 @@
-import { MainContainer, MainHomeGalleryItem } from "./MainHome.style";
+import {
+  MainContainer,
+  MainHomeGalleryItem,
+  SectionMainContainer,
+} from "./MainHome.style";
 import { AttributionsSection } from "../Attributions/Attributions.style";
 
 const images = [
@@ -42,7 +46,7 @@ const images = [
 
 function MainHome() {
   return (
-    <>
+    <SectionMainContainer alt="SectionMainContainer">
       <MainContainer loc="MainContainer">
         {images.map((image, index) => (
           <MainHomeGalleryItem
@@ -53,10 +57,10 @@ function MainHome() {
           />
         ))}
       </MainContainer>
-      <AttributionsSection>
-        Images from <a href="https://picsum.photos/">Lorem Picsum</a>.
+      <AttributionsSection loc="AttributionsSection">
+        Copyright: Images from <a href="https://picsum.photos/">Lorem Picsum</a>
       </AttributionsSection>
-    </>
+    </SectionMainContainer>
   );
 }
 

@@ -13,6 +13,8 @@ import {
 } from "../../constants/Colors";
 import { TEXT_SIZE_SMALL } from "../../constants/Dimensions";
 
+export const SectionMainContainer = styled.div``;
+
 export const MainContainer = styled.div`
   display: grid;
   height: 600px;

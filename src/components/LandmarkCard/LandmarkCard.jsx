@@ -57,7 +57,10 @@ function LandmarkCard({
                 alt="Image of landmark"
               />
               {card.attributions && (
-                <Attributions attributions={card.attributions[0]} />
+                <Attributions
+                  variant="card"
+                  attributions={card.attributions[0]}
+                />
               )}
             </ImgWrapper>
             <Card.Body>
