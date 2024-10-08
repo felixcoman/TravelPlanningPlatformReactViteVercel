@@ -1,10 +1,9 @@
+import { AttributionsSection } from "../Attributions/Attributions.style";
 import {
   AboutText,
   AboutTextCenter,
   AboutTitle,
   MainAbout,
-  CreditsSection,
-  CreditsText,
 } from "./About.style";
 import Slider from "./Slider";
 
@@ -20,9 +19,9 @@ function About() {
         we've got you covered.
       </AboutText>
       <Slider loc="Slider" />
-      <small>
-        Images from <a href="https://picsum.photos/">Lorem Picsum</a>.
-      </small>
+      <AttributionsSection loc="AttributionsSection">
+        Copyright: Images from <a href="https://picsum.photos/">Lorem Picsum</a>
+      </AttributionsSection>
       <AboutText loc="AboutText">
         Our website offers two main pathways for your travel planning. You can
         choose to explore specific travel destinations by selecting the country
@@ -64,55 +63,6 @@ function About() {
           travel dreams a reality!
         </em>
       </AboutTextCenter>
-      <AboutTitle loc="AboutTitle">Credits</AboutTitle>
-      <CreditsSection loc="CreditsText">
-        <CreditsText>Background vintage paper:</CreditsText>
-        <a href="https://www.freepik.com/free-vector/old-paper-background-with-stains_897940.htm#fromView=search&page=1&position=1&uuid=5324dae9-1f13-4763-a6da-3e59b6e6be57">
-          Image by kjpargeter on Freepik
-        </a>
-        <CreditsText>Spain, Barcelona:</CreditsText>
-        <a href="https://www.freepik.com/free-photo/view-park-guell-winter-barcelona_1489321.htm#fromView=search&page=1&position=0&uuid=8811a71f-e0f1-44be-821f-afced1db2825">
-          Image by bearfotos on Freepik
-        </a>
-        <CreditsText>Spain, Seville:</CreditsText>
-        <a href="https://www.freepik.com/free-photo/beautiful-view-plaza-de-espana-seville-spain_15696553.htm#fromView=search&page=1&position=1&uuid=aabda1e3-6f8e-471e-8603-38146201ee8b">
-          Image by wirestock on Freepik
-        </a>
-        <CreditsText>Spain, Valencia:</CreditsText>
-        <a href="https://www.freepik.com/free-photo/white-concrete-structure-beside-body-water_12661276.htm#fromView=search&page=1&position=1&uuid=3436f7f2-5749-4fda-ad0c-edeb12dac7a0">
-          Image by lucabravo on Freepik
-        </a>
-        <CreditsText>France, Paris:</CreditsText>
-        <a href="https://www.freepik.com/free-photo/sunset-illuminates-famous-city-skyline-romantic-view-generated-by-ai_41481470.htm#fromView=search&page=1&position=2&uuid=d4de4145-ddcd-4f23-9a85-a0abd49ca2b3">
-          Image by vecstock on Freepik
-        </a>
-        <CreditsText>France, Nice Photo by:</CreditsText>
-        <span>
-          <a href="https://unsplash.com/@_entreprenerd?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
-            Arno Smit
-          </a>{" "}
-          on{" "}
-          <a href="https://unsplash.com/photos/aerial-photography-of-building-near-seashore-at-daytime-lndaG6uN1yw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
-            Unsplash
-          </a>
-        </span>
-        <CreditsText>France, Strasbourg:</CreditsText>
-        <a href="https://www.freepik.com/free-photo/canal-surrounded-by-buildings-greenery-cloudy-sky-strasbourg-france_10303436.htm#fromView=search&page=1&position=0&uuid=a652776e-0798-43da-9429-dedac9d80b21">
-          Image by wirestock on Freepik
-        </a>
-        <CreditsText>Italy, Rome:</CreditsText>
-        <a href="https://www.freepik.com/free-photo/cityscape-rome-ancient-centre-italy_29220759.htm#fromView=search&page=1&position=8&uuid=ea2c7946-dab0-4ba0-9b0c-f416d7f3c7e3">
-          Image by frimufilms on Freepik
-        </a>
-        <CreditsText>Italy, Venice:</CreditsText>
-        <a href="https://www.freepik.com/free-photo/basilica-santa-maria-della-salud-venice_12177119.htm#fromView=search&page=1&position=2&uuid=4a7c87dc-15ab-4414-868c-80147630695a">
-          Image by wirestock on Freepik
-        </a>
-        <CreditsText>Italy, Florence:</CreditsText>
-        <a href="https://www.freepik.com/free-photo/beautiful-aerial-shot-florence-italy-architecture-evening_7814586.htm#fromView=search&page=1&position=0&uuid=b8ca226a-2a07-48da-87bd-a808e655a62e">
-          Image by wirestock on Freepik
-        </a>
-      </CreditsSection>
     </MainAbout>
   );
 }

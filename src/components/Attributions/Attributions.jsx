@@ -1,22 +1,24 @@
 import { AttributionsSection } from "./Attributions.style";
-function Attributions({ attributions }) {
+function Attributions({ attributions, variant }) {
   console.log("attributions", attributions);
   const { source, linkImage, linkAuthor, text } = attributions;
   console.log("source", source);
+  console.log("variant", variant);
+
   let outputAttrib;
 
   switch (source) {
     case "Freepik":
       outputAttrib = (
         <a href={linkImage} target="_blank">
-          {text}
+          Copyright: {text}
         </a>
       );
       break;
     case "Unsplash":
       outputAttrib = (
         <small>
-          Photo by{" "}
+          Copyright: Image by{" "}
           <a href={linkAuthor} target="_blank">
             {text}
           </a>{" "}
@@ -38,7 +40,7 @@ function Attributions({ attributions }) {
   }
 
   return (
-    <AttributionsSection loc="AttributionsSection">
+    <AttributionsSection loc="AttributionsSection" variant={variant}>
       {outputAttrib}
     </AttributionsSection>
   );

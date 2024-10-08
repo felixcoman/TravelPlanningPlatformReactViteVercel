@@ -4,7 +4,7 @@ export const DARK_BLUE = "#08032f";
 export const ORANGE = "#ffa500";
 // INFO
 export const MIDDLE_BLUE = "#2a299f";
-export const YELLOW = "#fcd016";
+export const YELLOW = "#bfa315";
 export const RED = "#ae412e";
 // STYLE
 export const GRADIENT_BLUE_DARK = "#1d4f5d";

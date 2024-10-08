@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { DARK_BLUE, WHITE_NEUTRAL } from "../../constants/Colors";
 import { TEXT_SIZE_SMALL } from "../../constants/Dimensions";
@@ -40,19 +39,5 @@ export const Copyrights = styled.p`
   margin: 10px;
 
   @media screen and (max-width: 840px) {
-  }
-`;
-
-export const Credits = styled(Link)`
-  color: ${WHITE_NEUTRAL};
-  margin: 10px;
-  text-align: center;
-  align-content: center;
-  width: fit-content;
-  text-decoration: none;
-  cursor: pointer;
-
-  &:hover {
-    text-decoration: underline;
   }
 `;

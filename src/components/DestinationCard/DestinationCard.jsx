@@ -91,7 +91,9 @@ function DestinationCard({
     <Card className="tangerine-bold">
       <ImgWrapper loc="ImgWrapper">
         <Card.Img variant="top" src={image} alt="Image of landmark" />
-        {attributions && <Attributions attributions={attributions[0]} />}
+        {attributions && (
+          <Attributions variant="card" attributions={attributions[0]} />
+        )}
       </ImgWrapper>
       <Card.Body>
         <Card.Title>{name}</Card.Title>

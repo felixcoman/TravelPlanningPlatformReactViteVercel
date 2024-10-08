@@ -255,6 +255,8 @@ const Explore = () => {
               </CityDescription>
             </ContainerDescriptionBottom>
             <AttributionsSection loc="AttributionsSection">
+              Copyright:
+              <br />
               Background vintage paper:
               <a href="https://www.freepik.com/free-vector/old-paper-background-with-stains_897940.htm#fromView=search&page=1&position=1&uuid=5324dae9-1f13-4763-a6da-3e59b6e6be57">
                 {" "}
