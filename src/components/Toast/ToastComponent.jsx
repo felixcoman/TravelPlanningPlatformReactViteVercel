@@ -8,7 +8,13 @@ const ToastComponent = ({
   toggleShow,
 }) => {
   return (
-    <Toast className={className} show={show} onClose={toggleShow}>
+    <Toast
+      className={className}
+      show={show}
+      onClose={toggleShow}
+      delay={4000}
+      autohide
+    >
       <Toast.Header>
         <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
         <strong className="me-auto">{toastTitle}</strong>

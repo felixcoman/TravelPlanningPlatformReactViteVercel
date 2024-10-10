@@ -230,7 +230,7 @@ const Explore = () => {
                   title="Image from freeiconspng.com"
                 >
                   <img
-                    src="https://www.freeiconspng.com/uploads/mail-stamp-template-png-33.png"
+                    src="/src/assets/free-stamp-png-24416.png"
                     width="350"
                     alt="Mail Stamp Template png"
                   />
