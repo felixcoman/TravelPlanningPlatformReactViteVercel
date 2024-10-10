@@ -25,4 +25,7 @@ export const ImgWrapper = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   align-content: flex-end;
+  overflow: hidden;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
 `;
