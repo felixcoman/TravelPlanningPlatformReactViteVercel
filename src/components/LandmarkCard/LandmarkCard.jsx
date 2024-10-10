@@ -2,9 +2,9 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Modal from "react-bootstrap/Modal";
 import useFetchData from "../../hooks/useFetchData";
+import Attributions from "../Attributions/Attributions";
 import { DeleteButton } from "../CityCard/CityCard.style";
 import { ImgWrapper } from "../DestinationCard/DestinationCard.style";
-import Attributions from "../Attributions/Attributions";
 
 function LandmarkCard({
   name,
