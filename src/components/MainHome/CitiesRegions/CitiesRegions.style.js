@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { DARK_BLUE, ORANGE, WHITE_NEUTRAL } from "../../../constants/Colors";
 import { Link } from "react-router-dom";
+import { TEXT_SIZE_MEDIUM } from "../../../constants/Dimensions";
 
 export const PageContainer = styled.div`
   display: flex;
@@ -35,7 +36,8 @@ export const DataContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: none;
+  align-items: center;
+  margin: 30px 0px;
   @media screen and (max-width: 820px) {
     flex-direction: column;
   }
@@ -43,15 +45,23 @@ export const DataContainer = styled.div`
 export const ImgContainer = styled.img`
   width: 200px;
   height: 200px;
+  object-fit: cover;
   @media screen and (max-width: 820px) {
     margin: 10px auto;
   }
 `;
+
+export const ImgWrapperPlan = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
 export const TextContainer = styled.p`
   margin: 50px;
-  font-size: 16px;
+  font-size: ${TEXT_SIZE_MEDIUM};
   color: ${WHITE_NEUTRAL};
-  text-align: left;
+  text-align: justify;
 `;
 
 export const ButtonPlan = styled(Link)`

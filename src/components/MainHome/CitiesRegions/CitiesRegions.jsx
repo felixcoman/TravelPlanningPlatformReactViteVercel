@@ -1,22 +1,24 @@
 import { useState } from "react";
-import useFetchData from "../../../hooks/useFetchData";
 import { useParams } from "react-router-dom";
+import useFetchData from "../../../hooks/useFetchData";
+import Attributions from "../../Attributions/Attributions";
+import { ImgWrapperPlan } from "../CitiesRegions/CitiesRegions.style";
 import {
-  PageContainer,
-  FiltersContainer,
-  MainContainer,
-  ImgContainer,
-  TextContainer,
-  DataContainer,
   ButtonPlan,
-  Text,
+  DataContainer,
+  FiltersContainer,
+  ImgContainer,
+  MainContainer,
+  PageContainer,
   SelectCity,
   SelectRegion,
+  Text,
+  TextContainer,
 } from "./CitiesRegions.style";
 
-import GetOptionCities from "../GetOptionCities";
 import Spinner from "react-bootstrap/Spinner";
 import useLocalStorage from "../../../hooks/useLocalStorage";
+import GetOptionCities from "../GetOptionCities";
 
 function CitiesRegions() {
   const { country } = useParams();
@@ -65,7 +67,12 @@ function CitiesRegions() {
             <MainContainer loc="MainContainer">
               <Text loc="Text">Country: {compactData.name}</Text>
               <DataContainer loc="DataContainer">
-                <ImgContainer loc="ImgContainer" src={compactData.image} />
+                <ImgWrapperPlan loc="ImgWrapperPlan">
+                  <ImgContainer loc="ImgContainer" src={compactData.image} />
+                  {compactData.attributions && (
+                    <Attributions attributions={compactData.attributions[0]} />
+                  )}
+                </ImgWrapperPlan>
                 <TextContainer loc="TextContainer">
                   {compactData.description}
                 </TextContainer>

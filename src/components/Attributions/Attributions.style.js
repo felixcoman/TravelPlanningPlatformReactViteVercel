@@ -6,6 +6,7 @@ export const AttributionsSection = styled.small`
   color: ${(props) => (props.variant === "card" ? YELLOW : MIDDLE_BLUE)};
   font-size: ${TEXT_SIZE_SMALL};
   font-family: "Trebuchet MS", sans-serif;
+  padding: 10px;
   & > a {
     text-decoration: none;
     color: ${(props) => (props.variant === "card" ? YELLOW : MIDDLE_BLUE)};

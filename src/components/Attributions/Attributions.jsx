@@ -3,7 +3,6 @@ function Attributions({ attributions, variant }) {
   console.log("attributions", attributions);
   const { source, linkImage, linkAuthor, text } = attributions;
   console.log("source", source);
-  console.log("variant", variant);
 
   let outputAttrib;
 

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { DARK_BLUE, ORANGE, WHITE_NEUTRAL } from "../../constants/Colors";
 import { Link } from "react-router-dom";
+import { TEXT_SIZE_MEDIUM } from "../../constants/Dimensions";
 
 export const PageContainerTravel = styled.div`
   display: flex;
@@ -27,7 +28,7 @@ export const MainContainerTravel = styled.div`
 export const MainContainerChoice = styled.div`
   display: flex;
   flex-direction: column;
- 
+
   width: 100%;
   margin: 0 auto;
 
@@ -42,17 +43,16 @@ export const FiltersContainerTravel = styled.div`
   flex-direction: column;
   width: 100%;
   margin: 0px auto;
- 
 `;
 export const FiltersTravel = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  
+
   @media screen and (max-width: 820px) {
     flex-direction: column;
     margin: 0 auto;
-    width:90%;
+    width: 90%;
   }
 `;
 
@@ -109,7 +109,7 @@ export const ButtonChoice = styled(Link)`
   margin: 50px auto;
   cursor: pointer;
   border-radius: 5px;
-  text-decoration:none;
+  text-decoration: none;
   &:hover {
     background: ${DARK_BLUE};
     color: ${WHITE_NEUTRAL};
@@ -136,9 +136,8 @@ export const DataContainerChoice = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
- border:none;
+  border: none;
   @media screen and (max-width: 820px) {
-   
     margin: 0 auto;
   }
 `;
@@ -146,19 +145,20 @@ export const DataContainerChoice = styled.div`
 export const ImgContainerTravel = styled.img`
   width: 300px;
   height: 200px;
-  margin: 20px;
+  object-fit: cover;
+  margin: 0px 20px;
   @media screen and (max-width: 820px) {
     margin: 10px auto;
-    width:90%;
-    height:auto;
+    width: 90%;
+    height: auto;
   }
 `;
 
 export const TextContainerTravel = styled.p`
   margin: 50px 20px;
-  font-size: 18px;
+  font-size: ${TEXT_SIZE_MEDIUM};
   color: ${WHITE_NEUTRAL};
-  text-align: left;
+  text-align: justify;
   @media screen and (max-width: 820px) {
     text-align: center;
     margin: 0;
@@ -166,7 +166,7 @@ export const TextContainerTravel = styled.p`
 `;
 
 export const TextChoice = styled.p`
-  margin:  10px;
+  margin: 10px;
   font-size: 22px;
   color: ${WHITE_NEUTRAL};
   text-align: left;
@@ -174,19 +174,19 @@ export const TextChoice = styled.p`
   @media screen and (max-width: 820px) {
     text-align: center;
     margin: 0 10px;
-    font-size:16px;
+    font-size: 16px;
   }
 `;
 
 export const TextOrangeChoice = styled.p`
-  margin: 10px ;
+  margin: 10px;
   font-size: 22px;
   color: ${ORANGE};
   text-align: left;
- 
+
   @media screen and (max-width: 820px) {
-    text-align:left;
+    text-align: left;
     margin: 0;
-    font-size:18px;
+    font-size: 18px;
   }
 `;
