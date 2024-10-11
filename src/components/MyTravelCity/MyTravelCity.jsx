@@ -5,8 +5,11 @@ import { addChoice } from "../../global/choice/actions";
 import { ChoiceContext } from "../../global/choice/context";
 import useFetchData from "../../hooks/useFetchData";
 import useFetchUsers from "../../hooks/useFetchUsers";
+import useLocalStorage from "../../hooks/useLocalStorage";
+import Attributions from "../Attributions/Attributions";
 import {
   DataContainer,
+  ImgWrapperPlan,
   Text,
 } from "../MainHome/CitiesRegions/CitiesRegions.style";
 import MyTravelRecommend from "../MyTravelRecommend/MyTravelRecommend";
@@ -21,7 +24,6 @@ import {
   SelectTravel,
   TextContainerTravel,
 } from "./MyTravel.style";
-import useLocalStorage from "../../hooks/useLocalStorage";
 
 function MyTravelCity() {
   const { country, city } = useParams();
@@ -114,10 +116,15 @@ function MyTravelCity() {
             <MainContainerTravel loc="MainContainerTravel">
               <Text loc="Text">City: {compactData.city}</Text>
               <DataContainer loc="DataContainer">
-                <ImgContainerTravel
-                  loc="ImgContainerTravel"
-                  src={compactData.image}
-                />
+                <ImgWrapperPlan loc="ImgWrapperPlan">
+                  <ImgContainerTravel
+                    loc="ImgContainerTravel"
+                    src={compactData.image}
+                  />
+                  {compactData.attributions && (
+                    <Attributions attributions={compactData.attributions[0]} />
+                  )}
+                </ImgWrapperPlan>
                 <TextContainerTravel loc="TextContainerTravel">
                   {compactData.description}
                 </TextContainerTravel>
