@@ -2,17 +2,24 @@ import styled from "styled-components";
 import { DARK_BLUE, WHITE_NEUTRAL } from "../../constants/Colors";
 import { TEXT_SIZE_SMALL } from "../../constants/Dimensions";
 
-export const FooterContainer = styled.div`
-  background-color: ${DARK_BLUE};
-  color: ${WHITE_NEUTRAL};
+export const FooterContainer = styled.footer`
   width: 100%;
-  gap: 16px;
-  flex-wrap: wrap;
+  height: 15vh;
+  align-content: center;
+  background-color: ${DARK_BLUE};
+`;
+
+export const FooterContent = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 15px;
+  max-width: 1440px;
   height: 15vh;
+  padding: 15px 15px;
+  margin: auto;
+  background-color: transparent;
+  color: ${WHITE_NEUTRAL};
   font-size: ${TEXT_SIZE_SMALL};
 
   @media screen and (max-width: 840px) {

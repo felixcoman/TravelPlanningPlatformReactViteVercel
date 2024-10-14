@@ -17,7 +17,7 @@ export const MainAbout = styled.section`
 `;
 
 export const SliderImg = styled.img`
-  width: 50%;
+  width: 50vw;
   height: auto;
 `;
 

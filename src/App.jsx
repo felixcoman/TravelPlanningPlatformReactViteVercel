@@ -1,3 +1,4 @@
+import "bootstrap-icons/font/bootstrap-icons.css";
 import { useReducer } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
@@ -10,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import Itinerary from "./components/Itinerary/Itinerary";
 import CitiesRegions from "./components/MainHome/CitiesRegions/CitiesRegions";
+import { MainSection } from "./components/MainSection/MainSection.style";
 import MyChoices from "./components/MyChoices/MyChoices";
 import MyTravelCity from "./components/MyTravelCity/MyTravelCity";
 import MyTravelRegion from "./components/MyTravelRegion/MyTravelRegion";
@@ -23,7 +25,6 @@ import {
   itineraryReducer,
 } from "./global/itinerary/reducer";
 import { UserProvider } from "./global/user/UserContext";
-import "bootstrap-icons/font/bootstrap-icons.css";
 
 function App() {
   const [stateGlobalItinerary, dispatchItinerary] = useReducer(
@@ -48,30 +49,35 @@ function App() {
       <ChoiceContext.Provider value={choiceContextValue}>
         <ItineraryContext.Provider value={itineraryContextValue}>
           <NavBar />
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/home" element={<Home />}></Route>
-            <Route path="/about" element={<About />}></Route>
-            <Route
-              path="/city-region/:country/:id"
-              element={<CitiesRegions />}
-            ></Route>
-            <Route path="/contact" element={<Contact />}></Route>
-            <Route
-              path="/my-travel1/:country/:city/:id"
-              element={<MyTravelCity />}
-            ></Route>
-            <Route
-              path="/my-travel2/:country/:region/:id"
-              element={<MyTravelRegion />}
-            ></Route>
-            <Route path="/explore/:country/:city" element={<Explore />}></Route>
-            <Route path="/users/:id" element={<Users />} />
-            <Route path="/itinerary" element={<Itinerary />}></Route>
-            <Route path="/my-choices" element={<MyChoices />}></Route>
-            <Route path="/account" element={<Account />}></Route>
-            <Route path="/accommodation" element={<Accommodation />} />
-          </Routes>
+          <MainSection loc="MainSection">
+            <Routes>
+              <Route path="/" element={<Home />}></Route>
+              <Route path="/home" element={<Home />}></Route>
+              <Route path="/about" element={<About />}></Route>
+              <Route
+                path="/city-region/:country/:id"
+                element={<CitiesRegions />}
+              ></Route>
+              <Route path="/contact" element={<Contact />}></Route>
+              <Route
+                path="/my-travel1/:country/:city/:id"
+                element={<MyTravelCity />}
+              ></Route>
+              <Route
+                path="/my-travel2/:country/:region/:id"
+                element={<MyTravelRegion />}
+              ></Route>
+              <Route
+                path="/explore/:country/:city"
+                element={<Explore />}
+              ></Route>
+              <Route path="/users/:id" element={<Users />} />
+              <Route path="/itinerary" element={<Itinerary />}></Route>
+              <Route path="/my-choices" element={<MyChoices />}></Route>
+              <Route path="/account" element={<Account />}></Route>
+              <Route path="/accommodation" element={<Accommodation />} />
+            </Routes>
+          </MainSection>
           <Footer />
         </ItineraryContext.Provider>
       </ChoiceContext.Provider>

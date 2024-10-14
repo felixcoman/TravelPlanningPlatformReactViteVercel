@@ -11,20 +11,34 @@ export const Logo = styled.img`
   border-radius: 50%;
 `;
 
-export const NavbarContainer = styled.div`
+// using a fixed navbar with responsive height - needs same top padding in main section
+export const NavbarContainer = styled.nav`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  height: 15vh;
+  align-content: center;
+  background-color: ${DARK_BLUE};
+
+  @media screen and (max-width: 900px) {
+    height: 17vh;
+  }
+`;
+
+export const NavbarContent = styled.div`
   display: flex;
   flex-direction: row;
   vertical-align: middle;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  max-width: 1440px;
   padding: 15px 15px;
-  height: 15vh;
-  background-color: ${DARK_BLUE};
+  height: auto;
+  margin: auto;
+  background-color: transparent;
   color: ${WHITE_NEUTRAL};
-  @media screen and (max-width: 900px) {
-    height: 17vh;
-  }
 `;
 
 export const LinkNavStyle = styled(Link)`
