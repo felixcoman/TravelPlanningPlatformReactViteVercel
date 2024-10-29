@@ -12,6 +12,7 @@ import {
   ErrorHome,
 } from "./MainHome.style";
 import GetOptionCities from "./GetOptionCities";
+import Spinner from "react-bootstrap/Spinner";
 
 function SelectOptionExplore() {
   const [selectedCountry, setSelectedCountry] = useState("");
@@ -37,7 +38,7 @@ function SelectOptionExplore() {
     console.log("selectedCountry", e.target.value);
     setData(null);
     setClicked(true);
-    setSelectedCity(false);
+    setSelectedCity("");
   };
 
   const handleDropdownChangeCity = (e) => {
@@ -90,14 +91,13 @@ function SelectOptionExplore() {
                 <Option loc="Option" value="">
                   Pick a city
                 </Option>
-                {data &&
-                  data.map((item, index) => {
-                    return (
-                      item.city && (
-                        <GetOptionCities key={index} value={item.city} />
-                      )
-                    );
-                  })}
+                {data.map((item, index) => {
+                  return (
+                    item.city && (
+                      <GetOptionCities key={index} value={item.city} />
+                    )
+                  );
+                })}
               </Select>
             </LabelHead>
           )}
@@ -114,6 +114,9 @@ function SelectOptionExplore() {
       </SelectContainer>
       {loading && (
         <LoadingHome loc="LoadingHome">
+          <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
           Loading... Waiting for landing...
         </LoadingHome>
       )}

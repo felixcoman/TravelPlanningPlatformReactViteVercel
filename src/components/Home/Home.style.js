@@ -22,6 +22,7 @@ export const HomeContainer = styled.div`
     flex-direction: column;
     height: 60vh;
   }
-  /* @media screen and (max-width: 440px) {
-  } */
+  @media screen and (max-width: 425px) {
+    height: 66vh;
+  }
 `;

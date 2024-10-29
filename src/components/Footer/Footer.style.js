@@ -33,7 +33,7 @@ export const FooterInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: left;
-  margin: 10px;
+  margin: 5px;
 `;
 
 export const FooterInfo = styled.p`
@@ -43,7 +43,7 @@ export const FooterInfo = styled.p`
 `;
 
 export const Copyrights = styled.p`
-  margin: 10px;
+  margin: 5px;
 
   @media screen and (max-width: 840px) {
   }
