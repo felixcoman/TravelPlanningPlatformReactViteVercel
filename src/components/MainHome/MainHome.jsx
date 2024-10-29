@@ -4,7 +4,7 @@ import {
   SectionMainContainer,
 } from "./MainHome.style";
 import { AttributionsSection } from "../Attributions/Attributions.style";
-
+import Slider from "../About/Slider";
 const images = [
   {
     src: "https://fastly.picsum.photos/id/397/4475/2984.jpg?hmac=_PEWxhdxVnCU15wD6E-blJDbpMVH17QQVV0JYMZnkjc",
@@ -46,7 +46,7 @@ const images = [
 
 function MainHome() {
   return (
-    <SectionMainContainer alt="SectionMainContainer">
+    <SectionMainContainer loc="SectionMainContainer">
       <MainContainer loc="MainContainer">
         {images.map((image, index) => (
           <MainHomeGalleryItem
@@ -57,6 +57,7 @@ function MainHome() {
           />
         ))}
       </MainContainer>
+      <Slider loc="Slide" className="carousel-home" />
       <AttributionsSection loc="AttributionsSection">
         Copyright: Images from <a href="https://picsum.photos/">Lorem Picsum</a>
       </AttributionsSection>

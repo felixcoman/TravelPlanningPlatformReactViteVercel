@@ -27,13 +27,9 @@ export const MainContainer = styled.div`
     height: auto;
   }
 
-  /* @media screen and (max-width: 1300px) {
-
+  @media screen and (max-width: 425px) {
+    display: none;
   }
-
-  @media screen and (max-width: 840px) {
-
-  } */
 `;
 
 export const MainHomeGalleryItem = styled.img`
@@ -55,6 +51,10 @@ export const MainHomeGalleryItem = styled.img`
   @media screen and (max-width: 840px) {
     width: 90px;
   }
+
+  @media screen and (max-width: 425px) {
+    width: 70px;
+  }
 `;
 
 export const MainButtonsContainer = styled.div`
@@ -69,10 +69,11 @@ export const MainButtonsContainer = styled.div`
 
   @media screen and (max-width: 1300px) {
     width: 350px;
-    height: 300px;
+    height: 210px;
   }
-  @media screen and (max-width: 840px) {
-    height: 200px;
+
+  @media screen and (max-width: 425px) {
+    width: 100%;
   }
 `;
 
@@ -96,9 +97,9 @@ export const OptionContainer = styled.div`
     height: auto;
     top: -70px;
   }
-  @media screen and (max-width: 440px) {
-    /* height: auto;
-    top: -70px; */
+
+  @media screen and (max-width: 425px) {
+    width: 100%;
   }
 `;
 
@@ -160,12 +161,19 @@ export const SelectContainer = styled.div`
   justify-content: center;
   width: 100%;
   border-radius: 8px;
-  margin: 15px 30px auto;
+  margin: 25px 30px auto;
   position: absolute;
   top: 110px;
 
   @media screen and (max-width: 1300px) {
-    top: 90px;
+    top: 100px;
+  }
+
+  @media screen and (max-width: 840px) {
+    top: 85px;
+  }
+  @media screen and (max-width: 370px) {
+    top: 110px;
   }
 `;
 export const Select = styled.select`
@@ -180,7 +188,7 @@ export const Select = styled.select`
   background: ${GRADIENT_BLUE_LIGHT};
 
   @media screen and (max-width: 1300px) {
-    height: auto;
+    height: 24.5px;
   }
 `;
 
@@ -195,10 +203,13 @@ export const SelectPlan = styled.select`
   font-size: ${TEXT_SIZE_SMALL};
   background: ${GRADIENT_BLUE_LIGHT};
 
+  @media screen and (max-width: 1300px) {
+    height: 24.5px;
+  }
+
   @media screen and (max-width: 840px) {
     margin-top: 20px;
     width: 90%;
-    height: 35px;
   }
 `;
 
@@ -237,12 +248,17 @@ export const HomeBtn = styled(Link)`
   @media screen and (max-width: 840px) {
     width: 70%;
   }
+
+  @media screen and (max-width: 425px) {
+    margin: 5 auto;
+  }
 `;
 
 export const FormBody = styled.form`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  width: 280px;
 `;
 export const LabelHead = styled.label`
   display: flex;
@@ -261,10 +277,12 @@ export const LabelHeadText = styled.span`
 `;
 
 export const LoadingHome = styled.div`
+  display: flex;
   position: absolute;
   top: 90px;
   color: ${YELLOW};
   align-self: center;
+  align-items: center;
 
   @media screen and (max-width: 1300px) {
     top: 70px;
@@ -280,5 +298,9 @@ export const ErrorHome = styled.div`
   @media screen and (max-width: 1300px) {
     top: 68px;
     width: 380px;
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 100%;
   }
 `;

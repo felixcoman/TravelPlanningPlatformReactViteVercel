@@ -49,6 +49,28 @@ body {
   }
 }
 
+.carousel-home {
+  display: none;
+  @media screen and (max-width: 425px) {
+    display: block;
+  }
+}
+
+.carousel-home .carousel-control-next-icon,
+.carousel-home .carousel-control-prev-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.carousel-home .carousel-indicators {
+  margin-bottom: 0;
+}
+
+.carousel-home .carousel-indicators button {
+  width: 10px;
+  height: 2px;
+}
+
 .card {
   width: calc(100% - 20px);
   background-image: url("../../../src/assets/897940_2588.jpg");

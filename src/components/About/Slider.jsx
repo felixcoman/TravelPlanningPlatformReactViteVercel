@@ -1,10 +1,10 @@
 import Carousel from "react-bootstrap/Carousel";
 import { SliderImg } from "./About.style";
 
-function Slider() {
+function Slider({ className }) {
   return (
     <>
-      <Carousel>
+      <Carousel className={className}>
         <Carousel.Item>
           <SliderImg
             loc="SliderImg"
