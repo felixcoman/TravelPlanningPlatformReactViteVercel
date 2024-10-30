@@ -53,16 +53,19 @@ export const ContactButtonUser = styled(ContactButton)`
   font-size: ${TEXT_SIZE_BIG};
 `;
 
-export const Error = styled.p`
+export const Error = styled.div`
   color: ${RED};
   width: 100%;
   align-self: center;
 `;
 
-export const Loading = styled.p`
+export const Loading = styled.div`
+  display: flex;
   color: ${YELLOW};
   width: 100%;
   align-self: center;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const ContactContainerUser = styled.div`
@@ -72,7 +75,7 @@ export const ContactContainerUser = styled.div`
   height: 70vh;
   align-items: center;
   justify-content: center;
-  width: 25vw;
+  width: 50vw;
   margin: 0 auto;
   @media screen and (max-width: 900px) {
     width: 100%;

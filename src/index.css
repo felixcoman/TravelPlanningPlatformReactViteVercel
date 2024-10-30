@@ -71,6 +71,8 @@ body {
   height: 2px;
 }
 
+/* .carousel-about{} */
+
 .card {
   width: calc(100% - 20px);
   background-image: url("../../../src/assets/897940_2588.jpg");

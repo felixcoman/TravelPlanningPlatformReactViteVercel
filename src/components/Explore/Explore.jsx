@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import Spinner from "react-bootstrap/Spinner";
 import { useNavigate, useParams } from "react-router-dom";
 import { itineraryPlus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
@@ -200,7 +201,12 @@ const Explore = () => {
     <SectionExplore loc="SectionExplore">
       <SectionCityData loc="SectionCityData">
         {loadingCity && (
-          <Loading loc="Loading">Loading... Waiting for landing...</Loading>
+          <Loading loc="Loading">
+            <Spinner animation="border" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
+            Loading... Approaching cities...
+          </Loading>
         )}
         {errorCity && (
           <Error loc="Error">
@@ -275,7 +281,12 @@ const Explore = () => {
       <SectionLandmarkDataWrapper loc="SectionLandmarkDataWrapper">
         <SectionLandmarkData loc="SectionLandmarkData">
           {loadingDestination && (
-            <Loading loc="Loading">Loading... Waiting for landing...</Loading>
+            <Loading loc="Loading">
+              <Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </Spinner>
+              Loading... Looking for destinations...
+            </Loading>
           )}
           {errorDestination && (
             <Error loc="Error">
