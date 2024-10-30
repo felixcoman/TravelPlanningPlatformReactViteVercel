@@ -24,6 +24,7 @@ import {
   SelectTravel,
   TextContainerTravel,
 } from "./MyTravel.style";
+import { Loading } from "../Contact/Contact.style";
 
 function MyTravelCity() {
   const { country, city } = useParams();
@@ -106,9 +107,12 @@ function MyTravelCity() {
     <>
       <PageContainerTravel loc="PageContainerTravel">
         {loading && (
-          <Spinner animation="border" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </Spinner>
+          <Loading loc="Loading">
+            <Spinner animation="border" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
+            Loading... Waiting for landing...
+          </Loading>
         )}
         {error && <div>Error: {error.message}</div>}
         {data && (

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import useFetchData from "../../../hooks/useFetchData";
 import Attributions from "../../Attributions/Attributions";
 import { ImgWrapperPlan } from "../CitiesRegions/CitiesRegions.style";
+import { Loading } from "../../Contact/Contact.style";
 import {
   ButtonPlan,
   DataContainer,
@@ -15,7 +16,6 @@ import {
   Text,
   TextContainer,
 } from "./CitiesRegions.style";
-
 import Spinner from "react-bootstrap/Spinner";
 import useLocalStorage from "../../../hooks/useLocalStorage";
 import GetOptionCities from "../GetOptionCities";
@@ -57,9 +57,12 @@ function CitiesRegions() {
     <>
       <PageContainer loc="PageContainer">
         {loading && (
-          <Spinner animation="border" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </Spinner>
+          <Loading loc="Loading">
+            <Spinner animation="border" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
+            Loading... Waiting for landing...
+          </Loading>
         )}
         {error && <div>Error: {error.message}</div>}
         {data && (
@@ -90,12 +93,11 @@ function CitiesRegions() {
                   value={city}
                 >
                   <option>Choose a city:</option>
-                  {data &&
-                    data.map((e, index) => {
-                      return (
-                        e.city && <GetOptionCities key={index} value={e.city} />
-                      );
-                    })}
+                  {data.map((e, index) => {
+                    return (
+                      e.city && <GetOptionCities key={index} value={e.city} />
+                    );
+                  })}
                 </SelectCity>
                 <ButtonPlan
                   loc="ButtonPlan"
@@ -115,14 +117,13 @@ function CitiesRegions() {
                   value={region}
                 >
                   <option>Choose a region:</option>
-                  {data &&
-                    data.map((e, index) => {
-                      return (
-                        e.region && (
-                          <GetOptionCities key={index} value={e.region} />
-                        )
-                      );
-                    })}
+                  {data.map((e, index) => {
+                    return (
+                      e.region && (
+                        <GetOptionCities key={index} value={e.region} />
+                      )
+                    );
+                  })}
                 </SelectRegion>
                 <ButtonPlan
                   loc="ButtonPlan"

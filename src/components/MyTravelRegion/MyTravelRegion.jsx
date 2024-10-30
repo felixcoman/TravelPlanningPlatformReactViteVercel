@@ -7,6 +7,7 @@ import useFetchData from "../../hooks/useFetchData";
 import useFetchUsers from "../../hooks/useFetchUsers";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import Attributions from "../Attributions/Attributions";
+import { Loading } from "../Contact/Contact.style";
 import {
   DataContainer,
   ImgWrapperPlan,
@@ -108,9 +109,12 @@ function MyTravelRegion() {
     <>
       <PageContainerTravel loc="PageContainerTravel">
         {loading && (
-          <Spinner animation="border" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </Spinner>
+          <Loading loc="Loading">
+            <Spinner animation="border" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
+            Loading... Waiting for landing...
+          </Loading>
         )}
         {error && <div>Error: {error.message}</div>}
         {data && (

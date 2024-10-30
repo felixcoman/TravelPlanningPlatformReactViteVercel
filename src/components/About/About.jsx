@@ -6,8 +6,22 @@ import {
   MainAbout,
 } from "./About.style";
 import Slider from "./Slider";
+import { useState } from "react";
+import Spinner from "react-bootstrap/Spinner";
+import useFetchData from "../../hooks/useFetchData";
+import { Error, Loading } from "../Contact/Contact.style";
 
 function About() {
+  const [clicked, setClicked] = useState(true);
+
+  const urlPicture = `http://localhost:3001/Pictures`;
+
+  const {
+    data: images,
+    error,
+    loading,
+  } = useFetchData(urlPicture, clicked, setClicked);
+
   return (
     <MainAbout loc="MainAbout">
       <AboutTitle loc="AboutTitle">About Us</AboutTitle>
@@ -18,7 +32,29 @@ function About() {
         to explore specific destinations or prefer a tailored travel program,
         we've got you covered.
       </AboutText>
-      <Slider loc="Slider" />
+      {images && (
+        <Slider
+          loc="Slider"
+          className="carousel-about"
+          images={images}
+          error={error}
+          loading={loading}
+        />
+      )}
+      {loading && (
+        <Loading loc="Loading">
+          <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
+          Loading... Waiting for landing...
+        </Loading>
+      )}
+      {error && (
+        <Error loc="Error">
+          Error: {error.message} Our team is called from the coffee break and
+          will take care of the problem!
+        </Error>
+      )}
       <AttributionsSection loc="AttributionsSection">
         Copyright: Images from <a href="https://picsum.photos/">Lorem Picsum</a>
       </AttributionsSection>

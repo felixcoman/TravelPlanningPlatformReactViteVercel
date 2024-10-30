@@ -1,18 +1,18 @@
 import { useState } from "react";
+import Spinner from "react-bootstrap/Spinner";
 import useFetchData from "../../hooks/useFetchData";
+import GetOptionCities from "./GetOptionCities";
 import {
+  ErrorHome,
   FormBody,
   HomeBtn,
   LabelHead,
   LabelHeadText,
+  LoadingHome,
   Option,
   Select,
   SelectContainer,
-  LoadingHome,
-  ErrorHome,
 } from "./MainHome.style";
-import GetOptionCities from "./GetOptionCities";
-import Spinner from "react-bootstrap/Spinner";
 
 function SelectOptionExplore() {
   const [selectedCountry, setSelectedCountry] = useState("");

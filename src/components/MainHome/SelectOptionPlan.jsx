@@ -1,15 +1,16 @@
 import { useState } from "react";
+import Spinner from "react-bootstrap/Spinner";
 import useFetchData from "../../hooks/useFetchData";
-import {
-  HomeBtn,
-  Option,
-  SelectPlan,
-  SelectContainer,
-  FormBody,
-  ErrorHome,
-  LoadingHome,
-} from "./MainHome.style";
 import useLocalStorage from "../../hooks/useLocalStorage";
+import {
+  ErrorHome,
+  FormBody,
+  HomeBtn,
+  LoadingHome,
+  Option,
+  SelectContainer,
+  SelectPlan,
+} from "./MainHome.style";
 
 function SelectOptionPlan() {
   const [selectedCountry, setSelectedCountry] = useState("");
@@ -78,6 +79,9 @@ function SelectOptionPlan() {
       </SelectContainer>
       {loading && (
         <LoadingHome loc="LoadingHome">
+          <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
           Loading... Waiting for landing...
         </LoadingHome>
       )}

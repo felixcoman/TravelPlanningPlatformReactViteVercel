@@ -1,20 +1,21 @@
 import { useEffect, useState } from "react";
 import ListGroup from "react-bootstrap/ListGroup";
+import Spinner from "react-bootstrap/Spinner";
 import { useLocation } from "react-router-dom";
+import { Error, Loading } from "../Contact/Contact.style";
+import { InfoUser, Title } from "../Explore/Explore.style";
 import {
-  DisplayContainer,
-  ItemLink,
-  LocationTitle,
-  Sidebar,
-  PlaceholderAcc,
-  AccommodationMain,
   AccommodationContainer,
   AccommodationDescription,
+  AccommodationMain,
+  DisplayContainer,
   HighlightText,
   Iframe,
+  ItemLink,
+  LocationTitle,
+  PlaceholderAcc,
+  Sidebar,
 } from "./Accommodation.style";
-import { Title, InfoUser } from "../Explore/Explore.style";
-import { Error, Loading } from "../Contact/Contact.style";
 
 function Accommodation() {
   const location = useLocation();
@@ -61,15 +62,22 @@ function Accommodation() {
   }, [accommodationArray]);
 
   if (loading) {
-    return <Loading>Loading...</Loading>;
+    return (
+      <Loading loc="Loading">
+        <Spinner animation="border" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
+        Loading... Waiting for landing...
+      </Loading>
+    );
   }
 
   if (error) {
-    return <Error>Error: {error}</Error>;
+    return <Error loc="Error">Error: {error}</Error>;
   }
 
   if (data.length === 0 || !data[0].dataCity) {
-    return <Error>No data available</Error>;
+    return <Error loc="Error">No data available</Error>;
   }
 
   const compactDataCity = data[0].dataCity;

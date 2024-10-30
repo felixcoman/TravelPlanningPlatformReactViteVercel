@@ -1,13 +1,14 @@
 import { useState } from "react";
+import Spinner from "react-bootstrap/Spinner";
 import { useParams } from "react-router-dom";
 import useFetchUsers from "../../hooks/useFetchUsers";
 import {
-  ContactContainerUser,
-  Error,
-  Loading,
-  InfoSectionUser,
-  DisplayUser,
   ContactButtonUser,
+  ContactContainerUser,
+  DisplayUser,
+  Error,
+  InfoSectionUser,
+  Loading,
 } from "../Contact/Contact.style";
 
 function Users() {
@@ -26,7 +27,14 @@ function Users() {
   console.log("JSON.stringify(user)", JSON.stringify(user));
   return (
     <ContactContainerUser loc="ContactContainerUser">
-      {loading && !error && <Loading loc="Loading">Loading...</Loading>}
+      {loading && !error && (
+        <Loading loc="Loading">
+          <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
+          Loading... Waiting for landing...
+        </Loading>
+      )}
       {error && (
         <Error loc="Error">Error on getting data, Server is down :( </Error>
       )}
