@@ -75,6 +75,7 @@ const Account = () => {
     setError(false);
     setIsFound(true);
     !isVisible1 ? buttonRef1.current.focus() : buttonRef1.current.blur();
+    setInputObj({ Email: "" }); //reset input field
   };
 
   const handleNewAccount = () => {
@@ -83,6 +84,7 @@ const Account = () => {
     setError(false);
     setIsFound(false);
     !isVisible2 ? buttonRef2.current.focus() : buttonRef2.current.blur();
+    setInputObj({ Email: "" }); //reset input field
   };
 
   const [inputObj, setInputObj] = useState({
@@ -156,7 +158,8 @@ const Account = () => {
   };
 
   const logoutUser = () => {
-    setIsVisible1(false);
+    setIsVisible1(false); //closes login form
+    setIsVisible2(false); //closes new account form
     resetLocalData();
     setUser(null);
     dispatchChoice(removeAllChoice());
@@ -185,10 +188,15 @@ const Account = () => {
 
   return (
     <AccountSection loc="AccountSection">
-      <ButtonsContainerAccount loc="ButtonsContainerAccount">
+      <ButtonsContainerAccount
+        loc="ButtonsContainerAccount"
+        isVisible1={isVisible1} //prop for css
+        isVisible2={isVisible2} //prop for css
+      >
         <Buttons
           loc="Buttons"
           ref={buttonRef1}
+          variant="account" //prop for css
           onClick={() => handleGetAccount()}
         >
           Login
@@ -196,15 +204,24 @@ const Account = () => {
         <Buttons
           loc="Buttons"
           ref={buttonRef2}
+          variant="account" //prop for css
           onClick={() => handleNewAccount()}
         >
           Create new account
         </Buttons>
-        <Buttons loc="Buttons" onClick={() => logoutUser()}>
+        <Buttons
+          loc="Buttons"
+          variant="account" //prop for css
+          onClick={() => logoutUser()}
+        >
           Logout
         </Buttons>
       </ButtonsContainerAccount>
-      <InputContainerAccount loc="InputContainerAccount">
+      <InputContainerAccount
+        loc="InputContainerAccount"
+        isVisible1={isVisible1} //prop for css
+        isVisible2={isVisible2} //prop for css
+      >
         {isVisible1 && (
           <ContactContainer loc="ContactContainer">
             <ContactText loc="ContactText">Enter e-mail to login</ContactText>
