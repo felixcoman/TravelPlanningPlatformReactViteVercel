@@ -103,10 +103,7 @@ export const OptionContainer = styled.div`
   }
 `;
 
-export const ButtonsContainer = styled.div`
-  /* display: flex;
-  height: 90%; */
-`;
+export const ButtonsContainer = styled.div``;
 
 export const Buttons = styled.button`
   width: 200px;
@@ -140,17 +137,19 @@ export const Buttons = styled.button`
     border: solid 2px white;
     box-shadow: 0 0 80px ${LIFELINE_ORANGE};
   }
+
+  /* props for personalization of buttons in account page */
   @media screen and (max-width: 1300px) {
-    width: 100%;
-    margin: 5px 0px;
-    flex-direction: column;
-    height: auto;
+    width: ${(props) => (props.variant === "account" ? "200px" : "300px")};
+    height: ${(props) => (props.variant === "account" ? "70px" : "auto")};
+    margin: ${(props) => (props.variant === "account" ? "5px 5px" : "5px 0px")};
   }
 
   @media screen and (max-width: 840px) {
-    width: 100%;
-    margin: 5px 0px;
-    flex-direction: column;
+    width: ${(props) => (props.variant === "account" ? "200px" : "100%")};
+  }
+
+  @media screen and (max-width: 540px) {
     height: auto;
   }
 `;

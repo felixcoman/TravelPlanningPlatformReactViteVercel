@@ -7,8 +7,7 @@ export const ContactContainer = styled.div`
   display: flex;
   margin: 30px 0;
   padding: 10px;
-  height: 100%;
-  gap: 15px;
+  gap: 5px;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
@@ -69,12 +68,24 @@ export const AccountSection = styled.div`
 `;
 
 export const ButtonsContainerAccount = styled.div`
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  height: ${(props) =>
+    props.isVisible1 || props.isVisible2 ? "50%" : "unset"};
+
+  @media screen and (max-width: 630px) {
+    flex-direction: column;
+  }
 `;
 export const InputContainerAccount = styled.div`
   display: flex;
   font-size: 15px;
   width: 100%;
+  height: ${(props) =>
+    props.isVisible1 || props.isVisible2 ? "50%" : "unset"};
   flex-direction: column;
   align-content: center;
   align-items: center;
