@@ -7,11 +7,14 @@ import useFetchData from "../../hooks/useFetchData";
 import useFetchUsers from "../../hooks/useFetchUsers";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import Attributions from "../Attributions/Attributions";
+import { Loading } from "../Contact/Contact.style";
 import {
   DataContainer,
   ImgWrapperPlan,
   Text,
 } from "../MainHome/CitiesRegions/CitiesRegions.style";
+import GetOption from "../MainHome/GetOption";
+import { Option } from "../MainHome/MainHome.style";
 import MyTravelRecommend from "../MyTravelRecommend/MyTravelRecommend";
 import {
   ButtonChoice,
@@ -24,7 +27,6 @@ import {
   SelectTravel,
   TextContainerTravel,
 } from "./MyTravel.style";
-import { Loading } from "../Contact/Contact.style";
 
 function MyTravelCity() {
   const { country, city } = useParams();
@@ -42,16 +44,16 @@ function MyTravelCity() {
   const compactData = data ? data[0] : null;
 
   const optionPeriod = ["three days", "five days", "seven days"];
-  const optionBudget = ["Low budget", "Medium budget", "High budget"];
+  const optionBudget = ["low budget", "medium budget", "high budget"];
 
   const onOptionChangePeriod = (e) => {
     setPeriod(e.target.value);
-    setClicked(true);
+    setShow(false);
   };
 
   const onOptionChangeBudget = (e) => {
     setBudget(e.target.value);
-    setClicked(true);
+    setShow(false);
   };
 
   const handleClick = () => {
@@ -142,9 +144,11 @@ function MyTravelCity() {
                     loc="SelectTravel"
                     onChange={onOptionChangePeriod}
                   >
-                    <option>Choose a period:</option>
-                    {optionPeriod.map((option, index) => {
-                      return <option key={index}>{option}</option>;
+                    <Option loc="Option" value="">
+                      Choose a period:
+                    </Option>
+                    {optionPeriod.map((element, index) => {
+                      return <GetOption key={index} value={element} />;
                     })}
                   </SelectTravel>
 
@@ -152,9 +156,11 @@ function MyTravelCity() {
                     loc="SelectTravel"
                     onChange={onOptionChangeBudget}
                   >
-                    <option>Choose a budget:</option>
-                    {optionBudget.map((option, index) => {
-                      return <option key={index}>{option}</option>;
+                    <Option loc="Option" value="">
+                      Choose a budget:
+                    </Option>
+                    {optionBudget.map((element, index) => {
+                      return <GetOption key={index} value={element} />;
                     })}
                   </SelectTravel>
                 </FiltersTravel>
@@ -164,7 +170,7 @@ function MyTravelCity() {
                     loc="ButtonPlanTravel"
                     onClick={handleClick}
                   >
-                    {show ? "Return" : "Search"}
+                    Search
                   </ButtonPlanTravel>
                 </FiltersTravel>
                 {show ? (

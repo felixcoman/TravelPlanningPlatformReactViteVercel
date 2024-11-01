@@ -1,7 +1,7 @@
 import { Option } from "./MainHome.style";
 
-function GetOptionCities({ value }) {
-  console.log("in GetOptionCities, value is", value);
+function GetOption({ value }) {
+  console.log("in GetOption, value is", value);
   return (
     <Option loc="Option" value={value}>
       {value}
@@ -9,4 +9,4 @@ function GetOptionCities({ value }) {
   );
 }
 
-export default GetOptionCities;
+export default GetOption;

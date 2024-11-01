@@ -13,6 +13,8 @@ import {
   ImgWrapperPlan,
   Text,
 } from "../MainHome/CitiesRegions/CitiesRegions.style";
+import GetOption from "../MainHome/GetOption";
+import { Option } from "../MainHome/MainHome.style";
 import {
   ButtonChoice,
   ButtonPlanTravel,
@@ -44,16 +46,16 @@ function MyTravelRegion() {
   const compactData = data ? data[0] : null;
 
   const optionPeriod = ["three days", "five days", "seven days"];
-  const optionBudget = ["Low budget", "Medium budget", "High budget"];
+  const optionBudget = ["low budget", "medium budget", "high budget"];
 
   const onOptionChangePeriod = (e) => {
     setPeriod(e.target.value);
-    setClicked(true);
+    setShow(false);
   };
 
   const onOptionChangeBudget = (e) => {
     setBudget(e.target.value);
-    setClicked(true);
+    setShow(false);
   };
 
   const handleClick = () => {
@@ -143,9 +145,11 @@ function MyTravelRegion() {
                   loc="SelectTravel"
                   onChange={onOptionChangePeriod}
                 >
-                  <option>Choose a period:</option>
-                  {optionPeriod.map((option, index) => {
-                    return <option key={index}>{option}</option>;
+                  <Option loc="Option" value="">
+                    Choose a period:
+                  </Option>
+                  {optionPeriod.map((element, index) => {
+                    return <GetOption key={index} value={element} />;
                   })}
                 </SelectTravel>
 
@@ -153,16 +157,18 @@ function MyTravelRegion() {
                   loc="SelectTravel"
                   onChange={onOptionChangeBudget}
                 >
-                  <option>Choose a budget:</option>
-                  {optionBudget.map((option, index) => {
-                    return <option key={index}>{option}</option>;
+                  <Option loc="Option" value="">
+                    Choose a budget:
+                  </Option>
+                  {optionBudget.map((element, index) => {
+                    return <GetOption key={index} value={element} />;
                   })}
                 </SelectTravel>
               </FiltersTravel>
 
               <FiltersTravel loc="FiltersTravel">
                 <ButtonPlanTravel loc="ButtonPlanTravel" onClick={handleClick}>
-                  {show ? "Return" : "Search"}
+                  Search
                 </ButtonPlanTravel>
               </FiltersTravel>
 

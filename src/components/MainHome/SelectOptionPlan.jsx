@@ -44,11 +44,7 @@ function SelectOptionPlan() {
     <>
       <SelectContainer loc="SelectContainer">
         <FormBody loc="FormBody" onSubmit={(e) => handleSubmit(e)}>
-          <SelectPlan
-            loc="SelectPlan"
-            value={selectedCountry}
-            onChange={handleDropdownChangeCountry}
-          >
+          <SelectPlan loc="SelectPlan" onChange={handleDropdownChangeCountry}>
             <Option loc="Option" value="">
               Pick a country
             </Option>

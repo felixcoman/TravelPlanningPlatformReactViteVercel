@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Spinner from "react-bootstrap/Spinner";
 import useFetchData from "../../hooks/useFetchData";
-import GetOptionCities from "./GetOptionCities";
+import GetOption from "./GetOption";
 import {
   ErrorHome,
   FormBody,
@@ -58,11 +58,7 @@ function SelectOptionExplore() {
         <FormBody loc="FormBody" onSubmit={(e) => handleSubmit(e)}>
           <LabelHead loc="LabelHead">
             <LabelHeadText>Select country:</LabelHeadText>
-            <Select
-              value={selectedCountry}
-              onChange={handleDropdownChangeCountry}
-              loc="Select"
-            >
+            <Select onChange={handleDropdownChangeCountry} loc="Select">
               <Option loc="Option" value="">
                 Pick a country
               </Option>
@@ -83,19 +79,13 @@ function SelectOptionExplore() {
           {data && (
             <LabelHead loc="LabelHead">
               <LabelHeadText>Select city:</LabelHeadText>
-              <Select
-                value={selectedCity}
-                onChange={handleDropdownChangeCity}
-                loc="Select"
-              >
+              <Select onChange={handleDropdownChangeCity} loc="Select">
                 <Option loc="Option" value="">
                   Pick a city
                 </Option>
                 {data.map((item, index) => {
                   return (
-                    item.city && (
-                      <GetOptionCities key={index} value={item.city} />
-                    )
+                    item.city && <GetOption key={index} value={item.city} />
                   );
                 })}
               </Select>
