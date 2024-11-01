@@ -1,9 +1,13 @@
 import { useState } from "react";
+import Spinner from "react-bootstrap/Spinner";
 import { useParams } from "react-router-dom";
 import useFetchData from "../../../hooks/useFetchData";
+import useLocalStorage from "../../../hooks/useLocalStorage";
 import Attributions from "../../Attributions/Attributions";
-import { ImgWrapperPlan } from "../CitiesRegions/CitiesRegions.style";
 import { Loading } from "../../Contact/Contact.style";
+import { ImgWrapperPlan } from "../CitiesRegions/CitiesRegions.style";
+import GetOption from "../GetOption";
+import { Option } from "../MainHome.style";
 import {
   ButtonPlan,
   DataContainer,
@@ -16,9 +20,6 @@ import {
   Text,
   TextContainer,
 } from "./CitiesRegions.style";
-import Spinner from "react-bootstrap/Spinner";
-import useLocalStorage from "../../../hooks/useLocalStorage";
-import GetOptionCities from "../GetOptionCities";
 
 function CitiesRegions() {
   const { country } = useParams();
@@ -92,11 +93,9 @@ function CitiesRegions() {
                   onChange={onOptionChangeCity}
                   value={city}
                 >
-                  <option>Choose a city:</option>
+                  <Option loc="Option">Choose a city:</Option>
                   {data.map((e, index) => {
-                    return (
-                      e.city && <GetOptionCities key={index} value={e.city} />
-                    );
+                    return e.city && <GetOption key={index} value={e.city} />;
                   })}
                 </SelectCity>
                 <ButtonPlan
@@ -116,12 +115,10 @@ function CitiesRegions() {
                   onChange={onOptionChangeRegion}
                   value={region}
                 >
-                  <option>Choose a region:</option>
+                  <Option loc="Option">Choose a region:</Option>
                   {data.map((e, index) => {
                     return (
-                      e.region && (
-                        <GetOptionCities key={index} value={e.region} />
-                      )
+                      e.region && <GetOption key={index} value={e.region} />
                     );
                   })}
                 </SelectRegion>
