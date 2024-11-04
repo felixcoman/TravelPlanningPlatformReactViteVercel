@@ -29,7 +29,9 @@ import {
 import MyTravelRecommend from "../MyTravelRecommend/MyTravelRecommend";
 
 function MyTravelRegion() {
-  const { country, region } = useParams();
+  let { country, region } = useParams();
+  country = transformToUppercase(country);
+
   const [clicked, setClicked] = useState(true);
   const [period, setPeriod] = useState("");
   const [budget, setBudget] = useState("");
