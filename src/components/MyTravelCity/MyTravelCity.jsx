@@ -3,6 +3,7 @@ import Spinner from "react-bootstrap/Spinner";
 import { useParams } from "react-router-dom";
 import { addChoice } from "../../global/choice/actions";
 import { ChoiceContext } from "../../global/choice/context";
+import transformToUppercase from "../../global/utilities/transformToUppercase";
 import useFetchData from "../../hooks/useFetchData";
 import useFetchUsers from "../../hooks/useFetchUsers";
 import useLocalStorage from "../../hooks/useLocalStorage";
@@ -29,7 +30,9 @@ import {
 } from "./MyTravel.style";
 
 function MyTravelCity() {
-  const { country, city } = useParams();
+  let { country, city } = useParams();
+  country = transformToUppercase(country);
+
   const [clicked, setClicked] = useState(true);
   const [period, setPeriod] = useState("");
   const [budget, setBudget] = useState("");
@@ -37,6 +40,8 @@ function MyTravelCity() {
 
   const { localData } = useLocalStorage("user");
   console.log("localData", localData);
+  console.log("country", country);
+  console.log("city", city);
 
   const url = country ? `http://localhost:3001/${country}/?city=${city}` : null;
 
