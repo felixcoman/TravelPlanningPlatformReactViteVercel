@@ -3,6 +3,7 @@ import Spinner from "react-bootstrap/Spinner";
 import { useParams } from "react-router-dom";
 import { addChoice } from "../../global/choice/actions";
 import { ChoiceContext } from "../../global/choice/context";
+import transformToUppercase from "../../global/utilities/transformToUppercase";
 import useFetchData from "../../hooks/useFetchData";
 import useFetchUsers from "../../hooks/useFetchUsers";
 import useLocalStorage from "../../hooks/useLocalStorage";
@@ -61,9 +62,11 @@ function MyTravelRegion() {
   };
 
   const handleClick = () => {
-    setPeriod(period);
-    setBudget(budget);
-    setShow(!show);
+    if (period !== "" || budget !== "") {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
   };
 
   const id = localData;
@@ -169,23 +172,26 @@ function MyTravelRegion() {
               </FiltersTravel>
 
               <FiltersTravel loc="FiltersTravel">
-                <ButtonPlanTravel loc="ButtonPlanTravel" onClick={handleClick}>
+                <ButtonPlanTravel
+                  loc="ButtonPlanTravel"
+                  onClick={() => handleClick()}
+                >
                   Search
                 </ButtonPlanTravel>
               </FiltersTravel>
 
-              {show ? (
+              {show && (
                 <MyTravelRecommend
                   budgetTravel={budget}
                   periodTravel={period}
                   data={data}
                 />
-              ) : null}
+              )}
             </FiltersContainerTravel>
           </>
         )}
 
-        {show ? (
+        {show && (
           <ButtonChoice
             loc="ButtonChoice"
             to={`/my-choices`}
@@ -193,7 +199,7 @@ function MyTravelRegion() {
           >
             Save my Choice
           </ButtonChoice>
-        ) : null}
+        )}
       </PageContainerTravel>
     </>
   );

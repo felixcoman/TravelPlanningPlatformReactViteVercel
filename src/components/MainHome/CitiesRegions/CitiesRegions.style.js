@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { DARK_BLUE, ORANGE, WHITE_NEUTRAL } from "../../../constants/Colors";
-import { Link } from "react-router-dom";
 import { TEXT_SIZE_MEDIUM } from "../../../constants/Dimensions";
 
 export const PageContainer = styled.div`
@@ -17,7 +16,7 @@ export const FiltersContainer = styled.div`
   width: 90%;
   margin: 50px auto;
   border: 2px solid ${WHITE_NEUTRAL};
-  ${(props) => props.show !== null && `opacity: ${props.show ? "1" : "0.5"};`};
+  opacity: ${(props) => (props.disabled ? "0.5" : "1")};
 `;
 
 export const MainContainer = styled.div`
@@ -64,7 +63,7 @@ export const TextContainer = styled.p`
   text-align: justify;
 `;
 
-export const ButtonPlan = styled(Link)`
+export const ButtonPlan = styled.button`
   width: 200px;
   height: 40px;
   font-weight: 700;

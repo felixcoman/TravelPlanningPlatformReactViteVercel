@@ -62,9 +62,11 @@ function MyTravelCity() {
   };
 
   const handleClick = () => {
-    setPeriod(period);
-    setBudget(budget);
-    setShow(!show);
+    if (period !== "" || budget !== "") {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
   };
 
   const id = localData;
@@ -173,18 +175,18 @@ function MyTravelCity() {
                 <FiltersTravel loc="FiltersTravel">
                   <ButtonPlanTravel
                     loc="ButtonPlanTravel"
-                    onClick={handleClick}
+                    onClick={() => handleClick()}
                   >
                     Search
                   </ButtonPlanTravel>
                 </FiltersTravel>
-                {show ? (
+                {show && (
                   <MyTravelRecommend
                     budgetTravel={budget}
                     periodTravel={period}
                     data={data}
                   />
-                ) : null}
+                )}
               </FiltersContainerTravel>
             )}
           </>
@@ -192,7 +194,7 @@ function MyTravelCity() {
         {data && (!data[0].budget || !data[0].period) && (
           <div>No data available for your selection!</div>
         )}
-        {show ? (
+        {show && (
           <ButtonChoice
             loc="ButtonChoice"
             to={`/my-choices`}
@@ -202,7 +204,7 @@ function MyTravelCity() {
           >
             Save my Choice
           </ButtonChoice>
-        ) : null}
+        )}
       </PageContainerTravel>
     </>
   );
