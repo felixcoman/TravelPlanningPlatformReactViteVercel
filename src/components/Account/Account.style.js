@@ -73,8 +73,7 @@ export const ButtonsContainerAccount = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: ${(props) =>
-    props.isVisible1 || props.isVisible2 ? "50%" : "unset"};
+  height: ${(props) => (props.split == "true" ? "50%" : "unset")};
 
   @media screen and (max-width: 630px) {
     flex-direction: column;
@@ -84,8 +83,7 @@ export const InputContainerAccount = styled.div`
   display: flex;
   font-size: 15px;
   width: 100%;
-  height: ${(props) =>
-    props.isVisible1 || props.isVisible2 ? "50%" : "unset"};
+  height: ${(props) => (props.split == "true" ? "50%" : "unset")};
   flex-direction: column;
   align-content: center;
   align-items: center;

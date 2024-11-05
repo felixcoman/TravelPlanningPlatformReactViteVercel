@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Spinner from "react-bootstrap/Spinner";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useFetchData from "../../../hooks/useFetchData";
 import useLocalStorage from "../../../hooks/useLocalStorage";
 import Attributions from "../../Attributions/Attributions";
@@ -23,16 +23,17 @@ import {
 
 function CitiesRegions() {
   const { country } = useParams();
+  const navigate = useNavigate();
 
   const { localData } = useLocalStorage("user");
   console.log("localData", localData);
 
   console.log("country", country, "id", localData);
   const [clicked, setClicked] = useState(true);
-  const [show, setShow] = useState(null);
   const [city, setCity] = useState("");
   const [region, setRegion] = useState("");
-
+  const [isDisabledCity, setIsDisabledCity] = useState(false);
+  const [isDisabledRegion, setIsDisabledRegion] = useState(false);
   const url = country ? `http://localhost:3001/${country}` : null;
 
   const { data, error, loading } = useFetchData(url, clicked, setClicked);
@@ -41,17 +42,24 @@ function CitiesRegions() {
 
   const onOptionChangeCity = (e) => {
     setCity(e.target.value);
+    setRegion("");
   };
 
   const onOptionChangeRegion = (e) => {
     setRegion(e.target.value);
+    setCity("");
   };
-  const changeCityRegion = (city) => {
-    if (city === "city") {
-      setShow(true);
-    } else {
-      setShow(false);
-    }
+
+  const goRegion = (event) => {
+    region !== ""
+      ? navigate(`/my-travel2/${country}/${region}/${localData}`)
+      : event.preventDefault();
+  };
+
+  const goCity = (event) => {
+    city !== ""
+      ? navigate(`/my-travel1/${country}/${city}/${localData}`)
+      : event.preventDefault();
   };
 
   return (
@@ -85,8 +93,12 @@ function CitiesRegions() {
             <DataContainer loc="DataContainer">
               <FiltersContainer
                 loc="FiltersContainer"
-                show={show}
-                onClick={() => changeCityRegion("city")}
+                disabled={isDisabledCity}
+                onMouseOver={() => {
+                  setIsDisabledCity(false);
+                  setIsDisabledRegion(true);
+                }}
+                onMouseOut={() => setIsDisabledRegion(false)}
               >
                 <SelectCity
                   loc="SelectCity"
@@ -98,17 +110,18 @@ function CitiesRegions() {
                     return e.city && <GetOption key={index} value={e.city} />;
                   })}
                 </SelectCity>
-                <ButtonPlan
-                  loc="ButtonPlan"
-                  to={`/my-travel1/${country}/${city}/${localData}`}
-                >
+                <ButtonPlan loc="ButtonPlan" onClick={(event) => goCity(event)}>
                   Search
                 </ButtonPlan>
               </FiltersContainer>
               <FiltersContainer
                 loc="FiltersContainer"
-                show={!show}
-                onClick={() => changeCityRegion("region")}
+                disabled={isDisabledRegion}
+                onMouseOver={() => {
+                  setIsDisabledRegion(false);
+                  setIsDisabledCity(true);
+                }}
+                onMouseOut={() => setIsDisabledCity(false)}
               >
                 <SelectRegion
                   loc="SelectRegion"
@@ -124,7 +137,7 @@ function CitiesRegions() {
                 </SelectRegion>
                 <ButtonPlan
                   loc="ButtonPlan"
-                  to={`/my-travel2/${country}/${region}/${localData}`}
+                  onClick={(event) => goRegion(event)}
                 >
                   Search
                 </ButtonPlan>

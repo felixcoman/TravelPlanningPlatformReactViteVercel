@@ -1,4 +1,4 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../global/user/UserContext";
 import useLocalStorage from "../../hooks/useLocalStorage";
@@ -8,22 +8,22 @@ import AccountForm from "./AccountForm";
 import { addAllChoice, removeAllChoice } from "../../global/choice/actions";
 import { ChoiceContext } from "../../global/choice/context";
 import {
-  removeAllItinerary,
   addAllItinerary,
   addAllItineraryLandmark,
+  removeAllItinerary,
 } from "../../global/itinerary/actions";
+import { ItineraryContext } from "../../global/itinerary/context";
 import useFetchUsers from "../../hooks/useFetchUsers";
+import { Error } from "../Contact/Contact.style";
+import { InfoUser } from "../Explore/Explore.style";
 import {
+  AccountSection,
   ButtonsContainerAccount,
   ContactButton,
   ContactContainer,
   ContactText,
   InputContainerAccount,
-  AccountSection,
 } from "./Account.style";
-import { ItineraryContext } from "../../global/itinerary/context";
-import { InfoUser } from "../Explore/Explore.style";
-import { Error } from "../Contact/Contact.style";
 
 const Account = () => {
   const navigate = useNavigate();
@@ -40,8 +40,7 @@ const Account = () => {
 
   const [isVisible1, setIsVisible1] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
-  const buttonRef1 = useRef(null);
-  const buttonRef2 = useRef(null);
+  const [splitContainer, setSplitContainer] = useState(false);
 
   const [message, setMessage] = useState(false);
 
@@ -71,19 +70,19 @@ const Account = () => {
 
   const handleGetAccount = () => {
     setIsVisible1(!isVisible1);
+    setSplitContainer(!splitContainer);
     setIsVisible2(false);
     setError(false);
     setIsFound(true);
-    !isVisible1 ? buttonRef1.current.focus() : buttonRef1.current.blur();
     setInputObj({ Email: "" }); //reset input field
   };
 
   const handleNewAccount = () => {
     setIsVisible2(!isVisible2);
+    setSplitContainer(!splitContainer);
     setIsVisible1(false);
     setError(false);
     setIsFound(false);
-    !isVisible2 ? buttonRef2.current.focus() : buttonRef2.current.blur();
     setInputObj({ Email: "" }); //reset input field
   };
 
@@ -160,6 +159,7 @@ const Account = () => {
   const logoutUser = () => {
     setIsVisible1(false); //closes login form
     setIsVisible2(false); //closes new account form
+    setSplitContainer(false);
     resetLocalData();
     setUser(null);
     dispatchChoice(removeAllChoice());
@@ -190,12 +190,10 @@ const Account = () => {
     <AccountSection loc="AccountSection">
       <ButtonsContainerAccount
         loc="ButtonsContainerAccount"
-        isVisible1={isVisible1} //prop for css
-        isVisible2={isVisible2} //prop for css
+        split={splitContainer ? "true" : "false"}
       >
         <Buttons
           loc="Buttons"
-          ref={buttonRef1}
           variant="account" //prop for css
           onClick={() => handleGetAccount()}
         >
@@ -203,7 +201,6 @@ const Account = () => {
         </Buttons>
         <Buttons
           loc="Buttons"
-          ref={buttonRef2}
           variant="account" //prop for css
           onClick={() => handleNewAccount()}
         >
@@ -219,8 +216,7 @@ const Account = () => {
       </ButtonsContainerAccount>
       <InputContainerAccount
         loc="InputContainerAccount"
-        isVisible1={isVisible1} //prop for css
-        isVisible2={isVisible2} //prop for css
+        split={splitContainer ? "true" : "false"}
       >
         {isVisible1 && (
           <ContactContainer loc="ContactContainer">
