@@ -55,6 +55,11 @@ export const FiltersTravel = styled.div`
     width: 90%;
   }
 `;
+export const FilterDivision = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
 
 export const SelectTravel = styled.select`
   width: 45%;
@@ -160,9 +165,13 @@ export const TextContainerTravel = styled.p`
   color: ${WHITE_NEUTRAL};
   text-align: justify;
   @media screen and (max-width: 820px) {
-    text-align: center;
-    margin: 0;
+    margin: 5px;
   }
+`;
+
+export const TextContainerFilter = styled(TextContainerTravel)`
+  text-align: center;
+  margin: 10px;
 `;
 
 export const TextChoice = styled.p`
