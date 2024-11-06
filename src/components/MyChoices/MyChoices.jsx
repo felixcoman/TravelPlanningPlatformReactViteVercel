@@ -54,14 +54,14 @@ function MyChoices() {
 
   return (
     <>
-      {localData === undefined && (
+      {stateGlobalChoice.choiceValue.length === 0 && (
         <InfoSection loc="InfoSection">
           <InfoUser>
-            Please create an account first and then select "Help Me Plan" from
-            Home screen!
+            You didn't make any choices yet! Go to "Help me Plan" and select a
+            destination that you wish to travel to!
           </InfoUser>
-          <ButtonInfo loc="ButtonInfo" to={`/account`}>
-            Take me to Account screen!
+          <ButtonInfo loc="ButtonInfo" to={`/home`}>
+            Take me back to Home screen!
           </ButtonInfo>
         </InfoSection>
       )}
