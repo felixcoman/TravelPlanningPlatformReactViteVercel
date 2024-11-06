@@ -19,12 +19,14 @@ import { Option } from "../MainHome/MainHome.style";
 import {
   ButtonChoice,
   ButtonPlanTravel,
+  FilterDivision,
   FiltersContainerTravel,
   FiltersTravel,
   ImgContainerTravel,
   MainContainerTravel,
   PageContainerTravel,
   SelectTravel,
+  TextContainerFilter,
   TextContainerTravel,
 } from "../MyTravelCity/MyTravel.style";
 import MyTravelRecommend from "../MyTravelRecommend/MyTravelRecommend";
@@ -144,51 +146,61 @@ function MyTravelRegion() {
               </DataContainer>
             </MainContainerTravel>
 
-            <FiltersContainerTravel loc="FiltersContainerTravel">
-              <FiltersTravel loc="FiltersTravel">
-                <SelectTravel
-                  loc="SelectTravel"
-                  onChange={onOptionChangePeriod}
-                >
-                  <Option loc="Option" value="">
-                    Choose a period:
-                  </Option>
-                  {optionPeriod.map((element, index) => {
-                    return <GetOption key={index} value={element} />;
-                  })}
-                </SelectTravel>
+            {data[0].budget && data[0].period && (
+              <FiltersContainerTravel loc="FiltersContainerTravel">
+                <FiltersTravel loc="FiltersTravel">
+                  <FilterDivision>
+                    <TextContainerFilter>Filter by period:</TextContainerFilter>
+                    <SelectTravel
+                      loc="SelectTravel"
+                      onChange={onOptionChangePeriod}
+                    >
+                      <Option loc="Option" value="">
+                        empty selection
+                      </Option>
+                      {optionPeriod.map((element, index) => {
+                        return <GetOption key={index} value={element} />;
+                      })}
+                    </SelectTravel>
+                  </FilterDivision>
+                  <FilterDivision>
+                    <TextContainerFilter>Filter by budget:</TextContainerFilter>
+                    <SelectTravel
+                      loc="SelectTravel"
+                      onChange={onOptionChangeBudget}
+                    >
+                      <Option loc="Option" value="">
+                        empty selection
+                      </Option>
+                      {optionBudget.map((element, index) => {
+                        return <GetOption key={index} value={element} />;
+                      })}
+                    </SelectTravel>
+                  </FilterDivision>
+                </FiltersTravel>
 
-                <SelectTravel
-                  loc="SelectTravel"
-                  onChange={onOptionChangeBudget}
-                >
-                  <Option loc="Option" value="">
-                    Choose a budget:
-                  </Option>
-                  {optionBudget.map((element, index) => {
-                    return <GetOption key={index} value={element} />;
-                  })}
-                </SelectTravel>
-              </FiltersTravel>
+                <FiltersTravel loc="FiltersTravel">
+                  <ButtonPlanTravel
+                    loc="ButtonPlanTravel"
+                    onClick={() => handleClick()}
+                  >
+                    Search
+                  </ButtonPlanTravel>
+                </FiltersTravel>
 
-              <FiltersTravel loc="FiltersTravel">
-                <ButtonPlanTravel
-                  loc="ButtonPlanTravel"
-                  onClick={() => handleClick()}
-                >
-                  Search
-                </ButtonPlanTravel>
-              </FiltersTravel>
-
-              {show && (
-                <MyTravelRecommend
-                  budgetTravel={budget}
-                  periodTravel={period}
-                  data={data}
-                />
-              )}
-            </FiltersContainerTravel>
+                {show && (
+                  <MyTravelRecommend
+                    budgetTravel={budget}
+                    periodTravel={period}
+                    data={data}
+                  />
+                )}
+              </FiltersContainerTravel>
+            )}
           </>
+        )}
+        {data && (!data[0].budget || !data[0].period) && (
+          <div>No data available for your selection!</div>
         )}
 
         {show && (
