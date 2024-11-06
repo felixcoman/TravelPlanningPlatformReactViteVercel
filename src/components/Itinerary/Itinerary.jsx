@@ -81,17 +81,17 @@ function Itinerary() {
         <LandmarkSection />
       </ItineraryData>
       {itineraryValueArray.length === 0 &&
-      itineraryLandmarkValueArray.length === 0 ? (
-        <InfoSection loc="InfoSection">
-          <InfoUser loc="InfoUser">
-            You didn't choose any itinerary yet! Go to "I Want To Explore
-            Offers" and select a destination that you like to know more about!
-          </InfoUser>
-          <ButtonInfo loc="ButtonInfo" to={`/home`}>
-            Take me back to Home screen!
-          </ButtonInfo>
-        </InfoSection>
-      ) : null}
+        itineraryLandmarkValueArray.length === 0 && (
+          <InfoSection loc="InfoSection">
+            <InfoUser loc="InfoUser">
+              You didn't choose any itinerary yet! Go to "I Want To Explore
+              Offers" and select a destination that you like to know more about!
+            </InfoUser>
+            <ButtonInfo loc="ButtonInfo" to={`/home`}>
+              Take me back to Home screen!
+            </ButtonInfo>
+          </InfoSection>
+        )}
       {(itineraryValueArray.length !== 0 ||
         itineraryLandmarkValueArray.length !== 0) && (
         <>
