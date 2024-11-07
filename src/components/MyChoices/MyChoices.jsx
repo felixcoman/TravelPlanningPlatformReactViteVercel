@@ -18,12 +18,12 @@ function MyChoices() {
     fetch(`http://localhost:3001/users/${localData}`)
       .then((response) => response.json())
       .then((userData) => {
-        // Filter out the choice object at the specified index
+        // Filter out the choice object at the specified index - filters out element that needs to be deleted from server
         const updatedChoices = userData.choices.filter(
           (choice, i) => i !== indexServer
         );
 
-        // Send the updated data back to the server
+        // Send the updated data back to the server - remaining elements
         fetch(`http://localhost:3001/users/${localData}`, {
           method: "PUT",
           body: JSON.stringify({ ...userData, choices: updatedChoices }),
@@ -44,6 +44,7 @@ function MyChoices() {
       "stateGlobalChoice.choiceValue.length",
       stateGlobalChoice.choiceValue.length
     );
+    //specifying index server because element sequence is reversed from that of the global array (first added element is on last position in global array but on first position on server)
     const indexServer = stateGlobalChoice.choiceValue.length - 1 - index;
     console.log("indexServer", indexServer, "index", index);
     handleUpdateChoice(indexServer);
