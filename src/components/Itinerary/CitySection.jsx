@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { itineraryMinus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
 import useLocalStorage from "../../hooks/useLocalStorage";
+import useRemoveData from "../../hooks/useRemoveData";
 import CityCard from "../CityCard/CityCard";
 
 function CitySection() {
@@ -16,41 +17,22 @@ function CitySection() {
   const [clicked, setClicked] = useState(true);
   const [show, setShow] = useState(false);
   const [showId, setShowId] = useState(0);
+  const [indexServer, setIndexServer] = useState(null);
 
-  const handleUpdateServer = (indexServer) => {
-    fetch(`http://localhost:3001/users/${localData}`)
-      .then((response) => response.json())
-      .then((userData) => {
-        // Filter out the itinerary object at the specified index - filters out element that needs to be deleted from server
-        const updatedItinerary = userData.itinerarycity.filter(
-          (e, i) => i !== indexServer
-        );
-
-        // Send the updated data back to the server - remaining elements
-        fetch(`http://localhost:3001/users/${localData}`, {
-          method: "PUT",
-          body: JSON.stringify({
-            ...userData,
-            itinerarycity: updatedItinerary,
-          }),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        })
-          .then((response) => response.json())
-          .then((json) => console.log(json))
-          .catch((error) => console.error("Error updating user data:", error));
-      })
-      .catch((error) => console.error("Error fetching user data:", error));
-  };
+  const { error, loading } = useRemoveData(
+    localData,
+    indexServer,
+    setIndexServer,
+    "itinerarycity"
+  );
+  console.log("error HOOK", error, "loading HOOK", loading);
 
   const handleDelete = (index) => {
     setClicked(true);
     setShow(false);
     dispatchItinerary(itineraryMinus(index));
     //specifying index server because element sequence is reversed from that of the global array (first added element is on last position in global array but on first position on server)
-    const indexServer = stateGlobalItinerary.itineraryValue.length - 1 - index;
-    handleUpdateServer(indexServer);
+    setIndexServer(stateGlobalItinerary.itineraryValue.length - 1 - index);
   };
 
   return (

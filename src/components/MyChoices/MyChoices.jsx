@@ -1,10 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { removeChoice } from "../../global/choice/actions";
 import { ChoiceContext } from "../../global/choice/context";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import { ButtonInfo, InfoSection, InfoUser } from "../Explore/Explore.style";
 import { MainContainerChoice } from "../MyTravelCity/MyTravel.style";
 import MyChoicesBox from "./MyChoicesBox";
+import useRemoveData from "../../hooks/useRemoveData";
 
 function MyChoices() {
   const { stateGlobalChoice, dispatchChoice } = useContext(ChoiceContext);
@@ -12,31 +13,15 @@ function MyChoices() {
   const { localData } = useLocalStorage("user");
   console.log("localData", localData);
 
-  const handleUpdateChoice = (indexServer) => {
-    console.log("stateGlobalChoice.choiceValue", stateGlobalChoice.choiceValue);
-    console.log("stateGlobalChoice", stateGlobalChoice);
-    fetch(`http://localhost:3001/users/${localData}`)
-      .then((response) => response.json())
-      .then((userData) => {
-        // Filter out the choice object at the specified index - filters out element that needs to be deleted from server
-        const updatedChoices = userData.choices.filter(
-          (choice, i) => i !== indexServer
-        );
+  const [indexServer, setIndexServer] = useState(null);
 
-        // Send the updated data back to the server - remaining elements
-        fetch(`http://localhost:3001/users/${localData}`, {
-          method: "PUT",
-          body: JSON.stringify({ ...userData, choices: updatedChoices }),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        })
-          .then((response) => response.json())
-          .then((json) => console.log(json))
-          .catch((error) => console.error("Error updating user data:", error));
-      })
-      .catch((error) => console.error("Error fetching user data:", error));
-  };
+  const { error, loading } = useRemoveData(
+    localData,
+    indexServer,
+    setIndexServer,
+    "choices"
+  );
+  console.log("error HOOK", error, "loading HOOK", loading);
 
   const handleDelete = (index) => {
     dispatchChoice(removeChoice(index));
@@ -45,9 +30,8 @@ function MyChoices() {
       stateGlobalChoice.choiceValue.length
     );
     //specifying index server because element sequence is reversed from that of the global array (first added element is on last position in global array but on first position on server)
-    const indexServer = stateGlobalChoice.choiceValue.length - 1 - index;
+    setIndexServer(stateGlobalChoice.choiceValue.length - 1 - index);
     console.log("indexServer", indexServer, "index", index);
-    handleUpdateChoice(indexServer);
   };
 
   console.log("stateGlobalChoice.choiceValue", stateGlobalChoice.choiceValue);
