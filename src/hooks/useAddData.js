@@ -1,49 +1,57 @@
 import { useEffect, useState } from "react";
 
-const useRemoveData = (localData, indexServer, setIndexServer, arrayName) => {
-  console.log("indexServer", indexServer, "arrayName", arrayName);
+const useAddData = (
+  readyAdd,
+  setReadyAdd,
+  localData,
+  addData,
+  setAddData,
+  arrayName
+) => {
+  console.log("readyAdd", readyAdd, "addData", addData, "arrayName", arrayName);
 
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
   console.log("error", error, "loading", loading);
-  console.log("inside remove data function");
+  console.log("inside add data function");
 
   useEffect(() => {
-    console.log("inside remove data useEffect");
+    console.log("inside add data useEffect");
 
     if (localData === null) {
       console.log("No user");
       return;
     }
 
-    if (indexServer === null) {
-      console.log("No index for server created");
+    if (addData === "") {
+      console.log("No data");
+      return;
+    }
+
+    if (readyAdd === null) {
+      console.log("Not ready to add");
       return;
     }
 
     setError(false);
 
     const handleUpdateServer = async () => {
-      console.log("inside remove data async");
+      console.log("inside add data async");
       setLoading(true);
 
       await fetch(`http://localhost:3001/users/${localData}`)
         .then((response) => response.json())
         .then((userData) => {
-          // Filter out the array of objects that contains travel options at the specified index - filters out option that needs to be deleted from server
-          const updatedArray = userData[arrayName].filter(
-            (e, i) => i !== indexServer
-          );
-          console.log("updatedArray", updatedArray);
+          // Check if the user has a travel options array, if not, initialize it
+          const newData = userData[arrayName]
+            ? [...userData[arrayName], addData]
+            : [addData];
 
-          // Send the updated data back to the server - the remaining options
+          // Send the updated data back to the server - new travel options
           fetch(`http://localhost:3001/users/${localData}`, {
             method: "PUT",
-            body: JSON.stringify({
-              ...userData,
-              [arrayName]: updatedArray,
-            }),
+            body: JSON.stringify({ ...userData, [arrayName]: newData }),
             headers: {
               "Content-Type": "application/json",
             },
@@ -65,8 +73,9 @@ const useRemoveData = (localData, indexServer, setIndexServer, arrayName) => {
 
     handleUpdateServer();
 
-    setIndexServer(null);
-  }, [indexServer]);
+    setReadyAdd(null);
+    setAddData("");
+  }, [readyAdd]);
   return { error, loading };
 };
-export default useRemoveData;
+export default useAddData;

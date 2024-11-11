@@ -4,18 +4,19 @@ import Badge from "react-bootstrap/Badge";
 import { ChoiceContext } from "../../global/choice/context";
 import { ItineraryContext } from "../../global/itinerary/context";
 import { UserContext } from "../../global/user/UserContext";
+import isObjectEmpty from "../../global/utilities/isObjectEmpty";
 import MobileDropdown from "./MobileDropdown";
 import NavLinks from "./NavLinks";
 import {
-  NavbarContent,
+  AlertWrap,
+  BadgeBox,
   ButtonDropdown,
   Icon,
   IconBox,
   LinkContainerDesktop,
   Logo,
   NavbarContainer,
-  BadgeBox,
-  AlertWrap,
+  NavbarContent,
 } from "./Navbar.style";
 
 export const routes = [
@@ -39,10 +40,6 @@ function NavBar() {
   const { stateGlobalChoice } = useContext(ChoiceContext);
 
   console.log("user", user);
-
-  const isObjectEmpty = (user) => {
-    return JSON.stringify(user) === "{}";
-  };
 
   return (
     <NavbarContainer loc="NavbarContainer">

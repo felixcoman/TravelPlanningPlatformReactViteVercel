@@ -29,6 +29,7 @@ import {
   Subtitle,
   Title,
 } from "./Explore.style";
+import useAddData from "../../hooks/useAddData";
 
 const Explore = () => {
   const navigate = useNavigate();
@@ -56,6 +57,8 @@ const Explore = () => {
   const [toastTitle, setToastTitle] = useState("");
   const [toastText, setToastText] = useState("");
   const [toastClass, setToastClass] = useState("");
+  const [addData, setAddData] = useState("");
+  const [readyAdd, setReadyAdd] = useState(null);
 
   const urlCity =
     country && city ? `http://localhost:3001/${country}?city=${city}` : null;
@@ -81,31 +84,15 @@ const Explore = () => {
 
   let accommodationArray = [];
 
-  // function for adding intinerary data to user on server
-
-  const handleUpdateItinerary = (updateData) => {
-    fetch(`http://localhost:3001/users/${localData}`)
-      .then((response) => response.json())
-      .then((userData) => {
-        // Check if the user has a "itinerary" array, if not, initialize it
-        const newData = userData.itinerarycity
-          ? [...userData.itinerarycity, updateData]
-          : [updateData];
-        // Update the user data with the new itinerary
-        const updatedUserData = { ...userData, itinerarycity: newData };
-
-        fetch(`http://localhost:3001/users/${localData}`, {
-          method: "PUT",
-          body: JSON.stringify(updatedUserData),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        })
-          .then((response) => response.json())
-          .then((json) => console.log(json));
-      })
-      .catch((error) => console.error("Error fetching user data:", error));
-  };
+  const { error, loading } = useAddData(
+    readyAdd,
+    setReadyAdd,
+    localData,
+    addData,
+    setAddData,
+    "itinerarycity"
+  );
+  console.log("error HOOK", error, "loading HOOK", loading);
 
   const notify = (isSuccess, nameValue, classValue) => {
     if (isSuccess) {
@@ -130,20 +117,18 @@ const Explore = () => {
   const handleAddItinerary = (country, city, event) => {
     console.log("HANDLE ADD ITINERARY");
 
-    const addObject = { country, city };
+    setAddData({ country, city });
 
-    console.log("ADD OBJECT", addObject);
-
-    if (checkDuplicate(itineraryValueArray, addObject)) {
-      console.log("cannot be added");
+    if (checkDuplicate(itineraryValueArray, addData)) {
       notify(false, city, "my-city-toast");
+      setReadyAdd(false);
+      console.log("cannot be added");
       event.preventDefault();
     } else {
-      console.log("can be added");
-
-      dispatchItinerary(itineraryPlus({ country, city }));
-      handleUpdateItinerary(addObject);
       notify(true, city, "my-city-toast");
+      dispatchItinerary(itineraryPlus({ country, city }));
+      setReadyAdd(true);
+      console.log("can be added");
     }
   };
 
