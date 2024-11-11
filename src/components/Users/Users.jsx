@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Spinner from "react-bootstrap/Spinner";
 import { useParams } from "react-router-dom";
+import isObjectEmpty from "../../global/utilities/isObjectEmpty";
 import useFetchUsers from "../../hooks/useFetchUsers";
 import {
   ContactButtonUser,
@@ -20,9 +21,6 @@ function Users() {
     loading,
   } = useFetchUsers(id, clicked, setClicked);
 
-  const isObjectEmpty = (user) => {
-    return JSON.stringify(user) === "{}";
-  };
   console.log("id", id, "user", user, "error", error, "loading", loading);
   console.log("JSON.stringify(user)", JSON.stringify(user));
   return (
