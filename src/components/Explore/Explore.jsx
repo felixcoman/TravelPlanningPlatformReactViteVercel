@@ -58,7 +58,6 @@ const Explore = () => {
   const [toastText, setToastText] = useState("");
   const [toastClass, setToastClass] = useState("");
   const [addData, setAddData] = useState("");
-  const [readyAdd, setReadyAdd] = useState(null);
 
   const urlCity =
     country && city ? `http://localhost:3001/${country}?city=${city}` : null;
@@ -85,8 +84,6 @@ const Explore = () => {
   let accommodationArray = [];
 
   const { error, loading } = useAddData(
-    readyAdd,
-    setReadyAdd,
     localData,
     addData,
     setAddData,
@@ -117,17 +114,17 @@ const Explore = () => {
   const handleAddItinerary = (country, city, event) => {
     console.log("HANDLE ADD ITINERARY");
 
-    setAddData({ country, city });
+    const addObject = { country, city };
+    console.log("addObject", addObject);
 
-    if (checkDuplicate(itineraryValueArray, addData)) {
+    if (checkDuplicate(itineraryValueArray, addObject)) {
       notify(false, city, "my-city-toast");
-      setReadyAdd(false);
       console.log("cannot be added");
       event.preventDefault();
     } else {
       notify(true, city, "my-city-toast");
       dispatchItinerary(itineraryPlus({ country, city }));
-      setReadyAdd(true);
+      setAddData(addObject);
       console.log("can be added");
     }
   };

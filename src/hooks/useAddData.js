@@ -1,14 +1,7 @@
 import { useEffect, useState } from "react";
 
-const useAddData = (
-  readyAdd,
-  setReadyAdd,
-  localData,
-  addData,
-  setAddData,
-  arrayName
-) => {
-  console.log("readyAdd", readyAdd, "addData", addData, "arrayName", arrayName);
+const useAddData = (localData, addData, setAddData, arrayName) => {
+  console.log("addData", addData, "arrayName", arrayName);
 
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -26,11 +19,6 @@ const useAddData = (
 
     if (addData === "") {
       console.log("No data");
-      return;
-    }
-
-    if (readyAdd === null) {
-      console.log("Not ready to add");
       return;
     }
 
@@ -73,9 +61,8 @@ const useAddData = (
 
     handleUpdateServer();
 
-    setReadyAdd(null);
     setAddData("");
-  }, [readyAdd]);
+  }, [addData]);
   return { error, loading };
 };
 export default useAddData;
