@@ -38,11 +38,8 @@ function DestinationCard({
   console.log("localData", localData);
 
   const [addData, setAddData] = useState("");
-  const [readyAdd, setReadyAdd] = useState(null);
 
   const { error, loading } = useAddData(
-    readyAdd,
-    setReadyAdd,
     localData,
     addData,
     setAddData,
@@ -58,20 +55,22 @@ function DestinationCard({
         element.name === obj.name
     );
 
+  // this function handles 2 cases and calls different separate functions depending on which case is true: if there is duplicate it notifies the user and prevents the onClick event; else it dispatches data to State Management, adds intinerary data to user on server and notifies user that data was added
+
   const handleAddItineraryLandmark = (country, city, name, event) => {
     console.log("HANDLE ADD ITINERARY LANDMARK");
 
-    setAddData({ country, city, name });
+    const addObject = { country, city, name };
+    console.log("addObject", addObject);
 
-    if (checkDuplicate(itineraryLandmarkValueArray, addData)) {
+    if (checkDuplicate(itineraryLandmarkValueArray, addObject)) {
       notify(false, name, "my-landmark-toast");
-      setReadyAdd(false);
       console.log("cannot be added");
       event.preventDefault();
     } else {
       notify(true, name, "my-landmark-toast");
       dispatchItinerary(itineraryLandmarkPlus({ country, city, name }));
-      setReadyAdd(true);
+      setAddData(addObject);
       console.log("can be added");
     }
   };
