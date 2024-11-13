@@ -2,13 +2,13 @@ import { useContext, useState } from "react";
 import Card from "react-bootstrap/Card";
 import { itineraryLandmarkPlus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
+import useAddData from "../../hooks/useAddData";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import Attributions from "../Attributions/Attributions";
 import {
   ButtonLandmark,
   ImgWrapper,
 } from "../DestinationCard/DestinationCard.style";
-import useAddData from "../../hooks/useAddData";
 
 function DestinationCard({
   name,

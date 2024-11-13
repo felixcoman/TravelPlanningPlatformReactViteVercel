@@ -1,9 +1,10 @@
 import { useContext, useState } from "react";
 import Spinner from "react-bootstrap/Spinner";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { addChoice } from "../../global/choice/actions";
 import { ChoiceContext } from "../../global/choice/context";
 import transformToUppercase from "../../global/utilities/transformToUppercase";
+import useAddData from "../../hooks/useAddData";
 import useFetchData from "../../hooks/useFetchData";
 import useFetchUsers from "../../hooks/useFetchUsers";
 import useLocalStorage from "../../hooks/useLocalStorage";
@@ -32,18 +33,21 @@ import {
 } from "./MyTravel.style";
 
 function MyTravelCity() {
+  const navigate = useNavigate();
+
   let { country, city } = useParams();
   country = transformToUppercase(country);
-
-  const [clicked, setClicked] = useState(true);
-  const [period, setPeriod] = useState("");
-  const [budget, setBudget] = useState("");
-  const [show, setShow] = useState(false);
 
   const { localData } = useLocalStorage("user");
   console.log("localData", localData);
   console.log("country", country);
   console.log("city", city);
+
+  const [clicked, setClicked] = useState(true);
+  const [period, setPeriod] = useState("");
+  const [budget, setBudget] = useState("");
+  const [show, setShow] = useState(false);
+  const [addData, setAddData] = useState("");
 
   const url = country ? `http://localhost:3001/${country}/?city=${city}` : null;
 
@@ -79,39 +83,20 @@ function MyTravelCity() {
   const { stateGlobalChoice, dispatchChoice } = useContext(ChoiceContext);
   console.log("stateGlobalChoice.choiceValue", stateGlobalChoice.choiceValue);
 
-  const handleUpdateChoice = (updateDataChoice) => {
-    console.log("stateGlobalChoice.choiceValue", stateGlobalChoice.choiceValue);
-    console.log("stateGlobalChoice", stateGlobalChoice);
-    console.log("updateDataChoice", updateDataChoice);
-    fetch(`http://localhost:3001/users/${localData}`)
-      .then((response) => response.json())
-      .then((userData) => {
-        // Check if the user has a 'choices' array, if not, initialize it
-        const updatedChoices = userData.choices
-          ? [...userData.choices, updateDataChoice]
-          : [updateDataChoice];
-        // Update the user data with the new choice
-        const updatedUserData = { ...userData, choices: updatedChoices };
-
-        fetch(`http://localhost:3001/users/${localData}`, {
-          method: "PUT",
-          body: JSON.stringify(updatedUserData),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        })
-          .then((response) => response.json())
-          .then((json) => console.log(json));
-      })
-      .catch((error) => console.error("Error fetching user data:", error));
-  };
+  const { error: errorAdd, loading: loadingAdd } = useAddData(
+    localData,
+    addData,
+    setAddData,
+    "choices"
+  );
+  console.log("error add HOOK", errorAdd, "loading add HOOK", loadingAdd);
 
   const handleAdd = (country, city, budget, period, data) => {
     const updateDataChoice = { country, city, budget, period, data };
-
     dispatchChoice(addChoice(updateDataChoice));
     console.log("updateDataChoice", updateDataChoice);
-    handleUpdateChoice(updateDataChoice);
+    setAddData(updateDataChoice);
+    navigate(`/my-choices`);
   };
 
   return (
@@ -204,7 +189,6 @@ function MyTravelCity() {
         {show && (
           <ButtonChoice
             loc="ButtonChoice"
-            to={`/my-choices`}
             onClick={() => {
               handleAdd(country, city, budget, period, data);
             }}
