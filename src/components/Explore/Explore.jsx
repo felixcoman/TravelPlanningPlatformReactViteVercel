@@ -3,6 +3,7 @@ import Spinner from "react-bootstrap/Spinner";
 import { useNavigate, useParams } from "react-router-dom";
 import { itineraryPlus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
+import checkDuplicate from "../../global/utilities/checkDuplicate";
 import useAddData from "../../hooks/useAddData";
 import useFetchData from "../../hooks/useFetchData";
 import useLocalStorage from "../../hooks/useLocalStorage";
@@ -103,11 +104,6 @@ const Explore = () => {
     }
     setShowA(true);
   };
-
-  const checkDuplicate = (arr, obj) =>
-    arr.some(
-      (element) => element.country === obj.country && element.city === obj.city
-    );
 
   // this function handles 2 cases and calls different separate functions depending on which case is true: if there is duplicate it notifies the user and prevents the onClick event; else it dispatches data to State Management, adds intinerary data to user on server and notifies user that data was added
 
