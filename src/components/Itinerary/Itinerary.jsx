@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { ItineraryContext } from "../../global/itinerary/context";
+import checkDuplicate from "../../global/utilities/checkDuplicate";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import { AttributionsSection } from "../Attributions/Attributions.style";
 import { ButtonInfo, InfoSection, InfoUser } from "../Explore/Explore.style";
@@ -27,11 +28,6 @@ function Itinerary() {
   console.log("localData", localData);
 
   let accommodationArray = [];
-
-  const checkDuplicate = (arr, obj) =>
-    arr.some(
-      (element) => element.country === obj.country && element.city === obj.city
-    );
 
   const populateAccommondationArray = (arr, accommodationArray) => {
     arr.forEach((key) => {

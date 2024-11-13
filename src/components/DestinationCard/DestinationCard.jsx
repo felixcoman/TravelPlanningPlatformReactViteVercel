@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import Card from "react-bootstrap/Card";
 import { itineraryLandmarkPlus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
+import checkDuplicate from "../../global/utilities/checkDuplicate";
 import useAddData from "../../hooks/useAddData";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import Attributions from "../Attributions/Attributions";
@@ -46,14 +47,6 @@ function DestinationCard({
     "itinerarylandmark"
   );
   console.log("error HOOK", error, "loading HOOK", loading);
-
-  const checkDuplicate = (arr, obj) =>
-    arr.some(
-      (element) =>
-        element.country === obj.country &&
-        element.city === obj.city &&
-        element.name === obj.name
-    );
 
   // this function handles 2 cases and calls different separate functions depending on which case is true: if there is duplicate it notifies the user and prevents the onClick event; else it dispatches data to State Management, adds intinerary data to user on server and notifies user that data was added
 
