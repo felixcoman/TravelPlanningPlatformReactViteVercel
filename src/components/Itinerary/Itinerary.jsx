@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { ItineraryContext } from "../../global/itinerary/context";
-import checkDuplicate from "../../global/utilities/checkDuplicate";
+import containsObject from "../../global/utilities/containsObject";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import { AttributionsSection } from "../Attributions/Attributions.style";
 import { ButtonInfo, InfoSection, InfoUser } from "../Explore/Explore.style";
@@ -42,7 +42,7 @@ function Itinerary() {
         "key.city",
         key.city
       );
-      if (!checkDuplicate(accommodationArray, addObject)) {
+      if (!containsObject(accommodationArray, addObject)) {
         console.log("UNIC addObject", addObject);
         console.log("accommodationArray", accommodationArray);
         accommodationArray.push(addObject);

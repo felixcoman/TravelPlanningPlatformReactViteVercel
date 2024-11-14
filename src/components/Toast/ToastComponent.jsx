@@ -12,7 +12,7 @@ const ToastComponent = ({
       className={className}
       show={show}
       onClose={toggleShow}
-      delay={4000}
+      delay={8000}
       autohide
     >
       <Toast.Header>
