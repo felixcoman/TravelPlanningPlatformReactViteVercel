@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import Card from "react-bootstrap/Card";
 import { itineraryLandmarkPlus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
-import checkDuplicate from "../../global/utilities/checkDuplicate";
+import containsObject from "../../global/utilities/containsObject";
 import useAddData from "../../hooks/useAddData";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import Attributions from "../Attributions/Attributions";
@@ -56,7 +56,7 @@ function DestinationCard({
     const addObject = { country, city, name };
     console.log("addObject", addObject);
 
-    if (checkDuplicate(itineraryLandmarkValueArray, addObject)) {
+    if (containsObject(itineraryLandmarkValueArray, addObject)) {
       notify(false, name, "my-landmark-toast");
       console.log("cannot be added");
       event.preventDefault();

@@ -3,7 +3,7 @@ import Spinner from "react-bootstrap/Spinner";
 import { useNavigate, useParams } from "react-router-dom";
 import { itineraryPlus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
-import checkDuplicate from "../../global/utilities/checkDuplicate";
+import containsObject from "../../global/utilities/containsObject";
 import useAddData from "../../hooks/useAddData";
 import useFetchData from "../../hooks/useFetchData";
 import useLocalStorage from "../../hooks/useLocalStorage";
@@ -113,7 +113,7 @@ const Explore = () => {
     const addObject = { country, city };
     console.log("addObject", addObject);
 
-    if (checkDuplicate(itineraryValueArray, addObject)) {
+    if (containsObject(itineraryValueArray, addObject)) {
       notify(false, city, "my-city-toast");
       console.log("cannot be added");
       event.preventDefault();
@@ -137,7 +137,7 @@ const Explore = () => {
       "obj.city",
       obj.city
     );
-    if (!checkDuplicate(accommodationArray, addObject)) {
+    if (!containsObject(accommodationArray, addObject)) {
       console.log("UNIC addObject", addObject);
       console.log("accommodationArray", accommodationArray);
       accommodationArray.push(addObject);
