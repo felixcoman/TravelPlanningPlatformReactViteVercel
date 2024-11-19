@@ -42,7 +42,7 @@ function CitySection() {
           <CityCard
             key={index}
             index={index}
-            handleDelete={handleDelete}
+            handleDelete={() => handleDelete(index)}
             show={show && showId === index}
             setShow={setShow}
             setShowId={setShowId}

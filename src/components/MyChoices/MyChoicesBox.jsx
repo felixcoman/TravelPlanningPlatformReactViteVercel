@@ -1,3 +1,5 @@
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 import {
   ButtonPlanTravel,
   DataContainerChoice,
@@ -20,7 +22,11 @@ function MyChoicesBox({
   budget,
   period,
   data,
+  index,
   handleDelete,
+  show,
+  setShow,
+  setShowId,
 }) {
   console.log("databox", data);
   console.log("budget", budget);
@@ -51,8 +57,35 @@ function MyChoicesBox({
   const equalPeriodSeven =
     periodTravelNoSpace == keyPeriod?.[2].toLowerCase() ? true : false;
 
+  const handleCloseShow = () => {
+    setShow(!show), setShowId(index);
+  };
+
   return (
     <>
+      <Modal show={show} onHide={handleCloseShow}>
+        <Modal.Header closeButton>
+          <Modal.Title>Delete</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <p>
+            Are you sure you want to DELETE this choice: {country},{" "}
+            {city ? city : region} with{" "}
+            {budget !== "" ? budget : "no budget selected"} and{" "}
+            {period !== "" ? period : "no period selected"} ?
+          </p>
+        </Modal.Body>
+
+        <Modal.Footer>
+          <Button variant="danger" onClick={() => handleDelete(index)}>
+            YES
+          </Button>
+          <Button variant="secondary" onClick={handleCloseShow}>
+            NO
+          </Button>
+        </Modal.Footer>
+      </Modal>
       <PageContainerTravel loc="PageContainerTravel">
         <DataContainerChoice loc="DataContainerChoice">
           <TextOrangeChoice loc="TextOrangeChoice"> Country:</TextOrangeChoice>
@@ -111,8 +144,11 @@ function MyChoicesBox({
               : null}
           </MainContainerChoice>
         ) : null}
-        <ButtonPlanTravel loc="ButtonPlanTravel" onClick={handleDelete}>
-          Delete my choice
+        <ButtonPlanTravel
+          loc="ButtonPlanTravel"
+          onClick={() => handleCloseShow()}
+        >
+          Remove this choice
         </ButtonPlanTravel>
       </PageContainerTravel>
     </>
