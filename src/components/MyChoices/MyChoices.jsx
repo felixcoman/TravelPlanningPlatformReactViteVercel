@@ -13,6 +13,8 @@ function MyChoices() {
   const { localData } = useLocalStorage("user");
   console.log("localData", localData);
 
+  const [show, setShow] = useState(false);
+  const [showId, setShowId] = useState(0);
   const [indexServer, setIndexServer] = useState(null);
 
   const { error, loading } = useRemoveData(
@@ -24,6 +26,7 @@ function MyChoices() {
   console.log("error HOOK", error, "loading HOOK", loading);
 
   const handleDelete = (index) => {
+    setShow(false);
     dispatchChoice(removeChoice(index));
     console.log(
       "stateGlobalChoice.choiceValue.length",
@@ -55,6 +58,7 @@ function MyChoices() {
           <MyChoicesBox
             id={localData}
             key={index}
+            index={index}
             country={e.country}
             city={e.city}
             region={e.region}
@@ -62,6 +66,9 @@ function MyChoices() {
             budget={e.budget}
             data={e.data}
             handleDelete={() => handleDelete(index)}
+            show={show && showId === index}
+            setShow={setShow}
+            setShowId={setShowId}
           />
         ))}
       </MainContainerChoice>
