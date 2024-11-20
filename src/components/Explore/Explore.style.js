@@ -219,7 +219,7 @@ export const InfoUser = styled.div`
   font-size: ${TEXT_SIZE_SMALL};
   display: flex;
   width: 100%;
-  margin: 30px 0;
+  margin: 18px 0;
   justify-content: center;
 `;
 

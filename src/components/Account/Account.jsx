@@ -19,7 +19,7 @@ import { InfoUser } from "../Explore/Explore.style";
 import {
   AccountSection,
   ButtonsContainerAccount,
-  ContactButton,
+  AccountActionButton,
   ContactContainer,
   ContactText,
   InputContainerAccount,
@@ -232,21 +232,21 @@ const Account = () => {
               />
             ))}
             {isValid && isFound && (
-              <ContactButton
-                loc="ContactButton"
+              <AccountActionButton
+                loc="AccountActionButton"
                 onClick={() => {
                   getUserData();
                 }}
               >
                 Login
-              </ContactButton>
+              </AccountActionButton>
             )}
             {isValid && isFound && message && (
               <>
                 <InfoUser loc="InfoUser">{message}</InfoUser>
-                <ContactButton loc="ContactButton" to={`/home`}>
+                <AccountActionButton loc="AccountActionButton" to={`/home`}>
                   Take me to view offers!
-                </ContactButton>
+                </AccountActionButton>
               </>
             )}
             {!isValid && <Error loc="Error">Not valid</Error>}
@@ -271,14 +271,14 @@ const Account = () => {
               />
             ))}
             {isValid && !isFound && (
-              <ContactButton
-                loc="ContactButton"
+              <AccountActionButton
+                loc="AccountActionButton"
                 onClick={() => {
                   addNewId();
                 }}
               >
                 Create account
-              </ContactButton>
+              </AccountActionButton>
             )}
             {!isValid && <Error loc="Error">Not valid</Error>}
             {isFound && isVisible2 && (
