@@ -17,11 +17,11 @@ import useFetchUsers from "../../hooks/useFetchUsers";
 import { Error } from "../Contact/Contact.style";
 import { InfoUser } from "../Explore/Explore.style";
 import {
-  AccountSection,
-  ButtonsContainerAccount,
   AccountActionButton,
-  ContactContainer,
-  ContactText,
+  AccountContainer,
+  AccountSection,
+  AccountText,
+  ButtonsContainerAccount,
   InputContainerAccount,
 } from "./Account.style";
 
@@ -42,7 +42,7 @@ const Account = () => {
   const [isVisible2, setIsVisible2] = useState(false);
   const [splitContainer, setSplitContainer] = useState(false);
 
-  const [message, setMessage] = useState(false);
+  const [message, setMessage] = useState("");
 
   const [isFound, setIsFound] = useState([]);
   const [errorInput, setErrorInput] = useState({
@@ -143,6 +143,7 @@ const Account = () => {
 
     if (userData.choices) {
       dispatchChoice(addAllChoice(userData.choices));
+      console.log("userData.choices", userData.choices);
     }
 
     if (userData.itinerarycity) {
@@ -153,6 +154,15 @@ const Account = () => {
     if (userData.itinerarylandmark) {
       dispatchItinerary(addAllItineraryLandmark(userData.itinerarylandmark));
       console.log("userData.itinerarylandmark", userData.itinerarylandmark);
+    }
+
+    if (
+      !userData.choices ||
+      !userData.itinerarycity ||
+      !userData.itinerarylandmark
+    ) {
+      setMessage("No travel options yet!");
+      setSplitContainer(false);
     }
   };
 
@@ -219,8 +229,8 @@ const Account = () => {
         split={splitContainer ? "true" : "false"}
       >
         {isVisible1 && (
-          <ContactContainer loc="ContactContainer">
-            <ContactText loc="ContactText">Enter e-mail to login</ContactText>
+          <AccountContainer loc="AccountContainer">
+            <AccountText loc="AccountText">Enter e-mail to login</AccountText>
             {Object.keys(inputObj).map((el, index) => (
               <AccountForm
                 key={index}
@@ -253,13 +263,13 @@ const Account = () => {
             {!isFound && isVisible1 && (
               <Error loc="Error">No such user found</Error>
             )}
-          </ContactContainer>
+          </AccountContainer>
         )}
         {isVisible2 && (
-          <ContactContainer loc="ContactContainer">
-            <ContactText loc="ContactText">
+          <AccountContainer loc="AccountContainer">
+            <AccountText loc="AccountText">
               Enter e-mail to create account
-            </ContactText>
+            </AccountText>
             {Object.keys(inputObj).map((el, index) => (
               <AccountForm
                 key={index}
@@ -284,7 +294,7 @@ const Account = () => {
             {isFound && isVisible2 && (
               <Error loc="Error">Email already exists</Error>
             )}
-          </ContactContainer>
+          </AccountContainer>
         )}
       </InputContainerAccount>
     </AccountSection>

@@ -4,10 +4,10 @@ import { useParams } from "react-router-dom";
 import isObjectEmpty from "../../global/utilities/isObjectEmpty";
 import useFetchUsers from "../../hooks/useFetchUsers";
 import {
-  ContactButtonUser,
-  ContactContainerUser,
+  ButtonUser,
   DisplayUser,
   InfoSectionUser,
+  UserContainer,
 } from "../Account/Account.style";
 import { Error, Loading } from "../Contact/Contact.style";
 
@@ -23,7 +23,7 @@ function Users() {
   console.log("id", id, "user", user, "error", error, "loading", loading);
   console.log("JSON.stringify(user)", JSON.stringify(user));
   return (
-    <ContactContainerUser loc="ContactContainerUser">
+    <UserContainer loc="UserContainer">
       {loading && !error && (
         <Loading loc="Loading">
           <Spinner animation="border" role="status">
@@ -52,13 +52,13 @@ function Users() {
               Congratulations you have a new account.
               <br /> You may go explore!
             </DisplayUser>
-            <ContactButtonUser loc="ContactButtonUser" to={`/home`}>
+            <ButtonUser loc="ButtonUser" to={`/home`}>
               Lets go travel!
-            </ContactButtonUser>
+            </ButtonUser>
           </InfoSectionUser>
         </>
       )}
-    </ContactContainerUser>
+    </UserContainer>
   );
 }
 
