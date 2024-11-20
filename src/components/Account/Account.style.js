@@ -3,7 +3,7 @@ import { WHITE_NEUTRAL } from "../../constants/Colors";
 import { TEXT_SIZE_MEDIUM } from "../../constants/Dimensions";
 import { ButtonInfo, InfoUser } from "../Explore/Explore.style";
 
-export const ContactContainer = styled.div`
+export const AccountContainer = styled.div`
   display: flex;
   margin: 30px 0;
   padding: 10px;
@@ -16,30 +16,24 @@ export const ContactContainer = styled.div`
   width: 100%;
 `;
 
-export const ContactText = styled.h1`
+export const AccountText = styled.h1`
   margin: 10px 0;
   color: ${WHITE_NEUTRAL};
   font-size: ${TEXT_SIZE_MEDIUM};
 `;
 
-export const ContactLabel = styled.p`
+export const AccountLabel = styled.p`
   width: 45%;
   padding: 1px;
   margin: 10px 0;
   color: ${WHITE_NEUTRAL};
   text-align: left;
 `;
-export const ContactInput = styled.input`
+export const AccountInput = styled.input`
   width: 45%;
   height: 40px;
   margin: 10px 0;
   border-radius: 5px;
-`;
-
-export const ContactTextarea = styled.textarea`
-  width: 50%;
-  height: 100px;
-  margin: 10px auto;
 `;
 
 export const AccountActionButton = styled(ButtonInfo)`
@@ -93,7 +87,7 @@ export const InputContainerAccount = styled.div`
 
 // USERS display page
 
-export const ContactContainerUser = styled.div`
+export const UserContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 70vh;
@@ -116,6 +110,6 @@ export const DisplayUser = styled(InfoUser)`
   margin: 10px 0;
 `;
 
-export const ContactButtonUser = styled(ButtonInfo)`
+export const ButtonUser = styled(ButtonInfo)`
   width: 100%;
 `;
