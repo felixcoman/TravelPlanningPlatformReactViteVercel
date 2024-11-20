@@ -7,10 +7,9 @@ import {
   ContactButtonUser,
   ContactContainerUser,
   DisplayUser,
-  Error,
   InfoSectionUser,
-  Loading,
-} from "../Contact/Contact.style";
+} from "../Account/Account.style";
+import { Error, Loading } from "../Contact/Contact.style";
 
 function Users() {
   const { id } = useParams();
@@ -44,11 +43,11 @@ function Users() {
       )}
       {user && !isObjectEmpty(user) && (
         <>
-          <InfoSectionUser loc="InfoSection">
+          <InfoSectionUser loc="InfoSectionUser">
             <DisplayUser loc="DisplayUser"> E-mail: {user.Email}</DisplayUser>
             <DisplayUser loc="DisplayUser"> ID: {user.id}</DisplayUser>
           </InfoSectionUser>
-          <InfoSectionUser loc="InfoSection">
+          <InfoSectionUser loc="InfoSectionUser">
             <DisplayUser loc="DisplayUser">
               Congratulations you have a new account.
               <br /> You may go explore!

@@ -1,11 +1,7 @@
 import styled from "styled-components";
 import { ORANGE, RED, WHITE_NEUTRAL, YELLOW } from "../../constants/Colors";
-import {
-  TEXT_SIZE_BIG,
-  TEXT_SIZE_MEDIUM,
-  TEXT_SIZE_SMALL,
-} from "../../constants/Dimensions";
-import { ButtonInfo, InfoUser } from "../Explore/Explore.style";
+import { TEXT_SIZE_MEDIUM, TEXT_SIZE_SMALL } from "../../constants/Dimensions";
+import { ButtonInfo } from "../Explore/Explore.style";
 
 export const ContactContainer = styled.div`
   display: flex;
@@ -49,10 +45,6 @@ export const ContactButton = styled(ButtonInfo)`
   margin: 20px 5px;
 `;
 
-export const ContactButtonUser = styled(ContactButton)`
-  font-size: ${TEXT_SIZE_BIG};
-`;
-
 export const Error = styled.div`
   color: ${RED};
   width: 100%;
@@ -66,28 +58,4 @@ export const Loading = styled.div`
   align-self: center;
   align-items: center;
   justify-content: center;
-`;
-
-export const ContactContainerUser = styled.div`
-  font-size: ${TEXT_SIZE_BIG};
-  display: flex;
-  flex-direction: column;
-  height: 70vh;
-  align-items: center;
-  justify-content: center;
-  width: 50vw;
-  margin: 0 auto;
-  @media screen and (max-width: 900px) {
-    width: 100%;
-    height: 100%;
-  }
-`;
-
-export const InfoSectionUser = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-export const DisplayUser = styled(InfoUser)`
-  font-size: ${TEXT_SIZE_BIG};
 `;
