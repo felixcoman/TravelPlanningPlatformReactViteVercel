@@ -1,10 +1,5 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "../../global/user/UserContext";
-import useLocalStorage from "../../hooks/useLocalStorage";
-import { Buttons } from "../MainHome/MainHome.style";
-import AccountForm from "./AccountForm";
-
 import { addAllChoice, removeAllChoice } from "../../global/choice/actions";
 import { ChoiceContext } from "../../global/choice/context";
 import {
@@ -13,9 +8,13 @@ import {
   removeAllItinerary,
 } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
+import { UserContext } from "../../global/user/UserContext";
 import useFetchUsers from "../../hooks/useFetchUsers";
+import useLocalStorage from "../../hooks/useLocalStorage";
 import { Error } from "../Contact/Contact.style";
 import { InfoUser } from "../Explore/Explore.style";
+import { Buttons } from "../MainHome/MainHome.style";
+import ToastComponent from "../Toast/ToastComponent";
 import {
   AccountActionButton,
   AccountContainer,
@@ -24,6 +23,7 @@ import {
   ButtonsContainerAccount,
   InputContainerAccount,
 } from "./Account.style";
+import AccountForm from "./AccountForm";
 
 const Account = () => {
   const navigate = useNavigate();
@@ -41,14 +41,16 @@ const Account = () => {
   const [isVisible1, setIsVisible1] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
   const [splitContainer, setSplitContainer] = useState(false);
-
   const [message, setMessage] = useState("");
-
   const [isFound, setIsFound] = useState([]);
   const [errorInput, setErrorInput] = useState({
     Email: undefined,
   });
   const [isValid, setIsValid] = useState(true);
+  const [showA, setShowA] = useState(false);
+  const [toastTitle, setToastTitle] = useState("");
+  const [toastText, setToastText] = useState("");
+  const [toastClass, setToastClass] = useState("");
 
   const { stateGlobalChoice, dispatchChoice } = useContext(ChoiceContext);
   const { stateGlobalItinerary, dispatchItinerary } =
@@ -68,15 +70,25 @@ const Account = () => {
 
   console.log("users", users, "loading", loading, "error", error);
 
+  const notify = (titleValue, textValue, classValue) => {
+    setToastTitle(titleValue);
+    setToastText(textValue);
+    setToastClass(classValue);
+    setShowA(true);
+  };
+
+  //enter login section
   const handleGetAccount = () => {
     setIsVisible1(!isVisible1);
     setSplitContainer(!splitContainer);
     setIsVisible2(false);
     setError(false);
     setIsFound(true);
+    setMessage("");
     setInputObj({ Email: "" }); //reset input field
   };
 
+  //enter create account section
   const handleNewAccount = () => {
     setIsVisible2(!isVisible2);
     setSplitContainer(!splitContainer);
@@ -121,51 +133,64 @@ const Account = () => {
     return response[0].id;
   };
 
+  //function for create new account now action button
   const addNewId = async () => {
-    dispatchChoice(removeAllChoice());
-    dispatchItinerary(removeAllItinerary());
-    const idul = await handleSubmit();
-    handleLocalData("user", JSON.stringify(idul));
-    console.log("S-a adagat un user cu acest id in local storage", idul);
-    setUser({ Email: inputObj.Email, idul });
-    navigate(`/users/${idul}`);
+    if (!inputObj.Email) {
+      notify("New Account", "Please enter a valid e-mail!", "my-city-toast");
+    } else {
+      dispatchChoice(removeAllChoice());
+      dispatchItinerary(removeAllItinerary());
+      const idul = await handleSubmit();
+      handleLocalData("user", JSON.stringify(idul));
+      console.log("S-a adagat un user cu acest id in local storage", idul);
+      setUser({ Email: inputObj.Email, idul });
+      navigate(`/users/${idul}`);
+    }
   };
 
+  //function for login action button
   const getUserData = () => {
-    setClicked(true);
-    const userData = users?.find((element) => element.Email === inputObj.Email);
-    console.log("users", users);
-    console.log("inputObj", inputObj);
-    console.log("userData", userData);
+    if (!inputObj.Email) {
+      notify("Login", "Please enter a valid e-mail!", "my-city-toast");
+    } else {
+      setClicked(true);
+      const userData = users?.find(
+        (element) => element.Email === inputObj.Email
+      );
+      console.log("users", users);
+      console.log("inputObj", inputObj);
+      console.log("userData", userData);
 
-    handleLocalData("user", JSON.stringify(userData.id));
-    setUser(userData);
+      handleLocalData("user", JSON.stringify(userData.id));
+      setUser(userData);
 
-    if (userData.choices) {
-      dispatchChoice(addAllChoice(userData.choices));
-      console.log("userData.choices", userData.choices);
-    }
+      if (userData.choices) {
+        dispatchChoice(addAllChoice(userData.choices));
+        console.log("userData.choices", userData.choices);
+      }
 
-    if (userData.itinerarycity) {
-      dispatchItinerary(addAllItinerary(userData.itinerarycity));
-      console.log("userData.itinerarycity", userData.itinerarycity);
-    }
+      if (userData.itinerarycity) {
+        dispatchItinerary(addAllItinerary(userData.itinerarycity));
+        console.log("userData.itinerarycity", userData.itinerarycity);
+      }
 
-    if (userData.itinerarylandmark) {
-      dispatchItinerary(addAllItineraryLandmark(userData.itinerarylandmark));
-      console.log("userData.itinerarylandmark", userData.itinerarylandmark);
-    }
+      if (userData.itinerarylandmark) {
+        dispatchItinerary(addAllItineraryLandmark(userData.itinerarylandmark));
+        console.log("userData.itinerarylandmark", userData.itinerarylandmark);
+      }
 
-    if (
-      !userData.choices ||
-      !userData.itinerarycity ||
-      !userData.itinerarylandmark
-    ) {
-      setMessage("No travel options yet!");
-      setSplitContainer(false);
+      if (
+        !userData.choices &&
+        !userData.itinerarycity &&
+        !userData.itinerarylandmark
+      ) {
+        setMessage("No travel options yet!");
+        setSplitContainer(false);
+      }
     }
   };
 
+  //direct logout user
   const logoutUser = () => {
     setIsVisible1(false); //closes login form
     setIsVisible2(false); //closes new account form
@@ -174,6 +199,7 @@ const Account = () => {
     setUser(null);
     dispatchChoice(removeAllChoice());
     dispatchItinerary(removeAllItinerary());
+    notify("Logout", `Logout success, ${user.Email} !`, "my-city-toast");
   };
 
   const handleError = (value, name) => {
@@ -214,7 +240,7 @@ const Account = () => {
           variant="account" //prop for css
           onClick={() => handleNewAccount()}
         >
-          Create new account
+          Create account
         </Buttons>
         <Buttons
           loc="Buttons"
@@ -248,7 +274,7 @@ const Account = () => {
                   getUserData();
                 }}
               >
-                Login
+                Press to login
               </AccountActionButton>
             )}
             {isValid && isFound && message && (
@@ -287,7 +313,7 @@ const Account = () => {
                   addNewId();
                 }}
               >
-                Create account
+                Create new account now
               </AccountActionButton>
             )}
             {!isValid && <Error loc="Error">Not valid</Error>}
@@ -297,6 +323,13 @@ const Account = () => {
           </AccountContainer>
         )}
       </InputContainerAccount>
+      <ToastComponent
+        toastTitle={toastTitle}
+        toastText={toastText}
+        className={toastClass}
+        show={showA}
+        toggleShow={() => setShowA(false)}
+      />
     </AccountSection>
   );
 };
