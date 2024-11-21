@@ -57,11 +57,11 @@ function DestinationCard({
     console.log("addObject", addObject);
 
     if (containsObject(itineraryLandmarkValueArray, addObject)) {
-      notify(false, name, "my-landmark-toast");
+      notify(false, name, "my-warning-toast");
       console.log("cannot be added");
       event.preventDefault();
     } else {
-      notify(true, name, "my-landmark-toast");
+      notify(true, name, "my-info-toast");
       dispatchItinerary(itineraryLandmarkPlus({ country, city, name }));
       setAddData(addObject);
       console.log("can be added");

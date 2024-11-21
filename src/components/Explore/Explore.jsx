@@ -114,11 +114,11 @@ const Explore = () => {
     console.log("addObject", addObject);
 
     if (containsObject(itineraryValueArray, addObject)) {
-      notify(false, city, "my-city-toast");
+      notify(false, city, "my-warning-toast");
       console.log("cannot be added");
       event.preventDefault();
     } else {
-      notify(true, city, "my-city-toast");
+      notify(true, city, "my-info-toast");
       dispatchItinerary(itineraryPlus({ country, city }));
       setAddData(addObject);
       console.log("can be added");
