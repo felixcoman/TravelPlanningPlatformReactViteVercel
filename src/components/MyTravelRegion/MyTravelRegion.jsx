@@ -126,11 +126,11 @@ function MyTravelRegion() {
     const updateDataChoice = { country, region, budget, period, data };
 
     if (containsObject(stateGlobalChoice.choiceValue, updateDataChoice)) {
-      notify(false, "", "my-city-toast");
+      notify(false, "", "my-warning-toast");
       console.log("cannot be added");
       event.preventDefault();
     } else {
-      notify(true, "", "my-city-toast");
+      notify(true, "", "my-info-toast");
       dispatchChoice(addChoice(updateDataChoice));
       console.log("updateDataChoice", updateDataChoice);
       setAddData(updateDataChoice);

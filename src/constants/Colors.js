@@ -3,6 +3,7 @@ export const WHITE_NEUTRAL = "#ffffff";
 export const DARK_BLUE = "#08032f";
 export const ORANGE = "#ffa500";
 // INFO
+export const GREEN = "#669966";
 export const MIDDLE_BLUE = "#2a299f";
 export const YELLOW = "#bfa315";
 export const RED = "#ae412e";

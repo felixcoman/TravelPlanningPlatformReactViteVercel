@@ -15,6 +15,8 @@
   --red: #ae412e;
   --middle-blue: #2a299f;
   --orange: #ffa500;
+  --green: #669966;
+  --yellow: #bfa315;
 
   --text-size-small: 15px;
 }
@@ -117,18 +119,27 @@ body {
   font-weight: bold;
 }
 
-.my-landmark-toast {
+.toast-header {
+  border-bottom-left-radius: calc(
+    var(--bs-toast-border-radius) - var(--bs-toast-border-width)
+  );
+  border-bottom-right-radius: calc(
+    var(--bs-toast-border-radius) - var(--bs-toast-border-width)
+  );
+}
+
+.my-warning-toast {
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(191, 163, 21, 0.9);
   border: none;
   border-radius: 6px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   color: var(--dark-blue);
 }
 
-.my-city-toast {
+.my-info-toast {
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(102, 153, 102, 0.9);
   border: none;
   border-radius: 6px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
