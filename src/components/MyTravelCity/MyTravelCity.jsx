@@ -9,6 +9,7 @@ import useAddData from "../../hooks/useAddData";
 import useFetchData from "../../hooks/useFetchData";
 import useFetchUsers from "../../hooks/useFetchUsers";
 import useLocalStorage from "../../hooks/useLocalStorage";
+import useToastTime from "../../hooks/useToastTime";
 import Attributions from "../Attributions/Attributions";
 import { Loading } from "../Contact/Contact.style";
 import {
@@ -96,6 +97,8 @@ function MyTravelCity() {
     "choices"
   );
   console.log("error add HOOK", errorAdd, "loading add HOOK", loadingAdd);
+
+  const { time } = useToastTime(showA);
 
   const notify = (isSuccess, nameValue, classValue) => {
     if (isSuccess) {
@@ -241,6 +244,7 @@ function MyTravelCity() {
           className={toastClass}
           show={showA}
           toggleShow={() => setShowA(false)}
+          time={time}
         />
       </PageContainerTravel>
     </>
