@@ -11,6 +11,7 @@ import { ItineraryContext } from "../../global/itinerary/context";
 import { UserContext } from "../../global/user/UserContext";
 import useFetchUsers from "../../hooks/useFetchUsers";
 import useLocalStorage from "../../hooks/useLocalStorage";
+import useToastTime from "../../hooks/useToastTime";
 import { Error } from "../Contact/Contact.style";
 import { InfoUser } from "../Explore/Explore.style";
 import { Buttons } from "../MainHome/MainHome.style";
@@ -37,6 +38,8 @@ const Account = () => {
     clicked,
     setClicked
   );
+
+  console.log("users", users, "loading", loading, "error", error);
 
   const [isVisible1, setIsVisible1] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
@@ -68,7 +71,7 @@ const Account = () => {
     stateGlobalItinerary
   );
 
-  console.log("users", users, "loading", loading, "error", error);
+  const { time } = useToastTime(showA);
 
   const notify = (titleValue, textValue, classValue) => {
     setToastTitle(titleValue);
@@ -329,6 +332,7 @@ const Account = () => {
         className={toastClass}
         show={showA}
         toggleShow={() => setShowA(false)}
+        time={time}
       />
     </AccountSection>
   );

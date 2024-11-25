@@ -3,10 +3,13 @@ import Spinner from "react-bootstrap/Spinner";
 import { useNavigate, useParams } from "react-router-dom";
 import { addChoice } from "../../global/choice/actions";
 import { ChoiceContext } from "../../global/choice/context";
+import containsObject from "../../global/utilities/containsObject";
 import transformToUppercase from "../../global/utilities/transformToUppercase";
+import useAddData from "../../hooks/useAddData";
 import useFetchData from "../../hooks/useFetchData";
 import useFetchUsers from "../../hooks/useFetchUsers";
 import useLocalStorage from "../../hooks/useLocalStorage";
+import useToastTime from "../../hooks/useToastTime";
 import Attributions from "../Attributions/Attributions";
 import { Loading } from "../Contact/Contact.style";
 import {
@@ -30,8 +33,6 @@ import {
   TextContainerTravel,
 } from "../MyTravelCity/MyTravel.style";
 import MyTravelRecommend from "../MyTravelRecommend/MyTravelRecommend";
-import useAddData from "../../hooks/useAddData";
-import containsObject from "../../global/utilities/containsObject";
 import ToastComponent from "../Toast/ToastComponent";
 
 function MyTravelRegion() {
@@ -96,6 +97,8 @@ function MyTravelRegion() {
     "choices"
   );
   console.log("error add HOOK", errorAdd, "loading add HOOK", loadingAdd);
+
+  const { time } = useToastTime(showA);
 
   const notify = (isSuccess, nameValue, classValue) => {
     if (isSuccess) {
@@ -243,6 +246,7 @@ function MyTravelRegion() {
           className={toastClass}
           show={showA}
           toggleShow={() => setShowA(false)}
+          time={time}
         />
       </PageContainerTravel>
     </>

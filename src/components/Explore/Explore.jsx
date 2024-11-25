@@ -7,6 +7,7 @@ import containsObject from "../../global/utilities/containsObject";
 import useAddData from "../../hooks/useAddData";
 import useFetchData from "../../hooks/useFetchData";
 import useLocalStorage from "../../hooks/useLocalStorage";
+import useToastTime from "../../hooks/useToastTime";
 import Attributions from "../Attributions/Attributions";
 import { AttributionsSection } from "../Attributions/Attributions.style";
 import { Error, Loading } from "../Contact/Contact.style";
@@ -91,6 +92,8 @@ const Explore = () => {
     "itinerarycity"
   );
   console.log("error HOOK", error, "loading HOOK", loading);
+
+  const { time } = useToastTime(showA);
 
   const notify = (isSuccess, nameValue, classValue) => {
     if (isSuccess) {
@@ -284,6 +287,7 @@ const Explore = () => {
         className={toastClass}
         show={showA}
         toggleShow={() => setShowA(false)}
+        time={time}
       />
       {dataCity && (
         <SectionCityButtons loc="SectionCityButtons">
