@@ -24,6 +24,7 @@ import {
   initialStateItinerary,
   itineraryReducer,
 } from "./global/itinerary/reducer";
+import { ToastProvider } from "./global/toast/ToastContext";
 import { UserProvider } from "./global/user/UserContext";
 
 function App() {
@@ -45,43 +46,45 @@ function App() {
   };
 
   return (
-    <UserProvider>
-      <ChoiceContext.Provider value={choiceContextValue}>
-        <ItineraryContext.Provider value={itineraryContextValue}>
-          <NavBar />
-          <MainSection loc="MainSection">
-            <Routes>
-              <Route path="/" element={<Home />}></Route>
-              <Route path="/home" element={<Home />}></Route>
-              <Route path="/about" element={<About />}></Route>
-              <Route
-                path="/city-region/:country/:id"
-                element={<CitiesRegions />}
-              ></Route>
-              <Route path="/contact" element={<Contact />}></Route>
-              <Route
-                path="/my-travel1/:country/:city/:id"
-                element={<MyTravelCity />}
-              ></Route>
-              <Route
-                path="/my-travel2/:country/:region/:id"
-                element={<MyTravelRegion />}
-              ></Route>
-              <Route
-                path="/explore/:country/:city"
-                element={<Explore />}
-              ></Route>
-              <Route path="/users/:id" element={<Users />} />
-              <Route path="/itinerary" element={<Itinerary />}></Route>
-              <Route path="/my-choices" element={<MyChoices />}></Route>
-              <Route path="/account" element={<Account />}></Route>
-              <Route path="/accommodation" element={<Accommodation />} />
-            </Routes>
-          </MainSection>
-          <Footer />
-        </ItineraryContext.Provider>
-      </ChoiceContext.Provider>
-    </UserProvider>
+    <ToastProvider>
+      <UserProvider>
+        <ChoiceContext.Provider value={choiceContextValue}>
+          <ItineraryContext.Provider value={itineraryContextValue}>
+            <NavBar />
+            <MainSection loc="MainSection">
+              <Routes>
+                <Route path="/" element={<Home />}></Route>
+                <Route path="/home" element={<Home />}></Route>
+                <Route path="/about" element={<About />}></Route>
+                <Route
+                  path="/city-region/:country/:id"
+                  element={<CitiesRegions />}
+                ></Route>
+                <Route path="/contact" element={<Contact />}></Route>
+                <Route
+                  path="/my-travel1/:country/:city/:id"
+                  element={<MyTravelCity />}
+                ></Route>
+                <Route
+                  path="/my-travel2/:country/:region/:id"
+                  element={<MyTravelRegion />}
+                ></Route>
+                <Route
+                  path="/explore/:country/:city"
+                  element={<Explore />}
+                ></Route>
+                <Route path="/users/:id" element={<Users />} />
+                <Route path="/itinerary" element={<Itinerary />}></Route>
+                <Route path="/my-choices" element={<MyChoices />}></Route>
+                <Route path="/account" element={<Account />}></Route>
+                <Route path="/accommodation" element={<Accommodation />} />
+              </Routes>
+            </MainSection>
+            <Footer />
+          </ItineraryContext.Provider>
+        </ChoiceContext.Provider>
+      </UserProvider>
+    </ToastProvider>
   );
 }
 

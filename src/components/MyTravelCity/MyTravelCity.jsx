@@ -3,13 +3,13 @@ import Spinner from "react-bootstrap/Spinner";
 import { useNavigate, useParams } from "react-router-dom";
 import { addChoice } from "../../global/choice/actions";
 import { ChoiceContext } from "../../global/choice/context";
+import { useToast } from "../../global/toast/ToastContext";
 import containsObject from "../../global/utilities/containsObject";
 import transformToUppercase from "../../global/utilities/transformToUppercase";
 import useAddData from "../../hooks/useAddData";
 import useFetchData from "../../hooks/useFetchData";
 import useFetchUsers from "../../hooks/useFetchUsers";
 import useLocalStorage from "../../hooks/useLocalStorage";
-import useToastTime from "../../hooks/useToastTime";
 import Attributions from "../Attributions/Attributions";
 import { Loading } from "../Contact/Contact.style";
 import {
@@ -50,10 +50,6 @@ function MyTravelCity() {
   const [period, setPeriod] = useState("");
   const [budget, setBudget] = useState("");
   const [show, setShow] = useState(false);
-  const [showA, setShowA] = useState(false);
-  const [toastTitle, setToastTitle] = useState("");
-  const [toastText, setToastText] = useState("");
-  const [toastClass, setToastClass] = useState("");
   const [addData, setAddData] = useState("");
 
   const url = country ? `http://localhost:3001/${country}/?city=${city}` : null;
@@ -98,42 +94,33 @@ function MyTravelCity() {
   );
   console.log("error add HOOK", errorAdd, "loading add HOOK", loadingAdd);
 
-  const { time } = useToastTime(showA);
-
-  const notify = (isSuccess, nameValue, classValue) => {
-    if (isSuccess) {
-      setToastTitle("My Choices");
-      setToastText(
-        `Success! ${country}, ${city} with ${
-          budget !== "" ? budget : "no budget selected"
-        } and ${
-          period !== "" ? period : "no period selected"
-        } was added to My Choices!`
-      );
-      setToastClass(classValue);
-    } else {
-      setToastTitle("My Choices");
-      setToastText(
-        `${country}, ${city} with ${
-          budget !== "" ? budget : "no budget selected"
-        } and ${
-          period !== "" ? period : "no period selected"
-        } is already in My Choices!`
-      );
-      setToastClass(classValue);
-    }
-    setShowA(true);
-  };
+  const { showToast } = useToast();
 
   const handleAdd = (country, city, budget, period, data, event) => {
     const updateDataChoice = { country, city, budget, period, data };
 
     if (containsObject(stateGlobalChoice.choiceValue, updateDataChoice)) {
-      notify(false, "", "my-warning-toast");
+      showToast(
+        "My Choices",
+        `${country}, ${city} with ${
+          budget !== "" ? budget : "no budget selected"
+        } and ${
+          period !== "" ? period : "no period selected"
+        } is already in My Choices!`,
+        "my-warning-toast"
+      );
       console.log("cannot be added");
       event.preventDefault();
     } else {
-      notify(true, "", "my-info-toast");
+      showToast(
+        "My Choices",
+        `Success! ${country}, ${city} with ${
+          budget !== "" ? budget : "no budget selected"
+        } and ${
+          period !== "" ? period : "no period selected"
+        } was added to My Choices!`,
+        "my-info-toast"
+      );
       dispatchChoice(addChoice(updateDataChoice));
       console.log("updateDataChoice", updateDataChoice);
       setAddData(updateDataChoice);
@@ -238,14 +225,7 @@ function MyTravelCity() {
             Save my Choice
           </ButtonChoice>
         )}
-        <ToastComponent
-          toastTitle={toastTitle}
-          toastText={toastText}
-          className={toastClass}
-          show={showA}
-          toggleShow={() => setShowA(false)}
-          time={time}
-        />
+        <ToastComponent />
       </PageContainerTravel>
     </>
   );

@@ -9,7 +9,8 @@ import useAddData from "../../hooks/useAddData";
 import useFetchData from "../../hooks/useFetchData";
 import useFetchUsers from "../../hooks/useFetchUsers";
 import useLocalStorage from "../../hooks/useLocalStorage";
-import useToastTime from "../../hooks/useToastTime";
+
+import { useToast } from "../../global/toast/ToastContext";
 import Attributions from "../Attributions/Attributions";
 import { Loading } from "../Contact/Contact.style";
 import {
@@ -48,10 +49,6 @@ function MyTravelRegion() {
   const [period, setPeriod] = useState("");
   const [budget, setBudget] = useState("");
   const [show, setShow] = useState(false);
-  const [showA, setShowA] = useState(false);
-  const [toastTitle, setToastTitle] = useState("");
-  const [toastText, setToastText] = useState("");
-  const [toastClass, setToastClass] = useState("");
   const [addData, setAddData] = useState("");
 
   const url = country
@@ -98,42 +95,33 @@ function MyTravelRegion() {
   );
   console.log("error add HOOK", errorAdd, "loading add HOOK", loadingAdd);
 
-  const { time } = useToastTime(showA);
-
-  const notify = (isSuccess, nameValue, classValue) => {
-    if (isSuccess) {
-      setToastTitle("My Choices");
-      setToastText(
-        `Success! ${country}, ${region} with ${
-          budget !== "" ? budget : "no budget selected"
-        } and ${
-          period !== "" ? period : "no period selected"
-        } was added to My Choices!`
-      );
-      setToastClass(classValue);
-    } else {
-      setToastTitle("My Choices");
-      setToastText(
-        `${country}, ${region} with ${
-          budget !== "" ? budget : "no budget selected"
-        } and ${
-          period !== "" ? period : "no period selected"
-        } is already in My Choices!`
-      );
-      setToastClass(classValue);
-    }
-    setShowA(true);
-  };
+  const { showToast } = useToast();
 
   const handleAdd = (country, region, budget, period, data, event) => {
     const updateDataChoice = { country, region, budget, period, data };
 
     if (containsObject(stateGlobalChoice.choiceValue, updateDataChoice)) {
-      notify(false, "", "my-warning-toast");
+      showToast(
+        "My Choices",
+        `${country}, ${region} with ${
+          budget !== "" ? budget : "no budget selected"
+        } and ${
+          period !== "" ? period : "no period selected"
+        } is already in My Choices!`,
+        "my-warning-toast"
+      );
       console.log("cannot be added");
       event.preventDefault();
     } else {
-      notify(true, "", "my-info-toast");
+      showToast(
+        "My Choices",
+        `Success! ${country}, ${region} with ${
+          budget !== "" ? budget : "no budget selected"
+        } and ${
+          period !== "" ? period : "no period selected"
+        } was added to My Choices!`,
+        "my-info-toast"
+      );
       dispatchChoice(addChoice(updateDataChoice));
       console.log("updateDataChoice", updateDataChoice);
       setAddData(updateDataChoice);
@@ -240,14 +228,7 @@ function MyTravelRegion() {
             Save my Choice
           </ButtonChoice>
         )}
-        <ToastComponent
-          toastTitle={toastTitle}
-          toastText={toastText}
-          className={toastClass}
-          show={showA}
-          toggleShow={() => setShowA(false)}
-          time={time}
-        />
+        <ToastComponent />
       </PageContainerTravel>
     </>
   );
