@@ -8,10 +8,10 @@ import {
   removeAllItinerary,
 } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
+import { useToast } from "../../global/toast/ToastContext";
 import { UserContext } from "../../global/user/UserContext";
 import useFetchUsers from "../../hooks/useFetchUsers";
 import useLocalStorage from "../../hooks/useLocalStorage";
-import useToastTime from "../../hooks/useToastTime";
 import { Error } from "../Contact/Contact.style";
 import { InfoUser } from "../Explore/Explore.style";
 import { Buttons } from "../MainHome/MainHome.style";
@@ -50,10 +50,6 @@ const Account = () => {
     Email: undefined,
   });
   const [isValid, setIsValid] = useState(true);
-  const [showA, setShowA] = useState(false);
-  const [toastTitle, setToastTitle] = useState("");
-  const [toastText, setToastText] = useState("");
-  const [toastClass, setToastClass] = useState("");
 
   const { stateGlobalChoice, dispatchChoice } = useContext(ChoiceContext);
   const { stateGlobalItinerary, dispatchItinerary } =
@@ -71,14 +67,7 @@ const Account = () => {
     stateGlobalItinerary
   );
 
-  const { time } = useToastTime(showA);
-
-  const notify = (titleValue, textValue, classValue) => {
-    setToastTitle(titleValue);
-    setToastText(textValue);
-    setToastClass(classValue);
-    setShowA(true);
-  };
+  const { showToast } = useToast();
 
   //enter login section
   const handleGetAccount = () => {
@@ -139,7 +128,11 @@ const Account = () => {
   //function for create new account now action button
   const addNewId = async () => {
     if (!inputObj.Email) {
-      notify("New Account", "Please enter a valid e-mail!", "my-warning-toast");
+      showToast(
+        "New Account",
+        "Please enter a valid e-mail!",
+        "my-warning-toast"
+      );
     } else {
       dispatchChoice(removeAllChoice());
       dispatchItinerary(removeAllItinerary());
@@ -154,7 +147,7 @@ const Account = () => {
   //function for login action button
   const getUserData = () => {
     if (!inputObj.Email) {
-      notify("Login", "Please enter a valid e-mail!", "my-warning-toast");
+      showToast("Login", "Please enter a valid e-mail!", "my-warning-toast");
     } else {
       setClicked(true);
       const userData = users?.find(
@@ -202,7 +195,7 @@ const Account = () => {
     setUser(null);
     dispatchChoice(removeAllChoice());
     dispatchItinerary(removeAllItinerary());
-    notify("Logout", `Logout success, ${user.Email} !`, "my-info-toast");
+    showToast("Logout", `Logout success, ${user.Email} !`, "my-info-toast");
   };
 
   const handleError = (value, name) => {
@@ -326,14 +319,7 @@ const Account = () => {
           </AccountContainer>
         )}
       </InputContainerAccount>
-      <ToastComponent
-        toastTitle={toastTitle}
-        toastText={toastText}
-        className={toastClass}
-        show={showA}
-        toggleShow={() => setShowA(false)}
-        time={time}
-      />
+      <ToastComponent />
     </AccountSection>
   );
 };

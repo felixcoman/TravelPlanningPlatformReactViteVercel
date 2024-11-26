@@ -7,7 +7,6 @@ import containsObject from "../../global/utilities/containsObject";
 import useAddData from "../../hooks/useAddData";
 import useFetchData from "../../hooks/useFetchData";
 import useLocalStorage from "../../hooks/useLocalStorage";
-import useToastTime from "../../hooks/useToastTime";
 import Attributions from "../Attributions/Attributions";
 import { AttributionsSection } from "../Attributions/Attributions.style";
 import { Error, Loading } from "../Contact/Contact.style";
@@ -32,6 +31,7 @@ import {
   Subtitle,
   Title,
 } from "./Explore.style";
+import { useToast } from "../../global/toast/ToastContext";
 
 const Explore = () => {
   const navigate = useNavigate();
@@ -55,10 +55,6 @@ const Explore = () => {
   const { country, city } = useParams();
 
   const [clicked, setClicked] = useState(true);
-  const [showA, setShowA] = useState(false);
-  const [toastTitle, setToastTitle] = useState("");
-  const [toastText, setToastText] = useState("");
-  const [toastClass, setToastClass] = useState("");
   const [addData, setAddData] = useState("");
 
   const urlCity =
@@ -93,20 +89,7 @@ const Explore = () => {
   );
   console.log("error HOOK", error, "loading HOOK", loading);
 
-  const { time } = useToastTime(showA);
-
-  const notify = (isSuccess, nameValue, classValue) => {
-    if (isSuccess) {
-      setToastTitle("Itinerary");
-      setToastText(`Success! ${nameValue} was added to the Itinerary!`);
-      setToastClass(classValue);
-    } else {
-      setToastTitle("Itinerary");
-      setToastText(`${nameValue} is already in the Itinerary!`);
-      setToastClass(classValue);
-    }
-    setShowA(true);
-  };
+  const { showToast } = useToast();
 
   // this function handles 2 cases and calls different separate functions depending on which case is true: if there is duplicate it notifies the user and prevents the onClick event; else it dispatches data to State Management, adds intinerary data to user on server and notifies user that data was added
 
@@ -117,11 +100,19 @@ const Explore = () => {
     console.log("addObject", addObject);
 
     if (containsObject(itineraryValueArray, addObject)) {
-      notify(false, city, "my-warning-toast");
+      showToast(
+        "Itinerary",
+        `${city} is already in the Itinerary!`,
+        "my-warning-toast"
+      );
       console.log("cannot be added");
       event.preventDefault();
     } else {
-      notify(true, city, "my-info-toast");
+      showToast(
+        "Itinerary",
+        `Success! ${city} was added to the Itinerary!`,
+        "my-info-toast"
+      );
       dispatchItinerary(itineraryPlus({ country, city }));
       setAddData(addObject);
       console.log("can be added");
@@ -277,18 +268,15 @@ const Explore = () => {
           )}
           {dataDestination &&
             dataDestination?.map((destination, index) => (
-              <DestinationCard key={index} {...destination} notify={notify} />
+              <DestinationCard
+                key={index}
+                {...destination}
+                showToast={showToast}
+              />
             ))}
         </SectionLandmarkData>
       </SectionLandmarkDataWrapper>
-      <ToastComponent
-        toastTitle={toastTitle}
-        toastText={toastText}
-        className={toastClass}
-        show={showA}
-        toggleShow={() => setShowA(false)}
-        time={time}
-      />
+      <ToastComponent />
       {dataCity && (
         <SectionCityButtons loc="SectionCityButtons">
           {console.log("country", country)}

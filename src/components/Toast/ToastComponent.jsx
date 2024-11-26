@@ -1,27 +1,26 @@
 import Toast from "react-bootstrap/Toast";
+import { useToast } from "../../global/toast/ToastContext";
+import useToastTime from "../../hooks/useToastTime";
 
-const ToastComponent = ({
-  toastTitle,
-  toastText,
-  className,
-  show,
-  toggleShow,
-  time,
-}) => {
+const ToastComponent = () => {
+  const { toastData, hideToast } = useToast();
+  const { title, text, className, showT } = toastData;
+  const { time } = useToastTime(showT);
+
   return (
     <Toast
       className={className}
-      show={show}
-      onClose={toggleShow}
+      show={showT}
+      onClose={hideToast}
       delay={10000}
       autohide
     >
       <Toast.Header>
         <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
-        <strong className="me-auto">{toastTitle}</strong>
+        <strong className="me-auto">{title}</strong>
         <small>{time} seconds ago </small>
       </Toast.Header>
-      <Toast.Body>{toastText}</Toast.Body>
+      <Toast.Body>{text}</Toast.Body>
     </Toast>
   );
 };

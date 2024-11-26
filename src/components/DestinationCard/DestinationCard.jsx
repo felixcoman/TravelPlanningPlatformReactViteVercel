@@ -19,7 +19,7 @@ function DestinationCard({
   description,
   popularity,
   attributions,
-  notify,
+  showToast,
 }) {
   const { stateGlobalItinerary, dispatchItinerary } =
     useContext(ItineraryContext);
@@ -57,11 +57,19 @@ function DestinationCard({
     console.log("addObject", addObject);
 
     if (containsObject(itineraryLandmarkValueArray, addObject)) {
-      notify(false, name, "my-warning-toast");
+      showToast(
+        "Itinerary",
+        `${name} is already in the Itinerary!`,
+        "my-warning-toast"
+      );
       console.log("cannot be added");
       event.preventDefault();
     } else {
-      notify(true, name, "my-info-toast");
+      showToast(
+        "Itinerary",
+        `Success! ${name} was added to the Itinerary!`,
+        "my-info-toast"
+      );
       dispatchItinerary(itineraryLandmarkPlus({ country, city, name }));
       setAddData(addObject);
       console.log("can be added");
