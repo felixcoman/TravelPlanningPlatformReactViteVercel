@@ -38,6 +38,8 @@ export const ContactTextarea = styled.textarea`
   width: 50%;
   height: 100px;
   margin: 5px auto;
+  border-radius: 5px;
+  resize: none;
 `;
 
 export const ContactButton = styled(ButtonInfo)`
