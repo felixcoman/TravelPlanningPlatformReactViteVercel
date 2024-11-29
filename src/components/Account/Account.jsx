@@ -31,7 +31,7 @@ const Account = () => {
   const [clicked, setClicked] = useState(false);
   let id = "";
 
-  const { user, setUser, fetchUser } = useContext(UserContext); // destructurare UserContext
+  const { user, setUser } = useContext(UserContext); // destructurare UserContext
 
   const { users, error, loading, setError } = useFetchUsers(
     id,
@@ -67,7 +67,7 @@ const Account = () => {
     stateGlobalItinerary
   );
 
-  const { showToast } = useToast();
+  const { showToast, hideToast } = useToast();
 
   //enter login section
   const handleGetAccount = () => {

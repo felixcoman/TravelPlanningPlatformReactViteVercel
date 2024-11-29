@@ -1,4 +1,5 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const ToastContext = createContext();
 
@@ -10,6 +11,8 @@ export const ToastProvider = ({ children }) => {
     showT: false,
   });
 
+  const location = useLocation();
+
   const showToast = (title, text, className) => {
     setToastData({ title, text, className, showT: true });
   };
@@ -17,6 +20,12 @@ export const ToastProvider = ({ children }) => {
   const hideToast = () => {
     setToastData((prev) => ({ ...prev, showT: false }));
   };
+
+  //hide toast automatically so it will be not visible if we navigate back to the same page
+  //hide toast just if changes in URL
+  useEffect(() => {
+    hideToast();
+  }, [location.pathname]);
 
   return (
     <ToastContext.Provider value={{ toastData, showToast, hideToast }}>
