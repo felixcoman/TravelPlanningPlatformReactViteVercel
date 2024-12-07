@@ -5,6 +5,7 @@ const ToastContext = createContext();
 
 export const ToastProvider = ({ children }) => {
   const [toastData, setToastData] = useState({
+    id: null,
     title: "",
     text: "",
     className: "",
@@ -14,7 +15,7 @@ export const ToastProvider = ({ children }) => {
   const location = useLocation();
 
   const showToast = (title, text, className) => {
-    setToastData({ title, text, className, showT: true });
+    setToastData({ id: Date.now(), title, text, className, showT: true });
   };
 
   const hideToast = () => {

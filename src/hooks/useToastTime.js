@@ -1,21 +1,22 @@
 import { useEffect, useState } from "react";
 
-const useToastTime = (showT) => {
+const useToastTime = (showT, id) => {
   console.log("inside useToastTime");
   const [time, setTime] = useState(0);
 
   useEffect(() => {
     console.log("inside useEffect useToastTime");
     let interval;
-    if (showT)
+    if (showT) {
+      setTime(0);
       interval = setInterval(() => {
         setTime((i) => i + 1);
       }, 1000);
+    }
     return () => {
-      setTime(0);
       clearInterval(interval);
     };
-  }, [showT]);
+  }, [showT, id]);
   return { time };
 };
 
