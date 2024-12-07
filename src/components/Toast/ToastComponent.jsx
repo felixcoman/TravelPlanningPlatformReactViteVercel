@@ -4,8 +4,8 @@ import useToastTime from "../../hooks/useToastTime";
 
 const ToastComponent = () => {
   const { toastData, hideToast } = useToast();
-  const { title, text, className, showT } = toastData;
-  const { time } = useToastTime(showT);
+  const { id, title, text, className, showT } = toastData;
+  const { time } = useToastTime(showT, id);
 
   return (
     <Toast
