@@ -33,13 +33,7 @@ function About() {
         we've got you covered.
       </AboutText>
       {images && (
-        <Slider
-          loc="Slider"
-          className="carousel-about"
-          images={images}
-          error={error}
-          loading={loading}
-        />
+        <Slider loc="Slider" images={images} error={error} loading={loading} />
       )}
       {loading && (
         <Loading loc="Loading">
