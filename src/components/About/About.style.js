@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import {
+  GRADIENT_BLUE_LIGHT,
   ORANGE,
   WHITE_NEUTRAL,
-  GRADIENT_BLUE_LIGHT,
 } from "../../constants/Colors";
-import { TEXT_SIZE_MEDIUM } from "../../constants/Dimensions";
 
 export const MainAbout = styled.section`
   display: flex;
@@ -13,18 +12,22 @@ export const MainAbout = styled.section`
   align-items: center;
   flex-wrap: wrap;
   align-content: center;
-  font-size: ${TEXT_SIZE_MEDIUM};
+  font-size: clamp(15px, 2vw, 22px);
 `;
 
 export const SliderImg = styled.img`
-  width: 50vw;
+  width: 66vw;
   height: auto;
+
+  @media screen and (min-width: 1024px) {
+    width: 50vw;
+  }
 `;
 
 export const AboutText = styled.p`
   color: ${WHITE_NEUTRAL};
   width: 70vw;
-  margin: 30px auto;
+  margin: 15px auto;
   text-align: justify;
 `;
 
