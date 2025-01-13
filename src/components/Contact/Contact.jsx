@@ -69,7 +69,7 @@ const Contact = () => {
   };
 
   const postSubmit = async () => {
-    const add = await fetch(`http://localhost:3001/feedback`, {
+    const add = await fetch(`/api/feedback`, {
       method: "POST",
       body: JSON.stringify(inputObj),
       headers: {

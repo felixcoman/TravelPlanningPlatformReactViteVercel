@@ -52,7 +52,7 @@ function MyTravelCity() {
   const [show, setShow] = useState(false);
   const [addData, setAddData] = useState("");
 
-  const url = country ? `http://localhost:3001/${country}/?city=${city}` : null;
+  const url = country ? `/api/${country}/?city=${city}` : null;
 
   const { data, error, loading } = useFetchData(url, clicked, setClicked);
   const compactData = data ? data[0] : null;

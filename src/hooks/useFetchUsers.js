@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const useFetchUsers = (id, clicked, setClicked) => {
-  const ALL_URL = "http://localhost:3001/users";
+  const ALL_URL = "/api/users";
   const ID_URL = ALL_URL + `/${id}`;
 
   const [users, setUsers] = useState(null);

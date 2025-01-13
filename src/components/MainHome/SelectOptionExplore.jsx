@@ -22,9 +22,9 @@ function SelectOptionExplore() {
   let url = null;
 
   if (selectedCountry && selectedCity) {
-    url = `http://localhost:3001/${selectedCountry}?city=${selectedCity}`;
+    url = `/api/${selectedCountry}?city=${selectedCity}`;
   } else if (selectedCountry) {
-    url = `http://localhost:3001/${selectedCountry}`;
+    url = `/api/${selectedCountry}`;
   } else null;
 
   const { data, error, loading, setData } = useFetchData(
