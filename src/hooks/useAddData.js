@@ -28,7 +28,7 @@ const useAddData = (localData, addData, setAddData, arrayName) => {
       console.log("inside add data async");
       setLoading(true);
 
-      await fetch(`http://localhost:3001/users/${localData}`)
+      await fetch(`/api/users/${localData}`)
         .then((response) => response.json())
         .then((userData) => {
           // Check if the user has a travel options array, if not, initialize it
@@ -37,7 +37,7 @@ const useAddData = (localData, addData, setAddData, arrayName) => {
             : [addData];
 
           // Send the updated data back to the server - new travel options
-          fetch(`http://localhost:3001/users/${localData}`, {
+          fetch(`/api/users/${localData}`, {
             method: "PUT",
             body: JSON.stringify({ ...userData, [arrayName]: newData }),
             headers: {

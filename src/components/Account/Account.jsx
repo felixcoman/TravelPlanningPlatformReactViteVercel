@@ -112,7 +112,7 @@ const Account = () => {
 
   const handleSubmit = async () => {
     console.log(inputObj);
-    const add = await fetch(`http://localhost:3001/users`, {
+    const add = await fetch(`/api/users`, {
       method: "POST",
       body: JSON.stringify(inputObj),
       headers: {

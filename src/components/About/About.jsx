@@ -14,7 +14,7 @@ import { Error, Loading } from "../Contact/Contact.style";
 function About() {
   const [clicked, setClicked] = useState(true);
 
-  const urlPicture = `http://localhost:3001/Pictures`;
+  const urlPicture = `/api/Pictures`;
 
   const {
     data: images,

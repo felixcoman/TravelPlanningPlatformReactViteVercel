@@ -34,7 +34,7 @@ function CitiesRegions() {
   const [region, setRegion] = useState("");
   const [isDisabledCity, setIsDisabledCity] = useState(false);
   const [isDisabledRegion, setIsDisabledRegion] = useState(false);
-  const url = country ? `http://localhost:3001/${country}` : null;
+  const url = country ? `/api/${country}` : null;
 
   const { data, error, loading } = useFetchData(url, clicked, setClicked);
 

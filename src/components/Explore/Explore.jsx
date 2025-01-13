@@ -57,8 +57,7 @@ const Explore = () => {
   const [clicked, setClicked] = useState(true);
   const [addData, setAddData] = useState("");
 
-  const urlCity =
-    country && city ? `http://localhost:3001/${country}?city=${city}` : null;
+  const urlCity = country && city ? `/api/${country}?city=${city}` : null;
 
   const {
     data: dataCity,
@@ -66,9 +65,7 @@ const Explore = () => {
     loading: loadingCity,
   } = useFetchData(urlCity, clicked, setClicked);
 
-  const urlDestination = city
-    ? `http://localhost:3001/destinations?city=${city}`
-    : null;
+  const urlDestination = city ? `/api/destinations?city=${city}` : null;
 
   const {
     data: dataDestination,
