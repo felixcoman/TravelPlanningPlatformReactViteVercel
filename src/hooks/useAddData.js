@@ -29,7 +29,7 @@ const useAddData = (localData, addData, setAddData, arrayName) => {
       setLoading(true);
 
       await fetch(
-        `https://travel-planning-platform.vercel.app/api/users/${localData}`
+        `https://travel-planning-platform.vercel.app/users/${localData}`
       )
         .then((response) => response.json())
         .then((userData) => {
@@ -40,7 +40,7 @@ const useAddData = (localData, addData, setAddData, arrayName) => {
 
           // Send the updated data back to the server - new travel options
           fetch(
-            `https://travel-planning-platform.vercel.app/api/users/${localData}`,
+            `https://travel-planning-platform.vercel.app/users/${localData}`,
             {
               method: "PUT",
               body: JSON.stringify({ ...userData, [arrayName]: newData }),

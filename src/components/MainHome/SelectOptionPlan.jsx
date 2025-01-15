@@ -17,7 +17,7 @@ function SelectOptionPlan() {
   const [clicked, setClicked] = useState(false);
 
   const url = selectedCountry
-    ? `https://travel-planning-platform.vercel.app/api/${selectedCountry}`
+    ? `https://travel-planning-platform.vercel.app/${selectedCountry}`
     : null;
 
   const { data, error, loading, setData } = useFetchData(

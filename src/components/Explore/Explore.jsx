@@ -59,7 +59,7 @@ const Explore = () => {
 
   const urlCity =
     country && city
-      ? `https://travel-planning-platform.vercel.app/api/${country}?city=${city}`
+      ? `https://travel-planning-platform.vercel.app/${country}?city=${city}`
       : null;
 
   const {
@@ -69,7 +69,7 @@ const Explore = () => {
   } = useFetchData(urlCity, clicked, setClicked);
 
   const urlDestination = city
-    ? `https://travel-planning-platform.vercel.app/api/destinations?city=${city}`
+    ? `https://travel-planning-platform.vercel.app/destinations?city=${city}`
     : null;
 
   const {

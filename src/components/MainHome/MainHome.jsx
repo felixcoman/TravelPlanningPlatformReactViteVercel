@@ -13,7 +13,7 @@ import {
 function MainHome() {
   const [clicked, setClicked] = useState(true);
 
-  const urlPicture = `https://travel-planning-platform.vercel.app/api/Pictures`;
+  const urlPicture = `https://travel-planning-platform.vercel.app/Pictures`;
 
   const {
     data: images,
