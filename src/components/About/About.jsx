@@ -14,7 +14,7 @@ import { Error, Loading } from "../Contact/Contact.style";
 function About() {
   const [clicked, setClicked] = useState(true);
 
-  const urlPicture = `https://travel-planning-platform.vercel.app/Pictures`;
+  const urlPicture = `/api/pictures`;
 
   const {
     data: images,
