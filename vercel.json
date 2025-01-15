@@ -1,5 +1,10 @@
 {
-  "rewrites": [{ "source": "/api/:path*", "destination": "/api/:path*" }],
+  "rewrites": [
+    {
+      "source": "https://travel-planning-platform.vercel.app/api/:path*",
+      "destination": "https://travel-planning-platform.vercel.app/api/:path*"
+    }
+  ],
 
   "outputDirectory": "dist"
 }
