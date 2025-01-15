@@ -29,7 +29,7 @@ const useRemoveData = (localData, indexServer, setIndexServer, arrayName) => {
       setLoading(true);
 
       await fetch(
-        `https://travel-planning-platform.vercel.apphttps://travel-planning-platform.vercel.app/api/users/${localData}`
+        `https://travel-planning-platform.vercel.app/api/users/${localData}`
       )
         .then((response) => response.json())
         .then((userData) => {
@@ -41,7 +41,7 @@ const useRemoveData = (localData, indexServer, setIndexServer, arrayName) => {
 
           // Send the updated data back to the server - the remaining options
           fetch(
-            `https://travel-planning-platform.vercel.apphttps://travel-planning-platform.vercel.app/api/users/${localData}`,
+            `https://travel-planning-platform.vercel.app/api/users/${localData}`,
             {
               method: "PUT",
               body: JSON.stringify({

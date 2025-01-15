@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 
 const useFetchUsers = (id, clicked, setClicked) => {
-  const ALL_URL =
-    "https://travel-planning-platform.vercel.apphttps://travel-planning-platform.vercel.app/api/users";
+  const ALL_URL = "https://travel-planning-platform.vercel.app/api/users";
   const ID_URL = ALL_URL + `/${id}`;
 
   const [users, setUsers] = useState(null);

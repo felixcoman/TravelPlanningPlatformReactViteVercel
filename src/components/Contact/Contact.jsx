@@ -70,7 +70,7 @@ const Contact = () => {
 
   const postSubmit = async () => {
     const add = await fetch(
-      `https://travel-planning-platform.vercel.apphttps://travel-planning-platform.vercel.app/api/feedback`,
+      `https://travel-planning-platform.vercel.app/api/feedback`,
       {
         method: "POST",
         body: JSON.stringify(inputObj),
