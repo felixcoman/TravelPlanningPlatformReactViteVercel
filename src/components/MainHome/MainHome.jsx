@@ -13,7 +13,7 @@ import {
 function MainHome() {
   const [clicked, setClicked] = useState(true);
 
-  const urlPicture = `/api/mock/data/pictures`;
+  const urlPicture = `/api/pictures`;
 
   const {
     data: images,
