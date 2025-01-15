@@ -28,9 +28,7 @@ const useRemoveData = (localData, indexServer, setIndexServer, arrayName) => {
       console.log("inside remove data async");
       setLoading(true);
 
-      await fetch(
-        `https://travel-planning-platform.vercel.app/users/${localData}`
-      )
+      await fetch(`/api/users/${localData}`)
         .then((response) => response.json())
         .then((userData) => {
           // Filter out the array of objects that contains travel options at the specified index - filters out option that needs to be deleted from server
@@ -40,19 +38,16 @@ const useRemoveData = (localData, indexServer, setIndexServer, arrayName) => {
           console.log("updatedArray", updatedArray);
 
           // Send the updated data back to the server - the remaining options
-          fetch(
-            `https://travel-planning-platform.vercel.app/users/${localData}`,
-            {
-              method: "PUT",
-              body: JSON.stringify({
-                ...userData,
-                [arrayName]: updatedArray,
-              }),
-              headers: {
-                "Content-Type": "application/json",
-              },
-            }
-          )
+          fetch(`/api/users/${localData}`, {
+            method: "PUT",
+            body: JSON.stringify({
+              ...userData,
+              [arrayName]: updatedArray,
+            }),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          })
             .then((response) => response.json())
             .then((json) => console.log(json))
             .catch((error) => {

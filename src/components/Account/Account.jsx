@@ -112,16 +112,13 @@ const Account = () => {
 
   const handleSubmit = async () => {
     console.log(inputObj);
-    const add = await fetch(
-      `https://travel-planning-platform.vercel.app/users`,
-      {
-        method: "POST",
-        body: JSON.stringify(inputObj),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const add = await fetch(`/api/users`, {
+      method: "POST",
+      body: JSON.stringify(inputObj),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     const response = await add.json();
     console.log("S-a adaugat un user cu acest id pe server", response[0].id);
 

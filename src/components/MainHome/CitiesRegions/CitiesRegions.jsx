@@ -34,9 +34,7 @@ function CitiesRegions() {
   const [region, setRegion] = useState("");
   const [isDisabledCity, setIsDisabledCity] = useState(false);
   const [isDisabledRegion, setIsDisabledRegion] = useState(false);
-  const url = country
-    ? `https://travel-planning-platform.vercel.app/${country}`
-    : null;
+  const url = country ? `/api/${country}` : null;
 
   const { data, error, loading } = useFetchData(url, clicked, setClicked);
 

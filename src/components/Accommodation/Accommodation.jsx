@@ -30,9 +30,7 @@ function Accommodation() {
     const fetchData = async (country, city) => {
       if (country !== undefined && city !== undefined) {
         try {
-          const response = await fetch(
-            `https://travel-planning-platform.vercel.app/${country}?city=${city}`
-          );
+          const response = await fetch(`/api/${country}?city=${city}`);
           if (!response.ok) {
             throw new Error("Network response was not ok");
           }

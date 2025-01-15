@@ -57,10 +57,7 @@ const Explore = () => {
   const [clicked, setClicked] = useState(true);
   const [addData, setAddData] = useState("");
 
-  const urlCity =
-    country && city
-      ? `https://travel-planning-platform.vercel.app/${country}?city=${city}`
-      : null;
+  const urlCity = country && city ? `/api/${country}?city=${city}` : null;
 
   const {
     data: dataCity,
@@ -68,9 +65,7 @@ const Explore = () => {
     loading: loadingCity,
   } = useFetchData(urlCity, clicked, setClicked);
 
-  const urlDestination = city
-    ? `https://travel-planning-platform.vercel.app/destinations?city=${city}`
-    : null;
+  const urlDestination = city ? `/api/destinations?city=${city}` : null;
 
   const {
     data: dataDestination,
