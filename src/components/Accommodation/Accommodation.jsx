@@ -31,7 +31,7 @@ function Accommodation() {
       if (country !== undefined && city !== undefined) {
         try {
           const response = await fetch(
-            `https://travel-planning-platform.vercel.app/api/${country}?city=${city}`
+            `https://travel-planning-platform.vercel.apphttps://travel-planning-platform.vercel.app/api/${country}?city=${city}`
           );
           if (!response.ok) {
             throw new Error("Network response was not ok");

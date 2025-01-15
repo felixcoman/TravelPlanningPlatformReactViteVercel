@@ -53,7 +53,7 @@ function MyTravelCity() {
   const [addData, setAddData] = useState("");
 
   const url = country
-    ? `https://travel-planning-platform.vercel.app/api/${country}/?city=${city}`
+    ? `https://travel-planning-platform.vercel.apphttps://travel-planning-platform.vercel.app/api/${country}/?city=${city}`
     : null;
 
   const { data, error, loading } = useFetchData(url, clicked, setClicked);
