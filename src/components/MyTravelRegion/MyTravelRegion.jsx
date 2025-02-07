@@ -40,7 +40,7 @@ function MyTravelRegion() {
   const navigate = useNavigate();
 
   let { country, region } = useParams();
-  country = transformToUppercase(country);
+  let displayCountry = transformToUppercase(country);
 
   const { localData } = useLocalStorage("user");
   console.log("localData", localData);
@@ -220,7 +220,7 @@ function MyTravelRegion() {
           <ButtonChoice
             loc="ButtonChoice"
             onClick={(event) =>
-              handleAdd(country, region, budget, period, data, event)
+              handleAdd(displayCountry, region, budget, period, data, event)
             }
           >
             Save my Choice
