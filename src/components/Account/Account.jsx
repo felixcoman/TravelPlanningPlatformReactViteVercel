@@ -109,15 +109,15 @@ const Account = () => {
       setIsFound(false);
     }
   };
-
+  //inspectie functie de postare server - vezi content type header
   const handleSubmit = async () => {
     console.log(inputObj);
     const add = await fetch(`/api/users`, {
       method: "POST",
-      body: JSON.stringify(inputObj),
       headers: {
         "Content-Type": "application/json",
       },
+      body: JSON.stringify(inputObj),
     });
     const response = await add.json();
     console.log("S-a adaugat un user cu acest id pe server", response[0].id);

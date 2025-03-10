@@ -7,7 +7,7 @@ const useFetchData = (url, clicked, setClicked) => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  console.log("inside hook 10, data", "error", "loading", data, error, loading);
+  console.log("inside hook 10, data", data, "error", error, "loading", loading);
 
   console.log("inside hook 12");
 
