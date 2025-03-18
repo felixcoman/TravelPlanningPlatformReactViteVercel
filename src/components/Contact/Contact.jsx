@@ -11,8 +11,6 @@ import ContactForm from "./ContactForm";
 import ContactFormTextarea from "./ContactFormTextarea";
 
 const Contact = () => {
-  const [data, setData] = useState(null);
-
   const [inputObj, setInputObj] = useState({
     Name: "",
     Surname: "",
@@ -54,7 +52,6 @@ const Contact = () => {
 
   const handleSubmit = () => {
     console.log("checkCompulsory", checkCompulsory());
-    setData(null);
     if (checkCompulsory()) {
       //it is to early to give a success message because we do not have a response from the post in the postSubmit function
       showToast(
@@ -73,25 +70,25 @@ const Contact = () => {
   };
 
   const postSubmit = async () => {
-    //In this function I have to handle the case when there is an error at posting
     try {
-      const add = await fetch(`/api/feedback`, {
+      const response = await fetch(`/api/feedback`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(inputObj),
       });
 
-      if (!add.ok) {
-        throw new Error("Network response was not ok!");
+      if (!response.ok) {
+        const errorMessage = await response.text();
+        throw new Error(`Server error: ${response.status} - ${errorMessage}`);
       }
 
-      const response = await add.json();
-      setData(response);
-      console.log("Response from sever:", response);
-      return response.id;
+      const responseData = await response.json();
+      console.log("Server Response:", responseData);
+      return responseData;
     } catch (error) {
-      console.error("Error posting feedback:", error);
-      return null;
+      console.error("Error posting feedback:", error.message);
     }
   };
 

@@ -25,3 +25,10 @@ dist-ssr
 .vercel
 .env*.local
 .env
+
+rest-client.http
+api/digest-example.js
+api/get-example.js
+api/getall-example.js
+api/getall-key-example.js
+api/has-example.js

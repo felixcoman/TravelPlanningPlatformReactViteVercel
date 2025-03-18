@@ -1,30 +1,37 @@
+import { getAll } from "@vercel/edge-config";
+
 export default async function handler(req, res) {
   const vercelApiToken = process.env.VERCEL_API_TOKEN;
   const edgeConfigId = process.env.EDGE_CONFIG_ID;
 
   if (!vercelApiToken || !edgeConfigId) {
-    return res.status(500).json({ message: "Missing API credentials" });
+    return res.status(500).json({ message: "Missing Vercel API credentials" });
   }
 
-  if (req.method === "POST") {
-    try {
-      const { Name, Surname, Mobile, Email, Textarea } = req.body;
+  try {
+    if (req.method === "GET") {
+      // Fetch existing feedback data
+      const existingConfig = await getAll();
+      const feedbackData = existingConfig.feedbackData || [];
 
-      // Fetch existing data
-      const existingFeedback = (await get("feedbackData")) || [];
+      return res.status(200).json({ feedback: feedbackData });
+    }
 
-      // Create new feedback entry
-      const newFeedback = {
-        Name,
-        Surname,
-        Mobile,
-        Email,
-        Textarea,
-        id: existingFeedback.length + 1,
-      };
+    if (req.method === "POST") {
+      const newFeedback = req.body;
 
-      // Send data to Vercel Edge Config
-      const response = await fetch(
+      if (!newFeedback.Name || !newFeedback.Textarea) {
+        return res.status(400).json({ message: "Invalid feedback data" });
+      }
+
+      // Fetch current feedback data
+      const existingConfig = await getAll();
+      const feedbackData = existingConfig.feedbackData || [];
+
+      feedbackData.push(newFeedback);
+
+      // Update Edge Config with new feedback
+      const updateResponse = await fetch(
         `https://api.vercel.com/v1/edge-config/${edgeConfigId}/items`,
         {
           method: "PATCH",
@@ -33,34 +40,25 @@ export default async function handler(req, res) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            items: [
-              {
-                key: "feedbackData",
-                value: [...existingFeedback, newFeedback],
-              },
-            ],
+            items: [{ key: "feedbackData", value: feedbackData }],
           }),
         }
       );
 
-      if (!response.ok) {
-        throw new Error("Failed to update Edge Config");
+      if (!updateResponse.ok) {
+        throw new Error(
+          `Failed to update Edge Config: ${await updateResponse.text()}`
+        );
       }
 
-      return res.status(201).json(newFeedback);
-    } catch (error) {
-      return res.status(500).json({ message: error.message });
+      return res
+        .status(200)
+        .json({ message: "Feedback submitted successfully" });
     }
-  }
 
-  if (req.method === "GET") {
-    try {
-      const feedbackData = (await get("feedbackData")) || [];
-      return res.status(200).json(feedbackData);
-    } catch (error) {
-      return res.status(500).json({ message: "Error fetching feedback data" });
-    }
+    return res.status(405).json({ message: "Method Not Allowed" });
+  } catch (error) {
+    console.error("Error processing feedback:", error);
+    return res.status(500).json({ message: "Error processing feedback" });
   }
-
-  return res.status(405).json({ message: "Method Not Allowed" });
 }
