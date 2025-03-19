@@ -1,7 +1,7 @@
 import { getAll } from "@vercel/edge-config";
 
 export default async function handler(req, res) {
-  const vercelApiToken = process.env.VERCEL_API_TOKEN;
+  const vercelApiToken = process.env.VERCEL_ACCESS_TOKEN;
   const edgeConfigId = process.env.EDGE_CONFIG_ID;
 
   if (!vercelApiToken || !edgeConfigId) {
@@ -10,11 +10,10 @@ export default async function handler(req, res) {
 
   try {
     if (req.method === "GET") {
-      // Fetch existing feedback data
+      // Fetch existing feedback
       const existingConfig = await getAll();
-      const feedbackData = existingConfig.feedbackData || [];
-
-      return res.status(200).json({ feedback: feedbackData });
+      const feedback = existingConfig.feedbackData || [];
+      return res.status(200).json({ feedback: feedback });
     }
 
     if (req.method === "POST") {
@@ -26,9 +25,9 @@ export default async function handler(req, res) {
 
       // Fetch current feedback data
       const existingConfig = await getAll();
-      const feedbackData = existingConfig.feedbackData || [];
+      const feedback = existingConfig.feedbackData || [];
 
-      feedbackData.push(newFeedback);
+      feedback.push(newFeedback);
 
       // Update Edge Config with new feedback
       const updateResponse = await fetch(
@@ -40,7 +39,13 @@ export default async function handler(req, res) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            items: [{ key: "feedbackData", value: feedbackData }],
+            items: [
+              {
+                operation: "update",
+                key: "feedbackData",
+                value: feedback,
+              },
+            ],
           }),
         }
       );
