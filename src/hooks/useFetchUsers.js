@@ -6,7 +6,7 @@ const useFetchUsers = (id, clicked, setClicked) => {
 
   const [users, setUsers] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
   console.log("id", id);
 
   useEffect(() => {
@@ -23,15 +23,19 @@ const useFetchUsers = (id, clicked, setClicked) => {
         console.log("GO_URL", GO_URL);
         const response = await fetch(GO_URL);
         if (!response.ok) {
-          throw new Error("Network response was not ok");
+          throw new Error(
+            `Network response was not ok: ${await response.text()}`
+          );
         }
+
         const userData = await response.json();
         console.log("userData", userData);
         setUsers(userData);
         setLoading(false);
-        setError(false);
+        // setError(false);
       } catch (error) {
-        setError("Error 808");
+        console.error("Error:", error);
+        // setError("Error:", error);
         setLoading(false);
       }
     };
@@ -39,7 +43,7 @@ const useFetchUsers = (id, clicked, setClicked) => {
     fetchData();
   }, [clicked]);
 
-  return { users, loading, error, clicked, setError };
+  return { users, loading, clicked };
 };
 
 export default useFetchUsers;

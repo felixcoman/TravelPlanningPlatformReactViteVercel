@@ -53,12 +53,6 @@ const Contact = () => {
   const handleSubmit = () => {
     console.log("checkCompulsory", checkCompulsory());
     if (checkCompulsory()) {
-      //it is to early to give a success message because we do not have a response from the post in the postSubmit function
-      showToast(
-        "Feedback",
-        "Your feedback was posted successfully!",
-        "my-info-toast"
-      );
       postSubmit();
     } else {
       showToast(
@@ -72,7 +66,7 @@ const Contact = () => {
   const postSubmit = async () => {
     try {
       const response = await fetch(`/api/feedback`, {
-        method: "POST",
+        method: "PATCH",
         headers: {
           "Content-Type": "application/json",
         },
@@ -85,6 +79,7 @@ const Contact = () => {
       }
 
       const responseData = await response.json();
+      showToast("Feedback", `${responseData.message}!`, "my-info-toast");
       console.log("Server Response:", responseData);
       return responseData;
     } catch (error) {
