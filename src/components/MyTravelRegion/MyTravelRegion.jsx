@@ -40,7 +40,7 @@ function MyTravelRegion() {
   const navigate = useNavigate();
 
   let { country, region } = useParams();
-  country = transformToUppercase(country);
+  let displayCountry = transformToUppercase(country);
 
   const { localData } = useLocalStorage("user");
   console.log("localData", localData);
@@ -51,9 +51,7 @@ function MyTravelRegion() {
   const [show, setShow] = useState(false);
   const [addData, setAddData] = useState("");
 
-  const url = country
-    ? `http://localhost:3001/${country}/?region=${region}`
-    : null;
+  const url = country ? `/api/${country}/?region=${region}` : null;
 
   const { data, error, loading } = useFetchData(url, clicked, setClicked);
   const compactData = data ? data[0] : null;
@@ -222,7 +220,7 @@ function MyTravelRegion() {
           <ButtonChoice
             loc="ButtonChoice"
             onClick={(event) =>
-              handleAdd(country, region, budget, period, data, event)
+              handleAdd(displayCountry, region, budget, period, data, event)
             }
           >
             Save my Choice

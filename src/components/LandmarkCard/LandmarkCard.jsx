@@ -18,7 +18,7 @@ function LandmarkCard({
 }) {
   console.log("name", name, "index", index);
 
-  const url = `http://localhost:3001/destinations?name=${name}`;
+  const url = `/api/destinations?name=${name}`;
   console.log("url", url);
 
   const { data, error, loading } = useFetchData(url, clicked, setClicked);

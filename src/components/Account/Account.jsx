@@ -33,13 +33,9 @@ const Account = () => {
 
   const { user, setUser } = useContext(UserContext); // destructurare UserContext
 
-  const { users, error, loading, setError } = useFetchUsers(
-    id,
-    clicked,
-    setClicked
-  );
+  const { users, loading } = useFetchUsers(id, clicked, setClicked);
 
-  console.log("users", users, "loading", loading, "error", error);
+  console.log("users", users, "loading", loading);
 
   const [isVisible1, setIsVisible1] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
@@ -74,7 +70,7 @@ const Account = () => {
     setIsVisible1(!isVisible1);
     setSplitContainer(!splitContainer);
     setIsVisible2(false);
-    setError(false);
+    // setError(false);
     setIsFound(true);
     setMessage("");
     setInputObj({ Email: "" }); //reset input field
@@ -85,7 +81,7 @@ const Account = () => {
     setIsVisible2(!isVisible2);
     setSplitContainer(!splitContainer);
     setIsVisible1(false);
-    setError(false);
+    // setError(false);
     setIsFound(false);
     setInputObj({ Email: "" }); //reset input field
   };
@@ -95,7 +91,7 @@ const Account = () => {
   });
 
   const handleChange = (e, name) => {
-    setError(false);
+    // setError(false);
     setClicked(true);
     const value = e.target.value;
     setInputObj({ ...inputObj, [name]: value });
@@ -109,15 +105,15 @@ const Account = () => {
       setIsFound(false);
     }
   };
-
+  //inspectie functie de postare server - vezi content type header
   const handleSubmit = async () => {
     console.log(inputObj);
-    const add = await fetch(`http://localhost:3001/users`, {
+    const add = await fetch(`/api/users`, {
       method: "POST",
-      body: JSON.stringify(inputObj),
       headers: {
         "Content-Type": "application/json",
       },
+      body: JSON.stringify(inputObj),
     });
     const response = await add.json();
     console.log("S-a adaugat un user cu acest id pe server", response[0].id);

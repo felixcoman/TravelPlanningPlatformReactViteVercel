@@ -53,11 +53,6 @@ const Contact = () => {
   const handleSubmit = () => {
     console.log("checkCompulsory", checkCompulsory());
     if (checkCompulsory()) {
-      showToast(
-        "Feedback",
-        "Your feedback was posted successfully!",
-        "my-info-toast"
-      );
       postSubmit();
     } else {
       showToast(
@@ -69,15 +64,27 @@ const Contact = () => {
   };
 
   const postSubmit = async () => {
-    const add = await fetch(`http://localhost:3001/feedback`, {
-      method: "POST",
-      body: JSON.stringify(inputObj),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const response = await add.json();
-    return response[0].id;
+    try {
+      const response = await fetch(`/api/feedback`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(inputObj),
+      });
+
+      if (!response.ok) {
+        const errorMessage = await response.text();
+        throw new Error(`Server error: ${response.status} - ${errorMessage}`);
+      }
+
+      const responseData = await response.json();
+      showToast("Feedback", `${responseData.message}!`, "my-info-toast");
+      console.log("Server Response:", responseData);
+      return responseData;
+    } catch (error) {
+      console.error("Error posting feedback:", error.message);
+    }
   };
 
   const handleError = (value, name) => {

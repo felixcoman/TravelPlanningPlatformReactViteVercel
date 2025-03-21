@@ -31,7 +31,7 @@ function Itinerary() {
 
   const populateAccommondationArray = (arr, accommodationArray) => {
     arr.forEach((key) => {
-      const addObject = { country: key.country, city: key.city };
+      const addObject = { country: key.country.toLowerCase(), city: key.city };
       console.log(
         "key",
         key,

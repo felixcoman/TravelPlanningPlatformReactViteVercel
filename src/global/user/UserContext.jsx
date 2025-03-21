@@ -14,7 +14,7 @@ export const UserProvider = ({ children }) => {
 
   const fetchUser = async (userId) => {
     try {
-      const response = await fetch(`http://localhost:3001/users/${userId}`);
+      const response = await fetch(`/api/users/${userId}`);
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
