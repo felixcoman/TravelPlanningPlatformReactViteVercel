@@ -35,7 +35,9 @@ const Account = () => {
 
   const { users, loading } = useFetchUsers(id, clicked, setClicked);
 
-  console.log("users", users, "loading", loading);
+  const usersArr = users?.users;
+
+  console.log("users", users, "usersArr", usersArr, "loading", loading);
 
   const [isVisible1, setIsVisible1] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
@@ -91,34 +93,45 @@ const Account = () => {
   });
 
   const handleChange = (e, name) => {
+    //Executes every time inputfield changes
     // setError(false);
-    setClicked(true);
+
     const value = e.target.value;
+    console.log("value", value);
+
     setInputObj({ ...inputObj, [name]: value });
     handleError(value, name);
 
-    const foundUser = users?.find((element) => element.Email === value);
+    const foundUser = usersArr?.find((element) => element.Email === value);
+    console.log("foundUser", foundUser);
 
-    if (users && users.length > 0) {
+    if (usersArr && usersArr.length > 0) {
       setIsFound(foundUser !== undefined);
     } else {
       setIsFound(false);
     }
+
+    if (isValid && !isFound) {
+      setClicked(true);
+    }
   };
   //inspectie functie de postare server - vezi content type header
   const handleSubmit = async () => {
-    console.log(inputObj);
+    console.log("New input object", inputObj);
     const add = await fetch(`/api/users`, {
-      method: "POST",
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(inputObj),
     });
     const response = await add.json();
-    console.log("S-a adaugat un user cu acest id pe server", response[0].id);
-
-    return response[0].id;
+    console.log("What happend:", response);
+    // console.log(
+    //   "A new user with this ID was added to the server",
+    //   response[0].id
+    // );
+    return response;
   };
 
   //function for create new account now action button
@@ -146,10 +159,10 @@ const Account = () => {
       showToast("Login", "Please enter a valid e-mail!", "my-warning-toast");
     } else {
       setClicked(true);
-      const userData = users?.find(
+      const userData = usersArr?.find(
         (element) => element.Email === inputObj.Email
       );
-      console.log("users", users);
+      console.log("users", usersArr);
       console.log("inputObj", inputObj);
       console.log("userData", userData);
 
