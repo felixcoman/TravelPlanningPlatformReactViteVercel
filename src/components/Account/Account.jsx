@@ -92,27 +92,30 @@ const Account = () => {
     Email: "",
   });
 
+  //Executes every time inputfield changes
   const handleChange = (e, name) => {
-    //Executes every time inputfield changes
     // setError(false);
-
     const value = e.target.value;
     console.log("value", value);
 
-    setInputObj({ ...inputObj, [name]: value });
+    //handleError sets isValid
     handleError(value, name);
 
-    const foundUser = usersArr?.find((element) => element.Email === value);
-    console.log("foundUser", foundUser);
-
     if (usersArr && usersArr.length > 0) {
+      const foundUser = usersArr.find((element) => element.Email === value);
+      console.log("foundUser", foundUser);
       setIsFound(foundUser !== undefined);
+
+      if (isValid && !isFound) {
+        setInputObj({ ...inputObj, [name]: value });
+        setClicked(true);
+      }
     } else {
       setIsFound(false);
-    }
-
-    if (isValid && !isFound) {
-      setClicked(true);
+      if (isValid) {
+        setInputObj({ ...inputObj, [name]: value });
+        setClicked(true);
+      }
     }
   };
   //inspectie functie de postare server - vezi content type header
@@ -127,11 +130,11 @@ const Account = () => {
     });
     const response = await add.json();
     console.log("What happend:", response);
-    // console.log(
-    //   "A new user with this ID was added to the server",
-    //   response[0].id
-    // );
-    return response;
+    console.log(
+      "A new user with this ID was added to the server",
+      response.responseID
+    );
+    return response.responseID;
   };
 
   //function for create new account now action button
@@ -221,6 +224,7 @@ const Account = () => {
       setIsValid(false);
     } else if (value === "Email") {
       setErrorInput({ ...errorInput, [name]: "Error" });
+      setIsValid(false);
     } else {
       setErrorInput({ ...errorInput, [name]: undefined });
       setIsValid(true);
@@ -262,16 +266,14 @@ const Account = () => {
         {isVisible1 && (
           <AccountContainer loc="AccountContainer">
             <AccountText loc="AccountText">Enter e-mail to login</AccountText>
-            {Object.keys(inputObj).map((el, index) => (
-              <AccountForm
-                key={index}
-                name={el}
-                type={el}
-                value={inputObj[el]}
-                handleChange={handleChange}
-                error={errorInput[el]}
-              />
-            ))}
+            <AccountForm
+              name="Email"
+              type="Email"
+              value={inputObj["Email"]}
+              handleChange={handleChange}
+              error={errorInput["Email"]}
+            />
+
             {isValid && isFound && (
               <AccountActionButton
                 loc="AccountActionButton"
@@ -301,16 +303,13 @@ const Account = () => {
             <AccountText loc="AccountText">
               Enter e-mail to create account
             </AccountText>
-            {Object.keys(inputObj).map((el, index) => (
-              <AccountForm
-                key={index}
-                name={el}
-                type={el}
-                value={inputObj[el]}
-                handleChange={handleChange}
-                error={errorInput[el]}
-              />
-            ))}
+            <AccountForm
+              name="Email"
+              type="Email"
+              value={inputObj["Email"]}
+              handleChange={handleChange}
+              error={errorInput["Email"]}
+            />
             {isValid && !isFound && (
               <AccountActionButton
                 loc="AccountActionButton"

@@ -22,8 +22,22 @@ export default async function handler(req, res) {
       // Fetch current user data
       const existingConfig = await getAll();
       const users = existingConfig.userData || [];
+      console.log("users", users);
 
-      users.push(newUser);
+      function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+      }
+
+      const code = getRandomInt(5);
+
+      const foundID = users.find((element) => element.id === code);
+
+      if (!foundID) {
+        newUser.id = code;
+        users.push(newUser);
+      } else {
+        return res.status(500).json({ message: "Error generating new ID" });
+      }
 
       // Update Edge Config with new feedback
       const updateResponse = await fetch(
@@ -51,7 +65,12 @@ export default async function handler(req, res) {
         );
       }
 
-      return res.status(200).json({ message: "User submitted successfully" });
+      return res
+        .status(200)
+        .json({
+          message: "User submitted successfully",
+          responseID: newUser.id,
+        });
     }
     return res.status(405).json({ message: "Method Not Allowed" });
   } catch (error) {
