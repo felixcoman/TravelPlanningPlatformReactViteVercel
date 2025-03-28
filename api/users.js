@@ -3,12 +3,32 @@ import { getAll } from "@vercel/edge-config";
 export default async function handler(req, res) {
   const vercelApiToken = process.env.VERCEL_ACCESS_TOKEN;
   const edgeConfigId = process.env.EDGE_CONFIG_ID;
+  const queryID = req.query.id; // Match the frontend parameter name
 
   if (!vercelApiToken || !edgeConfigId) {
     return res.status(500).json({ message: "Missing Vercel API credentials" });
   }
 
   try {
+    // show new user and id
+    if (queryID !== undefined) {
+      console.log("queryID", queryID);
+
+      const existingConfig = await getAll();
+      console.log("Existing Config:", existingConfig);
+
+      const users = existingConfig.userData || [];
+      console.log("Users Array:", users);
+
+      const getID = users.find((element) => element.id == queryID);
+
+      if (!getID) {
+        return res.status(404).json({ message: "User not found" });
+      }
+
+      return res.status(200).json(getID);
+    }
+
     if (req.method === "GET") {
       // Fetch existing users
       const existingConfig = await getAll();
@@ -28,7 +48,7 @@ export default async function handler(req, res) {
         return Math.floor(Math.random() * max);
       }
 
-      const code = getRandomInt(5);
+      const code = getRandomInt(100);
 
       const foundID = users.find((element) => element.id === code);
 
@@ -39,7 +59,7 @@ export default async function handler(req, res) {
         return res.status(500).json({ message: "Error generating new ID" });
       }
 
-      // Update Edge Config with new feedback
+      // Update Edge Config with new user
       const updateResponse = await fetch(
         `https://api.vercel.com/v1/edge-config/${edgeConfigId}/items`,
         {
@@ -59,18 +79,19 @@ export default async function handler(req, res) {
           }),
         }
       );
+      const updateResult = await updateResponse.json();
+      console.log("Edge Config update result:", updateResult);
+
       if (!updateResponse.ok) {
         throw new Error(
           `Failed to update Edge Config: ${await updateResponse.text()}`
         );
       }
 
-      return res
-        .status(200)
-        .json({
-          message: "User submitted successfully",
-          responseID: newUser.id,
-        });
+      return res.status(200).json({
+        message: "User submitted successfully",
+        responseID: newUser.id,
+      });
     }
     return res.status(405).json({ message: "Method Not Allowed" });
   } catch (error) {

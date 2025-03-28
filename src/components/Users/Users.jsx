@@ -13,7 +13,7 @@ import { Error, Loading } from "../Contact/Contact.style";
 
 function Users() {
   const { id } = useParams();
-  const [clicked, setClicked] = useState(false);
+  const [clicked, setClicked] = useState(true);
   const {
     users: user,
     error,
@@ -22,6 +22,7 @@ function Users() {
 
   console.log("id", id, "user", user, "error", error, "loading", loading);
   console.log("JSON.stringify(user)", JSON.stringify(user));
+
   return (
     <UserContainer loc="UserContainer">
       {loading && !error && (
