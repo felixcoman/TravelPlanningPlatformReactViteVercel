@@ -227,7 +227,7 @@ const Contact = () => {
           Send Feedback
         </ContactButton>
       )}
-      {!isValid && <Error>Not valid</Error>}
+      {!isValid && <Error>Not valid!</Error>}
       <ToastComponent />
     </ContactContainer>
   );

@@ -7,14 +7,16 @@ export const UserProvider = ({ children }) => {
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
+    console.log("storedUser", storedUser);
+
     if (storedUser) {
-      fetchUser(storedUser.id);
+      fetchUser(storedUser);
     }
   }, []);
 
   const fetchUser = async (userId) => {
     try {
-      const response = await fetch(`/api/users/${userId}`);
+      const response = await fetch(`/api/users?id=${userId}`);
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { addAllChoice, removeAllChoice } from "../../global/choice/actions";
 import { ChoiceContext } from "../../global/choice/context";
@@ -39,6 +39,10 @@ const Account = () => {
 
   console.log("users", users, "usersArr", usersArr, "loading", loading);
 
+  const [inputObj, setInputObj] = useState({
+    Email: "",
+  });
+
   const [isVisible1, setIsVisible1] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
   const [splitContainer, setSplitContainer] = useState(false);
@@ -67,55 +71,67 @@ const Account = () => {
 
   const { showToast, hideToast } = useToast();
 
-  //enter login section
+  //check for users just if userArr exists and loading is ended (false); not check if there is no set input object
+  useEffect(() => {
+    if (!loading && usersArr && inputObj.Email !== "") {
+      const foundUser = usersArr.find(
+        (element) => element.Email === inputObj.Email
+      );
+      setIsFound(foundUser);
+    }
+  }, [usersArr, inputObj.Email, loading]);
+
+  //enters LOGIN section
   const handleGetAccount = () => {
+    console.log("inside handleGetAccount");
+
     setIsVisible1(!isVisible1);
     setSplitContainer(!splitContainer);
     setIsVisible2(false);
-    // setError(false);
+
+    //unset errors "Not valid!" and "Invalid email format!" and "No such user found!" when switching from login to create account or vice versa
+    setErrorInput({
+      Email: undefined,
+    });
+    setIsValid(true);
     setIsFound(true);
+    //
+
     setMessage("");
     setInputObj({ Email: "" }); //reset input field
   };
 
-  //enter create account section
+  //enters CREATE ACCOUNT section
   const handleNewAccount = () => {
     setIsVisible2(!isVisible2);
     setSplitContainer(!splitContainer);
     setIsVisible1(false);
-    // setError(false);
+
+    //unset errors "Not valid!", "Invalid email format!" and "Email already exists!" when switching from login to create account or vice versa
+    setErrorInput({
+      Email: undefined,
+    });
+    setIsValid(true);
     setIsFound(false);
+    //
+
     setInputObj({ Email: "" }); //reset input field
   };
 
-  const [inputObj, setInputObj] = useState({
-    Email: "",
-  });
-
   //Executes every time inputfield changes
   const handleChange = (e, name) => {
-    // setError(false);
+    console.log("inside handleChange");
     const value = e.target.value;
     console.log("value", value);
 
     //handleError sets isValid
     handleError(value, name);
+    console.log("isValid", isValid);
+    console.log("usersArr", usersArr);
 
-    if (usersArr && usersArr.length > 0) {
-      const foundUser = usersArr.find((element) => element.Email === value);
-      console.log("foundUser", foundUser);
-      setIsFound(foundUser !== undefined);
-
-      if (isValid && !isFound) {
-        setInputObj({ ...inputObj, [name]: value });
-        setClicked(true);
-      }
-    } else {
-      setIsFound(false);
-      if (isValid) {
-        setInputObj({ ...inputObj, [name]: value });
-        setClicked(true);
-      }
+    if (isValid) {
+      setInputObj({ ...inputObj, [name]: value });
+      setClicked(true);
     }
   };
   //inspectie functie de postare server - vezi content type header
@@ -211,6 +227,8 @@ const Account = () => {
   };
 
   const handleError = (value, name) => {
+    console.log("checking if valid");
+
     const isEmailValid = (email) => {
       const formulaEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
       return formulaEmail.test(email);
@@ -219,7 +237,7 @@ const Account = () => {
     if (!isEmailValid(value)) {
       setErrorInput({
         ...errorInput,
-        [name]: "Invalid email format.",
+        [name]: "Invalid email format!",
       });
       setIsValid(false);
     } else if (value === "Email") {
@@ -292,9 +310,9 @@ const Account = () => {
                 </AccountActionButton>
               </>
             )}
-            {!isValid && <Error loc="Error">Not valid</Error>}
+            {!isValid && <Error loc="Error">Not valid!</Error>}
             {!isFound && isVisible1 && (
-              <Error loc="Error">No such user found</Error>
+              <Error loc="Error">No such user found!</Error>
             )}
           </AccountContainer>
         )}
@@ -320,9 +338,9 @@ const Account = () => {
                 Create new account now
               </AccountActionButton>
             )}
-            {!isValid && <Error loc="Error">Not valid</Error>}
+            {!isValid && <Error loc="Error">Not valid!</Error>}
             {isFound && isVisible2 && (
-              <Error loc="Error">Email already exists</Error>
+              <Error loc="Error">Email already exists!</Error>
             )}
           </AccountContainer>
         )}
