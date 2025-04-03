@@ -28,7 +28,7 @@ const useRemoveData = (localData, indexServer, setIndexServer, arrayName) => {
       console.log("inside remove data async");
       setLoading(true);
 
-      await fetch(`/api/users/${localData}`)
+      await fetch(`/api/users?id=${localData}`)
         .then((response) => response.json())
         .then((userData) => {
           // Filter out the array of objects that contains travel options at the specified index - filters out option that needs to be deleted from server
@@ -38,7 +38,7 @@ const useRemoveData = (localData, indexServer, setIndexServer, arrayName) => {
           console.log("updatedArray", updatedArray);
 
           // Send the updated data back to the server - the remaining options
-          fetch(`/api/users/${localData}`, {
+          fetch(`/api/users?id=/${localData}`, {
             method: "PUT",
             body: JSON.stringify({
               ...userData,

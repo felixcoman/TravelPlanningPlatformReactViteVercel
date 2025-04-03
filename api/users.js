@@ -11,7 +11,7 @@ export default async function handler(req, res) {
 
   try {
     // show new user and id
-    if (queryID !== undefined) {
+    if (queryID !== undefined && req.method === "GET") {
       console.log("queryID", queryID);
 
       const existingConfig = await getAll();
@@ -84,13 +84,79 @@ export default async function handler(req, res) {
 
       if (!updateResponse.ok) {
         throw new Error(
-          `Failed to update Edge Config: ${await updateResponse.text()}`
+          `Failed to update Edge Config: ${JSON.stringify(updateResult)}`
         );
       }
 
       return res.status(200).json({
         message: "User submitted successfully",
         responseID: newUser.id,
+      });
+    }
+    if (queryID !== undefined && req.method === "PUT") {
+      const updateUser = req.body;
+      console.log("new data to be added", updateUser);
+
+      // Fetch current user data
+      const existingConfig = await getAll();
+      if (!existingConfig.userData) {
+        return res.status(400).json({
+          message: "userData key does not exist. Use PATCH to create it first.",
+        });
+      }
+
+      console.log("Existing Config in Edge:", existingConfig);
+      const users = existingConfig.userData || [];
+      console.log("Users before update", users);
+
+      // Find user index
+      const indexUpdate = users.findIndex(
+        (element) => element.Email === updateUser.Email
+      );
+      if (indexUpdate === -1) {
+        return res.status(404).json({ message: "User not found" });
+      }
+
+      console.log("indexUpdate", indexUpdate, "updateUser", updateUser);
+
+      // Replace user data
+      users[indexUpdate] = updateUser;
+
+      console.log("Updated user data:", JSON.stringify(users, null, 2));
+
+      // Update Edge Config with new user
+      const updateResponse = await fetch(
+        `https://api.vercel.com/v1/edge-config/${edgeConfigId}/items/`,
+        {
+          method: "PATCH",
+          headers: {
+            Authorization: `Bearer ${vercelApiToken}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            items: [
+              {
+                operation: "upsert",
+                key: "userData",
+                value: users,
+              },
+            ],
+          }),
+        }
+      );
+
+      const updateResult = await updateResponse.json();
+      console.log("Edge Config update result:", updateResult);
+
+      if (!updateResponse.ok) {
+        throw new Error(
+          `Failed to update Edge Config: ${JSON.stringify(updateResult)}`
+        );
+      }
+
+      return res.status(200).json({
+        message: "User updated successfully",
+        response: updateUser,
       });
     }
     return res.status(405).json({ message: "Method Not Allowed" });
