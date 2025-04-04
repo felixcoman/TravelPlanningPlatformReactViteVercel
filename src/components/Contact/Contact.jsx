@@ -78,6 +78,7 @@ const Contact = () => {
         throw new Error(`Server error: ${response.status} - ${errorMessage}`);
       }
 
+      //await response data to show succes message
       const responseData = await response.json();
       showToast("Feedback", `${responseData.message}!`, "my-info-toast");
       console.log("Server Response:", responseData);

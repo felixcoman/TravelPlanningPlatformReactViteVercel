@@ -1,4 +1,6 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 import { useNavigate } from "react-router-dom";
 import { addAllChoice, removeAllChoice } from "../../global/choice/actions";
 import { ChoiceContext } from "../../global/choice/context";
@@ -27,13 +29,15 @@ import {
 import AccountForm from "./AccountForm";
 
 const Account = () => {
+  const { localData, handleLocalData, resetLocalData } =
+    useLocalStorage("user");
+
   const navigate = useNavigate();
   const [clicked, setClicked] = useState(false);
-  let id = "";
 
   const { user, setUser } = useContext(UserContext); // destructurare UserContext
 
-  const { users, loading } = useFetchUsers(id, clicked, setClicked);
+  const { users, loading } = useFetchUsers(localData, clicked, setClicked);
 
   const usersArr = users?.users;
 
@@ -57,9 +61,6 @@ const Account = () => {
   const { stateGlobalItinerary, dispatchItinerary } =
     useContext(ItineraryContext);
 
-  const { localData, handleLocalData, resetLocalData } =
-    useLocalStorage("user");
-
   console.log(
     "localData",
     localData,
@@ -69,7 +70,8 @@ const Account = () => {
     stateGlobalItinerary
   );
 
-  const { showToast, hideToast } = useToast();
+  const { showToast } = useToast();
+  const [show, setShow] = useState(false);
 
   //check for users just if userArr exists and loading is ended (false); not check if there is no set input object
   useEffect(() => {
@@ -134,7 +136,7 @@ const Account = () => {
       setClicked(true);
     }
   };
-  //inspectie functie de postare server - vezi content type header
+
   const handleSubmit = async () => {
     console.log("New input object", inputObj);
     const add = await fetch(`/api/users`, {
@@ -150,7 +152,7 @@ const Account = () => {
       "A new user with this ID was added to the server",
       response.responseID
     );
-    return response.responseID;
+    return [response.responseID, response];
   };
 
   //function for create new account now action button
@@ -164,11 +166,13 @@ const Account = () => {
     } else {
       dispatchChoice(removeAllChoice());
       dispatchItinerary(removeAllItinerary());
-      const idul = await handleSubmit();
-      handleLocalData("user", JSON.stringify(idul));
-      console.log("S-a adagat un user cu acest id in local storage", idul);
-      setUser({ Email: inputObj.Email, idul });
-      navigate(`/users/${idul}`);
+      const [idLocal, resp] = await handleSubmit();
+      handleLocalData("user", JSON.stringify(idLocal));
+      console.log("S-a adagat un user cu acest id in local storage", idLocal);
+      setUser({ Email: inputObj.Email, idLocal });
+      if (idLocal) {
+        setShow(true);
+      } else showToast("New Account", `${resp.message}`, "my-warning-toast");
     }
   };
 
@@ -177,6 +181,7 @@ const Account = () => {
     if (!inputObj.Email) {
       showToast("Login", "Please enter a valid e-mail!", "my-warning-toast");
     } else {
+      console.log("localData", localData);
       setClicked(true);
       const userData = usersArr?.find(
         (element) => element.Email === inputObj.Email
@@ -219,11 +224,13 @@ const Account = () => {
     setIsVisible1(false); //closes login form
     setIsVisible2(false); //closes new account form
     setSplitContainer(false);
+    console.log("user", user);
+    console.log("user.Email", user.Email);
+    showToast("Logout", `Logout success, ${user.Email} !`, "my-info-toast");
     resetLocalData();
     setUser(null);
     dispatchChoice(removeAllChoice());
     dispatchItinerary(removeAllItinerary());
-    showToast("Logout", `Logout success, ${user.Email} !`, "my-info-toast");
   };
 
   const handleError = (value, name) => {
@@ -249,104 +256,128 @@ const Account = () => {
     }
   };
 
-  return (
-    <AccountSection loc="AccountSection">
-      <ButtonsContainerAccount
-        loc="ButtonsContainerAccount"
-        split={splitContainer ? "true" : "false"}
-      >
-        <Buttons
-          loc="Buttons"
-          variant="account" //prop for css
-          onClick={() => handleGetAccount()}
-        >
-          Login
-        </Buttons>
-        <Buttons
-          loc="Buttons"
-          variant="account" //prop for css
-          onClick={() => handleNewAccount()}
-        >
-          Create account
-        </Buttons>
-        <Buttons
-          loc="Buttons"
-          variant="account" //prop for css
-          onClick={() => logoutUser()}
-        >
-          Logout
-        </Buttons>
-      </ButtonsContainerAccount>
-      <InputContainerAccount
-        loc="InputContainerAccount"
-        split={splitContainer ? "true" : "false"}
-      >
-        {isVisible1 && (
-          <AccountContainer loc="AccountContainer">
-            <AccountText loc="AccountText">Enter e-mail to login</AccountText>
-            <AccountForm
-              name="Email"
-              type="Email"
-              value={inputObj["Email"]}
-              handleChange={handleChange}
-              error={errorInput["Email"]}
-            />
+  const handleCloseShow = () => {
+    setShow(!show);
+  };
 
-            {isValid && isFound && (
-              <AccountActionButton
-                loc="AccountActionButton"
-                onClick={() => {
-                  getUserData();
-                }}
-              >
-                Press to login
-              </AccountActionButton>
-            )}
-            {isValid && isFound && message && (
-              <>
-                <InfoUser loc="InfoUser">{message}</InfoUser>
-                <AccountActionButton loc="AccountActionButton" to={`/home`}>
-                  Take me to view offers!
+  return (
+    <>
+      <Modal show={show} onHide={handleCloseShow}>
+        <Modal.Header closeButton>
+          <Modal.Title>New user</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <p>{`A new user with this id ${localData} has been added!`}</p>
+        </Modal.Body>
+
+        <Modal.Footer>
+          <Button
+            variant="success"
+            onClick={() => navigate(`/users/${localData}`)}
+          >
+            OK
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      <AccountSection loc="AccountSection">
+        <ButtonsContainerAccount
+          loc="ButtonsContainerAccount"
+          split={splitContainer ? "true" : "false"}
+        >
+          <Buttons
+            loc="Buttons"
+            variant="account" //prop for css
+            onClick={() => handleGetAccount()}
+          >
+            Login
+          </Buttons>
+          <Buttons
+            loc="Buttons"
+            variant="account" //prop for css
+            onClick={() => handleNewAccount()}
+          >
+            Create account
+          </Buttons>
+          <Buttons
+            loc="Buttons"
+            variant="account" //prop for css
+            onClick={() => logoutUser()}
+          >
+            Logout
+          </Buttons>
+        </ButtonsContainerAccount>
+        <InputContainerAccount
+          loc="InputContainerAccount"
+          split={splitContainer ? "true" : "false"}
+        >
+          {isVisible1 && (
+            <AccountContainer loc="AccountContainer">
+              <AccountText loc="AccountText">Enter e-mail to login</AccountText>
+              <AccountForm
+                name="Email"
+                type="Email"
+                value={inputObj["Email"]}
+                handleChange={handleChange}
+                error={errorInput["Email"]}
+              />
+
+              {isValid && isFound && (
+                <AccountActionButton
+                  loc="AccountActionButton"
+                  onClick={() => {
+                    getUserData();
+                  }}
+                >
+                  Press to login
                 </AccountActionButton>
-              </>
-            )}
-            {!isValid && <Error loc="Error">Not valid!</Error>}
-            {!isFound && isVisible1 && (
-              <Error loc="Error">No such user found!</Error>
-            )}
-          </AccountContainer>
-        )}
-        {isVisible2 && (
-          <AccountContainer loc="AccountContainer">
-            <AccountText loc="AccountText">
-              Enter e-mail to create account
-            </AccountText>
-            <AccountForm
-              name="Email"
-              type="Email"
-              value={inputObj["Email"]}
-              handleChange={handleChange}
-              error={errorInput["Email"]}
-            />
-            {isValid && !isFound && (
-              <AccountActionButton
-                loc="AccountActionButton"
-                onClick={() => {
-                  addNewId();
-                }}
-              >
-                Create new account now
-              </AccountActionButton>
-            )}
-            {!isValid && <Error loc="Error">Not valid!</Error>}
-            {isFound && isVisible2 && (
-              <Error loc="Error">Email already exists!</Error>
-            )}
-          </AccountContainer>
-        )}
-      </InputContainerAccount>
-      <ToastComponent />
-    </AccountSection>
+              )}
+              {isValid && isFound && message && (
+                <>
+                  <InfoUser loc="InfoUser">{message}</InfoUser>
+                  <AccountActionButton loc="AccountActionButton" to={`/home`}>
+                    Take me to view offers!
+                  </AccountActionButton>
+                </>
+              )}
+              {!isValid && <Error loc="Error">Not valid!</Error>}
+              {!isFound && isVisible1 && (
+                <Error loc="Error">No such user found!</Error>
+              )}
+            </AccountContainer>
+          )}
+          {isVisible2 && (
+            <AccountContainer loc="AccountContainer">
+              <AccountText loc="AccountText">
+                Enter e-mail to create account
+              </AccountText>
+              <AccountForm
+                name="Email"
+                type="Email"
+                value={inputObj["Email"]}
+                handleChange={handleChange}
+                error={errorInput["Email"]}
+              />
+              {isValid && !isFound && (
+                <AccountActionButton
+                  loc="AccountActionButton"
+                  onClick={() => {
+                    addNewId();
+                  }}
+                >
+                  Create new account now
+                </AccountActionButton>
+              )}
+              {!isValid && <Error loc="Error">Not valid!</Error>}
+              {isFound && isVisible2 && (
+                <Error loc="Error">Email already exists!</Error>
+              )}
+            </AccountContainer>
+          )}
+        </InputContainerAccount>
+        <ToastComponent />
+      </AccountSection>
+    </>
   );
 };
 
