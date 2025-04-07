@@ -68,7 +68,9 @@ export default async function handler(req, res) {
         newUser.id = code;
         users.push(newUser);
       } else {
-        return res.status(500).json({ message: "Error generating new ID" });
+        return res
+          .status(500)
+          .json({ message: "Error generating new ID! Try again!" });
       }
 
       // Update Edge Config with new user
