@@ -29,37 +29,16 @@ import {
 import AccountForm from "./AccountForm";
 
 const Account = () => {
-  const { localData, handleLocalData, resetLocalData } =
-    useLocalStorage("user");
-
   const navigate = useNavigate();
-  const [clicked, setClicked] = useState(false);
 
   const { user, setUser } = useContext(UserContext); // destructurare UserContext
-
-  const { users, loading } = useFetchUsers(localData, clicked, setClicked);
-
-  const usersArr = users?.users;
-
-  console.log("users", users, "usersArr", usersArr, "loading", loading);
-
-  const [inputObj, setInputObj] = useState({
-    Email: "",
-  });
-
-  const [isVisible1, setIsVisible1] = useState(false);
-  const [isVisible2, setIsVisible2] = useState(false);
-  const [splitContainer, setSplitContainer] = useState(false);
-  const [message, setMessage] = useState("");
-  const [isFound, setIsFound] = useState([]);
-  const [errorInput, setErrorInput] = useState({
-    Email: undefined,
-  });
-  const [isValid, setIsValid] = useState(true);
 
   const { stateGlobalChoice, dispatchChoice } = useContext(ChoiceContext);
   const { stateGlobalItinerary, dispatchItinerary } =
     useContext(ItineraryContext);
+
+  const { localData, handleLocalData, resetLocalData } =
+    useLocalStorage("user");
 
   console.log(
     "localData",
@@ -72,6 +51,24 @@ const Account = () => {
 
   const { showToast } = useToast();
   const [show, setShow] = useState(false);
+  const [inputObj, setInputObj] = useState({
+    Email: "",
+  });
+  const [isID, setID] = useState("");
+  const [isVisible1, setIsVisible1] = useState(false);
+  const [isVisible2, setIsVisible2] = useState(false);
+  const [splitContainer, setSplitContainer] = useState(false);
+  const [message, setMessage] = useState("");
+  const [isFound, setIsFound] = useState([]);
+  const [errorInput, setErrorInput] = useState({
+    Email: undefined,
+  });
+  const [isValid, setIsValid] = useState(true);
+  const [clicked, setClicked] = useState(false);
+
+  const { users, loading } = useFetchUsers(isID, clicked, setClicked);
+  const usersArr = users?.users;
+  console.log("users", users, "usersArr", usersArr, "loading", loading);
 
   //check for users just if userArr exists and loading is ended (false); not check if there is no set input object
   useEffect(() => {
@@ -85,7 +82,7 @@ const Account = () => {
 
   //enters LOGIN section
   const handleGetAccount = () => {
-    console.log("inside handleGetAccount");
+    console.log("INSIDE HANDLEGETACCOUNT");
 
     setIsVisible1(!isVisible1);
     setSplitContainer(!splitContainer);
@@ -105,6 +102,7 @@ const Account = () => {
 
   //enters CREATE ACCOUNT section
   const handleNewAccount = () => {
+    console.log("INSIDE HANDLENEWACCOUNT");
     setIsVisible2(!isVisible2);
     setSplitContainer(!splitContainer);
     setIsVisible1(false);
@@ -122,7 +120,8 @@ const Account = () => {
 
   //Executes every time inputfield changes
   const handleChange = (e, name) => {
-    console.log("inside handleChange");
+    setMessage("");
+    console.log("INSIDE HANDLECHANGE");
     const value = e.target.value;
     console.log("value", value);
 
@@ -157,6 +156,7 @@ const Account = () => {
 
   //function for create new account now action button
   const addNewId = async () => {
+    console.log("PRESSED CREATE ACCOUNT NOW");
     if (!inputObj.Email) {
       showToast(
         "New Account",
@@ -168,6 +168,7 @@ const Account = () => {
       dispatchItinerary(removeAllItinerary());
       const [idLocal, resp] = await handleSubmit();
       handleLocalData("user", JSON.stringify(idLocal));
+      setID(idLocal);
       console.log("S-a adagat un user cu acest id in local storage", idLocal);
       setUser({ Email: inputObj.Email, idLocal });
       if (idLocal) {
@@ -178,19 +179,24 @@ const Account = () => {
 
   //function for login action button
   const getUserData = () => {
+    console.log("PRESSED TO LOGIN");
     if (!inputObj.Email) {
       showToast("Login", "Please enter a valid e-mail!", "my-warning-toast");
     } else {
-      console.log("localData", localData);
+      console.log("localData", localData, "isID", isID);
+      setID("");
+      dispatchChoice(removeAllChoice());
+      dispatchItinerary(removeAllItinerary());
       setClicked(true);
       const userData = usersArr?.find(
         (element) => element.Email === inputObj.Email
       );
-      console.log("users", usersArr);
+      console.log("usersArr", usersArr);
       console.log("inputObj", inputObj);
       console.log("userData", userData);
 
       handleLocalData("user", JSON.stringify(userData.id));
+      setID(userData.id);
       setUser(userData);
 
       if (userData.choices) {
@@ -226,11 +232,12 @@ const Account = () => {
     setSplitContainer(false);
     console.log("user", user);
     console.log("user.Email", user.Email);
-    showToast("Logout", `Logout success, ${user.Email} !`, "my-info-toast");
     resetLocalData();
-    setUser(null);
+    setID("");
     dispatchChoice(removeAllChoice());
     dispatchItinerary(removeAllItinerary());
+    showToast("Logout", `Logout success, ${user.Email} !`, "my-info-toast");
+    setUser(null);
   };
 
   const handleError = (value, name) => {
@@ -268,14 +275,11 @@ const Account = () => {
         </Modal.Header>
 
         <Modal.Body>
-          <p>{`A new user with this id ${localData} has been added!`}</p>
+          <p>{`A new user with this id ${isID} has been added!`}</p>
         </Modal.Body>
 
         <Modal.Footer>
-          <Button
-            variant="success"
-            onClick={() => navigate(`/users/${localData}`)}
-          >
+          <Button variant="success" onClick={() => navigate(`/users/${isID}`)}>
             OK
           </Button>
         </Modal.Footer>
