@@ -1,9 +1,14 @@
 import { getAll } from "@vercel/edge-config";
+// import { addAllItinerary } from "../../global/itinerary/actions";
+// import { ItineraryContext } from "../../global/itinerary/context";
+// import { useContext } from "react";
 
 export default async function handler(req, res) {
   const vercelApiToken = process.env.VERCEL_ACCESS_TOKEN;
   const edgeConfigId = process.env.EDGE_CONFIG_ID;
   const queryID = req.query.id; // Match the frontend parameter name
+
+  // const { dispatchItinerary } = useContext(ItineraryContext);
 
   if (!vercelApiToken || !edgeConfigId) {
     return res.status(500).json({ message: "Missing Vercel API credentials" });
@@ -15,16 +20,23 @@ export default async function handler(req, res) {
       console.log("queryID", queryID);
 
       const existingConfig = await getAll();
-      console.log("Existing Config:", existingConfig);
+      console.log("Existing Config:", JSON.stringify(existingConfig, null, 2));
 
       const users = existingConfig.userData || [];
-      console.log("Users Array:", users);
+      console.log("Users Array:", JSON.stringify(users, null, 2));
 
       const getID = users.find((element) => element.id == queryID);
 
       if (!getID) {
         return res.status(404).json({ message: "User not found" });
       }
+      //adding user travel data after page refresh??? in work
+
+      // getID.itinerarycity
+
+      // getID.itinerarycity
+      //   ? dispatchItinerary(addAllItinerary(getID.itinerarycity))
+      //   : null;
 
       return res.status(200).json(getID);
     }
@@ -42,7 +54,7 @@ export default async function handler(req, res) {
       // Fetch current user data
       const existingConfig = await getAll();
       const users = existingConfig.userData || [];
-      console.log("users", users);
+      console.log("users", JSON.stringify(users, null, 2));
 
       function getRandomInt(max) {
         return Math.floor(Math.random() * max);
@@ -105,7 +117,10 @@ export default async function handler(req, res) {
         });
       }
 
-      console.log("Existing Config in Edge:", existingConfig);
+      console.log(
+        "Existing Config in Edge:",
+        JSON.stringify(existingConfig, null, 2)
+      );
       const users = existingConfig.userData || [];
       console.log("Users before update", users);
 
@@ -156,7 +171,7 @@ export default async function handler(req, res) {
 
       return res.status(200).json({
         message: "User updated successfully",
-        response: updateUser,
+        response: users,
       });
     }
     return res.status(405).json({ message: "Method Not Allowed" });
