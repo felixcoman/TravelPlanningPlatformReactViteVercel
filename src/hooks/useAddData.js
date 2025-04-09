@@ -3,10 +3,22 @@ import { useEffect, useState } from "react";
 const useAddData = (localData, addData, setAddData, arrayName) => {
   console.log("addData", addData, "arrayName", arrayName);
 
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [error1, setError1] = useState(null);
+  const [error2, setError2] = useState(null);
+  const [loading1, setLoading1] = useState(true);
+  const [loading2, setLoading2] = useState(true);
+  const [respData, setRespData] = useState("");
 
-  console.log("error", error, "loading", loading);
+  console.log(
+    "error1",
+    error1,
+    "error2",
+    error2,
+    "loading1",
+    loading1,
+    "loading2",
+    loading2
+  );
   console.log("inside add data function");
 
   useEffect(() => {
@@ -22,11 +34,12 @@ const useAddData = (localData, addData, setAddData, arrayName) => {
       return;
     }
 
-    setError(false);
+    setError1(false);
+    setError2(false);
 
     const handleUpdateServer = async () => {
       console.log("inside add data async");
-      setLoading(true);
+      setLoading1(true);
 
       await fetch(`/api/users?id=${localData}`)
         .then((response) => response.json())
@@ -37,6 +50,7 @@ const useAddData = (localData, addData, setAddData, arrayName) => {
             : [addData];
 
           console.log("newData", newData, "userData", userData);
+          setLoading2(true);
 
           // Send the updated data back to the server - new travel options
           fetch(`/api/users?id=${localData}`, {
@@ -47,24 +61,28 @@ const useAddData = (localData, addData, setAddData, arrayName) => {
             body: JSON.stringify({ ...userData, [arrayName]: newData }),
           })
             .then((response) => response.json())
-            .then((json) => console.log(json))
-            .catch((error) => {
-              setError(error);
-              console.error("Error 1 updating user data:", error);
+            .then((json) => {
+              console.log("json update server, respData", json);
+              setRespData(json);
             })
-            .finally(() => setLoading(false));
+            .catch((error1) => {
+              setError1(error1);
+              console.error("Error 1 updating user data:", error1);
+            })
+            .finally(() => setLoading2(false));
         })
-        .catch((error) => {
-          setError(error);
-          console.error("Error 2 fetching user data:", error);
+        .catch((error2) => {
+          setError2(error2);
+          console.error("Error 2 fetching user data:", error2);
         })
-        .finally(() => setLoading(false));
+        .finally(() => setLoading1(false));
     };
 
     handleUpdateServer();
 
     setAddData("");
+    setRespData("");
   }, [addData]);
-  return { error, loading };
+  return { respData, error1, error2, loading1, loading2 };
 };
 export default useAddData;

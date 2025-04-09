@@ -124,7 +124,7 @@ export default async function handler(req, res) {
         JSON.stringify(existingConfig, null, 2)
       );
       const users = existingConfig.userData || [];
-      console.log("Users before update", users);
+      console.log("Users before update", JSON.stringify(users, null, 2));
 
       // Find user index
       const indexUpdate = users.findIndex(
