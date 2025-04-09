@@ -47,9 +47,9 @@ function App() {
 
   return (
     <ToastProvider>
-      <UserProvider>
-        <ChoiceContext.Provider value={choiceContextValue}>
-          <ItineraryContext.Provider value={itineraryContextValue}>
+      <ChoiceContext.Provider value={choiceContextValue}>
+        <ItineraryContext.Provider value={itineraryContextValue}>
+          <UserProvider>
             <NavBar />
             <MainSection loc="MainSection">
               <Routes>
@@ -81,9 +81,9 @@ function App() {
               </Routes>
             </MainSection>
             <Footer />
-          </ItineraryContext.Provider>
-        </ChoiceContext.Provider>
-      </UserProvider>
+          </UserProvider>
+        </ItineraryContext.Provider>
+      </ChoiceContext.Provider>
     </ToastProvider>
   );
 }
