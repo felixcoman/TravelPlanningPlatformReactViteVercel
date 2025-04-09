@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Spinner from "react-bootstrap/Spinner";
 import { useNavigate, useParams } from "react-router-dom";
 import { itineraryPlus } from "../../global/itinerary/actions";
@@ -78,15 +78,36 @@ const Explore = () => {
 
   let accommodationArray = [];
 
-  const { error, loading } = useAddData(
+  const { respData, error1, error2, loading1, loading2 } = useAddData(
     localData,
     addData,
     setAddData,
     "itinerarycity"
   );
-  console.log("error HOOK", error, "loading HOOK", loading);
+  console.log(
+    "error1",
+    error1,
+    "error2",
+    error2,
+    "loading1",
+    loading1,
+    "loading2",
+    loading2
+  );
 
   const { showToast } = useToast();
+
+  useEffect(() => {
+    //send data to global store and show success message just if there is response data, loading stopped and no errors
+    if (!loading2 && respData && !error1 && !error2) {
+      dispatchItinerary(itineraryPlus({ country, city }));
+      showToast(
+        "Itinerary",
+        `Success! ${city} was added to the Itinerary!`,
+        "my-info-toast"
+      );
+    }
+  }, [loading2, respData]);
 
   // this function handles 2 cases and calls different separate functions depending on which case is true: if there is duplicate it notifies the user and prevents the onClick event; else it dispatches data to State Management, adds intinerary data to user on server and notifies user that data was added
 
@@ -105,14 +126,8 @@ const Explore = () => {
       console.log("cannot be added");
       event.preventDefault();
     } else {
-      showToast(
-        "Itinerary",
-        `Success! ${city} was added to the Itinerary!`,
-        "my-info-toast"
-      );
-      dispatchItinerary(itineraryPlus({ country, city }));
-      setAddData(addObject);
       console.log("can be added");
+      setAddData(addObject); // launches useAddData
     }
   };
 

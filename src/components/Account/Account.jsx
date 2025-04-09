@@ -77,6 +77,7 @@ const Account = () => {
         (element) => element.Email === inputObj.Email
       );
       setIsFound(foundUser);
+      console.log("User was found!");
     }
   }, [usersArr, inputObj.Email, loading]);
 
@@ -131,8 +132,8 @@ const Account = () => {
     console.log("usersArr", usersArr);
 
     if (isValid) {
-      setInputObj({ ...inputObj, [name]: value });
       setClicked(true);
+      setInputObj({ ...inputObj, [name]: value });
     }
   };
 
@@ -198,27 +199,33 @@ const Account = () => {
       handleLocalData("user", JSON.stringify(userData.id));
       setID(userData.id);
       setUser(userData);
+      let noTravelOptions = true;
 
       if (userData.choices) {
-        dispatchChoice(addAllChoice(userData.choices));
-        console.log("userData.choices", userData.choices);
+        if (userData.choices.length !== 0) {
+          noTravelOptions = false;
+          dispatchChoice(addAllChoice(userData.choices));
+          console.log("userData.choices", userData.choices);
+        }
       }
-
       if (userData.itinerarycity) {
-        dispatchItinerary(addAllItinerary(userData.itinerarycity));
-        console.log("userData.itinerarycity", userData.itinerarycity);
+        if (userData?.itinerarycity?.length !== 0) {
+          noTravelOptions = false;
+          dispatchItinerary(addAllItinerary(userData.itinerarycity));
+          console.log("userData.itinerarycity", userData.itinerarycity);
+        }
       }
-
       if (userData.itinerarylandmark) {
-        dispatchItinerary(addAllItineraryLandmark(userData.itinerarylandmark));
-        console.log("userData.itinerarylandmark", userData.itinerarylandmark);
+        if (userData?.itinerarylandmark?.length !== 0) {
+          noTravelOptions = false;
+          dispatchItinerary(
+            addAllItineraryLandmark(userData.itinerarylandmark)
+          );
+          console.log("userData.itinerarylandmark", userData.itinerarylandmark);
+        }
       }
 
-      if (
-        !userData.choices &&
-        !userData.itinerarycity &&
-        !userData.itinerarylandmark
-      ) {
+      if (noTravelOptions === true) {
         setMessage("No travel options yet!");
         setSplitContainer(false);
       }
