@@ -15,7 +15,8 @@ export default async function handler(req, res) {
   }
 
   try {
-    // show new user and id
+    // QUERY PARAMETER AND GET
+
     if (queryID !== undefined && req.method === "GET") {
       console.log("queryID", queryID);
 
@@ -30,16 +31,10 @@ export default async function handler(req, res) {
       if (!getID) {
         return res.status(404).json({ message: "User not found" });
       }
-      //adding user travel data after page refresh??? in work
-
-      // getID.itinerarycity
-
-      // getID.itinerarycity
-      //   ? dispatchItinerary(addAllItinerary(getID.itinerarycity))
-      //   : null;
-
       return res.status(200).json(getID);
     }
+
+    // GET
 
     if (req.method === "GET") {
       // Fetch existing users
@@ -107,6 +102,9 @@ export default async function handler(req, res) {
         responseID: newUser.id,
       });
     }
+
+    // QUERY PARAMETER AND PUT (PATCH ALL)
+
     if (queryID !== undefined && req.method === "PUT") {
       const updateUser = req.body;
       console.log("new data to be added", updateUser);

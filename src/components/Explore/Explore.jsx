@@ -1,10 +1,11 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import Spinner from "react-bootstrap/Spinner";
 import { useNavigate, useParams } from "react-router-dom";
 import { itineraryPlus } from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
+import { useToast } from "../../global/toast/ToastContext";
 import containsObject from "../../global/utilities/containsObject";
-import useAddData from "../../hooks/useAddData";
+import useDataQueue from "../../hooks/useDataQueue";
 import useFetchData from "../../hooks/useFetchData";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import Attributions from "../Attributions/Attributions";
@@ -31,7 +32,6 @@ import {
   Subtitle,
   Title,
 } from "./Explore.style";
-import { useToast } from "../../global/toast/ToastContext";
 
 const Explore = () => {
   const navigate = useNavigate();
@@ -55,7 +55,6 @@ const Explore = () => {
   const { country, city } = useParams();
 
   const [clicked, setClicked] = useState(true);
-  const [addData, setAddData] = useState("");
 
   const urlCity = country && city ? `/api/${country}?city=${city}` : null;
 
@@ -78,41 +77,15 @@ const Explore = () => {
 
   let accommodationArray = [];
 
-  const { respData, error1, error2, loading1, loading2 } = useAddData(
-    localData,
-    addData,
-    setAddData,
-    "itinerarycity"
-  );
-  console.log(
-    "error1",
-    error1,
-    "error2",
-    error2,
-    "loading1",
-    loading1,
-    "loading2",
-    loading2
-  );
-
   const { showToast } = useToast();
 
-  useEffect(() => {
-    //send data to global store and show success message just if there is response data, loading stopped and no errors
-    if (!loading2 && respData && !error1 && !error2) {
-      dispatchItinerary(itineraryPlus({ country, city }));
-      showToast(
-        "Itinerary",
-        `Success! ${city} was added to the Itinerary!`,
-        "my-info-toast"
-      );
-    }
-  }, [loading2, respData]);
+  const enqueueCity = useDataQueue(localData, "itinerarycity");
+  const enqueueLandmark = useDataQueue(localData, "itinerarylandmark");
 
   // this function handles 2 cases and calls different separate functions depending on which case is true: if there is duplicate it notifies the user and prevents the onClick event; else it dispatches data to State Management, adds intinerary data to user on server and notifies user that data was added
 
   const handleAddItinerary = (country, city, event) => {
-    console.log("HANDLE ADD ITINERARY");
+    console.log("HANDLE ADD ITINERARY CITY");
 
     const addObject = { country, city };
     console.log("addObject", addObject);
@@ -127,7 +100,13 @@ const Explore = () => {
       event.preventDefault();
     } else {
       console.log("can be added");
-      setAddData(addObject); // launches useAddData
+      enqueueCity(addObject);
+      dispatchItinerary(itineraryPlus({ country, city }));
+      showToast(
+        "Itinerary",
+        `Success! ${city} was added to the Itinerary!`,
+        "my-info-toast"
+      );
     }
   };
 
@@ -284,6 +263,7 @@ const Explore = () => {
                 key={index}
                 {...destination}
                 showToast={showToast}
+                enqueue={enqueueLandmark}
               />
             ))}
         </SectionLandmarkData>

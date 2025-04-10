@@ -132,7 +132,7 @@ const Account = () => {
     console.log("usersArr", usersArr);
 
     if (isValid) {
-      setClicked(true);
+      setClicked(true); //launches useFetchUsers
       setInputObj({ ...inputObj, [name]: value });
     }
   };
@@ -188,7 +188,7 @@ const Account = () => {
       setID("");
       dispatchChoice(removeAllChoice());
       dispatchItinerary(removeAllItinerary());
-      setClicked(true);
+      setClicked(true); //launches useFetchUsers
       const userData = usersArr?.find(
         (element) => element.Email === inputObj.Email
       );
@@ -228,7 +228,17 @@ const Account = () => {
       if (noTravelOptions === true) {
         setMessage("No travel options yet!");
         setSplitContainer(false);
-      }
+        showToast(
+          "Login",
+          `Login success, ${userData.Email} !`,
+          "my-info-toast"
+        );
+      } else
+        showToast(
+          "Login",
+          `Login success, ${userData.Email} ! Travel options loaded!`,
+          "my-info-toast"
+        );
     }
   };
 
