@@ -28,9 +28,10 @@ function Accommodation() {
 
   useEffect(() => {
     const fetchData = async (country, city) => {
-      if (country !== undefined && city !== undefined) {
+      let lowerCountry = country.toLowerCase();
+      if (lowerCountry !== undefined && city !== undefined) {
         try {
-          const response = await fetch(`/api/${country}?city=${city}`);
+          const response = await fetch(`/api/${lowerCountry}?city=${city}`);
           if (!response.ok) {
             throw new Error("Network response was not ok");
           }

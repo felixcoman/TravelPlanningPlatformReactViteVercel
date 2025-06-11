@@ -16,6 +16,7 @@ export const ButtonLandmark = styled(Link)`
   text-align: center;
   text-decoration: none;
   cursor: pointer;
+  opacity: ${(props) => (props.disabled ? "0.5" : "1")};
 `;
 
 export const ImgWrapper = styled.div`

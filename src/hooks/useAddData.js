@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 
-const useAddData = (localData, addData, setAddData, arrayName) => {
-  console.log("addData", addData, "arrayName", arrayName);
+const useAddData = (localData, addData, respData, setRespData, setNameDest) => {
+  console.log("addData", addData);
 
   const [error1, setError1] = useState(null);
   const [error2, setError2] = useState(null);
-  const [loading1, setLoading1] = useState(true);
-  const [loading2, setLoading2] = useState(true);
-  const [respData, setRespData] = useState("");
+  const [loading1, setLoading1] = useState(false);
+  const [loading2, setLoading2] = useState(false);
+
+  let arrayName = "";
 
   console.log(
     "error1",
@@ -25,14 +26,21 @@ const useAddData = (localData, addData, setAddData, arrayName) => {
     console.log("inside add data useEffect");
 
     if (localData === null) {
-      console.log("No user");
+      console.log("No user!");
       return;
     }
 
-    if (addData === "") {
-      console.log("No data");
+    if (Object.keys(addData).length === 0) {
+      console.log("No data!");
       return;
     }
+
+    console.log("Proprietate", addData.hasOwnProperty("name"));
+
+    if (addData.hasOwnProperty("name")) {
+      arrayName = "itinerarylandmark";
+      setNameDest(addData.name);
+    } else arrayName = "itinerarycity";
 
     setError1(false);
     setError2(false);
@@ -65,23 +73,20 @@ const useAddData = (localData, addData, setAddData, arrayName) => {
               console.log("json update server, respData", json);
               setRespData(json);
             })
-            .catch((error1) => {
-              setError1(error1);
-              console.error("Error 1 updating user data:", error1);
+            .catch((error2) => {
+              setError1(error2);
+              console.error("Error 2 updating user data:", error2);
             })
             .finally(() => setLoading2(false));
         })
-        .catch((error2) => {
-          setError2(error2);
-          console.error("Error 2 fetching user data:", error2);
+        .catch((error1) => {
+          setError1(error1);
+          console.error("Error 1 fetching user data:", error1);
         })
         .finally(() => setLoading1(false));
     };
 
     handleUpdateServer();
-
-    setAddData("");
-    setRespData("");
   }, [addData]);
   return { respData, error1, error2, loading1, loading2 };
 };

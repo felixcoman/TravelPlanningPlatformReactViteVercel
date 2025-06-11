@@ -1,9 +1,12 @@
-export function itineraryPlus({ country, city }) {
-  return { type: "INTINERARY_PLUS", payload: { country, city } };
+export function itineraryPlus({ transCountry, city }) {
+  return { type: "INTINERARY_PLUS", payload: { country: transCountry, city } };
 }
 
-export function itineraryLandmarkPlus({ country, city, name }) {
-  return { type: "INTINERARY_LANDMARK_PLUS", payload: { country, city, name } };
+export function itineraryLandmarkPlus({ transCountry, city, nameDest }) {
+  return {
+    type: "INTINERARY_LANDMARK_PLUS",
+    payload: { country: transCountry, city, name: nameDest },
+  };
 }
 
 export function addAllItinerary(itinerarycity) {

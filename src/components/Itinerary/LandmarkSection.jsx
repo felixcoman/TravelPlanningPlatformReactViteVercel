@@ -29,6 +29,7 @@ function LandmarkSection() {
   console.log("error HOOK", error, "loading HOOK", loading);
 
   const handleDelete = (index) => {
+    console.log("handleDelete active");
     setClicked(true);
     setShow(false);
     dispatchItinerary(itineraryLandmarkMinus(index));

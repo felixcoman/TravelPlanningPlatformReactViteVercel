@@ -31,6 +31,10 @@ const useRemoveData = (localData, indexServer, setIndexServer, arrayName) => {
       await fetch(`/api/users?id=${localData}`)
         .then((response) => response.json())
         .then((userData) => {
+          const toDeleteElement = userData[arrayName].filter(
+            (e, i) => i === indexServer
+          );
+          console.log("To be deleted element", toDeleteElement);
           // Filter out the array of objects that contains travel options at the specified index - filters out option that needs to be deleted from server
           const updatedArray = userData[arrayName].filter(
             (e, i) => i !== indexServer
@@ -38,7 +42,7 @@ const useRemoveData = (localData, indexServer, setIndexServer, arrayName) => {
           console.log("updatedArray", updatedArray);
 
           // Send the updated data back to the server - the remaining options
-          fetch(`/api/users?id=/${localData}`, {
+          fetch(`/api/users?id=${localData}`, {
             method: "PUT",
             body: JSON.stringify({
               ...userData,
