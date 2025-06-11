@@ -97,10 +97,6 @@ export const Subtitle = styled.h2`
   text-align: left;
 `;
 
-export const CountrySubtitle = styled(Subtitle)`
-  text-transform: capitalize;
-`;
-
 export const ContainerDescriptionBottom = styled.div`
   display: flex;
   width: 100%;
@@ -163,10 +159,12 @@ export const ButtonCity = styled(Link)`
     border: solid 2px white;
     box-shadow: 0 0 80px ${LIFELINE_ORANGE};
   }
+  opacity: ${(props) => (props.disabled ? "0.5" : "1")};
 `;
 
 export const ButtonAccommodationExplore = styled(ButtonAccommodation)`
   width: 100%;
+  opacity: ${(props) => (props.disabled ? "0.5" : "1")};
 `;
 
 export const SectionLandmarkDataWrapper = styled.section`

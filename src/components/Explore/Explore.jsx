@@ -1,11 +1,15 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Spinner from "react-bootstrap/Spinner";
 import { useNavigate, useParams } from "react-router-dom";
-import { itineraryPlus } from "../../global/itinerary/actions";
+import {
+  itineraryLandmarkPlus,
+  itineraryPlus,
+} from "../../global/itinerary/actions";
 import { ItineraryContext } from "../../global/itinerary/context";
 import { useToast } from "../../global/toast/ToastContext";
 import containsObject from "../../global/utilities/containsObject";
-import useDataQueue from "../../hooks/useDataQueue";
+import transformToUppercase from "../../global/utilities/transformToUppercase";
+import useAddData from "../../hooks/useAddData";
 import useFetchData from "../../hooks/useFetchData";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import Attributions from "../Attributions/Attributions";
@@ -21,7 +25,6 @@ import {
   ContainerDescriptionBottom,
   ContainerDescriptionTop,
   ContainerTop,
-  CountrySubtitle,
   ImageCity,
   MyStamp,
   SectionCityButtons,
@@ -55,6 +58,10 @@ const Explore = () => {
   const { country, city } = useParams();
 
   const [clicked, setClicked] = useState(true);
+  const [addData, setAddData] = useState("");
+  const [respData, setRespData] = useState("");
+  const [disableUI, setDisableUI] = useState(false);
+  const [nameDest, setNameDest] = useState("");
 
   const urlCity = country && city ? `/api/${country}?city=${city}` : null;
 
@@ -76,18 +83,81 @@ const Explore = () => {
   console.log("compactDataCity", compactDataCity);
 
   let accommodationArray = [];
+  let transCountry = transformToUppercase(country);
 
   const { showToast } = useToast();
 
-  const enqueueCity = useDataQueue(localData, "itinerarycity");
-  const enqueueLandmark = useDataQueue(localData, "itinerarylandmark");
+  const { error1, error2, loading1, loading2 } = useAddData(
+    localData,
+    addData,
+    respData,
+    setRespData,
+    setNameDest
+  );
+  console.log(
+    "respData",
+    respData,
+    "error1",
+    error1,
+    "error2",
+    error2,
+    "loading1",
+    loading1,
+    "loading2",
+    loading2
+  );
+
+  useEffect(() => {
+    //send data to global store and show success message just if there is response data, loading stopped and no errors
+    if (!loading2 && !error1 && !error2 && addData !== "") {
+      console.log("EXPLORE USE EFFECT");
+      console.log("addData", addData);
+      console.log("respData", respData);
+      if (addData.hasOwnProperty("name")) {
+        console.log("Landmark", nameDest);
+        console.log(
+          "country",
+          country,
+          "city",
+          city,
+          "transCountry",
+          transCountry
+        );
+
+        dispatchItinerary(
+          itineraryLandmarkPlus({ transCountry, city, nameDest })
+        );
+        showToast(
+          "Itinerary",
+          `Success! ${nameDest} was added to the Itinerary!`,
+          "my-info-toast"
+        );
+        setAddData("");
+        setRespData("");
+        setDisableUI(false);
+      } else {
+        console.log("ITINERARY");
+        console.log("country", country, "transCountry", transCountry);
+        dispatchItinerary(itineraryPlus({ transCountry, city }));
+        showToast(
+          "Itinerary",
+          `Success! ${city} was added to the Itinerary!`,
+          "my-info-toast"
+        );
+        setAddData("");
+        setRespData("");
+        setDisableUI(false);
+      }
+    }
+  }, [respData]);
 
   // this function handles 2 cases and calls different separate functions depending on which case is true: if there is duplicate it notifies the user and prevents the onClick event; else it dispatches data to State Management, adds intinerary data to user on server and notifies user that data was added
 
-  const handleAddItinerary = (country, city, event) => {
+  const handleAddItinerary = (transCountry, city, event) => {
+    if (disableUI) return;
     console.log("HANDLE ADD ITINERARY CITY");
 
-    const addObject = { country, city };
+    const addObject = { country: transCountry, city };
     console.log("addObject", addObject);
 
     if (containsObject(itineraryValueArray, addObject)) {
@@ -100,13 +170,8 @@ const Explore = () => {
       event.preventDefault();
     } else {
       console.log("can be added");
-      enqueueCity(addObject);
-      dispatchItinerary(itineraryPlus({ country, city }));
-      showToast(
-        "Itinerary",
-        `Success! ${city} was added to the Itinerary!`,
-        "my-info-toast"
-      );
+      setAddData(addObject); // launches useAddData
+      setDisableUI(true);
     }
   };
 
@@ -135,6 +200,7 @@ const Explore = () => {
   };
 
   const goAccomm = (event) => {
+    if (disableUI) return;
     console.log("GO ACCOMM");
     console.log("Navigating to: ", `/accommodation`);
     console.log("State: ", { accommodationArray });
@@ -144,14 +210,14 @@ const Explore = () => {
       populateAccommondationArray(itineraryValueArray, accommodationArray);
       console.log("accommodationArray", accommodationArray);
 
-      handleAddItinerary(country, city, event);
+      handleAddItinerary(transCountry, city, event);
 
-      addObjectPair({ country, city });
+      addObjectPair({ country: transCountry, city });
     } else {
       console.log("SUNT PE ELSE");
-      handleAddItinerary(country, city, event);
+      handleAddItinerary(transCountry, city, event);
 
-      accommodationArray.push({ country, city });
+      accommodationArray.push({ transCountry, city });
     }
 
     console.log("accommodationArray", accommodationArray);
@@ -205,9 +271,7 @@ const Explore = () => {
                   />
                 </a>
                 <ContainerDescriptionTop loc="ContainerDescriptionTop">
-                  <CountrySubtitle loc="CountrySubtitle">
-                    {country}
-                  </CountrySubtitle>
+                  <Subtitle loc="CountrySubtitle">{transCountry}</Subtitle>
                   {compactDataCity.reg && (
                     <Subtitle loc="Subtitle">{compactDataCity.reg}</Subtitle>
                   )}
@@ -241,7 +305,18 @@ const Explore = () => {
           </>
         )}
       </SectionCityData>
-      <SectionLandmarkDataWrapper loc="SectionLandmarkDataWrapper">
+      {disableUI && (
+        <Loading loc="Loading">
+          <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
+          Saving your itinerary...
+        </Loading>
+      )}
+      <SectionLandmarkDataWrapper
+        loc="SectionLandmarkDataWrapper"
+        disabled={disableUI}
+      >
         <SectionLandmarkData loc="SectionLandmarkData">
           {loadingDestination && (
             <Loading loc="Loading">
@@ -263,7 +338,9 @@ const Explore = () => {
                 key={index}
                 {...destination}
                 showToast={showToast}
-                enqueue={enqueueLandmark}
+                setAddData={setAddData}
+                disableUI={disableUI}
+                setDisableUI={setDisableUI}
               />
             ))}
         </SectionLandmarkData>
@@ -275,14 +352,16 @@ const Explore = () => {
           <ButtonCity
             loc="ButtonCity"
             onClick={(event) => {
-              handleAddItinerary(country, city, event);
+              handleAddItinerary(transCountry, city, event);
             }}
+            disabled={disableUI}
           >
-            Save {city} to my itinerary!
+            Save {city} to My Itinerary!
           </ButtonCity>
           <ButtonAccommodationExplore
             loc="ButtonAccommodationExplore"
             onClick={(event) => goAccomm(event)}
+            disabled={disableUI}
           >
             I want to book accommodation!
           </ButtonAccommodationExplore>

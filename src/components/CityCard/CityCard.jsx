@@ -17,9 +17,10 @@ function CityCard({
   clicked,
   setClicked,
 }) {
+  let lowerCountry = country.toLowerCase();
   console.log("country", country, "city", city, "index", index);
 
-  const url = `/api/${country}?city=${city}`;
+  const url = `/api/${lowerCountry}?city=${city}`;
   console.log("url", url, "clicked", clicked);
 
   const { data, error, loading } = useFetchData(url, clicked, setClicked);

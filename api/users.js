@@ -107,7 +107,7 @@ export default async function handler(req, res) {
 
     if (queryID !== undefined && req.method === "PUT") {
       const updateUser = req.body;
-      console.log("new data to be added", updateUser);
+      console.log("new data to be added", updateUser, " queryID", queryID);
 
       // Fetch current user data
       const existingConfig = await getAll();
@@ -125,6 +125,14 @@ export default async function handler(req, res) {
       console.log("Users before update", JSON.stringify(users, null, 2));
 
       // Find user index
+      if (!updateUser["Email"]) {
+        return res
+          .status(404)
+          .json({
+            message:
+              "User e-mail missing from new content! For valid content user information has to be PUT!",
+          });
+      }
       const indexUpdate = users.findIndex(
         (element) => element.Email === updateUser.Email
       );
