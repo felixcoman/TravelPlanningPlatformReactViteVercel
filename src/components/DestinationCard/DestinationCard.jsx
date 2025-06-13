@@ -48,10 +48,6 @@ function DestinationCard({
       "addObject",
       addObject
     );
-    console.log(
-      "REZULTAT COMPARATIE",
-      containsObject(itineraryLandmarkValueArray, addObject)
-    );
 
     if (containsObject(itineraryLandmarkValueArray, addObject)) {
       showToast(

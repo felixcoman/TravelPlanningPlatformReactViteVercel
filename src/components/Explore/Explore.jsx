@@ -94,22 +94,26 @@ const Explore = () => {
     setRespData,
     setNameDest
   );
-  console.log(
-    "respData",
-    respData,
-    "error1",
-    error1,
-    "error2",
-    error2,
-    "loading1",
-    loading1,
-    "loading2",
-    loading2
-  );
+
+  console.log("loading1", loading1);
 
   useEffect(() => {
+    console.log(
+      "addData",
+      addData,
+      "respData",
+      respData,
+      "error1",
+      error1,
+      "error2",
+      error2,
+      "loading1",
+      loading1,
+      "loading2",
+      loading2
+    );
     //send data to global store and show success message just if there is response data, loading stopped and no errors
-    if (!loading2 && !error1 && !error2 && addData !== "") {
+    if (!loading2 && !error1 && !error2 && addData !== "" && respData !== "") {
       console.log("EXPLORE USE EFFECT");
       console.log("addData", addData);
       console.log("respData", respData);
@@ -149,7 +153,7 @@ const Explore = () => {
         setDisableUI(false);
       }
     }
-  }, [respData]);
+  }, [loading2, error1, error2, addData, respData]);
 
   // this function handles 2 cases and calls different separate functions depending on which case is true: if there is duplicate it notifies the user and prevents the onClick event; else it dispatches data to State Management, adds intinerary data to user on server and notifies user that data was added
 

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import wait from "../global/utilities/wait";
 
 const useAddData = (localData, addData, respData, setRespData, setNameDest) => {
   console.log("addData", addData);
@@ -49,41 +50,45 @@ const useAddData = (localData, addData, respData, setRespData, setNameDest) => {
       console.log("inside add data async");
       setLoading1(true);
 
-      await fetch(`/api/users?id=${localData}`)
-        .then((response) => response.json())
-        .then((userData) => {
-          // Check if the user has a travel options array, if not, initialize it
-          const newData = userData[arrayName]
-            ? [...userData[arrayName], addData]
-            : [addData];
+      try {
+        const response = await fetch(`/api/users?id=${localData}`);
+        const userData = await response.json();
 
-          console.log("newData", newData, "userData", userData);
-          setLoading2(true);
+        // Check if the user has a travel options array, if not, initialize it
+        const newData = userData[arrayName]
+          ? [...userData[arrayName], addData]
+          : [addData];
 
+        console.log("newData", newData, "userData", userData);
+        setLoading2(true);
+
+        try {
           // Send the updated data back to the server - new travel options
-          fetch(`/api/users?id=${localData}`, {
+          const putResponse = await fetch(`/api/users?id=${localData}`, {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({ ...userData, [arrayName]: newData }),
-          })
-            .then((response) => response.json())
-            .then((json) => {
-              console.log("json update server, respData", json);
-              setRespData(json);
-            })
-            .catch((error2) => {
-              setError1(error2);
-              console.error("Error 2 updating user data:", error2);
-            })
-            .finally(() => setLoading2(false));
-        })
-        .catch((error1) => {
-          setError1(error1);
-          console.error("Error 1 fetching user data:", error1);
-        })
-        .finally(() => setLoading1(false));
+          });
+
+          const json = await putResponse.json();
+          console.log("json update server, respData", json);
+          setRespData(json);
+
+          await wait(5000);
+        } catch (error2) {
+          setError1(error2);
+          console.error("Error 2 updating user data:", error2);
+        } finally {
+          setLoading2(false);
+        }
+      } catch (error1) {
+        setError1(error1);
+        console.error("Error 1 fetching user data:", error1);
+      } finally {
+        setLoading1(false);
+      }
     };
 
     handleUpdateServer();
