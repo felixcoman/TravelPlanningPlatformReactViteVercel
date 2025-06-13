@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import wait from "../global/utilities/wait";
 
 const useFetchUsers = (id, clicked) => {
   const ALL_URL = "/api/users";
@@ -19,7 +20,7 @@ const useFetchUsers = (id, clicked) => {
         if (!id) {
           var GO_URL = ALL_URL;
         } else {
-          await new Promise((resolve) => setTimeout(resolve, 14000)); // Wait for Edge Config Write Propagation (https://vercel.com/docs/edge-config/edge-config-limits)
+          await wait(14000); // Wait for Edge Config Write Propagation (https://vercel.com/docs/edge-config/edge-config-limits)
           var GO_URL = ID_URL;
         }
         console.log("GO_URL", GO_URL);
