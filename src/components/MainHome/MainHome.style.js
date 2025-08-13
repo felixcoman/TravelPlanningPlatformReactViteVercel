@@ -11,9 +11,16 @@ import {
   WHITE_NEUTRAL,
   YELLOW,
 } from "../../constants/Colors";
-import { TEXT_SIZE_SMALL } from "../../constants/Dimensions";
+import {
+  TEXT_SIZE_SMALL,
+  TEXT_SIZE_FIXED_SMALL,
+} from "../../constants/Dimensions";
 
-export const SectionMainContainer = styled.div``;
+export const SectionMainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 export const MainContainer = styled.div`
   display: grid;
@@ -22,6 +29,14 @@ export const MainContainer = styled.div`
   grid-template-rows: repeat(3, minmax(0, 1fr));
   gap: 1px;
   margin: 10px 20px;
+
+  @media screen and (max-width: 2300px) {
+    height: 400px;
+  }
+
+  @media screen and (max-width: 1800px) {
+    height: 360px;
+  }
 
   @media screen and (max-width: 1600px) {
     height: auto;
@@ -39,6 +54,12 @@ export const MainHomeGalleryItem = styled.img`
   transition: transform 0.2s ease-in-out;
   &:hover {
     transform: scale(1.05);
+  }
+  @media screen and (max-width: 2300px) {
+    width: 200px;
+  }
+  @media screen and (max-width: 1800px) {
+    width: 180px;
   }
   @media screen and (max-width: 1600px) {
     width: 250px;
@@ -60,16 +81,15 @@ export const MainHomeGalleryItem = styled.img`
 export const MainButtonsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: max-content;
+  height: fit-content;
+  position: relative;
 
   @media screen and (max-width: 1600px) {
     justify-content: center;
-    position: relative;
   }
 
   @media screen and (max-width: 1300px) {
     width: 350px;
-    height: 210px;
   }
 
   @media screen and (max-width: 425px) {
@@ -83,19 +103,9 @@ export const OptionContainer = styled.div`
   height: auto;
   flex-direction: column;
   align-items: center;
-  position: relative;
-
-  @media screen and (max-width: 1600px) {
-    top: -100px;
-  }
 
   @media screen and (max-width: 1300px) {
     margin: 10px auto;
-  }
-
-  @media screen and (max-width: 840px) {
-    height: auto;
-    top: -70px;
   }
 
   @media screen and (max-width: 425px) {
@@ -103,13 +113,15 @@ export const OptionContainer = styled.div`
   }
 `;
 
-export const ButtonsContainer = styled.div``;
+export const ButtonsContainer = styled.div`
+  height: ${(props) => (props.expanded == "true" ? "200px" : "unset")};
+`;
 
 export const Buttons = styled.button`
   width: 200px;
   height: 70px;
   font-weight: 500;
-  font-size: ${TEXT_SIZE_SMALL};
+  font-size: ${TEXT_SIZE_FIXED_SMALL};
   color: ${DARK_BLUE};
   margin: 0 10px;
   cursor: pointer;
@@ -163,6 +175,7 @@ export const SelectContainer = styled.div`
   margin: 25px 30px auto;
   position: absolute;
   top: 110px;
+  height: ${(props) => (props.expanded == "true" ? "200px" : "unset")};
 
   @media screen and (max-width: 1300px) {
     top: 100px;
@@ -183,7 +196,7 @@ export const Select = styled.select`
   text-align: center;
   font-weight: 500;
   border-style: none;
-  font-size: ${TEXT_SIZE_SMALL};
+  font-size: ${TEXT_SIZE_FIXED_SMALL};
   background: ${GRADIENT_BLUE_LIGHT};
 
   @media screen and (max-width: 1300px) {
@@ -214,7 +227,7 @@ export const SelectPlan = styled.select`
 
 export const Option = styled.option`
   font-weight: 500;
-  font-size: ${TEXT_SIZE_SMALL};
+  font-size: ${TEXT_SIZE_FIXED_SMALL};
   border-radius: 8px;
 `;
 
@@ -222,7 +235,7 @@ export const HomeBtn = styled(Link)`
   width: 160px;
   height: 40px;
   font-weight: 500;
-  font-size: ${TEXT_SIZE_SMALL};
+  font-size: ${TEXT_SIZE_FIXED_SMALL};
   background: ${LIFELINE_ORANGE};
   color: ${WHITE_NEUTRAL};
   margin: 15px auto;
@@ -263,7 +276,7 @@ export const LabelHead = styled.label`
   display: flex;
   color: ${WHITE_NEUTRAL};
   font-weight: 500;
-  font-size: ${TEXT_SIZE_SMALL};
+  font-size: ${TEXT_SIZE_FIXED_SMALL};
   width: 275px;
   height: auto;
   margin: 10px 0 10px 0;

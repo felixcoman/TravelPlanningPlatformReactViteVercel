@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { WHITE_NEUTRAL } from "../../constants/Colors";
-import { TEXT_SIZE_MEDIUM } from "../../constants/Dimensions";
+import {
+  TEXT_SIZE_MEDIUM,
+  TEXT_SIZE_FIXED_SMALL,
+} from "../../constants/Dimensions";
 import { ButtonInfo, InfoUser } from "../Explore/Explore.style";
 
 export const AccountContainer = styled.div`
@@ -75,7 +78,7 @@ export const ButtonsContainerAccount = styled.div`
 `;
 export const InputContainerAccount = styled.div`
   display: flex;
-  font-size: 15px;
+  font-size: ${TEXT_SIZE_FIXED_SMALL};
   width: 100%;
   height: ${(props) => (props.split == "true" ? "50%" : "unset")};
   flex-direction: column;

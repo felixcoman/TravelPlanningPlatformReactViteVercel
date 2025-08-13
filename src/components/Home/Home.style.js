@@ -9,7 +9,7 @@ export const HomeContainer = styled.div`
   padding-bottom: 10px;
   min-width: 290px;
   height: 70vh;
-  min-height: 880px;
+  min-height: 780px;
 
   @media screen and (max-width: 1600px) {
     min-height: unset;
@@ -18,11 +18,7 @@ export const HomeContainer = styled.div`
   }
 
   @media screen and (max-width: 840px) {
-    min-height: unset;
     flex-direction: column;
-    height: 60vh;
-  }
-  @media screen and (max-width: 425px) {
-    height: 66vh;
+    height: auto;
   }
 `;

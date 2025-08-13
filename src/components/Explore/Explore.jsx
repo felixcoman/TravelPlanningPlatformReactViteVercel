@@ -16,7 +16,6 @@ import Attributions from "../Attributions/Attributions";
 import { AttributionsSection } from "../Attributions/Attributions.style";
 import { Error, Loading } from "../Contact/Contact.style";
 import DestinationCard from "../DestinationCard/DestinationCard";
-import { ImgWrapper } from "../DestinationCard/DestinationCard.style";
 import ToastComponent from "../Toast/ToastComponent";
 import {
   ButtonAccommodationExplore,
@@ -26,6 +25,7 @@ import {
   ContainerDescriptionTop,
   ContainerTop,
   ImageCity,
+  ImgWrapper,
   MyStamp,
   SectionCityButtons,
   SectionCityData,
@@ -250,18 +250,16 @@ const Explore = () => {
 
         {dataCity && (
           <>
+            <Title loc="Title">
+              Feel free to explore our offers regarding your selection
+            </Title>
             <ContainerTop loc="ContainerTop">
-              <Title loc="Title">
-                Feel free to explore our offers regarding your selection
-              </Title>
               <ImgWrapper loc="ImgWrapper">
                 <ImageCity loc="ImageCity" src={compactDataCity.image} />
-                {compactDataCity.attributions && (
-                  <Attributions
-                    attributions={compactDataCity.attributions[0]}
-                  />
-                )}
               </ImgWrapper>
+              {compactDataCity.attributions && (
+                <Attributions attributions={compactDataCity.attributions[0]} />
+              )}
               <MyStamp loc="MyStamp">
                 <a
                   className="stamp"

@@ -33,21 +33,21 @@ function MainHome() {
               alt={"presentation image ".concat(image.id)}
             />
           ))}
-        {loading && (
-          <Loading loc="Loading">
-            <Spinner animation="border" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </Spinner>
-            Loading... Waiting for landing...
-          </Loading>
-        )}
-        {error && (
-          <Error loc="Error">
-            Error: {error.message} Our team is called from the coffee break and
-            will take care of the problem!
-          </Error>
-        )}
       </MainContainer>
+      {loading && (
+        <Loading loc="Loading">
+          <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
+          Loading... Waiting for landing...
+        </Loading>
+      )}
+      {error && (
+        <Error loc="Error">
+          Error: {error.message} Our team is called from the coffee break and
+          will take care of the problem!
+        </Error>
+      )}
       {images && (
         <Slider
           loc="Slider"

@@ -12,7 +12,7 @@ import {
   SelectPlan,
 } from "./MainHome.style";
 
-function SelectOptionPlan() {
+function SelectOptionPlan({ expanded }) {
   const [selectedCountry, setSelectedCountry] = useState("");
   const [clicked, setClicked] = useState(false);
 
@@ -40,7 +40,7 @@ function SelectOptionPlan() {
 
   return (
     <>
-      <SelectContainer loc="SelectContainer">
+      <SelectContainer loc="SelectContainer" expanded={expanded}>
         <FormBody loc="FormBody" onSubmit={(e) => handleSubmit(e)}>
           <SelectPlan loc="SelectPlan" onChange={handleDropdownChangeCountry}>
             <Option loc="Option" value="">

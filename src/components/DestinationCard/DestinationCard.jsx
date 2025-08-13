@@ -5,7 +5,7 @@ import containsObject from "../../global/utilities/containsObject";
 import Attributions from "../Attributions/Attributions";
 import {
   ButtonLandmark,
-  ImgWrapper,
+  ImgWrapperCard,
 } from "../DestinationCard/DestinationCard.style";
 
 function DestinationCard({
@@ -65,12 +65,12 @@ function DestinationCard({
   };
   return (
     <Card className="tangerine-bold">
-      <ImgWrapper loc="ImgWrapper">
+      <ImgWrapperCard loc="ImgWrapperCard">
         <Card.Img variant="top" src={image} alt="Image of landmark" />
         {attributions && (
           <Attributions variant="card" attributions={attributions[0]} />
         )}
-      </ImgWrapper>
+      </ImgWrapperCard>
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>Location: {city}</Card.Text>

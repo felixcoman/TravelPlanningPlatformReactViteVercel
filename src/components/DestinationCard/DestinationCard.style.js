@@ -19,13 +19,35 @@ export const ButtonLandmark = styled(Link)`
   opacity: ${(props) => (props.disabled ? "0.5" : "1")};
 `;
 
-export const ImgWrapper = styled.div`
+export const ImgWrapperCard = styled.div`
   display: flex;
-  height: 500px;
+  height: 670px;
   justify-content: center;
   flex-wrap: wrap;
   align-content: flex-end;
   overflow: hidden;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
+
+  @media screen and (max-height: 1000px) {
+    height: 500px;
+  }
+  @media screen and (max-height: 800px) {
+    height: 490px;
+  }
+  @media screen and (max-height: 700px) {
+    height: 395px;
+  }
+  @media screen and (max-height: 600px) {
+    height: 320px;
+  }
+  @media screen and (max-height: 500px) {
+    height: 250px;
+  }
+  @media screen and (max-height: 400px) {
+    height: 220px;
+  }
+  @media screen and (max-height: 300px) {
+    height: 180px;
+  }
 `;
