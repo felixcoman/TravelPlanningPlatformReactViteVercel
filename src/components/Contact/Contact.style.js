@@ -48,16 +48,20 @@ export const ContactButton = styled(ButtonInfo)`
 `;
 
 export const Error = styled.div`
+  z-index: 10;
   color: ${RED};
   width: 100%;
   align-self: center;
+  font-size: ${TEXT_SIZE_MEDIUM};
 `;
 
 export const Loading = styled.div`
+  z-index: 10;
   display: flex;
   color: ${YELLOW};
   width: 100%;
   align-self: center;
   align-items: center;
   justify-content: center;
+  font-size: ${TEXT_SIZE_MEDIUM};
 `;

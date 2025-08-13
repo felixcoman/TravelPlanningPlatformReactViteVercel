@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { DARK_BLUE, ORANGE, WHITE_NEUTRAL } from "../../../constants/Colors";
-import { TEXT_SIZE_MEDIUM } from "../../../constants/Dimensions";
+import {
+  TEXT_SIZE_MEDIUM,
+  TEXT_SIZE_FIXED_MEDIUM,
+} from "../../../constants/Dimensions";
 
 export const PageContainer = styled.div`
   display: flex;
@@ -67,7 +70,7 @@ export const ButtonPlan = styled.button`
   width: 200px;
   height: 40px;
   font-weight: 700;
-  font-size: 20px;
+  font-size: ${TEXT_SIZE_FIXED_MEDIUM};
   background: ${WHITE_NEUTRAL};
   color: ${DARK_BLUE};
   margin: 50px auto;

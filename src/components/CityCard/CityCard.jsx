@@ -4,7 +4,7 @@ import Modal from "react-bootstrap/Modal";
 import useFetchData from "../../hooks/useFetchData";
 import Attributions from "../Attributions/Attributions";
 import { DeleteButton } from "../CityCard/CityCard.style";
-import { ImgWrapper } from "../DestinationCard/DestinationCard.style";
+import { ImgWrapperCard } from "../DestinationCard/DestinationCard.style";
 
 function CityCard({
   country,
@@ -52,7 +52,7 @@ function CityCard({
       {data &&
         data?.map((card, ind) => (
           <Card key={ind} className="tangerine-bold">
-            <ImgWrapper loc="ImgWrapper">
+            <ImgWrapperCard loc="ImgWrapperCard">
               <Card.Img variant="top" src={card.image} alt="Image of city" />
               {card.attributions && (
                 <Attributions
@@ -60,7 +60,7 @@ function CityCard({
                   attributions={card.attributions[0]}
                 />
               )}
-            </ImgWrapper>
+            </ImgWrapperCard>
             <Card.Body>
               <Card.Title>{city}</Card.Title>
               <Card.Text>{card.description}</Card.Text>

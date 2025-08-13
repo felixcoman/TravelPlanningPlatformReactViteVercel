@@ -14,7 +14,7 @@ import {
   SelectContainer,
 } from "./MainHome.style";
 
-function SelectOptionExplore() {
+function SelectOptionExplore({ expanded }) {
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
   const [clicked, setClicked] = useState(false);
@@ -54,7 +54,7 @@ function SelectOptionExplore() {
 
   return (
     <>
-      <SelectContainer loc="SelectContainer">
+      <SelectContainer loc="SelectContainer" expanded={expanded}>
         <FormBody loc="FormBody" onSubmit={(e) => handleSubmit(e)}>
           <LabelHead loc="LabelHead">
             <LabelHeadText>Select country:</LabelHeadText>

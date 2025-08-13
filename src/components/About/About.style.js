@@ -4,6 +4,7 @@ import {
   ORANGE,
   WHITE_NEUTRAL,
 } from "../../constants/Colors";
+import { TEXT_SIZE_SMALL } from "../../constants/Dimensions";
 
 export const MainAbout = styled.section`
   display: flex;
@@ -12,14 +13,18 @@ export const MainAbout = styled.section`
   align-items: center;
   flex-wrap: wrap;
   align-content: center;
-  font-size: clamp(15px, 2vw, 22px);
+  font-size: ${TEXT_SIZE_SMALL}; //main article text
 `;
 
 export const SliderImg = styled.img`
   width: 66vw;
   height: auto;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1024px) and (max-height: 700px) {
+    width: 33vw;
+  }
+
+  @media screen and (min-width: 1024px) and (min-height: 700px) {
     width: 50vw;
   }
 `;

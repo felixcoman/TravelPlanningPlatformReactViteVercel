@@ -9,7 +9,11 @@ import {
   PAPER_COLOR,
   WHITE_NEUTRAL,
 } from "../../constants/Colors";
-import { TEXT_SIZE_MEDIUM, TEXT_SIZE_SMALL } from "../../constants/Dimensions";
+import {
+  TEXT_SIZE_MEDIUM,
+  TEXT_SIZE_SMALL,
+  TEXT_SIZE_BIG,
+} from "../../constants/Dimensions";
 import { ButtonAccommodation } from "../Itinerary/Itinerary.style";
 
 export const SectionExplore = styled.section`
@@ -26,51 +30,136 @@ export const SectionExplore = styled.section`
 export const Title = styled.h1`
   color: ${ORANGE};
   font-size: ${TEXT_SIZE_MEDIUM};
-  margin-bottom: 65px;
   padding: 5px;
+  margin-bottom: 5vh;
+  align-self: center;
+
+  @media screen and (max-width: 800px) {
+    width: 250px;
+  }
 `;
 
 export const ContainerTop = styled.div`
+  display: grid;
   position: relative;
   align-self: center;
+  justify-content: center;
   width: 100%;
-  height: auto;
+  height: 62vh;
   margin-bottom: 20px;
 
-  /* @media screen and (max-width: 840px) {
-    height: auto;
-  } */
+  @media screen and (max-height: 1400px) and (max-width: 1200px) {
+    height: 50vh;
+  }
+  @media screen and (max-height: 1300px) {
+    height: 68vh;
+  }
+  @media screen and (max-height: 1300px) and (max-width: 2000px) {
+    height: 42vh;
+  }
+  @media screen and (max-height: 1200px) {
+    height: 68vh;
+  }
+  @media screen and (max-height: 1200px) and (max-width: 900px) {
+    height: 47vh;
+  }
+  @media screen and (max-height: 1200px) and (max-width: 800px) {
+    height: 44vh;
+  }
+  @media screen and (max-height: 1200px) and (max-width: 600px) {
+    height: 42vh;
+  }
+  @media screen and (max-height: 1000px) {
+    height: 68vh;
+  }
+  @media screen and (max-height: 1000px) and (max-width: 600px) {
+    height: 45vh;
+  }
+  @media screen and (max-height: 1000px) and (max-width: 500px) {
+    height: 36vh;
+  }
+  @media screen and (max-height: 900px) {
+    height: 68vh;
+  }
+  @media screen and (max-height: 900px) and (max-width: 500px) {
+    height: 37vh;
+  }
+  @media screen and (max-height: 900px) and (max-width: 400px) {
+    height: 38vh;
+  }
+  @media screen and (max-height: 900px) and (max-width: 350px) {
+    height: 35vh;
+  }
+  @media screen and (max-height: 700px) {
+    height: 68vh;
+  }
+  @media screen and (max-height: 700px) and (max-width: 500px) {
+    height: 45vh;
+  }
+  @media screen and (max-height: 700px) and (max-width: 400px) {
+    height: 45vh;
+  }
+  @media screen and (max-height: 550px) {
+    height: 48vh; //55
+  }
+  @media screen and (max-height: 400px) {
+    height: 88vh;
+    margin-bottom: 55px;
+  }
 `;
 
 export const ImageCity = styled.img`
+  display: block;
   width: 100%;
-  height: calc(100% - 89px);
+  height: 100%;
   opacity: 0.6;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   border-radius: 6px;
 `;
 
+export const ImgWrapper = styled.div`
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  overflow: hidden;
+`;
+
 export const MyStamp = styled.div`
+  z-index: 100;
+  transition: all 1s;
+  position: absolute;
+  top: -85px;
+  left: -60px;
+
   @media screen and (max-width: 1400px) {
-    transition: all 1s;
-    position: absolute;
     transform: scale(0.75);
-    top: 70px;
-    left: -40px;
+    top: -65px;
+    left: -100px;
   }
   @media screen and (max-width: 1000px) {
-    top: 75px;
-    left: -45px;
+    top: -70px;
+    left: -120px;
   }
   @media screen and (max-width: 800px) {
     transform: scale(0.6);
-    top: 75px;
-    left: -20px;
+    top: -70px;
+    left: -100px;
   }
   @media screen and (max-width: 500px) {
-    transform: scale(0.5);
-    top: 75px;
-    left: -20px;
+    transform: scale(0.45);
+    top: -60px;
+    left: -85px;
+  }
+  @media screen and (max-width: 400px) {
+    transform: scale(0.4);
+    top: -35px;
+    left: -100px;
+  }
+  @media screen and (max-width: 300px) {
+    transform: scale(0.4);
+    top: -4px;
+    left: -100px;
   }
 `;
 
@@ -110,7 +199,7 @@ export const ContainerDescriptionBottom = styled.div`
 
 export const CityDescription = styled.h3`
   color: ${HANDWRITING};
-  font-size: clamp(25px, 2vw, 40px);
+  font-size: ${TEXT_SIZE_BIG};
   display: flex;
   width: 80%;
   margin: 20px 20px;
@@ -121,9 +210,10 @@ export const CityDescription = styled.h3`
 export const SectionCityData = styled.section`
   display: flex;
   flex-direction: column;
-  margin: 0 0 50px 0;
+  margin: 0 0 30px 0;
   width: 90%;
   padding: 0 10px;
+  max-width: 1440px;
 `;
 
 export const SectionCityButtons = styled.section`
@@ -169,6 +259,19 @@ export const ButtonAccommodationExplore = styled(ButtonAccommodation)`
 
 export const SectionLandmarkDataWrapper = styled.section`
   width: 90%;
+
+  @media screen and (min-height: 900px) and (min-width: 500px) {
+    width: 80%;
+  }
+  @media screen and (max-height: 600px) {
+    width: 65%;
+  }
+  @media screen and (max-height: 500px) {
+    width: 70%;
+  }
+  @media screen and (max-width: 300px) {
+    width: 80%;
+  }
 `;
 
 export const SectionLandmarkData = styled.section`
@@ -176,6 +279,9 @@ export const SectionLandmarkData = styled.section`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 
+  @media screen and (max-width: 1800px) {
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+  }
   @media screen and (max-width: 1400px) {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
@@ -183,6 +289,9 @@ export const SectionLandmarkData = styled.section`
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
   @media screen and (max-width: 700px) {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  @media screen and (max-width: 600px) {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;

@@ -18,7 +18,8 @@
   --green: #669966;
   --yellow: #bfa315;
 
-  --text-size-small: 15px;
+  --text-size-small: clamp(12px, 1.5vw, 22px);
+  --text-size-big: clamp(20px, 3vw, 40px);
 }
 
 body {
@@ -76,7 +77,7 @@ body {
   width: calc(100% - 20px);
   background-image: url("../../../src/assets/897940_2588.jpg");
   background-size: cover;
-  font-size: 25px;
+  font-size: var(--text-size-big);
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -87,7 +88,7 @@ body {
 }
 
 .card-title {
-  font-size: 28px;
+  font-size: var(--text-size-big);
   font-weight: bold;
   color: var(--red);
 }
@@ -114,6 +115,10 @@ body {
 .card-text {
   text-align: justify;
   font-weight: bold;
+}
+
+.spinner-border {
+  aspect-ratio: 1 / 1;
 }
 
 .toast-header {
@@ -168,7 +173,7 @@ body {
   left: -20px;
   transform: rotate(340deg);
   opacity: 0.6;
-  z-index: 1;
+  z-index: 10;
 }
 
 /* FONTS */

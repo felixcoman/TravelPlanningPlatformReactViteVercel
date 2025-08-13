@@ -16,35 +16,17 @@ export const SectionItinerary = styled.section`
   padding: 15px;
 `;
 
-// export const ItineraryData = styled.div`
-//   display: grid;
-//   grid-template-columns: repeat(4, minmax(0, 1fr));
-//   gap: 30px;
-
-//   @media screen and (max-width: 1400px) {
-//     grid-template-columns: repeat(3, minmax(0, 1fr));
-//   }
-//   @media screen and (max-width: 1200px) {
-//     grid-template-columns: repeat(2, minmax(0, 1fr));
-//   }
-//   @media screen and (max-width: 700px) {
-//     display: flex;
-//     flex-direction: column;
-//     flex-wrap: nowrap;
-//     align-items: center;
-//   }
-// `;
-
 export const ItineraryData = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
+  max-width: 60vw;
 
   @media screen and (max-width: 1400px) {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 80vw;
   }
   @media screen and (max-width: 1200px) {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 90vw;
   }
   @media screen and (max-width: 700px) {
     display: flex;
