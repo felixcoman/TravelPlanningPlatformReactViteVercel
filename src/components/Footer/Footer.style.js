@@ -6,7 +6,6 @@ export const FooterContainer = styled.footer`
   /* Set footer to the bottom of the screen if minimum content so there will be no gap under the footer */
   position: absolute;
   bottom: 0px;
-  padding-bottom: 5px;
   width: 100%;
   height: auto;
   align-content: center;

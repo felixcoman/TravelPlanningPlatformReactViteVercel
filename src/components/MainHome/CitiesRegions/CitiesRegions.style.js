@@ -10,6 +10,7 @@ export const PageContainer = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   border: 2px solid ${WHITE_NEUTRAL};
+  border-radius: 6px;
 `;
 
 export const FiltersContainer = styled.div`
@@ -19,6 +20,7 @@ export const FiltersContainer = styled.div`
   width: 90%;
   margin: 50px auto;
   border: 2px solid ${WHITE_NEUTRAL};
+  border-radius: 6px;
   opacity: ${(props) => (props.disabled ? "0.5" : "1")};
 `;
 
@@ -48,6 +50,7 @@ export const ImgContainer = styled.img`
   width: 200px;
   height: 200px;
   object-fit: cover;
+  border-radius: 6px;
   @media screen and (max-width: 820px) {
     margin: 10px auto;
   }

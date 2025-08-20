@@ -1,5 +1,5 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import About from "./components/About/About";
@@ -44,14 +44,24 @@ function App() {
     stateGlobalChoice,
     dispatchChoice,
   };
+  // states for navbar and footer height
+  const [navbarHeight, setNavbarHeight] = useState(0);
+  const [footerHeight, setFooterHeight] = useState(0);
 
   return (
     <ToastProvider>
       <ChoiceContext.Provider value={choiceContextValue}>
         <ItineraryContext.Provider value={itineraryContextValue}>
           <UserProvider>
-            <NavBar />
-            <MainSection loc="MainSection">
+            <NavBar
+              onHeightChange={setNavbarHeight}
+              navbarheight={navbarHeight}
+            />
+            <MainSection
+              loc="MainSection"
+              navbarheight={navbarHeight}
+              footerheight={footerHeight}
+            >
               <Routes>
                 <Route path="/" element={<Home />}></Route>
                 <Route path="/home" element={<Home />}></Route>
@@ -80,7 +90,7 @@ function App() {
                 <Route path="/accommodation" element={<Accommodation />} />
               </Routes>
             </MainSection>
-            <Footer />
+            <Footer onHeightChange={setFooterHeight} />
           </UserProvider>
         </ItineraryContext.Provider>
       </ChoiceContext.Provider>

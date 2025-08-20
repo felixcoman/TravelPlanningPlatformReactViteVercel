@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   justify-content: flex-start;
   align-items: center;
   padding-bottom: 10px;
@@ -13,12 +12,12 @@ export const HomeContainer = styled.div`
 
   @media screen and (max-width: 1600px) {
     min-height: unset;
+    height: auto;
     flex-direction: row;
     justify-content: center;
   }
 
   @media screen and (max-width: 840px) {
     flex-direction: column;
-    height: auto;
   }
 `;

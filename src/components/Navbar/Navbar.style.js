@@ -66,19 +66,10 @@ export const LinkContainer = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  position: absolute;
-  top: 75px;
-  left: 0;
-  z-index: 1;
 
-  @media screen and (max-width: 700px) {
-    top: 24px;
-  }
   @media screen and (max-width: 440px) {
     background: rgba(255, 255, 255, 0.8);
     flex-direction: column;
-    width: 100%;
-    position: relative;
   }
 `;
 
@@ -89,7 +80,7 @@ export const DropdownContainer = styled.div`
     display: block;
     width: 100%;
     position: absolute;
-    top: 60px;
+    top: ${({ navbarheight }) => navbarheight}px;
     right: 0;
     border-radius: 8px;
   }

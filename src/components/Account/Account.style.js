@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { WHITE_NEUTRAL } from "../../constants/Colors";
 import {
+  TEXT_SIZE_SMALL,
   TEXT_SIZE_MEDIUM,
   TEXT_SIZE_FIXED_SMALL,
 } from "../../constants/Dimensions";
@@ -26,21 +27,36 @@ export const AccountText = styled.h1`
 `;
 
 export const AccountLabel = styled.p`
-  width: 45%;
+  font-size: ${TEXT_SIZE_SMALL};
+  width: 70%;
+  max-width: 1440px;
   padding: 1px;
-  margin: 10px 0;
+  margin: 5px 0;
   color: ${WHITE_NEUTRAL};
   text-align: left;
+  @media screen and (orientation: landscape) and (min-width: 1000px) {
+    width: 50%;
+  }
 `;
 export const AccountInput = styled.input`
-  width: 45%;
+  font-size: ${TEXT_SIZE_SMALL};
+  font-style: italic;
+  width: 70%;
+  max-width: 1440px;
   height: 40px;
-  margin: 10px 0;
+  margin: 5px 0;
   border-radius: 5px;
+  @media screen and (orientation: landscape) and (min-width: 1000px) {
+    width: 50%;
+  }
 `;
 
 export const AccountActionButton = styled(ButtonInfo)`
-  width: 45%;
+  width: 70%;
+  max-width: 1440px;
+  @media screen and (orientation: landscape) and (min-width: 1000px) {
+    width: 50%;
+  }
 `;
 
 export const AccountSection = styled.div`

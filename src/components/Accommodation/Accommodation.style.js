@@ -1,6 +1,15 @@
 import styled from "styled-components";
 import { ORANGE, WHITE_NEUTRAL } from "../../constants/Colors";
-import { TEXT_SIZE_SMALL } from "../../constants/Dimensions";
+import { TEXT_SIZE_MEDIUM, TEXT_SIZE_SMALL } from "../../constants/Dimensions";
+
+export const TitleAccomm = styled.h1`
+  width: 100%;
+  color: ${ORANGE};
+  font-size: ${TEXT_SIZE_MEDIUM};
+  padding: 5px;
+  margin-bottom: 5vh;
+  align-self: center;
+`;
 
 export const AccommodationMain = styled.section`
   position: relative;
@@ -76,6 +85,8 @@ export const DisplayContainer = styled.section`
   margin-left: calc(10vw + 1vw);
   padding: 0px 10px;
   height: 100%;
+  border: 2px solid ${WHITE_NEUTRAL};
+  border-radius: 6px;
 
   @media screen and (max-width: 1600px) {
   }

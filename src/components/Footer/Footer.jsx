@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import {
   FooterContainer,
   FooterContent,
@@ -6,11 +7,28 @@ import {
   Copyrights,
 } from "./Footer.style";
 
-function Footer() {
+function Footer({ onHeightChange }) {
   const year = new Date().getFullYear();
+  const footerRef = useRef(null);
+  // Read height of element from DOM
+  useEffect(() => {
+    if (!footerRef.current) return;
+    // Initial height measurement
+    const updateHeight = () => {
+      onHeightChange(footerRef.current.offsetHeight);
+    };
+
+    updateHeight();
+
+    // Observe size changes dynamically
+    const observer = new ResizeObserver(updateHeight);
+    observer.observe(footerRef.current);
+
+    return () => observer.disconnect();
+  }, [onHeightChange]);
   return (
     <>
-      <FooterContainer loc="FooterContainer">
+      <FooterContainer loc="FooterContainer" ref={footerRef}>
         <FooterContent loc="FooterContent">
           <FooterInfoContainer loc="FooterInfoContainer">
             <FooterInfo loc="FooterInfo">Mobile: +407454545 </FooterInfo>

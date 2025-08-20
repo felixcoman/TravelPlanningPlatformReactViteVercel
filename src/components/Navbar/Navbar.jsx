@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { List, X } from "react-bootstrap-icons";
 import Badge from "react-bootstrap/Badge";
 import { ChoiceContext } from "../../global/choice/context";
@@ -28,7 +28,25 @@ export const routes = [
   { title: "Account", href: "account" },
 ];
 
-function NavBar() {
+function NavBar({ onHeightChange, navbarheight }) {
+  const navRef = useRef(null);
+  // Read height of element from DOM
+  useEffect(() => {
+    if (!navRef.current) return;
+    // Initial height measurement
+    const updateHeight = () => {
+      onHeightChange(navRef.current.offsetHeight);
+    };
+
+    updateHeight();
+
+    // Observe size changes dynamically
+    const observer = new ResizeObserver(updateHeight);
+    observer.observe(navRef.current);
+
+    return () => observer.disconnect();
+  }, [onHeightChange]);
+
   const { user } = useContext(UserContext);
   const [displayDropdown, setDisplayDropdown] = useState(false);
 
@@ -42,7 +60,7 @@ function NavBar() {
   console.log("user", user);
 
   return (
-    <NavbarContainer loc="NavbarContainer">
+    <NavbarContainer loc="NavbarContainer" ref={navRef}>
       <NavbarContent loc="NavbarContent">
         <Logo
           loc="Logo"
@@ -93,7 +111,10 @@ function NavBar() {
           {!displayDropdown ? <List size={40} /> : <X size={40} />}
         </ButtonDropdown>
         {displayDropdown && (
-          <MobileDropdown handleDisplayDropdown={handleDisplayDropdown} />
+          <MobileDropdown
+            handleDisplayDropdown={handleDisplayDropdown}
+            navbarheight={navbarheight}
+          />
         )}
       </NavbarContent>
     </NavbarContainer>

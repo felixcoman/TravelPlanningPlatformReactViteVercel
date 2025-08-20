@@ -7,6 +7,7 @@ export const MainContainerRecommend = styled.div`
   flex-direction: column;
   width: 100%;
   border: 2px solid ${WHITE_NEUTRAL};
+  border-radius: 6px;
 `;
 
 export const DataContainerRecommend = styled.div`

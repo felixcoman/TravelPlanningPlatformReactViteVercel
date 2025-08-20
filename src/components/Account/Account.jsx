@@ -86,7 +86,11 @@ const Account = () => {
     console.log("INSIDE HANDLEGETACCOUNT");
 
     setIsVisible1(!isVisible1);
-    setSplitContainer(!splitContainer);
+
+    if (!splitContainer) setSplitContainer(true);
+    else if (isVisible2) setSplitContainer(true);
+    else setSplitContainer(false);
+
     setIsVisible2(false);
 
     //unset errors "Not valid!" and "Invalid email format!" and "No such user found!" when switching from login to create account or vice versa
@@ -105,7 +109,11 @@ const Account = () => {
   const handleNewAccount = () => {
     console.log("INSIDE HANDLENEWACCOUNT");
     setIsVisible2(!isVisible2);
-    setSplitContainer(!splitContainer);
+
+    if (!splitContainer) setSplitContainer(true);
+    else if (isVisible1) setSplitContainer(true);
+    else setSplitContainer(false);
+
     setIsVisible1(false);
 
     //unset errors "Not valid!", "Invalid email format!" and "Email already exists!" when switching from login to create account or vice versa
