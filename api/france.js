@@ -5,7 +5,7 @@ export default function handler(req, res) {
       name: "France",
       description:
         "France is one of the oldest nations on Earth and the most ethnically diverse country in Europe. These deep and broad influences have made France a world leader throughout history in nearly all aspects of culture, including cuisine, wine-making, politics, philosophy, music, art, film, fashion, literature, and sports.",
-      image: "/src/assets/rodrigo-kugnharski-pdWc5wm1STw-unsplash.jpg",
+      image: "/images/rodrigo-kugnharski-pdWc5wm1STw-unsplash.jpg",
       attributions: [
         {
           source: "Unsplash",
@@ -21,7 +21,7 @@ export default function handler(req, res) {
       city: "Paris",
       country: "France",
       image:
-        "/src/assets/sunset-illuminates-famous-city-skyline-romantic-view-generated-by-ai.jpg",
+        "/images/sunset-illuminates-famous-city-skyline-romantic-view-generated-by-ai.jpg",
       attributions: [
         {
           source: "Freepik",
@@ -89,7 +89,7 @@ export default function handler(req, res) {
     {
       city: "Nice",
       country: "France",
-      image: "/src/assets/arno-smit-lndaG6uN1yw-unsplash.jpg",
+      image: "/images/arno-smit-lndaG6uN1yw-unsplash.jpg",
       attributions: [
         {
           source: "Unsplash",
@@ -155,7 +155,7 @@ export default function handler(req, res) {
       city: "Strasbourg",
       country: "France",
       image:
-        "/src/assets/canal-surrounded-by-buildings-greenery-cloudy-sky-strasbourg-france.jpg",
+        "/images/canal-surrounded-by-buildings-greenery-cloudy-sky-strasbourg-france.jpg",
       attributions: [
         {
           source: "Freepik",
@@ -218,7 +218,7 @@ export default function handler(req, res) {
     {
       region: "Provence",
       country: "France",
-      image: "/src/assets/c-valdez-A2gKlf8JgGA-unsplash.jpg",
+      image: "/images/c-valdez-A2gKlf8JgGA-unsplash.jpg",
       attributions: [
         {
           source: "Unsplash",
@@ -281,7 +281,7 @@ export default function handler(req, res) {
     {
       region: "Loir Valley",
       country: "France",
-      image: "/src/assets/colin-watts-_R494eEbvB4-unsplash.jpg",
+      image: "/images/colin-watts-_R494eEbvB4-unsplash.jpg",
       attributions: [
         {
           source: "Unsplash",
@@ -346,7 +346,7 @@ export default function handler(req, res) {
     {
       region: "Normandy",
       country: "France",
-      image: "/src/assets/rodolphe-abad-pg7BtkKDuo8-unsplash.jpg",
+      image: "/images/rodolphe-abad-pg7BtkKDuo8-unsplash.jpg",
       attributions: [
         {
           source: "Unsplash",

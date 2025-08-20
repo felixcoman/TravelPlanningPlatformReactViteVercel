@@ -5,7 +5,7 @@ export default function handler(req, res) {
       name: "Spain",
       description:
         "Spain is a storied country of stone castles, snowcapped mountains, vast monuments, and sophisticated cities, all of which have made it a favoured travel destination. The country is geographically and culturally diverse. Its heartland is the Meseta, a broad central plateau half a mile above sea level.",
-      image: "/src/assets/flavio-E2iWteTjfg8-unsplash.jpg",
+      image: "/images/flavio-E2iWteTjfg8-unsplash.jpg",
       attributions: [
         {
           source: "Unsplash",
@@ -20,7 +20,7 @@ export default function handler(req, res) {
     {
       city: "Barcelona",
       country: "Spain",
-      image: "/src/assets/view-park-guell-winter-barcelona.jpg",
+      image: "/images/view-park-guell-winter-barcelona.jpg",
       attributions: [
         {
           source: "Freepik",
@@ -89,7 +89,7 @@ export default function handler(req, res) {
     {
       city: "Seville",
       country: "Spain",
-      image: "/src/assets/beautiful-view-plaza-de-espana-seville-spain.jpg",
+      image: "/images/beautiful-view-plaza-de-espana-seville-spain.jpg",
       attributions: [
         {
           source: "Freepik",
@@ -158,7 +158,7 @@ export default function handler(req, res) {
     {
       city: "Valencia",
       country: "Spain",
-      image: "/src/assets/white-concrete-structure-beside-body-water.jpg",
+      image: "/images/white-concrete-structure-beside-body-water.jpg",
       attributions: [
         {
           source: "Freepik",
@@ -222,7 +222,7 @@ export default function handler(req, res) {
     {
       region: "Andalusia",
       country: "Spain",
-      image: "/src/assets/amanda-anusane-KfJyBno78R4-unsplash.jpg",
+      image: "/images/amanda-anusane-KfJyBno78R4-unsplash.jpg",
       attributions: [
         {
           source: "Unsplash",
@@ -283,7 +283,7 @@ export default function handler(req, res) {
     {
       region: "Basque Country",
       country: "Spain",
-      image: "/src/assets/des-mc-carthy-w7lyz178Xp0-unsplash.jpg",
+      image: "/images/des-mc-carthy-w7lyz178Xp0-unsplash.jpg",
       attributions: [
         {
           source: "Unsplash",
@@ -346,7 +346,7 @@ export default function handler(req, res) {
     {
       region: "Balearic Islands",
       country: "Spain",
-      image: "/src/assets/luke-moss-haAEjj6fDjk-unsplash.jpg",
+      image: "/images/luke-moss-haAEjj6fDjk-unsplash.jpg",
       attributions: [
         {
           source: "Unsplash",

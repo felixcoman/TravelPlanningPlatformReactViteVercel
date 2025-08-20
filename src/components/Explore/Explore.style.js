@@ -190,7 +190,7 @@ export const ContainerDescriptionBottom = styled.div`
   display: flex;
   width: 100%;
   border-radius: 6px;
-  background-image: url("../../../src/assets/897940_2588.jpg");
+  background-image: url("../../../images/897940_2588.jpg");
   background-size: cover;
   align-self: center;
   padding: 50px 10px;
