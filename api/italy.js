@@ -5,7 +5,7 @@ export default function handler(req, res) {
       name: "Italy",
       description:
         "Italy is a boot-shaped peninsula that juts out of southern Europe into the Adriatic Sea, Tyrrhenian Sea, Mediterranean Sea, and other waters. Its location has played an important role in its history. The sea surrounds Italy, and mountains crisscross the interior, dividing it into regions.",
-      image: "/src/assets/canmandawe-ftTsK4QinMw-unsplash.jpg",
+      image: "/images/canmandawe-ftTsK4QinMw-unsplash.jpg",
       attributions: [
         {
           source: "Unsplash",
@@ -20,7 +20,7 @@ export default function handler(req, res) {
     {
       city: "Rome",
       country: "Italy",
-      image: "/src/assets/cityscape-rome-ancient-centre-italy.jpg",
+      image: "/images/cityscape-rome-ancient-centre-italy.jpg",
       attributions: [
         {
           source: "Freepik",
@@ -97,7 +97,7 @@ export default function handler(req, res) {
       city: "Florence",
       country: "Italy",
       image:
-        "/src/assets/beautiful-aerial-shot-florence-italy-architecture-evening.jpg",
+        "/images/beautiful-aerial-shot-florence-italy-architecture-evening.jpg",
       attributions: [
         {
           source: "Freepik",
@@ -174,7 +174,7 @@ export default function handler(req, res) {
     {
       city: "Venice",
       country: "Italy",
-      image: "/src/assets/basilica-santa-maria-della-salud-venice.jpg",
+      image: "/images/basilica-santa-maria-della-salud-venice.jpg",
       attributions: [
         {
           source: "Freepik",
@@ -244,7 +244,7 @@ export default function handler(req, res) {
     {
       region: "Toscana",
       country: "Italy",
-      image: "/src/assets/doozydoom-_v5HCKSZOkA-unsplash.jpg",
+      image: "/images/doozydoom-_v5HCKSZOkA-unsplash.jpg",
       attributions: [
         {
           source: "Unsplash",
@@ -309,7 +309,7 @@ export default function handler(req, res) {
     {
       region: "Puglia",
       country: "Italy",
-      image: "/src/assets/soop-kim-7Nyt3uDKKSo-unsplash.jpg",
+      image: "/images/soop-kim-7Nyt3uDKKSo-unsplash.jpg",
       attributions: [
         {
           source: "Unsplash",
@@ -371,7 +371,7 @@ export default function handler(req, res) {
     {
       region: "Lombardy",
       country: "Italy",
-      image: "/src/assets/axp-photography-WhtNsIN--j8-unsplash.jpg",
+      image: "/images/axp-photography-WhtNsIN--j8-unsplash.jpg",
       attributions: [
         {
           source: "Unsplash",

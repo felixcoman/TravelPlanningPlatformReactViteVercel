@@ -5,7 +5,7 @@ export default function handler(req, res) {
       name: "Romania",
       description:
         "Romania is the biggest country in southeast Europe by population. It has an area of 238,391 square kilometres (92,043 sq mi). It is the twelfth-largest country in Europe. Most of Romania's border with Serbia and Bulgaria is made by the Danube.",
-      image: "/src/assets/alisa-anton-VJSUSrgN56w-unsplash.jpg",
+      image: "/images/alisa-anton-VJSUSrgN56w-unsplash.jpg",
       attributions: [
         {
           source: "Unsplash",
@@ -22,7 +22,7 @@ export default function handler(req, res) {
       reg: "Transylvania",
       country: "Romania",
       image:
-        "/src/assets/aerial-drone-view-historic-centre-sighisoara-romania-old-buildings-holy-trinity-church.jpg",
+        "/images/aerial-drone-view-historic-centre-sighisoara-romania-old-buildings-holy-trinity-church.jpg",
       attributions: [
         {
           source: "Freepik",
@@ -95,7 +95,7 @@ export default function handler(req, res) {
       city: "Constanta",
       reg: "Dobrogea",
       country: "Romania",
-      image: "/src/assets/matei-pruteanu-TaJgC0AE1lw-unsplash.jpg",
+      image: "/images/matei-pruteanu-TaJgC0AE1lw-unsplash.jpg",
       attributions: [
         {
           source: "Unsplash",
@@ -162,7 +162,7 @@ export default function handler(req, res) {
       reg: "Transylvania",
       country: "Romania",
       image:
-        "/src/assets/aerial-drone-view-saint-michael-church-cluj-evening-romania.jpg",
+        "/images/aerial-drone-view-saint-michael-church-cluj-evening-romania.jpg",
       attributions: [
         {
           source: "Freepik",
@@ -232,7 +232,7 @@ export default function handler(req, res) {
       city: "Brasov",
       reg: "Transylvania",
       country: "Romania",
-      image: "/src/assets/Brasov_City.jpg",
+      image: "/images/Brasov_City.jpg",
       description:
         "Brasov, located in the heart of Transylvania, is renowned for its medieval charm, featuring the Gothic Black Church, picturesque Council Square, and scenic Mount Tampa. Its well-preserved old town, vibrant cultural scene, and stunning mountain backdrop make it a captivating destination for history enthusiasts and nature lovers alike.",
       category: ["aerliber", "citybreak", "relaxare"],
@@ -287,7 +287,7 @@ export default function handler(req, res) {
       reg: "Transilvania",
       country: "Romania",
       image:
-        "/src/assets/aerial-drone-view-historic-centre-sibiu-evening-romania.jpg",
+        "/images/aerial-drone-view-historic-centre-sibiu-evening-romania.jpg",
       attributions: [
         {
           source: "Freepik",
@@ -351,7 +351,7 @@ export default function handler(req, res) {
       city: "Mamaia",
       reg: "Dobrogea",
       country: "Romania",
-      image: "/src/assets/gabriel-vasiliu-thAtOx4W6WU-unsplash.jpg",
+      image: "/images/gabriel-vasiliu-thAtOx4W6WU-unsplash.jpg",
       attributions: [
         {
           source: "Unsplash",
@@ -417,7 +417,7 @@ export default function handler(req, res) {
       reg: "Muntenia",
       country: "Romania",
       image:
-        "/src/assets/aerial-drone-view-bucharest-romania-city-downtown-with-palace-parliament.jpg",
+        "/images/aerial-drone-view-bucharest-romania-city-downtown-with-palace-parliament.jpg",
       attributions: [
         {
           source: "Freepik",
@@ -459,7 +459,7 @@ export default function handler(req, res) {
     {
       region: "Danube Delta",
       country: "Romania",
-      image: "/src/assets/zdenek-machacek-RJhIaos1kuU-unsplash.jpg",
+      image: "/images/zdenek-machacek-RJhIaos1kuU-unsplash.jpg",
       attributions: [
         {
           source: "Unsplash",
@@ -526,7 +526,7 @@ export default function handler(req, res) {
     {
       region: "Bucovina",
       country: "Romania",
-      image: "/src/assets/daniel-voicu-2D6pyiNPC54-unsplash.jpg",
+      image: "/images/daniel-voicu-2D6pyiNPC54-unsplash.jpg",
       attributions: [
         {
           source: "Unsplash",
