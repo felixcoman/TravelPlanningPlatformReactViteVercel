@@ -23,28 +23,47 @@ export const ContactText = styled.h1`
 export const ContactLabel = styled.p`
   font-size: ${TEXT_SIZE_SMALL};
   color: ${WHITE_NEUTRAL};
-  width: 50%;
+  width: 65%;
+  max-width: 1440px;
   margin: 5px auto;
   text-align: left;
+  @media screen and (orientation: landscape) and (min-width: 1000px) {
+    width: 45%;
+  }
 `;
 export const ContactInput = styled.input`
-  width: 50%;
+  font-size: ${TEXT_SIZE_SMALL};
+  font-style: italic;
+  width: 70%;
+  max-width: 1440px;
   height: 40px;
   margin: 5px auto;
   border-radius: 5px;
+  @media screen and (orientation: landscape) and (min-width: 1000px) {
+    width: 50%;
+  }
 `;
 
 export const ContactTextarea = styled.textarea`
-  width: 50%;
+  font-size: ${TEXT_SIZE_SMALL};
+  font-style: italic;
+  width: 70%;
+  max-width: 1440px;
   height: 100px;
   margin: 5px auto;
   border-radius: 5px;
   resize: none;
+  @media screen and (orientation: landscape) and (min-width: 1000px) {
+    width: 50%;
+  }
 `;
 
 export const ContactButton = styled(ButtonInfo)`
-  width: 50%;
+  width: 70%;
   margin: 20px 5px;
+  @media screen and (orientation: landscape) and (min-width: 1000px) {
+    width: 50%;
+  }
 `;
 
 export const Error = styled.div`

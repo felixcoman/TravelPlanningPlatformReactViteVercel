@@ -126,7 +126,7 @@ export const ImgWrapper = styled.div`
 `;
 
 export const MyStamp = styled.div`
-  z-index: 100;
+  z-index: 10;
   transition: all 1s;
   position: absolute;
   top: -85px;

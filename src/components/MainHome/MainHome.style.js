@@ -39,6 +39,9 @@ export const MainContainer = styled.div`
   }
 
   @media screen and (max-width: 1600px) {
+    height: 340px;
+  }
+  @media screen and (max-width: 1300px) {
     height: auto;
   }
 
@@ -62,7 +65,7 @@ export const MainHomeGalleryItem = styled.img`
     width: 180px;
   }
   @media screen and (max-width: 1600px) {
-    width: 250px;
+    width: 168px;
   }
 
   @media screen and (max-width: 1300px) {
@@ -295,20 +298,16 @@ export const LoadingHome = styled.div`
   color: ${YELLOW};
   align-self: center;
   align-items: center;
-
-  @media screen and (max-width: 1300px) {
-    top: 70px;
-  }
 `;
 
 export const ErrorHome = styled.div`
   position: absolute;
-  top: 75px;
+  top: 83px;
   color: ${RED};
   align-self: center;
 
   @media screen and (max-width: 1300px) {
-    top: 68px;
+    top: 76px;
     width: 380px;
   }
 

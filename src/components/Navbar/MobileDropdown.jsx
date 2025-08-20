@@ -2,9 +2,9 @@ import NavLinks from "./NavLinks";
 import { routes } from "./Navbar";
 import { DropdownContainer, LinkContainer } from "./Navbar.style";
 
-function MobileDropdown({ handleDisplayDropdown }) {
+function MobileDropdown({ handleDisplayDropdown, navbarheight }) {
   return (
-    <DropdownContainer loc="DropdownContainer">
+    <DropdownContainer loc="DropdownContainer" navbarheight={navbarheight}>
       <LinkContainer loc="LinkContainer">
         {routes.map((el, index) => (
           <NavLinks

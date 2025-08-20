@@ -3,7 +3,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Spinner from "react-bootstrap/Spinner";
 import { useLocation } from "react-router-dom";
 import { Error, Loading } from "../Contact/Contact.style";
-import { InfoUser, Title } from "../Explore/Explore.style";
+import { InfoUser } from "../Explore/Explore.style";
 import {
   AccommodationContainer,
   AccommodationDescription,
@@ -15,6 +15,7 @@ import {
   LocationTitle,
   PlaceholderAcc,
   Sidebar,
+  TitleAccomm,
 } from "./Accommodation.style";
 
 function Accommodation() {
@@ -121,9 +122,9 @@ function Accommodation() {
 
   return (
     <>
-      <Title loc="Title">
+      <TitleAccomm loc="TitleAccomm">
         Feel free to explore accommodation for the options you have selected
-      </Title>
+      </TitleAccomm>
       <AccommodationMain loc="AccommodationMain">
         {data && (
           <Sidebar loc="Sidebar">

@@ -11,6 +11,8 @@ export const PageContainerTravel = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   border: 2px solid ${WHITE_NEUTRAL};
+  /* 8px radius because cotains box with 6px radius */
+  border-radius: 8px;
   @media screen and (max-width: 820px) {
     flex-direction: column;
   }
@@ -22,6 +24,7 @@ export const MainContainerTravel = styled.div`
   width: 100%;
   margin: 0 auto;
   border: 2px solid ${WHITE_NEUTRAL};
+  border-radius: 6px;
   @media screen and (max-width: 820px) {
     flex-direction: column;
     margin: 0 auto;
@@ -155,6 +158,7 @@ export const ImgContainerTravel = styled.img`
   height: 200px;
   object-fit: cover;
   margin: 0px 20px;
+  border-radius: 6px;
   @media screen and (max-width: 820px) {
     margin: 10px auto;
     width: 90%;
