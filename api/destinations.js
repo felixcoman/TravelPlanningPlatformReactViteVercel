@@ -5,6 +5,14 @@ export default function handler(req, res) {
       city: "Brasov",
       country: "Romania",
       image: "/images/Poarta_Ecaterinei_Landmark.jpg",
+      attributions: [
+        {
+          source: "personal collection",
+          linkImage: "",
+          linkAuthor: "",
+          text: "Elena Coman-Neagu",
+        },
+      ],
       description:
         "Catherine's Gate is the only original city gate that has survived from medieval times. Built in 1559, it features a unique design with a fairy-tale look, including four small corner turrets symbolizing the city’s right to capital punishment. The gate is a beautiful piece of Brasov's history and a must-see for visitors.",
       popularity: 4,
@@ -15,6 +23,14 @@ export default function handler(req, res) {
       city: "Brasov",
       country: "Romania",
       image: "/images/Biserica_Neagra_Landmark.jpg",
+      attributions: [
+        {
+          source: "personal collection",
+          linkImage: "",
+          linkAuthor: "",
+          text: "Elena Coman-Neagu",
+        },
+      ],
       description:
         "The Black Church is a Gothic-style cathedral and one of the most iconic landmarks in Brasov. It is known for its impressive architecture, stunning interior, and a large collection of Anatolian carpets. The church's name comes from the darkened walls caused by a fire in the 17th century.",
       popularity: 5,
@@ -25,6 +41,14 @@ export default function handler(req, res) {
       city: "Brasov",
       country: "Romania",
       image: "/images/Piata_Sfatului_Landmark.jpg",
+      attributions: [
+        {
+          source: "personal collection",
+          linkImage: "",
+          linkAuthor: "",
+          text: "Elena Coman-Neagu",
+        },
+      ],
       description:
         "This picturesque square is the heart of Brasov's old town. Surrounded by colorful baroque buildings, it features the historic Council House (Casa Sfatului) and is a vibrant hub for cafes, shops, and events. It's a perfect place for a leisurely stroll and soaking in the local atmosphere.",
       popularity: 5,
@@ -35,6 +59,14 @@ export default function handler(req, res) {
       city: "Brasov",
       country: "Romania",
       image: "/images/Tampa_Landmark.jpg",
+      attributions: [
+        {
+          source: "personal collection",
+          linkImage: "",
+          linkAuthor: "",
+          text: "Elena Coman-Neagu",
+        },
+      ],
       description:
         "Offering stunning panoramic views of Brasov and the surrounding area, Mount Tampa is accessible via hiking trails or a cable car. At the summit, visitors can enjoy the scenic overlook and spot the Hollywood-style `Brasov` sign. It’s a great spot for nature lovers and photographers.",
       popularity: 4.5,

@@ -58,17 +58,21 @@ export const LinkNavStyle = styled(Link)`
     color: ${DARK_BLUE};
     margin: 0 auto;
     height: fit-content;
+    &:hover {
+      background: ${WHITE_NEUTRAL};
+      color: ${ORANGE};
+      border-radius: 0;
+    }
   }
 `;
 
 export const LinkContainer = styled.div`
-  background: ${WHITE_NEUTRAL};
+  background: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-direction: row;
   width: 100%;
 
   @media screen and (max-width: 440px) {
-    background: rgba(255, 255, 255, 0.8);
     flex-direction: column;
   }
 `;

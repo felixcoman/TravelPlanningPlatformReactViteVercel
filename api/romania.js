@@ -233,6 +233,14 @@ export default function handler(req, res) {
       reg: "Transylvania",
       country: "Romania",
       image: "/images/Brasov_City.jpg",
+      attributions: [
+        {
+          source: "personal collection",
+          linkImage: "",
+          linkAuthor: "",
+          text: "Elena Coman-Neagu",
+        },
+      ],
       description:
         "Brasov, located in the heart of Transylvania, is renowned for its medieval charm, featuring the Gothic Black Church, picturesque Council Square, and scenic Mount Tampa. Its well-preserved old town, vibrant cultural scene, and stunning mountain backdrop make it a captivating destination for history enthusiasts and nature lovers alike.",
       category: ["aerliber", "citybreak", "relaxare"],
