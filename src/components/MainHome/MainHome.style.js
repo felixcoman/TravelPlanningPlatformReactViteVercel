@@ -215,7 +215,7 @@ export const SelectPlan = styled.select`
   text-align: center;
   font-weight: 500;
   border-style: none;
-  font-size: ${TEXT_SIZE_SMALL};
+  font-size: ${TEXT_SIZE_FIXED_SMALL};
   background: ${GRADIENT_BLUE_LIGHT};
 
   @media screen and (max-width: 1300px) {

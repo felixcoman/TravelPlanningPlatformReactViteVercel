@@ -31,9 +31,9 @@ function Footer({ onHeightChange }) {
       <FooterContainer loc="FooterContainer" ref={footerRef}>
         <FooterContent loc="FooterContent">
           <FooterInfoContainer loc="FooterInfoContainer">
-            <FooterInfo loc="FooterInfo">Mobile: +407454545 </FooterInfo>
+            <FooterInfo loc="FooterInfo">Mobile: +40748478887 </FooterInfo>
             <FooterInfo loc="FooterInfo">
-              Email: travelplanningplatform@gmail.com
+              Email: felixvictor_coman@yahoo.com
             </FooterInfo>
           </FooterInfoContainer>
           <Copyrights loc="Copyrights">copyright {year}</Copyrights>

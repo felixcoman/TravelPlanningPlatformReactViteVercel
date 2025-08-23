@@ -29,6 +29,9 @@ function Attributions({ attributions, variant }) {
         </small>
       );
       break;
+    case "personal collection":
+      outputAttrib = <p>Copyright: {text}</p>;
+      break;
     default:
       outputAttrib = (
         <small>

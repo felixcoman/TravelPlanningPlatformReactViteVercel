@@ -100,7 +100,7 @@ export const ContainerTop = styled.div`
     height: 45vh;
   }
   @media screen and (max-height: 550px) {
-    height: 48vh; //55
+    height: 48vh;
   }
   @media screen and (max-height: 400px) {
     height: 88vh;
