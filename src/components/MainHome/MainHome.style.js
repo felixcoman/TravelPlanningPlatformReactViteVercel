@@ -107,12 +107,11 @@ export const OptionContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media screen and (max-width: 1300px) {
-    margin: 10px auto;
+  @media screen and (max-height: 740px) {
+    margin: 35px auto;
   }
-
-  @media screen and (max-width: 425px) {
-    width: 100%;
+  @media screen and (max-height: 900px) and (min-width: 1000px) {
+    margin: 20px auto;
   }
 `;
 
@@ -190,17 +189,6 @@ export const SelectContainer = styled.div`
   position: absolute;
   top: 110px;
   height: ${(props) => (props.expanded == "true" ? "200px" : "unset")};
-
-  @media screen and (max-width: 1300px) {
-    top: 100px;
-  }
-
-  @media screen and (max-width: 840px) {
-    top: 85px;
-  }
-  @media screen and (max-width: 370px) {
-    top: 110px;
-  }
 `;
 export const Select = styled.select`
   width: 150px;
@@ -232,7 +220,6 @@ export const SelectPlan = styled.select`
   @media screen and (max-width: 1300px) {
     height: 24.5px;
   }
-
   @media screen and (max-width: 840px) {
     margin-top: 20px;
     width: 90%;
@@ -305,24 +292,32 @@ export const LabelHeadText = styled.span`
 export const LoadingHome = styled.div`
   display: flex;
   position: absolute;
-  top: 90px;
+  top: 95px;
   color: ${YELLOW};
   align-self: center;
   align-items: center;
+
+  @media screen and (max-height: 740px) {
+    top: 107px;
+  }
+  @media screen and (max-height: 900px) and (min-width: 1000px) {
+    top: 94px;
+  }
 `;
 
 export const ErrorHome = styled.div`
   position: absolute;
-  top: 83px;
+  top: 90px;
   color: ${RED};
   align-self: center;
 
-  @media screen and (max-width: 1300px) {
-    top: 76px;
-    width: 380px;
+  @media screen and (max-height: 740px) {
+    top: 99px;
   }
-
-  @media screen and (max-width: 400px) {
-    width: 100%;
+  @media screen and (max-height: 900px) and (min-width: 1000px) {
+    top: 88px;
+  }
+  @media screen and (max-width: 425px) {
+    width: 350px;
   }
 `;
