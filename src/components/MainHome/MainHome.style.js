@@ -123,35 +123,46 @@ export const ButtonsContainer = styled.div`
 export const Buttons = styled.button`
   width: 200px;
   height: 70px;
-  font-weight: 500;
-  font-size: ${TEXT_SIZE_FIXED_SMALL};
-  color: ${DARK_BLUE};
   margin: 0 10px;
   cursor: pointer;
   border-radius: 8px;
+  font-weight: 500;
   font-family: "Trebuchet MS", sans-serif;
-  border-style: none;
+  font-size: ${TEXT_SIZE_FIXED_SMALL};
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 5px;
+  transition: all 0.5s;
+
+  /* Default (not expanded) */
+  color: ${DARK_BLUE};
+  border: none;
   background-image: linear-gradient(
     54.54deg,
     ${GRADIENT_BLUE_LIGHT} 8.812%,
     ${GRADIENT_BLUE_MIDDLE} 37.468%,
     ${GRADIENT_BLUE_DARK} 68.374%
   );
-  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 5px;
-  transition: all 0.5s;
 
-  &:hover {
-    background: ${LIFELINE_ORANGE};
-    color: ${WHITE_NEUTRAL};
-    border: solid 2px white;
-    box-shadow: 0 0 80px ${LIFELINE_ORANGE};
-  }
-  &:focus {
-    background: ${LIFELINE_ORANGE};
-    color: ${WHITE_NEUTRAL};
-    border: solid 2px white;
-    box-shadow: 0 0 80px ${LIFELINE_ORANGE};
-  }
+  /* Expanded state overrides everything */
+  ${(props) =>
+    props.expanded &&
+    `
+      background: ${LIFELINE_ORANGE} !important;
+      color: ${WHITE_NEUTRAL} !important;
+      border: solid 2px white !important;
+      box-shadow: 0 0 80px ${LIFELINE_ORANGE} !important;
+    `}
+
+  /* Hover/focus should only apply if NOT expanded */
+  ${(props) =>
+    !props.expanded &&
+    `
+      &:hover {
+        background: ${LIFELINE_ORANGE};
+        color: ${WHITE_NEUTRAL};
+        border: solid 2px white;
+        box-shadow: 0 0 80px ${LIFELINE_ORANGE};
+      }
+    `}
 
   /* props for personalization of buttons in account page */
   @media screen and (max-width: 1300px) {
