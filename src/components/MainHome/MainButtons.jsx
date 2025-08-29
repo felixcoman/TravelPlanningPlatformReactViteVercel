@@ -28,14 +28,14 @@ function MainButtons() {
         >
           <Buttons
             loc="Buttons"
-            expanded={expanded === "explore"}
+            expanded={expanded === "explore" ? "true" : null}
             onClick={handleClickExplore}
           >
             I Want To Explore Offers
           </Buttons>
           <Buttons
             loc="Buttons"
-            expanded={expanded === "plan"}
+            expanded={expanded === "plan" ? "true" : null}
             onClick={handleClickPlan}
           >
             Help me Plan
