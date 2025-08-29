@@ -55,9 +55,7 @@ const Account = () => {
     Email: "",
   });
   const [isID, setID] = useState("");
-  const [isVisible1, setIsVisible1] = useState(false);
-  const [isVisible2, setIsVisible2] = useState(false);
-  const [splitContainer, setSplitContainer] = useState(false);
+  const [active, setActive] = useState(null); // state null / login / create
   const [message, setMessage] = useState("");
   const [isFound, setIsFound] = useState([]);
   const [errorInput, setErrorInput] = useState({
@@ -84,14 +82,7 @@ const Account = () => {
   //enters LOGIN section
   const handleGetAccount = () => {
     console.log("INSIDE HANDLEGETACCOUNT");
-
-    setIsVisible1(!isVisible1);
-
-    if (!splitContainer) setSplitContainer(true);
-    else if (isVisible2) setSplitContainer(true);
-    else setSplitContainer(false);
-
-    setIsVisible2(false);
+    setActive(active === "login" ? null : "login");
 
     //unset errors "Not valid!" and "Invalid email format!" and "No such user found!" when switching from login to create account or vice versa
     setErrorInput({
@@ -108,13 +99,7 @@ const Account = () => {
   //enters CREATE ACCOUNT section
   const handleNewAccount = () => {
     console.log("INSIDE HANDLENEWACCOUNT");
-    setIsVisible2(!isVisible2);
-
-    if (!splitContainer) setSplitContainer(true);
-    else if (isVisible1) setSplitContainer(true);
-    else setSplitContainer(false);
-
-    setIsVisible1(false);
+    setActive(active === "create" ? null : "create");
 
     //unset errors "Not valid!", "Invalid email format!" and "Email already exists!" when switching from login to create account or vice versa
     setErrorInput({
@@ -235,7 +220,9 @@ const Account = () => {
 
       if (noTravelOptions === true) {
         setMessage("No travel options yet!");
-        setSplitContainer(false);
+        // setSplitContainer(false);
+
+        setActive(null);
         showToast(
           "Login",
           `Login success, ${userData.Email} !`,
@@ -252,9 +239,7 @@ const Account = () => {
 
   //direct logout user
   const logoutUser = () => {
-    setIsVisible1(false); //closes login form
-    setIsVisible2(false); //closes new account form
-    setSplitContainer(false);
+    setActive(null);
     console.log("user", user);
     console.log("user.Email", user.Email);
     resetLocalData();
@@ -312,19 +297,21 @@ const Account = () => {
       <AccountSection loc="AccountSection">
         <ButtonsContainerAccount
           loc="ButtonsContainerAccount"
-          split={splitContainer ? "true" : "false"}
+          active={active ? "true" : "false"}
         >
           <Buttons
             loc="Buttons"
             variant="account" //prop for css
-            onClick={() => handleGetAccount()}
+            expanded={active === "login" ? "true" : null} //prop for css
+            onClick={handleGetAccount}
           >
             Login
           </Buttons>
           <Buttons
             loc="Buttons"
             variant="account" //prop for css
-            onClick={() => handleNewAccount()}
+            expanded={active === "create" ? "true" : null} //prop for css
+            onClick={handleNewAccount}
           >
             Create account
           </Buttons>
@@ -338,9 +325,9 @@ const Account = () => {
         </ButtonsContainerAccount>
         <InputContainerAccount
           loc="InputContainerAccount"
-          split={splitContainer ? "true" : "false"}
+          active={active ? "true" : "false"}
         >
-          {isVisible1 && (
+          {active === "login" && (
             <AccountContainer loc="AccountContainer">
               <AccountText loc="AccountText">Enter e-mail to login</AccountText>
               <AccountForm
@@ -370,12 +357,12 @@ const Account = () => {
                 </>
               )}
               {!isValid && <Error loc="Error">Not valid!</Error>}
-              {!isFound && isVisible1 && (
+              {!isFound && active === "login" && (
                 <Error loc="Error">No such user found!</Error>
               )}
             </AccountContainer>
           )}
-          {isVisible2 && (
+          {active === "create" && (
             <AccountContainer loc="AccountContainer">
               <AccountText loc="AccountText">
                 Enter e-mail to create account
@@ -398,7 +385,7 @@ const Account = () => {
                 </AccountActionButton>
               )}
               {!isValid && <Error loc="Error">Not valid!</Error>}
-              {isFound && isVisible2 && (
+              {isFound && active === "create" && (
                 <Error loc="Error">Email already exists!</Error>
               )}
             </AccountContainer>

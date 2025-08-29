@@ -86,7 +86,7 @@ export const ButtonsContainerAccount = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: ${(props) => (props.split == "true" ? "50%" : "unset")};
+  height: ${(props) => (props.active == "true" ? "50%" : "unset")};
 
   @media screen and (max-width: 630px) {
     flex-direction: column;
@@ -96,7 +96,7 @@ export const InputContainerAccount = styled.div`
   display: flex;
   font-size: ${TEXT_SIZE_FIXED_SMALL};
   width: 100%;
-  height: ${(props) => (props.split == "true" ? "50%" : "unset")};
+  height: ${(props) => (props.active == "true" ? "50%" : "unset")};
   flex-direction: column;
   align-content: center;
   align-items: center;
