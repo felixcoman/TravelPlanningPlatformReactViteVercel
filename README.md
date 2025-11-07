@@ -1,5 +1,7 @@
 # TravelPlanningPlatform
 
+View project: https://travel-planning-platform-react-vite-vercel.vercel.app/ Currently just the front-end and design features are working without interaction with the server because I have a free Vercel account. In the near future I want to unblock the full potential using the back-end features provided by Vercel.
+
 Project description:
 
 Travel Planning Platform: A tool that helps users view and learn about specific tourist destinations and tourist attractions for which they receive accommodation suggestions. The user also has the possibility to receive personalized offers depending on the period and the selected budget.
@@ -14,11 +16,8 @@ In the Contact page, you have the opportunity to register and provide feedback, 
 The Account page allows you to manage your login details, create a new account, or logout. Existing users can retrieve their saved travel options from our server, while new users can easily create an account to start their travel planning journey.
 Thank you for choosing our platform. We are committed to making your travel dreams a reality!
 
-Owners: https://github.com/felixcoman https://github.com/ChrisB555
-Contributor: https://github.com/ChrisB555
-Coordinator: https://github.com/razvanschool
+Owners: https://github.com/felixcoman
+Contributor (In older versions): https://github.com/ChrisB555
+Coordinator (Front-end Web Development): https://github.com/razvanschool
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
